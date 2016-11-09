@@ -1,0 +1,110 @@
+-- mods/australia/biome_simpson_desert.lua
+
+-- localize math routines for performance
+local math_random = math.random
+
+-- simpson desert
+minetest.register_biome({
+	name = "simpson_desert",
+	--node_dust = "",
+	node_top = "australia:red_sand",
+	depth_top = 3,
+	node_filler = "australia:red_stone",
+	depth_filler = 2,
+	node_stone = "default:stone",
+	--node_water_top = "",
+	--depth_water_top = ,
+	--node_water = "",
+	node_river_water = "australia:muddy_river_water_source",
+	y_min = 4,
+	y_max = 31000,
+	heat_point = 100,
+	humidity_point = 10,
+})
+
+
+
+--
+-- Ores
+--
+
+-- Blob ore first to avoid other ores inside blobs
+
+
+
+--
+-- Decorations
+--
+
+
+
+--
+-- Trees
+--
+
+-- Coolabah Tree
+aus.register_plant({
+	nodes = {
+		trunk = "australia:coolabah_tree",
+		leaves = "australia:coolabah_leaves",
+		air = "air", ignore = "ignore",
+	},
+	cover = 0.01,
+	density = 0.0025,
+	priority = 40,
+	check = function(t, pos)
+		return t.v2 > 0 and t.v2 < 0.01 and pos.y >= 5 and pos.y <= 60 and table.contains({"simpson_desert"}, t.biome)
+	end,
+	grow = function(nodes, pos, data, area)
+			local height = math_random(8,10)
+			local radius = math_random(4,5)
+			local limbs = true
+			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		end,
+})
+
+-- Quandong
+aus.register_plant({
+	nodes = {
+		trunk = "australia:quandong_tree",
+		leaves = "australia:quandong_leaves",
+		fruit = "australia:quandong",
+		air = "air", ignore = "ignore",
+	},
+	cover = 0.0005,
+	density = 0.0025,
+	priority = 50,
+	check = function(t, pos)
+		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 10 and pos.y <= 77 and table.contains({"simpson_desert"}, t.biome)
+	end,
+	grow = function(nodes, pos, data, area)
+			local height = math_random(2,3)
+			local radius = 2
+			local limbs = nil
+			local fruit_chance = 0.2
+			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		end,
+})
+
+-- Quandong
+aus.register_plant({
+	nodes = {
+		trunk = "australia:quandong_tree",
+		leaves = "australia:quandong_leaves",
+		fruit = "australia:quandong",
+		air = "air", ignore = "ignore",
+	},
+	cover = 0.0005,
+	density = 0.001,
+	priority = 50,
+	check = function(t, pos)
+		return t.v4 > 0.5 and pos.y >= 10 and pos.y <= 77 and table.contains({"simpson_desert"}, t.biome)
+	end,
+	grow = function(nodes, pos, data, area)
+			local height = math_random(2,3)
+			local radius = 2
+			local limbs = nil
+			local fruit_chance = 0.1
+			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		end,
+})

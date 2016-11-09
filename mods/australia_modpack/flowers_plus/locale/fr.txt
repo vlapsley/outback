@@ -1,0 +1,6 @@
+# Template
+
+Waterlily = Nénuphar
+Seaweed = Algues
+
+[Flowers Plus] Loaded. = [Fleurs Plus] Chargées.
