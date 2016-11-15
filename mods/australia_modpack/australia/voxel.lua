@@ -46,8 +46,8 @@ noises[1] = getCppSettingNoise('mg_valleys_np_terrain_height', {
 	scale = 50,
 	seed = 5202,
 	spread = {x = 1024, y = 512, z = 1024},
-	octaves = 6,
-	persist = 0.4,
+	octaves = 2,
+	persist = 0.7,
 	lacunarity = 2,
 })
 -- Noise 2 : Valleys (2D)
