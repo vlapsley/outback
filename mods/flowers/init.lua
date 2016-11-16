@@ -78,6 +78,13 @@ function flowers.flower_spread(pos, node)
 	local under = minetest.get_node(pos)
 	pos.y = pos.y + 1
 	if under.name == "default:desert_sand" then
+		if minetest.get_node(pos, {name = "australia:spinifex",
+			"australia:sturts_desert_pea", "default:dry_grass_1",
+			"default:dry_grass_2", "default:dry_grass_3",
+			"default:dry_grass_4", "default:dry_grass_5"
+			}) then
+			return
+		end
 		minetest.set_node(pos, {name = "default:dry_shrub"})
 		return
 	elseif under.name ~= "default:dirt_with_grass" and

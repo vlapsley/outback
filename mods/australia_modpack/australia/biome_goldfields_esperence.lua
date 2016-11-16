@@ -96,7 +96,7 @@ minetest.register_decoration({
 	decoration = "australia:spinifex",
 })
 
--- Sturt's Desert Pea'
+-- Sturt's Desert Pea
 aus.register_plant({
 	nodes = {"australia:sturts_desert_pea"},
 	cover = 0.001,

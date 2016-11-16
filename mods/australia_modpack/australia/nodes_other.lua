@@ -163,7 +163,7 @@ minetest.register_node("australia:pebble",{
 	tiles = {"aus_pebble.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky=3, stone=1},
+	groups = {cracky=3, falling_node=1, stone=1},
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -6/16, 5/16, -1/32, 5/16},
@@ -182,7 +182,7 @@ minetest.register_node("australia:red_pebble",{
 	tiles = {"aus_red_pebble.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky=3, stone=1},
+	groups = {cracky=3, falling_node=1, stone=1},
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -6/16, 5/16, -1/32, 5/16},

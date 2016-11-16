@@ -24,7 +24,7 @@ minetest.register_node("australia:arnhem_cypress_pine_leaves", {
 	tiles = { "aus_arnhem_cypress_pine_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -77,7 +77,7 @@ minetest.register_node("australia:black_box_leaves", {
 	tiles = { "aus_black_box_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -140,7 +140,7 @@ minetest.register_node("australia:black_wattle_leaves", {
 	tiles = { "aus_black_wattle_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -193,7 +193,7 @@ minetest.register_node("australia:blue_gum_leaves", {
 	tiles = { "aus_blue_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -246,7 +246,7 @@ minetest.register_node("australia:boab_leaves", {
 	tiles = { "aus_boab_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -310,7 +310,7 @@ minetest.register_node("australia:bull_banksia_leaves", {
 	tiles = { "aus_bull_banksia_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -373,7 +373,7 @@ minetest.register_node("australia:celery_top_pine_leaves", {
 	tiles = { "aus_celery_top_pine_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -437,7 +437,7 @@ minetest.register_node("australia:cherry_leaves", {
 	tiles = { "aus_cherry_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -481,7 +481,7 @@ minetest.register_node("australia:cherry", {
 		type = "fixed",
 		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
 	},
-	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 3, leafdecay_drop = 1},
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
@@ -524,7 +524,7 @@ minetest.register_node("australia:coast_banksia_leaves", {
 	tiles = { "aus_coast_banksia_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -577,7 +577,7 @@ minetest.register_node("australia:coolabah_leaves", {
 	tiles = { "aus_coolabah_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -630,7 +630,7 @@ minetest.register_node("australia:daintree_stringybark_leaves", {
 	tiles = { "aus_daintree_stringybark_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -683,7 +683,7 @@ minetest.register_node("australia:darwin_woollybutt_leaves", {
 	tiles = { "aus_darwin_woollybutt_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -736,7 +736,7 @@ minetest.register_node("australia:desert_oak_leaves", {
 	tiles = { "aus_desert_oak_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -800,7 +800,7 @@ minetest.register_node("australia:fan_palm_leaves", {
 	tiles = { "aus_fan_palm_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -864,7 +864,7 @@ minetest.register_node("australia:flame_grevillea_leaves", {
 	tiles = { "aus_flame_grevillea_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -928,7 +928,7 @@ minetest.register_node("australia:golden_wattle_leaves", {
 	tiles = { "aus_golden_wattle_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -992,7 +992,7 @@ minetest.register_node("australia:grey_mangrove_leaves", {
 	tiles = { "aus_grey_mangrove_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1045,7 +1045,7 @@ minetest.register_node("australia:huon_pine_leaves", {
 	tiles = { "aus_huon_pine_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1098,7 +1098,7 @@ minetest.register_node("australia:illawarra_flame_leaves", {
 	tiles = { "aus_illawarra_flame_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1151,7 +1151,7 @@ minetest.register_node("australia:jarrah_leaves", {
 	tiles = { "aus_jarrah_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1204,7 +1204,7 @@ minetest.register_node("australia:karri_leaves", {
 	tiles = { "aus_karri_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1257,7 +1257,7 @@ minetest.register_node("australia:lemon_eucalyptus_leaves", {
 	tiles = { "aus_lemon_eucalyptus_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1321,7 +1321,7 @@ minetest.register_node("australia:lemon_myrtle_leaves", {
 	tiles = { "aus_lemon_myrtle_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1385,7 +1385,7 @@ minetest.register_node("australia:lilly_pilly_leaves", {
 	tiles = { "aus_lilly_pilly_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1429,7 +1429,7 @@ minetest.register_node("australia:lilly_pilly_berries", {
 		type = "fixed",
 		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
 	},
-	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 3, leafdecay_drop = 1},
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
@@ -1472,7 +1472,7 @@ minetest.register_node("australia:macadamia_leaves", {
 	tiles = { "aus_macadamia_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1516,7 +1516,7 @@ minetest.register_node("australia:macadamia", {
 		type = "fixed",
 		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
 	},
-	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 3, leafdecay_drop = 1},
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
@@ -1560,7 +1560,7 @@ minetest.register_node("australia:mangrove_apple_leaves", {
 	tiles = { "aus_mangrove_apple_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1604,7 +1604,7 @@ minetest.register_node("australia:mangrove_apple", {
 		type = "fixed",
 		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
 	},
-	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 3, leafdecay_drop = 1},
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
@@ -1637,7 +1637,7 @@ minetest.register_node("australia:merbau_leaves", {
 	tiles = { "aus_merbau_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1690,7 +1690,7 @@ minetest.register_node("australia:marri_leaves", {
 	tiles = { "aus_marri_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1743,7 +1743,7 @@ minetest.register_node("australia:moreton_bay_fig_leaves", {
 	tiles = { "aus_moreton_bay_fig_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1787,7 +1787,7 @@ minetest.register_node("australia:moreton_bay_fig", {
 		type = "fixed",
 		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
 	},
-	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 3, leafdecay_drop = 1},
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
@@ -1830,7 +1830,7 @@ minetest.register_node("australia:mulga_leaves", {
 	tiles = { "aus_mulga_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1883,7 +1883,7 @@ minetest.register_node("australia:paperbark_leaves", {
 	tiles = { "aus_paperbark_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1947,7 +1947,7 @@ minetest.register_node("australia:quandong_leaves", {
 	tiles = { "aus_quandong_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -1991,7 +1991,7 @@ minetest.register_node("australia:quandong", {
 		type = "fixed",
 		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
 	},
-	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 3, leafdecay_drop = 1},
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
@@ -2035,7 +2035,7 @@ minetest.register_node("australia:red_bottlebrush_leaves", {
 	tiles = { "aus_red_bottlebrush_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2088,7 +2088,7 @@ minetest.register_node("australia:river_oak_leaves", {
 	tiles = { "aus_river_oak_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2141,7 +2141,7 @@ minetest.register_node("australia:river_red_gum_leaves", {
 	tiles = { "aus_river_red_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2204,7 +2204,7 @@ minetest.register_node("australia:rottnest_island_pine_leaves", {
 	tiles = { "aus_rottnest_island_pine_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2257,7 +2257,7 @@ minetest.register_node("australia:scribbly_gum_leaves", {
 	tiles = { "aus_scribbly_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2310,7 +2310,7 @@ minetest.register_node("australia:shoestring_acacia_leaves", {
 	tiles = { "aus_shoestring_acacia_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2373,7 +2373,7 @@ minetest.register_node("australia:snow_gum_leaves", {
 	tiles = { "aus_snow_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2436,7 +2436,7 @@ minetest.register_node("australia:southern_sassafras_leaves", {
 	tiles = { "aus_southern_sassafras_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2500,7 +2500,7 @@ minetest.register_node("australia:stilted_mangrove_leaves", {
 	tiles = { "aus_stilted_mangrove_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2553,7 +2553,7 @@ minetest.register_node("australia:sugar_gum_leaves", {
 	tiles = { "aus_sugar_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2606,7 +2606,7 @@ minetest.register_node("australia:swamp_bloodwood_leaves", {
 	tiles = { "aus_swamp_bloodwood_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2659,7 +2659,7 @@ minetest.register_node("australia:swamp_gum_leaves", {
 	tiles = { "aus_swamp_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2723,7 +2723,7 @@ minetest.register_node("australia:swamp_paperbark_leaves", {
 	tiles = { "aus_swamp_paperbark_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2776,7 +2776,7 @@ minetest.register_node("australia:tasmanian_myrtle_leaves", {
 	tiles = { "aus_tasmanian_myrtle_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2840,7 +2840,7 @@ minetest.register_node("australia:tea_tree_leaves", {
 	tiles = { "aus_tea_tree_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2893,7 +2893,7 @@ minetest.register_node("australia:white_box_leaves", {
 	tiles = { "aus_white_box_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -2957,7 +2957,7 @@ minetest.register_node("australia:wirewood_leaves", {
 	tiles = { "aus_wirewood_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
