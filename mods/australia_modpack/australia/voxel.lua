@@ -43,10 +43,10 @@ local noises = {}
 -- Noise 1 : Base terrain height (2D)
 noises[1] = getCppSettingNoise('mg_valleys_np_terrain_height', {
 	offset = -10,
-	scale = 50,
+	scale = 100,
 	seed = 5202,
-	spread = {x = 1024, y = 512, z = 1024},
-	octaves = 2,
+	spread = {x = 1024, y = 1024, z = 1024},
+	octaves = 3,
 	persist = 0.7,
 	lacunarity = 2,
 })
@@ -55,25 +55,25 @@ noises[2] = getCppSettingNoise('mg_valleys_np_rivers', {
 	offset = 0,
 	scale = 1,
 	seed = -6050,
-	spread = {x = 512, y = 384, z = 512},
-	octaves = 3,
-	persist = 0.5,
+	spread = {x = 512, y = 512, z = 512},
+	octaves = 5,
+	persist = 0.6,
 	lacunarity = 2,
 })
 -- Noise 3 : Valleys Depth (2D)
 noises[3] = getCppSettingNoise('mg_valleys_np_valley_depth', {
-	offset = 6,
-	scale = 4,
+	offset = 3,
+	scale = 2,
 	seed = -1914,
-	spread = {x = 1024, y = 512, z = 1024},
-	octaves = 2,
+	spread = {x = 512, y = 512, z = 512},
+	octaves = 1,
 	persist = 1,
 	lacunarity = 2,
 })
 -- Noise 4 : Valleys Profile (2D)
 noises[4] = getCppSettingNoise('mg_valleys_np_valley_profile', {
-	offset = 0.5,
-	scale = 0.3,
+	offset = 0.6,
+	scale = 0.5,
 	seed = 777,
 	spread = {x = 512, y = 512, z = 512},
 	octaves = 1,
