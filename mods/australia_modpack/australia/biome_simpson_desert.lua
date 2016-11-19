@@ -36,6 +36,27 @@ minetest.register_biome({
 -- Decorations
 --
 
+local function register_small_red_rocks(number)
+	minetest.register_decoration({
+		deco_type = "simple",
+		decoration = "australia:small_red_rocks"..number,
+		sidelen = 80,
+		place_on = {"australia:red_sand"},
+		fill_ratio = 0.001,
+		y_min = 18,
+		biomes = {"simpson_desert"},
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+end
+
+-- Small red rocks
+register_small_red_rocks(6)
+register_small_red_rocks(5)
+register_small_red_rocks(4)
+register_small_red_rocks(3)
+register_small_red_rocks(2)
+register_small_red_rocks(1)
 
 
 --

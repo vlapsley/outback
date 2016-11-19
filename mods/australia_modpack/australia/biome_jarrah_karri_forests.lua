@@ -153,6 +153,27 @@ aus.register_plant({
 	end,
 })
 
+local function register_small_stone_rocks(number)
+	minetest.register_decoration({
+		deco_type = "simple",
+		decoration = "australia:small_stone_rocks"..number,
+		sidelen = 80,
+		place_on = {"default:dirt_with_grass"},
+		fill_ratio = 0.001,
+		y_min = 24,
+		biomes = {"jarrah_karri_forests"},
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+end
+
+-- Small stone rocks
+register_small_stone_rocks(6)
+register_small_stone_rocks(5)
+register_small_stone_rocks(4)
+register_small_stone_rocks(3)
+register_small_stone_rocks(2)
+register_small_stone_rocks(1)
 
 
 

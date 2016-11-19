@@ -25,6 +25,13 @@ minetest.register_node("australia:red_stonebrick", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("australia:sandstone_cobble", {
+	description = "Sandstone Cobble",
+	tiles = {"aus_sandstone_cobble.png"},
+	groups = {crumbly = 1, cracky = 3, oddly_breakable_by_hand = 1},
+	sounds = default.node_sound_stone_defaults(),
+})
+
 minetest.register_node("australia:bluestone", {
 	description = "Bluestone (Basalt)",
 	tiles = {"aus_bluestone.png"},
@@ -156,43 +163,220 @@ minetest.register_node("australia:opal",{
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("australia:pebble",{
-	description = "Pebble",
-	drawtype = "mesh",
-	mesh = "cavestuff_pebble.obj",
-	tiles = {"aus_pebble.png"},
+
+---------------------
+-- Small Rocks --
+---------------------
+
+-- Place a small nodebox.
+local function small_cube(grid, pos, diameters)
+	local rock = {}
+
+	rock[1] = pos.x
+	rock[2] = pos.y
+	rock[3] = pos.z
+	rock[4] = pos.x + diameters.x
+	rock[5] = pos.y + diameters.y
+	rock[6] = pos.z + diameters.z
+	push(grid, rock)
+end
+
+-- Small red rocks
+local default_grid_red_rocks
+
+for grid_count = 1,6 do
+	local grid = {}
+	for rock_count = 2, math.random(1,4) + 1 do
+		local diameter = math.random(15,25)/100
+		local x = math.random(1,80)/100 - 0.5
+		local z = math.random(1,80)/100 - 0.5
+		small_cube(grid, {x=x,y=-0.5,z=z}, {x=diameter, y=diameter, z=diameter})
+	end
+
+	minetest.register_node("australia:small_red_rocks"..grid_count, {
+		description = "Small Red Rocks",
+		tiles = {"aus_red_stone.png"},
+		is_ground_content = true,
+		walkable = false,
+		paramtype = "light",
+		drawtype = "nodebox",
+		buildable_to = true,
+		node_box = { type = "fixed", fixed = grid },
+		selection_box = { type = "fixed", 
+			fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
+		},
+		groups = {stone=1, oddly_breakable_by_hand=3},
+		drop = "australia:small_red_rocks",
+		sounds = default.node_sound_stone_defaults(),
+	})
+
+	default_grid_red_rocks = grid
+end
+
+minetest.register_node("australia:small_red_rocks", {
+	description = "Small Red Rocks",
+	tiles = {"aus_red_stone.png"},
+	inventory_image = "aus_small_red_rocks.png",
+	is_ground_content = true,
+	walkable = false,
 	paramtype = "light",
-	paramtype2 = "facedir",
-	groups = {cracky=3, falling_node=1, stone=1},
-	selection_box = {
-		type = "fixed",
-		fixed = {-5/16, -8/16, -6/16, 5/16, -1/32, 5/16},
+	drawtype = "nodebox",
+	node_box = { type = "fixed", fixed = default_grid_red_rocks },
+	selection_box = { type = "fixed", 
+		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
-	collision_box = {
-		type = "fixed",
-		fixed = {-5/16, -8/16, -6/16, 5/16, -1/32, 5/16},
-	},
+	groups = {stone=1, oddly_breakable_by_hand=3},
 	sounds = default.node_sound_stone_defaults(),
+	on_place = function(itemstack, placer, pointed_thing)
+		local pos = pointed_thing.above
+		local player_name = placer:get_player_name()
+		-- place a random small red rocks node
+		if not minetest.is_protected(pos, player_name) then
+			minetest.set_node(pos, {name = "australia:small_red_rocks"..math.random(1, 6)})
+			if not minetest.setting_getbool("creative_mode") then
+				itemstack:take_item()
+			end
+		else
+			minetest.chat_send_player(player_name, "Node is protected")
+			minetest.record_protection_violation(pos, player_name)
+		end
+		
+		return itemstack
+	end
 })
 
-minetest.register_node("australia:red_pebble",{
-	description = "Red Stone Pebble",
-	drawtype = "mesh",
-	mesh = "cavestuff_pebble.obj",
-	tiles = {"aus_red_pebble.png"},
+-- Small sandstone rocks
+local default_grid_sandstone_rocks
+
+for grid_count = 1,6 do
+	local grid = {}
+	for rock_count = 2, math.random(1,4) + 1 do
+		local diameter = math.random(15,25)/100
+		local x = math.random(1,80)/100 - 0.5
+		local z = math.random(1,80)/100 - 0.5
+		small_cube(grid, {x=x,y=-0.5,z=z}, {x=diameter, y=diameter, z=diameter})
+	end
+
+	minetest.register_node("australia:small_sandstone_rocks"..grid_count, {
+		description = "Small Sandstone Rocks",
+		tiles = {"default_sandstone.png"},
+		is_ground_content = true,
+		walkable = false,
+		paramtype = "light",
+		drawtype = "nodebox",
+		buildable_to = true,
+		node_box = { type = "fixed", fixed = grid },
+		selection_box = { type = "fixed", 
+			fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
+		},
+		groups = {stone=1, oddly_breakable_by_hand=3},
+		drop = "australia:small_sandstone_rocks",
+		sounds = default.node_sound_stone_defaults(),
+	})
+
+	default_grid_sandstone_rocks = grid
+end
+
+minetest.register_node("australia:small_sandstone_rocks", {
+	description = "Small Sandstone Rocks",
+	tiles = {"default_sandstone.png"},
+	inventory_image = "aus_small_sandstone_rocks.png",
+	is_ground_content = true,
+	walkable = false,
 	paramtype = "light",
-	paramtype2 = "facedir",
-	groups = {cracky=3, falling_node=1, stone=1},
-	selection_box = {
-		type = "fixed",
-		fixed = {-5/16, -8/16, -6/16, 5/16, -1/32, 5/16},
+	drawtype = "nodebox",
+	node_box = { type = "fixed", fixed = default_grid_sandstone_rocks },
+	selection_box = { type = "fixed", 
+		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
-	collision_box = {
-		type = "fixed",
-		fixed = {-5/16, -8/16, -6/16, 5/16, -1/32, 5/16},
-	},
+	groups = {stone=1, oddly_breakable_by_hand=3},
 	sounds = default.node_sound_stone_defaults(),
+	on_place = function(itemstack, placer, pointed_thing)
+		local pos = pointed_thing.above
+		local player_name = placer:get_player_name()
+		-- place a random small sandstone rocks node
+		if not minetest.is_protected(pos, player_name) then
+			minetest.set_node(pos, {name = "australia:small_sandstone_rocks"..math.random(1, 6)})
+			if not minetest.setting_getbool("creative_mode") then
+				itemstack:take_item()
+			end
+		else
+			minetest.chat_send_player(player_name, "Node is protected")
+			minetest.record_protection_violation(pos, player_name)
+		end
+		
+		return itemstack
+	end
 })
+
+-- Small stone rocks
+local default_grid_stone_rocks
+
+for grid_count = 1,6 do
+	local grid = {}
+	for rock_count = 2, math.random(1,4) + 1 do
+		local diameter = math.random(15,25)/100
+		local x = math.random(1,80)/100 - 0.5
+		local z = math.random(1,80)/100 - 0.5
+		small_cube(grid, {x=x,y=-0.5,z=z}, {x=diameter, y=diameter, z=diameter})
+	end
+
+	minetest.register_node("australia:small_stone_rocks"..grid_count, {
+		description = "Small Stone Rocks",
+		tiles = {"default_stone.png"},
+		is_ground_content = true,
+		walkable = false,
+		paramtype = "light",
+		drawtype = "nodebox",
+		buildable_to = true,
+		node_box = { type = "fixed", fixed = grid },
+		selection_box = { type = "fixed", 
+			fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
+		},
+		groups = {stone=1, oddly_breakable_by_hand=3},
+		drop = "australia:small_stone_rocks",
+		sounds = default.node_sound_stone_defaults(),
+	})
+
+	default_grid_stone_rocks = grid
+end
+
+minetest.register_node("australia:small_stone_rocks", {
+	description = "Small Stone Rocks",
+	tiles = {"default_stone.png"},
+	inventory_image = "aus_small_stone_rocks.png",
+	is_ground_content = true,
+	walkable = false,
+	paramtype = "light",
+	drawtype = "nodebox",
+	node_box = { type = "fixed", fixed = default_grid_stone_rocks },
+	selection_box = { type = "fixed", 
+		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
+	},
+	groups = {stone=1, oddly_breakable_by_hand=3},
+	sounds = default.node_sound_stone_defaults(),
+	on_place = function(itemstack, placer, pointed_thing)
+		local pos = pointed_thing.above
+		local player_name = placer:get_player_name()
+		-- place a random small stone rocks node
+		if not minetest.is_protected(pos, player_name) then
+			minetest.set_node(pos, {name = "australia:small_stone_rocks"..math.random(1, 6)})
+			if not minetest.setting_getbool("creative_mode") then
+				itemstack:take_item()
+			end
+		else
+			minetest.chat_send_player(player_name, "Node is protected")
+			minetest.record_protection_violation(pos, player_name)
+		end
+		
+		return itemstack
+	end
+})
+
+
+-----------------------
+-- Muddy River Water --
+-----------------------
 
 minetest.register_node("australia:muddy_river_water_source", {
 	description = "Muddy River Water Source",

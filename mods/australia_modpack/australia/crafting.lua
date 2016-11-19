@@ -1,5 +1,34 @@
 -- mods/australia/crafting.lua
 
+
+-- Small rocks can be used to create cobblestone.
+minetest.register_craft({
+	output = "australia:red_cobble",
+	recipe = {
+		{"", "", ""},
+		{"australia:small_red_rocks", "australia:small_red_rocks", ""},
+		{"australia:small_red_rocks", "australia:small_red_rocks", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "australia:sandstone_cobble",
+	recipe = {
+		{"", "", ""},
+		{"australia:small_sandstone_rocks", "australia:small_sandstone_rocks", ""},
+		{"australia:small_sandstone_rocks", "australia:small_sandstone_rocks", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "default:cobble",
+	recipe = {
+		{"", "", ""},
+		{"australia:small_stone_rocks", "australia:small_stone_rocks", ""},
+		{"australia:small_stone_rocks", "australia:small_stone_rocks", ""},
+	}
+})
+
 minetest.register_craft({
 	output = 'australia:red_stonebrick 4',
 	recipe = {

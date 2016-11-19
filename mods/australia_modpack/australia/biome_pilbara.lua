@@ -116,7 +116,7 @@ minetest.register_decoration({
 	decoration = "australia:spinifex",
 })
 
--- Sturt's Desert Pea'
+-- Sturt's Desert Pea
 aus.register_plant({
 	nodes = {"australia:sturts_desert_pea"},
 	cover = 0.001,
@@ -127,24 +127,26 @@ aus.register_plant({
 	end,
 })
 
--- Pebble
-minetest.register_decoration({
-	deco_type = "simple",
-	place_on = {"australia:red_gravel"},
-	sidelen = 16,
-	noise_params = {
-		offset = 0.02,
-		scale = 0.01,
-		spread = {x = 200, y = 200, z = 200},
-		seed = 777,
-		octaves = 3,
-		persist = 0.6
-	},
-	biomes = {"pilbara"},
-	y_min = 5,
-	y_max = 31000,
-	decoration = "australia:red_pebble",
-})
+local function register_small_red_rocks(number)
+	minetest.register_decoration({
+		deco_type = "simple",
+		decoration = "australia:small_red_rocks"..number,
+		sidelen = 80,
+		place_on = {"australia:red_gravel"},
+		fill_ratio = 0.003,
+		biomes = {"pilbara"},
+		flags = "place_center_x, place_center_z",
+		rotation = "random",
+	})
+end
+
+-- Small red rocks
+register_small_red_rocks(6)
+register_small_red_rocks(5)
+register_small_red_rocks(4)
+register_small_red_rocks(3)
+register_small_red_rocks(2)
+register_small_red_rocks(1)
 
 
 
