@@ -12,17 +12,9 @@ Enjoy and think of visiting Australia next time you travel abroad.
 
 ## Features
 * 21 biomes
-* 49 trees and 16 plants native to Austrlia
+* 49 trees and 16 plants native to Australia
 * Sea grass, kelp, coral and shipwrecks.
 * A new ore, the Opal.
-
-## To-do list
-* Extend farming and food.
-* Add thirst (a need for water).
-* Add villages mod with new "Outback" schematics.
-* Add support for wine mod.
-* Add support for survival-based game mods.
-* Add support for a mobs mod.
 
 ## Installation
 
