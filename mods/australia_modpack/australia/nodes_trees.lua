@@ -486,7 +486,7 @@ minetest.register_node("australia:cherry", {
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
-			minetest.set_node(pos, {name = "australia:quandong", param2 = 1})
+			minetest.set_node(pos, {name = "australia:cherry", param2 = 1})
 		end
 	end,
 })
