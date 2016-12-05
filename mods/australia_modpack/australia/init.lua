@@ -96,6 +96,14 @@ minetest.set_noiseparams("mgvalleys_np_inter_valley_fill", aus.mgvalleys_np_inte
 minetest.set_noiseparams("mgvalleys_np_valley_profile", aus.mgvalleys_np_valley_profile)
 minetest.set_noiseparams("mgvalleys_np_inter_valley_slope", aus.mgvalleys_np_inter_valley_slope)
 
+-- Mapgen settings
+
+-- How deep to make rivers
+minetest.setting_set("mgvalleys_river_depth", 5)
+
+-- How wide to make rivers
+minetest.setting_set("mgvalleys_river_size", 4)
+
 
 -- Set the following variables to true to enable each biome
 aus.biome_underground				= true
