@@ -50,3 +50,53 @@ end
 function displaytime(time)
 	return math.floor(time * 1000000 + 0.5) / 1000 .. " ms"
 end
+
+--
+-- Convert dirt with dry grass to dirt with dry graan grass when next to dirt with grass
+--
+
+minetest.register_abm({
+   nodenames = {"default:dirt_with_grass"},
+   neighbors = {
+      "default:dirt_with_dry_grass",
+   },
+   interval = 6,
+   chance = 67,
+   catch_up = false,
+   action = function(pos, node)
+      -- Most likely case, half the time it's too dark for this.
+      local above = {x = pos.x, y = pos.y + 1, z = pos.z}
+      if (minetest.get_node_light(above) or 0) < 13 then
+         return
+      end
+
+      -- Look for likely neighbors.
+      local p2 = minetest.find_node_near(pos, 1, {"default:dirt_with_dry_grass"})
+      if p2 then
+         -- But the node needs to be under air in this case.
+         local n2 = minetest.get_node(above)
+         if n2 and n2.name == "air" then
+            minetest.set_node(pos, {name = "australia:dirt_with_dry_green_grass"})
+            return
+         end
+      end
+
+      -- Anything on top?
+      local n2 = minetest.get_node(above)
+      if not n2 then
+         return
+      end
+
+      local name = n2.name
+      -- Snow check is cheapest, so comes first.
+      if name == "default:snow" then
+         minetest.set_node(pos, {name = "default:dirt_with_snow"})
+      -- Most likely case first.
+      elseif minetest.get_item_group(name, "grass") ~= 0 then
+         minetest.set_node(pos, {name = "default:dirt_with_grass"})
+      elseif minetest.get_item_group(name, "dry_grass") ~= 0 then
+         minetest.set_node(pos, {name = "default:dirt_with_dry_grass"})
+      end
+   end
+})
+ 
