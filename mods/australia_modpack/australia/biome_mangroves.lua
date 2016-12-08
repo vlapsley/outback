@@ -6,15 +6,11 @@ local math_random = math.random
 -- mangroves
 minetest.register_biome({
 	name = "mangroves",
-	--node_dust = "",
 	node_top = "australia:mangrove_mud",
 	depth_top = 3,
 	node_filler = "default:clay",
 	depth_filler = 1,
 	node_stone = "default:stone",
-	--node_water_top = "",
-	--depth_water_top = ,
-	--node_water = "australia:muddy_river_water_source",
 	node_river_water = "australia:muddy_river_water_source",
 	y_min = -2,
 	y_max = 3,
@@ -23,18 +19,16 @@ minetest.register_biome({
 })
 
 
-
---
--- Ores
---
+--[[
+	Ores
+--]]
 
 -- Blob ore first to avoid other ores inside blobs
 
 
-
---
--- Decorations
---
+--[[
+	Decorations
+--]]
 
 -- Mangrove Fern
 minetest.register_decoration({
@@ -69,31 +63,32 @@ minetest.register_decoration({
 -- Nipa Palm
 minetest.register_decoration({
 	deco_type = "schematic",
-	place_on = {"australia:mangrove_mud",
+	place_on = {
+		"australia:mangrove_mud",
 		"default:sand",
-		"default:dirt"},
+		"default:dirt",
+	},
 	sidelen = 80,
 	fill_ratio = 0.3,
 	biomes = {"mangroves"},
 	y_min = 1,
 	y_max = 3,
 	schematic = {
-		size = { x = 1, y = 4, z = 1},
+		size = {x = 1, y = 4, z = 1},
 		data = {
-			{ name = "ignore", param1 = 0, param2 = 0 },
-			{ name = "australia:mangrove_palm_trunk", param1 = 255, param2 = 0 },
-			{ name = "australia:mangrove_palm_leaf_bot", param1 = 255, param2 = 0 },
-			{ name = "australia:mangrove_palm_leaf_top", param1 = 255, param2 = 0 },
+			{name = "ignore", param1 = 0, param2 = 0},
+			{name = "australia:mangrove_palm_trunk", param1 = 255, param2 = 0},
+			{name = "australia:mangrove_palm_leaf_bot", param1 = 255, param2 = 0},
+			{name = "australia:mangrove_palm_leaf_top", param1 = 255, param2 = 0},
 		},
 	},
 	flags = "force_placement",
 })
 
 
-
---
--- Trees
---
+--[[
+	Trees
+--]]
 
 -- Grey Mangrove
 aus.schematics.grey_mangrove = {}
@@ -106,10 +101,12 @@ for h = 4,max_ht do
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
-		place_on = {"australia:mangrove_mud",
+		place_on = {
+			"australia:mangrove_mud",
 			"default:sand",
 			"default:dirt",
-			"default:dirt_with_grass"},
+			"default:dirt_with_grass",
+		},
 		fill_ratio = 0.004,
 		biomes = {"mangroves"},
 		y_min = -1,
@@ -154,10 +151,12 @@ for h = 4,max_ht do
 	minetest.register_decoration({
 		deco_type = "schematic",
 		sidelen = 80,
-		place_on = {"australia:mangrove_mud",
+		place_on = {
+			"australia:mangrove_mud",
 			"default:sand",
 			"default:dirt",
-			"default:dirt_with_grass"},
+			"default:dirt_with_grass",
+		},
 		fill_ratio = 0.002,
 		biomes = {"mangroves"},
 		y_min = -1,

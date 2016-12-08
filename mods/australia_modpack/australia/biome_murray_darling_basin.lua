@@ -1,4 +1,4 @@
--- mods/australia/biome_murray_darling_basin.lua
+-- mods/australia_modpack/australia/biome_murray_darling_basin.lua
 
 -- localize math routines for performance
 local math_random = math.random
@@ -6,15 +6,11 @@ local math_random = math.random
 -- murray-darling basin
 minetest.register_biome({
 	name = "murray_darling_basin",
-	--node_dust = "",
 	node_top = "default:dirt_with_dry_grass",
 	depth_top = 1,
 	node_filler = "default:dirt",
 	depth_filler = 3,
 	node_stone = "default:stone",
-	--node_water_top = "",
-	--depth_water_top = ,
-	--node_water = "",
 	node_river_water = "australia:muddy_river_water_source",
 	y_min = 4,
 	y_max = 31000,
@@ -23,19 +19,18 @@ minetest.register_biome({
 })
 
 
-
---
--- Ores
---
+--[[
+	Ores
+--]]
 
 -- Blob ore first to avoid other ores inside blobs
 
 
+--[[
+	Decorations
+--]]
 
---
--- Decorations
---
-
+-- Grass
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -76,15 +71,14 @@ local function register_dry_grass_decoration(offset, scale, length)
 	})
 end
 
-	-- Grasses
 register_grass_decoration(0.015,  0.045, 2)
 register_grass_decoration(0.03,   0.03,  1)
+
 register_dry_grass_decoration(0.01, 0.1,  5)
 register_dry_grass_decoration(0.03, 0.06,  4)
 register_dry_grass_decoration(0.05, 0.02,  3)
 register_dry_grass_decoration(0.07, -0.01, 2)
 register_dry_grass_decoration(0.09, -0.03, 1)
-
 
 -- Grass near rivers
 local function register_rivergrass(length)
@@ -98,6 +92,7 @@ local function register_rivergrass(length)
 		end,
 	})
 end
+
 register_rivergrass(5)
 register_rivergrass(4)
 
@@ -123,7 +118,7 @@ aus.register_plant({
 	end,
 })
 
--- Old Man Saltbush
+-- Saltbush
 aus.register_plant({
 	nodes = {"australia:saltbush"},
 	cover = 0.005,
@@ -145,6 +140,7 @@ aus.register_plant({
 	end,
 })
 
+-- Small stone rocks
 local function register_small_stone_rocks(number)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -159,7 +155,6 @@ local function register_small_stone_rocks(number)
 	})
 end
 
--- Small stone rocks
 register_small_stone_rocks(6)
 register_small_stone_rocks(5)
 register_small_stone_rocks(4)
@@ -168,9 +163,9 @@ register_small_stone_rocks(2)
 register_small_stone_rocks(1)
 
 
---
--- Trees
---
+--[[
+	Trees
+--]]
 
 -- Black Box
 aus.register_plant({
@@ -186,8 +181,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.03 and pos.y >= 5 and pos.y <= 45 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(5,10)
-			local radius = math_random(4,6)
+			local height = math_random(5, 10)
+			local radius = math_random(4, 6)
 			local limbs = true
 			aus.make_black_box(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -207,8 +202,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.3 and t.v4 > 0.5 and pos.y >= 5 and pos.y <= 45 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(5,10)
-			local radius = math_random(4,6)
+			local height = math_random(5, 10)
+			local radius = math_random(4, 6)
 			local limbs = true
 			aus.make_black_box(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -228,8 +223,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 60 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(7,10)
-			local radius = math_random(4,5)
+			local height = math_random(7, 10)
+			local radius = math_random(4, 5)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -249,7 +244,7 @@ aus.register_plant({
 		return t.v4 < 0.5 and pos.y >= 5 and pos.y <= 150 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3,4)
+			local height = math_random(3, 4)
 			local radius = 2
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
@@ -269,7 +264,7 @@ aus.register_plant({
 		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 150 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3,4)
+			local height = math_random(3, 4)
 			local radius = 2
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
@@ -290,7 +285,7 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.03 and pos.y >= 10 and pos.y <= 77 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(2,3)
+			local height = math_random(2, 3)
 			local radius = 2
 			local limbs = nil
 			local fruit_chance = 0.2
@@ -313,7 +308,7 @@ aus.register_plant({
 		return t.v4 > 0.5 and pos.y >= 10 and pos.y <= 77 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(2,3)
+			local height = math_random(2, 3)
 			local radius = 2
 			local limbs = nil
 			local fruit_chance = 0.2
@@ -335,8 +330,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.05 and pos.y >= 5 and pos.y <= 72 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(12,18)
-			local radius = math_random(6,8)
+			local height = math_random(12, 18)
+			local radius = math_random(6, 8)
 			local limbs = true
 			aus.make_river_red_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -356,8 +351,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.05 and pos.y >= 5 and pos.y <= 50 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3,5)
-			local radius = math_random(3,4)
+			local height = math_random(3, 5)
+			local radius = math_random(3, 4)
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -376,8 +371,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.2 and t.v4 > 0.5 and pos.y >= 5 and pos.y <= 50 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3,5)
-			local radius = math_random(3,4)
+			local height = math_random(3, 5)
+			local radius = math_random(3, 4)
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -396,8 +391,8 @@ aus.register_plant({
 		return t.valleys > 0.3 and pos.y >= 65 and pos.y <= 145 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(7,12)
-			local radius = math_random(6,8)
+			local height = math_random(7, 12)
+			local radius = math_random(6, 8)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,

@@ -1,4 +1,4 @@
--- mods/australia/biome_jarrah_karri_forests.lua
+-- mods/australia_modpack/australia/biome_jarrah_karri_forests.lua
 
 -- localize math routines for performance
 local math_random = math.random
@@ -6,15 +6,11 @@ local math_random = math.random
 -- jarrah / karri forests
 minetest.register_biome({
 	name = "jarrah_karri_forests",
-	--node_dust = "",
 	node_top = "default:dirt_with_grass",
 	depth_top = 1,
 	node_filler = "default:dirt",
 	depth_filler = 3,
 	node_stone = "default:sandstone",
-	--node_water_top = "",
-	--depth_water_top = ,
-	--node_water = "",
 	node_river_water = "australia:muddy_river_water_source",
 	y_min = 4,
 	y_max = 31000,
@@ -23,25 +19,24 @@ minetest.register_biome({
 })
 
 
-
---
--- Ores
---
+--[[
+	Ores
+--]]
 
 -- Blob ore first to avoid other ores inside blobs
 
 -- Bluestone (Basalt)
 minetest.register_ore({
-	ore_type        = "blob",
-	ore             = "australia:bluestone",
-	wherein         = {"default:stone", "default:sandstone"},
-	clust_scarcity  = 16 * 16 * 16,
-	clust_size      = 8,
-	biomes          = {"jarrah_karri_forests"},
-	y_min           = -192,
-	y_max           = 222,
-	noise_threshold = 0.0,
-	noise_params    = {
+	ore_type		= "blob",
+	ore				= "australia:bluestone",
+	wherein			= {"default:stone", "default:sandstone"},
+	clust_scarcity	= 16 * 16 * 16,
+	clust_size		= 8,
+	biomes			= {"jarrah_karri_forests"},
+	y_min			= -192,
+	y_max			= 222,
+	noise_threshold	= 0.0,
+	noise_params	= {
 		offset = 0.5,
 		scale = 0.2,
 		spread = {x = 5, y = 5, z = 5},
@@ -52,11 +47,11 @@ minetest.register_ore({
 })
 
 
+--[[
+	Decorations
+--]]
 
---
--- Decorations
---
-
+-- Grass
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -97,9 +92,9 @@ local function register_dry_grass_decoration(offset, scale, length)
 	})
 end
 
--- Grasses
 register_grass_decoration(0.015,  0.045, 2)
 register_grass_decoration(0.03,   0.03,  1)
+
 register_dry_grass_decoration(0.01, 0.05,  5)
 register_dry_grass_decoration(0.03, 0.03,  4)
 register_dry_grass_decoration(0.05, 0.01,  3)
@@ -118,6 +113,7 @@ local function register_rivergrass(length)
 		end,
 	})
 end
+
 register_rivergrass(5)
 register_rivergrass(4)
 
@@ -153,6 +149,7 @@ aus.register_plant({
 	end,
 })
 
+-- Small stone rocks
 local function register_small_stone_rocks(number)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -167,7 +164,6 @@ local function register_small_stone_rocks(number)
 	})
 end
 
--- Small stone rocks
 register_small_stone_rocks(6)
 register_small_stone_rocks(5)
 register_small_stone_rocks(4)
@@ -176,10 +172,9 @@ register_small_stone_rocks(2)
 register_small_stone_rocks(1)
 
 
-
---
--- Trees
---
+--[[
+	Trees
+--]]
 
 -- Bull Banksia
 aus.register_plant({
@@ -195,8 +190,8 @@ aus.register_plant({
 		return pos.y >= 5 and pos.y <= 15 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3,5)
-			local radius = math_random(2,3)
+			local height = math_random(3, 5)
+			local radius = math_random(2, 3)
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -215,8 +210,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 60 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(7,10)
-			local radius = math_random(4,5)
+			local height = math_random(7, 10)
+			local radius = math_random(4, 5)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -236,8 +231,8 @@ aus.register_plant({
 		return pos.y >= 5 and pos.y <= 40 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(2,3)
-			local radius = math_random(2,3)
+			local height = math_random(2, 3)
+			local radius = math_random(2, 3)
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -256,8 +251,8 @@ aus.register_plant({
 		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 35 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(15,20)
-			local radius = math_random(8,10)
+			local height = math_random(15, 20)
+			local radius = math_random(8, 10)
 			local limbs = true
 			aus.make_jarrah(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -277,8 +272,8 @@ aus.register_plant({
 		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 35 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(20,30)
-			local radius = math_random(8,10)
+			local height = math_random(20, 30)
+			local radius = math_random(8, 10)
 			local limbs = true
 			aus.make_karri(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -298,8 +293,8 @@ aus.register_plant({
 		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 35 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(15,20)
-			local radius = math_random(7,10)
+			local height = math_random(15, 20)
+			local radius = math_random(7, 10)
 			local limbs = true
 			aus.make_marri(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -319,7 +314,7 @@ aus.register_plant({
 		return t.valleys > 0.3 and pos.y >= 4 and pos.y <= 67 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3,4)
+			local height = math_random(3, 4)
 			local radius = 3
 			aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
@@ -339,7 +334,7 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.03 and pos.y >= 5 and pos.y <= 30 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3,4)
+			local height = math_random(3, 4)
 			local radius = 2
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
@@ -359,7 +354,7 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.3 and t.v4 > 0.5 and pos.y >= 5 and pos.y <= 30 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3,4)
+			local height = math_random(3, 4)
 			local radius = 2
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,

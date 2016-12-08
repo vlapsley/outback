@@ -1,4 +1,4 @@
--- mods/australia/biome_mulga_lands.lua
+-- mods/australia_modpack/australia/biome_mulga_lands.lua
 
 -- localize math routines for performance
 local math_random = math.random
@@ -6,15 +6,11 @@ local math_random = math.random
 -- mulga lands
 minetest.register_biome({
 	name = "mulga_lands",
-	--node_dust = "",
 	node_top = "default:dirt_with_dry_grass",
 	depth_top = 1,
 	node_filler = "australia:red_dirt",
 	depth_filler = 2,
 	node_stone = "default:stone",
-	--node_water_top = "",
-	--depth_water_top = ,
-	--node_water = "",
 	node_river_water = "australia:muddy_river_water_source",
 	y_min = 4,
 	y_max = 31000,
@@ -23,19 +19,18 @@ minetest.register_biome({
 })
 
 
-
---
--- Ores
---
+--[[
+	Ores
+--]]
 
 -- Blob ore first to avoid other ores inside blobs
 
 
+--[[
+	Decorations
+--]]
 
---
--- Decorations
---
-
+-- Grass
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -56,7 +51,6 @@ local function register_dry_grass_decoration(offset, scale, length)
 	})
 end
 
-	-- Dry grasses
 register_dry_grass_decoration(0.01, 0.2,  5)
 register_dry_grass_decoration(0.03, 0.06,  4)
 register_dry_grass_decoration(0.05, 0.02,  3)
@@ -75,6 +69,7 @@ local function register_rivergrass(length)
 		end,
 	})
 end
+
 register_rivergrass(5)
 register_rivergrass(4)
 
@@ -100,6 +95,7 @@ aus.register_plant({
 	end,
 })
 
+-- Small stone rocks
 local function register_small_stone_rocks(number)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -114,7 +110,6 @@ local function register_small_stone_rocks(number)
 	})
 end
 
--- Small stone rocks
 register_small_stone_rocks(6)
 register_small_stone_rocks(5)
 register_small_stone_rocks(4)
@@ -123,9 +118,9 @@ register_small_stone_rocks(2)
 register_small_stone_rocks(1)
 
 
---
--- Trees
---
+--[[
+	Trees
+--]]
 
 -- Coolabah Tree
 aus.register_plant({
@@ -141,8 +136,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y < 60 and table.contains({"mulga_lands"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(8,10)
-			local radius = math_random(4,5)
+			local height = math_random(8, 10)
+			local radius = math_random(4, 5)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -162,8 +157,8 @@ aus.register_plant({
 		return pos.y >= 5 and pos.y <= 30 and table.contains({"mulga_lands"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(4,7)
-			local radius = math_random(2,3)
+			local height = math_random(4, 7)
+			local radius = math_random(2, 3)
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -183,7 +178,7 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.03 and pos.y >= 10 and pos.y <= 77 and table.contains({"mulga_lands"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(2,3)
+			local height = math_random(2, 3)
 			local radius = 2
 			local limbs = nil
 			local fruit_chance = 0.2
@@ -206,7 +201,7 @@ aus.register_plant({
 		return t.v4 > 0.5 and pos.y >= 10 and pos.y <= 77 and table.contains({"mulga_lands"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(2,3)
+			local height = math_random(2, 3)
 			local radius = 2
 			local limbs = nil
 			local fruit_chance = 0.1
@@ -228,8 +223,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.05 and pos.y >= 40 and pos.y <= 120 and table.contains({"mulga_lands"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(12,15)
-			local radius = math_random(4,5)
+			local height = math_random(12, 15)
+			local radius = math_random(4, 5)
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -248,8 +243,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 72 and table.contains({"mulga_lands"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(12,18)
-			local radius = math_random(6,8)
+			local height = math_random(12, 18)
+			local radius = math_random(6, 8)
 			local limbs = true
 			aus.make_river_red_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -269,8 +264,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.05 and pos.y >= 5 and pos.y <= 50 and table.contains({"mulga_lands"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3,5)
-			local radius = math_random(3,4)
+			local height = math_random(3, 5)
+			local radius = math_random(3, 4)
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -289,8 +284,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.2 and t.v4 > 0.5 and pos.y >= 5 and pos.y <= 50 and table.contains({"mulga_lands"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3,5)
-			local radius = math_random(3,4)
+			local height = math_random(3, 5)
+			local radius = math_random(3, 4)
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })

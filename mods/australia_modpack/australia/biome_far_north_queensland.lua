@@ -1,4 +1,4 @@
--- mods/australia/biome_far_north_queensland.lua
+-- mods/australia_modpack/australia/biome_far_north_queensland.lua
 
 -- localize math routines for performance
 local math_random = math.random
@@ -6,15 +6,11 @@ local math_random = math.random
 -- far north queensland
 minetest.register_biome({
 	name = "far_north_queensland",
-	--node_dust = "",
 	node_top = "default:dirt_with_grass",
 	depth_top = 1,
 	node_filler = "default:dirt",
 	depth_filler = 3,
 	node_stone = "default:stone",
-	--node_water_top = "",
-	--depth_water_top = ,
-	--node_water = "",
 	node_river_water = "default:river_water_source",
 	y_min = 4,
 	y_max = 31000,
@@ -23,19 +19,18 @@ minetest.register_biome({
 })
 
 
-
---
--- Ores
---
+--[[
+	Ores
+--]]
 
 -- Blob ore first to avoid other ores inside blobs
 
 
+--[[
+	Decorations
+--]]
 
---
--- Decorations
---
-
+-- Grass
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -76,12 +71,12 @@ local function register_dry_grass_decoration(offset, scale, length)
 	})
 end
 
--- Grasses
 register_grass_decoration(-0.03,  0.09,  5)
 register_grass_decoration(-0.015, 0.075, 4)
 register_grass_decoration(0,      0.06,  3)
 register_grass_decoration(0.03,   0.09, 2)
 register_grass_decoration(0.06,   0.06,  1)
+
 register_dry_grass_decoration(0.01, 0.05,  5)
 register_dry_grass_decoration(0.03, 0.03,  4)
 register_dry_grass_decoration(0,    0.06,  3)
@@ -100,6 +95,7 @@ local function register_rivergrass(length)
 		end,
 	})
 end
+
 register_rivergrass(5)
 register_rivergrass(4)
 
@@ -114,6 +110,7 @@ aus.register_plant({
 	end,
 })
 
+-- Small stone rocks
 local function register_small_stone_rocks(number)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -128,7 +125,6 @@ local function register_small_stone_rocks(number)
 	})
 end
 
--- Small stone rocks
 register_small_stone_rocks(6)
 register_small_stone_rocks(5)
 register_small_stone_rocks(4)
@@ -137,9 +133,9 @@ register_small_stone_rocks(2)
 register_small_stone_rocks(1)
 
 
---
--- Trees
---
+--[[
+	Trees
+--]]
 
 -- Black Wattle
 aus.register_plant({
@@ -155,7 +151,7 @@ aus.register_plant({
 		return pos.y >= 75 and pos.y <= 125 and table.contains({"far_north_queensland"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(6,8)
+			local height = math_random(6, 8)
 			local radius = 3
 			aus.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
@@ -175,8 +171,8 @@ aus.register_plant({
 		return t.valleys > 0.5 and pos.y >= 5 and pos.y <= 76 and table.contains({"far_north_queensland"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(15,20)
-			local radius = math_random(7,9)
+			local height = math_random(15, 20)
+			local radius = math_random(7, 9)
 			local limbs = true
 			aus.make_tall_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -196,8 +192,8 @@ aus.register_plant({
 		return t.valleys > 0.5 and pos.y >= 5 and pos.y <= 35 and table.contains({"far_north_queensland"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(8,13)
-			local radius = math_random(4,5)
+			local height = math_random(8, 13)
+			local radius = math_random(4, 5)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -217,7 +213,7 @@ aus.register_plant({
 		return t.valleys > 0 and t.valleys < 0.5 and pos.y >= 3 and pos.y <= 80 and table.contains({"far_north_queensland"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(6,8)
+			local height = math_random(6, 8)
 			local radius = 3
 			aus.make_fan_palm(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
@@ -237,7 +233,7 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 110 and table.contains({"far_north_queensland"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(6,8)
+			local height = math_random(6, 8)
 			local radius = 3
 			aus.make_fan_palm(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
@@ -257,8 +253,8 @@ aus.register_plant({
 		return t.valleys > 0.5 and pos.y >= 5 and pos.y <= 100 and table.contains({"far_north_queensland"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(9,11)
-			local radius = math_random(6,7)
+			local height = math_random(9, 11)
+			local radius = math_random(6, 7)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -278,8 +274,8 @@ aus.register_plant({
 		return t.valleys > 0.5 and t.v4 > 0.5 and pos.y >= 5 and pos.y <= 160 and table.contains({"far_north_queensland"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(12,18)
-			local radius = math_random(5,6)
+			local height = math_random(12, 18)
+			local radius = math_random(5, 6)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -300,8 +296,8 @@ aus.register_plant({
 		return t.valleys > 0.5 and pos.y >= 5 and pos.y <= 60 and table.contains({"far_north_queensland"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(4,6)
-			local radius = math_random(4,6)
+			local height = math_random(4, 6)
+			local radius = math_random(4, 6)
 			local limbs = nil
 			local fruit_chance = 0.3
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
@@ -322,8 +318,8 @@ aus.register_plant({
 		return t.valleys > 0 and t.valleys < 0.5 and pos.y >= 4 and pos.y <= 60 and table.contains({"far_north_queensland"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(16,20)
-			local radius = math_random(4,5)
+			local height = math_random(16, 20)
+			local radius = math_random(4, 5)
 			aus.make_merbau(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -342,8 +338,8 @@ aus.register_plant({
 		return t.valleys > 0.5 and pos.y >= 5 and pos.y <= 120 and table.contains({"far_north_queensland"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(12,15)
-			local radius = math_random(4,5)
+			local height = math_random(12, 15)
+			local radius = math_random(4, 5)
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -362,8 +358,8 @@ aus.register_plant({
 		return t.valleys > 0.5 and t.v2 > 0 and t.v2 < 0.03 and pos.y >= 5 and pos.y <= 120 and table.contains({"far_north_queensland"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(12,15)
-			local radius = math_random(4,5)
+			local height = math_random(12, 15)
+			local radius = math_random(4, 5)
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })

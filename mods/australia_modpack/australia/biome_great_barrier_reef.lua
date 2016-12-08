@@ -1,4 +1,4 @@
--- mods/australia/biome_great_barrier_reef.lua
+-- mods/australia_modpack/australia/biome_great_barrier_reef.lua
 
 -- Localize math routines for performance.
 local math_random = math.random
@@ -6,16 +6,11 @@ local math_random = math.random
 -- great barrier reef
 minetest.register_biome({
 	name = "great_barrier_reef",
-	--node_dust = "",
 	node_top = "default:sand",
 	depth_top = 1,
 	node_filler = "default:sand",
 	depth_filler = 2,
 	node_stone = "default:stone",
-	--node_water_top = "",
-	--depth_water_top = ,
-	--node_water = "",
-	--node_river_water = "",
 	y_min = -192,
 	y_max = 3,
 	heat_point = 75,
@@ -23,30 +18,28 @@ minetest.register_biome({
 })
 
 
-
---
--- Ores
---
+--[[
+	Ores
+--]]
 
 -- Blob ore first to avoid other ores inside blobs.
 
 minetest.register_ore({
-	ore_type = "scatter",
-	ore = "australia:woodship",
-	wherein = "default:sand",
-	clust_scarcity = 30*30*30,
-	clust_num_ores = 1,
-	clust_size = 12,
-	biomes = {"great_barrier_reef"},
-	y_min = -64,
-	y_max = -6,
+	ore_type		= "scatter",
+	ore				= "australia:woodship",
+	wherein			= "default:sand",
+	clust_scarcity	= 30 * 30 * 30,
+	clust_num_ores	= 1,
+	clust_size		= 12,
+	biomes			= {"great_barrier_reef"},
+	y_min			= -64,
+	y_max			= -6,
 })
 
 
-
---
--- Decorations
---
+--[[
+	Decorations
+--]]
 
 -- Narrowleaf Seagrass
 minetest.register_decoration({
@@ -82,16 +75,15 @@ minetest.register_decoration({
 })
 
 
---
--- Trees
---
+--[[
+	Trees
+--]]
 
 -- Placeholder for Palm Tree
 -- Awaiting a fix for L-system lighting bug #3421.
 -- https://github.com/minetest/minetest/issues/3421
 
 
---
--- ABM'S
---
-
+--[[
+	ABM's
+--]]
