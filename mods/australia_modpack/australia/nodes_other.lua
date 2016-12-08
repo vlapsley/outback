@@ -485,3 +485,50 @@ minetest.register_node("australia:muddy_river_water_flowing", {
 	post_effect_color = {a = 232, r = 92, g = 80, b = 48},
 	groups = {water = 3, liquid = 3, puts_out_fire = 1, not_in_creative_inventory = 1},
 })
+
+
+--[[
+	Walls
+--]]
+
+walls.register(":walls:bluestone", "Bluestone Cobble Wall", "aus_bluestone_cobble.png",
+		"australia:bluestone_cobble", default.node_sound_stone_defaults())
+
+walls.register(":walls:bluestone_cobble", "Bluestone Wall", "aus_bluestone.png",
+		"australia:bluestone", default.node_sound_stone_defaults())
+
+walls.register(":walls:bluestone_brick", "Bluestone Brick Wall", "aus_bluestone_brick.png",
+		"australia:bluestone_brick", default.node_sound_stone_defaults())
+
+walls.register(":walls:brick", "Brick Wall", "default_brick.png",
+		"default:brick", default.node_sound_stone_defaults())
+
+walls.register(":walls:desert_stone", "Desert Stone Wall", "default_desert_stone.png",
+		"default:desert_stone", default.node_sound_stone_defaults())
+
+walls.register(":walls:desert_stonebrick", "Desert Stone Brick Wall", "default_desert_stone_brick.png",
+		"default:desert_stonebrick", default.node_sound_stone_defaults())
+
+walls.register(":walls:red_stone", "Red Cobblestone Wall", "aus_red_cobble.png",
+		"australia:red_cobble", default.node_sound_stone_defaults())
+
+walls.register(":walls:red_cobble", "Red Stone Wall", "aus_red_stone.png",
+		"australia:red_stone", default.node_sound_stone_defaults())
+
+walls.register(":walls:red_stonebrick", "Red Stone Brick Wall", "aus_red_stonebrick.png",
+		"australia:red_stonebrick", default.node_sound_stone_defaults())
+
+walls.register(":walls:sandstone", "Sandstone Wall", "default_sandstone.png",
+		"default:sandstone", default.node_sound_stone_defaults())
+
+walls.register(":walls:sandstone_brick", "Sandstone Brick Wall", "default_sandstone_brick.png",
+		"default:sandstonebrick", default.node_sound_stone_defaults())
+
+walls.register(":walls:sandstone_cobble", "Sandstone Cobble Wall", "aus_sandstone_cobble.png",
+		"australia:sandstone_cobble", default.node_sound_stone_defaults())
+
+walls.register(":walls:stone", "Stone Wall", "default_stone.png",
+		"default:stone", default.node_sound_stone_defaults())
+
+walls.register(":walls:stone_brick", "Stone Brick Wall", "default_stone_brick.png",
+		"default:stonebrick", default.node_sound_stone_defaults())
