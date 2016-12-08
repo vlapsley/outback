@@ -25,6 +25,27 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
+minetest.register_ore({
+	ore_type				= "sheet",
+	ore						= "australia:bluestone",
+	wherein					= "default:stone",
+	column_height_min		= 2,
+	column_height_max		= 4,
+	column_midpoint_factor	= 0.5,
+	biomes					= {"murray_darling_basin"},
+	y_min					= -192,
+	y_max					= 0,
+	noise_threshold			= 1.25,
+	noise_params			= {
+		offset = 0,
+		scale = 2,
+		spread = {x = 19, y = 19, z = 11},
+		seed = 677,
+		octaves = 2,
+		persist = 0.8,
+	},
+})
+
 
 --[[
 	Decorations

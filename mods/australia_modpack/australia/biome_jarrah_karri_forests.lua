@@ -27,22 +27,23 @@ minetest.register_biome({
 
 -- Bluestone (Basalt)
 minetest.register_ore({
-	ore_type		= "blob",
-	ore				= "australia:bluestone",
-	wherein			= {"default:stone", "default:sandstone"},
-	clust_scarcity	= 16 * 16 * 16,
-	clust_size		= 8,
-	biomes			= {"jarrah_karri_forests"},
-	y_min			= -192,
-	y_max			= 222,
-	noise_threshold	= 0.0,
-	noise_params	= {
-		offset = 0.5,
-		scale = 0.2,
-		spread = {x = 5, y = 5, z = 5},
+	ore_type				= "sheet",
+	ore						= "australia:bluestone",
+	wherein					= "default:stone",
+	column_height_min		= 2,
+	column_height_max		= 4,
+	column_midpoint_factor	= 0.5,
+	biomes					= {"jarrah_karri_forests"},
+	y_min					= -192,
+	y_max					= 0,
+	noise_threshold			= 1.25,
+	noise_params			= {
+		offset = 0,
+		scale = 2,
+		spread = {x = 19, y = 19, z = 11},
 		seed = 677,
-		octaves = 1,
-		persist = 0.0
+		octaves = 2,
+		persist = 0.8,
 	},
 })
 
