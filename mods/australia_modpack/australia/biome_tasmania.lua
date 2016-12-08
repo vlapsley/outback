@@ -1,4 +1,4 @@
--- mods/australia/biome_tasmania.lua
+-- mods/australia_modpack/australia/biome_tasmania.lua
 
 -- localize math routines for performance
 local math_random = math.random
@@ -6,16 +6,11 @@ local math_random = math.random
 -- tasmania
 minetest.register_biome({
 	name = "tasmania",
-	--node_dust = "",
 	node_top = "default:dirt_with_grass",
 	depth_top = 1,
 	node_filler = "default:dirt",
 	depth_filler = 3,
 	node_stone = "default:stone",
-	--node_water_top = "",
-	--depth_water_top = ,
-	--node_water = "",
-	--node_river_water = "",
 	y_min = 4,
 	y_max = 31000,
 	heat_point = 15,
@@ -23,19 +18,18 @@ minetest.register_biome({
 })
 
 
-
---
--- Ores
---
+--[[
+	Ores
+--]]
 
 -- Blob ore first to avoid other ores inside blobs
 
 
+--[[
+	Decorations
+--]]
 
---
--- Decorations
---
-
+-- Grass
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -56,7 +50,6 @@ local function register_grass_decoration(offset, scale, length)
 	})
 end
 
--- Grasses
 register_grass_decoration(-0.03,  0.09,  5)
 register_grass_decoration(-0.015, 0.075, 4)
 register_grass_decoration(0,      0.06,  3)
@@ -75,6 +68,7 @@ local function register_rivergrass(length)
 		end,
 	})
 end
+
 register_rivergrass(5)
 register_rivergrass(4)
 
@@ -90,6 +84,7 @@ minetest.register_decoration({
 	decoration = "default:snow",
 })
 
+-- Small stone rocks
 local function register_small_stone_rocks(number)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -104,7 +99,6 @@ local function register_small_stone_rocks(number)
 	})
 end
 
--- Small stone rocks
 register_small_stone_rocks(6)
 register_small_stone_rocks(5)
 register_small_stone_rocks(4)
@@ -113,9 +107,9 @@ register_small_stone_rocks(2)
 register_small_stone_rocks(1)
 
 
---
--- Trees
---
+--[[
+	Trees
+--]]
 
 -- Black Wattle
 aus.register_plant({
@@ -131,8 +125,8 @@ aus.register_plant({
 		return pos.y >= 5 and pos.y <= 50 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(9,15)
-			local radius = math_random(5,6)
+			local height = math_random(9, 15)
+			local radius = math_random(5, 6)
 			aus.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -151,7 +145,7 @@ aus.register_plant({
 		return pos.y >= 51 and pos.y <= 125 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(6,8)
+			local height = math_random(6, 8)
 			local radius = 3
 			aus.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
@@ -171,8 +165,8 @@ aus.register_plant({
 		return t.valleys > 0 and t.valleys < 0.3 and pos.y >= 5 and pos.y <= 40 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(12,22)
-			local radius = math_random(5,7)
+			local height = math_random(12, 22)
+			local radius = math_random(5, 7)
 			local limbs = true
 			aus.make_tall_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -192,8 +186,8 @@ aus.register_plant({
 		return t.v4 > 0.5 and pos.y >= 5 and pos.y <= 40 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(12,22)
-			local radius = math_random(5,7)
+			local height = math_random(12, 22)
+			local radius = math_random(5, 7)
 			local limbs = true
 			aus.make_tall_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -213,8 +207,8 @@ aus.register_plant({
 		return t.valleys > 0.3 and t.v4 > 0.4 and t.v4 < 0.6 and pos.y >= 40 and pos.y <= 80 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(8,10)
-			local radius = math_random(3,4)
+			local height = math_random(8, 10)
+			local radius = math_random(3, 4)
 			aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -233,8 +227,8 @@ aus.register_plant({
 		return pos.y >= 5 and pos.y <= 39 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(8,10)
-			local radius = math_random(3,4)
+			local height = math_random(8, 10)
+			local radius = math_random(3, 4)
 			aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -253,8 +247,8 @@ aus.register_plant({
 		return pos.y >= 81 and pos.y <= 120 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(8,10)
-			local radius = math_random(3,4)
+			local height = math_random(8, 10)
+			local radius = math_random(3, 4)
 			aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -273,8 +267,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.05 and pos.y >= 5 and pos.y <= 15 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(8,13)
-			local radius = math_random(5,6)
+			local height = math_random(8, 13)
+			local radius = math_random(5, 6)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -294,8 +288,8 @@ aus.register_plant({
 		return t.v4 > 0.6 and pos.y >= 5 and pos.y <= 90 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(8,13)
-			local radius = math_random(5,6)
+			local height = math_random(8, 13)
+			local radius = math_random(5, 6)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -315,8 +309,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.05 and pos.y >= 5 and pos.y <= 80 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(8,13)
-			local radius = math_random(6,8)
+			local height = math_random(8, 13)
+			local radius = math_random(6, 8)
 			aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -335,8 +329,8 @@ aus.register_plant({
 		return t.valleys > 0 and t.valleys < 0.3 and pos.y >= 5 and pos.y <= 80 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(8,13)
-			local radius = math_random(6,8)
+			local height = math_random(8, 13)
+			local radius = math_random(6, 8)
 			aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -355,8 +349,8 @@ aus.register_plant({
 		return t.valleys > 0.3 and t.v4 > 0.6 and pos.y >= 35 and pos.y <= 50 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(30,40)
-			local radius = math_random(8,10)
+			local height = math_random(30, 40)
+			local radius = math_random(8, 10)
 			local limbs = true
 			aus.make_swamp_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -376,8 +370,8 @@ aus.register_plant({
 		return t.v3 > 0.5 and t.v4 < 0.5 and pos.y >= 5 and pos.y <= 30 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(15,20)
-			local radius = math_random(7,9)
+			local height = math_random(15, 20)
+			local radius = math_random(7, 9)
 			local limbs = true
 			aus.make_tasmanian_myrtle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -397,8 +391,8 @@ aus.register_plant({
 		return pos.y >= 31 and pos.y <= 100 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(15,20)
-			local radius = math_random(7,9)
+			local height = math_random(15, 20)
+			local radius = math_random(7, 9)
 			local limbs = true
 			aus.make_tasmanian_myrtle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -418,8 +412,8 @@ aus.register_plant({
 		return pos.y >= 101 and pos.y <= 157 and table.contains({"tasmania"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(10,14)
-			local radius = math_random(5,6)
+			local height = math_random(10, 14)
+			local radius = math_random(5, 6)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,

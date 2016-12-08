@@ -1,4 +1,4 @@
--- mods/australia/voxel.lua
+-- mods/australia_modpack/australia/voxel.lua
 
 -- This is only used to handle cases the decoration manager can't, such as
 -- trees alongside rivers.
@@ -50,6 +50,7 @@ noises[1] = getCppSettingNoise('mg_valleys_np_terrain_height', {
 	persist = 0.7,
 	lacunarity = 2,
 })
+
 -- Noise 2 : Valleys (2D)
 noises[2] = getCppSettingNoise('mg_valleys_np_rivers', {
 	offset = 0,
@@ -60,6 +61,7 @@ noises[2] = getCppSettingNoise('mg_valleys_np_rivers', {
 	persist = 0.6,
 	lacunarity = 2,
 })
+
 -- Noise 3 : Valleys Depth (2D)
 noises[3] = getCppSettingNoise('mg_valleys_np_valley_depth', {
 	offset = 3,
@@ -70,6 +72,7 @@ noises[3] = getCppSettingNoise('mg_valleys_np_valley_depth', {
 	persist = 1,
 	lacunarity = 2,
 })
+
 -- Noise 4 : Valleys Profile (2D)
 noises[4] = getCppSettingNoise('mg_valleys_np_valley_profile', {
 	offset = 0.6,
@@ -80,6 +83,7 @@ noises[4] = getCppSettingNoise('mg_valleys_np_valley_profile', {
 	persist = 1,
 	lacunarity = 2,
 })
+
 -- Noise 5 : Inter-valleys slopes (2D)
 noises[5] = getCppSettingNoise('mg_valleys_np_inter_valley_slope', {
 	offset = 0,
@@ -90,6 +94,7 @@ noises[5] = getCppSettingNoise('mg_valleys_np_inter_valley_slope', {
 	persist = 0.5,
 	lacunarity = 2,
 })
+
 -- Noise 6 : Inter-valleys filling (3D)
 noises[6] = getCppSettingNoise('mg_valleys_np_inter_valley_fill', {
 	offset = 0,
@@ -100,6 +105,7 @@ noises[6] = getCppSettingNoise('mg_valleys_np_inter_valley_fill', {
 	persist = 0.8,
 	lacunarity = 2,
 	})
+
 -- Noise 20 : Salt lakes (2D)
 noises[20] = {
 	offset = 0,
@@ -147,15 +153,6 @@ local function getCppSettingNumeric(name, default)
 	return setting
 end
 
--- Mapgen time stats
-local mapgen_times = {
-	preparation = {},
-	noises = {},
-	collecting = {},
-	writing = {},
-	total = {},
-}
-
 -- Define parameters
 local river_size = 4 / 100
 
@@ -179,7 +176,7 @@ local data = {}
 
 -- THE MAPGEN FUNCTION
 minetest.register_on_generated(function(minp, maxp, seed)
-	if aus.registered_on_first_mapgen then -- Run callbacks
+	if aus.registered_on_first_mapgen then  -- Run callbacks
 		for _, f in ipairs(aus.registered_on_first_mapgen) do
 			f()
 		end
@@ -222,7 +219,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	local vm, emin, emax = minetest.get_mapgen_object("voxelmanip")
 	-- The VoxelArea is used to convert a position into an index for the array.
 	local a = VoxelArea:new({MinEdge = emin, MaxEdge = emax})
-	vm:get_data(data) -- data is the original array of content IDs (solely or mostly air)
+	vm:get_data(data)  -- data is the original array of content IDs (solely or mostly air)
 	-- Be careful: emin ≠ minp and emax ≠ maxp !
 	-- The data array is not limited by minp and maxp. It exceeds it by 16 nodes in the 6 directions.
 	-- The real limits of data array are emin and emax.
@@ -239,8 +236,8 @@ minetest.register_on_generated(function(minp, maxp, seed)
 
 	-- Calculate the noise values
 	local minp2d = {x = minp.x, y = minp.z}
-	local chulens = vector.add(vector.subtract(maxp, minp), 1) -- Size of the generated area, used by noisemaps
-	local chulens_sup = {x = chulens.x, y = chulens.y + 6, z = chulens.z} -- for the noise #6 that needs extra values
+	local chulens = vector.add(vector.subtract(maxp, minp), 1)  -- Size of the generated area, used by noisemaps
+	local chulens_sup = {x = chulens.x, y = chulens.y + 6, z = chulens.z}  -- for noise #6 that needs extra values
 
 	local n1 = noisemap(1, minp2d, chulens)
 	local n2 = noisemap(2, minp2d, chulens)
@@ -253,16 +250,16 @@ minetest.register_on_generated(function(minp, maxp, seed)
 
 	-- THE CORE OF THE MOD: THE MAPGEN ALGORITHM ITSELF
 	-- indexes for noise arrays
-	local i2d = 1 -- index for 2D noises
-	local i3d_sup = 1 -- index for noise #6 which has a special size
+	local i2d = 1  -- index for 2D noises
+	local i3d_sup = 1  -- index for noise #6 which has a special size
 
 	-- Calculate increments
 	local i2d_incrZ = chulens.z
 	local i2d_decrX = chulens.x * chulens.z - 1
 	local biome
 
-	for x = minp.x, maxp.x do -- for each YZ plane
-		for z = minp.z, maxp.z do -- for each vertical line in this plane
+	for x = minp.x, maxp.x do  -- for each YZ plane
+		for z = minp.z, maxp.z do  -- for each vertical line in this plane
 			local air_count = 0
 			-- take the noise values for 2D noises
 			local v1, v2, v3, v4, v5, v20 =
@@ -275,9 +272,9 @@ minetest.register_on_generated(function(minp, maxp, seed)
 				saltlake = true
 			end
 
-			for y = maxp.y, minp.y, -1 do -- for each node in vertical line
-				local ivm = a:index(x, y, z) -- index of the data array, matching the position {x, y, z}
-				local v6 = n6[i3d_sup] -- take the noise values for 3D noises
+			for y = maxp.y, minp.y, -1 do  -- for each node in vertical line
+				local ivm = a:index(x, y, z)  -- index of the data array, matching the position {x, y, z}
+				local v6 = n6[i3d_sup]  -- take the noise values for 3D noises
 				local ground = math_max(heightmap[i2d], 0) - 5
 
 				-- Check for suitable ground node
@@ -296,20 +293,37 @@ minetest.register_on_generated(function(minp, maxp, seed)
 					-- a top node
 					if y >= ground and data[ivm + ystride] == node["air"] then
 
-						v3 = v3 ^ 2 -- The square function changes the behaviour of this noise : very often small, and sometimes very high.
-						local base_ground = v1 + v3 -- v3 is here because terrain is generally higher where valleys are deep (mountains). base_ground represents the height of the rivers, most of the surface is above.
-						v2 = math_abs(v2) - river_size -- v2 represents the distance from the river, in arbitrary units.
-						local river = v2 < 0 -- the rivers are placed where v2 is negative, so where the original v2 value is close to zero.
-						local valleys = v3 * (1 - math_exp(- (v2 / v4) ^ 2)) -- use the curve of the function 1−exp(−(x/a)²) to modelise valleys. Making "a" varying 0 < a ≤ 1 changes the shape of the valleys. Try it with a geometry software ! (here x = v2 and a = v4). This variable represents the height of the terrain, from the rivers.
-						local mountain_ground = base_ground + valleys -- approximate height of the terrain at this point (could be slightly modified by the 3D noise #6)
-						local slopes = v5 * valleys -- This variable represents the maximal influence of the noise #6 on the elevation. v5 is the rate of the height from rivers (variable "valleys") that is concerned.
+						-- The square function changes the behaviour of this noise : very often
+						-- small, and sometimes very high.
+						v3 = v3 ^ 2
+						-- v3 is here because terrain is generally higher where valleys are deep
+						-- (mountains). base_ground represents the height of the rivers, most of
+						-- the surface is above.
+						local base_ground = v1 + v3
+						-- v2 represents the distance from the river, in arbitrary units.
+						v2 = math_abs(v2) - river_size
+						-- The rivers are placed where v2 is negative, so where the original v2
+						-- value is close to zero.
+						local river = v2 < 0
+						-- Use the curve of the function 1−exp(−(x/a)²) to modelise valleys. Making
+						-- "a" varying 0 < a ≤ 1 changes the shape of the valleys. Try it with a
+						-- geometry software! (here x = v2 and a = v4). This variable represents
+						-- the height of the terrain, from the rivers.
+						local valleys = v3 * (1 - math_exp(- (v2 / v4) ^ 2))
+						-- Approximate height of the terrain at this point (could be slightly
+						-- modified by the 3D noise #6)
+						local mountain_ground = base_ground + valleys
+						-- This variable represents the maximal influence of the noise #6 on the
+						-- elevation. v5 is the rate of the height from rivers (variable "valleys")
+						-- that is concerned.
+						local slopes = v5 * valleys
 
 						if saltlake and y < 40 and slopes < 0 and v2 > 0.1 and
 								v2 < 0.2 and data[ivm] == node["red_sand"] then
 							data[ivm] = node["salt"]
 						end
 
-						local conditions = { -- pack it in a table, for plants API
+						local conditions = {  -- pack it in a table, for plants API
 							v1 = v1,
 							v2 = v2,
 							v3 = v3,
@@ -333,13 +347,13 @@ minetest.register_on_generated(function(minp, maxp, seed)
 				end
 
 			end
-			i2d = i2d + i2d_incrZ -- increment i2d by one Z
+			i2d = i2d + i2d_incrZ  -- Increment i2d by one Z
 		end
-		i2d = i2d - i2d_decrX -- decrement the Z line previously incremented and increment by one X (1)
+		i2d = i2d - i2d_decrX  -- Decrement the Z line previously incremented and increment by one X (1)
 	end
-	aus.execute_after_mapgen() -- needed for some tree roots
+	aus.execute_after_mapgen()  -- Needed for some tree roots
 
-	-- execute voxelmanip boring stuff to write to the map...
+	-- Execute voxelmanip boring stuff to write to the map...
 	vm:set_data(data)
 	-- vm:set_lighting({day = 0, night = 0})
 	vm:calc_lighting()

@@ -1,8 +1,10 @@
--- mods/australia/init.lua
+-- mods/australia_modpack/australia/init.lua
 
--- MOD: Australia
--- See README.md for licensing and other information.
--- Designed for Minetest 0.4.14.
+--[[
+	MOD: Australia
+	See README.md for licensing and other information.
+	Designed for Minetest 0.4.14.
+--]]
 
 -- Check for necessary mod functions and abort if they aren't available.
 if not minetest.get_biome_id then
@@ -14,28 +16,36 @@ if not minetest.get_biome_id then
 	return
 end
 
+-- Set mapgen parameters.
 minetest.register_on_mapgen_init(function(mgparams)
-	minetest.set_mapgen_params({mgname = "valleys", water_level = 0,
-			flags = "caves,light,decorations,nodungeons"})
+	minetest.set_mapgen_params({
+		mgname = "valleys",
+		water_level = 0,
+		flags = "caves,light,decorations,nodungeons",
+		})
 end)
 
--- Definitions made by this mod that other mods can use too
+-- Definitions made by this mod that other mods can use too.
 aus = {}
 aus.path = minetest.get_modpath("australia")
 aus.schematics = {}
 
 
--- Mapgen noise paramters
+--[[
+	Mapgen noise parameters
+	If you change a value here also check and, if necessary,
+	change the corresponding value in voxel.lua
+--]]
 
 -- Noise parameters for biome API temperature, humidity and biome blend.
 aus.mg_biome_np_heat = {offset = 50, scale = 50, seed = 5349,
-	spread = {x = 24, y = 24, z = 24}, octaves = 3, persist = 0.5, lacunarity = 2,}
+	spread = {x = 1024, y = 1024, z = 1024}, octaves = 3, persist = 0.5, lacunarity = 2,}
 
 aus.mg_biome_np_heat_blend = {offset = 0, scale = 1.5, seed = 13,
 	spread = {x = 8, y = 8, z = 8}, octaves = 2, persist = 1, lacunarity = 2,}
 
 aus.mg_biome_np_humidity = {offset = 50, scale = 50, seed = 842,
-	spread = {x = 24, y = 24, z = 24}, octaves = 3, persist = 0.5, lacunarity = 2,}
+	spread = {x = 1024, y = 1024, z = 1024}, octaves = 3, persist = 0.5, lacunarity = 2,}
 
 aus.mg_biome_np_humidity_blend = {offset = 0, scale = 1.5, seed = 90003,
 	spread = {x = 8, y = 8, z = 8}, octaves = 2, persist = 1, lacunarity = 2,}
@@ -80,7 +90,6 @@ aus.mgvalleys_np_valley_profile = {offset = 0.6, scale = 0.5, seed = 777,
 aus.mgvalleys_np_inter_valley_slope = {offset = 0, scale = 1, seed = 746,
 	spread = {x = 256, y = 256, z = 256}, octaves = 3, persist = 0.5, lacunarity = 2,}
 
-
 minetest.set_noiseparams("mg_biome_np_heat", aus.mg_biome_np_heat)
 minetest.set_noiseparams("mg_biome_np_heat_blend", aus.mg_biome_np_heat_blend)
 minetest.set_noiseparams("mg_biome_np_humidity", aus.mg_biome_np_humidity)
@@ -96,7 +105,10 @@ minetest.set_noiseparams("mgvalleys_np_inter_valley_fill", aus.mgvalleys_np_inte
 minetest.set_noiseparams("mgvalleys_np_valley_profile", aus.mgvalleys_np_valley_profile)
 minetest.set_noiseparams("mgvalleys_np_inter_valley_slope", aus.mgvalleys_np_inter_valley_slope)
 
--- Mapgen settings
+
+--[[
+	Mapgen settings
+--]]
 
 -- How deep to make rivers
 minetest.setting_set("mgvalleys_river_depth", 5)
@@ -104,6 +116,10 @@ minetest.setting_set("mgvalleys_river_depth", 5)
 -- How wide to make rivers
 minetest.setting_set("mgvalleys_river_size", 4)
 
+
+--[[
+	Biomes
+--]]
 
 -- Set the following variables to true to enable each biome
 aus.biome_underground				= true
@@ -128,11 +144,13 @@ aus.biome_pilbara					= true
 aus.biome_simpson_desert			= true
 aus.biome_australian_alps			= true
 
+
 aus.registered_on_first_mapgen = {}
 
 function aus.register_on_first_mapgen(func) -- Callback
 	table.insert(aus.registered_on_first_mapgen, func)
 end
+
 
 -- Load files
 dofile(aus.path .. "/functions.lua")

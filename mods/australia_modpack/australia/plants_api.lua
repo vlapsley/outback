@@ -1,13 +1,14 @@
+-- mods/australia_modpack/australia/plants_api.lua
+
 aus.registered_plants = {}
 
--- localize math routines for performance
+-- Localize math routines for performance
 local math_floor = math.floor
 local math_random = math.random
 
 function aus.register_plant(params)
 	local n = #aus.registered_plants + 1
 	params.priority = math_floor(params.priority) + 1 / n
-
 	aus.registered_plants[n] = params
 end
 
@@ -32,27 +33,28 @@ aus.register_on_first_mapgen(function()
 		end
 	)
 
-	for _, plant in ipairs(aus.registered_plants) do -- convert 'nodes' into content IDs
+	for _, plant in ipairs(aus.registered_plants) do  -- convert 'nodes' into content IDs
 		plant.nodes = get_content_id(plant.nodes)
 	end
 end)
 
 function aus.choose_generate_plant(conditions, pos, data, area, ivm)
-	local rand = math_random() -- Random number to choose the plant
-	for _, plant in ipairs(aus.registered_plants) do -- for each registered plant
+	local rand = math_random()  -- Random number to choose the plant
+
+	for _, plant in ipairs(aus.registered_plants) do  -- for each registered plant
 		local cover = plant.cover
-		if plant.check(conditions, pos) then -- Place this plant, or do not place anything (see Cover parameter)
+		if plant.check(conditions, pos) then  -- Place this plant, or do not place anything (see Cover parameter)
 			if rand < cover then
 				if rand < plant.density then
 					local grow = plant.grow
 					local nodes = plant.nodes
 
-					if grow then -- if a grow function is defined, then run it
+					if grow then  -- if a grow function is defined, then run it
 						grow(nodes, pos, data, area, ivm, conditions)
 					else
-						if type(nodes) == "number" then -- 'nodes' is just a number
+						if type(nodes) == "number" then  -- 'nodes' is just a number
 							data[ivm] = nodes
-						else -- 'nodes' is an array
+						else  -- 'nodes' is an array
 							local node = nodes[math_random(#nodes)]
 							local n = nodes.n or 1
 							local ystride = area.ystride
@@ -70,4 +72,5 @@ function aus.choose_generate_plant(conditions, pos, data, area, ivm)
 			end
 		end
 	end
+
 end

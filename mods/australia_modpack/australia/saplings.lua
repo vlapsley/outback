@@ -1,9 +1,10 @@
---
--- Grow trees from saplings
---
+-- mods/australia_modpack/australia/saplings.lua
+
+--[[
+	Grow trees from saplings
+--]]
 
 -- Sapling ABM
-
 minetest.register_abm({
 	nodenames = {
 		"australia:arnhem_cypress_pine_sapling",
@@ -54,7 +55,8 @@ minetest.register_abm({
 		"australia:tasmanian_myrtle_sapling",
 		"australia:tea_tree_sapling",
 		"australia:white_box_sapling",
-		"australia:wirewood_sapling"},
+		"australia:wirewood_sapling",
+	},
 	interval = 5,
 	chance = 90,
 	action = function(pos, node)

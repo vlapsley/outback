@@ -1,4 +1,4 @@
--- mods/australia/trees.lua
+-- mods/australia_modpack/australia/trees.lua
 
 -- Localize math routines for performance.
 local math_abs = math.abs
@@ -8,6 +8,7 @@ local math_max = math.max
 local math_random = math.random
 local math_sqrt = math.sqrt
 
+-- Make a tree trunk 2-nodes wide.
 local function make_treetrunk2(x0, y0, z0, data, area, height, trunk, air, base)
 	local ystride = area.ystride
 	local ybot = y0 - 1
@@ -32,6 +33,7 @@ local function make_treetrunk2(x0, y0, z0, data, area, height, trunk, air, base)
 	end
 end
 
+-- Make a tree trunk 3-nodes wide.
 local function make_treetrunk3(x0, y0, z0, data, area, height, trunk, air, base)
 	local ystride = area.ystride
 	local ybot = y0 - 1
@@ -56,6 +58,7 @@ local function make_treetrunk3(x0, y0, z0, data, area, height, trunk, air, base)
 	end
 end
 
+-- Generic tree function.
 function aus.make_tree(pos, data, area, height, radius, trunk, leaves, air,
 		ignore, limbs, fruit_chance, fruit)
 	local ystride = area.ystride -- Useful to get the index above
@@ -64,8 +67,7 @@ function aus.make_tree(pos, data, area, height, radius, trunk, leaves, air,
 		data[iv] = trunk
 		iv = iv + ystride -- increment by one node up
 	end
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height - 1
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs, fruit_chance, fruit)
@@ -80,8 +82,7 @@ function aus.make_black_box(pos, data, area, height, radius, trunk, leaves,
 		iv = iv + ystride -- increment by one node up
 	end
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.5)
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height - 1
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 0.8, z = radius}, np, limbs)
@@ -95,8 +96,7 @@ function aus.make_black_wattle(pos, data, area, height, radius, trunk, leaves,
 		data[iv] = trunk
 		iv = iv + ystride -- increment by one node up
 	end
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height - 1
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 1.5, z = radius}, np, limbs)
@@ -111,8 +111,7 @@ function aus.make_tall_gum(pos, data, area, height, radius, trunk, leaves, air,
 		iv = iv + ystride -- increment by one node up
 	end
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.2)
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height - 1
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 1.25, z = radius}, np, limbs)
@@ -141,8 +140,7 @@ function aus.make_boab(pos, data, area, height, radius, trunk, leaves, air, igno
 			end
 		end
 	end
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height - 1
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 0.5, z = radius}, np, limbs)
@@ -188,8 +186,7 @@ function aus.make_fan_palm(pos, data, area, height, radius, trunk, leaves, air, 
 		data[iv] = trunk
 		iv = iv + ystride -- increment by one node up
 	end
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 0.5, z = radius}, np)
@@ -205,8 +202,7 @@ function aus.make_jarrah(pos, data, area, height, radius, trunk, leaves, air, ig
 	end
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.8)
 	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.4)
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs)
@@ -221,8 +217,7 @@ function aus.make_karri(pos, data, area, height, radius, trunk, leaves, air, ign
 		iv = iv + ystride -- increment by one node up
 	end
 	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.8)
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs)
@@ -236,8 +231,7 @@ function aus.make_mangrove(pos, data, area, height, radius, trunk, leaves, air, 
 		data[iv] = trunk
 		iv = iv + ystride -- increment by one node up
 	end
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 0.5, z = radius}, np)
@@ -261,7 +255,7 @@ function aus.make_mangrove(pos, data, area, height, radius, trunk, leaves, air, 
 	end
 end
 
--- Mangrove tree
+-- Mangrove trees use schematic placement because the vocelmanipulator cannot place nodes under sea level.
 function aus.generate_mangrove_tree_schematic(trunk_height, trunk, leaf)
 	local height = trunk_height * 2 + 1
 	local radius = 2
@@ -270,10 +264,10 @@ function aus.generate_mangrove_tree_schematic(trunk_height, trunk, leaf)
 	local s = aus.schematic_array(width, height, width)
 
 	-- roots, trunk, and extra leaves
-	for z = -1,1 do
-		for y = 1,trunk_top do
-			for x = -1,1 do
-				local i = (z+radius)*width*height + y*width + (x+radius) + 1
+	for z = -1, 1 do
+		for y = 1, trunk_top do
+			for x = -1, 1 do
+				local i = (z + radius) * width * height + y * width + (x + radius) + 1
 				if x == 0 and z == 0 then
 					s.data[i].name = trunk
 					s.data[i].param1 = 255
@@ -291,15 +285,15 @@ function aus.generate_mangrove_tree_schematic(trunk_height, trunk, leaf)
 	end
 
 	-- canopy
-	for y = 1,trunk_top+2 do
-		if y > trunk_height and (y == trunk_top or math_random(1,height - y) == 1) then
+	for y = 1, trunk_top + 2 do
+		if y > trunk_height and (y == trunk_top or math_random(1, height - y) == 1) then
 			local x, z = 0, 0
 			while x == 0 and z == 0 do
-				x = math_random(-1,1) * 2
-				z = math_random(-1,1) * 2
+				x = math_random(-1, 1) * 2
+				z = math_random(-1, 1) * 2
 			end
-			for j = -1,1,2 do
-				aus.generate_canopy(s, leaf, {x=j*x, y=y, z=j*z})
+			for j = -1, 1, 2 do
+				aus.generate_canopy(s, leaf, {x = j * x, y = y, z = j * z})
 			end
 		end
 	end
@@ -313,14 +307,14 @@ function aus.generate_canopy(s, leaf, pos)
 	local rx = math_floor(s.size.x / 2)
 	local rz = math_floor(s.size.z / 2)
 	local r1 = 4  -- leaf decay radius
-	local probs = {255,200,150,100,75}
+	local probs = {255, 200, 150, 100, 75}
 
-	for z = -r1,r1 do
-		for y = 0,1 do
-			for x = -r1,r1 do
-				if x+pos.x >= -rx and x+pos.x <= rx and y+pos.y >= 0 and
-						y+pos.y < height and z+pos.z >= -rz and z+pos.z <= rz then
-					local i = (z+pos.z+rz)*width*height + (y+pos.y)*width + (x+pos.x+rx) + 1
+	for z = -r1, r1 do
+		for y = 0, 1 do
+			for x = -r1, r1 do
+				if x+pos.x >= -rx and x + pos.x <= rx and y + pos.y >= 0 and
+						y + pos.y < height and z + pos.z >= -rz and z + pos.z <= rz then
+					local i = (z + pos.z + rz) * width * height + (y + pos.y) * width + (x + pos.x + rx) + 1
 					local dist1 = math_sqrt(x^2 + y^2 + z^2)
 					local dist2 = math_sqrt((x+pos.x)^2 + (z+pos.z)^2)
 					if dist1 <= r1 then
@@ -347,8 +341,7 @@ function aus.make_marri(pos, data, area, height, radius, trunk, leaves, air, ign
 		iv = iv + ystride -- increment by one node up
 	end
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.6)
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs)
@@ -363,8 +356,7 @@ function aus.make_merbau(pos, data, area, height, radius, trunk, leaves, air, ig
 		iv = iv + ystride -- increment by one node up
 	end
 	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.2)
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 0.5, z = radius}, np)
@@ -381,8 +373,7 @@ function aus.make_moreton_bay_fig(pos, data, area, height, radius, trunk,
 	end
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.7)
 	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.3)
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs, fruit_chance, fruit)
@@ -398,8 +389,7 @@ function aus.make_river_red_gum(pos, data, area, height, radius, trunk, leaves,
 		iv = iv + ystride -- increment by one node up
 	end
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.7)
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs)
@@ -433,22 +423,21 @@ function aus.make_tasmanian_myrtle(pos, data, area, height, radius, trunk,
 		iv = iv + ystride -- increment by one node up
 	end
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.6)
-	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
-			octaves = 3, persist = 0.5}
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
 	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs)
 end
 
-function aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
-		radius, np, limbs, fruit_chance, fruit)
+-- Make leaves on a tree in a noise blob.
+function aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore, radius, np, limbs, fruit_chance, fruit)
 	limbs = limbs
 	fruit_chance = fruit_chance or 0
 	np.seed = math_random(0, 16777215) -- noise seed
 	local minp = vector.subtract(pos, radius) -- minimal corner of the leavesblob
 	local maxp = vector.add(pos, radius) -- maximal corner of the leavesblob
-	local int_minp = {x = math_floor(minp.x), y = math_floor(minp.y),
-			z = math_floor(minp.z)} -- Same positions, but with integer coordinates
+	 -- Same positions, but with integer coordinates
+	local int_minp = {x = math_floor(minp.x), y = math_floor(minp.y), z = math_floor(minp.z)}
 	local int_maxp = {x = math_ceil(maxp.x), y = math_ceil(maxp.y), z = math_ceil(maxp.z)}
 
 	local length = vector.subtract(int_maxp, int_minp)
@@ -471,7 +460,7 @@ function aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 				if nval > dist then -- if the noise is bigger than the distance, make leaves
 					local iv = area:index(x, y, z)
 					if data[iv] == air or data[iv] == ignore then
-						 -- make some branches with the leaf structure
+						 -- make some branches within the leaf structure
 						if nval > dist * 1.5 and limbs and math_random(5) == 1 then
 							data[iv] = trunk
 						-- if a fruit tree add fruit
@@ -489,11 +478,10 @@ function aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 end
 
 
-
 -- Arnhem Cypress Pine
 function aus.grow_arnhem_cypress_pine(pos)
 	-- individual parameters
-	local height = math_random(10,15)
+	local height = math_random(10, 15)
 	local radius = 4
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:arnhem_cypress_pine_tree")
@@ -516,8 +504,8 @@ end
 -- Black Box
 function aus.grow_black_box(pos)
 	-- individual parameters
-	local height = math_random(5,10)
-	local radius = math_random(4,6)
+	local height = math_random(5, 10)
+	local radius = math_random(4, 6)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:black_box_tree")
@@ -540,7 +528,7 @@ end
 -- Black Wattle
 function aus.grow_black_wattle(pos)
 	-- individual parameters
-	local height = math_random(6,8)
+	local height = math_random(6, 8)
 	local radius = 3
 	local limbs = false
 	-- voxelmanip stuff
@@ -564,8 +552,8 @@ end
 -- Blue Gum
 function aus.grow_blue_gum(pos)
 	-- individual parameters
-	local height = math_random(12,22)
-	local radius = math_random(5,7)
+	local height = math_random(12, 22)
+	local radius = math_random(5, 7)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:blue_gum_tree")
@@ -588,8 +576,8 @@ end
 -- Boab
 function aus.grow_boab(pos)
 	-- individual parameters
-	local height = math_random(5,6)
-	local radius = math_random(4,5)
+	local height = math_random(5, 6)
+	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:boab_tree")
@@ -612,8 +600,8 @@ end
 -- Bull Banksia
 function aus.grow_bull_banksia(pos)
 	-- individual parameters
-	local height = math_random(3,5)
-	local radius = math_random(2,3)
+	local height = math_random(3, 5)
+	local radius = math_random(2, 3)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:bull_banksia_tree")
 	local leaves = minetest.get_content_id("australia:bull_banksia_leaves")
@@ -635,8 +623,8 @@ end
 -- Celery-top Pine
 function aus.grow_celery_top_pine(pos)
 	-- individual parameters
-	local height = math_random(8,10)
-	local radius = math_random(3,4)
+	local height = math_random(8, 10)
+	local radius = math_random(3, 4)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:celery_top_pine_tree")
 	local leaves = minetest.get_content_id("australia:celery_top_pine_leaves")
@@ -658,7 +646,7 @@ end
 -- Cherry
 function aus.grow_cherry(pos)
 	-- individual parameters
-	local height = math_random(3,4)
+	local height = math_random(3, 4)
 	local radius = 3
 	local limbs = nil
 	local fruit_chance = 0.2
@@ -684,8 +672,8 @@ end
 -- Coast Banksia
 function aus.grow_coast_banksia(pos)
 	-- individual parameters
-	local height = math_random(8,13)
-	local radius = math_random(5,6)
+	local height = math_random(8, 13)
+	local radius = math_random(5, 6)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:coast_banksia_tree")
 	local leaves = minetest.get_content_id("australia:coast_banksia_leaves")
@@ -707,8 +695,8 @@ end
 -- Coolabah
 function aus.grow_coolabah(pos)
 	-- individual parameters
-	local height = math_random(7,10)
-	local radius = math_random(4,5)
+	local height = math_random(7, 10)
+	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:coolabah_tree")
@@ -731,8 +719,8 @@ end
 -- Daintree Stringybark
 function aus.grow_daintree_stringybark(pos)
 	-- individual parameters
-	local height = math_random(15,20)
-	local radius = math_random(7,9)
+	local height = math_random(15, 20)
+	local radius = math_random(7, 9)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:daintree_stringybark_tree")
@@ -755,8 +743,8 @@ end
 -- Darwin Woollybutt
 function aus.grow_darwin_woollybutt(pos)
 	-- individual parameters
-	local height = math_random(8,13)
-	local radius = math_random(4,5)
+	local height = math_random(8, 13)
+	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:darwin_woollybutt_tree")
@@ -779,8 +767,8 @@ end
 -- Desert Oak
 function aus.grow_desert_oak(pos)
 	-- individual parameters
-	local height = math_random(4,8)
-	local radius = math_random(2,4)
+	local height = math_random(4, 8)
+	local radius = math_random(2, 4)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:desert_oak_tree")
 	local leaves = minetest.get_content_id("australia:desert_oak_leaves")
@@ -802,7 +790,7 @@ end
 -- Fan Palm
 function aus.grow_fan_palm(pos)
 	-- individual parameters
-	local height = math_random(6,8)
+	local height = math_random(6, 8)
 	local radius = 3
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:fan_palm_tree")
@@ -825,8 +813,8 @@ end
 -- Flame Grevillea
 function aus.grow_flame_grevillea(pos)
 	-- individual parameters
-	local height = math_random(2,3)
-	local radius = math_random(2,3)
+	local height = math_random(2, 3)
+	local radius = math_random(2, 3)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:flame_grevillea_tree")
 	local leaves = minetest.get_content_id("australia:flame_grevillea_leaves")
@@ -848,7 +836,7 @@ end
 -- Golden Wattle
 function aus.grow_golden_wattle(pos)
 	-- individual parameters
-	local height = math_random(3,4)
+	local height = math_random(3, 4)
 	local radius = 2
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:golden_wattle_tree")
@@ -871,7 +859,7 @@ end
 -- Grey Mangrove
 function aus.grow_grey_mangrove(pos)
 	-- individual parameters
-	local height = math_random(3,4)
+	local height = math_random(3, 4)
 	local radius = 2
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:grey_mangrove_tree")
@@ -894,8 +882,8 @@ end
 -- Huon Pine
 function aus.grow_huon_pine(pos)
 	-- individual parameters
-	local height = math_random(8,13)
-	local radius = math_random(5,6)
+	local height = math_random(8, 13)
+	local radius = math_random(5, 6)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:huon_pine_tree")
@@ -918,8 +906,8 @@ end
 -- Illawarra Flame Tree
 function aus.grow_illawarra_flame(pos)
 	-- individual parameters
-	local height = math_random(9,11)
-	local radius = math_random(6,7)
+	local height = math_random(9, 11)
+	local radius = math_random(6, 7)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:illawarra_flame_tree")
 	local leaves = minetest.get_content_id("australia:illawarra_flame_leaves")
@@ -941,8 +929,8 @@ end
 -- Jarrah
 function aus.grow_jarrah(pos)
 	-- individual parameters
-	local height = math_random(15,20)
-	local radius = math_random(8,10)
+	local height = math_random(15, 20)
+	local radius = math_random(8, 10)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:jarrah_tree")
@@ -965,8 +953,8 @@ end
 -- Karri
 function aus.grow_karri(pos)
 	-- individual parameters
-	local height = math_random(20,30)
-	local radius = math_random(8,10)
+	local height = math_random(20, 30)
+	local radius = math_random(8, 10)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:karri_tree")
@@ -989,8 +977,8 @@ end
 -- Lemon Eucalyptus
 function aus.grow_lemon_eucalyptus(pos)
 	-- individual parameters
-	local height = math_random(12,18)
-	local radius = math_random(5,6)
+	local height = math_random(12, 18)
+	local radius = math_random(5, 6)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:lemon_eucalyptus_tree")
@@ -1013,8 +1001,8 @@ end
 -- Lemon Myrtle
 function aus.grow_lemon_myrtle(pos)
 	-- individual parameters
-	local height = math_random(3,5)
-	local radius = math_random(2,3)
+	local height = math_random(3, 5)
+	local radius = math_random(2, 3)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:lemon_myrtle_tree")
 	local leaves = minetest.get_content_id("australia:lemon_myrtle_leaves")
@@ -1036,8 +1024,8 @@ end
 -- Lilly Pilly
 function aus.grow_lilly_pilly(pos)
 	-- individual parameters
-	local height = math_random(4,6)
-	local radius = math_random(4,6)
+	local height = math_random(4, 6)
+	local radius = math_random(4, 6)
 	local limbs = nil
 	local fruit_chance = 0.3
 	-- voxelmanip stuff
@@ -1062,8 +1050,8 @@ end
 -- Macadamia
 function aus.grow_macadamia(pos)
 	-- individual parameters
-	local height = math_random(6,8)
-	local radius = math_random(3,4)
+	local height = math_random(6, 8)
+	local radius = math_random(3, 4)
 	local limbs = nil
 	local fruit_chance = 0.3
 	-- voxelmanip stuff
@@ -1088,8 +1076,8 @@ end
 -- Mangrove Apple
 function aus.grow_mangrove_apple(pos)
 	-- individual parameters
-	local height = math_random(6,8)
-	local radius = math_random(3,4)
+	local height = math_random(6, 8)
+	local radius = math_random(3, 4)
 	local limbs = nil
 	local fruit_chance = 0.2
 	-- voxelmanip stuff
@@ -1114,8 +1102,8 @@ end
 -- Marri
 function aus.grow_marri(pos)
 	-- individual parameters
-	local height = math_random(15,20)
-	local radius = math_random(7,10)
+	local height = math_random(15, 20)
+	local radius = math_random(7, 10)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:marri_tree")
@@ -1138,8 +1126,8 @@ end
 -- Merbau
 function aus.grow_merbau(pos)
 	-- individual parameters
-	local height = math_random(16,20)
-	local radius = math_random(4,5)
+	local height = math_random(16, 20)
+	local radius = math_random(4, 5)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:merbau_tree")
 	local leaves = minetest.get_content_id("australia:merbau_leaves")
@@ -1161,8 +1149,8 @@ end
 -- Moreton Bay Fig
 function aus.grow_moreton_bay_fig(pos)
 	-- individual parameters
-	local height = math_random(15,20)
-	local radius = math_random(13,15)
+	local height = math_random(15, 20)
+	local radius = math_random(13, 15)
 	local limbs = true
 	local fruit_chance = 0.2
 	-- voxelmanip stuff
@@ -1187,8 +1175,8 @@ end
 -- Mulga
 function aus.grow_mulga(pos)
 	-- individual parameters
-	local height = math_random(4,7)
-	local radius = math_random(2,3)
+	local height = math_random(4, 7)
+	local radius = math_random(2, 3)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:mulga_tree")
 	local leaves = minetest.get_content_id("australia:mulga_leaves")
@@ -1210,8 +1198,8 @@ end
 -- Paperbark
 function aus.grow_paperbark(pos)
 	-- individual parameters
-	local height = math_random(6,10)
-	local radius = math_random(4,5)
+	local height = math_random(6, 10)
+	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:paperbark_tree")
@@ -1234,7 +1222,7 @@ end
 -- Quandong
 function aus.grow_quandong(pos)
 	-- individual parameters
-	local height = math_random(2,3)
+	local height = math_random(2, 3)
 	local radius = 2
 	local limbs = nil
 	local fruit_chance = 0.2
@@ -1260,8 +1248,8 @@ end
 -- Red Bottlebrush
 function aus.grow_red_bottlebrush(pos)
 	-- individual parameters
-	local height = math_random(2,3)
-	local radius = math_random(2,3)
+	local height = math_random(2, 3)
+	local radius = math_random(2, 3)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:red_bottlebrush_tree")
 	local leaves = minetest.get_content_id("australia:red_bottlebrush_leaves")
@@ -1283,8 +1271,8 @@ end
 -- River Oak
 function aus.grow_river_oak(pos)
 	-- individual parameters
-	local height = math_random(12,15)
-	local radius = math_random(4,5)
+	local height = math_random(12, 15)
+	local radius = math_random(4, 5)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:river_oak_tree")
 	local leaves = minetest.get_content_id("australia:river_oak_leaves")
@@ -1306,8 +1294,8 @@ end
 -- River Red Gum
 function aus.grow_river_red_gum(pos)
 	-- individual parameters
-	local height = math_random(12,18)
-	local radius = math_random(6,8)
+	local height = math_random(12, 18)
+	local radius = math_random(6, 8)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:river_red_gum_tree")
@@ -1330,7 +1318,7 @@ end
 -- Rottnest Island Pine
 function aus.grow_rottnest_island_pine(pos)
 	-- individual parameters
-	local height = math_random(3,4)
+	local height = math_random(3, 4)
 	local radius = 3
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:rottnest_island_pine_tree")
@@ -1353,8 +1341,8 @@ end
 -- Scribbly Gum
 function aus.grow_scribbly_gum(pos)
 	-- individual parameters
-	local height = math_random(6,8)
-	local radius = math_random(4,5)
+	local height = math_random(6, 8)
+	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:scribbly_gum_tree")
@@ -1377,8 +1365,8 @@ end
 -- Shoestring Acacia
 function aus.grow_shoestring_acacia(pos)
 	-- individual parameters
-	local height = math_random(3,5)
-	local radius = math_random(3,4)
+	local height = math_random(3, 5)
+	local radius = math_random(3, 4)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:shoestring_acacia_tree")
 	local leaves = minetest.get_content_id("australia:shoestring_acacia_leaves")
@@ -1400,7 +1388,7 @@ end
 -- Snow Gum
 function aus.grow_snow_gum(pos)
 	-- individual parameters
-	local height = math_random(2,4)
+	local height = math_random(2, 4)
 	local radius = 2
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:snow_gum_tree")
@@ -1423,8 +1411,8 @@ end
 -- Southern Sassafras
 function aus.grow_southern_sassafras(pos)
 	-- individual parameters
-	local height = math_random(7,13)
-	local radius = math_random(3,4)
+	local height = math_random(7, 13)
+	local radius = math_random(3, 4)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:southern_sassafras_tree")
 	local leaves = minetest.get_content_id("australia:southern_sassafras_leaves")
@@ -1446,8 +1434,8 @@ end
 -- Stilted Mangrove
 function aus.grow_stilted_mangrove(pos)
 	-- individual parameters
-	local height = math_random(4,7)
-	local radius = math_random(2,3)
+	local height = math_random(4, 7)
+	local radius = math_random(2, 3)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:stilted_mangrove_tree")
 	local leaves = minetest.get_content_id("australia:stilted_mangrove_leaves")
@@ -1469,8 +1457,8 @@ end
 -- Sugar Gum
 function aus.grow_sugar_gum(pos)
 	-- individual parameters
-	local height = math_random(9,13)
-	local radius = math_random(8,10)
+	local height = math_random(9, 13)
+	local radius = math_random(8, 10)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:sugar_gum_tree")
@@ -1493,8 +1481,8 @@ end
 -- Swamp Bloodwood
 function aus.grow_swamp_bloodwood(pos)
 	-- individual parameters
-	local height = math_random(6,8)
-	local radius = math_random(3,4)
+	local height = math_random(6, 8)
+	local radius = math_random(3, 4)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:swamp_bloodwood_tree")
@@ -1517,8 +1505,8 @@ end
 -- Swamp Gum
 function aus.grow_swamp_gum(pos)
 	-- individual parameters
-	local height = math_random(30,40)
-	local radius = math_random(8,10)
+	local height = math_random(30, 40)
+	local radius = math_random(8, 10)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:swamp_gum_tree")
@@ -1541,7 +1529,7 @@ end
 -- Swamp Paperbark
 function aus.grow_swamp_paperbark(pos)
 	-- individual parameters
-	local height = math_random(3,4)
+	local height = math_random(3, 4)
 	local radius = 2
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:swamp_paperbark_tree")
@@ -1564,8 +1552,8 @@ end
 -- Tasmanian Myrtle
 function aus.grow_tasmanian_myrtle(pos)
 	-- individual parameters
-	local height = math_random(15,20)
-	local radius = math_random(7,9)
+	local height = math_random(15, 20)
+	local radius = math_random(7, 9)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:tasmanian_myrtle_tree")
@@ -1588,8 +1576,8 @@ end
 -- Tea Tree
 function aus.grow_tea_tree(pos)
 	-- individual parameters
-	local height = math_random(3,4)
-	local radius = math_random(2,3)
+	local height = math_random(3, 4)
+	local radius = math_random(2, 3)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:tea_tree_tree")
 	local leaves = minetest.get_content_id("australia:tea_tree_leaves")
@@ -1611,8 +1599,8 @@ end
 -- White Box
 function aus.grow_white_box(pos)
 	-- individual parameters
-	local height = math_random(7,12)
-	local radius = math_random(6,8)
+	local height = math_random(7, 12)
+	local radius = math_random(6, 8)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:white_box_tree")
@@ -1635,7 +1623,7 @@ end
 -- Wirewood
 function aus.grow_wirewood(pos)
 	-- individual parameters
-	local height = math_random(6,8)
+	local height = math_random(6, 8)
 	local radius = 2
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("australia:wirewood_tree")

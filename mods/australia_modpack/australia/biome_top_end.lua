@@ -1,4 +1,4 @@
--- mods/australia/biome_top_end.lua
+-- mods/australia_modpack/australia/biome_top_end.lua
 
 -- localize math routines for performance
 local math_random = math.random
@@ -6,15 +6,11 @@ local math_random = math.random
 -- top end
 minetest.register_biome({
 	name = "top_end",
-	--node_dust = "",
 	node_top = "default:dirt_with_grass",
 	depth_top = 1,
 	node_filler = "default:sandstone",
 	depth_filler = 3,
 	node_stone = "default:stone",
-	--node_water_top = "",
-	--depth_water_top = ,
-	--node_water = "",
 	node_river_water = "australia:muddy_river_water_source",
 	y_min = 4,
 	y_max = 31000,
@@ -23,25 +19,24 @@ minetest.register_biome({
 })
 
 
-
---
--- Ores
---
+--[[
+	Ores
+--]]
 
 -- Blob ore first to avoid other ores inside blobs
 
 -- Copper
 minetest.register_ore({
-	ore_type        = "blob",
-	ore             = "default:stone_with_copper",
-	wherein         = {"default:stone"},
-	clust_scarcity  = 44 * 44 * 44,
-	clust_size      = 8,
-	biomes          = {"top_end"},
-	y_min           = -192,
-	y_max           = 0,
-	noise_threshold = 1,
-	noise_params    = {
+	ore_type		= "blob",
+	ore				= "default:stone_with_copper",
+	wherein			= {"default:stone"},
+	clust_scarcity	= 44 * 44 * 44,
+	clust_size		= 8,
+	biomes			= {"top_end"},
+	y_min			= -192,
+	y_max			= 0,
+	noise_threshold	= 1,
+	noise_params	= {
 		offset = 0,
 		scale = 3,
 		spread = {x = 16, y = 16, z = 16},
@@ -53,31 +48,31 @@ minetest.register_ore({
 
 -- Diamond
 minetest.register_ore({
-	ore_type       = "scatter",
-	ore            = "default:stone_with_diamond",
-	wherein        = "default:stone",
-	clust_scarcity = 40 * 40 * 40,
-	clust_num_ores = 12,
-	clust_size     = 4,
-	biomes         = {"top_end"},
-	y_min          = -60,
-	y_max          = 17,
+	ore_type		= "scatter",
+	ore				= "default:stone_with_diamond",
+	wherein			= "default:stone",
+	clust_scarcity	= 40 * 40 * 40,
+	clust_num_ores	= 12,
+	clust_size		= 4,
+	biomes			= {"top_end"},
+	y_min			= -60,
+	y_max			= 17,
 })
 
 -- Uranium from Technic modpack: technic_worldgen mod
 -- Ranger
 if minetest.get_modpath("technic_worldgen") then
 	minetest.register_ore({
-		ore_type        = "scatter",
-		ore             = "technic:mineral_uranium",
-		wherein         = "default:stone",
-		clust_scarcity  = 28 * 28 * 28,
-		clust_num_ores  = 4,
-		clust_size      = 3,
-		biomes          = {"top_end"},
-		y_min           = -192,
-		y_max           = 19,
-		noise_params    = {
+		ore_type		= "scatter",
+		ore				= "technic:mineral_uranium",
+		wherein			= "default:stone",
+		clust_scarcity	= 28 * 28 * 28,
+		clust_num_ores	= 4,
+		clust_size		= 3,
+		biomes			= {"top_end"},
+		y_min			= -192,
+		y_max			= 19,
+		noise_params	= {
 			offset = 0,
 			scale = 1,
 			spread = {x = 100, y = 100, z = 100},
@@ -93,16 +88,16 @@ end
 -- Jabiluka
 if minetest.get_modpath("technic_worldgen") then
 	minetest.register_ore({
-		ore_type        = "scatter",
-		ore             = "technic:mineral_uranium",
-		wherein         = "default:stone",
-		clust_scarcity  = 26 * 26 * 26,
-		clust_num_ores  = 4,
-		clust_size      = 3,
-		biomes          = {"top_end"},
-		y_min           = -192,
-		y_max           = 6,
-		noise_params    = {
+		ore_type		= "scatter",
+		ore				= "technic:mineral_uranium",
+		wherein			= "default:stone",
+		clust_scarcity	= 26 * 26 * 26,
+		clust_num_ores	= 4,
+		clust_size		= 3,
+		biomes			= {"top_end"},
+		y_min			= -192,
+		y_max			= 6,
+		noise_params	= {
 			offset = 0,
 			scale = 1,
 			spread = {x = 100, y = 100, z = 100},
@@ -115,11 +110,11 @@ if minetest.get_modpath("technic_worldgen") then
 end
 
 
+--[[
+	Decorations
+--]]
 
---
--- Decorations
---
-
+-- Grass
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -160,12 +155,12 @@ local function register_dry_grass_decoration(offset, scale, length)
 	})
 end
 
--- Grasses
 register_grass_decoration(-0.03,  0.09,  5)
 register_grass_decoration(-0.015, 0.075, 4)
 register_grass_decoration(0,      0.06,  3)
 register_grass_decoration(0.015,  0.045, 2)
 register_grass_decoration(0.03,   0.03,  1)
+
 register_dry_grass_decoration(0.01, 0.05,  5)
 register_dry_grass_decoration(0.03, 0.03,  4)
 register_dry_grass_decoration(0.05, 0.01,  3)
@@ -184,6 +179,7 @@ local function register_rivergrass(length)
 		end,
 	})
 end
+
 register_rivergrass(5)
 register_rivergrass(4)
 
@@ -221,6 +217,7 @@ aus.register_plant({
 	end,
 })
 
+-- Small sandstone rocks
 local function register_small_sandstone_rocks(number)
 	minetest.register_decoration({
 		deco_type = "simple",
@@ -235,7 +232,6 @@ local function register_small_sandstone_rocks(number)
 	})
 end
 
--- Small sandstone rocks
 register_small_sandstone_rocks(6)
 register_small_sandstone_rocks(5)
 register_small_sandstone_rocks(4)
@@ -244,9 +240,9 @@ register_small_sandstone_rocks(2)
 register_small_sandstone_rocks(1)
 
 
---
--- Trees
---
+--[[
+	Trees
+--]]
 
 -- Arnhem Cypress Pine
 aus.register_plant({
@@ -262,7 +258,7 @@ aus.register_plant({
 		return pos.y >= 10 and pos.y <= 20 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(10,15)
+			local height = math_random(10, 15)
 			local radius = 4
 			aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
@@ -282,7 +278,7 @@ aus.register_plant({
 		return pos.y >= 21 and pos.y <= 90 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(10,15)
+			local height = math_random(10, 15)
 			local radius = 4
 			aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
@@ -302,8 +298,8 @@ aus.register_plant({
 		return pos.y >= 5 and pos.y <= 30 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(5,6)
-			local radius = math_random(4,5)
+			local height = math_random(5, 6)
+			local radius = math_random(4, 5)
 			local limbs = true
 			aus.make_boab(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -323,8 +319,8 @@ aus.register_plant({
 		return pos.y >= 5 and pos.y <= 10 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(8,13)
-			local radius = math_random(4,5)
+			local height = math_random(8, 13)
+			local radius = math_random(4, 5)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -344,8 +340,8 @@ aus.register_plant({
 		return pos.y >= 11 and pos.y <= 35 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(8,13)
-			local radius = math_random(4,5)
+			local height = math_random(8, 13)
+			local radius = math_random(4, 5)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,
@@ -365,8 +361,8 @@ aus.register_plant({
 		return t.v2 > 0 and t.v2 < 0.03 and pos.y >= 5 and pos.y <= 120 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(5,6)
-			local radius = math_random(2,3)
+			local height = math_random(5, 6)
+			local radius = math_random(2, 3)
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 		end,
 })
@@ -385,8 +381,8 @@ aus.register_plant({
 		return t.v2 > 0.05 and t.v2 < 0.2 and t.v4 > 0.5 and pos.y >= 5 and pos.y <= 20 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(6,8)
-			local radius = math_random(3,4)
+			local height = math_random(6, 8)
+			local radius = math_random(3, 4)
 			local limbs = true
 			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 		end,

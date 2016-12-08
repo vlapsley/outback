@@ -1,5 +1,36 @@
--- mods/australia/crafting.lua
+-- mods/australia_modpack/australia/crafting.lua
 
+minetest.register_craft({
+	output = "australia:red_stonebrick 4",
+	recipe = {
+		{"australia:red_stone", "australia:red_stone"},
+		{"australia:red_stone", "australia:red_stone"},
+	}
+})
+
+minetest.register_craft({
+	output = "australia:bluestone_brick 4",
+	recipe = {
+		{"australia:bluestone", "australia:bluestone"},
+		{"australia:bluestone", "australia:bluestone"},
+	}
+})
+
+minetest.register_craft({
+	output = "australia:salt_block",
+	recipe = {
+		{"australia:salt", "australia:salt", "australia:salt"},
+		{"australia:salt", "australia:salt", "australia:salt"},
+		{"australia:salt", "australia:salt", "australia:salt"},
+	}
+})
+
+minetest.register_craft({
+	output = "australia:salt 9",
+	recipe = {
+		{"australia:salt_block"},
+	}
+})
 
 -- Small rocks can be used to create cobblestone.
 minetest.register_craft({
@@ -29,41 +60,10 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
-	output = 'australia:red_stonebrick 4',
-	recipe = {
-		{'australia:red_stone', 'australia:red_stone'},
-		{'australia:red_stone', 'australia:red_stone'},
-	}
-})
 
-minetest.register_craft({
-	output = 'australia:bluestone_brick 4',
-	recipe = {
-		{'australia:bluestone', 'australia:bluestone'},
-		{'australia:bluestone', 'australia:bluestone'},
-	}
-})
-
-minetest.register_craft({
-	output = 'australia:salt_block',
-	recipe = {
-		{'australia:salt', 'australia:salt', 'australia:salt'},
-		{'australia:salt', 'australia:salt', 'australia:salt'},
-		{'australia:salt', 'australia:salt', 'australia:salt'},
-	}
-})
-
-minetest.register_craft({
-	output = 'australia:salt 9',
-	recipe = {
-		{'australia:salt_block'},
-	}
-})
-
---
--- Fences
---
+--[[
+	Fences
+--]]
 
 -- Eucalyptus Wood
 minetest.register_craft({
@@ -192,10 +192,9 @@ minetest.register_craft({
 })
 
 
-
---
--- Timber
---
+--[[
+	Timber
+--]]
 
 -- Arnhem Cypress Pine
 minetest.register_craft({
@@ -470,10 +469,9 @@ minetest.register_craft({
 })
 
 
-
---
--- Cooking recipes
---
+--[[
+	Cooking recipes
+--]]
 
 minetest.register_craft({
 	type = "cooking",
@@ -486,4 +484,3 @@ minetest.register_craft({
 	output = "australia:red_stone",
 	recipe = "australia:red_cobble",
 })
-

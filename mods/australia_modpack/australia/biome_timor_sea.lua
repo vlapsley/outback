@@ -1,4 +1,4 @@
--- mods/australia/biome_timor_sea.lua
+-- mods/australia_modpack/australia/biome_timor_sea.lua
 
 -- localize math routines for performance
 local math_random = math.random
@@ -6,16 +6,12 @@ local math_random = math.random
 -- timor sea
 minetest.register_biome({
 	name = "timor_sea",
-	--node_dust = "",
 	node_top = "default:sand",
 	depth_top = 1,
 	node_filler = "default:sand",
 	depth_filler = 2,
 	node_stone = "default:stone",
-	--node_water_top = "",
-	--depth_water_top = ,
 	node_water = "default:water_source",
-	--node_river_water = "",
 	y_min = -192,
 	y_max = 3,
 	heat_point = 80,
@@ -23,30 +19,28 @@ minetest.register_biome({
 })
 
 
-
---
--- Ores
---
+--[[
+	Ores
+--]]
 
 -- Blob ore first to avoid other ores inside blobs
 
 minetest.register_ore({
-	ore_type       = "scatter",
-	ore            = "australia:submarine",
-	wherein        = "default:sand",
-	clust_scarcity = 80*80*80,
-	clust_num_ores = 1,
-	clust_size     = 12,
-	biomes         = {"timor_sea"},
-	y_min     = -64,
-	y_max     = -8,
+	ore_type		= "scatter",
+	ore				= "australia:submarine",
+	wherein			= "default:sand",
+	clust_scarcity	= 80*80*80,
+	clust_num_ores	= 1,
+	clust_size		= 12,
+	biomes			= {"timor_sea"},
+	y_min			= -64,
+	y_max			= -8,
 })
 
 
-
---
--- Decorations
---
+--[[
+	Decorations
+--]]
 
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
@@ -89,20 +83,18 @@ minetest.register_decoration({
 })
 
 
-
---
--- Trees
---
+--[[
+	Trees
+--]]
 
 -- placeholder for Palm Tree
 -- awaiting fix for L-system lighting bug #3421
 -- https://github.com/minetest/minetest/issues/3421
 
 
-
---
--- ABM'S
---
+--[[
+	ABM's
+--]]
 
 local function place_submarine(pos)
 	minetest.add_node(pos, {name = "default:dirt"})
