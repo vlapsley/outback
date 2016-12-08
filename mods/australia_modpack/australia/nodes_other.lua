@@ -1,4 +1,4 @@
--- mods/australia/nodes_other.lua
+-- mods/australia_modpack/australia/nodes_other.lua
 
 minetest.register_node("australia:dirt_with_dry_green_grass", {
 	description = "Dirt with Dry-Green Grass",
@@ -7,7 +7,7 @@ minetest.register_node("australia:dirt_with_dry_green_grass", {
 		{name = "default_dirt.png^aus_dry_green_grass_side.png",
 			tileable_vertical = false}},
 	groups = {crumbly = 3, soil = 1},
-	drop = 'default:dirt',
+	drop = "default:dirt",
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name = "default_grass_footstep", gain = 0.33},
 	}),
@@ -16,16 +16,16 @@ minetest.register_node("australia:dirt_with_dry_green_grass", {
 minetest.register_node("australia:red_stone", {
 	description = "Red Stone",
 	tiles = {"aus_red_stone.png"},
-	groups = {cracky=3, stone=1},
-	drop = 'australia:red_cobble',
+	groups = {cracky = 3, stone = 1},
+	drop = "australia:red_cobble",
 	sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:red_cobble", {
-	description = "Red cobblestone",
+	description = "Red Cobblestone",
 	tiles = {"aus_red_cobble.png"},
 	is_ground_content = false,
-	groups = {cracky=3, stone=2},
+	groups = {cracky = 3, stone = 2},
 	sounds = default.node_sound_stone_defaults(),
 })
 
@@ -33,7 +33,7 @@ minetest.register_node("australia:red_stonebrick", {
 	description = "Red Stone Brick",
 	tiles = {"aus_red_stonebrick.png"},
 	is_ground_content = false,
-	groups = {cracky=2, stone=1},
+	groups = {cracky = 2, stone = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 
@@ -47,16 +47,16 @@ minetest.register_node("australia:sandstone_cobble", {
 minetest.register_node("australia:bluestone", {
 	description = "Bluestone (Basalt)",
 	tiles = {"aus_bluestone.png"},
-	groups = {cracky=2, stone=1},
-	drop = 'australia:bluestone_cobble',
+	groups = {cracky = 2, stone = 1},
+	drop = "australia:bluestone_cobble",
 	sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:bluestone_cobble", {
-	description = "Bluestone cobble",
+	description = "Bluestone (Basalt) Cobble",
 	tiles = {"aus_bluestone_cobble.png"},
 	is_ground_content = false,
-	groups = {cracky=2, stone=2},
+	groups = {cracky = 2, stone = 2},
 	sounds = default.node_sound_stone_defaults(),
 })
 
@@ -64,31 +64,31 @@ minetest.register_node("australia:bluestone_brick", {
 	description = "Bluestone Brick",
 	tiles = {"aus_bluestone_brick.png"},
 	is_ground_content = false,
-	groups = {cracky=1, stone=1},
+	groups = {cracky = 1, stone = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:red_dirt", {
 	description = "Red Dirt",
 	tiles = {"aus_red_dirt.png"},
-	groups = {crumbly=3,soil=1},
+	groups = {crumbly = 3,soil = 1},
 	sounds = default.node_sound_dirt_defaults(),
 })
 
 minetest.register_node("australia:red_sand", {
 	description = "Red Sand",
 	tiles = {"aus_red_sand.png"},
-	groups = {crumbly=3, falling_node=1, sand=1},
+	groups = {crumbly = 3, falling_node = 1, sand = 1},
 	sounds = default.node_sound_sand_defaults(),
 })
 
 minetest.register_node("australia:red_gravel", {
 	description = "Red Gravel",
 	tiles = {"aus_red_gravel.png"},
-	groups = {crumbly=2, falling_node=1},
+	groups = {crumbly = 2, falling_node = 1},
 	sounds = default.node_sound_dirt_defaults({
-		footstep = {name="default_gravel_footstep", gain=0.5},
-		dug = {name="default_gravel_footstep", gain=1.0},
+		footstep = {name = "default_gravel_footstep", gain = 0.5},
+		dug = {name = "default_gravel_footstep", gain = 1.0},
 	}),
 })
 
@@ -96,10 +96,10 @@ minetest.register_node("australia:mangrove_mud", {
 	description = "Mangrove Mud",
 	tiles = {"aus_mangrove_mud.png"},
 	liquid_viscosity = 5,
-	groups = {crumbly=2, soil=1, disable_jump=1},
+	groups = {crumbly = 2, soil = 1, disable_jump = 1},
 	sounds = default.node_sound_dirt_defaults({
-		footstep = {name="aus_mangrove_mud", gain=0.4},
-		dug = {name="aus_mangrove_mud", gain=0.4},
+		footstep = {name = "aus_mangrove_mud", gain = 0.4},
+		dug = {name = "aus_mangrove_mud", gain = 0.4},
 	}),
 })
 
@@ -108,7 +108,7 @@ minetest.register_node("australia:mineral_salt", {
 	tiles = {"aus_red_sand.png^aus_mineral_salt.png"},
 	paramtype = "light",
 	is_ground_content = true,
-	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3},
+	groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 	drop = {
 		items = {
 			{items = {"australia:red_sand"} },
@@ -127,7 +127,7 @@ minetest.register_node("australia:salt", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	groups = {fleshy=3,dig_immediate=3,flammable=1},
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 1},
 	on_use = minetest.item_eat(1),
 	sounds = default.node_sound_defaults(),
 	selection_box = {
@@ -142,9 +142,9 @@ minetest.register_node("australia:salt", {
 
 minetest.register_node( "australia:salt_block", {
 	description = "Salt Block",
-	tiles = { "default_clay.png^aus_salt_block.png" },
+	tiles = {"default_clay.png^aus_salt_block.png"},
 	is_ground_content = true,
-	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3},
+	groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 	on_use = minetest.item_eat(9),
 	sounds = default.node_sound_stone_defaults(),
 })
@@ -153,7 +153,7 @@ minetest.register_node("australia:stone_with_opal", {
 	description = "Opal Ore",
 	tiles = {"default_stone.png^aus_mineral_opal.png"},
 	groups = {cracky = 2},
-	drop = 'australia:opal',
+	drop = "australia:opal",
 	sounds = default.node_sound_stone_defaults(),
 })
 
@@ -164,7 +164,7 @@ minetest.register_node("australia:opal",{
 	tiles = {"aus_opal.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky=2, stone=1},
+	groups = {cracky=2, stone=1, dig_immediate = 1},
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -6/16, 5/16, -1/32, 5/16},
@@ -177,9 +177,9 @@ minetest.register_node("australia:opal",{
 })
 
 
----------------------
--- Small Rocks --
----------------------
+--[[
+	Small Rocks
+--]]
 
 -- Place a small nodebox.
 local function small_cube(grid, pos, diameters)
@@ -197,13 +197,13 @@ end
 -- Small red rocks
 local default_grid_red_rocks
 
-for grid_count = 1,6 do
+for grid_count = 1, 6 do
 	local grid = {}
-	for rock_count = 2, math.random(1,4) + 1 do
-		local diameter = math.random(15,25)/100
-		local x = math.random(1,80)/100 - 0.5
-		local z = math.random(1,80)/100 - 0.5
-		small_cube(grid, {x=x,y=-0.5,z=z}, {x=diameter, y=diameter, z=diameter})
+	for rock_count = 2, math.random(1, 4) + 1 do
+		local diameter = math.random(15, 25) / 100
+		local x = math.random(1, 80) / 100 - 0.5
+		local z = math.random(1, 80) / 100 - 0.5
+		small_cube(grid, {x = x, y = -0.5, z = z}, {x = diameter, y = diameter, z = diameter})
 	end
 
 	minetest.register_node("australia:small_red_rocks"..grid_count, {
@@ -214,11 +214,12 @@ for grid_count = 1,6 do
 		paramtype = "light",
 		drawtype = "nodebox",
 		buildable_to = true,
-		node_box = { type = "fixed", fixed = grid },
-		selection_box = { type = "fixed", 
+		node_box = {type = "fixed", fixed = grid},
+		selection_box = {
+			type = "fixed",
 			fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 		},
-		groups = {stone=1, oddly_breakable_by_hand=3},
+		groups = {stone = 1, oddly_breakable_by_hand = 3},
 		drop = "australia:small_red_rocks",
 		sounds = default.node_sound_stone_defaults(),
 	})
@@ -234,11 +235,12 @@ minetest.register_node("australia:small_red_rocks", {
 	walkable = false,
 	paramtype = "light",
 	drawtype = "nodebox",
-	node_box = { type = "fixed", fixed = default_grid_red_rocks },
-	selection_box = { type = "fixed", 
+	node_box = {type = "fixed", fixed = default_grid_red_rocks},
+	selection_box = {
+		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
-	groups = {stone=1, oddly_breakable_by_hand=3},
+	groups = {stone = 1, oddly_breakable_by_hand = 3},
 	sounds = default.node_sound_stone_defaults(),
 	on_place = function(itemstack, placer, pointed_thing)
 		local pos = pointed_thing.above
@@ -261,13 +263,13 @@ minetest.register_node("australia:small_red_rocks", {
 -- Small sandstone rocks
 local default_grid_sandstone_rocks
 
-for grid_count = 1,6 do
+for grid_count = 1, 6 do
 	local grid = {}
-	for rock_count = 2, math.random(1,4) + 1 do
-		local diameter = math.random(15,25)/100
-		local x = math.random(1,80)/100 - 0.5
-		local z = math.random(1,80)/100 - 0.5
-		small_cube(grid, {x=x,y=-0.5,z=z}, {x=diameter, y=diameter, z=diameter})
+	for rock_count = 2, math.random(1, 4) + 1 do
+		local diameter = math.random(15, 25) / 100
+		local x = math.random(1, 80) / 100 - 0.5
+		local z = math.random(1, 80) / 100 - 0.5
+		small_cube(grid, {x = x, y = -0.5, z = z}, {x = diameter, y = diameter, z = diameter})
 	end
 
 	minetest.register_node("australia:small_sandstone_rocks"..grid_count, {
@@ -278,11 +280,12 @@ for grid_count = 1,6 do
 		paramtype = "light",
 		drawtype = "nodebox",
 		buildable_to = true,
-		node_box = { type = "fixed", fixed = grid },
-		selection_box = { type = "fixed", 
+		node_box = {type = "fixed", fixed = grid},
+		selection_box = {
+			type = "fixed",
 			fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 		},
-		groups = {stone=1, oddly_breakable_by_hand=3},
+		groups = {stone = 1, oddly_breakable_by_hand = 3},
 		drop = "australia:small_sandstone_rocks",
 		sounds = default.node_sound_stone_defaults(),
 	})
@@ -298,11 +301,12 @@ minetest.register_node("australia:small_sandstone_rocks", {
 	walkable = false,
 	paramtype = "light",
 	drawtype = "nodebox",
-	node_box = { type = "fixed", fixed = default_grid_sandstone_rocks },
-	selection_box = { type = "fixed", 
+	node_box = {type = "fixed", fixed = default_grid_sandstone_rocks},
+	selection_box = {
+		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
-	groups = {stone=1, oddly_breakable_by_hand=3},
+	groups = {stone = 1, oddly_breakable_by_hand = 3},
 	sounds = default.node_sound_stone_defaults(),
 	on_place = function(itemstack, placer, pointed_thing)
 		local pos = pointed_thing.above
@@ -325,13 +329,13 @@ minetest.register_node("australia:small_sandstone_rocks", {
 -- Small stone rocks
 local default_grid_stone_rocks
 
-for grid_count = 1,6 do
+for grid_count = 1, 6 do
 	local grid = {}
-	for rock_count = 2, math.random(1,4) + 1 do
-		local diameter = math.random(15,25)/100
-		local x = math.random(1,80)/100 - 0.5
-		local z = math.random(1,80)/100 - 0.5
-		small_cube(grid, {x=x,y=-0.5,z=z}, {x=diameter, y=diameter, z=diameter})
+	for rock_count = 2, math.random(1, 4) + 1 do
+		local diameter = math.random(15, 25) / 100
+		local x = math.random(1, 80) / 100 - 0.5
+		local z = math.random(1, 80) / 100 - 0.5
+		small_cube(grid, {x = x, y = -0.5, z = z}, {x = diameter, y = diameter, z = diameter})
 	end
 
 	minetest.register_node("australia:small_stone_rocks"..grid_count, {
@@ -342,11 +346,12 @@ for grid_count = 1,6 do
 		paramtype = "light",
 		drawtype = "nodebox",
 		buildable_to = true,
-		node_box = { type = "fixed", fixed = grid },
-		selection_box = { type = "fixed", 
+		node_box = {type = "fixed", fixed = grid},
+		selection_box = {
+			type = "fixed",
 			fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 		},
-		groups = {stone=1, oddly_breakable_by_hand=3},
+		groups = {stone = 1, oddly_breakable_by_hand = 3},
 		drop = "australia:small_stone_rocks",
 		sounds = default.node_sound_stone_defaults(),
 	})
@@ -362,11 +367,12 @@ minetest.register_node("australia:small_stone_rocks", {
 	walkable = false,
 	paramtype = "light",
 	drawtype = "nodebox",
-	node_box = { type = "fixed", fixed = default_grid_stone_rocks },
-	selection_box = { type = "fixed", 
+	node_box = {type = "fixed", fixed = default_grid_stone_rocks},
+	selection_box = {
+		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
-	groups = {stone=1, oddly_breakable_by_hand=3},
+	groups = {stone = 1, oddly_breakable_by_hand = 3},
 	sounds = default.node_sound_stone_defaults(),
 	on_place = function(itemstack, placer, pointed_thing)
 		local pos = pointed_thing.above
@@ -387,9 +393,9 @@ minetest.register_node("australia:small_stone_rocks", {
 })
 
 
------------------------
--- Muddy River Water --
------------------------
+--[[
+	Muddy River Water
+--]]
 
 minetest.register_node("australia:muddy_river_water_source", {
 	description = "Muddy River Water Source",
@@ -424,7 +430,6 @@ minetest.register_node("australia:muddy_river_water_source", {
 	diggable = false,
 	buildable_to = true,
 	is_ground_content = false,
-	drop = "",
 	drowning = 1,
 	liquidtype = "source",
 	liquid_alternative_flowing = "australia:muddy_river_water_flowing",
@@ -433,7 +438,7 @@ minetest.register_node("australia:muddy_river_water_source", {
 	liquid_renewable = true,
 	liquid_range = 2,
 	post_effect_color = {a = 232, r = 92, g = 80, b = 48},
-	groups = {water=3,liquid=3,puts_out_fire=1},
+	groups = {water = 3, liquid = 3, puts_out_fire = 1},
 })
 
 minetest.register_node("australia:muddy_river_water_flowing", {
@@ -470,7 +475,6 @@ minetest.register_node("australia:muddy_river_water_flowing", {
 	diggable = false,
 	buildable_to = true,
 	is_ground_content = false,
-	drop = "",
 	drowning = 1,
 	liquidtype = "flowing",
 	liquid_alternative_flowing = "australia:muddy_river_water_flowing",
@@ -479,6 +483,5 @@ minetest.register_node("australia:muddy_river_water_flowing", {
 	liquid_renewable = false,
 	liquid_range = 2,
 	post_effect_color = {a = 232, r = 92, g = 80, b = 48},
-	groups = {water=3,liquid=3,puts_out_fire=1,not_in_creative_inventory=1},
+	groups = {water = 3, liquid = 3, puts_out_fire = 1, not_in_creative_inventory = 1},
 })
-

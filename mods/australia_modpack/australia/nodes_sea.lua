@@ -1,24 +1,24 @@
--- mods/australia/nodes_sea.lua
+-- mods/australia_modpack/australia/nodes_sea.lua
 
 -- Localize math routines for performance.
 local math_random = math.random
 
 
 minetest.register_node("australia:stone_kelp_brown", {
-	description = "Sea stone",
+	description = "Sea Stone",
 	tiles = {"aus_coral_stone.png"},
 	is_ground_content = true,
 	groups = {cracky = 3, stone = 1, not_in_creative_inventory = 1},
-	drop = 'default:stone',
+	drop = "default:stone",
 	sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:stone_kelp_giant_brown", {
-	description = "Sea stone",
+	description = "Sea Stone",
 	tiles = {"aus_coral_stone.png"},
 	is_ground_content = true,
 	groups = {cracky = 3, stone = 1, not_in_creative_inventory = 1},
-	drop = 'default:stone',
+	drop = "default:stone",
 	sounds = default.node_sound_stone_defaults(),
 })
 
@@ -36,7 +36,7 @@ minetest.register_node("australia:kelp_brown", {
 	climable = true,
 	drowning = 1,
 	is_ground_content = true,
-	groups = {snappy=3,seaplants=1,sea=1},
+	groups = {snappy = 3, seaplants = 1, sea = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -60,14 +60,14 @@ minetest.register_node("australia:kelp_giant_brown", {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.3, 0.3},
 	},
-	post_effect_color = {a=64, r=100, g=100, b=200},
+	post_effect_color = {a = 64, r = 100, g = 100, b = 200},
 	groups = {snappy = 3, seaplants = 1, sea = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	on_use = minetest.item_eat(1)
 })
 
 minetest.register_node("australia:kelp_giant_brown_middle", {
-	description = "Giant Kelp middle",
+	description = "Giant Kelp Middle",
 	drawtype = "plantlike",
 	tiles = {"aus_kelp_giant_brown_middle.png"},
 	inventory_image = "aus_kelp_giant_brown_middle.png",
@@ -81,7 +81,7 @@ minetest.register_node("australia:kelp_giant_brown_middle", {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3},
 	},
-	post_effect_color = {a=64, r=100, g=100, b=200},
+	post_effect_color = {a = 64, r = 100, g = 100, b = 200},
 	groups = {snappy = 3, seaplants = 1, sea = 1},
 	drop = "australia:kelp_giant_brown",
 	sounds = default.node_sound_leaves_defaults(),
@@ -112,28 +112,28 @@ minetest.register_node("australia:sea_grass", {
 })
 
 minetest.register_node("australia:woodship", {
-	description = "Sand for the wooden ship",
+	description = "Sand",
 	tiles = {"default_sand.png"},
 	is_ground_content = true,
-	groups = {crumbly=3, falling_node=1, sand=1, soil=1, not_in_creative_inventory=1},
+	groups = {crumbly = 3, falling_node = 1, sand = 1, soil = 1, not_in_creative_inventory = 1},
 	sounds = default.node_sound_sand_defaults(),
 })
 
 minetest.register_node("australia:submarine", {
-	description = "Dirt for the submarine",
+	description = "Dirt",
 	tiles = {"default_dirt.png"},
 	is_ground_content = true,
-	groups = {crumbly=3,soil=1, not_in_creative_inventory=1},
+	groups = {crumbly = 3, soil = 1, not_in_creative_inventory = 1},
 	sounds = default.node_sound_dirt_defaults(),
 })
 
 minetest.register_node("australia:woodshipchest", {
-	description = "Wooden ship chest",
+	description = "Wooden Ship Chest",
 	tiles = {"default_chest_top.png", "default_chest_top.png", "default_chest_side.png",
 		"default_chest_side.png", "default_chest_side.png", "default_chest_front.png"},
 	paramtype2 = "facedir",
-	groups = {choppy=2,oddly_breakable_by_hand=2, not_in_creative_inventory=1},
-	drop = 'default:chest',
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, not_in_creative_inventory = 1},
+	drop = "default:chest",
 	legacy_facedir_simple = true,
 	is_ground_content = false,
 	sounds = default.node_sound_wood_defaults(),
@@ -143,25 +143,25 @@ minetest.register_node("australia:woodshipchest", {
 			"size[8,9]"..
 			"list[current_name;main;0,0;8,4;]"..
 			"list[current_player;main;0,5;8,4;]")
-		meta:set_string("infotext", "Woodship chest")
+		meta:set_string("infotext", "Wooden Ship Chest")
 		local inv = meta:get_inventory()
-		inv:set_size("main", 8*4)
+		inv:set_size("main", 8 * 4)
 	local contents = {}
-	if math_random(1,100) <= 25 then
+	if math_random(1, 100) <= 25 then
 		contents = {main = {[1] = "default:coal_lump 36"}}
-	elseif math_random(1,100) >= 26 or math_random(1,100) <= 40 then
+	elseif math_random(1, 100) >= 26 or math_random(1, 100) <= 40 then
 		contents = {main = {[1] = "default:iron_lump 24"}}
-	elseif math_random(1,100) >= 41 or math_random(1,100) <= 45 then
+	elseif math_random(1, 100) >= 41 or math_random(1, 100) <= 45 then
 		contents = {main = {[1] = "default:gold_lump 24"}}
-	elseif math_random(1,100) >= 46 or math_random(1,100) <= 50 then
+	elseif math_random(1, 100) >= 46 or math_random(1, 100) <= 50 then
 		contents = {main = {[1] = "default:diamond 24"}}
-	elseif math_random(1,100) >= 51 or math_random(1,100) <= 60 then
+	elseif math_random(1, 100) >= 51 or math_random(1, 100) <= 60 then
 		contents = {main = {[1] = "australia:huon_pine_tree 18"}}
-	elseif math_random(1,100) >= 61 or math_random(1,100) <= 70 then
+	elseif math_random(1, 100) >= 61 or math_random(1, 100) <= 70 then
 		contents = {main = {[1] = "australia:jarrah_tree 18"}}
-	elseif math_random(1,100) >= 71 or math_random(1,100) <= 80 then
+	elseif math_random(1, 100) >= 71 or math_random(1, 100) <= 80 then
 		contents = {main = {[1] = "australia:marri_tree 18"}}
-	elseif math_random(1,100) >= 81 or math_random(1,100) <= 90 then
+	elseif math_random(1, 100) >= 81 or math_random(1, 100) <= 90 then
 		contents = {main = {[1] = "australia:merbau_tree 18"}}
 	else
 		contents = {main = {[1] = "australia:river_red_gum_tree 18"}}
@@ -195,12 +195,12 @@ meta:from_table({
 })
 
 minetest.register_node("australia:submarinechest", {
-	description = "U-boot chest",
+	description = "Submarine Chest",
 	tiles = {"default_chest_top.png", "default_chest_top.png", "default_chest_side.png",
 		"default_chest_side.png", "default_chest_side.png", "default_chest_front.png"},
 	paramtype2 = "facedir",
-	groups = {choppy=2,oddly_breakable_by_hand=2, not_in_creative_inventory=1},
-	drop = 'default:chest',
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, not_in_creative_inventory = 1},
+	drop = "default:chest",
 	legacy_facedir_simple = true,
 	is_ground_content = false,
 	sounds = default.node_sound_wood_defaults(),
@@ -210,11 +210,11 @@ minetest.register_node("australia:submarinechest", {
 			"size[8,9]"..
 			"list[current_name;main;0,0;8,4;]"..
 			"list[current_player;main;0,5;8,4;]")
-		meta:set_string("infotext", "U-boot chest")
+		meta:set_string("infotext", "Submarine Chest")
 		local inv = meta:get_inventory()
-		inv:set_size("main", 8*4)
+		inv:set_size("main", 8 * 4)
 	local contents = {}
-	if math_random(1,2) == 1 and minetest.get_modpath("technic_worldgen") then
+	if math_random(1, 2) == 1 and minetest.get_modpath("technic_worldgen") then
 		contents = {main = {[1] = "technic:mineral_uranium 18", [2] = "default:sword_steel 2"}}
 	else
 		contents = {main = {[1] = "tnt:tnt 3", [2] = "default:sword_steel 2"}}
@@ -246,4 +246,3 @@ meta:from_table({
 				" takes stuff from chest at "..minetest.pos_to_string(pos))
 	end,
 })
-

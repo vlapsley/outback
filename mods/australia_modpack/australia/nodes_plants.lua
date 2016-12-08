@@ -1,4 +1,4 @@
--- mods/australia/nodes_plants.lua
+-- mods/australia_modpack/australia/nodes_plants.lua
 
 
 -- Bottlebrush Orchid
@@ -14,7 +14,7 @@ minetest.register_node("australia:bottlebrush_orchid", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = false,
-	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
+	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -38,8 +38,8 @@ minetest.register_node("australia:tomato_bush", {
 	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
 	drop = {
 		items = {
-			{items = {"australia:tomato_bush"}, rarity = 5 },
-			{items = {"australia:bush_tomato 4"} }
+			{items = {"australia:tomato_bush"}, rarity = 5},
+			{items = {"australia:bush_tomato 4"}}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
@@ -53,7 +53,7 @@ minetest.register_node("australia:tomato_bush", {
 minetest.register_craftitem("australia:bush_tomato", {
 	description = "Bush Tomato",
 	inventory_image = "aus_bush_tomato.png",
-	groups = {fleshy = 3, dig_immediate = 3},
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 1},
 	on_use = minetest.item_eat(1),
 })
 
@@ -146,9 +146,9 @@ minetest.register_node("australia:lavender_grevillea", {
 	description = "Lavender Grevillea",
 	drawtype = "allfaces_optional",
 	visual_scale = 1.0,
-	tiles = { "aus_lavender_grevillea.png"},
-	inventory_image = { "aus_lavender_grevillea.png"},
-	wield_image = { "aus_lavender_grevillea.png"},
+	tiles = {"aus_lavender_grevillea.png"},
+	inventory_image = {"aus_lavender_grevillea.png"},
+	wield_image = {"aus_lavender_grevillea.png"},
 	paramtype = "light",
 	sunlight_propagates = true,
 	is_ground_content = true,
@@ -169,7 +169,7 @@ minetest.register_node("australia:mangrove_fern", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = false,
-	groups = {snappy = 3, flora = 1, attached_node = 1},
+	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -190,7 +190,7 @@ minetest.register_node("australia:mangrove_lily", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = false,
-	groups = {snappy = 3, flora = 1, attached_node = 1},
+	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -211,7 +211,7 @@ minetest.register_node("australia:mitchell_grass", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = false,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
+	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -228,7 +228,7 @@ minetest.register_node("australia:mangrove_palm_trunk", {
 	wield_image = "aus_mangrove_palm_trunk.png",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {choppy = 2, flora = 1, attached_node = 1, oddly_breakable_by_had = 1},
+	groups = {choppy = 2, flammable = 1, flora = 1, attached_node = 1, oddly_breakable_by_hand = 1},
 	sounds = default.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 	selection_box = {
@@ -245,7 +245,7 @@ minetest.register_node("australia:mangrove_palm_leaf_bot", {
 	wield_image = "aus_mangrove_palm_leaf_bot.png",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {snappy = 3, flora = 1, attached_node = 1},
+	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	drawtype = "nodebox",
 	nodebox = {
@@ -266,7 +266,7 @@ minetest.register_node("australia:mangrove_palm_leaf_top", {
 	wield_image = "aus_mangrove_palm_leaf_top.png",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {snappy = 3, flora = 1, attached_node = 1},
+	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	drawtype = "nodebox",
 	nodebox = {
@@ -292,7 +292,7 @@ minetest.register_node("australia:saltbush", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = false,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
+	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -313,7 +313,7 @@ minetest.register_node("australia:pink_mulla_mulla", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = false,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
+	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -334,7 +334,7 @@ minetest.register_node("australia:silver_daisy", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = false,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
+	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -355,7 +355,7 @@ minetest.register_node("australia:spinifex", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = false,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
+	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -389,13 +389,12 @@ minetest.register_node("australia:waratah", {
 	description = "Waratah",
 	drawtype = "allfaces_optional",
 	visual_scale = 1.0,
-	tiles = { "aus_waratah.png"},
-	inventory_image = { "aus_waratah.png"},
-	wield_image = { "aus_waratah.png"},
+	tiles = {"aus_waratah.png"},
+	inventory_image = {"aus_waratah.png"},
+	wield_image = {"aus_waratah.png"},
 	paramtype = "light",
 	sunlight_propagates = true,
 	is_ground_content = true,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
+	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 })
-
