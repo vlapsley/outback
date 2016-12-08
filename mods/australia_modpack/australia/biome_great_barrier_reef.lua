@@ -7,9 +7,9 @@ local math_random = math.random
 minetest.register_biome({
 	name = "great_barrier_reef",
 	node_top = "default:sand",
-	depth_top = 1,
-	node_filler = "default:sand",
-	depth_filler = 2,
+	depth_top = 3,
+	node_filler = "australia:bluestone",
+	depth_filler = 4,
 	node_stone = "default:stone",
 	y_min = -192,
 	y_max = 3,
