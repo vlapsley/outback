@@ -27,17 +27,37 @@ minetest.register_biome({
 
 -- Bluestone (Basalt)
 minetest.register_ore({
-	ore_type				= "sheet",
-	ore						= "australia:bluestone",
-	wherein					= "default:stone",
-	column_height_min		= 2,
-	column_height_max		= 4,
-	column_midpoint_factor	= 0.5,
-	biomes					= {"flinders_lofty"},
-	y_min					= -192,
-	y_max					= 47,
-	noise_threshold			= 1.25,
-	noise_params			= {
+	ore_type = "blob",
+	ore = "aust",
+	wherein = {"australia:bluestone"},
+	clust_scarcity = 24 * 24 * 24,
+	clust_size = 8,
+	biomes = {"flinders_lofty"},
+	y_min = 0,
+	y_max = 47,
+	noise_threshold = 0.2,
+	noise_params = {
+		offset = 0.5,
+		scale = 0.2,
+		spread = {x = 5, y = 5, z = 5},
+		seed = 774,
+		octaves = 1,
+		persist = 0.0
+	},
+})
+
+minetest.register_ore({
+	ore_type = "sheet",
+	ore = "australia:bluestone",
+	wherein = "default:stone",
+	column_height_min = 2,
+	column_height_max = 4,
+	column_midpoint_factor = 0.5,
+	biomes = {"flinders_lofty"},
+	y_min = -192,
+	y_max = 0,
+	noise_threshold = 1.25,
+	noise_params = {
 		offset = 0,
 		scale = 2,
 		spread = {x = 19, y = 19, z = 11},
@@ -49,12 +69,12 @@ minetest.register_ore({
 
 -- Copper (Olympic Dam)
 minetest.register_ore({
-	ore_type		= "vein",
-	ore				= "default:stone_with_copper",
-	wherein			= "default:stone",
-	biomes			= {"flinders_lofty"},
-	y_min			= -64,
-	y_max			= 34,
+	ore_type = "vein",
+	ore = "default:stone_with_copper",
+	wherein = "default:stone",
+	biomes = {"flinders_lofty"},
+	y_min = -64,
+	y_max = 34,
 	noise_params = {
 		offset = 0,
 		scale = 3,
@@ -113,12 +133,12 @@ local function register_dry_grass_decoration(offset, scale, length)
 	})
 end
 
-register_grass_decoration(0.015,  0.045, 2)
-register_grass_decoration(0.03,   0.03,  1)
+register_grass_decoration(0.015, 0.045, 2)
+register_grass_decoration(0.03, 0.03, 1)
 
-register_dry_grass_decoration(0.01, 0.05,  5)
-register_dry_grass_decoration(0.03, 0.03,  4)
-register_dry_grass_decoration(0.05, 0.01,  3)
+register_dry_grass_decoration(0.01, 0.05, 5)
+register_dry_grass_decoration(0.03, 0.03, 4)
+register_dry_grass_decoration(0.05, 0.01, 3)
 register_dry_grass_decoration(0.07, -0.01, 2)
 register_dry_grass_decoration(0.09, -0.03, 1)
 
