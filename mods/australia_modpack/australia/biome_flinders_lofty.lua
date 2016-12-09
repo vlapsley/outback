@@ -28,8 +28,8 @@ minetest.register_biome({
 -- Bluestone (Basalt)
 minetest.register_ore({
 	ore_type = "blob",
-	ore = "aust",
-	wherein = {"australia:bluestone"},
+	ore = "australia:bluestone",
+	wherein = {"default:stone"},
 	clust_scarcity = 24 * 24 * 24,
 	clust_size = 8,
 	biomes = {"flinders_lofty"},
