@@ -177,7 +177,7 @@ minetest.register_node("flowers:mushroom_red", {
 	sounds = default.node_sound_leaves_defaults(),
 	on_use = minetest.item_eat(-5),
 	selection_box = {
-		type = "fixed",/
+		type = "fixed",
 		fixed = {-4/16, -8/16, -4/16, 4/16, -1/16, 4/16},
 	}
 })
