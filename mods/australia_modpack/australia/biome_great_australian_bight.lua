@@ -11,6 +11,8 @@ minetest.register_biome({
 	node_filler = "australia:bluestone",
 	depth_filler = 4,
 	node_stone = "default:stone",
+	node_riverbed = "default:sandstone",
+	depth_riverbed = 1,
 	y_min = -192,
 	y_max = 3,
 	heat_point = 40,

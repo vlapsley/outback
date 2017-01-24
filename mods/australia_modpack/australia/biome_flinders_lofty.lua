@@ -12,6 +12,8 @@ minetest.register_biome({
 	depth_filler = 2,
 	node_stone = "default:stone",
 	node_river_water = "australia:muddy_river_water_source",
+	node_riverbed = "default:dirt",
+	depth_riverbed = 1,
 	y_min = 4,
 	y_max = 31000,
 	heat_point = 50,
