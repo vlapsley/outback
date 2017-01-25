@@ -5,19 +5,19 @@ local math_random = math.random
 
 -- goldfields / esperence
 minetest.register_biome({
-	name = "goldfields_esperence",
-	node_top = "default:desert_sand",
-	depth_top = 2,
-	node_filler = "default:sandstone",
-	depth_filler = 2,
-	node_stone = "default:stone",
-	node_river_water = "default:dirt_with_dry_grass",
-	node_riverbed = "default:sandstone",
-	depth_riverbed = 1,
-	y_min = 4,
-	y_max = 31000,
-	heat_point = 75,
-	humidity_point = 15,
+	name =              "goldfields_esperence",
+	node_top =          "default:desert_sand",
+	depth_top =         2,
+	node_filler =       "default:sandstone",
+	depth_filler =      2,
+	node_stone =        "default:stone",
+	node_river_water =  "default:dirt_with_dry_grass",
+	node_riverbed =     "default:sandstone",
+	depth_riverbed =    1,
+	y_min =             4,
+	y_max =             31000,
+	heat_point =        75,
+	humidity_point =    15,
 })
 
 
@@ -29,15 +29,15 @@ minetest.register_biome({
 
 -- Gold
 minetest.register_ore({
-	ore_type		= "vein",
-	ore				= "default:stone_with_gold",
-	wherein			= {"default:stone"},
-	biomes			= {"goldfields_esperence"},
-	y_min			= -192,
-	y_max			= 47,
-	random_factor	= 0.23,
-	noise_threshold	= 0.97,
-	noise_params	= {
+	ore_type         = "vein",
+	ore              = "default:stone_with_gold",
+	wherein          = {"default:stone"},
+	biomes           = {"goldfields_esperence"},
+	y_min            = -192,
+	y_max            = 47,
+	random_factor    = 0.23,
+	noise_threshold  = 0.97,
+	noise_params     = {
 		offset = 0,
 		scale = 3,
 		spread = {x = 73, y = 251, z = 73},

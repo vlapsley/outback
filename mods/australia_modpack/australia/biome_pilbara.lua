@@ -5,19 +5,19 @@ local math_random = math.random
 
 -- pilbara
 minetest.register_biome({
-	name = "pilbara",
-	node_top = "australia:red_gravel",
-	depth_top = 2,
-	node_filler = "australia:red_stone",
-	depth_filler = 2,
-	node_stone = "default:stone",
-	node_river_water = "australia:muddy_river_water_source",
-	node_riverbed = "australia:red_gravel",
-	depth_riverbed = 1,
-	y_min = 4,
-	y_max = 31000,
-	heat_point = 80,
-	humidity_point = 20,
+	name =              "pilbara",
+	node_top =          "australia:red_gravel",
+	depth_top =         2,
+	node_filler =       "australia:red_stone",
+	depth_filler =      2,
+	node_stone =        "default:stone",
+	node_river_water =  "australia:muddy_river_water_source",
+	node_riverbed =     "australia:red_gravel",
+	depth_riverbed =    1,
+	y_min =             4,
+	y_max =             31000,
+	heat_point =        80,
+	humidity_point =    20,
 })
 
 
@@ -29,16 +29,16 @@ minetest.register_biome({
 
 -- Iron
 minetest.register_ore({
-	ore_type		= "blob",
-	ore				= "air",
-	wherein			= {"default:stone"},
-	clust_scarcity	= 24 * 24 * 24,
-	clust_size		= 8,
-	biomes			= {"pilbara"},
-	y_min			= -192,
-	y_max			= 35,
-	noise_threshold	= 1,
-	noise_params	= {
+	ore_type         = "blob",
+	ore              = "air",
+	wherein          = {"default:stone"},
+	clust_scarcity   = 24 * 24 * 24,
+	clust_size       = 8,
+	biomes           = {"pilbara"},
+	y_min            = -192,
+	y_max            = 35,
+	noise_threshold  = 1,
+	noise_params     = {
 		offset = 0,
 		scale = 3,
 		spread = {x = 16, y = 16, z = 16},

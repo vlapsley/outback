@@ -5,19 +5,19 @@ local math_random = math.random
 
 -- timor sea
 minetest.register_biome({
-	name = "timor_sea",
-	node_top = "default:sand",
-	depth_top = 3,
-	node_filler = "australia:bluestone",
-	depth_filler = 2,
-	node_stone = "default:stone",
-	node_water = "default:water_source",
-	node_riverbed = "default:sand",
-	depth_riverbed = 1,
-	y_min = -192,
-	y_max = 3,
-	heat_point = 80,
-	humidity_point = 90,
+	name =            "timor_sea",
+	node_top =        "default:sand",
+	depth_top =       3,
+	node_filler =     "australia:bluestone",
+	depth_filler =    2,
+	node_stone =      "default:stone",
+	node_water =      "default:water_source",
+	node_riverbed =   "default:sand",
+	depth_riverbed =  1,
+	y_min =           -192,
+	y_max =           3,
+	heat_point =      80,
+	humidity_point =  90,
 })
 
 
@@ -28,15 +28,15 @@ minetest.register_biome({
 -- Blob ore first to avoid other ores inside blobs
 
 minetest.register_ore({
-	ore_type		= "scatter",
-	ore				= "australia:submarine",
-	wherein			= "default:sand",
-	clust_scarcity	= 80 * 80 * 80,
-	clust_num_ores	= 1,
-	clust_size		= 12,
-	biomes			= {"timor_sea"},
-	y_min			= -64,
-	y_max			= -8,
+	ore_type        = "scatter",
+	ore             = "australia:submarine",
+	wherein         = "default:sand",
+	clust_scarcity  = 80 * 80 * 80,
+	clust_num_ores  = 1,
+	clust_size      = 12,
+	biomes          = {"timor_sea"},
+	y_min           = -64,
+	y_max           = -8,
 })
 
 

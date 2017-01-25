@@ -5,19 +5,19 @@ local math_random = math.random
 
 -- central australia
 minetest.register_biome({
-	name = "central_australia",
-	node_top = "australia:red_dirt",
-	depth_top = 1,
-	node_filler = "australia:red_stone",
-	depth_filler = 2,
-	node_stone = "default:stone",
-	node_river_water = "australia:muddy_river_water_source",
-	node_riverbed = "australia:red_dirt",
-	depth_riverbed = 1,
-	y_min = 4,
-	y_max = 31000,
-	heat_point = 80,
-	humidity_point = 25,
+	name =              "central_australia",
+	node_top =          "australia:red_dirt",
+	depth_top =         1,
+	node_filler =       "australia:red_stone",
+	depth_filler =      2,
+	node_stone =        "default:stone",
+	node_river_water =  "australia:muddy_river_water_source",
+	node_riverbed =     "australia:red_dirt",
+	depth_riverbed =    1,
+	y_min =             4,
+	y_max =             31000,
+	heat_point =        80,
+	humidity_point =    25,
 })
 
 
@@ -30,13 +30,14 @@ minetest.register_biome({
 -- Opals 
 -- Coober Pedy
 minetest.register_ore({
-	ore_type		= "vein",
-	ore				= "australia:stone_with_opal",
-	wherein			= "default:stone",
-	biomes			= {"central_australia"},
-	y_min			= -30,
-	y_max			= 23,
-	noise_params = {
+	ore_type         = "vein",
+	ore              = "australia:stone_with_opal",
+	wherein          = "default:stone",
+	biomes           = {"central_australia"},
+	y_min            = -30,
+	y_max            = 23,
+	noise_threshold  = 1.7,
+	noise_params =   {
 		offset = 0,
 		scale = 3,
 		spread = {x=211, y=211, z=211},
@@ -45,23 +46,23 @@ minetest.register_ore({
 		persist = 0.5,
 		flags = "eased",
 	},
-	noise_threshold = 1.7,
 })
 
 -- Uranium from Technic modpack: technic_worldgen mod
 -- Olympic Dam
 if minetest.get_modpath("technic_worldgen") then
 	minetest.register_ore({
-		ore_type		= "scatter",
-		ore				= "technic:mineral_uranium",
-		wherein			= "default:stone",
-		clust_scarcity	= 20 * 20 * 20,
-		clust_num_ores	= 6,
-		clust_size		= 4,
-		biomes			= {"central_australia"},
-		y_min			= -64,
-		y_max			= 11,
-		noise_params    = {
+		ore_type         = "scatter",
+		ore              = "technic:mineral_uranium",
+		wherein          = "default:stone",
+		clust_scarcity   = 20 * 20 * 20,
+		clust_num_ores   = 6,
+		clust_size       = 4,
+		biomes           = {"central_australia"},
+		y_min            = -64,
+		y_max            = 11,
+		noise_threshold  = 0.6,
+		noise_params     = {
 			offset = 0,
 			scale = 1,
 			spread = {x = 100, y = 100, z = 100},
@@ -69,7 +70,6 @@ if minetest.get_modpath("technic_worldgen") then
 			octaves = 3,
 			persist = 0.7
 			},
-		noise_threshold = 0.6,
 	})
 end
 

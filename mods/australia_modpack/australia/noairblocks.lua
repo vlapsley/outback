@@ -50,11 +50,11 @@ for _, name in pairs(water_nodes) do
 end
 
 local check_pos = {
-	{x=-1, y=0, z=0},
-	{x=1, y=0, z=0},
-	{x=0, y=0, z=-1},
-	{x=0, y=0, z=1},
-	{x=0, y=1, z=0},
+	{x = -1, y = 0, z = 0},
+	{x = 1, y = 0, z = 0},
+	{x = 0, y = 0, z = -1},
+	{x = 0, y = 0, z = 1},
+	{x = 0, y = 1, z = 0},
 }
 
 minetest.register_abm({

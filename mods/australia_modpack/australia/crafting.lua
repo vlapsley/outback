@@ -332,19 +332,19 @@ minetest.register_craft({
 	}
 })
 
--- Merbau Tree
-minetest.register_craft({
-	output = "australia:merbau 4",
-	recipe = {
-		{"australia:merbau_tree"}
-	}
-})
-
 -- Marri
 minetest.register_craft({
 	output = "australia:marri 4",
 	recipe = {
 		{"australia:marri_tree"}
+	}
+})
+
+-- Merbau Tree
+minetest.register_craft({
+	output = "australia:merbau 4",
+	recipe = {
+		{"australia:merbau_tree"}
 	}
 })
 

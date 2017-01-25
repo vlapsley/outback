@@ -5,19 +5,19 @@ local math_random = math.random
 
 -- eastern coasts
 minetest.register_biome({
-	name = "eastern_coasts",
-	node_top = "default:dirt_with_grass",
-	depth_top = 1,
-	node_filler = "default:dirt",
-	depth_filler = 3,
-	node_stone = "default:stone",
-	node_river_water = "australia:muddy_river_water_source",
-	node_riverbed = "default:dirt",
-	depth_riverbed = 1,
-	y_min = 4,
-	y_max = 31000,
-	heat_point = 35,
-	humidity_point = 60,
+	name =              "eastern_coasts",
+	node_top =          "default:dirt_with_grass",
+	depth_top =         1,
+	node_filler =       "default:dirt",
+	depth_filler =      3,
+	node_stone =        "default:stone",
+	node_river_water =  "australia:muddy_river_water_source",
+	node_riverbed =     "default:dirt",
+	depth_riverbed =    1,
+	y_min =             4,
+	y_max =             31000,
+	heat_point =        35,
+	humidity_point =    60,
 })
 
 
@@ -29,17 +29,17 @@ minetest.register_biome({
 
 -- Bluestone (Basalt)
 minetest.register_ore({
-	ore_type				= "sheet",
-	ore						= "australia:bluestone",
-	wherein					= "default:stone",
-	column_height_min		= 2,
-	column_height_max		= 4,
-	column_midpoint_factor	= 0.5,
-	biomes					= {"eastern_coasts"},
-	y_min					= -192,
-	y_max					= 0,
-	noise_threshold			= 1.25,
-	noise_params			= {
+	ore_type                = "sheet",
+	ore                     = "australia:bluestone",
+	wherein                 = "default:stone",
+	column_height_min       = 2,
+	column_height_max       = 4,
+	column_midpoint_factor  = 0.5,
+	biomes                  = {"eastern_coasts"},
+	y_min                   = -192,
+	y_max                   = 0,
+	noise_threshold         = 1.25,
+	noise_params            = {
 		offset = 0,
 		scale = 2,
 		spread = {x = 19, y = 19, z = 11},
@@ -51,17 +51,17 @@ minetest.register_ore({
 
 -- Coal
 minetest.register_ore({
-	ore_type				= "sheet",
-	ore						= "default:stone_with_coal",
-	wherein					= "default:stone",
-	column_height_min		= 2,
-	column_height_max		= 4,
-	column_midpoint_factor	= 0.5,
-	biomes					= {"eastern_coasts"},
-	y_min					= -192,
-	y_max					= 70,
-	noise_threshold			= 1.25,
-	noise_params			= {
+	ore_type                = "sheet",
+	ore                     = "default:stone_with_coal",
+	wherein                 = "default:stone",
+	column_height_min       = 2,
+	column_height_max       = 4,
+	column_midpoint_factor  = 0.5,
+	biomes                  = {"eastern_coasts"},
+	y_min                   = -192,
+	y_max                   = 70,
+	noise_threshold         = 1.25,
+	noise_params            = {
 		offset = 0,
 		scale = 2,
 		spread = {x = 19, y = 19, z = 11},

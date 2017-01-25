@@ -5,19 +5,19 @@ local math_random = math.random
 
 -- top end
 minetest.register_biome({
-	name = "top_end",
-	node_top = "default:dirt_with_grass",
-	depth_top = 1,
-	node_filler = "default:sandstone",
-	depth_filler = 3,
-	node_stone = "default:stone",
-	node_river_water = "australia:muddy_river_water_source",
-	node_riverbed = "default:dirt",
-	depth_riverbed = 1,
-	y_min = 4,
-	y_max = 31000,
-	heat_point = 80,
-	humidity_point = 80,
+	name =              "top_end",
+	node_top =          "default:dirt_with_grass",
+	depth_top =         1,
+	node_filler =       "default:sandstone",
+	depth_filler =      3,
+	node_stone =        "default:stone",
+	node_river_water =  "australia:muddy_river_water_source",
+	node_riverbed =     "default:dirt",
+	depth_riverbed =    1,
+	y_min =             4,
+	y_max =             31000,
+	heat_point =        80,
+	humidity_point =    80,
 })
 
 
@@ -29,16 +29,16 @@ minetest.register_biome({
 
 -- Copper
 minetest.register_ore({
-	ore_type		= "blob",
-	ore				= "default:stone_with_copper",
-	wherein			= {"default:stone"},
-	clust_scarcity	= 44 * 44 * 44,
-	clust_size		= 8,
-	biomes			= {"top_end"},
-	y_min			= -192,
-	y_max			= 0,
-	noise_threshold	= 1,
-	noise_params	= {
+	ore_type         = "blob",
+	ore              = "default:stone_with_copper",
+	wherein          = {"default:stone"},
+	clust_scarcity   = 44 * 44 * 44,
+	clust_size       = 8,
+	biomes           = {"top_end"},
+	y_min            = -192,
+	y_max            = 0,
+	noise_threshold  = 1,
+	noise_params     = {
 		offset = 0,
 		scale = 3,
 		spread = {x = 16, y = 16, z = 16},
@@ -50,31 +50,32 @@ minetest.register_ore({
 
 -- Diamond
 minetest.register_ore({
-	ore_type		= "scatter",
-	ore				= "default:stone_with_diamond",
-	wherein			= "default:stone",
-	clust_scarcity	= 40 * 40 * 40,
-	clust_num_ores	= 12,
-	clust_size		= 4,
-	biomes			= {"top_end"},
-	y_min			= -60,
-	y_max			= 17,
+	ore_type        = "scatter",
+	ore             = "default:stone_with_diamond",
+	wherein         = "default:stone",
+	clust_scarcity  = 40 * 40 * 40,
+	clust_num_ores  = 12,
+	clust_size      = 4,
+	biomes          = {"top_end"},
+	y_min           = -60,
+	y_max           = 17,
 })
 
 -- Uranium from Technic modpack: technic_worldgen mod
 -- Ranger
 if minetest.get_modpath("technic_worldgen") then
 	minetest.register_ore({
-		ore_type		= "scatter",
-		ore				= "technic:mineral_uranium",
-		wherein			= "default:stone",
-		clust_scarcity	= 28 * 28 * 28,
-		clust_num_ores	= 4,
-		clust_size		= 3,
-		biomes			= {"top_end"},
-		y_min			= -192,
-		y_max			= 19,
-		noise_params	= {
+		ore_type         = "scatter",
+		ore              = "technic:mineral_uranium",
+		wherein          = "default:stone",
+		clust_scarcity   = 28 * 28 * 28,
+		clust_num_ores   = 4,
+		clust_size       = 3,
+		biomes           = {"top_end"},
+		y_min            = -192,
+		y_max            = 19,
+		noise_threshold  = 0.6,
+		noise_params     = {
 			offset = 0,
 			scale = 1,
 			spread = {x = 100, y = 100, z = 100},
@@ -82,7 +83,6 @@ if minetest.get_modpath("technic_worldgen") then
 			octaves = 3,
 			persist = 0.7
 			},
-		noise_threshold = 0.6,
 	})
 end
 
@@ -90,16 +90,17 @@ end
 -- Jabiluka
 if minetest.get_modpath("technic_worldgen") then
 	minetest.register_ore({
-		ore_type		= "scatter",
-		ore				= "technic:mineral_uranium",
-		wherein			= "default:stone",
-		clust_scarcity	= 26 * 26 * 26,
-		clust_num_ores	= 4,
-		clust_size		= 3,
-		biomes			= {"top_end"},
-		y_min			= -192,
-		y_max			= 6,
-		noise_params	= {
+		ore_type         = "scatter",
+		ore              = "technic:mineral_uranium",
+		wherein          = "default:stone",
+		clust_scarcity   = 26 * 26 * 26,
+		clust_num_ores   = 4,
+		clust_size       = 3,
+		biomes           = {"top_end"},
+		y_min            = -192,
+		y_max            = 6,
+		noise_threshold  = 0.6,
+		noise_params     = {
 			offset = 0,
 			scale = 1,
 			spread = {x = 100, y = 100, z = 100},
@@ -107,7 +108,6 @@ if minetest.get_modpath("technic_worldgen") then
 			octaves = 3,
 			persist = 0.7
 			},
-		noise_threshold = 0.6,
 	})
 end
 

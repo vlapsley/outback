@@ -5,18 +5,18 @@ local math_random = math.random
 
 -- tasman sea
 minetest.register_biome({
-	name = "tasman_sea",
-	node_top = "default:sand",
-	depth_top = 3,
-	node_filler = "australia:bluestone",
-	depth_filler = 4,
-	node_stone = "default:stone",
-	node_riverbed = "default:sand",
-	depth_riverbed = 1,
-	y_min = -192,
-	y_max = 3,
-	heat_point = 20,
-	humidity_point = 50,
+	name =            "tasman_sea",
+	node_top =        "default:sand",
+	depth_top =       3,
+	node_filler =     "australia:bluestone",
+	depth_filler =    4,
+	node_stone =      "default:stone",
+	node_riverbed =   "default:sand",
+	depth_riverbed =  1,
+	y_min =           -192,
+	y_max =           3,
+	heat_point =      20,
+	humidity_point =  50,
 })
 
 
@@ -27,39 +27,39 @@ minetest.register_biome({
 -- Blob ore first to avoid other ores inside blobs
 
 minetest.register_ore({
-	ore_type		= "scatter",
-	ore				= "australia:stone_kelp_brown",
-	wherein			= "default:sand",
-	clust_scarcity	= 9 * 9 * 9,
-	clust_num_ores	= 25,
-	clust_size		= 6,
-	biomes			= {"tasman_sea"},
-	y_min			= -10,
-	y_max			= -3,
+	ore_type        = "scatter",
+	ore             = "australia:stone_kelp_brown",
+	wherein         = "default:sand",
+	clust_scarcity  = 9 * 9 * 9,
+	clust_num_ores  = 25,
+	clust_size      = 6,
+	biomes          = {"tasman_sea"},
+	y_min           = -10,
+	y_max           = -3,
 })
 
 minetest.register_ore({
-	ore_type		= "scatter",
-	ore				= "australia:stone_kelp_giant_brown",
-	wherein			= "default:sand",
-	clust_scarcity	= 10 * 10 * 10,
-	clust_num_ores	= 24,
-	clust_size		= 8,
-	biomes			= {"tasman_sea"},
-	y_min			= -64,
-	y_max			= -8,
+	ore_type        = "scatter",
+	ore             = "australia:stone_kelp_giant_brown",
+	wherein         = "default:sand",
+	clust_scarcity  = 10 * 10 * 10,
+	clust_num_ores  = 24,
+	clust_size      = 8,
+	biomes          = {"tasman_sea"},
+	y_min           = -64,
+	y_max           = -8,
 })
 
 minetest.register_ore({
-	ore_type		= "scatter",
-	ore				= "australia:woodship",
-	wherein			= "default:sand",
-	clust_scarcity	= 60 * 60 * 60,
-	clust_num_ores	= 1,
-	clust_size		= 12,
-	biomes			= {"tasman_sea"},
-	y_min			= -64,
-	y_max			= -6,
+	ore_type        = "scatter",
+	ore             = "australia:woodship",
+	wherein         = "default:sand",
+	clust_scarcity  = 60 * 60 * 60,
+	clust_num_ores  = 1,
+	clust_size      = 12,
+	biomes          = {"tasman_sea"},
+	y_min           = -64,
+	y_max           = -6,
 })
 
 

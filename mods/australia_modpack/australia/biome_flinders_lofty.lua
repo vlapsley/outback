@@ -5,19 +5,19 @@ local math_random = math.random
 
 -- flinders / lofty
 minetest.register_biome({
-	name = "flinders_lofty",
-	node_top = "default:dirt_with_dry_grass",
-	depth_top = 1,
-	node_filler = "australia:red_dirt",
-	depth_filler = 2,
-	node_stone = "default:stone",
-	node_river_water = "australia:muddy_river_water_source",
-	node_riverbed = "default:dirt",
-	depth_riverbed = 1,
-	y_min = 4,
-	y_max = 31000,
-	heat_point = 50,
-	humidity_point = 50,
+	name =              "flinders_lofty",
+	node_top =          "default:dirt_with_dry_grass",
+	depth_top =         1,
+	node_filler =       "australia:red_dirt",
+	depth_filler =      2,
+	node_stone =        "default:stone",
+	node_river_water =  "australia:muddy_river_water_source",
+	node_riverbed =     "default:dirt",
+	depth_riverbed =    1,
+	y_min =             4,
+	y_max =             31000,
+	heat_point =        50,
+	humidity_point =    50,
 })
 
 
@@ -29,16 +29,16 @@ minetest.register_biome({
 
 -- Bluestone (Basalt)
 minetest.register_ore({
-	ore_type = "blob",
-	ore = "australia:bluestone",
-	wherein = {"default:stone"},
-	clust_scarcity = 24 * 24 * 24,
-	clust_size = 8,
-	biomes = {"flinders_lofty"},
-	y_min = 0,
-	y_max = 47,
-	noise_threshold = 0.2,
-	noise_params = {
+	ore_type =         "blob",
+	ore =              "australia:bluestone",
+	wherein =          {"default:stone"},
+	clust_scarcity =   24 * 24 * 24,
+	clust_size =       8,
+	biomes =           {"flinders_lofty"},
+	y_min =            0,
+	y_max =            47,
+	noise_threshold =  0.2,
+	noise_params =     {
 		offset = 0.5,
 		scale = 0.2,
 		spread = {x = 5, y = 5, z = 5},
@@ -49,17 +49,17 @@ minetest.register_ore({
 })
 
 minetest.register_ore({
-	ore_type = "sheet",
-	ore = "australia:bluestone",
-	wherein = "default:stone",
-	column_height_min = 2,
-	column_height_max = 4,
-	column_midpoint_factor = 0.5,
-	biomes = {"flinders_lofty"},
-	y_min = -192,
-	y_max = 0,
-	noise_threshold = 1.25,
-	noise_params = {
+	ore_type =                "sheet",
+	ore =                     "australia:bluestone",
+	wherein =                 "default:stone",
+	column_height_min =       2,
+	column_height_max =       4,
+	column_midpoint_factor =  0.5,
+	biomes =                  {"flinders_lofty"},
+	y_min =                   -192,
+	y_max =                   0,
+	noise_threshold =         1.25,
+	noise_params =            {
 		offset = 0,
 		scale = 2,
 		spread = {x = 19, y = 19, z = 11},
@@ -71,13 +71,14 @@ minetest.register_ore({
 
 -- Copper (Olympic Dam)
 minetest.register_ore({
-	ore_type = "vein",
-	ore = "default:stone_with_copper",
-	wherein = "default:stone",
-	biomes = {"flinders_lofty"},
-	y_min = -64,
-	y_max = 34,
-	noise_params = {
+	ore_type =         "vein",
+	ore =              "default:stone_with_copper",
+	wherein =          "default:stone",
+	biomes =           {"flinders_lofty"},
+	y_min =            -64,
+	y_max =            34,
+	noise_threshold =  1.6,
+	noise_params =     {
 		offset = 0,
 		scale = 3,
 		spread = {x=211, y=211, z=211},
@@ -86,7 +87,6 @@ minetest.register_ore({
 		persist = 0.6,
 		flags = "eased",
 	},
-	noise_threshold = 1.6,
 })
 
 

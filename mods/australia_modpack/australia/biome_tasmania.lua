@@ -5,19 +5,19 @@ local math_random = math.random
 
 -- tasmania
 minetest.register_biome({
-	name = "tasmania",
-	node_top = "default:dirt_with_grass",
-	depth_top = 1,
-	node_filler = "default:dirt",
-	depth_filler = 3,
-	node_stone = "default:stone",
-	node_river_water = "default:river_water_source",
-	node_riverbed = "default:sand",
-	depth_riverbed = 1,
-	y_min = 4,
-	y_max = 31000,
-	heat_point = 15,
-	humidity_point = 85,
+	name =              "tasmania",
+	node_top =          "default:dirt_with_grass",
+	depth_top =         1,
+	node_filler =       "default:dirt",
+	depth_filler =      3,
+	node_stone =        "default:stone",
+	node_river_water =  "default:river_water_source",
+	node_riverbed =     "default:sand",
+	depth_riverbed =    1,
+	y_min =             4,
+	y_max =             31000,
+	heat_point =        15,
+	humidity_point =    85,
 })
 
 

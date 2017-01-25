@@ -122,27 +122,27 @@ minetest.setting_set("mgvalleys_river_size", 4)
 --]]
 
 -- Set the following variables to true to enable each biome
-aus.biome_underground				= true
-aus.biome_mangroves					= true
-aus.biome_tasman_sea				= true
-aus.biome_great_australian_bight	= true
-aus.biome_indian_ocean				= true
-aus.biome_great_barrier_reef		= true
-aus.biome_timor_sea					= true
-aus.biome_tasmania					= true
-aus.biome_victorian_forests			= true
-aus.biome_jarrah_karri_forests		= true
-aus.biome_eastern_coasts			= true
-aus.biome_flinders_lofty			= true
-aus.biome_murray_darling_basin		= true
-aus.biome_goldfields_esperence		= true
-aus.biome_mulga_lands				= true
-aus.biome_far_north_queensland		= true
-aus.biome_central_australia			= true
-aus.biome_top_end					= true
-aus.biome_pilbara					= true
-aus.biome_simpson_desert			= true
-aus.biome_australian_alps			= true
+aus.biome_underground            = true
+aus.biome_mangroves              = true
+aus.biome_tasman_sea             = true
+aus.biome_great_australian_bight = true
+aus.biome_indian_ocean           = true
+aus.biome_great_barrier_reef     = true
+aus.biome_timor_sea              = true
+aus.biome_tasmania               = true
+aus.biome_victorian_forests      = true
+aus.biome_jarrah_karri_forests   = true
+aus.biome_eastern_coasts         = true
+aus.biome_flinders_lofty         = true
+aus.biome_murray_darling_basin   = true
+aus.biome_goldfields_esperence   = true
+aus.biome_mulga_lands            = true
+aus.biome_far_north_queensland   = true
+aus.biome_central_australia      = true
+aus.biome_top_end                = true
+aus.biome_pilbara                = true
+aus.biome_simpson_desert         = true
+aus.biome_australian_alps        = true
 
 
 aus.registered_on_first_mapgen = {}
