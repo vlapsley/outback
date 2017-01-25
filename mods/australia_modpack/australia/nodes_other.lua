@@ -1,18 +1,5 @@
 -- mods/australia_modpack/australia/nodes_other.lua
 
-minetest.register_node("australia:dirt_with_dry_green_grass", {
-	description = "Dirt with Dry-Green Grass",
-	tiles = {"aus_dry_green_grass.png",
-		"default_dirt.png",
-		{name = "default_dirt.png^aus_dry_green_grass_side.png",
-			tileable_vertical = false}},
-	groups = {crumbly = 3, soil = 1},
-	drop = "default:dirt",
-	sounds = default.node_sound_dirt_defaults({
-		footstep = {name = "default_grass_footstep", gain = 0.33},
-	}),
-})
-
 minetest.register_node("australia:red_stone", {
 	description = "Red Stone",
 	tiles = {"aus_red_stone.png"},
