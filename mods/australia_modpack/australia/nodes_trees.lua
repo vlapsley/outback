@@ -46,12 +46,27 @@ minetest.register_node("australia:arnhem_cypress_pine_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:arnhem_cypress_pine_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -4, y = 1, z = -4},
+			{x = 4, y = 17, z = 4},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Black Box
@@ -99,12 +114,27 @@ minetest.register_node("australia:black_box_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:black_box_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -6, y = 1, z = -6},
+			{x = 6, y = 16, z = 6},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Black Wattle
@@ -162,12 +192,27 @@ minetest.register_node("australia:black_wattle_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:black_wattle_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -4, y = 1, z = -4},
+			{x = 4, y = 17, z = 4},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Blue Gum
@@ -215,12 +260,27 @@ minetest.register_node("australia:blue_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:blue_gum_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -7, y = 1, z = -7},
+			{x = 7, y = 31, z = 7},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Boab
@@ -268,12 +328,27 @@ minetest.register_node("australia:boab_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:boab_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -5, y = 1, z = -5},
+			{x = 5, y = 9, z = 5},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Bull Banksia
@@ -332,12 +407,27 @@ minetest.register_node("australia:bull_banksia_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:bull_banksia_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 8, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Celery-top Pine
@@ -395,12 +485,27 @@ minetest.register_node("australia:celery_top_pine_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:celery_top_pine_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -4, y = 1, z = -4},
+			{x = 4, y = 12, z = 4},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Australian Cherry
@@ -459,12 +564,27 @@ minetest.register_node("australia:cherry_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:cherry_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 6, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 minetest.register_node("australia:cherry", {
@@ -546,12 +666,27 @@ minetest.register_node("australia:coast_banksia_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:coast_banksia_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -5, y = 1, z = -5},
+			{x = 5, y = 18, z = 5},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Coolabah
@@ -599,12 +734,27 @@ minetest.register_node("australia:coolabah_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:blue_gum_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -5, y = 1, z = -5},
+			{x = 5, y = 15, z = 5},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Daintree Stringybark
@@ -652,12 +802,27 @@ minetest.register_node("australia:daintree_stringybark_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:blue_gum_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -9, y = 1, z = -9},
+			{x = 9, y = 31, z = 9},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Darwin Woollybutt
@@ -705,12 +870,27 @@ minetest.register_node("australia:darwin_woollybutt_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:blue_gum_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -5, y = 1, z = -5},
+			{x = 5, y = 18, z = 5},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Desert Oak
@@ -758,12 +938,27 @@ minetest.register_node("australia:desert_oak_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:desert_oak_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -4, y = 1, z = -4},
+			{x = 4, y = 12, z = 4},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Australian Fan Palm
@@ -822,12 +1017,27 @@ minetest.register_node("australia:fan_palm_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 1, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:fan_palm_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 10, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Flame Grevillea
@@ -886,12 +1096,27 @@ minetest.register_node("australia:flame_grevillea_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:flame_grevillea_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 6, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Golden Wattle
@@ -950,12 +1175,27 @@ minetest.register_node("australia:golden_wattle_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:golden_wattle_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -2, y = 1, z = -2},
+			{x = 2, y = 6, z = 2},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Grey Mangrove
@@ -1014,12 +1254,27 @@ minetest.register_node("australia:grey_mangrove_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:grey_mangrove_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -2, y = 1, z = -2},
+			{x = 2, y = 5, z = 2},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Huon Pine
@@ -1067,12 +1322,27 @@ minetest.register_node("australia:huon_pine_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:huon_pine_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -6, y = 1, z = -6},
+			{x = 6, y = 19, z = 6},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Illawarra Flame
@@ -1120,12 +1390,27 @@ minetest.register_node("australia:illawarra_flame_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:illawarra_flame_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -7, y = 1, z = -7},
+			{x = 7, y = 18, z = 7},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Jarrah
@@ -1173,12 +1458,27 @@ minetest.register_node("australia:jarrah_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:jarrah_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -10, y = 1, z = -10},
+			{x = 10, y = 30, z = 10},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Karri
@@ -1226,12 +1526,27 @@ minetest.register_node("australia:karri_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:karri_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -10, y = 1, z = -10},
+			{x = 10, y = 40, z = 10},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Lemon Eucalyptus
@@ -1279,12 +1594,27 @@ minetest.register_node("australia:lemon_eucalyptus_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:lemon_eucalyptus_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -6, y = 1, z = -6},
+			{x = 6, y = 24, z = 6},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Lemon Myrtle
@@ -1343,12 +1673,27 @@ minetest.register_node("australia:lemon_myrtle_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:lemon_myrtle_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 8, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Lilly Pilly
@@ -1407,12 +1752,27 @@ minetest.register_node("australia:lilly_pilly_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:lilly_pilly_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -6, y = 1, z = -6},
+			{x = 6, y = 12, z = 6},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 minetest.register_node("australia:lilly_pilly_berries", {
@@ -1494,12 +1854,27 @@ minetest.register_node("australia:macadamia_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:macadamia_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -4, y = 1, z = -4},
+			{x = 4, y = 12, z = 4},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 minetest.register_node("australia:macadamia", {
@@ -1582,12 +1957,27 @@ minetest.register_node("australia:mangrove_apple_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:mangrove_apple_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -4, y = 1, z = -4},
+			{x = 4, y = 12, z = 4},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 minetest.register_node("australia:mangrove_apple", {
@@ -1611,6 +2001,74 @@ minetest.register_node("australia:mangrove_apple", {
 		if placer:is_player() then
 			minetest.set_node(pos, {name = "australia:mangrove_apple", param2 = 1})
 		end
+	end,
+})
+
+-- Marri
+minetest.register_node("australia:marri_tree", {
+	description = "Marri Tree",
+	tiles = {
+		"aus_marri_tree_top.png",
+		"aus_marri_tree_top.png",
+		"aus_marri_tree.png"
+	},
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = {tree = 1, choppy = 1, flammable = 1},
+	sounds = default.node_sound_wood_defaults(),
+	on_place = minetest.rotate_node
+})
+
+minetest.register_node("australia:marri_leaves", {
+	description = "Marri Leaves",
+	drawtype = "allfaces_optional",
+	waving = 1,
+	visual_scale = 1.0,
+	tiles = {"aus_marri_leaves.png"},
+	paramtype = "light",
+	is_ground_content = false,
+	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {"australia:marri_sapling"}, rarity = 20,},
+			{items = {"australia:marri_leaves"},}
+		}
+	},
+	sounds = default.node_sound_leaves_defaults(),
+	after_place_node = default.after_place_leaves,
+})
+
+minetest.register_node("australia:marri_sapling", {
+	description = "Marri Sapling",
+	drawtype = "plantlike",
+	visual_scale = 1.0,
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	on_timer = aus.grow_sapling,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+	},
+	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:marri_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -10, y = 1, z = -10},
+			{x = 10, y = 30, z = 10},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
 	end,
 })
 
@@ -1659,65 +2117,27 @@ minetest.register_node("australia:merbau_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
-})
-
--- Marri
-minetest.register_node("australia:marri_tree", {
-	description = "Marri Tree",
-	tiles = {
-		"aus_marri_tree_top.png",
-		"aus_marri_tree_top.png",
-		"aus_marri_tree.png"
-	},
-	paramtype2 = "facedir",
-	is_ground_content = false,
-	groups = {tree = 1, choppy = 1, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node
-})
-
-minetest.register_node("australia:marri_leaves", {
-	description = "Marri Leaves",
-	drawtype = "allfaces_optional",
-	waving = 1,
-	visual_scale = 1.0,
-	tiles = {"aus_marri_leaves.png"},
-	paramtype = "light",
-	is_ground_content = false,
-	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"australia:marri_sapling"}, rarity = 20,},
-			{items = {"australia:marri_leaves"},}
-		}
-	},
-	sounds = default.node_sound_leaves_defaults(),
-	after_place_node = default.after_place_leaves,
-})
-
-minetest.register_node("australia:marri_sapling", {
-	description = "Marri Sapling",
-	drawtype = "plantlike",
-	visual_scale = 1.0,
-	tiles = {"aus_eucalyptus_sapling.png"},
-	inventory_image = "aus_eucalyptus_sapling.png",
-	wield_image = "aus_eucalyptus_sapling.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	selection_box = {
-		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
-	},
-	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:merbau_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -5, y = 1, z = -5},
+			{x = 5, y = 23, z = 5},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Moreton Bay Fig
@@ -1765,12 +2185,27 @@ minetest.register_node("australia:moreton_bay_fig_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:mangrove_apple_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -15, y = 1, z = -15},
+			{x = 15, y = 35, z = 15},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 minetest.register_node("australia:moreton_bay_fig", {
@@ -1852,12 +2287,27 @@ minetest.register_node("australia:mulga_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:mulga_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 10, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Paper Bark
@@ -1905,12 +2355,27 @@ minetest.register_node("australia:paperbark_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:paperbark_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -5, y = 1, z = -5},
+			{x = 5, y = 15, z = 5},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Desert Quandong
@@ -1969,12 +2434,27 @@ minetest.register_node("australia:quandong_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:quandong_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -2, y = 1, z = -2},
+			{x = 2, y = 5, z = 2},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 minetest.register_node("australia:quandong", {
@@ -2057,12 +2537,27 @@ minetest.register_node("australia:red_bottlebrush_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:red_bottlebrush_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 6, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- River Oak
@@ -2110,12 +2605,27 @@ minetest.register_node("australia:river_oak_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:river_oak_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -5, y = 1, z = -5},
+			{x = 5, y = 20, z = 5},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- River Red Gum
@@ -2163,12 +2673,27 @@ minetest.register_node("australia:river_red_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:river_red_gum_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -8, y = 1, z = -8},
+			{x = 8, y = 26, z = 8},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Rottnest Island Pine
@@ -2226,12 +2751,27 @@ minetest.register_node("australia:rottnest_island_pine_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:rottnest_island_pine_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 6, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Scribbly Gum
@@ -2279,12 +2819,27 @@ minetest.register_node("australia:scribbly_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:scribbly_gum_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -5, y = 1, z = -5},
+			{x = 5, y = 13, z = 5},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Shoestring Acacia
@@ -2332,12 +2887,27 @@ minetest.register_node("australia:shoestring_acacia_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:shoestring_acacia_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -4, y = 1, z = -4},
+			{x = 4, y = 9, z = 4},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Snow Gum
@@ -2395,12 +2965,27 @@ minetest.register_node("australia:snow_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:snow_gum_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -2, y = 1, z = -2},
+			{x = 2, y = 8, z = 2},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Southern Sassafras
@@ -2458,12 +3043,27 @@ minetest.register_node("australia:southern_sassafras_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:southern_sassafras_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -4, y = 1, z = -4},
+			{x = 4, y = 15, z = 4},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Stilted Mangrove
@@ -2522,12 +3122,27 @@ minetest.register_node("australia:stilted_mangrove_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:stilted_mangrove_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 9, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Sugar Gum
@@ -2575,12 +3190,27 @@ minetest.register_node("australia:sugar_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:sugar_gum_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -10, y = 1, z = -10},
+			{x = 10, y = 23, z = 10},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Swamp Bloodwood
@@ -2628,12 +3258,27 @@ minetest.register_node("australia:swamp_bloodwood_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:swamp_bloodwood_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -4, y = 1, z = -4},
+			{x = 4, y = 12, z = 4},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Swamp Gum
@@ -2681,12 +3326,27 @@ minetest.register_node("australia:swamp_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:swamp_gum_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -10, y = 1, z = -10},
+			{x = 10, y = 52, z = 10},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Swamp Paperbark
@@ -2745,12 +3405,27 @@ minetest.register_node("australia:swamp_paperbark_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:swamp_paperbark_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -2, y = 1, z = -2},
+			{x = 2, y = 6, z = 2},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Tasmanian Myrtle
@@ -2798,12 +3473,27 @@ minetest.register_node("australia:tasmanian_myrtle_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:tasmanian_myrtle_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -9, y = 1, z = -9},
+			{x = 9, y = 29, z = 9},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Tea Tree
@@ -2862,12 +3552,27 @@ minetest.register_node("australia:tea_tree_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:tea_tree_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 7, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- White Box
@@ -2915,12 +3620,27 @@ minetest.register_node("australia:white_box_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:white_box_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -8, y = 1, z = -8},
+			{x = 8, y = 20, z = 8},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 -- Wirewood
@@ -2979,12 +3699,27 @@ minetest.register_node("australia:wirewood_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
+	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:wirewood_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -2, y = 1, z = -2},
+			{x = 2, y = 10, z = 2},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
 
 

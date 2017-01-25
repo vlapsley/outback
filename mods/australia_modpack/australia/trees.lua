@@ -1610,7 +1610,7 @@ function aus.grow_white_box(pos)
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
 		{x = pos.x - 8, y = pos.y, z = pos.z - 8},
-		{x = pos.x + 8, y = pos.y + height + 84, z = pos.z + 8}
+		{x = pos.x + 8, y = pos.y + height + 8, z = pos.z + 8}
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
