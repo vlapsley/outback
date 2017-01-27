@@ -27,27 +27,27 @@ minetest.register_biome({
 -- Blob ore first to avoid other ores inside blobs
 
 minetest.register_ore({
-	ore_type        = "scatter",
-	ore             = "australia:stone_kelp_brown",
-	wherein         = "default:sand",
-	clust_scarcity  = 9 * 9 * 9,
-	clust_num_ores  = 25,
-	clust_size      = 6,
-	biomes          = {"indian_ocean"},
-	y_min           = -10,
-	y_max           = -3,
+	ore_type =        "scatter",
+	ore =             "australia:stone_kelp_brown",
+	wherein =         "default:sand",
+	clust_scarcity =  9 * 9 * 9,
+	clust_num_ores =  25,
+	clust_size =      6,
+	biomes =          {"indian_ocean"},
+	y_min =           -10,
+	y_max =           -3,
 })
 
 minetest.register_ore({
-	ore_type        = "scatter",
-	ore             = "australia:woodship",
-	wherein         = "default:sand",
-	clust_scarcity  = 30 * 30 * 30,
-	clust_num_ores  = 1,
-	clust_size      = 12,
-	biomes          = {"indian_ocean"},
-	y_min           = -64,
-	y_max           = -6,
+	ore_type =        "scatter",
+	ore =             "australia:woodship",
+	wherein =         "default:sand",
+	clust_scarcity =  30 * 30 * 30,
+	clust_num_ores =  1,
+	clust_size =      12,
+	biomes =          {"indian_ocean"},
+	y_min =           -64,
+	y_max =           -6,
 })
 
 
@@ -58,41 +58,41 @@ minetest.register_ore({
 -- Grass
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {"default:sand"},
-		sidelen = 16,
-		noise_params = {
-			offset = offset,
-			scale = scale,
-			spread = {x = 200, y = 200, z = 200},
-			seed = 329,
-			octaves = 3,
-			persist = 0.6
+		deco_type =     "simple",
+		place_on =      {"default:sand"},
+		sidelen =       16,
+		noise_params =  {
+			offset =   offset,
+			scale =    scale,
+			spread =   {x = 200, y = 200, z = 200},
+			seed =     329,
+			octaves =  3,
+			persist =  0.6
 		},
-		biomes = {"indian_ocean"},
-		y_min = 3,
-		y_max = 3,
-		decoration = "default:grass_"..length,
+		biomes =        {"indian_ocean"},
+		y_min =         3,
+		y_max =         3,
+		decoration =    "default:grass_"..length,
 	})
 end
 
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {"default:sand"},
-		sidelen = 16,
-		noise_params = {
-			offset = offset,
-			scale = scale,
-			spread = {x = 200, y = 200, z = 200},
-			seed = 329,
-			octaves = 3,
-			persist = 0.6
+		deco_type =     "simple",
+		place_on =      {"default:sand"},
+		sidelen =       16,
+		noise_params =  {
+			offset =   offset,
+			scale =    scale,
+			spread =   {x = 200, y = 200, z = 200},
+			seed =     329,
+			octaves =  3,
+			persist =  0.6
 		},
-		biomes = {"indian_ocean"},
-		y_min = 3,
-		y_max = 3,
-		decoration = "default:dry_grass_"..length,
+		biomes =        {"indian_ocean"},
+		y_min =         3,
+		y_max =         3,
+		decoration =    "default:dry_grass_"..length,
 	})
 end
 
@@ -105,15 +105,15 @@ register_dry_grass_decoration(0.05, 0.01,  3)
 
 -- Narrowleaf Seagrass
 minetest.register_decoration({
-	deco_type = "simple",
-	place_on = {"default:sand"},
-	sidelen = 80,
-	fill_ratio = 0.01,
-	biomes = {"indian_ocean"},
-	y_min     = -10,
-	y_max     = -2,
-	decoration = "australia:sea_grass",
-	flags = "force_placement",
+	deco_type =   "simple",
+	place_on =    {"default:sand"},
+	sidelen =     80,
+	fill_ratio =  0.01,
+	biomes =      {"indian_ocean"},
+	y_min =       -10,
+	y_max =       -2,
+	decoration =  "australia:sea_grass",
+	flags =       "force_placement",
 })
 
 
@@ -124,21 +124,22 @@ minetest.register_decoration({
 -- Rottnest Island Pine
 aus.register_plant({
 	nodes = {
-		trunk = "australia:rottnest_island_pine_tree",
-		leaves = "australia:rottnest_island_pine_leaves",
-		air = "air", ignore = "ignore",
+		trunk =   "australia:rottnest_island_pine_tree",
+		leaves =  "australia:rottnest_island_pine_leaves",
+		air =     "air",
+		ignore =  "ignore",
 	},
-	cover = 0.0025,
-	density = 0.05,
-	priority = 60,
+	cover =     0.0025,
+	density =   0.05,
+	priority =  60,
 	check = function(t, pos)
 		return pos.y >= 3 and table.contains({"indian_ocean"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3, 4)
-			local radius = 3
-			aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
-		end,
+		local height =  math_random(3, 4)
+		local radius =  3
+		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+	end,
 })
 
 
@@ -147,9 +148,9 @@ aus.register_plant({
 --]]
 
 minetest.register_abm({
-	nodenames = {"australia:stone_kelp_brown"},
-	interval = 15,
-	chance = 5,
+	nodenames =  {"australia:stone_kelp_brown"},
+	interval =   15,
+	chance =     5,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 		if (minetest.get_node(yp).name == "default:water_source" or
@@ -162,9 +163,9 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	nodenames = {"australia:woodship"},
-	interval = 1,
-	chance = 1,
+	nodenames =  {"australia:woodship"},
+	interval =   1,
+	chance =     1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
 		if minetest.get_node(pos).name == "australia:woodship" and

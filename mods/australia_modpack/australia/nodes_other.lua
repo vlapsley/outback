@@ -119,11 +119,11 @@ minetest.register_node("australia:salt", {
 	sounds = default.node_sound_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
+		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
 	},
 	collision_box = {
 		type = "fixed",
-		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
+		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
 	},
 })
 

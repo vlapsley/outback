@@ -27,39 +27,39 @@ minetest.register_biome({
 -- Blob ore first to avoid other ores inside blobs
 
 minetest.register_ore({
-	ore_type        = "scatter",
-	ore             = "australia:stone_kelp_brown",
-	wherein         = "default:sand",
-	clust_scarcity  = 9 * 9 * 9,
-	clust_num_ores  = 25,
-	clust_size      = 6,
-	biomes          = {"tasman_sea"},
-	y_min           = -10,
-	y_max           = -3,
+	ore_type =        "scatter",
+	ore =             "australia:stone_kelp_brown",
+	wherein =         {"default:sand"},
+	clust_scarcity =  9 * 9 * 9,
+	clust_num_ores =  25,
+	clust_size =      6,
+	biomes =          {"tasman_sea"},
+	y_min =           -10,
+	y_max =           -3,
 })
 
 minetest.register_ore({
-	ore_type        = "scatter",
-	ore             = "australia:stone_kelp_giant_brown",
-	wherein         = "default:sand",
-	clust_scarcity  = 10 * 10 * 10,
-	clust_num_ores  = 24,
-	clust_size      = 8,
-	biomes          = {"tasman_sea"},
-	y_min           = -64,
-	y_max           = -8,
+	ore_type =        "scatter",
+	ore =             "australia:stone_kelp_giant_brown",
+	wherein =         {"default:sand"},
+	clust_scarcity =  10 * 10 * 10,
+	clust_num_ores =  24,
+	clust_size =      8,
+	biomes =          {"tasman_sea"},
+	y_min =           -64,
+	y_max =           -8,
 })
 
 minetest.register_ore({
-	ore_type        = "scatter",
-	ore             = "australia:woodship",
-	wherein         = "default:sand",
-	clust_scarcity  = 60 * 60 * 60,
-	clust_num_ores  = 1,
-	clust_size      = 12,
-	biomes          = {"tasman_sea"},
-	y_min           = -64,
-	y_max           = -6,
+	ore_type =        "scatter",
+	ore =             "australia:woodship",
+	wherein =         {"default:sand"},
+	clust_scarcity =  60 * 60 * 60,
+	clust_num_ores =  1,
+	clust_size =      12,
+	biomes =          {"tasman_sea"},
+	y_min =           -64,
+	y_max =           -6,
 })
 
 
@@ -70,41 +70,41 @@ minetest.register_ore({
 -- Grass
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {"default:sand"},
-		sidelen = 16,
-		noise_params = {
-			offset = offset,
-			scale = scale,
-			spread = {x = 200, y = 200, z = 200},
-			seed = 329,
-			octaves = 3,
-			persist = 0.6
+		deco_type =     "simple",
+		place_on =      {"default:sand"},
+		sidelen =       16,
+		noise_params =  {
+			offset =   offset,
+			scale =    scale,
+			spread =   {x = 200, y = 200, z = 200},
+			seed =     329,
+			octaves =  3,
+			persist =  0.6
 		},
-		biomes = {"tasman_sea"},
-		y_min = 3,
-		y_max = 3,
-		decoration = "default:grass_"..length,
+		biomes =        {"tasman_sea"},
+		y_min =         3,
+		y_max =         3,
+		decoration =    "default:grass_"..length,
 	})
 end
 
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {"default:sand"},
-		sidelen = 16,
-		noise_params = {
-			offset = offset,
-			scale = scale,
-			spread = {x = 200, y = 200, z = 200},
-			seed = 329,
-			octaves = 3,
-			persist = 0.6
+		deco_type =     "simple",
+		place_on =      {"default:sand"},
+		sidelen =       16,
+		noise_params =  {
+			offset =   offset,
+			scale =    scale,
+			spread =   {x = 200, y = 200, z = 200},
+			seed =     329,
+			octaves =  3,
+			persist =  0.6
 		},
-		biomes = {"tasman_sea"},
-		y_min = 3,
-		y_max = 3,
-		decoration = "default:dry_grass_"..length,
+		biomes =        {"tasman_sea"},
+		y_min =         3,
+		y_max =         3,
+		decoration =    "default:dry_grass_"..length,
 	})
 end
 
@@ -123,21 +123,22 @@ register_dry_grass_decoration(0.05, 0.01,  3)
 -- Coast Banksia (small)
 aus.register_plant({
 	nodes = {
-		trunk = "australia:coast_banksia_tree",
-		leaves = "australia:coast_banksia_leaves",
-		air = "air", ignore = "ignore",
+		trunk =   "australia:coast_banksia_tree",
+		leaves =  "australia:coast_banksia_leaves",
+		air =     "air",
+		ignore =  "ignore",
 	},
-	cover = 0.0005,
-	density = 0.001,
-	priority = 40,
+	cover =     0.0005,
+	density =   0.001,
+	priority =  40,
 	check = function(t, pos)
 		return pos.y >= 3 and pos.y <= 3 and table.contains({"tasman_sea"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(3, 5)
-			local radius = math_random(2, 3)
-			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
-		end,
+		local height =  math_random(3, 5)
+		local radius =  math_random(2, 3)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+	end,
 })
 
 
@@ -146,9 +147,9 @@ aus.register_plant({
 --]]
 
 minetest.register_abm({
-	nodenames = {"australia:stone_kelp_brown"},
-	interval = 15,
-	chance = 5,
+	nodenames =  {"australia:stone_kelp_brown"},
+	interval =   15,
+	chance =     5,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 		if (minetest.get_node(yp).name == "default:water_source" or
@@ -161,9 +162,9 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	nodenames = {"australia:stone_kelp_giant_brown"},
-	interval = 12,
-	chance = 10,
+	nodenames =  {"australia:stone_kelp_giant_brown"},
+	interval =   12,
+	chance =     10,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 		if (minetest.get_node(yp).name == "default:water_source" or
@@ -176,9 +177,9 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	nodenames = {"australia:kelp_giant_brown"},
-	interval = 6,
-	chance = 3,
+	nodenames =  {"australia:kelp_giant_brown"},
+	interval =   6,
+	chance =     3,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 		local yyp = {x = pos.x, y = pos.y + 2, z = pos.z}
@@ -202,9 +203,9 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	nodenames = {"australia:woodship"},
-	interval = 1,
-	chance = 1,
+	nodenames =  {"australia:woodship"},
+	interval =   1,
+	chance =     1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
 		if minetest.get_node(pos).name == "australia:woodship" and

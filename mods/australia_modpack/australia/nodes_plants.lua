@@ -18,7 +18,7 @@ minetest.register_node("australia:bottlebrush_orchid", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -45,7 +45,7 @@ minetest.register_node("australia:tomato_bush", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -74,7 +74,7 @@ minetest.register_node("australia:cooktown_orchid", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -95,7 +95,7 @@ minetest.register_node("australia:couch_honeypot", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -116,7 +116,7 @@ minetest.register_node("australia:darling_lily", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -137,7 +137,7 @@ minetest.register_node("australia:kangaroo_paw", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -173,7 +173,7 @@ minetest.register_node("australia:mangrove_fern", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -194,7 +194,7 @@ minetest.register_node("australia:mangrove_lily", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -215,7 +215,7 @@ minetest.register_node("australia:mitchell_grass", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -233,7 +233,7 @@ minetest.register_node("australia:mangrove_palm_trunk", {
 	on_place = minetest.rotate_node,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, 8/16, 8/16},
 	},
 })
 
@@ -250,11 +250,11 @@ minetest.register_node("australia:mangrove_palm_leaf_bot", {
 	drawtype = "nodebox",
 	nodebox = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, 8/16, 8/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, 8/16, 8/16},
 	},
 })
 
@@ -271,11 +271,11 @@ minetest.register_node("australia:mangrove_palm_leaf_top", {
 	drawtype = "nodebox",
 	nodebox = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, 8/16, 8/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, 8/16, 8/16},
 	},
 })
 
@@ -296,7 +296,7 @@ minetest.register_node("australia:saltbush", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -317,7 +317,7 @@ minetest.register_node("australia:pink_mulla_mulla", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -338,7 +338,7 @@ minetest.register_node("australia:silver_daisy", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -359,7 +359,7 @@ minetest.register_node("australia:spinifex", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -380,7 +380,7 @@ minetest.register_node("australia:sturts_desert_pea", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 

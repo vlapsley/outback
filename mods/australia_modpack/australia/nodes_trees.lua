@@ -49,7 +49,7 @@ minetest.register_node("australia:arnhem_cypress_pine_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -117,7 +117,7 @@ minetest.register_node("australia:black_box_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -151,11 +151,11 @@ minetest.register_node("australia:black_wattle_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -195,7 +195,7 @@ minetest.register_node("australia:black_wattle_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -263,7 +263,7 @@ minetest.register_node("australia:blue_gum_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -331,7 +331,7 @@ minetest.register_node("australia:boab_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -365,11 +365,11 @@ minetest.register_node("australia:bull_banksia_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
@@ -410,7 +410,7 @@ minetest.register_node("australia:bull_banksia_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -444,11 +444,11 @@ minetest.register_node("australia:celery_top_pine_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -488,7 +488,7 @@ minetest.register_node("australia:celery_top_pine_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -522,11 +522,11 @@ minetest.register_node("australia:cherry_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
@@ -567,7 +567,7 @@ minetest.register_node("australia:cherry_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -590,7 +590,7 @@ minetest.register_node("australia:cherry_sapling", {
 minetest.register_node("australia:cherry", {
 	description = "Australian Cherries",
 	drawtype = "plantlike",
-	visual_scale = 0.5,
+	visual_scale = 8/16,
 	tiles = {"aus_cherry.png"},
 	inventory_image = "aus_cherry.png",
 	paramtype = "light",
@@ -599,7 +599,7 @@ minetest.register_node("australia:cherry", {
 	is_ground_content = false,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
+		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
 	},
 	groups = {fleshy = 3, dig_immediate = 2, flammable = 3, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
@@ -625,11 +625,11 @@ minetest.register_node("australia:coast_banksia_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -669,7 +669,7 @@ minetest.register_node("australia:coast_banksia_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -737,7 +737,7 @@ minetest.register_node("australia:coolabah_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -805,7 +805,7 @@ minetest.register_node("australia:daintree_stringybark_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -873,7 +873,7 @@ minetest.register_node("australia:darwin_woollybutt_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -941,7 +941,7 @@ minetest.register_node("australia:desert_oak_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -975,11 +975,11 @@ minetest.register_node("australia:fan_palm_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 2, flammable = 1},
@@ -1020,7 +1020,7 @@ minetest.register_node("australia:fan_palm_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 1, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1054,11 +1054,11 @@ minetest.register_node("australia:flame_grevillea_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, snappy = 2, oddly_breakable_by_hand = 1, flammable = 3},
@@ -1099,7 +1099,7 @@ minetest.register_node("australia:flame_grevillea_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1133,11 +1133,11 @@ minetest.register_node("australia:golden_wattle_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, flammable = 2},
@@ -1178,7 +1178,7 @@ minetest.register_node("australia:golden_wattle_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1212,11 +1212,11 @@ minetest.register_node("australia:grey_mangrove_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.125, -0.5, -0.125, 0.125, 0.5, 0.125},
+		fixed = {-3/3225, -8/16, -3/3225, 3/3225, 8/16, 3/3225},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.125, -0.5, -0.125, 0.125, 0.5, 0.125},
+		fixed = {-3/3225, -8/16, -3/3225, 3/3225, 8/16, 3/3225},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, flammable = 1},
@@ -1257,7 +1257,7 @@ minetest.register_node("australia:grey_mangrove_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1325,7 +1325,7 @@ minetest.register_node("australia:huon_pine_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1393,7 +1393,7 @@ minetest.register_node("australia:illawarra_flame_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1461,7 +1461,7 @@ minetest.register_node("australia:jarrah_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1529,7 +1529,7 @@ minetest.register_node("australia:karri_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1597,7 +1597,7 @@ minetest.register_node("australia:lemon_eucalyptus_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1631,11 +1631,11 @@ minetest.register_node("australia:lemon_myrtle_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, flammable = 2},
@@ -1676,7 +1676,7 @@ minetest.register_node("australia:lemon_myrtle_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1710,11 +1710,11 @@ minetest.register_node("australia:lilly_pilly_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 2, flammable = 2},
@@ -1755,7 +1755,7 @@ minetest.register_node("australia:lilly_pilly_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1787,7 +1787,7 @@ minetest.register_node("australia:lilly_pilly_berries", {
 	is_ground_content = false,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
+		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
 	},
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
@@ -1813,11 +1813,11 @@ minetest.register_node("australia:macadamia_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -1857,7 +1857,7 @@ minetest.register_node("australia:macadamia_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1889,7 +1889,7 @@ minetest.register_node("australia:macadamia", {
 	is_ground_content = false,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
+		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
 	},
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
@@ -1915,11 +1915,11 @@ minetest.register_node("australia:mangrove_apple_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 2, flammable = 2},
@@ -1960,7 +1960,7 @@ minetest.register_node("australia:mangrove_apple_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1992,7 +1992,7 @@ minetest.register_node("australia:mangrove_apple", {
 	is_ground_content = false,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
+		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
 	},
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
@@ -2052,7 +2052,7 @@ minetest.register_node("australia:marri_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2120,7 +2120,7 @@ minetest.register_node("australia:merbau_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2188,7 +2188,7 @@ minetest.register_node("australia:moreton_bay_fig_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2220,7 +2220,7 @@ minetest.register_node("australia:moreton_bay_fig", {
 	is_ground_content = false,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
+		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
 	},
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
@@ -2246,11 +2246,11 @@ minetest.register_node("australia:mulga_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -2290,7 +2290,7 @@ minetest.register_node("australia:mulga_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2358,7 +2358,7 @@ minetest.register_node("australia:paperbark_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2392,11 +2392,11 @@ minetest.register_node("australia:quandong_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
@@ -2437,7 +2437,7 @@ minetest.register_node("australia:quandong_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2460,7 +2460,7 @@ minetest.register_node("australia:quandong_sapling", {
 minetest.register_node("australia:quandong", {
 	description = "Desert Quandong",
 	drawtype = "plantlike",
-	visual_scale = 0.5,
+	visual_scale = 8/16,
 	tiles = {"aus_quandong.png"},
 	inventory_image = "aus_quandong.png",
 	paramtype = "light",
@@ -2469,7 +2469,7 @@ minetest.register_node("australia:quandong", {
 	is_ground_content = false,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.1, -0.5, -0.1, 0.1, -0.25, 0.1},
+		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
 	},
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
@@ -2495,11 +2495,11 @@ minetest.register_node("australia:red_bottlebrush_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
@@ -2540,7 +2540,7 @@ minetest.register_node("australia:red_bottlebrush_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2608,7 +2608,7 @@ minetest.register_node("australia:river_oak_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2676,7 +2676,7 @@ minetest.register_node("australia:river_red_gum_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2710,11 +2710,11 @@ minetest.register_node("australia:rottnest_island_pine_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -2754,7 +2754,7 @@ minetest.register_node("australia:rottnest_island_pine_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2822,7 +2822,7 @@ minetest.register_node("australia:scribbly_gum_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2890,7 +2890,7 @@ minetest.register_node("australia:shoestring_acacia_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -2924,11 +2924,11 @@ minetest.register_node("australia:snow_gum_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 1},
 	sounds = default.node_sound_wood_defaults(),
@@ -2968,7 +2968,7 @@ minetest.register_node("australia:snow_gum_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -3002,11 +3002,11 @@ minetest.register_node("australia:southern_sassafras_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.375, -0.5, -0.375, 0.375, 0.5, 0.375},
+		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
@@ -3046,7 +3046,7 @@ minetest.register_node("australia:southern_sassafras_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -3080,11 +3080,11 @@ minetest.register_node("australia:stilted_mangrove_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.125, -0.5, -0.125, 0.125, 0.5, 0.125},
+		fixed = {-3/3225, -8/16, -3/3225, 3/3225, 8/16, 3/3225},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.125, -0.5, -0.125, 0.125, 0.5, 0.125},
+		fixed = {-3/3225, -8/16, -3/3225, 3/3225, 8/16, 3/3225},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, flammable = 1},
@@ -3125,7 +3125,7 @@ minetest.register_node("australia:stilted_mangrove_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -3193,7 +3193,7 @@ minetest.register_node("australia:sugar_gum_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -3261,7 +3261,7 @@ minetest.register_node("australia:swamp_bloodwood_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -3329,7 +3329,7 @@ minetest.register_node("australia:swamp_gum_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -3363,11 +3363,11 @@ minetest.register_node("australia:swamp_paperbark_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 2, flammable = 2},
@@ -3408,7 +3408,7 @@ minetest.register_node("australia:swamp_paperbark_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -3476,7 +3476,7 @@ minetest.register_node("australia:tasmanian_myrtle_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -3510,11 +3510,11 @@ minetest.register_node("australia:tea_tree_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 2, flammable = 2},
@@ -3555,7 +3555,7 @@ minetest.register_node("australia:tea_tree_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -3623,7 +3623,7 @@ minetest.register_node("australia:white_box_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -3657,11 +3657,11 @@ minetest.register_node("australia:wirewood_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.165, -0.5, -0.165, 0.165, 0.5, 0.165},
+		fixed = {-5/32, -8/16, -5/32, 5/32, 8/16, 5/32},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
@@ -3702,7 +3702,7 @@ minetest.register_node("australia:wirewood_sapling", {
 	on_timer = aus.grow_sapling,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),

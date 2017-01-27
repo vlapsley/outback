@@ -29,22 +29,22 @@ minetest.register_biome({
 
 -- Gold
 minetest.register_ore({
-	ore_type         = "vein",
-	ore              = "default:stone_with_gold",
-	wherein          = {"default:stone"},
-	biomes           = {"goldfields_esperence"},
-	y_min            = -192,
-	y_max            = 47,
-	random_factor    = 0.23,
-	noise_threshold  = 0.97,
-	noise_params     = {
-		offset = 0,
-		scale = 3,
-		spread = {x = 73, y = 251, z = 73},
-		seed = 891,
-		octaves = 4,
-		persist = 0.5,
-	    flags = "eased",
+	ore_type =         "vein",
+	ore =              "default:stone_with_gold",
+	wherein =          {"default:stone"},
+	biomes =           {"goldfields_esperence"},
+	y_min =            -192,
+	y_max =            47,
+	random_factor =    0.23,
+	noise_threshold =  0.97,
+	noise_params =     {
+		offset =   0,
+		scale =    3,
+		spread =   {x = 73, y = 251, z = 73},
+		seed =     891,
+		octaves =  4,
+		persist =  0.5,
+	    flags =    "eased",
 	},
 })
 
@@ -56,21 +56,21 @@ minetest.register_ore({
 -- Grass
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
-		deco_type = "simple",
-		place_on = {"default:desert_sand"},
-		sidelen = 16,
-		noise_params = {
-			offset = offset,
-			scale = scale,
-			spread = {x = 200, y = 200, z = 200},
-			seed = 329,
-			octaves = 3,
-			persist = 0.6
+		deco_type =     "simple",
+		place_on =      {"default:desert_sand"},
+		sidelen =       16,
+		noise_params =  {
+			offset =   offset,
+			scale =    scale,
+			spread =   {x = 200, y = 200, z = 200},
+			seed =     329,
+			octaves =  3,
+			persist =  0.6
 		},
-		biomes = {"goldfields_esperence"},
-		y_min = 4,
-		y_max = 240,
-		decoration = "default:dry_grass_"..length,
+		biomes =        {"goldfields_esperence"},
+		y_min =         4,
+		y_max =         240,
+		decoration =    "default:dry_grass_"..length,
 	})
 end
 
@@ -82,22 +82,22 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 
 -- Spinifex
 minetest.register_decoration({
-	deco_type = "simple",
-	place_on = {"default:desert_sand"},
-	sidelen = 80,
-	fill_ratio = 0.03,
-	biomes = {"goldfields_esperence"},
-	y_min = 4,
-	y_max = 41,
-	decoration = "australia:spinifex",
+	deco_type =   "simple",
+	place_on =    {"default:desert_sand"},
+	sidelen =     80,
+	fill_ratio =  0.03,
+	biomes =      {"goldfields_esperence"},
+	y_min =       4,
+	y_max =       41,
+	decoration =  "australia:spinifex",
 })
 
 -- Sturt's Desert Pea
 aus.register_plant({
-	nodes = {"australia:sturts_desert_pea"},
-	cover = 0.001,
-	density = 0.2,
-	priority = 30,
+	nodes =     {"australia:sturts_desert_pea"},
+	cover =     0.001,
+	density =   0.2,
+	priority =  30,
 	check = function(t, pos)
 		return t.v2 > 0.1 and t.v4 > 0.5 and t.v3 < 40 and pos.y >= 5 and pos.y <= 50 and table.contains({"goldfields_esperence"}, t.biome)
 	end,
@@ -106,14 +106,14 @@ aus.register_plant({
 -- Small sandstone rocks
 local function register_small_sandstone_rocks(number)
 	minetest.register_decoration({
-		deco_type = "simple",
-		decoration = "australia:small_sandstone_rocks"..number,
-		sidelen = 80,
-		place_on = {"default:desert_sand"},
-		fill_ratio = 0.002,
-		biomes = {"goldfields_esperence"},
-		flags = "place_center_x, place_center_z",
-		rotation = "random",
+		deco_type =   "simple",
+		decoration =  "australia:small_sandstone_rocks"..number,
+		sidelen =     80,
+		place_on =    {"default:desert_sand"},
+		fill_ratio =  0.002,
+		biomes =      {"goldfields_esperence"},
+		flags =       "place_center_x, place_center_z",
+		rotation =    "random",
 	})
 end
 
@@ -132,22 +132,23 @@ register_small_sandstone_rocks(1)
 -- Quandong
 aus.register_plant({
 	nodes = {
-		trunk = "australia:quandong_tree",
-		leaves = "australia:quandong_leaves",
-		fruit = "australia:quandong",
-		air = "air", ignore = "ignore",
+		trunk =   "australia:quandong_tree",
+		leaves =  "australia:quandong_leaves",
+		fruit =   "australia:quandong",
+		air =     "air",
+		ignore =  "ignore",
 	},
-	cover = 0.0005,
-	density = 0.0025,
-	priority = 50,
+	cover =     0.0005,
+	density =   0.0025,
+	priority =  50,
 	check = function(t, pos)
 		return t.v2 > 0 and t.v2 < 0.01 and pos.y >= 10 and pos.y <= 77 and table.contains({"goldfields_esperence"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-			local height = math_random(2, 3)
-			local radius = 2
-			local limbs = nil
-			local fruit_chance = 0.1
-			aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
-		end,
+		local height =        math_random(2, 3)
+		local radius =        2
+		local limbs =         nil
+		local fruit_chance =  0.1
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+	end,
 })

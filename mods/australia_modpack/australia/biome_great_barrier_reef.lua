@@ -27,15 +27,15 @@ minetest.register_biome({
 -- Blob ore first to avoid other ores inside blobs.
 
 minetest.register_ore({
-	ore_type        = "scatter",
-	ore             = "australia:woodship",
-	wherein         = "default:sand",
-	clust_scarcity  = 30 * 30 * 30,
-	clust_num_ores  = 1,
-	clust_size      = 12,
-	biomes          = {"great_barrier_reef"},
-	y_min           = -64,
-	y_max           = -6,
+	ore_type =        "scatter",
+	ore =             "australia:woodship",
+	wherein =         "default:sand",
+	clust_scarcity =  30 * 30 * 30,
+	clust_num_ores =  1,
+	clust_size =      12,
+	biomes =          {"great_barrier_reef"},
+	y_min =           -64,
+	y_max =           -6,
 })
 
 
@@ -45,35 +45,35 @@ minetest.register_ore({
 
 -- Narrowleaf Seagrass
 minetest.register_decoration({
-	deco_type = "simple",
-	place_on = {"default:sand"},
-	sidelen = 80,
-	fill_ratio = 0.01,
-	biomes = {"great_barrier_reef"},
-	y_min = -10,
-	y_max = -2,
-	decoration = "australia:sea_grass",
-	flags = "force_placement",
+	deco_type =   "simple",
+	place_on =    {"default:sand"},
+	sidelen =     80,
+	fill_ratio =  0.01,
+	biomes =      {"great_barrier_reef"},
+	y_min =       -10,
+	y_max =       -2,
+	decoration =  "australia:sea_grass",
+	flags =       "force_placement",
 })
 
 -- Coral
 minetest.register_decoration({
-	deco_type = "schematic",
-	place_on = {"default:sand"},
-	noise_params = {
-		offset = -0.004,
-		scale = 0.1,
-		spread = {x = 200, y = 200, z = 200},
-		seed = 7013,
-		octaves = 3,
-		persist = 0.7,
+	deco_type =     "schematic",
+	place_on =      {"default:sand"},
+	noise_params =  {
+		offset =   -0.004,
+		scale =    0.1,
+		spread =   {x = 200, y = 200, z = 200},
+		seed =     7013,
+		octaves =  3,
+		persist =  0.7,
 	},
-	biomes = {"great_barrier_reef"},
-	y_min = -12,
-	y_max = -2,
-	schematic = minetest.get_modpath("default") .. "/schematics/coral_reef.mts",
-	flags = "place_center_x, place_center_z",
-	rotation = "random",
+	biomes =        {"great_barrier_reef"},
+	y_min =         -12,
+	y_max =         -2,
+	schematic =     minetest.get_modpath("default") .. "/schematics/coral_reef.mts",
+	flags =         "place_center_x, place_center_z",
+	rotation =      "random",
 })
 
 

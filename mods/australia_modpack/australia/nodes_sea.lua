@@ -40,7 +40,7 @@ minetest.register_node("australia:kelp_brown", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 
@@ -58,7 +58,7 @@ minetest.register_node("australia:kelp_giant_brown", {
 	is_ground_content = true,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.3, 0.3},
+		fixed = {-5/16, -8/16, -5/16, 5/16, 5/16, 5/16},
 	},
 	post_effect_color = {a = 64, r = 100, g = 100, b = 200},
 	groups = {snappy = 3, seaplants = 1, sea = 1},
@@ -79,7 +79,7 @@ minetest.register_node("australia:kelp_giant_brown_middle", {
 	is_ground_content = true,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3},
+		fixed = {-5/16, -8/16, -5/16, 5/16, 8/16, 5/16},
 	},
 	post_effect_color = {a = 64, r = 100, g = 100, b = 200},
 	groups = {snappy = 3, seaplants = 1, sea = 1},
@@ -107,7 +107,7 @@ minetest.register_node("australia:sea_grass", {
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
 	},
 })
 

@@ -27,39 +27,39 @@ minetest.register_biome({
 -- Blob ore first to avoid other ores inside blobs
 
 minetest.register_ore({
-	ore_type        = "scatter",
-	ore             = "australia:stone_kelp_brown",
-	wherein         = "default:sandstone",
-	clust_scarcity  = 9 * 9 * 9,
-	clust_num_ores  = 25,
-	clust_size      = 6,
-	biomes          = {"great_australian_bight"},
-	y_min           = -10,
-	y_max           = -3,
+	ore_type =        "scatter",
+	ore =             "australia:stone_kelp_brown",
+	wherein =         "default:sandstone",
+	clust_scarcity =  9 * 9 * 9,
+	clust_num_ores =  25,
+	clust_size =      6,
+	biomes =          {"great_australian_bight"},
+	y_min =           -10,
+	y_max =           -3,
 })
 
 minetest.register_ore({
-	ore_type        = "scatter",
-	ore             = "australia:submarine",
-	wherein         = "default:sand",
-	clust_scarcity  = 80 * 80 * 80,
-	clust_num_ores  = 1,
-	clust_size      = 12,
-	biomes          = {"great_australian_bight"},
-	y_min           = -64,
-	y_max           = -8,
+	ore_type =        "scatter",
+	ore =             "australia:submarine",
+	wherein =         "default:sand",
+	clust_scarcity =  80 * 80 * 80,
+	clust_num_ores =  1,
+	clust_size =      12,
+	biomes =          {"great_australian_bight"},
+	y_min =           -64,
+	y_max =           -8,
 })
 
 minetest.register_ore({
-	ore_type        = "scatter",
-	ore             = "australia:woodship",
-	wherein         = "default:sandstone",
-	clust_scarcity  = 30 * 30 * 30,
-	clust_num_ores  = 1,
-	clust_size      = 12,
-	biomes          = {"great_australian_bight"},
-	y_min           = -64,
-	y_max           = -6,
+	ore_type =        "scatter",
+	ore =             "australia:woodship",
+	wherein =         "default:sandstone",
+	clust_scarcity =  30 * 30 * 30,
+	clust_num_ores =  1,
+	clust_size =      12,
+	biomes =          {"great_australian_bight"},
+	y_min =           -64,
+	y_max =           -6,
 })
 
 
@@ -68,9 +68,9 @@ minetest.register_ore({
 --]]
 
 minetest.register_abm({
-	nodenames = {"australia:stone_kelp_brown"},
-	interval = 15,
-	chance = 5,
+	nodenames =  {"australia:stone_kelp_brown"},
+	interval =   15,
+	chance =     5,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
 		if (minetest.get_node(yp).name == "default:water_source" or
@@ -83,9 +83,9 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	nodenames = {"australia:woodship"},
-	interval = 1,
-	chance = 1,
+	nodenames =  {"australia:woodship"},
+	interval =   1,
+	chance =     1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
 		if minetest.get_node(pos).name == "australia:woodship" and
@@ -807,15 +807,15 @@ local function place_submarine(pos)
 	end
 
 	pos.y = pos.y - 7
-	pos.x = pos.x +16
-	pos.z = pos.z +3
+	pos.x = pos.x + 16
+	pos.z = pos.z + 3
 	minetest.add_node(pos, {name = "australia:submarinechest"})
 end
 
 minetest.register_abm({
-	nodenames = {"australia:submarine"},
-	interval = 1,
-	chance = 1,
+	nodenames =  {"australia:submarine"},
+	interval =   1,
+	chance =     1,
 	action = function(pos, node)
 		local yp = {x = pos.x, y = pos.y + 8, z = pos.z}
 		if node.name == "australia:submarine"
