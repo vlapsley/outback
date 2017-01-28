@@ -153,6 +153,25 @@ local function getCppSettingNumeric(name, default)
 	return setting
 end
 
+-- Rocky beaches
+function rock_beach(x, y, z, a, data)
+	local c_granite = minetest.get_content_id("technic:granite")
+	local dx = math.random() * 15 + 1
+	local dy = math.random() * 15 + 1
+	local dz = math.random() * 15 + 1
+	for k = -8, 8 do
+		for j = -8, 8 do
+			local vi = a:index(x-8, y+j, z+k)
+			for i = -8, 8 do
+				if (i ^ 2 * dx + j ^ 2 * dy + k ^ 2 * dz) ^ 0.5 < 8 then
+					data[vi] = c_granite
+				end
+				vi = vi + 1
+			end
+		end
+	end
+end
+
 -- Define parameters
 local river_size = 4 / 100
 
@@ -208,6 +227,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 		node["red_sand"] = minetest.get_content_id("australia:red_sand")
 		node["mud"] = minetest.get_content_id("australia:mangrove_mud")
 		node["salt"] = minetest.get_content_id("australia:mineral_salt")
+		-- Water
 		node["water"] = minetest.get_content_id("default:water_source")
 		node["muddyriver"] = minetest.get_content_id("australia:muddy_river_water_source")
 		-- Air and Ignore
@@ -265,11 +285,17 @@ minetest.register_on_generated(function(minp, maxp, seed)
 			local v1, v2, v3, v4, v5, v20 =
 					n1[i2d], n2[i2d], n3[i2d], n4[i2d], n5[i2d], n20[i2d]
 
-			-- Check for a salt lake in Simpson Desert
+			-- Check for a salt lakes and rocky beaches
 			biome = aus.biome_ids[biomemap[i2d]]
-			local saltlake = nil
+			local saltlake, rocky_beach = nil
 			if table.contains({"simpson_desert"}, biome) and v20 > 0.8 then
 				saltlake = true
+			end
+			if table.contains({"mangroves"}, biome) then
+				rocky_beach = false
+			elseif table.contains({"tasman_sea", "indian_ocean", "great_australian_bight"},
+					biome) then
+				rocky_beach = true
 			end
 
 			for y = maxp.y, minp.y, -1 do  -- for each node in vertical line
@@ -318,11 +344,18 @@ minetest.register_on_generated(function(minp, maxp, seed)
 						-- that is concerned.
 						local slopes = v5 * valleys
 
-						if saltlake and y < 40 and slopes < 0 and v2 > 0.1 and
+						-- Salt lakes
+						if saltlake and y < 20 and slopes < 0 and v2 > 0.1 and
 								v2 < 0.2 and data[ivm] == node["red_sand"] then
 							data[ivm] = node["salt"]
 						end
 
+						-- Rocky beaches
+						if rocky_beach and v6 > 0.5 and v2 > 0.15 and y < 2 then
+							rock_beach(x, y, z, a, data)
+						end
+
+						-- Plants and trees
 						local conditions = {  -- pack it in a table, for plants API
 							v1 = v1,
 							v2 = v2,
