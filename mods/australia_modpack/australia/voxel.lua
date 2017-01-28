@@ -79,7 +79,7 @@ noises[4] = getCppSettingNoise('mg_valleys_np_valley_profile', {
 	scale = 0.5,
 	seed = 777,
 	spread = {x = 512, y = 512, z = 512},
-	octaves = 1,
+	octaves = 4,
 	persist = 1,
 	lacunarity = 2,
 })

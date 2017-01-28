@@ -1212,11 +1212,11 @@ minetest.register_node("australia:grey_mangrove_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-3/3225, -8/16, -3/3225, 3/3225, 8/16, 3/3225},
+		fixed = {-3/32, -8/16, -3/32, 3/32, 8/16, 3/32},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-3/3225, -8/16, -3/3225, 3/3225, 8/16, 3/3225},
+		fixed = {-3/32, -8/16, -3/32, 3/32, 8/16, 3/32},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, flammable = 1},
@@ -3080,11 +3080,11 @@ minetest.register_node("australia:stilted_mangrove_tree", {
 	is_ground_content = false,
 	node_box = {
 		type = "fixed",
-		fixed = {-3/3225, -8/16, -3/3225, 3/3225, 8/16, 3/3225},
+		fixed = {-3/32, -8/16, -3/32, 3/32, 8/16, 3/32},
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-3/3225, -8/16, -3/3225, 3/3225, 8/16, 3/3225},
+		fixed = {-3/32, -8/16, -3/32, 3/32, 8/16, 3/32},
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, flammable = 1},
