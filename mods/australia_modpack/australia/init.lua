@@ -84,7 +84,7 @@ aus.mgvalleys_np_inter_valley_fill = {offset = 0, scale = 1, seed = 1993,
 
 -- Amplifies the valleys
 aus.mgvalleys_np_valley_profile = {offset = 0.6, scale = 0.5, seed = 777,
-	spread = {x = 512, y = 512, z = 512}, octaves = 1, persist = 1, lacunarity = 2,}
+	spread = {x = 512, y = 512, z = 512}, octaves = 4, persist = 1, lacunarity = 2,}
 
 -- Slope and fill work together to modify the heights
 aus.mgvalleys_np_inter_valley_slope = {offset = 0, scale = 1, seed = 746,
@@ -154,14 +154,13 @@ end
 
 -- Load files
 dofile(aus.path .. "/functions.lua")
+dofile(aus.path .. "/trees.lua")
 dofile(aus.path .. "/nodes.lua")
 dofile(aus.path .. "/noairblocks.lua")
 dofile(aus.path .. "/craftitems.lua")
 dofile(aus.path .. "/crafting.lua")
-dofile(aus.path .. "/trees.lua")
 dofile(aus.path .. "/plants_api.lua")
 dofile(aus.path .. "/mapgen.lua")
-dofile(aus.path .. "/saplings.lua")
 dofile(aus.path .. "/voxel.lua")
 
 minetest.log("MOD: Australia 0.8 [australia] loaded...")
