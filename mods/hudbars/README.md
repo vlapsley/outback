@@ -11,7 +11,7 @@ this mod will place them accordingly.
 position should be displayed correctly on every screen size.
 
 ## Current version
-The current version is 1.5.0.
+The current version is 1.7.0.
 
 This software uses [semantic versioning](http://semver.org), as defined by version 2.0.0 of the SemVer
 standard.
@@ -31,6 +31,7 @@ Author: Wuzzy (2015)
 Also: This mod was forked from the “Better HUD” [hud] mod by BlockMen.
 
 Translations:
+
 * German: Wuzzy
 * Portuguese: BrunoMine
 

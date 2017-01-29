@@ -43,3 +43,9 @@ Initial release
 0.5.1
 -----
 - Fix incompability problem with pipeworks mod
+
+0.5.2
+-----
+- Fix mod not working with both intllib and mod security enabled
+- Add missing screenshot
+- Rewrite README and use Markdown format

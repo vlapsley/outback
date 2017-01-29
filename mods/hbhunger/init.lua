@@ -1,13 +1,6 @@
------------------------------------------------------------------------------------------------
-local title		= "Hunger"
-local version 	= "0.5.1"
-local mname		= "hbhunger"
------------------------------------------------------------------------------------------------
-
 local S
 if (minetest.get_modpath("intllib")) then
-	dofile(minetest.get_modpath("intllib").."/intllib.lua")
-	S = intllib.Getter(minetest.get_current_modname())
+	S = intllib.Getter()
 else
 	S = function ( s ) return s end
 end
@@ -160,7 +153,3 @@ minetest.register_globalstep(function(dtime)
 end)
 
 end
-
------------------------------------------------------------------------------------------------
-minetest.log("MOD: "..title.." ["..version.."] ["..mname.."] loaded...")
------------------------------------------------------------------------------------------------

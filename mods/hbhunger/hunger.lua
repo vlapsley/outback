@@ -1,9 +1,3 @@
------------------------------------------------------------------------------------------------
-local title		= "Hunger"
-local version 	= "0.5.1"
-local mname		= "hbhunger"
------------------------------------------------------------------------------------------------
-
 -- Keep these for backwards compatibility
 function hbhunger.save_hunger(player)
 	hbhunger.set_hunger_raw(player)
@@ -45,7 +39,7 @@ function hbhunger.eat(hp_change, replace_with_item, itemstack, user, pointed_thi
 		def = {}
 		if type(hp_change) ~= "number" then
 			hp_change = 1
-			core.log("error", "MOD: "..title.." ["..version.."] ["..mname.."] Wrong on_use() definition for item '" .. item .. "'")
+			core.log("error", "Wrong on_use() definition for item '" .. item .. "'")
 		end
 		def.saturation = hp_change * 1.3
 		def.replace = replace_with_item
