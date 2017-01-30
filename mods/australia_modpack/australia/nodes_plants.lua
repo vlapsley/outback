@@ -120,6 +120,58 @@ minetest.register_node("australia:darling_lily", {
 	},
 })
 
+-- Flame Grevillea
+minetest.register_node("australia:flame_grevillea_leaves", {
+	description = "Flame Grevillea Leaves",
+	drawtype = "allfaces_optional",
+	waving = 1,
+	tiles = {"aus_flame_grevillea_leaves.png"},
+	paramtype = "light",
+	groups = {snappy = 3, leafdecay = 3, flammable = 3, leaves = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {"australia:flame_grevillea_sapling"}, rarity = 10,},
+			{items = {"australia:flame_grevillea_leaves"},}
+		}
+	},
+	sounds = default.node_sound_leaves_defaults(),
+	after_place_node = default.after_place_leaves,
+})
+
+minetest.register_node("australia:flame_grevillea_sapling", {
+	description = "Flame Grevillea Sapling",
+	drawtype = "plantlike",
+	visual_scale = 1.0,
+	tiles = {"default_acacia_sapling.png"},
+	inventory_image = "default_acacia_sapling.png",
+	wield_image = "default_acacia_sapling.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	on_timer = aus.grow_sapling,
+	selection_box = {
+		type = "fixed",
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
+	},
+	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:flame_grevillea_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 6, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
+})
+
 -- Kangaroo Paw
 minetest.register_node("australia:kangaroo_paw", {
 	description = "Kangaroo Paw",
@@ -385,16 +437,54 @@ minetest.register_node("australia:sturts_desert_pea", {
 })
 
 -- Waratah
-minetest.register_node("australia:waratah", {
-	description = "Waratah",
+minetest.register_node("australia:waratah_leaves", {
+	description = "Waratah Leaves",
 	drawtype = "allfaces_optional",
+	waving = 1,
+	tiles = {"aus_waratah_leaves.png"},
+	paramtype = "light",
+	groups = {snappy = 3, leafdecay = 3, flammable = 3, leaves = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {"australia:waratah_sapling"}, rarity = 10,},
+			{items = {"australia:waratah_leaves"},}
+		}
+	},
+	sounds = default.node_sound_leaves_defaults(),
+	after_place_node = default.after_place_leaves,
+})
+
+minetest.register_node("australia:waratah_sapling", {
+	description = "Waratah Sapling",
+	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"aus_waratah.png"},
-	inventory_image = {"aus_waratah.png"},
-	wield_image = {"aus_waratah.png"},
+	tiles = {"default_acacia_sapling.png"},
+	inventory_image = "default_acacia_sapling.png",
+	wield_image = "default_acacia_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
-	is_ground_content = true,
-	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
+	walkable = false,
+	on_timer = aus.grow_sapling,
+	selection_box = {
+		type = "fixed",
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
+	},
+	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
 	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:waratah_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 6, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
 })
+

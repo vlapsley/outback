@@ -122,8 +122,8 @@ register_rivergrass(4)
 -- Waratah
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:waratah",
-		leaves =  "australia:waratah",
+		stem =    "default:acacia_bush_stem",
+		leaves =  "australia:waratah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -134,9 +134,9 @@ aus.register_plant({
 		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 35 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(2, 3)
+		local height =  1
 		local radius =  math_random(1, 2)
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_bush(pos, data, area, height, radius, nodes.stem, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 

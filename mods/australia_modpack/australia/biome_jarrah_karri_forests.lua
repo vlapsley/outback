@@ -131,6 +131,27 @@ aus.register_plant({
 	end,
 })
 
+-- Flame Grevillea
+aus.register_plant({
+	nodes = {
+		stem =    "default:acacia_bush_stem",
+		leaves =  "australia:flame_grevillea_leaves",
+		air =     "air",
+		ignore =  "ignore",
+	},
+	cover =     0.0004,
+	density =   0.002,
+	priority =  35,
+	check = function(t, pos)
+		return pos.y >= 5 and pos.y <= 40 and table.contains({"jarrah_karri_forests"}, t.biome)
+	end,
+	grow = function(nodes, pos, data, area)
+		local height =  1
+		local radius =  math_random(2, 3)
+		aus.make_bush(pos, data, area, height, radius, nodes.stem, nodes.leaves, nodes.air, nodes.ignore)
+	end,
+})
+
 -- Kangaroo Paw
 aus.register_plant({
 	nodes =     {"australia:kangaroo_paw"},
@@ -219,27 +240,6 @@ aus.register_plant({
 		local radius =  math_random(4, 5)
 		local limbs =   true
 		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
-	end,
-})
-
--- Flame Grevillea
-aus.register_plant({
-	nodes = {
-		trunk =   "australia:flame_grevillea_tree",
-		leaves =  "australia:flame_grevillea_leaves",
-		air =     "air",
-		ignore =  "ignore",
-	},
-	cover =     0.0004,
-	density =   0.002,
-	priority =  35,
-	check = function(t, pos)
-		return pos.y >= 5 and pos.y <= 40 and table.contains({"jarrah_karri_forests"}, t.biome)
-	end,
-	grow = function(nodes, pos, data, area)
-		local height =  math_random(2, 3)
-		local radius =  math_random(2, 3)
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 

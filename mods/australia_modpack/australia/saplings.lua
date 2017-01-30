@@ -71,7 +71,7 @@ function aus.grow_sapling(pos)
 			minetest.pos_to_string(pos))
 		aus.grow_fan_palm(pos)
 	elseif node.name == "australia:flame_grevillea_sapling" then
-		minetest.log("action", "A Flame Grevillea sapling grows into a tree at "..
+		minetest.log("action", "A Flame Grevillea sapling grows into a bush at "..
 			minetest.pos_to_string(pos))
 		aus.grow_flame_grevillea(pos)
 	elseif node.name == "australia:golden_wattle_sapling" then
@@ -202,6 +202,10 @@ function aus.grow_sapling(pos)
 		minetest.log("action", "A Tea Tree sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
 		aus.grow_tea_tree(pos)
+	elseif node.name == "australia:waratah_sapling" then
+		minetest.log("action", "A Waratah sapling grows into a bush at "..
+			minetest.pos_to_string(pos))
+		aus.grow_waratah(pos)
 	elseif node.name == "australia:white_box_sapling" then
 		minetest.log("action", "A White Box sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
@@ -263,6 +267,7 @@ minetest.register_lbm({
 		"australia:swamp_paperbark_sapling",
 		"australia:tasmanian_myrtle_sapling",
 		"australia:tea_tree_sapling",
+		"australia:waratah_sapling",
 		"australia:white_box_sapling",
 		"australia:wirewood_sapling",
 		},
