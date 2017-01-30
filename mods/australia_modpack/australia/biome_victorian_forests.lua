@@ -140,6 +140,27 @@ end
 register_rivergrass(5)
 register_rivergrass(4)
 
+-- Red Bottlebrush
+aus.register_plant({
+	nodes = {
+		stem =    "default:bush_stem",
+		leaves =  "australia:red_bottlebrush_leaves",
+		air =     "air",
+		ignore =  "ignore",
+	},
+	cover =     0.01,
+	density =   0.0025,
+	priority =  50,
+	check = function(t, pos)
+		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 100 and table.contains({"victorian_forests"}, t.biome)
+	end,
+	grow = function(nodes, pos, data, area)
+		local height =  1
+		local radius =  math_random(2, 3)
+		aus.make_bush(pos, data, area, height, radius, nodes.stem, nodes.leaves, nodes.air, nodes.ignore)
+	end,
+})
+
 -- Snow
 minetest.register_decoration({
 	deco_type =   "simple",
@@ -371,27 +392,6 @@ aus.register_plant({
 		local limbs =         nil
 		local fruit_chance =  0.3
 		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
-	end,
-})
-
--- Red Bottlebrush
-aus.register_plant({
-	nodes = {
-		trunk =   "australia:red_bottlebrush_tree",
-		leaves =  "australia:red_bottlebrush_leaves",
-		air =     "air",
-		ignore =  "ignore",
-	},
-	cover =     0.01,
-	density =   0.0025,
-	priority =  50,
-	check = function(t, pos)
-		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 100 and table.contains({"victorian_forests"}, t.biome)
-	end,
-	grow = function(nodes, pos, data, area)
-		local height =  math_random(2, 3)
-		local radius =  math_random(2, 3)
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 

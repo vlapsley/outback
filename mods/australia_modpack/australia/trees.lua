@@ -1263,10 +1263,10 @@ end
 -- Red Bottlebrush
 function aus.grow_red_bottlebrush(pos)
 	-- individual parameters
-	local height = math_random(2, 3)
+	local height = 1
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("australia:red_bottlebrush_tree")
+	local stem = minetest.get_content_id("default:bush_stem")
 	local leaves = minetest.get_content_id("australia:red_bottlebrush_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
@@ -1277,7 +1277,7 @@ function aus.grow_red_bottlebrush(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_bush(pos, data, area, height, radius, stem, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
@@ -1617,7 +1617,7 @@ function aus.grow_waratah(pos)
 	local height = 1
 	local radius = math_random(1, 2)
 	-- voxelmanip stuff
-	local stem = minetest.get_content_id("default:acacia_bush_stem")
+	local stem = minetest.get_content_id("default:bush_stem")
 	local leaves = minetest.get_content_id("australia:waratah_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")

@@ -165,7 +165,7 @@ minetest.register_node("australia:flame_grevillea_sapling", {
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -3, y = 1, z = -3},
-			{x = 3, y = 6, z = 3},
+			{x = 3, y = 4, z = 3},
 			-- maximum interval of interior volume check
 			4)
 		return itemstack
@@ -373,6 +373,58 @@ minetest.register_node("australia:pink_mulla_mulla", {
 	},
 })
 
+-- Red Bottlebrush
+minetest.register_node("australia:red_bottlebrush_leaves", {
+	description = "Red Bottlebrush Leaves",
+	drawtype = "allfaces_optional",
+	waving = 1,
+	tiles = {"aus_red_bottlebrush_leaves.png"},
+	paramtype = "light",
+	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {"australia:red_bottlebrush_sapling"}, rarity = 10,},
+			{items = {"australia:red_bottlebrush_leaves"},}
+		}
+	},
+	sounds = default.node_sound_leaves_defaults(),
+	after_place_node = default.after_place_leaves,
+})
+
+minetest.register_node("australia:red_bottlebrush_sapling", {
+	description = "Red Bottlebrush Sapling",
+	drawtype = "plantlike",
+	visual_scale = 1.0,
+	tiles = {"aus_melaleuca_sapling.png"},
+	inventory_image = "aus_melaleuca_sapling.png",
+	wield_image = "aus_melaleuca_sapling.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	on_timer = aus.grow_sapling,
+	selection_box = {
+		type = "fixed",
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
+	},
+	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"australia:red_bottlebrush_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -3, y = 1, z = -3},
+			{x = 3, y = 4, z = 3},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
+})
+
 -- Silver Daisy
 minetest.register_node("australia:silver_daisy", {
 	description = "Silver Daisy",
@@ -481,7 +533,7 @@ minetest.register_node("australia:waratah_sapling", {
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -3, y = 1, z = -3},
-			{x = 3, y = 6, z = 3},
+			{x = 3, y = 3, z = 3},
 			-- maximum interval of interior volume check
 			4)
 		return itemstack

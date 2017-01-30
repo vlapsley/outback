@@ -122,7 +122,7 @@ register_rivergrass(4)
 -- Waratah
 aus.register_plant({
 	nodes = {
-		stem =    "default:acacia_bush_stem",
+		stem =    "default:bush_stem",
 		leaves =  "australia:waratah_leaves",
 		air =     "air",
 		ignore =  "ignore",
