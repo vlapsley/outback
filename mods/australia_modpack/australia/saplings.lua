@@ -143,7 +143,7 @@ function aus.grow_sapling(pos)
 			minetest.pos_to_string(pos))
 		aus.grow_quandong(pos)
 	elseif node.name == "australia:red_bottlebrush_sapling" then
-		minetest.log("action", "A Red Bottlebrush sapling grows into a tree at "..
+		minetest.log("action", "A Red Bottlebrush sapling grows into a bush at "..
 			minetest.pos_to_string(pos))
 		aus.grow_red_bottlebrush(pos)
 	elseif node.name == "australia:river_oak_sapling" then
