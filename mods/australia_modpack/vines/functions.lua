@@ -82,7 +82,7 @@ vines.register_vine = function( name, defs, biome )
       local node = minetest.get_node( pos )
       local bottom = {x=pos.x, y=pos.y-1, z=pos.z}
       local bottom_node = minetest.get_node( bottom )
-      if minetest.get_item_group( bottom_node.name, "vines") then
+      if minetest.get_item_group( bottom_node.name, "vines" ) > 0 then
         minetest.remove_node( bottom )
       end
     end,
@@ -112,7 +112,9 @@ vines.register_vine = function( name, defs, biome )
       local pos_max = { x = pos.x +1, y = pos.y + 1, z = pos.z + 1 }
       local positions = minetest.find_nodes_in_area( pos_min, pos_max, "group:vines" )
       for index, position in pairs(positions) do
-        minetest.remove_node( position )
+        -- Calling `remove_node` directly would cause
+        -- a stack overflow for really long vines.
+        minetest.after( 0, minetest.remove_node, position )
       end
     end
   })
