@@ -16,8 +16,8 @@ minetest.register_biome({
 	depth_riverbed =    1,
 	y_min =             -2,
 	y_max =             3,
-	heat_point =        75,
-	humidity_point =    75,
+	heat_point =        80,
+	humidity_point =    80,
 })
 
 
