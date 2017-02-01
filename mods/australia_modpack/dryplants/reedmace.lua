@@ -354,6 +354,24 @@ biome_lib:register_generate_plant({
   abstract_dryplants.grow_reedmace
 )
 
+-- mangroves
+biome_lib:register_generate_plant({
+    surface = {
+		"australia:mangrove_mud"
+	},
+    max_count = REEDMACE_NEAR_WATER_PER_MAPBLOCK,
+    rarity = 101 - REEDMACE_NEAR_WATER_RARITY,
+    min_elevation = 0,
+    max_elevation = 2,
+	near_nodes = {"default:water_source"},
+	near_nodes_size = 2,
+	near_nodes_vertical = 1,
+	near_nodes_count = 1,
+    plantlife_limit = -0.9,
+  },
+  abstract_dryplants.grow_reedmace
+)
+
 -- in water
 biome_lib:register_generate_plant({
     surface = {
