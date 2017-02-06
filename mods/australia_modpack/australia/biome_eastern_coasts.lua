@@ -364,7 +364,7 @@ aus.register_plant({
 	density =   0.002,
 	priority =  50,
 	check = function(t, pos)
-		return pos.y >= 5 and pos.y <= 160 and table.contains({"eastern_coasts"}, t.biome)
+		return pos.y >= 5 and pos.y <= 110 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(12, 18)
