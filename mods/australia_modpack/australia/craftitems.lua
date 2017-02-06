@@ -168,3 +168,134 @@ stairs.register_stair_and_slab(
 	"Tasmanian Myrtle Slab",
 	default.node_sound_wood_defaults()
 )
+
+
+--[[
+	Fence gates
+--]]
+
+-- Eucalyptus Wood
+doors.register_fencegate("australia:fencegate_eucalyptus", {
+	description = "Eucalyptus Fence Gate",
+	texture = "aus_eucalyptus_wood.png",
+	material = "australia:eucalyptus_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Blackwood
+doors.register_fencegate("australia:fencegate_blackwood", {
+description = "Blackwood Fence Gate",
+	texture = "aus_blackwood.png",
+	material = "australia:blackwood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Blue Gum
+doors.register_fencegate("australia:fencegate_blue_gum", {
+description = "Blue Gum Fence Gate",
+	texture = "aus_blue_gum.png",
+	material = "australia:blue_gum",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Celery-top Pine
+doors.register_fencegate("australia:fencegate_celery_top_pine", {
+description = "Celery-top Pine Fence Gate",
+	texture = "aus_celery_top_pine.png",
+	material = "australia:celery_top_pine",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Red Mahogany
+doors.register_fencegate("australia:fencegate_red_mahogany", {
+description = "Red Mahogany Fence Gate",
+	texture = "aus_red_mahogany.png",
+	material = "australia:red_mahogany",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Huon Pine
+doors.register_fencegate("australia:fencegate_huon_pine", {
+description = "Huon Pine Fence Gate",
+	texture = "aus_huon_pine.png",
+	material = "australia:huon_pine",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Jarrah
+doors.register_fencegate("australia:fencegate_jarrah", {
+description = "Jarrah Fence Gate",
+	texture = "aus_jarrah.png",
+	material = "australia:jarrah",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Karri
+doors.register_fencegate("australia:fencegate_karri", {
+description = "Karri Fence Gate",
+	texture = "aus_karri.png",
+	material = "australia:karri",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Marri
+doors.register_fencegate("australia:fencegate_marri", {
+description = "Marri Fence Gate",
+	texture = "aus_marri.png",
+	material = "australia:marri",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Merbau
+doors.register_fencegate("australia:fencegate_merbau", {
+description = "Merbau Fence Gate",
+	texture = "aus_merbau.png",
+	material = "australia:merbau",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Red Gum
+doors.register_fencegate("australia:fencegate_red_gum", {
+description = "Red Gum Fence Gate",
+	texture = "aus_red_gum.png",
+	material = "australia:red_gum",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Southern Sassafras
+doors.register_fencegate("australia:fencegate_southern_sassafras", {
+description = "Southern Sassafras Fence Gate",
+	texture = "aus_southern_sassafras.png",
+	material = "australia:southern_sassafras",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Tasmanian Oak
+doors.register_fencegate("australia:fencegate_tasmanian_oak", {
+description = "Tasmanian Oak Fence Gate",
+	texture = "aus_tasmanian_oak.png",
+	material = "australia:tasmanian_oak",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
+
+-- Tasmanian Myrtle
+doors.register_fencegate("australia:fencegate_tasmanian_myrtle", {
+description = "Tasmanian Myrtle Fence Gate",
+	texture = "aus_tasmanian_myrtle.png",
+	material = "australia:tasmanian_myrtle",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
