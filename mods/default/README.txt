@@ -53,12 +53,6 @@ Calinou (CC BY-SA 3.0):
   default_mineral_copper.png
   default_glass_detail.png
 
-MirceaKitsune (CC BY-SA 3.0):
-  character.x
-
-Jordach (CC BY-SA 3.0):
-  character.png
-
 PilzAdam (CC BY-SA 3.0):
   default_jungleleaves.png
   default_junglesapling.png
