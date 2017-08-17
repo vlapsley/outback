@@ -3,3 +3,4 @@ biome_lib
 ferns
 bucket
 stairs
+walls
