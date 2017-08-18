@@ -4,10 +4,13 @@ local version 	= "0.2.0"
 local mname		= "ferns" -- former "archaeplantae"
 -----------------------------------------------------------------------------------------------
 -- (by Mossmanikin)
--- License (everything): 	WTFPL			
+-- License (everything): 	WTFPL
 -----------------------------------------------------------------------------------------------
 
 abstract_ferns = {}
+
+-- support for i18n
+local S = plantlife_i18n.gettext
 
 dofile(minetest.get_modpath("ferns").."/settings.lua")
 
@@ -33,7 +36,7 @@ dofile(minetest.get_modpath("ferns").."/crafting.lua")
 -----------------------------------------------------------------------------
 -- TESTS
 -----------------------------------------------------------------------------
-local run_tests = false	-- set to false to skip
+local run_tests = true	-- set to false to skip
 
 if run_tests then
 
@@ -65,5 +68,5 @@ if run_tests then
 end
 
 -----------------------------------------------------------------------------------------------
-minetest.log("MOD: "..title.." ["..version.."] ["..mname.."] loaded...")
+print("[Mod] "..title.." ["..version.."] ["..mname.."] Loaded...")
 -----------------------------------------------------------------------------------------------

@@ -1,8 +1,10 @@
+-- support for i18n
+local S = plantlife_i18n.gettext
 -----------------------------------------------------------------------------------------------
 -- Ferns - Crafting 0.0.5
 -----------------------------------------------------------------------------------------------
 -- (by Mossmanikin)
--- License (everything): 	WTFPL			
+-- License (everything): 	WTFPL
 -----------------------------------------------------------------------------------------------
 minetest.register_craft({
 	type = "shapeless",
@@ -27,7 +29,7 @@ minetest.register_craft({
 minetest.register_alias("archaeplantae:fiddlehead",      "ferns:fiddlehead")
 
 minetest.register_craftitem("ferns:fiddlehead", {
-	description = "Fiddlehead",
+	description = S("Fiddlehead"),
 	inventory_image = "ferns_fiddlehead.png",
 	on_use = minetest.item_eat(-1), -- slightly poisonous when raw
 })
@@ -38,7 +40,7 @@ minetest.register_craft({
 	cooktime = 1,
 })
 minetest.register_craftitem("ferns:fiddlehead_roasted", {
-	description = "Roasted Fiddlehead",
+	description = S("Roasted Fiddlehead"),
 	inventory_image = "ferns_fiddlehead_roasted.png",
 	on_use = minetest.item_eat(1), -- edible when cooked
 })
@@ -48,7 +50,7 @@ minetest.register_craftitem("ferns:fiddlehead_roasted", {
 minetest.register_alias("archaeplantae:ferntuber",      "ferns:ferntuber")
 
 minetest.register_craftitem("ferns:ferntuber", {
-	description = "Fern Tuber",
+	description = S("Fern Tuber"),
 	inventory_image = "ferns_ferntuber.png",
 })
 minetest.register_craft({
@@ -61,7 +63,7 @@ minetest.register_craft({
 minetest.register_alias("archaeplantae:ferntuber_roasted",      "ferns:ferntuber_roasted")
 
 minetest.register_craftitem("ferns:ferntuber_roasted", {
-	description = "Roasted Fern Tuber",
+	description = S("Roasted Fern Tuber"),
 	inventory_image = "ferns_ferntuber_roasted.png",
 	on_use = minetest.item_eat(3),
 })
@@ -73,32 +75,4 @@ minetest.register_craft({
 	output = "dye:green",
 	recipe = {"group:horsetail"},
 })
------------------------------------------------------------------------------------------------
--- GLUE WOODEN TOOLS with RESIN & POLISH them with HORSETAIL (planned)
------------------------------------------------------------------------------------------------
---[[minetest.register_craft({
-	type = "shapeless",
-	output = "default:pick_wood",
-	recipe = {"default:pick_wood","group:horsetail","farming:string","default:stick"},
-})
-minetest.register_craft({
-	type = "shapeless",
-	output = "default:shovel_wood",
-	recipe = {"default:shovel_wood","group:horsetail","farming:string","default:stick"},
-})
-minetest.register_craft({
-	type = "shapeless",
-	output = "default:axe_wood",
-	recipe = {"default:axe_wood","group:horsetail","farming:string","default:stick"},
-})
-minetest.register_craft({
-	type = "shapeless",
-	output = "default:sword_wood",
-	recipe = {"default:sword_wood","group:horsetail","farming:string","default:stick"},
-})
-minetest.register_craft({
-	type = "shapeless",
-	output = "farming:hoe_wood",
-	recipe = {"farming:hoe_wood","group:horsetail","farming:string","default:stick"},
-})]]
 
