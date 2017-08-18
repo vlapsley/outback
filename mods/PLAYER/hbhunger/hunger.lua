@@ -99,8 +99,16 @@ function hbhunger.item_eat(hunger_change, replace_with_item, poisen, heal, sound
 				poisenp(1, poisen, 0, user)
 			end
 
-			--sound:eat
-			itemstack:add_item(replace_with_item)
+			if itemstack:get_count() == 0 then
+				itemstack:add_item(replace_with_item)
+			else
+				local inv = user:get_inventory()
+				if inv:room_for_item("main", replace_with_item) then
+					inv:add_item("main", replace_with_item)
+				else
+					minetest.add_item(user:getpos(), replace_with_item)
+				end
+			end
 		end
 		return itemstack
 	end
