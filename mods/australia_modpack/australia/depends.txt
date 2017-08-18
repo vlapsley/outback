@@ -2,5 +2,6 @@ default
 biome_lib
 ferns
 bucket
+doors
 stairs
 walls
