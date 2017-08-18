@@ -1,10 +1,4 @@
------------------------------------------------------------------------------------------------
-local title		= "Biome Lib"
-local version 	= ""
-local mname		= "biome_lib"
------------------------------------------------------------------------------------------------
 -- Plantlife library mod by Vanessa Ezekowitz
--- modified by demon_boy.
 --
 -- License:  WTFPL
 --
@@ -16,7 +10,7 @@ local mname		= "biome_lib"
 
 biome_lib = {}
 
-plantslib = setmetatable({}, { __index=function(t,k) minetest.log("MOD: "..title.." ["..version.."] ["..mname.."] Use of deprecated function:", k) return biome_lib[k] end })
+plantslib = setmetatable({}, { __index=function(t,k) print("Use of deprecated function:", k) return biome_lib[k] end })
 
 biome_lib.blocklist_aircheck = {}
 biome_lib.blocklist_no_aircheck = {}
@@ -50,7 +44,8 @@ local DEBUG = false --... except if you want to spam the console with debugging 
 
 function biome_lib:dbg(msg)
 	if DEBUG then
-		minetest.log("verbose", "MOD: "..title.." ["..version.."] ["..mname.."] "..msg)
+		print("[Plantlife] "..msg)
+		minetest.log("verbose", "[Plantlife] "..msg)
 	end
 end
 
@@ -71,7 +66,7 @@ local humidity_persistence = 0.5
 local humidity_scale = 250
 
 local time_scale = 1
-local time_speed = tonumber(minetest.setting_get("time_speed"))
+local time_speed = tonumber(minetest.settings:get("time_speed"))
 
 if time_speed and time_speed > 0 then
 	time_scale = 72 / time_speed
@@ -453,20 +448,24 @@ end)
 -- to prevent unpopulated map areas
 
 minetest.register_on_shutdown(function()
-	minetest.log("MOD: "..title.." ["..version.."] ["..mname.."] Stand by, playing out the rest of the aircheck mapblock log")
-	minetest.log("MOD: "..title.." ["..version.."] ["..mname.."] there are "..#biome_lib.blocklist_aircheck.." entries...")
-	while true do
-		biome_lib:generate_block_with_air_checking(0.1)
-		if #biome_lib.blocklist_aircheck == 0 then return end
+	if #biome_lib.blocklist_aircheck > 0 then
+		print("[biome_lib] Stand by, playing out the rest of the aircheck mapblock log")
+		print("(there are "..#biome_lib.blocklist_aircheck.." entries)...")
+		while true do
+			biome_lib:generate_block_with_air_checking(0.1)
+			if #biome_lib.blocklist_aircheck == 0 then return end
+		end
 	end
 end)
 
 minetest.register_on_shutdown(function()
-	minetest.log("MOD: "..title.." ["..version.."] ["..mname.."] Stand by, playing out the rest of the no-aircheck mapblock log")
-	minetest.log("MOD: "..title.." ["..version.."] ["..mname.."] there are "..#biome_lib.blocklist_no_aircheck.." entries...")
-	while true do
-		biome_lib:generate_block_no_aircheck(0.1)
-		if #biome_lib.blocklist_no_aircheck == 0 then return end
+	if #biome_lib.blocklist_no_aircheck > 0 then
+		print("[biome_lib] Stand by, playing out the rest of the no-aircheck mapblock log")
+		print("(there are "..#biome_lib.blocklist_no_aircheck.." entries)...")
+		while true do
+			biome_lib:generate_block_no_aircheck(0.1)
+			if #biome_lib.blocklist_no_aircheck == 0 then return end
+		end
 	end
 end)
 
@@ -718,7 +717,7 @@ end
 
 -- Check for infinite stacks
 
-if minetest.get_modpath("unified_inventory") or not minetest.setting_getbool("creative_mode") then
+if minetest.get_modpath("unified_inventory") or not minetest.settings:get_bool("creative_mode") then
 	biome_lib.expect_infinite_stacks = false
 else
 	biome_lib.expect_infinite_stacks = true
@@ -733,8 +732,10 @@ function biome_lib:get_nodedef_field(nodename, fieldname)
 	return minetest.registered_nodes[nodename][fieldname]
 end
 
-minetest.log("MOD: "..title.." ["..version.."] ["..mname.."] loaded...")
+print("[Biome Lib] Loaded")
 
 minetest.after(0, function()
-	minetest.log("MOD: "..title.." ["..version.."] ["..mname.."] Registered a total of "..(#biome_lib.surfaceslist_aircheck)+(#biome_lib.surfaceslist_no_aircheck).." surface types to be evaluated, spread across "..#biome_lib.actionslist_aircheck..	" actions with air-checking sand"..#biome_lib.actionslist_no_aircheck.." actions without.")
+	print("[Biome Lib] Registered a total of "..(#biome_lib.surfaceslist_aircheck)+(#biome_lib.surfaceslist_no_aircheck).." surface types to be evaluated, spread")
+	print("[Biome Lib] across "..#biome_lib.actionslist_aircheck.." actions with air-checking and "..#biome_lib.actionslist_no_aircheck.." actions without.")
 end)
+
