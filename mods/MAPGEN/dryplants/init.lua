@@ -1,30 +1,33 @@
 -----------------------------------------------------------------------------------------------
-local title		= "Dry Plants"
-local version 	= "0.1.6"
+local title		= "Grasses" -- former "Dry plants"
+local version 	= "0.1.5"
 local mname		= "dryplants"
 -----------------------------------------------------------------------------------------------
 -- by Mossmanikin
 -- textures & ideas partly by Neuromancer
--- modified by demon_boy. Added Spear Grass.
 
 -- License (everything): 	WTFPL
--- Contains code from: 		default, farming 
+-- Contains code from: 		default, farming
 -- Looked at code from:		darkage, sickle, stairs
 -- Dependencies: 			default, farming, biome_lib
--- Supports:				
+-- Supports:
 -----------------------------------------------------------------------------------------------
 abstract_dryplants = {}
 
+-- support for i18n
+local S = plantlife_i18n.gettext
+
 dofile(minetest.get_modpath("dryplants").."/crafting.lua")
 dofile(minetest.get_modpath("dryplants").."/settings.txt")
-dofile(minetest.get_modpath("dryplants").."/reed.lua")
 dofile(minetest.get_modpath("dryplants").."/spear_grass.lua")
+dofile(minetest.get_modpath("dryplants").."/reed.lua")
 if REEDMACE_GENERATES == true then
 dofile(minetest.get_modpath("dryplants").."/reedmace.lua")
 end
 if SMALL_JUNCUS_GENERATES == true then
 dofile(minetest.get_modpath("dryplants").."/juncus.lua")
 end
+
 
 -----------------------------------------------------------------------------------------------
 -- Sickle
@@ -109,7 +112,7 @@ local function sickle_on_use(itemstack, user, pointed_thing, uses)
 end
 -- the tool
 minetest.register_tool("dryplants:sickle", {
-	description = "Sickle",
+	description = S("Sickle"),
 	inventory_image = "dryplants_sickle.png",
 	on_use = function(itemstack, user, pointed_thing)
 		return sickle_on_use(itemstack, user, pointed_thing, 220)
@@ -120,7 +123,7 @@ minetest.register_tool("dryplants:sickle", {
 -- Cut Grass
 -----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:grass", {
-	description = "Cut Grass",
+	description = S("Cut Grass"),
 	inventory_image = "dryplants_grass.png",
 	wield_image = "dryplants_grass.png",
 	paramtype = "light",
@@ -151,7 +154,7 @@ minetest.register_abm({
 -- Hay
 -----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:hay", {
-	description = "Hay",
+	description = S("Hay"),
 	inventory_image = "dryplants_hay.png",
 	wield_image = "dryplants_hay.png",
 	paramtype = "light",
@@ -170,7 +173,7 @@ minetest.register_node("dryplants:hay", {
 -- Short Grass
 -----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:grass_short", {
-	description = "Short Grass",
+	description = S("Short Grass"),
 	tiles = {"default_grass.png^dryplants_grass_short.png", "default_dirt.png", "default_dirt.png^default_grass_side.png^dryplants_grass_short_side.png"},
 	is_ground_content = true,
 	groups = {crumbly=3,soil=1,not_in_creative_inventory=1},
@@ -197,5 +200,5 @@ minetest.register_abm({
 })
 
 -----------------------------------------------------------------------------------------------
-minetest.log("MOD: "..title.." ["..version.."] ["..mname.."] loaded...")
+print("[Mod] "..title.." ["..version.."] ["..mname.."] Loaded...")
 -----------------------------------------------------------------------------------------------

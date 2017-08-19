@@ -6,8 +6,11 @@
 
 -- License (everything): 	WTFPL
 -- Contains code from: 		biome_lib
--- Looked at code from:		default			
+-- Looked at code from:		default
 -----------------------------------------------------------------------------------------------
+
+-- support for i18n
+local S = plantlife_i18n.gettext
 
 abstract_dryplants.grow_juncus = function(pos)
 	local juncus_type = math.random(2,3)
@@ -23,9 +26,9 @@ abstract_dryplants.grow_juncus = function(pos)
 end
 
 minetest.register_node("dryplants:juncus", {
-	description = "Juncus",
+	description = S("Juncus"),
 	drawtype = "plantlike",
-	visual_scale = 2,
+	visual_scale = math.sqrt(8),
 	paramtype = "light",
 	tiles = {"dryplants_juncus_03.png"},
 	inventory_image = "dryplants_juncus_inv.png",
@@ -36,6 +39,7 @@ minetest.register_node("dryplants:juncus", {
 		flammable=2,
 		attached_node=1,
 		flora=1
+		--not_in_creative_inventory=1
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
@@ -44,8 +48,8 @@ minetest.register_node("dryplants:juncus", {
 	},
 	on_place = function(itemstack, placer, pointed_thing)
 		local playername = placer:get_player_name()
-		if minetest.is_protected(pointed_thing.above, playername) or 
-			minetest.is_protected(pointed_thing.under, playername) then 
+		if minetest.is_protected(pointed_thing.above, playername) or
+			minetest.is_protected(pointed_thing.under, playername) then
 			minetest.chat_send_player(playername, "Someone else owns that spot.")
 			return
 		end
@@ -64,9 +68,9 @@ minetest.register_node("dryplants:juncus", {
 	end,
 })
 minetest.register_node("dryplants:juncus_02", {
-	description = "Juncus",
+	description = S("Juncus"),
 	drawtype = "plantlike",
-	visual_scale = 2,
+	visual_scale = math.sqrt(8),
 	paramtype = "light",
 	tiles = {"dryplants_juncus_02.png"},
 	walkable = false,
@@ -124,3 +128,4 @@ biome_lib:register_generate_plant({
   },
   abstract_dryplants.grow_juncus
 )
+

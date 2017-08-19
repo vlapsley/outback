@@ -20,7 +20,7 @@
 -- The seed hairs were used by some Native American groups as tinder for starting fires
 
 --------------------------------------------------------------------------------
--- REEDMACE SHAPES
+-- SPEAR GRASS SHAPES
 --------------------------------------------------------------------------------
 
 abstract_dryplants.grow_spear_grass = function(pos)
@@ -77,3 +77,4 @@ minetest.register_node("dryplants:spear_grass", {
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
 	},
 })
+

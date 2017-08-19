@@ -1,13 +1,13 @@
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- Grasses - Reedmace 0.1.1
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- by Mossmanikin
 -- textures & ideas partly by Neuromancer
 
 -- License (everything): 	WTFPL
 -- Contains code from: 		biome_lib
--- Looked at code from:		default, trees				
---------------------------------------------------------------------------------
+-- Looked at code from:		default, trees
+-----------------------------------------------------------------------------------------------
 
 -- NOTES (from wikipedia, some of this might get implemented)
 -- rhizomes are edible
@@ -18,9 +18,12 @@
 -- Typha stems and leaves can be used to make paper
 -- The seed hairs were used by some Native American groups as tinder for starting fires
 
---------------------------------------------------------------------------------
+-- support for i18n
+local S = plantlife_i18n.gettext
+
+-----------------------------------------------------------------------------------------------
 -- REEDMACE SHAPES
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 
 abstract_dryplants.grow_reedmace = function(pos)
 	local size = math.random(1,3)
@@ -70,16 +73,16 @@ abstract_dryplants.grow_reedmace_water = function(pos)
 				minetest.set_node(pos_02, {name="dryplants:reedmace_height_3_spikes"})
 			else
 				minetest.set_node(pos_02, {name="dryplants:reedmace_height_3"})
-			end	
+			end
 		end
 	end
 end
 
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- REEDMACE SPIKES
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:reedmace_spikes", {
-	description = "Reedmace",
+	description = S("Reedmace"),
 	drawtype = "plantlike",
 	paramtype = "light",
 	tiles = {"dryplants_reedmace_spikes.png"},
@@ -97,12 +100,11 @@ minetest.register_node("dryplants:reedmace_spikes", {
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
 	},
 })
-
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- REEDMACE height: 1
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:reedmace_top", {
-	description = "Reedmace, height: 1",
+	description = S("Reedmace, height: 1"),
 	drawtype = "plantlike",
 	paramtype = "light",
 	tiles = {"dryplants_reedmace_top.png"},
@@ -120,14 +122,13 @@ minetest.register_node("dryplants:reedmace_top", {
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
 	},
 })
-
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- REEDMACE height: 2
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:reedmace_height_2", {
-	description = "Reedmace, height: 2",
+	description = S("Reedmace, height: 2"),
 	drawtype = "plantlike",
-	visual_scale = 2,
+	visual_scale = math.sqrt(8),
 	paramtype = "light",
 	tiles = {"dryplants_reedmace_height_2.png"},
 	inventory_image = "dryplants_reedmace_top.png",
@@ -144,14 +145,13 @@ minetest.register_node("dryplants:reedmace_height_2", {
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
 	},
 })
-
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- REEDMACE height: 3
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:reedmace_height_3", {
-	description = "Reedmace, height: 3",
+	description = S("Reedmace, height: 3"),
 	drawtype = "plantlike",
-	visual_scale = 2,
+	visual_scale = math.sqrt(8),
 	paramtype = "light",
 	tiles = {"dryplants_reedmace_height_3.png"},
 	inventory_image = "dryplants_reedmace_top.png",
@@ -168,14 +168,13 @@ minetest.register_node("dryplants:reedmace_height_3", {
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
 	},
 })
-
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- REEDMACE height: 3 & Spikes
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:reedmace_height_3_spikes", {
-	description = "Reedmace, height: 3 & Spikes",
+	description = S("Reedmace, height: 3 & Spikes"),
 	drawtype = "plantlike",
-	visual_scale = 2,
+	visual_scale = math.sqrt(8),
 	paramtype = "light",
 	tiles = {"dryplants_reedmace_height_3_spikes.png"},
 	inventory_image = "dryplants_reedmace_top.png",
@@ -192,12 +191,11 @@ minetest.register_node("dryplants:reedmace_height_3_spikes", {
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
 	},
 })
-
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- REEDMACE STEMS
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:reedmace", {
-	description = "Reedmace",
+	description = S("Reedmace"),
 	drawtype = "plantlike",
 	paramtype = "light",
 	tiles = {"dryplants_reedmace.png"},
@@ -217,18 +215,17 @@ minetest.register_node("dryplants:reedmace", {
 	after_destruct = function(pos,oldnode)
         local node = minetest.get_node({x=pos.x,y=pos.y+1,z=pos.z})
         if node.name == "dryplants:reedmace_top"
-		or node.name == "dryplants:reedmace_spikes" then 
-            minetest.dig_node({x=pos.x,y=pos.y+1,z=pos.z}) 
+		or node.name == "dryplants:reedmace_spikes" then
+            minetest.dig_node({x=pos.x,y=pos.y+1,z=pos.z})
             minetest.add_item(pos,"dryplants:reedmace_sapling")
         end
     end,
 })
-
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- REEDMACE BOTTOM
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:reedmace_bottom", {
-	description = "Reedmace",
+	description = S("Reedmace"),
 	drawtype = "plantlike",
 	paramtype = "light",
 	tiles = {"dryplants_reedmace_bottom.png"},
@@ -247,20 +244,19 @@ minetest.register_node("dryplants:reedmace_bottom", {
 	},
 	after_destruct = function(pos,oldnode)
         local node = minetest.get_node({x=pos.x,y=pos.y+1,z=pos.z})
-        if node.name == "dryplants:reedmace" 
+        if node.name == "dryplants:reedmace"
 		or node.name == "dryplants:reedmace_top"
-		or node.name == "dryplants:reedmace_spikes" then 
-            minetest.dig_node({x=pos.x,y=pos.y+1,z=pos.z}) 
+		or node.name == "dryplants:reedmace_spikes" then
+            minetest.dig_node({x=pos.x,y=pos.y+1,z=pos.z})
             minetest.add_item(pos,"dryplants:reedmace_sapling")
         end
     end,
 })
-
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- REEDMACE "SAPLING" (the drop from the above)
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:reedmace_sapling", {
-	description = "Reedmace",
+	description = S("Reedmace"),
 	drawtype = "plantlike",
 	paramtype = "light",
 	tiles = {"dryplants_reedmace_sapling.png"},
@@ -296,12 +292,11 @@ minetest.register_abm({
 		end
     end
 })
-
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- REEDMACE WATER (for entity)
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:reedmace_water", {
-	description = "Reedmace",
+	description = S("Reedmace"),
 	drawtype = "plantlike",
 	paramtype = "light",
 	tiles = {"dryplants_reedmace_water.png"},
@@ -312,10 +307,9 @@ minetest.register_node("dryplants:reedmace_water", {
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
 	},
 })
-
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- REEDMACE WATER ENTITY
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 minetest.register_entity("dryplants:reedmace_water_entity",{
 	visual = "mesh",
 	mesh = "plantlike.obj",
@@ -332,9 +326,10 @@ minetest.register_entity("dryplants:reedmace_water_entity",{
 	end,
 })
 
---------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
 -- GENERATE REEDMACE
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 -- near water or swamp
 biome_lib:register_generate_plant({
     surface = {
@@ -345,7 +340,7 @@ biome_lib:register_generate_plant({
     rarity = 101 - REEDMACE_NEAR_WATER_RARITY,
     min_elevation = 1,
     max_elevation = 15,
-	near_nodes = {"default:river_water_source", "australia:muddy_river_water_source"},
+	near_nodes = {"default:river_water_source", "australia:muddy_water_source"},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,
@@ -382,7 +377,7 @@ biome_lib:register_generate_plant({
 	rarity = 101 - REEDMACE_IN_WATER_RARITY,
     min_elevation = 0, -- a bit below sea level
 	max_elevation = 0,
-	near_nodes = {"australia:muddy_river_water_source"},
+	near_nodes = {"australia:muddy_water_source"},
 	near_nodes_size = 1,
 	near_nodes_count = 1,
     plantlife_limit = -0.9,

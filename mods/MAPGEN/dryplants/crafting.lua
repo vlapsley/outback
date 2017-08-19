@@ -342,19 +342,4 @@ minetest.register_craft({
 	recipe = "dryplants:reed_roof_corner_2",
 	burntime = 2,
 })
------------------------------------------------------------------------------------------------
--- Dandelion Leave 
------------------------------------------------------------------------------------------------
---[[minetest.register_craftitem("dryplants:dandelion_leave", {
-	description = "Dandelion Leave",
-	inventory_image = "dryplants_dandelion_leave.png",
-	on_use = minetest.item_eat(1),
-})
-minetest.register_craft({
-	type = "shapeless",
-	output = "dryplants:dandelion_leave 4",
-	recipe = {"flowers:dandelion_yellow"},
-	replacements = {
-		{"flowers:dandelion_yellow", "dye:yellow"}
-	},
-})]]
+
