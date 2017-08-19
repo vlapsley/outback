@@ -1,6 +1,9 @@
+-- support for i18n
+local S = plantlife_i18n.gettext
+
 vines.register_vine( 'root', {
-  description = "Roots",
-  average_length = 8,
+  description = S("Roots"),
+  average_length = 9,
 },{
   choose_random_wall = true,
   avoid_nodes = {"vines:root_middle"},
@@ -17,7 +20,7 @@ vines.register_vine( 'root', {
 })
 
 vines.register_vine( 'vine', {
-  description = "Vines",
+  description = S("Vines"),
   average_length = 5,
 },{
   choose_random_wall = true,
@@ -30,15 +33,15 @@ vines.register_vine( 'vine', {
   },
   spawn_on_bottom = true,
   plantlife_limit = -0.9,
+  humidity_min = 0.7,
 })
 
 vines.register_vine( 'side', {
-  description = "Vines",
+  description = S("Vines"),
   average_length = 6,
 },{
   choose_random_wall = true,
   avoid_nodes = {"group:vines", "default:apple"},
-  choose_random_wall = true,
   avoid_radius = 3,
   spawn_delay = 500,
   spawn_chance = 100,
@@ -47,10 +50,11 @@ vines.register_vine( 'side', {
   },
   spawn_on_side = true,
   plantlife_limit = -0.9,
+  humidity_min = 0.4,
 })
 
 vines.register_vine( "merbau", {
-  description = "Rainforest Vines",
+  description = S("Rainforest Vines"),
   average_length = 7,
 },{
   choose_random_wall = true,
@@ -71,3 +75,4 @@ vines.register_vine( "merbau", {
   plantlife_limit = -0.9,
   humidity_min = 0.2,
 })
+
