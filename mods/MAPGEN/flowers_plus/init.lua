@@ -1,10 +1,5 @@
------------------------------------------------------------------------------------------------
-local title		= "Flowers Plus"
-local version 	= "2016-06-18"
-local mname		= "flowers_plus"
------------------------------------------------------------------------------------------------
-
-local S = biome_lib.intllib
+-- support for i18n
+local S = plantlife_i18n.gettext
 
 -- This file supplies a few additional plants and some related crafts
 -- for the plantlife modpack.  Last revision:  2013-04-24
@@ -18,7 +13,8 @@ local lilies_max_count = 320
 local lilies_rarity = 33
 local seaweed_max_count = 320
 local seaweed_rarity = 33
-
+local sunflowers_max_count = 10
+local sunflowers_rarity = 25
 
 -- register the various rotations of waterlilies
 
@@ -47,7 +43,7 @@ for i in ipairs(lilies_list) do
 	minetest.register_node(":flowers:waterlily"..deg1, {
 		description = S("Waterlily"),
 		drawtype = "nodebox",
-		tiles = { 
+		tiles = {
 			"flowers_waterlily"..deg2..".png",
 			"flowers_waterlily"..deg2..".png^[transformFY"
 		},
@@ -69,11 +65,13 @@ for i in ipairs(lilies_list) do
 		},
 		buildable_to = true,
 		node_placement_prediction = "",
+
 		liquids_pointable = true,
 		drop = "flowers:waterlily",
 		on_place = function(itemstack, placer, pointed_thing)
 			local keys=placer:get_player_control()
 			local pt = pointed_thing
+
 			local place_pos = nil
 			local top_pos = {x=pt.under.x, y=pt.under.y+1, z=pt.under.z}
 			local under_node = minetest.get_node(pt.under)
@@ -81,9 +79,10 @@ for i in ipairs(lilies_list) do
 			local top_node   = minetest.get_node(top_pos)
 
 			if biome_lib:get_nodedef_field(under_node.name, "buildable_to") then
-				if under_node.name ~= "group:water" then
+				if under_node.name ~= "default:water_source" then
 					place_pos = pt.under
-				elseif top_node.name ~= "group:water" and biome_lib:get_nodedef_field(top_node.name, "buildable_to") then
+				elseif top_node.name ~= "default:water_source"
+				       and biome_lib:get_nodedef_field(top_node.name, "buildable_to") then
 					place_pos = top_pos
 				else
 					return
@@ -141,11 +140,11 @@ for i in ipairs(algae_list) do
 		num = "_"..algae_list[i][1]
 		algae_groups = { snappy = 3,flammable=2,flower=1, not_in_creative_inventory=1 }
 	end
-	
+
 	minetest.register_node(":flowers:seaweed"..num, {
 		description = S("Seaweed"),
 		drawtype = "nodebox",
-		tiles = { 
+		tiles = {
 			"flowers_seaweed"..num..".png",
 			"flowers_seaweed"..num..".png^[transformFY"
 		},
@@ -164,9 +163,9 @@ for i in ipairs(algae_list) do
 		node_box = {
 			type = "fixed",
 			fixed = { -0.5, -0.49, -0.5, 0.5, -0.49, 0.5 },
-		},	
+		},
 		buildable_to = true,
-		
+
 		liquids_pointable = true,
 		drop = "flowers:seaweed",
 		on_place = function(itemstack, placer, pointed_thing)
@@ -182,7 +181,7 @@ for i in ipairs(algae_list) do
 			if biome_lib:get_nodedef_field(under_node.name, "buildable_to") then
 				if under_node.name ~= "default:water_source" then
 					place_pos = pt.under
-				elseif top_node.name ~= "default:water_source" 
+				elseif top_node.name ~= "default:water_source"
 				       and biome_lib:get_nodedef_field(top_node.name, "buildable_to") then
 					place_pos = top_pos
 				else
@@ -223,6 +222,40 @@ for i in ipairs(algae_list) do
 	})
 end
 
+local box = {
+	type="fixed",
+	fixed = { { -0.2, -0.5, -0.2, 0.2, 0.5, 0.2 } },
+}
+
+local sunflower_drop = "farming:seed_wheat"
+if minetest.registered_items["farming:seed_spelt"] then
+	sunflower_drop = "farming:seed_spelt"
+end
+
+minetest.register_node(":flowers:sunflower", {
+	description = S("Sunflower"),
+	drawtype = "mesh",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	inventory_image = "flowers_sunflower_inv.png",
+	mesh = "flowers_sunflower.obj",
+	tiles = { "flowers_sunflower.png" },
+	walkable = false,
+	buildable_to = true,
+	is_ground_content = true,
+	groups = { dig_immediate=3, flora=1, flammable=3 },
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = box,
+	collision_box = box,
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {sunflower_drop}, rarity = 8},
+			{items = {"flowers:sunflower"}},
+		}
+	}
+})
+
 local extra_aliases = {
 	"waterlily",
 	"waterlily_225",
@@ -247,7 +280,6 @@ minetest.register_alias( "along_shore:seaweed_2"  ,	"flowers:seaweed_2"    )
 minetest.register_alias( "along_shore:seaweed_3"  ,	"flowers:seaweed_3"    )
 minetest.register_alias( "along_shore:seaweed_4"  ,	"flowers:seaweed_4"    )
 
-
 -- ongen registrations
 
 flowers_plus.grow_waterlily = function(pos)
@@ -260,7 +292,7 @@ flowers_plus.grow_waterlily = function(pos)
 		if lilies_list[i][1] ~= nil then
 			ext = "_"..lilies_list[i][1]
 		end
-	
+
 		if chance == num then
 			minetest.set_node(right_here, {name="flowers:waterlily"..ext, param2=math.random(0,3)})
 		end
@@ -268,7 +300,7 @@ flowers_plus.grow_waterlily = function(pos)
 end
 
 biome_lib:register_generate_plant({
-	surface = {"default:river_water_source", "australia:muddy_river_water_source"},
+	surface = {"default:river_water_source", "australia:muddy_water_source"},
 	max_count = lilies_max_count,
 	rarity = lilies_rarity,
 	min_elevation = 1,
@@ -288,18 +320,18 @@ flowers_plus.grow_seaweed = function(pos)
 end
 
 biome_lib:register_generate_plant({
-	surface = {"default:water_source"},
-	max_count = seaweed_max_count,
-	rarity = seaweed_rarity,
-	min_elevation = 1,
+    surface = {"default:water_source"},
+    max_count = seaweed_max_count,
+    rarity = seaweed_rarity,
+    min_elevation = 1,
 	max_elevation = 2,
 	near_nodes = {"default:dirt_with_grass"},
 	near_nodes_size = 4,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,
-	plantlife_limit = -0.9,
-},
-flowers_plus.grow_seaweed
+    plantlife_limit = -0.9,
+  },
+  flowers_plus.grow_seaweed
 )
 
 -- seaweed at beaches
@@ -317,6 +349,7 @@ biome_lib:register_generate_plant({
   },
   flowers_plus.grow_seaweed
 )
+
 biome_lib:register_generate_plant({
     surface = {"default:sand"},
     max_count = seaweed_max_count*2,
@@ -349,7 +382,7 @@ biome_lib:spawn_on_surfaces({
 	},
 	avoid_radius = 2.5,
 	spawn_chance = SPAWN_CHANCE*4,
-	spawn_surfaces = {"default:river_water_source", "australia:muddy_river_water_source"},
+	spawn_surfaces = {"default:river_water_source", "australia:muddy_water_source"},
 	avoid_nodes = {"group:flower", "group:flora" },
 	seed_diff = flowers_seed_diff,
 	light_min = 9,
@@ -398,6 +431,5 @@ biome_lib:spawn_on_surfaces({
 	facedir = 1
 })
 
------------------------------------------------------------------------------------------------
-minetest.log("MOD: "..title.." ["..version.."] ["..mname.."] loaded...")
------------------------------------------------------------------------------------------------
+print(S("[Flowers] Loaded."))
+
