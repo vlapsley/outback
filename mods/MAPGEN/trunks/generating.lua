@@ -398,3 +398,4 @@ biome_lib:register_generate_plant({
   abstract_trunks.grow_mushrooms
 )
 end
+

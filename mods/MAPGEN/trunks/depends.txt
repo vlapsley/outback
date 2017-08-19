@@ -1,7 +1,6 @@
 default
-flowers
 biome_lib
-australia
+plantlife_i18n
 bushes?
 ferns?
 moretrees?
