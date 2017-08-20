@@ -1,4 +1,5 @@
 default
+chests
 moreores?
 pipeworks?
 intllib?

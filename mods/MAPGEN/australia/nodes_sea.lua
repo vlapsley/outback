@@ -129,11 +129,11 @@ minetest.register_node("australia:submarine", {
 
 minetest.register_node("australia:woodshipchest", {
 	description = "Wooden Ship Chest",
-	tiles = {"default_chest_top.png", "default_chest_top.png", "default_chest_side.png",
-		"default_chest_side.png", "default_chest_side.png", "default_chest_front.png"},
+	tiles = {"chests_chest_top.png", "chests_chest_top.png", "chests_chest_side.png",
+		"chests_chest_side.png", "chests_chest_side.png", "chests_chest_front.png"},
 	paramtype2 = "facedir",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, not_in_creative_inventory = 1},
-	drop = "default:chest",
+	drop = "chests:chest",
 	legacy_facedir_simple = true,
 	is_ground_content = false,
 	sounds = default.node_sound_wood_defaults(),
@@ -196,11 +196,11 @@ meta:from_table({
 
 minetest.register_node("australia:submarinechest", {
 	description = "Submarine Chest",
-	tiles = {"default_chest_top.png", "default_chest_top.png", "default_chest_side.png",
-		"default_chest_side.png", "default_chest_side.png", "default_chest_front.png"},
+	tiles = {"chests_chest_top.png", "chests_chest_top.png", "chests_chest_side.png",
+		"chests_chest_side.png", "chests_chest_side.png", "chests_chest_front.png"},
 	paramtype2 = "facedir",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, not_in_creative_inventory = 1},
-	drop = "default:chest",
+	drop = "chests:chest",
 	legacy_facedir_simple = true,
 	is_ground_content = false,
 	sounds = default.node_sound_wood_defaults(),
