@@ -31,6 +31,9 @@ minetest.register_node("sea:coral_skeleton", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_alias("default:coral_brown", "sea:coral_brown")
+minetest.register_alias("default:coral_orange", "sea:coral_orange")
+minetest.register_alias("default:coral_skeleton", "sea:coral_skeleton")
 
 --
 -- Coral death near air
