@@ -137,13 +137,6 @@ default:bush_leaves
 default:acacia_bush_stem
 default:acacia_bush_leaves
 
-Corals
-------
-
-default:coral_brown
-default:coral_orange
-default:coral_skeleton
-
 Liquids
 -------
 (1. Source 2. Flowing)
@@ -1282,34 +1275,6 @@ minetest.register_node("default:acacia_bush_leaves", {
 	paramtype = "light",
 	groups = {snappy = 3, flammable = 2, leaves = 1},
 	sounds = default.node_sound_leaves_defaults(),
-})
-
-
---
--- Corals
---
-
-minetest.register_node("default:coral_brown", {
-	description = "Brown Coral",
-	tiles = {"default_coral_brown.png"},
-	groups = {cracky = 3},
-	drop = "default:coral_skeleton",
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_node("default:coral_orange", {
-	description = "Orange Coral",
-	tiles = {"default_coral_orange.png"},
-	groups = {cracky = 3},
-	drop = "default:coral_skeleton",
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_node("default:coral_skeleton", {
-	description = "Coral Skeleton",
-	tiles = {"default_coral_skeleton.png"},
-	groups = {cracky = 3},
-	sounds = default.node_sound_stone_defaults(),
 })
 
 

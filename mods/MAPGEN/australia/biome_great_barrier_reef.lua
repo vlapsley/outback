@@ -56,26 +56,6 @@ minetest.register_decoration({
 	flags =       "force_placement",
 })
 
--- Coral
-minetest.register_decoration({
-	deco_type =     "schematic",
-	place_on =      {"default:sand"},
-	noise_params =  {
-		offset =   -0.004,
-		scale =    0.1,
-		spread =   {x = 200, y = 200, z = 200},
-		seed =     7013,
-		octaves =  3,
-		persist =  0.7,
-	},
-	biomes =        {"great_barrier_reef"},
-	y_min =         -12,
-	y_max =         -2,
-	schematic =     minetest.get_modpath("default") .. "/schematics/coral_reef.mts",
-	flags =         "place_center_x, place_center_z",
-	rotation =      "random",
-})
-
 
 --[[
 	Trees
