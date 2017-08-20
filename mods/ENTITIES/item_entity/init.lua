@@ -1,4 +1,6 @@
--- mods/default/item_entity.lua
+--[[
+	Item Entity
+--]]
 
 local builtin_item = minetest.registered_entities["__builtin:item"]
 
@@ -17,7 +19,7 @@ local item = {
 		-- disappear in a smoke puff
 		self.object:remove()
 		local p = self.object:getpos()
-		minetest.sound_play("default_item_smoke", {
+		minetest.sound_play("item_entity_item_smoke", {
 			pos = p,
 			max_hear_distance = 8,
 		})
@@ -35,7 +37,7 @@ local item = {
 			minsize = 5,
 			maxsize = 5,
 			collisiondetection = true,
-			texture = "default_item_smoke.png"
+			texture = "item_entity_item_smoke.png"
 		})
 	end,
 
