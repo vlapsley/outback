@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-20 17:17-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: xisd\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: melon.lua
+msgid "Melon seed"
+msgstr "Graine de Pastèque"
+
+#: melon.lua
+msgid "Melon plant"
+msgstr "Pied de Pastèque"
+
+#: melon.lua
+msgid "Melon slice"
+msgstr "Tranche de Pastèque"
+
+#: melon.lua
+msgid "Melon"
+msgstr "Pastèque"
+
+#: tomato.lua
+msgid "Tomato seed"
+msgstr "Graines de tomate"
+
+#: tomato.lua
+msgid "Tomato plant"
+msgstr "Pied de tomate"
+
+#: tomato.lua
+msgid "Tomato"
+msgstr "Tomate"
+
+#: polebean.lua
+msgid "Green Bean"
+msgstr "Haricot vert"
+
+#: polebean.lua
+msgid "Beanpoles"
+msgstr "Tuteur pour haricots"
+
+#: polebean.lua
+msgid "Green bean seed"
+msgstr "Graine de haricot vert"
+
+#: polebean.lua
+msgid "Green Bean plant"
+msgstr "Plant de haricot vert"
+
+#: tools.lua
+msgid "Watering Can"
+msgstr "Arrosoir"
+
+#: tools.lua
+msgid "Hydrometer"
+msgstr "Hydromètre"
+
+#: pumpkin.lua
+msgid "Pumpkin seed"
+msgstr "Graines de citrouille"
+
+#: pumpkin.lua
+msgid "Pumpkin plant"
+msgstr "Plant de citrouille"
+
+#: pumpkin.lua
+msgid "Roasted pumpkin"
+msgstr "Citrouille grillée"
+
+#: pumpkin.lua
+msgid "Pumpkin"
+msgstr "Citrouille"
+
+#: init.lua
+msgid "Defaulting to \"normal\" difficulty settings"
+msgstr "Réglage par default : \"normal\""
+
+#: init.lua
+msgid "Hydration and dehydration mechanics are enabled."
+msgstr "Les mécaniques d'hydratation et déshydratation sont activées."
+
+#: init.lua
+msgid "Unable to find plant \"@1\" in crops table"
+msgstr "Impossible de trouver la plante \"@1\" dans le tableau crops"
+
+#: init.lua
+msgid "Loaded!"
+msgstr "Chargé !"
+
+#: potato.lua
+msgid "Potato eyes"
+msgstr "Yeux de pomme de terre"
+
+#: potato.lua
+msgid "Potato plant"
+msgstr "Plant de pomme de terre"
+
+#: potato.lua
+msgid "Potato"
+msgstr "Pomme de terre"
+
+#: potato.lua
+msgid "Soil with potatoes"
+msgstr "Terre labourée avec pommes de terres"
+
+#: cooking.lua
+msgid "Unbaked clay bowl"
+msgstr "Bol en argile crue"
+
+#: cooking.lua
+msgid "Clay bowl"
+msgstr "Bol en terre cuite"
+
+#: cooking.lua
+msgid "Bowl of vegetable stew"
+msgstr "Bol de soupe de légumes"
+
+#: cooking.lua
+msgid "Bowl of uncooked vegetable stew"
+msgstr "Bol de soupe de légumes non-cuite"
+
+#: corn.lua
+msgid "Corn"
+msgstr "Mais"
+
+#: corn.lua
+msgid "Corn Cob"
+msgstr "Epis de mais"
+
+#: corn.lua
+msgid "Corn on the Cob"
+msgstr "Epis de mais grillé"
+
+#: corn.lua
+msgid "Corn plant"
+msgstr "Plant de Mais"
