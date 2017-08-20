@@ -16,15 +16,6 @@ if not minetest.get_biome_id then
 	return
 end
 
--- Set mapgen parameters.
-minetest.register_on_mapgen_init(function(mgparams)
-	minetest.set_mapgen_params({
-		mgname = "valleys",
-		water_level = 0,
-		flags = "caves,light,decorations,nodungeons",
-		})
-end)
-
 -- Definitions made by this mod that other mods can use too.
 aus = {}
 aus.path = minetest.get_modpath("australia")
