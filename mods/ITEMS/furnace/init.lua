@@ -2,14 +2,7 @@
 	Furnace
 --]]
 
-minetest.register_craft({
-	output = 'furnace:furnace',
-	recipe = {
-		{'group:stone', 'group:stone', 'group:stone'},
-		{'group:stone', '', 'group:stone'},
-		{'group:stone', 'group:stone', 'group:stone'},
-	}
-})
+local furnace = {}
 
 --[[
 	Formspecs
@@ -18,9 +11,9 @@ minetest.register_craft({
 local function active_formspec(fuel_percent, item_percent)
 	local formspec =
 		"size[8,8.5]"..
-		default.gui_bg..
-		default.gui_bg_img..
-		default.gui_slots..
+		init.gui_bg..
+		init.gui_bg_img..
+		init.gui_slots..
 		"list[current_name;src;2.75,0.5;1,1;]"..
 		"list[current_name;fuel;2.75,2.5;1,1;]"..
 		"image[2.75,1.5;1,1;furnace_furnace_fire_bg.png^[lowpart:"..
@@ -36,15 +29,15 @@ local function active_formspec(fuel_percent, item_percent)
 		"listring[current_player;main]"..
 		"listring[current_name;fuel]"..
 		"listring[current_player;main]"..
-		default.get_hotbar_bg(0, 4.25)
+		init.get_hotbar_bg(0, 4.25)
 	return formspec
 end
 
 local inactive_formspec =
 	"size[8,8.5]"..
-	default.gui_bg..
-	default.gui_bg_img..
-	default.gui_slots..
+	init.gui_bg..
+	init.gui_bg_img..
+	init.gui_slots..
 	"list[current_name;src;2.75,0.5;1,1;]"..
 	"list[current_name;fuel;2.75,2.5;1,1;]"..
 	"image[2.75,1.5;1,1;furnace_furnace_fire_bg.png]"..
@@ -58,7 +51,7 @@ local inactive_formspec =
 	"listring[current_player;main]"..
 	"listring[current_name;fuel]"..
 	"listring[current_player;main]"..
-	default.get_hotbar_bg(0, 4.25)
+	init.get_hotbar_bg(0, 4.25)
 
 --[[
 	Node callback functions that are the same for active and inactive furnace
@@ -339,3 +332,13 @@ minetest.register_node("furnace:furnace_active", {
 	allow_metadata_inventory_move = allow_metadata_inventory_move,
 	allow_metadata_inventory_take = allow_metadata_inventory_take,
 })
+
+minetest.register_craft({
+	output = 'furnace:furnace',
+	recipe = {
+		{'group:stone', 'group:stone', 'group:stone'},
+		{'group:stone', '', 'group:stone'},
+		{'group:stone', 'group:stone', 'group:stone'},
+	}
+})
+

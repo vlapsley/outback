@@ -2,36 +2,19 @@
 	Books
 --]]
 
-minetest.register_craft({
-	output = 'books:book',
-	recipe = {
-		{'default:paper'},
-		{'default:paper'},
-		{'default:paper'},
-	}
-})
-
-minetest.register_craft({
-	output = 'books:bookshelf',
-	recipe = {
-		{'group:wood', 'group:wood', 'group:wood'},
-		{'books:book', 'books:book', 'books:book'},
-		{'group:wood', 'group:wood', 'group:wood'},
-	}
-})
-
+local books = {}
 
 local bookshelf_formspec =
 	"size[8,7;]" ..
-	default.gui_bg ..
-	default.gui_bg_img ..
-	default.gui_slots ..
+	init.gui_bg ..
+	init.gui_bg_img ..
+	init.gui_slots ..
 	"list[context;books;0,0.3;8,2;]" ..
 	"list[current_player;main;0,2.85;8,1;]" ..
 	"list[current_player;main;0,4.08;8,3;8]" ..
 	"listring[context;books]" ..
 	"listring[current_player;main]" ..
-	default.get_hotbar_bg(0,2.85)
+	init.get_hotbar_bg(0,2.85)
 
 local function get_bookshelf_formspec(inv)
 	local formspec = bookshelf_formspec
@@ -142,8 +125,8 @@ local function book_on_use(itemstack, user)
 
 	local formspec
 	if owner == player_name then
-		formspec = "size[8,8]" .. default.gui_bg ..
-			default.gui_bg_img ..
+		formspec = "size[8,8]" .. init.gui_bg ..
+			init.gui_bg_img ..
 			"field[0.5,1;7.5,0;title;Title:;" ..
 				minetest.formspec_escape(title) .. "]" ..
 			"textarea[0.5,1.5;7.5,7;text;Contents:;" ..
@@ -151,7 +134,7 @@ local function book_on_use(itemstack, user)
 			"button_exit[2.5,7.5;3,1;save;Save]"
 	else
 		formspec = "size[8,8]" .. default.gui_bg ..
-			default.gui_bg_img ..
+			init.gui_bg_img ..
 			"label[0.5,0.5;by " .. owner .. "]" ..
 			"tablecolumns[color;text]" ..
 			"tableoptions[background=#00000000;highlight=#00000000;border=false]" ..
@@ -282,6 +265,24 @@ minetest.register_on_craft(function(itemstack, player, old_craft_grid, craft_inv
 	-- put the book with metadata back in the craft grid
 	craft_inv:set_stack("craft", index, original)
 end)
+
+minetest.register_craft({
+	output = 'books:book',
+	recipe = {
+		{'default:paper'},
+		{'default:paper'},
+		{'default:paper'},
+	}
+})
+
+minetest.register_craft({
+	output = 'books:bookshelf',
+	recipe = {
+		{'group:wood', 'group:wood', 'group:wood'},
+		{'books:book', 'books:book', 'books:book'},
+		{'group:wood', 'group:wood', 'group:wood'},
+	}
+})
 
 minetest.register_craft({
 	type = "fuel",

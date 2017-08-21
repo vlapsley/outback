@@ -3,5 +3,6 @@ biome_lib
 ferns
 bucket
 doors
+fences
 stairs
 walls
