@@ -396,7 +396,7 @@ end
 
 minetest.register_node("tnt:boom", {
 	drawtype = "airlike",
-	light_source = default.LIGHT_MAX,
+	light_source = 14,
 	walkable = false,
 	drop = "",
 	groups = {dig_immediate = 3},

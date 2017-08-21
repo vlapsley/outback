@@ -1491,7 +1491,7 @@ minetest.register_node("default:lava_source", {
 		},
 	},
 	paramtype = "light",
-	light_source = default.LIGHT_MAX - 1,
+	light_source = 13,
 	walkable = false,
 	pointable = false,
 	diggable = false,
@@ -1537,7 +1537,7 @@ minetest.register_node("default:lava_flowing", {
 	},
 	paramtype = "light",
 	paramtype2 = "flowingliquid",
-	light_source = default.LIGHT_MAX - 1,
+	light_source = 13,
 	walkable = false,
 	pointable = false,
 	diggable = false,
@@ -1702,7 +1702,7 @@ minetest.register_node("default:meselamp", {
 	is_ground_content = false,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	sounds = default.node_sound_glass_defaults(),
-	light_source = default.LIGHT_MAX,
+	light_source = 14,
 })
 
 --
