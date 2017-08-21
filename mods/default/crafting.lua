@@ -57,24 +57,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'default:sign_wall_steel 3',
-	recipe = {
-		{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
-		{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
-		{'', 'group:stick', ''},
-	}
-})
-
-minetest.register_craft({
-	output = 'default:sign_wall_wood 3',
-	recipe = {
-		{'group:wood', 'group:wood', 'group:wood'},
-		{'group:wood', 'group:wood', 'group:wood'},
-		{'', 'group:stick', ''},
-	}
-})
-
-minetest.register_craft({
 	output = 'default:chest',
 	recipe = {
 		{'group:wood', 'group:wood', 'group:wood'},
@@ -651,12 +633,6 @@ minetest.register_craft({
 	type = "fuel",
 	recipe = "default:torch",
 	burntime = 4,
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "default:sign_wall_wood",
-	burntime = 10,
 })
 
 minetest.register_craft({
