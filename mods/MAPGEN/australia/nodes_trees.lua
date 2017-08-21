@@ -3686,7 +3686,7 @@ minetest.register_node("australia:tasmanian_myrtle", {
 	Fences
 --]]
 
-default.register_fence("australia:fence_eucalyptus_wood", {
+fences.register_fence("australia:fence_eucalyptus_wood", {
 	description = "Eucalyptus Wood Fence",
 	texture = "aus_eucalyptus_wood.png",
 	material = "australia:eucalyptus_wood",
@@ -3694,7 +3694,7 @@ default.register_fence("australia:fence_eucalyptus_wood", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_blackwood", {
+fences.register_fence("australia:fence_blackwood", {
 	description = "Blackwood Fence",
 	texture = "aus_blackwood.png",
 	material = "australia:blackwood",
@@ -3702,7 +3702,7 @@ default.register_fence("australia:fence_blackwood", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_blue_gum", {
+fences.register_fence("australia:fence_blue_gum", {
 	description = "Blue Gum Fence",
 	texture = "aus_blue_gum.png",
 	material = "australia:bluegum",
@@ -3710,7 +3710,7 @@ default.register_fence("australia:fence_blue_gum", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_celery_top_pine", {
+fences.register_fence("australia:fence_celery_top_pine", {
 	description = "Celery-top Pine Fence",
 	texture = "aus_celery_top_pine.png",
 	material = "australia:celery_top_pine",
@@ -3718,7 +3718,7 @@ default.register_fence("australia:fence_celery_top_pine", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_red_mahogany", {
+fences.register_fence("australia:fence_red_mahogany", {
 	description = "Red Mahogany Fence",
 	texture = "aus_red_mahogany.png",
 	material = "australia:red_mahogany",
@@ -3726,7 +3726,7 @@ default.register_fence("australia:fence_red_mahogany", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_huon_pine", {
+fences.register_fence("australia:fence_huon_pine", {
 	description = "Huon Pine Fence",
 	texture = "aus_huon_pine.png",
 	material = "australia:huon_pine",
@@ -3734,7 +3734,7 @@ default.register_fence("australia:fence_huon_pine", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_jarrah", {
+fences.register_fence("australia:fence_jarrah", {
 	description = "Jarrah Fence",
 	texture = "aus_jarrah.png",
 	material = "australia:jarrah",
@@ -3742,7 +3742,7 @@ default.register_fence("australia:fence_jarrah", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_karri", {
+fences.register_fence("australia:fence_karri", {
 	description = "Karri Fence",
 	texture = "aus_karri.png",
 	material = "australia:karri",
@@ -3750,7 +3750,7 @@ default.register_fence("australia:fence_karri", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_marri", {
+fences.register_fence("australia:fence_marri", {
 	description = "Marri Fence",
 	texture = "aus_marri.png",
 	material = "australia:marri",
@@ -3758,7 +3758,7 @@ default.register_fence("australia:fence_marri", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_merbau", {
+fences.register_fence("australia:fence_merbau", {
 	description = "Merbau Fence",
 	texture = "aus_merbau.png",
 	material = "australia:merbau",
@@ -3766,7 +3766,7 @@ default.register_fence("australia:fence_merbau", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_red_gum", {
+fences.register_fence("australia:fence_red_gum", {
 	description = "Red Gum Fence",
 	texture = "aus_red_gum.png",
 	material = "australia:red_gum",
@@ -3774,7 +3774,7 @@ default.register_fence("australia:fence_red_gum", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_southern_sassafras", {
+fences.register_fence("australia:fence_southern_sassafras", {
 	description = "Southern Sassafras Fence",
 	texture = "aus_southern_sassafras.png",
 	material = "australia:southern_sassafras",
@@ -3782,7 +3782,7 @@ default.register_fence("australia:fence_southern_sassafras", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_tasmanian_oak", {
+fences.register_fence("australia:fence_tasmanian_oak", {
 	description = "Tasmanian Oak Fence",
 	texture = "aus_tasmanian_oak.png",
 	material = "australia:tasmanian_oak",
@@ -3790,7 +3790,7 @@ default.register_fence("australia:fence_tasmanian_oak", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
-default.register_fence("australia:fence_tasmanian_myrtle", {
+fences.register_fence("australia:fence_tasmanian_myrtle", {
 	description = "Tasmanian Myrtle Fence",
 	texture = "aus_tasmanian_myrtle.png",
 	material = "australia:tasmanian_myrtle",

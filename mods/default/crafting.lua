@@ -601,37 +601,6 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:fence_aspen_wood",
-	burntime = 5,
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "default:fence_pine_wood",
-	burntime = 6,
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "default:fence_wood",
-	burntime = 7,
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "default:fence_acacia_wood",
-	burntime = 8,
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "default:fence_junglewood",
-	burntime = 9,
-})
-
-
-minetest.register_craft({
-	type = "fuel",
 	recipe = "default:bush_stem",
 	burntime = 7,
 })
