@@ -77,3 +77,6 @@ minetest.register_abm({
 	end
 })
 
+-- Aliases for schematic nodes
+minetest.register_alias("flowers:mushroom_brown", "mushrooms:mushroom_brown")
+minetest.register_alias("flowers:mushroom_red", "mushrooms:mushroom_red")

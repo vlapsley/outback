@@ -320,3 +320,11 @@ minetest.register_node("core:acacia_bush_sapling", {
 	end,
 })
 
+
+minetest.register_alias("default:bush_stem", "core:bush_stem")
+minetest.register_alias("default:bush_leaves", "core:bush_leaves")
+minetest.register_alias("default:acacia_bush_stem", "core:acacia_bush_stem")
+minetest.register_alias("default:acacia_bush_leaves", "core:acacia_bush_leaves")
+minetest.register_alias("default:cactus", "core:cactus")
+minetest.register_alias("default:papyrus", "core:papyrus")
+

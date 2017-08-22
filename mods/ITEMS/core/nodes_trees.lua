@@ -808,6 +808,20 @@ function core.grow_pine_tree(pos, snow)
 end
 
 
+-- Aliases for schematic nodes
+minetest.register_alias("default:tree", "core:tree")
+minetest.register_alias("default:leaves", "core:leaves")
+minetest.register_alias("default:apple", "core:apple")
+minetest.register_alias("default:jungletree", "core:jungletree")
+minetest.register_alias("default:jungleleaves", "core:jungleleaves")
+minetest.register_alias("default:pine_tree", "core:pine_tree")
+minetest.register_alias("default:pine_leaves", "core:pine_leaves")
+minetest.register_alias("default:acacia_tree", "core:acacia_tree")
+minetest.register_alias("default:acacia_leaves", "core:acacia_leaves")
+minetest.register_alias("default:aspen_tree", "core:aspen_tree")
+minetest.register_alias("default:aspen_leaves", "core:aspen_leaves")
+
+
 -- New apple tree
 
 function core.grow_new_apple_tree(pos)
