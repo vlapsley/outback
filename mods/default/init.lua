@@ -9,6 +9,5 @@ default = {}
 -- Load files
 local default_path = minetest.get_modpath("default")
 
-dofile(default_path.."/trees.lua")
 dofile(default_path.."/nodes.lua")
 dofile(default_path.."/aliases.lua")
