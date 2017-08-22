@@ -118,8 +118,8 @@ minetest.register_node("crops:pumpkin", {
 	groups = { snappy=3, flammable=3, oddly_breakable_by_hand=2 },
 	paramtype2 = "facedir",
 	sounds = core.node_sound_wood_defaults({
-		dig = { name = "default_dig_oddly_breakable_by_hand" },
-		dug = { name = "default_dig_choppy" }
+		dig = { name = "core_dig_oddly_breakable_by_hand" },
+		dug = { name = "core_dig_choppy" }
 	}),
 	after_dig_node = function(pos, node)
 		for face = 1, 4 do

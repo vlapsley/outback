@@ -83,7 +83,7 @@ minetest.register_craft({
 --
 minetest.register_node("crops:soil_with_potatoes", {
 	description = S("Soil with potatoes"),
-	tiles = { "default_dirt.png^crops_potato_soil.png", "default_dirt.png" },
+	tiles = { "core_dirt.png^crops_potato_soil.png", "core_dirt.png" },
 	sunlight_propagates = false,
 	use_texture_alpha = false,
 	walkable = true,

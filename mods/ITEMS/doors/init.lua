@@ -150,7 +150,7 @@ function _doors.door_toggle(pos, node, clicker)
 
 	replace_old_owner_information(pos)
 
-	if clicker and not default.can_interact_with_node(clicker, pos) then
+	if clicker and not core.can_interact_with_node(clicker, pos) then
 		return false
 	end
 
@@ -203,7 +203,7 @@ end
 
 local function can_dig_door(pos, digger)
 	replace_old_owner_information(pos)
-	if default.can_interact_with_node(digger, pos) then
+	if core.can_interact_with_node(digger, pos) then
 		return true
 	else
 		minetest.record_protection_violation(pos, digger:get_player_name())
@@ -465,9 +465,9 @@ doors.register("door_steel", {
 		sound_open = "doors_steel_door_open",
 		sound_close = "doors_steel_door_close",
 		recipe = {
-			{"default:steel_ingot", "default:steel_ingot"},
-			{"default:steel_ingot", "default:steel_ingot"},
-			{"default:steel_ingot", "default:steel_ingot"},
+			{"core:steel_ingot", "core:steel_ingot"},
+			{"core:steel_ingot", "core:steel_ingot"},
+			{"core:steel_ingot", "core:steel_ingot"},
 		}
 })
 
@@ -480,9 +480,9 @@ doors.register("door_glass", {
 		sound_open = "doors_glass_door_open",
 		sound_close = "doors_glass_door_close",
 		recipe = {
-			{"default:glass", "default:glass"},
-			{"default:glass", "default:glass"},
-			{"default:glass", "default:glass"},
+			{"core:glass", "core:glass"},
+			{"core:glass", "core:glass"},
+			{"core:glass", "core:glass"},
 		}
 })
 
@@ -495,9 +495,9 @@ doors.register("door_obsidian_glass", {
 		sound_open = "doors_glass_door_open",
 		sound_close = "doors_glass_door_close",
 		recipe = {
-			{"default:obsidian_glass", "default:obsidian_glass"},
-			{"default:obsidian_glass", "default:obsidian_glass"},
-			{"default:obsidian_glass", "default:obsidian_glass"},
+			{"core:obsidian_glass", "core:obsidian_glass"},
+			{"core:obsidian_glass", "core:obsidian_glass"},
+			{"core:obsidian_glass", "core:obsidian_glass"},
 		},
 })
 
@@ -532,7 +532,7 @@ function _doors.trapdoor_toggle(pos, node, clicker)
 
 	replace_old_owner_information(pos)
 
-	if clicker and not default.can_interact_with_node(clicker, pos) then
+	if clicker and not core.can_interact_with_node(clicker, pos) then
 		return false
 	end
 
@@ -700,8 +700,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'doors:trapdoor_steel',
 	recipe = {
-		{'default:steel_ingot', 'default:steel_ingot'},
-		{'default:steel_ingot', 'default:steel_ingot'},
+		{'core:steel_ingot', 'core:steel_ingot'},
+		{'core:steel_ingot', 'core:steel_ingot'},
 	}
 })
 
@@ -766,44 +766,44 @@ function doors.register_fencegate(name, def)
 	minetest.register_craft({
 		output = name .. "_closed",
 		recipe = {
-			{"default:stick", def.material, "default:stick"},
-			{"default:stick", def.material, "default:stick"}
+			{"core:stick", def.material, "core:stick"},
+			{"core:stick", def.material, "core:stick"}
 		}
 	})
 end
 
 doors.register_fencegate("doors:gate_wood", {
 	description = "Wooden Fence Gate",
-	texture = "default_wood.png",
-	material = "default:wood",
+	texture = "core_wood.png",
+	material = "core:wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 doors.register_fencegate("doors:gate_acacia_wood", {
 	description = "Acacia Fence Gate",
-	texture = "default_acacia_wood.png",
-	material = "default:acacia_wood",
+	texture = "core_acacia_wood.png",
+	material = "core:acacia_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 doors.register_fencegate("doors:gate_junglewood", {
 	description = "Jungle Wood Fence Gate",
-	texture = "default_junglewood.png",
-	material = "default:junglewood",
+	texture = "core_junglewood.png",
+	material = "core:junglewood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 doors.register_fencegate("doors:gate_pine_wood", {
 	description = "Pine Fence Gate",
-	texture = "default_pine_wood.png",
-	material = "default:pine_wood",
+	texture = "core_pine_wood.png",
+	material = "core:pine_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 })
 
 doors.register_fencegate("doors:gate_aspen_wood", {
 	description = "Aspen Fence Gate",
-	texture = "default_aspen_wood.png",
-	material = "default:aspen_wood",
+	texture = "core_aspen_wood.png",
+	material = "core:aspen_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 })
 

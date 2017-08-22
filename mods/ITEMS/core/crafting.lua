@@ -77,13 +77,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'core:skeleton_key',
-	recipe = {
-		{'core:gold_ingot'},
-	}
-})
-
-minetest.register_craft({
 	output = 'core:coalblock',
 	recipe = {
 		{'core:coal_lump', 'core:coal_lump', 'core:coal_lump'},
@@ -559,19 +552,6 @@ minetest.register_craft({
 	recipe = "core:clay_lump",
 })
 
-minetest.register_craft({
-	type = 'cooking',
-	output = 'core:gold_ingot',
-	recipe = 'core:skeleton_key',
-	cooktime = 5,
-})
-
-minetest.register_craft({
-	type = 'cooking',
-	output = 'core:gold_ingot',
-	recipe = 'core:key',
-	cooktime = 5,
-})
 
 --
 -- Fuels

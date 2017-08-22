@@ -535,3 +535,7 @@ minetest.register_node("core:mese_post_light", {
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = core.node_sound_wood_defaults(),
 })
+
+
+-- Aliases for schematic nodes
+minetest.register_alias("default:dirt", "core:dirt")

@@ -9,8 +9,8 @@ end
 -- loss probabilities array (one in X will be lost)
 local loss_prob = {}
 
-loss_prob["default:cobble"] = 3
-loss_prob["default:dirt"] = 4
+loss_prob["core:cobble"] = 3
+loss_prob["core:dirt"] = 4
 
 local tnt_radius = tonumber(minetest.settings:get("tnt_radius") or 3)
 
@@ -431,10 +431,10 @@ minetest.register_node("tnt:gunpowder", {
 	},
 	groups = {dig_immediate = 2, attached_node = 1, flammable = 5,
 		connect_to_raillike = minetest.raillike_group("gunpowder")},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_cores(),
 
 	on_punch = function(pos, node, puncher)
-		if puncher:get_wielded_item():get_name() == "default:torch" then
+		if puncher:get_wielded_item():get_name() == "torches:torch" then
 			minetest.set_node(pos, {name = "tnt:gunpowder_burning"})
 			minetest.log("action", puncher:get_player_name() ..
 				" ignites tnt:gunpowder at " ..
@@ -532,7 +532,7 @@ minetest.register_node("tnt:gunpowder_burning", {
 minetest.register_craft({
 	output = "tnt:gunpowder 5",
 	type = "shapeless",
-	recipe = {"default:coal_lump", "default:gravel"}
+	recipe = {"core:coal_lump", "core:gravel"}
 })
 
 if enable_tnt then
@@ -548,7 +548,7 @@ if enable_tnt then
 	minetest.register_abm({
 		label = "TNT ignition",
 		nodenames = {"group:tnt", "tnt:gunpowder"},
-		neighbors = {"fire:basic_flame", "default:lava_source", "default:lava_flowing"},
+		neighbors = {"fire:basic_flame", "core:lava_source", "core:lava_flowing"},
 		interval = 4,
 		chance = 1,
 		action = function(pos, node)
@@ -580,7 +580,7 @@ function tnt.register_tnt(def)
 			groups = {dig_immediate = 2, mesecon = 2, tnt = 1, flammable = 5},
 			sounds = core.node_sound_wood_defaults(),
 			on_punch = function(pos, node, puncher)
-				if puncher:get_wielded_item():get_name() == "default:torch" then
+				if puncher:get_wielded_item():get_name() == "torches:torch" then
 					minetest.set_node(pos, {name = name .. "_burning"})
 					minetest.log("action", puncher:get_player_name() ..
 						" ignites " .. node.name .. " at " ..

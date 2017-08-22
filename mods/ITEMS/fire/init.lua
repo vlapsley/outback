@@ -120,7 +120,7 @@ minetest.register_tool("fire:flint_and_steel", {
 minetest.register_craft({
 	output = "fire:flint_and_steel",
 	recipe = {
-		{"default:flint", "default:steel_ingot"}
+		{"core:flint", "core:steel_ingot"}
 	}
 })
 
@@ -128,7 +128,7 @@ minetest.register_craft({
 -- Override coalblock to enable permanent flame above
 -- Coalblock is non-flammable to avoid unwanted basic_flame nodes
 
-minetest.override_item("default:coalblock", {
+minetest.override_item("core:coalblock", {
 	after_destruct = function(pos, oldnode)
 		pos.y = pos.y + 1
 		if minetest.get_node(pos).name == "fire:permanent_flame" then

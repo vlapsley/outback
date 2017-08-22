@@ -36,8 +36,8 @@ end
 
 minetest.register_node("vessels:shelf", {
 	description = "Vessels Shelf",
-	tiles = {"default_wood.png", "default_wood.png", "default_wood.png",
-		"default_wood.png", "vessels_shelf.png", "vessels_shelf.png"},
+	tiles = {"core_wood.png", "core_wood.png", "core_wood.png",
+		"core_wood.png", "vessels_shelf.png", "vessels_shelf.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
@@ -79,7 +79,7 @@ minetest.register_node("vessels:shelf", {
 	end,
 	on_blast = function(pos)
 		local drops = {}
-		default.get_inventory_drops(pos, "vessels", drops)
+		core.get_inventory_drops(pos, "vessels", drops)
 		drops[#drops + 1] = "vessels:shelf"
 		minetest.remove_node(pos)
 		return drops
@@ -115,9 +115,9 @@ minetest.register_node("vessels:glass_bottle", {
 minetest.register_craft( {
 	output = "vessels:glass_bottle 10",
 	recipe = {
-		{"default:glass", "", "default:glass"},
-		{"default:glass", "", "default:glass"},
-		{"", "default:glass", ""}
+		{"core:glass", "", "core:glass"},
+		{"core:glass", "", "core:glass"},
+		{"", "core:glass", ""}
 	}
 })
 
@@ -141,9 +141,9 @@ minetest.register_node("vessels:drinking_glass", {
 minetest.register_craft( {
 	output = "vessels:drinking_glass 14",
 	recipe = {
-		{"default:glass", "", "default:glass"},
-		{"default:glass", "", "default:glass"},
-		{"default:glass", "default:glass", "default:glass"}
+		{"core:glass", "", "core:glass"},
+		{"core:glass", "", "core:glass"},
+		{"core:glass", "core:glass", "core:glass"}
 	}
 })
 
@@ -167,9 +167,9 @@ minetest.register_node("vessels:steel_bottle", {
 minetest.register_craft( {
 	output = "vessels:steel_bottle 5",
 	recipe = {
-		{"default:steel_ingot", "", "default:steel_ingot"},
-		{"default:steel_ingot", "", "default:steel_ingot"},
-		{"", "default:steel_ingot", ""}
+		{"core:steel_ingot", "", "core:steel_ingot"},
+		{"core:steel_ingot", "", "core:steel_ingot"},
+		{"", "core:steel_ingot", ""}
 	}
 })
 
@@ -201,13 +201,13 @@ minetest.register_craft( {
 
 minetest.register_craft({
 	type = "cooking",
-	output = "default:glass",
+	output = "core:glass",
 	recipe = "vessels:glass_fragments",
 })
 
 minetest.register_craft( {
 	type = "cooking",
-	output = "default:steel_ingot",
+	output = "core:steel_ingot",
 	recipe = "vessels:steel_bottle",
 })
 

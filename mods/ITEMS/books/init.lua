@@ -37,8 +37,8 @@ end
 
 minetest.register_node("books:bookshelf", {
 	description = "Bookshelf",
-	tiles = {"default_wood.png", "default_wood.png", "default_wood.png",
-		"default_wood.png", "books_bookshelf.png", "books_bookshelf.png"},
+	tiles = {"core_wood.png", "core_wood.png", "core_wood.png",
+		"core_wood.png", "books_bookshelf.png", "books_bookshelf.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
@@ -80,7 +80,7 @@ minetest.register_node("books:bookshelf", {
 	end,
 	on_blast = function(pos)
 		local drops = {}
-		default.get_inventory_drops(pos, "books", drops)
+		core.get_inventory_drops(pos, "books", drops)
 		drops[#drops+1] = "books:bookshelf"
 		minetest.remove_node(pos)
 		return drops
@@ -133,7 +133,7 @@ local function book_on_use(itemstack, user)
 				minetest.formspec_escape(text) .. "]" ..
 			"button_exit[2.5,7.5;3,1;save;Save]"
 	else
-		formspec = "size[8,8]" .. default.gui_bg ..
+		formspec = "size[8,8]" .. init.gui_bg ..
 			init.gui_bg_img ..
 			"label[0.5,0.5;by " .. owner .. "]" ..
 			"tablecolumns[color;text]" ..
@@ -269,9 +269,9 @@ end)
 minetest.register_craft({
 	output = 'books:book',
 	recipe = {
-		{'default:paper'},
-		{'default:paper'},
-		{'default:paper'},
+		{'core:paper'},
+		{'core:paper'},
+		{'core:paper'},
 	}
 })
 

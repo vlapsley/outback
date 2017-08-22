@@ -17,8 +17,8 @@ minetest.register_craft({
 	output = "crops:beanpoles",
 	recipe = {
 		{'', '', ''},
-		{'default:stick', '', 'default:stick'},
-		{'default:stick', '', 'default:stick'},
+		{'core:stick', '', 'core:stick'},
+		{'core:stick', '', 'core:stick'},
 	}
 })
 
@@ -86,7 +86,7 @@ local function crops_beanpole_on_dig(pos, node, digger)
 		) then
 		-- non-ripe
 		for i = 1,4 do
-			table.insert(drops, "default:stick")
+			table.insert(drops, "core:stick")
 		end
 		minetest.set_node(bottom, { name = "crops:beanpole_base"})
 		minetest.set_node(top, { name = "crops:beanpole_top"})
@@ -104,7 +104,7 @@ local function crops_beanpole_on_dig(pos, node, digger)
 	elseif bottom_n.name == "crops:beanpole_plant_base_6" and top_n.name == "crops:beanpole_plant_top_4" then
 		-- harvested beans
 		for i = 1,math.random(3,4) do
-			table.insert(drops, "default:stick")
+			table.insert(drops, "core:stick")
 		end
 		minetest.remove_node(bottom)
 		minetest.remove_node(top)

@@ -64,9 +64,9 @@ end
 fences.register_fence("fences:fence_wood", {
 	description = "Wooden Fence",
 	texture = "fences_fence_wood.png",
-	inventory_image = "default_fence_overlay.png^default_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fences_fence_overlay.png^default_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	material = "default:wood",
+	inventory_image = "fences_fence_overlay.png^core_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "fences_fence_overlay.png^core_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	material = "core:wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = core.node_sound_wood_defaults()
 })
@@ -74,9 +74,9 @@ fences.register_fence("fences:fence_wood", {
 fences.register_fence("fences:fence_acacia_wood", {
 	description = "Acacia Fence",
 	texture = "fences_fence_acacia_wood.png",
-	inventory_image = "fences_fence_overlay.png^default_acacia_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fences_fence_overlay.png^default_acacia_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	material = "default:acacia_wood",
+	inventory_image = "fences_fence_overlay.png^core_acacia_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "fences_fence_overlay.png^core_acacia_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	material = "core:acacia_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = core.node_sound_wood_defaults()
 })
@@ -84,9 +84,9 @@ fences.register_fence("fences:fence_acacia_wood", {
 fences.register_fence("fences:fence_junglewood", {
 	description = "Jungle Wood Fence",
 	texture = "fences_fence_junglewood.png",
-	inventory_image = "fences_fence_overlay.png^default_junglewood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fences_fence_overlay.png^default_junglewood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	material = "default:junglewood",
+	inventory_image = "fences_fence_overlay.png^core_junglewood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "fences_fence_overlay.png^core_junglewood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	material = "core:junglewood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	sounds = core.node_sound_wood_defaults()
 })
@@ -94,9 +94,9 @@ fences.register_fence("fences:fence_junglewood", {
 fences.register_fence("fences:fence_pine_wood", {
 	description = "Pine Fence",
 	texture = "fences_fence_pine_wood.png",
-	inventory_image = "fences_fence_overlay.png^default_pine_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fences_fence_overlay.png^default_pine_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	material = "default:pine_wood",
+	inventory_image = "fences_fence_overlay.png^core_pine_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "fences_fence_overlay.png^core_pine_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	material = "core:pine_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 	sounds = core.node_sound_wood_defaults()
 })
@@ -104,9 +104,9 @@ fences.register_fence("fences:fence_pine_wood", {
 fences.register_fence("fences:fence_aspen_wood", {
 	description = "Aspen Fence",
 	texture = "fences_fence_aspen_wood.png",
-	inventory_image = "fences_fence_overlay.png^default_aspen_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fences_fence_overlay.png^default_aspen_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	material = "default:aspen_wood",
+	inventory_image = "fences_fence_overlay.png^core_aspen_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "fences_fence_overlay.png^core_aspen_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	material = "core:aspen_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 	sounds = core.node_sound_wood_defaults()
 })

@@ -113,8 +113,8 @@ minetest.register_node("crops:melon", {
 	paramtype2 = "facedir",
 	drop = {},
 	sounds = core.node_sound_wood_defaults({
-		dig = { name = "default_dig_oddly_breakable_by_hand" },
-		dug = { name = "default_dig_choppy" }
+		dig = { name = "core_dig_oddly_breakable_by_hand" },
+		dug = { name = "core_dig_choppy" }
 	}),
 	on_dig = function(pos, node, digger)
 		for face = 1, 4 do

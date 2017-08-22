@@ -109,17 +109,17 @@ minetest.register_tool("crops:hydrometer", {
 minetest.register_craft({
 	output = "crops:watering_can",
 	recipe = {
-		{ "default:steel_ingot", "", "" },
-		{ "default:steel_ingot", "", "default:steel_ingot" },
-		{ "", "default:steel_ingot", "" },
+		{ "core:steel_ingot", "", "" },
+		{ "core:steel_ingot", "", "core:steel_ingot" },
+		{ "", "core:steel_ingot", "" },
 	},
 })
 
 minetest.register_craft({
 	output = "crops:hydrometer",
 	recipe = {
-		{ "default:mese_crystal_fragment", "", "" },
-		{ "", "default:steel_ingot", "" },
-		{ "", "", "default:steel_ingot" },
+		{ "core:mese_crystal_fragment", "", "" },
+		{ "", "core:steel_ingot", "" },
+		{ "", "", "core:steel_ingot" },
 	},
 })

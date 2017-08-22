@@ -96,30 +96,15 @@ minetest.register_node("torches:torch_ceiling", {
 	sounds = core.node_sound_wood_defaults(),
 })
 
-minetest.register_lbm({
-	name = "torches:3dtorch",
-	nodenames = {"default:torch", "torches:floor", "torches:wall"},
-	action = function(pos, node)
-		if node.param2 == 0 then
-			minetest.set_node(pos, {name = "torches:torch_ceiling",
-				param2 = node.param2})
-		elseif node.param2 == 1 then
-			minetest.set_node(pos, {name = "torches:torch",
-				param2 = node.param2})
-		else
-			minetest.set_node(pos, {name = "torches:torch_wall",
-				param2 = node.param2})
-		end
-	end
-})
 
 minetest.register_craft({
 	output = 'torches:torch 4',
 	recipe = {
-		{'default:coal_lump'},
+		{'core:coal_lump'},
 		{'group:stick'},
 	}
 })
+
 
 --[[
 	torch wield light

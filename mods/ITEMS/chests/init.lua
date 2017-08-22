@@ -8,15 +8,15 @@ local function get_chest_formspec(pos)
 	local spos = pos.x .. "," .. pos.y .. "," .. pos.z
 	local formspec =
 		"size[8,9]" ..
-		default.gui_bg ..
-		default.gui_bg_img ..
-		default.gui_slots ..
+		init.gui_bg ..
+		init.gui_bg_img ..
+		init.gui_slots ..
 		"list[nodemeta:" .. spos .. ";main;0,0.3;8,4;]" ..
 		"list[current_player;main;0,4.85;8,1;]" ..
 		"list[current_player;main;0,6.08;8,3;8]" ..
 		"listring[nodemeta:" .. spos .. ";main]" ..
 		"listring[current_player;main]" ..
-		default.get_hotbar_bg(0,4.85)
+		init.get_hotbar_bg(0,4.85)
 	return formspec
 end
 
@@ -92,29 +92,29 @@ function chests.register_chest(name, d)
 			local meta = minetest.get_meta(pos);
 			local inv = meta:get_inventory()
 			return inv:is_empty("main") and
-					default.can_interact_with_node(player, pos)
+					core.can_interact_with_node(player, pos)
 		end
 		def.allow_metadata_inventory_move = function(pos, from_list, from_index,
 				to_list, to_index, count, player)
-			if not default.can_interact_with_node(player, pos) then
+			if not core.can_interact_with_node(player, pos) then
 				return 0
 			end
 			return count
 		end
 		def.allow_metadata_inventory_put = function(pos, listname, index, stack, player)
-			if not default.can_interact_with_node(player, pos) then
+			if not core.can_interact_with_node(player, pos) then
 				return 0
 			end
 			return stack:get_count()
 		end
 		def.allow_metadata_inventory_take = function(pos, listname, index, stack, player)
-			if not default.can_interact_with_node(player, pos) then
+			if not core.can_interact_with_node(player, pos) then
 				return 0
 			end
 			return stack:get_count()
 		end
 		def.on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-			if not default.can_interact_with_node(clicker, pos) then
+			if not core.can_interact_with_node(clicker, pos) then
 				return itemstack
 			end
 
@@ -217,7 +217,7 @@ function chests.register_chest(name, d)
 	end
 	def.on_blast = function(pos)
 		local drops = {}
-		default.get_inventory_drops(pos, "main", drops)
+		core.get_inventory_drops(pos, "main", drops)
 		drops[#drops+1] = "chests:chest"
 		minetest.remove_node(pos)
 		return drops
@@ -295,7 +295,7 @@ minetest.register_craft({
 	output = 'chests:chest_locked',
 	recipe = {
 		{'group:wood', 'group:wood', 'group:wood'},
-		{'group:wood', 'default:steel_ingot', 'group:wood'},
+		{'group:wood', 'core:steel_ingot', 'group:wood'},
 		{'group:wood', 'group:wood', 'group:wood'},
 	}
 })
@@ -303,7 +303,7 @@ minetest.register_craft({
 minetest.register_craft( {
 	type = "shapeless",
 	output = "chests:chest_locked",
-	recipe = {"chests:chest", "default:steel_ingot"},
+	recipe = {"chests:chest", "core:steel_ingot"},
 })
 
 minetest.register_craft({
