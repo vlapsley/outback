@@ -1,2 +1,2 @@
-default
+core
 player_api

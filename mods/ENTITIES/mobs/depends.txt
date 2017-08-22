@@ -1,5 +1,5 @@
+init
 core
-default
 tnt?
 dye?
 farming?

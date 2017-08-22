@@ -11,7 +11,7 @@ if minetest.get_modpath("dye") and minetest.get_modpath("farming") then
 	minetest.register_craft({
 		type = "shapeless",
 		output = "mobs:nametag",
-		recipe = {"default:paper", "dye:black", "farming:string"},
+		recipe = {"core:paper", "dye:black", "farming:string"},
 	})
 end
 
@@ -53,7 +53,7 @@ if minetest.get_modpath("farming") then
 		output = "mobs:lasso",
 		recipe = {
 			{"farming:string", "", "farming:string"},
-			{"", "default:diamond", ""},
+			{"", "core:diamond", ""},
 			{"farming:string", "", "farming:string"},
 		}
 	})
@@ -87,8 +87,8 @@ minetest.register_tool("mobs:shears", {
 minetest.register_craft({
 	output = 'mobs:shears',
 	recipe = {
-		{'', 'default:steel_ingot', ''},
-		{'', 'group:stick', 'default:steel_ingot'},
+		{'', 'core:steel_ingot', ''},
+		{'', 'group:stick', 'core:steel_ingot'},
 	}
 })
 
@@ -101,9 +101,9 @@ minetest.register_craftitem("mobs:protector", {
 minetest.register_craft({
 	output = "mobs:protector",
 	recipe = {
-		{"default:stone", "default:stone", "default:stone"},
-		{"default:stone", "default:goldblock", "default:stone"},
-		{"default:stone", "default:stone", "default:stone"},
+		{"core:stone", "core:stone", "core:stone"},
+		{"core:stone", "core:goldblock", "core:stone"},
+		{"core:stone", "core:stone", "core:stone"},
 	}
 })
 
@@ -117,7 +117,7 @@ minetest.register_craft({
 	output = "mobs:saddle",
 	recipe = {
 		{"mobs:leather", "mobs:leather", "mobs:leather"},
-		{"mobs:leather", "default:steel_ingot", "mobs:leather"},
-		{"mobs:leather", "default:steel_ingot", "mobs:leather"},
+		{"mobs:leather", "core:steel_ingot", "mobs:leather"},
+		{"mobs:leather", "core:steel_ingot", "mobs:leather"},
 	}
 })

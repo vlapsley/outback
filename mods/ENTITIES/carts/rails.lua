@@ -12,13 +12,11 @@ carts:register_rail("carts:rail", {
 minetest.register_craft({
 	output = "carts:rail 18",
 	recipe = {
-		{"default:steel_ingot", "group:wood", "default:steel_ingot"},
-		{"default:steel_ingot", "", "default:steel_ingot"},
-		{"default:steel_ingot", "group:wood", "default:steel_ingot"},
+		{"core:steel_ingot", "group:wood", "core:steel_ingot"},
+		{"core:steel_ingot", "", "core:steel_ingot"},
+		{"core:steel_ingot", "group:wood", "core:steel_ingot"},
 	}
 })
-
-minetest.register_alias("default:rail", "carts:rail")
 
 
 carts:register_rail("carts:powerrail", {
@@ -33,9 +31,9 @@ carts:register_rail("carts:powerrail", {
 minetest.register_craft({
 	output = "carts:powerrail 18",
 	recipe = {
-		{"default:steel_ingot", "group:wood", "default:steel_ingot"},
-		{"default:steel_ingot", "default:mese_crystal", "default:steel_ingot"},
-		{"default:steel_ingot", "group:wood", "default:steel_ingot"},
+		{"core:steel_ingot", "group:wood", "core:steel_ingot"},
+		{"core:steel_ingot", "core:mese_crystal", "core:steel_ingot"},
+		{"core:steel_ingot", "group:wood", "core:steel_ingot"},
 	}
 })
 
@@ -52,8 +50,8 @@ carts:register_rail("carts:brakerail", {
 minetest.register_craft({
 	output = "carts:brakerail 18",
 	recipe = {
-		{"default:steel_ingot", "group:wood", "default:steel_ingot"},
-		{"default:steel_ingot", "default:coal_lump", "default:steel_ingot"},
-		{"default:steel_ingot", "group:wood", "default:steel_ingot"},
+		{"core:steel_ingot", "group:wood", "core:steel_ingot"},
+		{"core:steel_ingot", "core:coal_lump", "core:steel_ingot"},
+		{"core:steel_ingot", "group:wood", "core:steel_ingot"},
 	}
 })

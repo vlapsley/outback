@@ -91,9 +91,9 @@ local function force_detach(player)
 	end
 
 	player:set_detach()
-	default.player_attached[player:get_player_name()] = false
+	player_api.player_attached[player:get_player_name()] = false
 	player:set_eye_offset({x = 0, y = 0, z = 0}, {x = 0, y = 0, z = 0})
-	default.player_set_animation(player, "stand" , 30)
+	player_api.player_set_animation(player, "stand" , 30)
 	player:set_properties({visual_size = {x = 1, y = 1} })
 
 end
@@ -141,7 +141,7 @@ function mobs.attach(entity, player)
 	force_detach(player)
 
 	player:set_attach(entity.object, "", attach_at, entity.player_rotation)
-	default.player_attached[player:get_player_name()] = true
+	player_api.player_attached[player:get_player_name()] = true
 	player:set_eye_offset(eye_offset, {x = 0, y = 0, z = 0})
 
 	player:set_properties({
@@ -152,7 +152,7 @@ function mobs.attach(entity, player)
 	})
 
 	minetest.after(0.2, function()
-		default.player_set_animation(player, "sit" , 30)
+		player_api.player_set_animation(player, "sit" , 30)
 	end)
 
 	--player:set_look_yaw(entity.object:getyaw() - rot_view)
@@ -164,7 +164,7 @@ function mobs.detach(player, offset)
 
 	force_detach(player)
 
-	default.player_set_animation(player, "stand" , 30)
+	player_api.player_set_animation(player, "stand" , 30)
 
 	local pos = player:getpos()
 

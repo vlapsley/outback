@@ -75,10 +75,10 @@ local stuck_path_timeout = 10 -- how long will mob follow path before giving up
 -- default nodes
 local node_fire = "fire:basic_flame"
 local node_permanent_flame = "fire:permanent_flame"
-local node_ice = "default:ice"
-local node_snowblock = "default:snowblock"
-local node_snow = "default:snow"
-mobs.fallback_node = minetest.registered_aliases["mapgen_dirt"] or "default:dirt"
+local node_ice = "core:ice"
+local node_snowblock = "core:snowblock"
+local node_snow = "core:snow"
+mobs.fallback_node = minetest.registered_aliases["mapgen_dirt"] or "core:dirt"
 
 -- play sound
 local mob_sound = function(self, sound)
@@ -3439,8 +3439,8 @@ function mobs:feed_tame(self, clicker, feed_count, breed, tame)
 		local tag = self.nametag or ""
 
 		minetest.show_formspec(name, "mobs_nametag", "size[8,4]"
-			.. default.gui_bg
-			.. default.gui_bg_img
+			.. init.gui_bg
+			.. init.gui_bg_img
 			.. "field[0.5,1;7.5,0;name;" .. minetest.formspec_escape(S("Enter name:")) .. ";" .. tag .. "]"
 			.. "button_exit[2.5,3.5;3,1;mob_rename;" .. minetest.formspec_escape(S("Rename")) .. "]")
 
