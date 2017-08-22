@@ -77,7 +77,7 @@ minetest.register_node("fire:permanent_flame", {
 minetest.register_tool("fire:flint_and_steel", {
 	description = "Flint and Steel",
 	inventory_image = "fire_flint_steel.png",
-	sound = {breaks = "default_tool_breaks"},
+	sound = {breaks = "core_tool_breaks"},
 
 	on_use = function(itemstack, user, pointed_thing)
 		local sound_pos = pointed_thing.above or user:get_pos()

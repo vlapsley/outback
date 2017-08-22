@@ -13,7 +13,7 @@ minetest.register_node("sea:coral_brown", {
 	tiles = {"sea_coral_brown.png"},
 	groups = {cracky = 3},
 	drop = "sea:coral_skeleton",
-	sounds = default.node_sound_stone_defaults(),
+	sounds = core.node_sound_stone_defaults(),
 })
 
 minetest.register_node("sea:coral_orange", {
@@ -21,14 +21,14 @@ minetest.register_node("sea:coral_orange", {
 	tiles = {"sea_coral_orange.png"},
 	groups = {cracky = 3},
 	drop = "sea:coral_skeleton",
-	sounds = default.node_sound_stone_defaults(),
+	sounds = core.node_sound_stone_defaults(),
 })
 
 minetest.register_node("sea:coral_skeleton", {
 	description = "Coral Skeleton",
 	tiles = {"sea_coral_skeleton.png"},
 	groups = {cracky = 3},
-	sounds = default.node_sound_stone_defaults(),
+	sounds = core.node_sound_stone_defaults(),
 })
 
 minetest.register_alias("default:coral_brown", "sea:coral_brown")

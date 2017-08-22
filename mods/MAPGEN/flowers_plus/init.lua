@@ -54,7 +54,7 @@ for i in ipairs(lilies_list) do
 		paramtype2 = "facedir",
 		walkable = false,
 		groups = lily_groups,
-		sounds = default.node_sound_leaves_defaults(),
+		sounds = core.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",
 			fixed = { -0.4, -0.5, -0.4, 0.4, -0.45, 0.4 },
@@ -155,7 +155,7 @@ for i in ipairs(algae_list) do
 		paramtype2 = "facedir",
 		walkable = false,
 		groups = algae_groups,
-		sounds = default.node_sound_leaves_defaults(),
+		sounds = core.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",
 			fixed = { -0.4, -0.5, -0.4, 0.4, -0.45, 0.4 },
@@ -244,7 +244,7 @@ minetest.register_node(":flowers:sunflower", {
 	buildable_to = true,
 	is_ground_content = true,
 	groups = { dig_immediate=3, flora=1, flammable=3 },
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = box,
 	collision_box = box,
 	drop = {

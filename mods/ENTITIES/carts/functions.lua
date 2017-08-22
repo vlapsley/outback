@@ -192,7 +192,7 @@ function carts:register_rail(name, def_overwrite, railparams)
 			type = "fixed",
 			fixed = {-1/2, -1/2, -1/2, 1/2, -1/2+1/16, 1/2},
 		},
-		sounds = default.node_sound_metal_defaults()
+		sounds = core.node_sound_metal_defaults()
 	}
 	for k, v in pairs(def_overwrite) do
 		def[k] = v

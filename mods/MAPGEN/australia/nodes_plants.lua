@@ -15,7 +15,7 @@ minetest.register_node("australia:bottlebrush_orchid", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -42,7 +42,7 @@ minetest.register_node("australia:tomato_bush", {
 			{items = {"australia:bush_tomato 4"}}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -71,7 +71,7 @@ minetest.register_node("australia:cooktown_orchid", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -92,7 +92,7 @@ minetest.register_node("australia:couch_honeypot", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -113,7 +113,7 @@ minetest.register_node("australia:darling_lily", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -135,7 +135,7 @@ minetest.register_node("australia:flame_grevillea_leaves", {
 			{items = {"australia:flame_grevillea_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -155,7 +155,7 @@ minetest.register_node("australia:flame_grevillea_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -186,7 +186,7 @@ minetest.register_node("australia:kangaroo_paw", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -205,7 +205,7 @@ minetest.register_node("australia:lavender_grevillea", {
 	sunlight_propagates = true,
 	is_ground_content = true,
 	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 })
 
 -- Mangrove Fern
@@ -222,7 +222,7 @@ minetest.register_node("australia:mangrove_fern", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -243,7 +243,7 @@ minetest.register_node("australia:mangrove_lily", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -264,7 +264,7 @@ minetest.register_node("australia:mitchell_grass", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -281,7 +281,7 @@ minetest.register_node("australia:mangrove_palm_trunk", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {choppy = 2, flammable = 1, flora = 1, attached_node = 1, oddly_breakable_by_hand = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 	selection_box = {
 		type = "fixed",
@@ -298,7 +298,7 @@ minetest.register_node("australia:mangrove_palm_leaf_bot", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	drawtype = "nodebox",
 	nodebox = {
 		type = "fixed",
@@ -319,7 +319,7 @@ minetest.register_node("australia:mangrove_palm_leaf_top", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	drawtype = "nodebox",
 	nodebox = {
 		type = "fixed",
@@ -345,7 +345,7 @@ minetest.register_node("australia:saltbush", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -366,7 +366,7 @@ minetest.register_node("australia:pink_mulla_mulla", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -388,7 +388,7 @@ minetest.register_node("australia:red_bottlebrush_leaves", {
 			{items = {"australia:red_bottlebrush_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -408,7 +408,7 @@ minetest.register_node("australia:red_bottlebrush_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -439,7 +439,7 @@ minetest.register_node("australia:silver_daisy", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -460,7 +460,7 @@ minetest.register_node("australia:spinifex", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -481,7 +481,7 @@ minetest.register_node("australia:sturts_desert_pea", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -503,7 +503,7 @@ minetest.register_node("australia:waratah_leaves", {
 			{items = {"australia:waratah_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -523,7 +523,7 @@ minetest.register_node("australia:waratah_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,

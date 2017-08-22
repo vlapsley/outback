@@ -94,7 +94,7 @@ minetest.register_node("dryplants:reedmace_spikes", {
 		not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -116,7 +116,7 @@ minetest.register_node("dryplants:reedmace_top", {
 		not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -139,7 +139,7 @@ minetest.register_node("dryplants:reedmace_height_2", {
 		--not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -162,7 +162,7 @@ minetest.register_node("dryplants:reedmace_height_3", {
 		--not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -185,7 +185,7 @@ minetest.register_node("dryplants:reedmace_height_3_spikes", {
 		--not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -207,7 +207,7 @@ minetest.register_node("dryplants:reedmace", {
 		not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -237,7 +237,7 @@ minetest.register_node("dryplants:reedmace_bottom", {
 		not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -267,7 +267,7 @@ minetest.register_node("dryplants:reedmace_sapling", {
 		flammable=2,
 		attached_node=1
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}

@@ -41,7 +41,7 @@ minetest.register_node("dryplants:juncus", {
 		flora=1
 		--not_in_creative_inventory=1
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-7/16, -1/2, -7/16, 7/16, 0, 7/16},
@@ -82,7 +82,7 @@ minetest.register_node("dryplants:juncus_02", {
 		flora=1,
 		not_in_creative_inventory=1
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-7/16, -1/2, -7/16, 7/16, 0, 7/16},

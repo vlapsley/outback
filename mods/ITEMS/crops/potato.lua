@@ -58,7 +58,7 @@ minetest.register_node("crops:potato_plant_" .. stage , {
 	paramtype = "light",
 	groups = { snappy=3, flammable=3, flora=1, attached_node=1, not_in_creative_inventory=1 },
 	drop = {},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.45, -0.5, -0.45,  0.45, -0.6 + (((math.min(stage, 4)) + 1) / 5), 0.45}
@@ -96,7 +96,7 @@ minetest.register_node("crops:soil_with_potatoes", {
 		{ items = {'crops:potato'}, rarity = 2 },
 		{ items = {'crops:potato'}, rarity = 5 },
 	}},
-	sounds = default.node_sound_dirt_defaults(),
+	sounds = core.node_sound_dirt_defaults(),
 	on_dig = function(pos, node, digger)
 		local drops = {}
 		-- damage 0   = drops 3-5

@@ -10,7 +10,7 @@ minetest.register_node("australia:stone_kelp_brown", {
 	is_ground_content = true,
 	groups = {cracky = 3, stone = 1, not_in_creative_inventory = 1},
 	drop = "default:stone",
-	sounds = default.node_sound_stone_defaults(),
+	sounds = core.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:stone_kelp_giant_brown", {
@@ -19,7 +19,7 @@ minetest.register_node("australia:stone_kelp_giant_brown", {
 	is_ground_content = true,
 	groups = {cracky = 3, stone = 1, not_in_creative_inventory = 1},
 	drop = "default:stone",
-	sounds = default.node_sound_stone_defaults(),
+	sounds = core.node_sound_stone_defaults(),
 })
 
 -- Common Kelp
@@ -37,7 +37,7 @@ minetest.register_node("australia:kelp_brown", {
 	drowning = 1,
 	is_ground_content = true,
 	groups = {snappy = 3, seaplants = 1, sea = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -62,7 +62,7 @@ minetest.register_node("australia:kelp_giant_brown", {
 	},
 	post_effect_color = {a = 64, r = 100, g = 100, b = 200},
 	groups = {snappy = 3, seaplants = 1, sea = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_use = minetest.item_eat(1)
 })
 
@@ -84,7 +84,7 @@ minetest.register_node("australia:kelp_giant_brown_middle", {
 	post_effect_color = {a = 64, r = 100, g = 100, b = 200},
 	groups = {snappy = 3, seaplants = 1, sea = 1},
 	drop = "australia:kelp_giant_brown",
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 })
 
 -- Narrowleaf Seagrass
@@ -104,7 +104,7 @@ minetest.register_node("australia:sea_grass", {
 	drowning = 1,
 	is_ground_content = true,
 	groups = {snappy = 3, attached_node = 1, sea = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -116,7 +116,7 @@ minetest.register_node("australia:woodship", {
 	tiles = {"default_sand.png"},
 	is_ground_content = true,
 	groups = {crumbly = 3, falling_node = 1, sand = 1, soil = 1, not_in_creative_inventory = 1},
-	sounds = default.node_sound_sand_defaults(),
+	sounds = core.node_sound_sand_defaults(),
 })
 
 minetest.register_node("australia:submarine", {
@@ -124,7 +124,7 @@ minetest.register_node("australia:submarine", {
 	tiles = {"default_dirt.png"},
 	is_ground_content = true,
 	groups = {crumbly = 3, soil = 1, not_in_creative_inventory = 1},
-	sounds = default.node_sound_dirt_defaults(),
+	sounds = core.node_sound_dirt_defaults(),
 })
 
 minetest.register_node("australia:woodshipchest", {
@@ -136,7 +136,7 @@ minetest.register_node("australia:woodshipchest", {
 	drop = "chests:chest",
 	legacy_facedir_simple = true,
 	is_ground_content = false,
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("formspec",
@@ -203,7 +203,7 @@ minetest.register_node("australia:submarinechest", {
 	drop = "chests:chest",
 	legacy_facedir_simple = true,
 	is_ground_content = false,
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("formspec",

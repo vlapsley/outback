@@ -275,7 +275,7 @@ stairs.register_stair_and_slab(
 	{"default_wood.png"},
 	"Wooden Stair",
 	"Wooden Slab",
-	default.node_sound_wood_defaults()
+	core.node_sound_wood_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -285,7 +285,7 @@ stairs.register_stair_and_slab(
 	{"default_junglewood.png"},
 	"Jungle Wood Stair",
 	"Jungle Wood Slab",
-	default.node_sound_wood_defaults()
+	core.node_sound_wood_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -305,7 +305,7 @@ stairs.register_stair_and_slab(
 	{"default_acacia_wood.png"},
 	"Acacia Wood Stair",
 	"Acacia Wood Slab",
-	default.node_sound_wood_defaults()
+	core.node_sound_wood_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -315,7 +315,7 @@ stairs.register_stair_and_slab(
 	{"default_aspen_wood.png"},
 	"Aspen Wood Stair",
 	"Aspen Wood Slab",
-	default.node_sound_wood_defaults()
+	core.node_sound_wood_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -325,7 +325,7 @@ stairs.register_stair_and_slab(
 	{"default_stone.png"},
 	"Stone Stair",
 	"Stone Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -335,7 +335,7 @@ stairs.register_stair_and_slab(
 	{"default_cobble.png"},
 	"Cobblestone Stair",
 	"Cobblestone Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -345,7 +345,7 @@ stairs.register_stair_and_slab(
 	{"default_mossycobble.png"},
 	"Mossy Cobblestone Stair",
 	"Mossy Cobblestone Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -355,7 +355,7 @@ stairs.register_stair_and_slab(
 	{"default_stone_brick.png"},
 	"Stone Brick Stair",
 	"Stone Brick Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -365,7 +365,7 @@ stairs.register_stair_and_slab(
 	{"default_stone_block.png"},
 	"Stone Block Stair",
 	"Stone Block Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -375,7 +375,7 @@ stairs.register_stair_and_slab(
 	{"default_desert_stone.png"},
 	"Desert Stone Stair",
 	"Desert Stone Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -385,7 +385,7 @@ stairs.register_stair_and_slab(
 	{"default_desert_cobble.png"},
 	"Desert Cobblestone Stair",
 	"Desert Cobblestone Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -395,7 +395,7 @@ stairs.register_stair_and_slab(
 	{"default_desert_stone_brick.png"},
 	"Desert Stone Brick Stair",
 	"Desert Stone Brick Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -405,7 +405,7 @@ stairs.register_stair_and_slab(
 	{"default_desert_stone_block.png"},
 	"Desert Stone Block Stair",
 	"Desert Stone Block Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -415,7 +415,7 @@ stairs.register_stair_and_slab(
 	{"default_sandstone.png"},
 	"Sandstone Stair",
 	"Sandstone Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -425,7 +425,7 @@ stairs.register_stair_and_slab(
 	{"default_sandstone_brick.png"},
 	"Sandstone Brick Stair",
 	"Sandstone Brick Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -435,7 +435,7 @@ stairs.register_stair_and_slab(
 	{"default_sandstone_block.png"},
 	"Sandstone Block Stair",
 	"Sandstone Block Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -445,7 +445,7 @@ stairs.register_stair_and_slab(
 	{"default_desert_sandstone.png"},
 	"Desert Sandstone Stair",
 	"Desert Sandstone Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -455,7 +455,7 @@ stairs.register_stair_and_slab(
 	{"default_desert_sandstone_brick.png"},
 	"Desert Sandstone Brick Stair",
 	"Desert Sandstone Brick Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -465,7 +465,7 @@ stairs.register_stair_and_slab(
 	{"default_desert_sandstone_block.png"},
 	"Desert Sandstone Block Stair",
 	"Desert Sandstone Block Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -475,7 +475,7 @@ stairs.register_stair_and_slab(
 	{"default_silver_sandstone.png"},
 	"Silver Sandstone Stair",
 	"Silver Sandstone Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -485,7 +485,7 @@ stairs.register_stair_and_slab(
 	{"default_silver_sandstone_brick.png"},
 	"Silver Sandstone Brick Stair",
 	"Silver Sandstone Brick Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -495,7 +495,7 @@ stairs.register_stair_and_slab(
 	{"default_silver_sandstone_block.png"},
 	"Silver Sandstone Block Stair",
 	"Silver Sandstone Block Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -505,7 +505,7 @@ stairs.register_stair_and_slab(
 	{"default_obsidian.png"},
 	"Obsidian Stair",
 	"Obsidian Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -515,7 +515,7 @@ stairs.register_stair_and_slab(
 	{"default_obsidian_brick.png"},
 	"Obsidian Brick Stair",
 	"Obsidian Brick Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -525,7 +525,7 @@ stairs.register_stair_and_slab(
 	{"default_obsidian_block.png"},
 	"Obsidian Block Stair",
 	"Obsidian Block Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -535,7 +535,7 @@ stairs.register_stair_and_slab(
 	{"default_brick.png"},
 	"Brick Stair",
 	"Brick Slab",
-	default.node_sound_stone_defaults()
+	core.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -545,7 +545,7 @@ stairs.register_stair_and_slab(
 	{"farming_straw.png"},
 	"Straw Stair",
 	"Straw Slab",
-	default.node_sound_leaves_defaults()
+	core.node_sound_leaves_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -555,7 +555,7 @@ stairs.register_stair_and_slab(
 	{"default_steel_block.png"},
 	"Steel Block Stair",
 	"Steel Block Slab",
-	default.node_sound_metal_defaults()
+	core.node_sound_metal_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -565,7 +565,7 @@ stairs.register_stair_and_slab(
 	{"default_copper_block.png"},
 	"Copper Block Stair",
 	"Copper Block Slab",
-	default.node_sound_metal_defaults()
+	core.node_sound_metal_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -575,7 +575,7 @@ stairs.register_stair_and_slab(
 	{"default_bronze_block.png"},
 	"Bronze Block Stair",
 	"Bronze Block Slab",
-	default.node_sound_metal_defaults()
+	core.node_sound_metal_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -585,7 +585,7 @@ stairs.register_stair_and_slab(
 	{"default_gold_block.png"},
 	"Gold Block Stair",
 	"Gold Block Slab",
-	default.node_sound_metal_defaults()
+	core.node_sound_metal_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -595,7 +595,7 @@ stairs.register_stair_and_slab(
 	{"default_ice.png"},
 	"Ice Stair",
 	"Ice Slab",
-	default.node_sound_glass_defaults()
+	core.node_sound_glass_defaults()
 )
 
 stairs.register_stair_and_slab(
@@ -605,9 +605,9 @@ stairs.register_stair_and_slab(
 	{"default_snow.png"},
 	"Snow Block Stair",
 	"Snow Block Slab",
-	default.node_sound_dirt_defaults({
-		footstep = {name = "default_snow_footstep", gain = 0.15},
-		dug = {name = "default_snow_footstep", gain = 0.2},
-		dig = {name = "default_snow_footstep", gain = 0.2}
+	core.node_sound_dirt_defaults({
+		footstep = {name = "core_snow_footstep", gain = 0.15},
+		dug = {name = "core_snow_footstep", gain = 0.2},
+		dig = {name = "core_snow_footstep", gain = 0.2}
 	})
 )

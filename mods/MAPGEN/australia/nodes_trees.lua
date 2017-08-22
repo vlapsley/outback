@@ -12,7 +12,7 @@ minetest.register_node("australia:arnhem_cypress_pine_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -32,7 +32,7 @@ minetest.register_node("australia:arnhem_cypress_pine_leaves", {
 			{items = {"australia:arnhem_cypress_pine_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -52,7 +52,7 @@ minetest.register_node("australia:arnhem_cypress_pine_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -80,7 +80,7 @@ minetest.register_node("australia:black_box_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -100,7 +100,7 @@ minetest.register_node("australia:black_box_leaves", {
 			{items = {"australia:black_box_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -120,7 +120,7 @@ minetest.register_node("australia:black_box_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -158,7 +158,7 @@ minetest.register_node("australia:black_wattle_tree", {
 		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -178,7 +178,7 @@ minetest.register_node("australia:black_wattle_leaves", {
 			{items = {"australia:black_wattle_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -198,7 +198,7 @@ minetest.register_node("australia:black_wattle_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -226,7 +226,7 @@ minetest.register_node("australia:blue_gum_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -246,7 +246,7 @@ minetest.register_node("australia:blue_gum_leaves", {
 			{items = {"australia:blue_gum_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -266,7 +266,7 @@ minetest.register_node("australia:blue_gum_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -294,7 +294,7 @@ minetest.register_node("australia:boab_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -314,7 +314,7 @@ minetest.register_node("australia:boab_leaves", {
 			{items = {"australia:boab_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -334,7 +334,7 @@ minetest.register_node("australia:boab_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -373,7 +373,7 @@ minetest.register_node("australia:bull_banksia_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -393,7 +393,7 @@ minetest.register_node("australia:bull_banksia_leaves", {
 			{items = {"australia:bull_banksia_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -413,7 +413,7 @@ minetest.register_node("australia:bull_banksia_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -451,7 +451,7 @@ minetest.register_node("australia:celery_top_pine_tree", {
 		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -471,7 +471,7 @@ minetest.register_node("australia:celery_top_pine_leaves", {
 			{items = {"australia:celery_top_pine_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -491,7 +491,7 @@ minetest.register_node("australia:celery_top_pine_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -530,7 +530,7 @@ minetest.register_node("australia:cherry_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -550,7 +550,7 @@ minetest.register_node("australia:cherry_leaves", {
 			{items = {"australia:cherry_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -570,7 +570,7 @@ minetest.register_node("australia:cherry_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -603,7 +603,7 @@ minetest.register_node("australia:cherry", {
 	},
 	groups = {fleshy = 3, dig_immediate = 2, flammable = 3, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
 			minetest.set_node(pos, {name = "australia:cherry", param2 = 1})
@@ -632,7 +632,7 @@ minetest.register_node("australia:coast_banksia_tree", {
 		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -652,7 +652,7 @@ minetest.register_node("australia:coast_banksia_leaves", {
 			{items = {"australia:coast_banksia_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -672,7 +672,7 @@ minetest.register_node("australia:coast_banksia_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -700,7 +700,7 @@ minetest.register_node("australia:coolabah_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -720,7 +720,7 @@ minetest.register_node("australia:coolabah_leaves", {
 			{items = {"australia:coolabah_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -740,7 +740,7 @@ minetest.register_node("australia:coolabah_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -768,7 +768,7 @@ minetest.register_node("australia:daintree_stringybark_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -788,7 +788,7 @@ minetest.register_node("australia:daintree_stringybark_leaves", {
 			{items = {"australia:daintree_stringybark_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -808,7 +808,7 @@ minetest.register_node("australia:daintree_stringybark_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -836,7 +836,7 @@ minetest.register_node("australia:darwin_woollybutt_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -856,7 +856,7 @@ minetest.register_node("australia:darwin_woollybutt_leaves", {
 			{items = {"australia:darwin_woollybutt_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -876,7 +876,7 @@ minetest.register_node("australia:darwin_woollybutt_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -904,7 +904,7 @@ minetest.register_node("australia:desert_oak_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -924,7 +924,7 @@ minetest.register_node("australia:desert_oak_leaves", {
 			{items = {"australia:desert_oak_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -944,7 +944,7 @@ minetest.register_node("australia:desert_oak_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -983,7 +983,7 @@ minetest.register_node("australia:fan_palm_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1003,7 +1003,7 @@ minetest.register_node("australia:fan_palm_leaves", {
 			{items = {"australia:fan_palm_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1023,7 +1023,7 @@ minetest.register_node("australia:fan_palm_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 1, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1062,7 +1062,7 @@ minetest.register_node("australia:golden_wattle_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1082,7 +1082,7 @@ minetest.register_node("australia:golden_wattle_leaves", {
 			{items = {"australia:golden_wattle_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1102,7 +1102,7 @@ minetest.register_node("australia:golden_wattle_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1141,7 +1141,7 @@ minetest.register_node("australia:grey_mangrove_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1161,7 +1161,7 @@ minetest.register_node("australia:grey_mangrove_leaves", {
 			{items = {"australia:grey_mangrove_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1181,7 +1181,7 @@ minetest.register_node("australia:grey_mangrove_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1209,7 +1209,7 @@ minetest.register_node("australia:huon_pine_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1229,7 +1229,7 @@ minetest.register_node("australia:huon_pine_leaves", {
 			{items = {"australia:huon_pine_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1249,7 +1249,7 @@ minetest.register_node("australia:huon_pine_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1277,7 +1277,7 @@ minetest.register_node("australia:illawarra_flame_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1297,7 +1297,7 @@ minetest.register_node("australia:illawarra_flame_leaves", {
 			{items = {"australia:illawarra_flame_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1317,7 +1317,7 @@ minetest.register_node("australia:illawarra_flame_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1345,7 +1345,7 @@ minetest.register_node("australia:jarrah_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 1, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1365,7 +1365,7 @@ minetest.register_node("australia:jarrah_leaves", {
 			{items = {"australia:jarrah_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1385,7 +1385,7 @@ minetest.register_node("australia:jarrah_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1413,7 +1413,7 @@ minetest.register_node("australia:karri_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 1, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1433,7 +1433,7 @@ minetest.register_node("australia:karri_leaves", {
 			{items = {"australia:karri_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1453,7 +1453,7 @@ minetest.register_node("australia:karri_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1481,7 +1481,7 @@ minetest.register_node("australia:lemon_eucalyptus_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1501,7 +1501,7 @@ minetest.register_node("australia:lemon_eucalyptus_leaves", {
 			{items = {"australia:lemon_eucalyptus_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1521,7 +1521,7 @@ minetest.register_node("australia:lemon_eucalyptus_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1560,7 +1560,7 @@ minetest.register_node("australia:lemon_myrtle_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1580,7 +1580,7 @@ minetest.register_node("australia:lemon_myrtle_leaves", {
 			{items = {"australia:lemon_myrtle_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1600,7 +1600,7 @@ minetest.register_node("australia:lemon_myrtle_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1639,7 +1639,7 @@ minetest.register_node("australia:lilly_pilly_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1659,7 +1659,7 @@ minetest.register_node("australia:lilly_pilly_leaves", {
 			{items = {"australia:lilly_pilly_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1679,7 +1679,7 @@ minetest.register_node("australia:lilly_pilly_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1712,7 +1712,7 @@ minetest.register_node("australia:lilly_pilly_berries", {
 	},
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
 			minetest.set_node(pos, {name = "australia:lilly_pilly_berries", param2 = 1})
@@ -1741,7 +1741,7 @@ minetest.register_node("australia:macadamia_tree", {
 		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1761,7 +1761,7 @@ minetest.register_node("australia:macadamia_leaves", {
 			{items = {"australia:macadamia_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1781,7 +1781,7 @@ minetest.register_node("australia:macadamia_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1814,7 +1814,7 @@ minetest.register_node("australia:macadamia", {
 	},
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
 			minetest.set_node(pos, {name = "australia:macadamia", param2 = 1})
@@ -1844,7 +1844,7 @@ minetest.register_node("australia:mangrove_apple_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1864,7 +1864,7 @@ minetest.register_node("australia:mangrove_apple_leaves", {
 			{items = {"australia:mangrove_apple_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1884,7 +1884,7 @@ minetest.register_node("australia:mangrove_apple_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -1917,7 +1917,7 @@ minetest.register_node("australia:mangrove_apple", {
 	},
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
 			minetest.set_node(pos, {name = "australia:mangrove_apple", param2 = 1})
@@ -1936,7 +1936,7 @@ minetest.register_node("australia:marri_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 1, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -1956,7 +1956,7 @@ minetest.register_node("australia:marri_leaves", {
 			{items = {"australia:marri_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -1976,7 +1976,7 @@ minetest.register_node("australia:marri_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2004,7 +2004,7 @@ minetest.register_node("australia:merbau_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2024,7 +2024,7 @@ minetest.register_node("australia:merbau_leaves", {
 			{items = {"australia:merbau_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2044,7 +2044,7 @@ minetest.register_node("australia:merbau_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2072,7 +2072,7 @@ minetest.register_node("australia:moreton_bay_fig_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 1, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2092,7 +2092,7 @@ minetest.register_node("australia:moreton_bay_fig_leaves", {
 			{items = {"australia:moreton_bay_fig_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2112,7 +2112,7 @@ minetest.register_node("australia:moreton_bay_fig_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2145,7 +2145,7 @@ minetest.register_node("australia:moreton_bay_fig", {
 	},
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
 			minetest.set_node(pos, {name = "australia:moreton_bay_fig", param2 = 1})
@@ -2174,7 +2174,7 @@ minetest.register_node("australia:mulga_tree", {
 		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2194,7 +2194,7 @@ minetest.register_node("australia:mulga_leaves", {
 			{items = {"australia:mulga_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2214,7 +2214,7 @@ minetest.register_node("australia:mulga_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2242,7 +2242,7 @@ minetest.register_node("australia:paperbark_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2262,7 +2262,7 @@ minetest.register_node("australia:paperbark_leaves", {
 			{items = {"australia:paperbark_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2282,7 +2282,7 @@ minetest.register_node("australia:paperbark_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2321,7 +2321,7 @@ minetest.register_node("australia:quandong_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2341,7 +2341,7 @@ minetest.register_node("australia:quandong_leaves", {
 			{items = {"australia:quandong_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2361,7 +2361,7 @@ minetest.register_node("australia:quandong_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2394,7 +2394,7 @@ minetest.register_node("australia:quandong", {
 	},
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 2, leafdecay = 5, leafdecay_drop = 1},
 	on_use = minetest.item_eat(1),
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
 			minetest.set_node(pos, {name = "australia:quandong", param2 = 1})
@@ -2413,7 +2413,7 @@ minetest.register_node("australia:river_oak_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2433,7 +2433,7 @@ minetest.register_node("australia:river_oak_leaves", {
 			{items = {"australia:river_oak_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2453,7 +2453,7 @@ minetest.register_node("australia:river_oak_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2481,7 +2481,7 @@ minetest.register_node("australia:river_red_gum_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 1,flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2501,7 +2501,7 @@ minetest.register_node("australia:river_red_gum_leaves", {
 			{items = {"australia:river_red_gum_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2521,7 +2521,7 @@ minetest.register_node("australia:river_red_gum_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2559,7 +2559,7 @@ minetest.register_node("australia:rottnest_island_pine_tree", {
 		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2579,7 +2579,7 @@ minetest.register_node("australia:rottnest_island_pine_leaves", {
 			{items = {"australia:rottnest_island_pine_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2599,7 +2599,7 @@ minetest.register_node("australia:rottnest_island_pine_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2627,7 +2627,7 @@ minetest.register_node("australia:scribbly_gum_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2647,7 +2647,7 @@ minetest.register_node("australia:scribbly_gum_leaves", {
 			{items = {"australia:scribbly_gum_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2667,7 +2667,7 @@ minetest.register_node("australia:scribbly_gum_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2695,7 +2695,7 @@ minetest.register_node("australia:shoestring_acacia_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2715,7 +2715,7 @@ minetest.register_node("australia:shoestring_acacia_leaves", {
 			{items = {"australia:shoestring_acacia_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2735,7 +2735,7 @@ minetest.register_node("australia:shoestring_acacia_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2773,7 +2773,7 @@ minetest.register_node("australia:snow_gum_tree", {
 		fixed = {-4/16, -8/16, -4/16, 4/16, 8/16, 4/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2793,7 +2793,7 @@ minetest.register_node("australia:snow_gum_leaves", {
 			{items = {"australia:snow_gum_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2813,7 +2813,7 @@ minetest.register_node("australia:snow_gum_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2851,7 +2851,7 @@ minetest.register_node("australia:southern_sassafras_tree", {
 		fixed = {-6/16, -8/16, -6/16, 6/16, 8/16, 6/16},
 	},
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2871,7 +2871,7 @@ minetest.register_node("australia:southern_sassafras_leaves", {
 			{items = {"australia:southern_sassafras_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2891,7 +2891,7 @@ minetest.register_node("australia:southern_sassafras_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2930,7 +2930,7 @@ minetest.register_node("australia:stilted_mangrove_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -2950,7 +2950,7 @@ minetest.register_node("australia:stilted_mangrove_leaves", {
 			{items = {"australia:stilted_mangrove_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -2970,7 +2970,7 @@ minetest.register_node("australia:stilted_mangrove_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -2998,7 +2998,7 @@ minetest.register_node("australia:sugar_gum_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -3018,7 +3018,7 @@ minetest.register_node("australia:sugar_gum_leaves", {
 			{items = {"australia:sugar_gum_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -3038,7 +3038,7 @@ minetest.register_node("australia:sugar_gum_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -3066,7 +3066,7 @@ minetest.register_node("australia:swamp_bloodwood_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -3086,7 +3086,7 @@ minetest.register_node("australia:swamp_bloodwood_leaves", {
 			{items = {"australia:swamp_bloodwood_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -3106,7 +3106,7 @@ minetest.register_node("australia:swamp_bloodwood_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -3134,7 +3134,7 @@ minetest.register_node("australia:swamp_gum_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 1, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -3154,7 +3154,7 @@ minetest.register_node("australia:swamp_gum_leaves", {
 			{items = {"australia:swamp_gum_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -3174,7 +3174,7 @@ minetest.register_node("australia:swamp_gum_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -3213,7 +3213,7 @@ minetest.register_node("australia:swamp_paperbark_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -3233,7 +3233,7 @@ minetest.register_node("australia:swamp_paperbark_leaves", {
 			{items = {"australia:swamp_paperbark_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -3253,7 +3253,7 @@ minetest.register_node("australia:swamp_paperbark_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -3281,7 +3281,7 @@ minetest.register_node("australia:tasmanian_myrtle_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 1, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -3301,7 +3301,7 @@ minetest.register_node("australia:tasmanian_myrtle_leaves", {
 			{items = {"australia:tasmanian_myrtle_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -3321,7 +3321,7 @@ minetest.register_node("australia:tasmanian_myrtle_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -3360,7 +3360,7 @@ minetest.register_node("australia:tea_tree_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 2, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -3380,7 +3380,7 @@ minetest.register_node("australia:tea_tree_leaves", {
 			{items = {"australia:tea_tree_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -3400,7 +3400,7 @@ minetest.register_node("australia:tea_tree_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -3428,7 +3428,7 @@ minetest.register_node("australia:white_box_tree", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, flammable = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -3448,7 +3448,7 @@ minetest.register_node("australia:white_box_leaves", {
 			{items = {"australia:white_box_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -3468,7 +3468,7 @@ minetest.register_node("australia:white_box_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -3507,7 +3507,7 @@ minetest.register_node("australia:wirewood_tree", {
 	},
 	drop = 'default:stick 4',
 	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -3527,7 +3527,7 @@ minetest.register_node("australia:wirewood_leaves", {
 			{items = {"australia:wirewood_leaves"},}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
@@ -3547,7 +3547,7 @@ minetest.register_node("australia:wirewood_sapling", {
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
 	},
 	groups = {snappy = 2, dig_immediate = 2, flammable = 3, attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
@@ -3574,7 +3574,7 @@ minetest.register_node("australia:eucalyptus_wood", {
 	tiles = {"aus_eucalyptus_wood.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:blackwood", {
@@ -3582,7 +3582,7 @@ minetest.register_node("australia:blackwood", {
 	tiles = {"aus_blackwood.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:blue_gum", {
@@ -3590,7 +3590,7 @@ minetest.register_node("australia:blue_gum", {
 	tiles = {"aus_blue_gum.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:celery_top_pine", {
@@ -3598,7 +3598,7 @@ minetest.register_node("australia:celery_top_pine", {
 	tiles = {"aus_celery_top_pine.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:red_mahogany", {
@@ -3606,7 +3606,7 @@ minetest.register_node("australia:red_mahogany", {
 	tiles = {"aus_red_mahogany.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:huon_pine", {
@@ -3614,7 +3614,7 @@ minetest.register_node("australia:huon_pine", {
 	tiles = {"aus_huon_pine.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:jarrah", {
@@ -3622,7 +3622,7 @@ minetest.register_node("australia:jarrah", {
 	tiles = {"aus_jarrah.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:karri", {
@@ -3630,7 +3630,7 @@ minetest.register_node("australia:karri", {
 	tiles = {"aus_karri.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:marri", {
@@ -3638,7 +3638,7 @@ minetest.register_node("australia:marri", {
 	tiles = {"aus_marri.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:merbau", {
@@ -3646,7 +3646,7 @@ minetest.register_node("australia:merbau", {
 	tiles = {"aus_merbau.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:red_gum", {
@@ -3654,7 +3654,7 @@ minetest.register_node("australia:red_gum", {
 	tiles = {"aus_red_gum.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:southern_sassafras", {
@@ -3662,7 +3662,7 @@ minetest.register_node("australia:southern_sassafras", {
 	tiles = {"aus_southern_sassafras.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:tasmanian_oak", {
@@ -3670,7 +3670,7 @@ minetest.register_node("australia:tasmanian_oak", {
 	tiles = {"aus_tasmanian_oak.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 minetest.register_node("australia:tasmanian_myrtle", {
@@ -3678,5 +3678,5 @@ minetest.register_node("australia:tasmanian_myrtle", {
 	tiles = {"aus_tasmanian_myrtle.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })

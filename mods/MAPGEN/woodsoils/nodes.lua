@@ -16,7 +16,7 @@ minetest.register_node("woodsoils:dirt_with_leaves_1", {
 		--not_in_creative_inventory=1
 	},
 	drop = 'default:dirt',
-	sounds = default.node_sound_dirt_defaults({
+	sounds = core.node_sound_dirt_defaults({
 		footstep = {name="default_grass_footstep", gain=0.4},
 	}),
 })
@@ -34,7 +34,7 @@ minetest.register_node("woodsoils:dirt_with_leaves_2", {
 		--not_in_creative_inventory=1
 	},
 	drop = 'default:dirt',
-	sounds = default.node_sound_dirt_defaults({
+	sounds = core.node_sound_dirt_defaults({
 		footstep = {name="default_grass_footstep", gain=0.4},
 	}),
 })
@@ -52,7 +52,7 @@ minetest.register_node("woodsoils:grass_with_leaves_1", {
 		--not_in_creative_inventory=1
 	},
 	drop = 'default:dirt',
-	sounds = default.node_sound_dirt_defaults({
+	sounds = core.node_sound_dirt_defaults({
 		footstep = {name="default_grass_footstep", gain=0.4},
 	}),
 })
@@ -70,7 +70,7 @@ minetest.register_node("woodsoils:grass_with_leaves_2", {
 		--not_in_creative_inventory=1
 	},
 	drop = 'default:dirt',
-	sounds = default.node_sound_dirt_defaults({
+	sounds = core.node_sound_dirt_defaults({
 		footstep = {name="default_grass_footstep", gain=0.4},
 	}),
 })

@@ -30,7 +30,7 @@ local function add_simple_flower(name, desc, box, f_groups)
 		buildable_to = true,
 		stack_max = 99,
 		groups = f_groups,
-		sounds = default.node_sound_leaves_defaults(),
+		sounds = core.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",
 			fixed = box
@@ -159,7 +159,7 @@ minetest.register_node("flowers:waterlily", {
 	sunlight_propagates = true,
 	floodable = true,
 	groups = {snappy = 3, flower = 1, flammable = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	node_placement_prediction = "",
 	node_box = {
 		type = "fixed",

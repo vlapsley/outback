@@ -38,7 +38,7 @@ for i in pairs(NoDe) do
 			not_in_creative_inventory=iNV
 		},
 		drop = "trunks:twig_1",
-		sounds = default.node_sound_leaves_defaults(),
+		sounds = core.node_sound_leaves_defaults(),
 		liquids_pointable = true,
 		on_place = function(itemstack, placer, pointed_thing)
 			local pt = pointed_thing
@@ -73,7 +73,7 @@ minetest.register_node("trunks:moss", {
 	node_box = {type = "fixed", fixed = flat_moss},
 	selection_box = {type = "fixed", fixed = flat_stick},--{type = "wallmounted"},
 	groups = {snappy = 3, flammable = 3 },
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 })
 
 -----------------------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ minetest.register_node("trunks:moss_fungus", {
 	node_box = {type = "fixed", fixed = flat_moss},
 	selection_box = {type = "fixed", fixed = flat_stick},--{type = "wallmounted"},
 	groups = {snappy = 3, flammable = 3 },
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 })
 
 -----------------------------------------------------------------------------------------------
@@ -106,7 +106,7 @@ minetest.register_node("trunks:twigs", {
 	paramtype2 = "facedir",
 	tiles = {"trunks_twigs.png"},
 	groups = {choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 -----------------------------------------------------------------------------------------------
@@ -125,7 +125,7 @@ minetest.register_node("trunks:twigs_slab", {
 		fixed = {-1/2, -1/2, -1/2, 1/2, 0, 1/2},
 	},
 	groups = {choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 -----------------------------------------------------------------------------------------------
@@ -148,7 +148,7 @@ minetest.register_node("trunks:twigs_roof", {
 		}
 	},
 	groups = {choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 -----------------------------------------------------------------------------------------------
@@ -176,7 +176,7 @@ minetest.register_node("trunks:twigs_roof_corner", {
 		}
 	},
 	groups = {choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 -----------------------------------------------------------------------------------------------
@@ -204,7 +204,7 @@ minetest.register_node("trunks:twigs_roof_corner_2", {
 		}
 	},
 	groups = {choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 })
 
 if Auto_Roof_Corner == true then

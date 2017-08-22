@@ -71,7 +71,7 @@ minetest.register_node("dryplants:spear_grass", {
 		attached_node=1
 	},
 	drop = 'dryplants:spear_grass',
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}

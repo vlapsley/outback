@@ -3285,7 +3285,7 @@ function mobs:capture_mob(self, clicker, chance_hand, chance_net, chance_lasso, 
 
 			self.object:remove()
 
-			mob_sound(self, "default_place_node_hard")
+			mob_sound(self, "core_place_node_hard")
 
 
 		else

@@ -42,7 +42,7 @@ minetest.register_node("books:bookshelf", {
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)

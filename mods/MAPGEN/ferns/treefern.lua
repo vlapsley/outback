@@ -84,7 +84,7 @@ minetest.register_node("ferns:tree_fern_leaves", {
 			}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-7/16, -1/2, -7/16, 7/16, 0, 7/16},
@@ -115,7 +115,7 @@ minetest.register_node("ferns:tree_fern_leaves_02", {
 			}
 		}
 	},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-7/16, -1/2, -7/16, 7/16, 0, 7/16},
@@ -142,7 +142,7 @@ minetest.register_node("ferns:fern_trunk", {
 		fixed = {-1/7, -1/2, -1/7, 1/7, 1/2, 1/7},
 	},
 	groups = {tree=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	after_destruct = function(pos,oldnode)
         local node = minetest.get_node({x=pos.x,y=pos.y+1,z=pos.z})
         if node.name == "ferns:fern_trunk" then
@@ -164,7 +164,7 @@ minetest.register_node("ferns:sapling_tree_fern", {
 	inventory_image = "ferns_sapling_tree_fern.png",
 	walkable = false,
 	groups = {snappy=3,flammable=2,flora=1,attached_node=1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-7/16, -1/2, -7/16, 7/16, 0, 7/16},

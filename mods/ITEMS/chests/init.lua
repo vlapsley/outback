@@ -258,7 +258,7 @@ chests.register_chest("chest", {
 		"chests_chest_front.png",
 		"chests_chest_inside.png"
 	},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	sound_open = "chests_chest_open",
 	sound_close = "chests_chest_close",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2},
@@ -274,7 +274,7 @@ chests.register_chest("chest_locked", {
 		"chests_chest_lock.png",
 		"chests_chest_inside.png"
 	},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = core.node_sound_wood_defaults(),
 	sound_open = "chests_chest_open",
 	sound_close = "chests_chest_close",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2},

@@ -13,7 +13,7 @@ minetest.register_node("mushrooms:mushroom_red", {
 	walkable = false,
 	buildable_to = true,
 	groups = {snappy = 3, attached_node = 1, flammable = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_use = minetest.item_eat(-5),
 	selection_box = {
 		type = "fixed",
@@ -32,7 +32,7 @@ minetest.register_node("mushrooms:mushroom_brown", {
 	walkable = false,
 	buildable_to = true,
 	groups = {snappy = 3, attached_node = 1, flammable = 1},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 	on_use = minetest.item_eat(1),
 	selection_box = {
 		type = "fixed",
