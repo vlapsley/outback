@@ -9,7 +9,7 @@ minetest.register_node("australia:stone_kelp_brown", {
 	tiles = {"aus_coral_stone.png"},
 	is_ground_content = true,
 	groups = {cracky = 3, stone = 1, not_in_creative_inventory = 1},
-	drop = "default:stone",
+	drop = "core:stone",
 	sounds = core.node_sound_stone_defaults(),
 })
 
@@ -18,7 +18,7 @@ minetest.register_node("australia:stone_kelp_giant_brown", {
 	tiles = {"aus_coral_stone.png"},
 	is_ground_content = true,
 	groups = {cracky = 3, stone = 1, not_in_creative_inventory = 1},
-	drop = "default:stone",
+	drop = "core:stone",
 	sounds = core.node_sound_stone_defaults(),
 })
 
@@ -113,7 +113,7 @@ minetest.register_node("australia:sea_grass", {
 
 minetest.register_node("australia:woodship", {
 	description = "Sand",
-	tiles = {"default_sand.png"},
+	tiles = {"core_sand.png"},
 	is_ground_content = true,
 	groups = {crumbly = 3, falling_node = 1, sand = 1, soil = 1, not_in_creative_inventory = 1},
 	sounds = core.node_sound_sand_defaults(),
@@ -121,7 +121,7 @@ minetest.register_node("australia:woodship", {
 
 minetest.register_node("australia:submarine", {
 	description = "Dirt",
-	tiles = {"default_dirt.png"},
+	tiles = {"core_dirt.png"},
 	is_ground_content = true,
 	groups = {crumbly = 3, soil = 1, not_in_creative_inventory = 1},
 	sounds = core.node_sound_dirt_defaults(),
@@ -148,13 +148,13 @@ minetest.register_node("australia:woodshipchest", {
 		inv:set_size("main", 8 * 4)
 	local contents = {}
 	if math_random(1, 100) <= 25 then
-		contents = {main = {[1] = "default:coal_lump 36"}}
+		contents = {main = {[1] = "core:coal_lump 36"}}
 	elseif math_random(1, 100) >= 26 or math_random(1, 100) <= 40 then
-		contents = {main = {[1] = "default:iron_lump 24"}}
+		contents = {main = {[1] = "core:iron_lump 24"}}
 	elseif math_random(1, 100) >= 41 or math_random(1, 100) <= 45 then
-		contents = {main = {[1] = "default:gold_lump 24"}}
+		contents = {main = {[1] = "core:gold_lump 24"}}
 	elseif math_random(1, 100) >= 46 or math_random(1, 100) <= 50 then
-		contents = {main = {[1] = "default:diamond 24"}}
+		contents = {main = {[1] = "core:diamond 24"}}
 	elseif math_random(1, 100) >= 51 or math_random(1, 100) <= 60 then
 		contents = {main = {[1] = "australia:huon_pine_tree 18"}}
 	elseif math_random(1, 100) >= 61 or math_random(1, 100) <= 70 then
@@ -215,9 +215,9 @@ minetest.register_node("australia:submarinechest", {
 		inv:set_size("main", 8 * 4)
 	local contents = {}
 	if math_random(1, 2) == 1 and minetest.get_modpath("technic_worldgen") then
-		contents = {main = {[1] = "technic:mineral_uranium 18", [2] = "default:sword_steel 2"}}
+		contents = {main = {[1] = "technic:mineral_uranium 18", [2] = "core:sword_steel 2"}}
 	else
-		contents = {main = {[1] = "tnt:tnt 3", [2] = "default:sword_steel 2"}}
+		contents = {main = {[1] = "tnt:tnt 3", [2] = "core:sword_steel 2"}}
 	end
 meta:from_table({
 	inventory = contents,

@@ -16,7 +16,7 @@ abstract_dryplants.grow_juncus = function(pos)
 	local juncus_type = math.random(2,3)
 	local right_here = {x=pos.x, y=pos.y+1, z=pos.z}
 	if minetest.get_node(right_here).name == "air"  -- instead of check_air = true,
-	or minetest.get_node(right_here).name == "default:junglegrass" then
+	or minetest.get_node(right_here).name == "core:junglegrass" then
 		if juncus_type == 2 then
 			minetest.set_node(right_here, {name="dryplants:juncus_02"})
 		else
@@ -95,15 +95,15 @@ minetest.register_node("dryplants:juncus_02", {
 -- near water or swamp
 biome_lib:register_generate_plant({
     surface = {
-		"default:dirt_with_grass", 
-		"default:dirt_with_dry_grass", 
-		"default:sand",
+		"core:dirt_with_grass", 
+		"core:dirt_with_dry_grass", 
+		"core:sand",
 		"australia:mangrove_mud"
 	},
     max_count = JUNCUS_NEAR_WATER_PER_MAPBLOCK,
     rarity = 101 - JUNCUS_NEAR_WATER_RARITY,
     min_elevation = 1, -- above sea level
-	near_nodes = {"default:river_water_source","australia:muddy_river_water_source"},
+	near_nodes = {"core:river_water_source","australia:muddy_river_water_source"},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,
@@ -114,13 +114,13 @@ biome_lib:register_generate_plant({
 -- at dunes/beach
 biome_lib:register_generate_plant({
     surface = {
-		"default:sand"
+		"core:sand"
 	},
     max_count = JUNCUS_AT_BEACH_PER_MAPBLOCK,
     rarity = 101 - JUNCUS_AT_BEACH_RARITY,
     min_elevation = 3,
     max_elevation = 3,
-	near_nodes = {"default:dirt_with_grass"},
+	near_nodes = {"core:dirt_with_grass"},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,

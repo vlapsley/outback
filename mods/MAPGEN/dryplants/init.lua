@@ -9,7 +9,7 @@ local mname		= "dryplants"
 -- License (everything): 	WTFPL
 -- Contains code from: 		default, farming
 -- Looked at code from:		darkage, sickle, stairs
--- Dependencies: 			default, farming, biome_lib
+-- Dependencies: 			core, farming, biome_lib
 -- Supports:
 -----------------------------------------------------------------------------------------------
 abstract_dryplants = {}
@@ -90,19 +90,19 @@ local function sickle_on_use(itemstack, user, pointed_thing, uses)
 				return
 			end
 		end
-		minetest.sound_play("default_dig_crumbly", {
+		minetest.sound_play("core_dig_crumbly", {
 			pos = pt.under,
 			gain = 0.5,
 		})
 		itemstack:add_wear(65535/(uses-1))
 		return itemstack
-	elseif string.find(under.name, "default:dirt_with_grass") then
+	elseif string.find(under.name, "core:dirt_with_grass") then
 		if minetest.is_protected(above_pos, user:get_player_name()) or above.name ~= "air" then
 			return
 		end
 		minetest.set_node(pt.under, {name="dryplants:grass_short"})
 		minetest.set_node(above_pos, {name="dryplants:grass"})
-		minetest.sound_play("default_dig_crumbly", {
+		minetest.sound_play("core_dig_crumbly", {
 			pos = pt.under,
 			gain = 0.5,
 		})
@@ -135,7 +135,7 @@ minetest.register_node("dryplants:grass", {
         fixed = {-0.5   , -0.5   , -0.5   ,   0.5   , -0.4375,  0.5   },
     },
 	groups = {snappy=3, flammable=2},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 })
 
 -----------------------------------------------------------------------------------------------
@@ -166,7 +166,7 @@ minetest.register_node("dryplants:hay", {
         fixed = {-0.5   , -0.5   , -0.5   ,   0.5   , -0.4375,  0.5   },
     },
 	groups = {snappy=3, flammable=2},
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = core.node_sound_leaves_defaults(),
 })
 
 -----------------------------------------------------------------------------------------------
@@ -174,12 +174,12 @@ minetest.register_node("dryplants:hay", {
 -----------------------------------------------------------------------------------------------
 minetest.register_node("dryplants:grass_short", {
 	description = S("Short Grass"),
-	tiles = {"default_grass.png^dryplants_grass_short.png", "default_dirt.png", "default_dirt.png^default_grass_side.png^dryplants_grass_short_side.png"},
+	tiles = {"core_grass.png^dryplants_grass_short.png", "core_dirt.png", "core_dirt.png^core_grass_side.png^dryplants_grass_short_side.png"},
 	is_ground_content = true,
 	groups = {crumbly=3,soil=1,not_in_creative_inventory=1},
-	--drop = 'default:dirt',
-	sounds = default.node_sound_dirt_defaults({
-		footstep = {name="default_grass_footstep", gain=0.4},
+	--drop = 'core:dirt',
+	sounds = core.node_sound_dirt_defaults({
+		footstep = {name="core_grass_footstep", gain=0.4},
 	}),
 })
 
@@ -194,7 +194,7 @@ minetest.register_abm({
 		-- Only become dirt with grass if no cut grass or hay lies on top
 		local above = minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z})
 		if above.name ~= "dryplants:grass" and above.name ~= "dryplants:hay" then
-			minetest.set_node(pos, {name="default:dirt_with_grass"})
+			minetest.set_node(pos, {name="core:dirt_with_grass"})
 		end
 	end,
 })

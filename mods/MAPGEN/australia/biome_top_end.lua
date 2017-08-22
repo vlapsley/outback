@@ -6,13 +6,13 @@ local math_random = math.random
 -- top end
 minetest.register_biome({
 	name =              "top_end",
-	node_top =          "default:dirt_with_grass",
+	node_top =          "core:dirt_with_grass",
 	depth_top =         1,
-	node_filler =       "default:sandstone",
+	node_filler =       "core:sandstone",
 	depth_filler =      3,
-	node_stone =        "default:stone",
+	node_stone =        "core:stone",
 	node_river_water =  "australia:muddy_river_water_source",
-	node_riverbed =     "default:dirt",
+	node_riverbed =     "core:dirt",
 	depth_riverbed =    1,
 	y_min =             4,
 	y_max =             31000,
@@ -30,8 +30,8 @@ minetest.register_biome({
 -- Copper
 minetest.register_ore({
 	ore_type =         "blob",
-	ore =              "default:stone_with_copper",
-	wherein =          {"default:stone"},
+	ore =              "core:stone_with_copper",
+	wherein =          {"core:stone"},
 	clust_scarcity =   44 * 44 * 44,
 	clust_size =       8,
 	biomes =           {"top_end"},
@@ -51,8 +51,8 @@ minetest.register_ore({
 -- Diamond
 minetest.register_ore({
 	ore_type =        "scatter",
-	ore =             "default:stone_with_diamond",
-	wherein =         {"default:stone"},
+	ore =             "core:stone_with_diamond",
+	wherein =         {"core:stone"},
 	clust_scarcity =  40 * 40 * 40,
 	clust_num_ores =  12,
 	clust_size =      4,
@@ -67,7 +67,7 @@ if minetest.get_modpath("technic_worldgen") then
 	minetest.register_ore({
 		ore_type =         "scatter",
 		ore =              "technic:mineral_uranium",
-		wherein =          {"default:stone"},
+		wherein =          {"core:stone"},
 		clust_scarcity =   28 * 28 * 28,
 		clust_num_ores =   4,
 		clust_size =       3,
@@ -92,7 +92,7 @@ if minetest.get_modpath("technic_worldgen") then
 	minetest.register_ore({
 		ore_type =         "scatter",
 		ore =              "technic:mineral_uranium",
-		wherein =          {"default:stone"},
+		wherein =          {"core:stone"},
 		clust_scarcity =   26 * 26 * 26,
 		clust_num_ores =   4,
 		clust_size =       3,
@@ -120,7 +120,7 @@ end
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"default:dirt_with_grass"},
+		place_on =      {"core:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -133,7 +133,7 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"top_end"},
 		y_min =         4,
 		y_max =         20,
-		decoration =    "default:grass_"..length,
+		decoration =    "core:grass_"..length,
 	})
 end
 
@@ -153,7 +153,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"top_end"},
 		y_min =         18,
 		y_max =         300,
-		decoration =    "default:dry_grass_"..length,
+		decoration =    "core:dry_grass_"..length,
 	})
 end
 
@@ -172,7 +172,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 -- Grass near rivers
 local function register_rivergrass(length)
 	aus.register_plant({
-		nodes =     {"default:grass_"..length},
+		nodes =     {"core:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
 		priority =  25,
@@ -225,7 +225,7 @@ local function register_small_sandstone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "australia:small_sandstone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"default:dirt_with_grass"},
+		place_on =    {"core:dirt_with_grass"},
 		fill_ratio =  0.002,
 		y_min =       25,
 		biomes =      {"top_end"},

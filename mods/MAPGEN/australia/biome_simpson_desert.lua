@@ -10,7 +10,7 @@ minetest.register_biome({
 	depth_top =         3,
 	node_filler =       "australia:red_stone",
 	depth_filler =      2,
-	node_stone =        "default:stone",
+	node_stone =        "core:stone",
 	node_river_water =  "australia:muddy_river_water_source",
 	node_riverbed =     "australia:red_gravel",
 	depth_riverbed =    1,

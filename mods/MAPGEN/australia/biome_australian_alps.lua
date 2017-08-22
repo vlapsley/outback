@@ -6,12 +6,12 @@ local math_random = math.random
 -- australian alps
 minetest.register_biome({
 	name =            "australian_alps",
-	node_top =        "default:snowblock",
+	node_top =        "core:snowblock",
 	depth_top =       2,
-	node_filler =     "default:dirt_with_snow",
+	node_filler =     "core:dirt_with_snow",
 	depth_filler =    1,
-	node_stone =      "default:stone",
-	node_riverbed =   "default:stone",
+	node_stone =      "core:stone",
+	node_riverbed =   "core:stone",
 	depth_riverbed =  1,
 	y_min =           150,
 	y_max =           31000,
@@ -30,7 +30,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =                "sheet",
 	ore =                     "australia:bluestone",
-	wherein =                 "default:stone",
+	wherein =                 "core:stone",
 	column_height_min =       2,
 	column_height_max =       4,
 	column_midpoint_factor =  0.5,
@@ -57,7 +57,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"default:snowblock"},
+		place_on =      {"core:snowblock"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -70,7 +70,7 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"australian_alps"},
 		y_min =         150,
 		y_max =         210,
-		decoration =    "default:grass_"..length,
+		decoration =    "core:grass_"..length,
 	})
 end
 
@@ -80,13 +80,13 @@ register_grass_decoration(0.03,   0.03,  1)
 -- Snow
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"default:snowblock"},
+	place_on =    {"core:snowblock"},
 	sidelen =     80,
 	fill_ratio =  0.3,
 	biomes =      {"australian_alps"},
 	y_min =       150,
 	y_max =       31000,
-	decoration =  "default:snow",
+	decoration =  "core:snow",
 })
 
 

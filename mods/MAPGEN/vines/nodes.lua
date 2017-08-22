@@ -6,12 +6,12 @@ minetest.register_node("vines:rope_block", {
   sunlight_propagates = true,
   paramtype = "light",
   tiles = {
-    "default_wood.png^vines_rope.png",
-    "default_wood.png^vines_rope.png",
-    "default_wood.png",
-    "default_wood.png",
-    "default_wood.png^vines_rope.png",
-    "default_wood.png^vines_rope.png",
+    "core_wood.png^vines_rope.png",
+    "core_wood.png^vines_rope.png",
+    "core_wood.png",
+    "core_wood.png",
+    "core_wood.png^vines_rope.png",
+    "core_wood.png^vines_rope.png",
   },
   groups = { flammable=2, choppy=2, oddly_breakable_by_hand=1 },
   after_place_node = function(pos)

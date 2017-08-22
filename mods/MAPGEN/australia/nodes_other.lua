@@ -129,7 +129,7 @@ minetest.register_node("australia:salt", {
 
 minetest.register_node( "australia:salt_block", {
 	description = "Salt Block",
-	tiles = {"default_clay.png^aus_salt_block.png"},
+	tiles = {"core_clay.png^aus_salt_block.png"},
 	is_ground_content = true,
 	groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 	on_use = minetest.item_eat(9),
@@ -138,7 +138,7 @@ minetest.register_node( "australia:salt_block", {
 
 minetest.register_node("australia:stone_with_opal", {
 	description = "Opal Ore",
-	tiles = {"default_stone.png^aus_mineral_opal.png"},
+	tiles = {"core_stone.png^aus_mineral_opal.png"},
 	groups = {cracky = 2},
 	drop = "australia:opal",
 	sounds = core.node_sound_stone_defaults(),
@@ -261,7 +261,7 @@ for grid_count = 1, 6 do
 
 	minetest.register_node("australia:small_sandstone_rocks"..grid_count, {
 		description = "Small Sandstone Rocks",
-		tiles = {"default_sandstone.png"},
+		tiles = {"core_sandstone.png"},
 		is_ground_content = true,
 		walkable = false,
 		paramtype = "light",
@@ -282,7 +282,7 @@ end
 
 minetest.register_node("australia:small_sandstone_rocks", {
 	description = "Small Sandstone Rocks",
-	tiles = {"default_sandstone.png"},
+	tiles = {"core_sandstone.png"},
 	inventory_image = "aus_small_sandstone_rocks.png",
 	is_ground_content = true,
 	walkable = false,
@@ -327,7 +327,7 @@ for grid_count = 1, 6 do
 
 	minetest.register_node("australia:small_stone_rocks"..grid_count, {
 		description = "Small Stone Rocks",
-		tiles = {"default_stone.png"},
+		tiles = {"core_stone.png"},
 		is_ground_content = true,
 		walkable = false,
 		paramtype = "light",
@@ -348,7 +348,7 @@ end
 
 minetest.register_node("australia:small_stone_rocks", {
 	description = "Small Stone Rocks",
-	tiles = {"default_stone.png"},
+	tiles = {"core_stone.png"},
 	inventory_image = "aus_small_stone_rocks.png",
 	is_ground_content = true,
 	walkable = false,
@@ -487,14 +487,14 @@ walls.register(":walls:bluestone_cobble", "Bluestone Wall", "aus_bluestone.png",
 walls.register(":walls:bluestone_brick", "Bluestone Brick Wall", "aus_bluestone_brick.png",
 		"australia:bluestone_brick", core.node_sound_stone_defaults())
 
-walls.register(":walls:brick", "Brick Wall", "default_brick.png",
-		"default:brick", core.node_sound_stone_defaults())
+walls.register(":walls:brick", "Brick Wall", "core_brick.png",
+		"core:brick", core.node_sound_stone_defaults())
 
-walls.register(":walls:desert_stone", "Desert Stone Wall", "default_desert_stone.png",
-		"default:desert_stone", core.node_sound_stone_defaults())
+walls.register(":walls:desert_stone", "Desert Stone Wall", "core_desert_stone.png",
+		"core:desert_stone", core.node_sound_stone_defaults())
 
-walls.register(":walls:desert_stonebrick", "Desert Stone Brick Wall", "default_desert_stone_brick.png",
-		"default:desert_stonebrick", core.node_sound_stone_defaults())
+walls.register(":walls:desert_stonebrick", "Desert Stone Brick Wall", "core_desert_stone_brick.png",
+		"core:desert_stonebrick", core.node_sound_stone_defaults())
 
 walls.register(":walls:red_stone", "Red Cobblestone Wall", "aus_red_cobble.png",
 		"australia:red_cobble", core.node_sound_stone_defaults())
@@ -505,17 +505,17 @@ walls.register(":walls:red_cobble", "Red Stone Wall", "aus_red_stone.png",
 walls.register(":walls:red_stonebrick", "Red Stone Brick Wall", "aus_red_stonebrick.png",
 		"australia:red_stonebrick", core.node_sound_stone_defaults())
 
-walls.register(":walls:sandstone", "Sandstone Wall", "default_sandstone.png",
-		"default:sandstone", core.node_sound_stone_defaults())
+walls.register(":walls:sandstone", "Sandstone Wall", "core_sandstone.png",
+		"core:sandstone", core.node_sound_stone_defaults())
 
-walls.register(":walls:sandstone_brick", "Sandstone Brick Wall", "default_sandstone_brick.png",
-		"default:sandstonebrick", core.node_sound_stone_defaults())
+walls.register(":walls:sandstone_brick", "Sandstone Brick Wall", "core_sandstone_brick.png",
+		"core:sandstonebrick", core.node_sound_stone_defaults())
 
 walls.register(":walls:sandstone_cobble", "Sandstone Cobble Wall", "aus_sandstone_cobble.png",
 		"australia:sandstone_cobble", core.node_sound_stone_defaults())
 
-walls.register(":walls:stone", "Stone Wall", "default_stone.png",
-		"default:stone", core.node_sound_stone_defaults())
+walls.register(":walls:stone", "Stone Wall", "core_stone.png",
+		"core:stone", core.node_sound_stone_defaults())
 
-walls.register(":walls:stone_brick", "Stone Brick Wall", "default_stone_brick.png",
-		"default:stonebrick", core.node_sound_stone_defaults())
+walls.register(":walls:stone_brick", "Stone Brick Wall", "core_stone_brick.png",
+		"core:stonebrick", core.node_sound_stone_defaults())

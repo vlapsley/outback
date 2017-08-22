@@ -4,7 +4,7 @@
 -- by Mossmanikin
 -- License (everything): 	WTFPL		
 -- Looked at code from:		darkage, default, farming, sickle, stairs
--- Dependencies: 			default, farming
+-- Dependencies: 			core, farming
 -- Supports:				flint, stoneage, sumpf			
 -----------------------------------------------------------------------------------------------
 
@@ -12,7 +12,7 @@
 -- Short Grass
 -----------------------------------------------------------------------------------------------
 minetest.register_craft({
-	output = "default:dirt",
+	output = "core:dirt",
 	recipe = {
 		{"dryplants:grass_short"},
 	}
@@ -25,13 +25,13 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "dryplants:grass",
 	recipe = {
-		{"default:grass_1"},
+		{"core:grass_1"},
 	}
 })
 minetest.register_craft({
 	output = "dryplants:grass",
 	recipe = {
-		{"default:junglegrass"},
+		{"core:junglegrass"},
 	}
 })
 if minetest.get_modpath("sumpf") ~= nil then
@@ -50,8 +50,8 @@ minetest.register_craft({
 	output = "dryplants:sickle",
 	recipe = {
 		{"group:stone",""},
-		{"", "default:stick"},
-		{"default:stick",""}
+		{"", "core:stick"},
+		{"core:stick",""}
 	}
 })
 if minetest.get_modpath("flint") ~= nil then
@@ -59,8 +59,8 @@ if minetest.get_modpath("flint") ~= nil then
 		output = "dryplants:sickle",
 		recipe = {
 			{"flint:flintstone",""},
-			{"", "default:stick"},
-			{"default:stick",""}
+			{"", "core:stick"},
+			{"core:stick",""}
 		}
 	})
 end
@@ -69,8 +69,8 @@ if minetest.get_modpath("stoneage") ~= nil then
 		output = "dryplants:sickle",
 		recipe = {
 			{"stoneage:silex",""},
-			{"", "default:stick"},
-			{"default:stick",""}
+			{"", "core:stick"},
+			{"core:stick",""}
 		}
 	})
 end
@@ -98,8 +98,8 @@ minetest.register_craft({
 minetest.register_craft({ -- papyrus -> wetreed
 	output = "dryplants:wetreed 2",
 	recipe = {
-		{"default:papyrus","default:papyrus"},
-		{"default:papyrus","default:papyrus"},
+		{"core:papyrus","core:papyrus"},
+		{"core:papyrus","core:papyrus"},
 	}
 })
 minetest.register_craft({ -- reedmace_sapling -> wetreed

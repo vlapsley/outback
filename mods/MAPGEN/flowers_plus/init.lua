@@ -79,9 +79,9 @@ for i in ipairs(lilies_list) do
 			local top_node   = minetest.get_node(top_pos)
 
 			if biome_lib:get_nodedef_field(under_node.name, "buildable_to") then
-				if under_node.name ~= "default:water_source" then
+				if under_node.name ~= "core:water_source" then
 					place_pos = pt.under
-				elseif top_node.name ~= "default:water_source"
+				elseif top_node.name ~= "core:water_source"
 				       and biome_lib:get_nodedef_field(top_node.name, "buildable_to") then
 					place_pos = top_pos
 				else
@@ -93,7 +93,7 @@ for i in ipairs(lilies_list) do
 
 			if place_pos and not minetest.is_protected(place_pos, placer:get_player_name()) then
 
-			local nodename = "default:cobble" -- if this block appears, something went....wrong :-)
+			local nodename = "core:cobble" -- if this block appears, something went....wrong :-)
 
 				if not keys["sneak"] then
 					local node = minetest.get_node(pt.under)
@@ -179,9 +179,9 @@ for i in ipairs(algae_list) do
 			local top_node   = minetest.get_node(top_pos)
 
 			if biome_lib:get_nodedef_field(under_node.name, "buildable_to") then
-				if under_node.name ~= "default:water_source" then
+				if under_node.name ~= "core:water_source" then
 					place_pos = pt.under
-				elseif top_node.name ~= "default:water_source"
+				elseif top_node.name ~= "core:water_source"
 				       and biome_lib:get_nodedef_field(top_node.name, "buildable_to") then
 					place_pos = top_pos
 				else
@@ -193,7 +193,7 @@ for i in ipairs(algae_list) do
 
 			if not minetest.is_protected(place_pos, placer:get_player_name()) then
 
-			local nodename = "default:cobble" -- :D
+			local nodename = "core:cobble" -- :D
 
 				if not keys["sneak"] then
 					--local node = minetest.get_node(pt.under)
@@ -300,12 +300,12 @@ flowers_plus.grow_waterlily = function(pos)
 end
 
 biome_lib:register_generate_plant({
-	surface = {"default:river_water_source", "australia:muddy_water_source"},
+	surface = {"core:river_water_source", "australia:muddy_water_source"},
 	max_count = lilies_max_count,
 	rarity = lilies_rarity,
 	min_elevation = 1,
 	max_elevation = 25,
-	near_nodes = {"default:dirt_with_grass"},
+	near_nodes = {"core:dirt_with_grass"},
 	near_nodes_size = 4,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,
@@ -320,12 +320,12 @@ flowers_plus.grow_seaweed = function(pos)
 end
 
 biome_lib:register_generate_plant({
-    surface = {"default:water_source"},
+    surface = {"core:water_source"},
     max_count = seaweed_max_count,
     rarity = seaweed_rarity,
     min_elevation = 1,
 	max_elevation = 2,
-	near_nodes = {"default:dirt_with_grass"},
+	near_nodes = {"core:dirt_with_grass"},
 	near_nodes_size = 4,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,
@@ -336,12 +336,12 @@ biome_lib:register_generate_plant({
 
 -- seaweed at beaches
 biome_lib:register_generate_plant({
-	surface = {"default:water_source"},
+	surface = {"core:water_source"},
 	max_count = seaweed_max_count,
 	rarity = seaweed_rarity,
 	min_elevation = 1,
 	max_elevation = 2,
-	near_nodes = {"default:sand"},
+	near_nodes = {"core:sand"},
 	near_nodes_size = 1,
 	near_nodes_vertical = 0,
 	near_nodes_count = 3,
@@ -351,12 +351,12 @@ biome_lib:register_generate_plant({
 )
 
 biome_lib:register_generate_plant({
-    surface = {"default:sand"},
+    surface = {"core:sand"},
     max_count = seaweed_max_count*2,
     rarity = seaweed_rarity/2,
     min_elevation = 1,
 	max_elevation = 2,
-	near_nodes = {"default:water_source"},
+	near_nodes = {"core:water_source"},
 	near_nodes_size = 1,
 	near_nodes_vertical = 0,
 	near_nodes_count = 3,
@@ -382,7 +382,7 @@ biome_lib:spawn_on_surfaces({
 	},
 	avoid_radius = 2.5,
 	spawn_chance = SPAWN_CHANCE*4,
-	spawn_surfaces = {"default:river_water_source", "australia:muddy_water_source"},
+	spawn_surfaces = {"core:river_water_source", "australia:muddy_water_source"},
 	avoid_nodes = {"group:flower", "group:flora" },
 	seed_diff = flowers_seed_diff,
 	light_min = 9,
@@ -394,12 +394,12 @@ biome_lib:spawn_on_surfaces({
 	spawn_delay = SPAWN_DELAY*2,
 	spawn_plants = {"flowers:seaweed"},
 	spawn_chance = SPAWN_CHANCE*2,
-	spawn_surfaces = {"default:water_source"},
+	spawn_surfaces = {"core:water_source"},
 	avoid_nodes = {"group:flower", "group:flora"},
 	seed_diff = flowers_seed_diff,
 	light_min = 4,
 	light_max = 10,
-	neighbors = {"default:dirt_with_grass"},
+	neighbors = {"core:dirt_with_grass"},
 	facedir = 1
 })
 
@@ -407,12 +407,12 @@ biome_lib:spawn_on_surfaces({
 	spawn_delay = SPAWN_DELAY*2,
 	spawn_plants = {"flowers:seaweed"},
 	spawn_chance = SPAWN_CHANCE*2,
-	spawn_surfaces = {"default:dirt_with_grass"},
+	spawn_surfaces = {"core:dirt_with_grass"},
 	avoid_nodes = {"group:flower", "group:flora" },
 	seed_diff = flowers_seed_diff,
 	light_min = 4,
 	light_max = 10,
-	neighbors = {"default:water_source"},
+	neighbors = {"core:water_source"},
 	ncount = 1,
 	facedir = 1
 })
@@ -421,12 +421,12 @@ biome_lib:spawn_on_surfaces({
 	spawn_delay = SPAWN_DELAY*2,
 	spawn_plants = {"flowers:seaweed"},
 	spawn_chance = SPAWN_CHANCE*2,
-	spawn_surfaces = {"default:stone"},
+	spawn_surfaces = {"core:stone"},
 	avoid_nodes = {"group:flower", "group:flora" },
 	seed_diff = flowers_seed_diff,
 	light_min = 4,
 	light_max = 10,
-	neighbors = {"default:water_source"},
+	neighbors = {"core:water_source"},
 	ncount = 6,
 	facedir = 1
 })

@@ -4,7 +4,7 @@
 -- by Mossmanikin
 -- License (everything): 	WTFPL
 -- Looked at code from:		darkage, default, stairs
--- Dependencies: 			default
+-- Dependencies: 			core
 -----------------------------------------------------------------------------------------------
 -- support for i18n
 local S = plantlife_i18n.gettext

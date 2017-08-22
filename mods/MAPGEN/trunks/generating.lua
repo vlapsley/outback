@@ -163,7 +163,7 @@ end
 
 if Twigs_on_ground == true then
 biome_lib:register_generate_plant({
-    surface = {"default:dirt_with_grass", "default:dirt_with_dry_grass"},
+    surface = {"core:dirt_with_grass", "core:dirt_with_dry_grass"},
     max_count = Twigs_on_ground_Max_Count,
     rarity = Twigs_on_ground_Rarity,
     min_elevation = 4,
@@ -190,7 +190,7 @@ end
 
 if Twigs_on_water == true then
 biome_lib:register_generate_plant({
-    surface = {"default:water_source"},
+    surface = {"core:water_source"},
     max_count = Twigs_on_water_Max_Count,
     rarity = Twigs_on_water_Rarity,
     min_elevation = 1,
@@ -224,7 +224,7 @@ abstract_trunks.grow_moss_on_ground = function(pos)
 end
 
 biome_lib:register_generate_plant({
-    surface = {"default:dirt_with_grass"},
+    surface = {"core:dirt_with_grass"},
     max_count = Moss_on_ground_Max_Count,
     rarity = Moss_on_ground_Rarity,
     min_elevation = 30,
@@ -315,7 +315,7 @@ biome_lib:register_generate_plant({
 		"australia:southern_sassafras_tree",
 		"australia:swamp_gum_tree",
 		"australia:tasmanian_myrtle_tree",
-		"default:mossycobble"
+		"core:mossycobble"
 	},
     max_count = Moss_on_trunk_Max_Count,
     rarity = Moss_on_trunk_Rarity,
@@ -342,7 +342,7 @@ abstract_trunks.grow_bottlebrush_orchid = function(pos)
 end
 
 biome_lib:register_generate_plant({
-    surface = {"default:dirt_with_grass"},
+    surface = {"core:dirt_with_grass"},
     max_count = Bottlebrush_Orchid_Max_Count,
     rarity = Bottlebrush_Orchid_Rarity,
     min_elevation = 5,
@@ -379,7 +379,7 @@ abstract_trunks.grow_mushrooms = function(pos)
 end
 
 biome_lib:register_generate_plant({
-    surface = {"default:dirt_with_grass"},
+    surface = {"core:dirt_with_grass"},
     max_count = Mushrooms_Max_Count,
     rarity = Mushrooms_Rarity,
     min_elevation = 5,

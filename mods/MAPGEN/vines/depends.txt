@@ -1,5 +1,4 @@
 core
-default
 biome_lib
 plantlife_i18n
 moretrees?

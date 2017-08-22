@@ -54,7 +54,7 @@ minetest.register_abm({
 -- Coral
 minetest.register_decoration({
 	deco_type =     "schematic",
-	place_on =      {"default:sand"},
+	place_on =      {"core:sand"},
 	noise_params =  {
 		offset =   -0.004,
 		scale =    0.1,

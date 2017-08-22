@@ -6,13 +6,13 @@ local math_random = math.random
 -- goldfields / esperence
 minetest.register_biome({
 	name =              "goldfields_esperence",
-	node_top =          "default:desert_sand",
+	node_top =          "core:desert_sand",
 	depth_top =         2,
-	node_filler =       "default:sandstone",
+	node_filler =       "core:sandstone",
 	depth_filler =      2,
-	node_stone =        "default:stone",
-	node_river_water =  "default:dirt_with_dry_grass",
-	node_riverbed =     "default:sandstone",
+	node_stone =        "core:stone",
+	node_river_water =  "core:dirt_with_dry_grass",
+	node_riverbed =     "core:sandstone",
 	depth_riverbed =    1,
 	y_min =             4,
 	y_max =             31000,
@@ -30,8 +30,8 @@ minetest.register_biome({
 -- Gold
 minetest.register_ore({
 	ore_type =         "vein",
-	ore =              "default:stone_with_gold",
-	wherein =          {"default:stone"},
+	ore =              "core:stone_with_gold",
+	wherein =          {"core:stone"},
 	biomes =           {"goldfields_esperence"},
 	y_min =            -192,
 	y_max =            47,
@@ -57,7 +57,7 @@ minetest.register_ore({
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"default:desert_sand"},
+		place_on =      {"core:desert_sand"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -70,7 +70,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"goldfields_esperence"},
 		y_min =         4,
 		y_max =         240,
-		decoration =    "default:dry_grass_"..length,
+		decoration =    "core:dry_grass_"..length,
 	})
 end
 
@@ -83,7 +83,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 -- Spinifex
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"default:desert_sand"},
+	place_on =    {"core:desert_sand"},
 	sidelen =     80,
 	fill_ratio =  0.03,
 	biomes =      {"goldfields_esperence"},
@@ -109,7 +109,7 @@ local function register_small_sandstone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "australia:small_sandstone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"default:desert_sand"},
+		place_on =    {"core:desert_sand"},
 		fill_ratio =  0.002,
 		biomes =      {"goldfields_esperence"},
 		flags =       "place_center_x, place_center_z",

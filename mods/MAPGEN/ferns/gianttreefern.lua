@@ -18,7 +18,7 @@ abstract_ferns.grow_giant_tree_fern = function(pos)
 	local pos_01 = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if minetest.get_node(pos_01).name ~= "air"
 			and minetest.get_node(pos_01).name ~= "ferns:sapling_giant_tree_fern"
-			and minetest.get_node(pos_01).name ~= "default:junglegrass" then
+			and minetest.get_node(pos_01).name ~= "core:junglegrass" then
 		return
 	end
 
@@ -295,7 +295,7 @@ minetest.register_abm({
 -- in Victorian-Forests and Tasmania biomes
 if abstract_ferns.config.enable_giant_treeferns_in_victas == true then
 	biome_lib:register_generate_plant({
-		surface = {"default:dirt_with_grass"},
+		surface = {"core:dirt_with_grass"},
 		max_count = 30,
 		avoid_nodes = {"group:tree"},
 		avoid_radius = 3,
@@ -317,7 +317,7 @@ end
 -- In Far North Queensland biome
 if abstract_ferns.config.enable_giant_treeferns_in_fnq == true then
 	biome_lib:register_generate_plant({
-		surface = {"default:dirt_with_grass"},
+		surface = {"core:dirt_with_grass"},
 		max_count = 20,
 		rarity = 66,
 		seed_diff = 329,

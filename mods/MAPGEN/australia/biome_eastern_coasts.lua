@@ -6,13 +6,13 @@ local math_random = math.random
 -- eastern coasts
 minetest.register_biome({
 	name =              "eastern_coasts",
-	node_top =          "default:dirt_with_grass",
+	node_top =          "core:dirt_with_grass",
 	depth_top =         1,
-	node_filler =       "default:dirt",
+	node_filler =       "core:dirt",
 	depth_filler =      3,
-	node_stone =        "default:stone",
+	node_stone =        "core:stone",
 	node_river_water =  "australia:muddy_river_water_source",
-	node_riverbed =     "default:dirt",
+	node_riverbed =     "core:dirt",
 	depth_riverbed =    1,
 	y_min =             4,
 	y_max =             31000,
@@ -31,7 +31,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =                "sheet",
 	ore =                     "australia:bluestone",
-	wherein =                 "default:stone",
+	wherein =                 "core:stone",
 	column_height_min =       2,
 	column_height_max =       4,
 	column_midpoint_factor =  0.5,
@@ -52,8 +52,8 @@ minetest.register_ore({
 -- Coal
 minetest.register_ore({
 	ore_type =                "sheet",
-	ore =                     "default:stone_with_coal",
-	wherein =                 "default:stone",
+	ore =                     "core:stone_with_coal",
+	wherein =                 "core:stone",
 	column_height_min =       2,
 	column_height_max =       4,
 	column_midpoint_factor =  0.5,
@@ -80,7 +80,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"default:dirt_with_grass"},
+		place_on =      {"core:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -93,7 +93,7 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"eastern_coasts"},
 		y_min =         4,
 		y_max =         200,
-		decoration =    "default:grass_"..length,
+		decoration =    "core:grass_"..length,
 	})
 end
 
@@ -106,7 +106,7 @@ register_grass_decoration(0.03,   0.03,  1)
 -- Grass near rivers
 local function register_rivergrass(length)
 	aus.register_plant({
-		nodes =     {"default:grass_"..length},
+		nodes =     {"core:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
 		priority =  25,
@@ -122,7 +122,7 @@ register_rivergrass(4)
 -- Waratah
 aus.register_plant({
 	nodes = {
-		stem =    "default:bush_stem",
+		stem =    "core:bush_stem",
 		leaves =  "australia:waratah_leaves",
 		air =     "air",
 		ignore =  "ignore",
@@ -143,13 +143,13 @@ aus.register_plant({
 -- Snow
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"default:dirt_with_grass"},
+	place_on =    {"core:dirt_with_grass"},
 	sidelen =     80,
 	fill_ratio =  0.3,
 	biomes =      {"eastern_coasts"},
 	y_min =       140,
 	y_max =       31000,
-	decoration =  "default:snow",
+	decoration =  "core:snow",
 })
 
 -- Small stone rocks
@@ -158,7 +158,7 @@ local function register_small_stone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "australia:small_stone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"default:dirt_with_grass"},
+		place_on =    {"core:dirt_with_grass"},
 		fill_ratio =  0.003,
 		y_min =       16,
 		biomes =      {"eastern_coasts"},

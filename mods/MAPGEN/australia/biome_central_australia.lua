@@ -10,7 +10,7 @@ minetest.register_biome({
 	depth_top =         1,
 	node_filler =       "australia:red_stone",
 	depth_filler =      2,
-	node_stone =        "default:stone",
+	node_stone =        "core:stone",
 	node_river_water =  "australia:muddy_river_water_source",
 	node_riverbed =     "australia:red_dirt",
 	depth_riverbed =    1,
@@ -32,7 +32,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =         "vein",
 	ore =              "australia:stone_with_opal",
-	wherein =          "default:stone",
+	wherein =          "core:stone",
 	biomes =           {"central_australia"},
 	y_min =            -30,
 	y_max =            23,
@@ -54,7 +54,7 @@ if minetest.get_modpath("technic_worldgen") then
 	minetest.register_ore({
 		ore_type =         "scatter",
 		ore =              "technic:mineral_uranium",
-		wherein =          "default:stone",
+		wherein =          "core:stone",
 		clust_scarcity =   20 * 20 * 20,
 		clust_num_ores =   6,
 		clust_size =       4,
@@ -95,7 +95,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"central_australia"},
 		y_min =         4,
 		y_max =         300,
-		decoration =    "default:dry_grass_"..length,
+		decoration =    "core:dry_grass_"..length,
 	})
 end
 
@@ -106,7 +106,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 -- Grass near rivers
 local function register_dryrivergrass(length)
 	aus.register_plant({
-		nodes =     {"default:dry_grass_"..length},
+		nodes =     {"core:dry_grass_"..length},
 		cover =     0.1,
 		density =   0.33,
 		priority =  25,

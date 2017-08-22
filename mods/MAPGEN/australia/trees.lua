@@ -831,7 +831,7 @@ function aus.grow_flame_grevillea(pos)
 	local height = 1
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
-	local stem = minetest.get_content_id("default:acacia_bush_stem")
+	local stem = minetest.get_content_id("core:acacia_bush_stem")
 	local leaves = minetest.get_content_id("australia:flame_grevillea_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
@@ -1266,7 +1266,7 @@ function aus.grow_red_bottlebrush(pos)
 	local height = 1
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
-	local stem = minetest.get_content_id("default:bush_stem")
+	local stem = minetest.get_content_id("core:bush_stem")
 	local leaves = minetest.get_content_id("australia:red_bottlebrush_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
@@ -1617,7 +1617,7 @@ function aus.grow_waratah(pos)
 	local height = 1
 	local radius = math_random(1, 2)
 	-- voxelmanip stuff
-	local stem = minetest.get_content_id("default:bush_stem")
+	local stem = minetest.get_content_id("core:bush_stem")
 	local leaves = minetest.get_content_id("australia:waratah_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")

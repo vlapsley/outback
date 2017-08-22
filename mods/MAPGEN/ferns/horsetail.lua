@@ -81,16 +81,16 @@ if abstract_ferns.config.enable_horsetails_spawning == true then
 		spawn_plants = node_names,
 		spawn_chance = 400,
 		spawn_surfaces = {
-			"default:dirt_with_grass",
-			"default:mossycobble",
-			"default:gravel"
+			"core:dirt_with_grass",
+			"core:mossycobble",
+			"core:gravel"
 		},
 		seed_diff = 329,
 		min_elevation = 30,
 		max_elevation = 120,
 		near_nodes = {
 			"group:water",
-			"default:gravel"
+			"core:gravel"
 		},
 		near_nodes_size = 2,
 		near_nodes_vertical = 1,
@@ -105,17 +105,17 @@ end
 
 if abstract_ferns.config.enable_horsetails_on_grass == true then
 	biome_lib:register_generate_plant({
-		surface = {"default:dirt_with_grass"},
+		surface = {"core:dirt_with_grass"},
 		max_count = 35,
 		rarity = 40,
 		min_elevation = 30,
 		max_elevation = 120,
 		near_nodes = {
 			"group:water", -- likes water (of course)
-			"default:gravel", -- near those on gravel
-			"default:clay", -- some like clay
-			"default:mossycobble",
-			"default:cobble"
+			"core:gravel", -- near those on gravel
+			"core:clay", -- some like clay
+			"core:mossycobble",
+			"core:cobble"
 		},
 		near_nodes_size = 3,
 		near_nodes_vertical = 2,
@@ -129,8 +129,8 @@ end
 if abstract_ferns.config.enable_horsetails_on_stones == true then
 	biome_lib:register_generate_plant({
 		surface = {
-			"default:gravel", -- roots go deep
-			"default:mossycobble"
+			"core:gravel", -- roots go deep
+			"core:mossycobble"
 		},
 		max_count = 35,
 		rarity = 20,

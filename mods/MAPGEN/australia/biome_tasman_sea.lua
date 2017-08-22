@@ -6,12 +6,12 @@ local math_random = math.random
 -- tasman sea
 minetest.register_biome({
 	name =            "tasman_sea",
-	node_top =        "default:sand",
+	node_top =        "core:sand",
 	depth_top =       3,
 	node_filler =     "australia:bluestone",
 	depth_filler =    4,
-	node_stone =      "default:stone",
-	node_riverbed =   "default:sand",
+	node_stone =      "core:stone",
+	node_riverbed =   "core:sand",
 	depth_riverbed =  1,
 	y_min =           -192,
 	y_max =           3,
@@ -29,7 +29,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =        "scatter",
 	ore =             "australia:stone_kelp_brown",
-	wherein =         {"default:sand"},
+	wherein =         {"core:sand"},
 	clust_scarcity =  9 * 9 * 9,
 	clust_num_ores =  25,
 	clust_size =      6,
@@ -41,7 +41,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =        "scatter",
 	ore =             "australia:stone_kelp_giant_brown",
-	wherein =         {"default:sand"},
+	wherein =         {"core:sand"},
 	clust_scarcity =  10 * 10 * 10,
 	clust_num_ores =  24,
 	clust_size =      8,
@@ -53,7 +53,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =        "scatter",
 	ore =             "australia:woodship",
-	wherein =         {"default:sand"},
+	wherein =         {"core:sand"},
 	clust_scarcity =  60 * 60 * 60,
 	clust_num_ores =  1,
 	clust_size =      12,
@@ -71,7 +71,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"default:sand"},
+		place_on =      {"core:sand"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -84,14 +84,14 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"tasman_sea"},
 		y_min =         3,
 		y_max =         3,
-		decoration =    "default:grass_"..length,
+		decoration =    "core:grass_"..length,
 	})
 end
 
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"default:sand"},
+		place_on =      {"core:sand"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -104,7 +104,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"tasman_sea"},
 		y_min =         3,
 		y_max =         3,
-		decoration =    "default:dry_grass_"..length,
+		decoration =    "core:dry_grass_"..length,
 	})
 end
 
@@ -152,7 +152,7 @@ minetest.register_abm({
 	chance =     5,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
-		if (minetest.get_node(yp).name == "default:water_source" or
+		if (minetest.get_node(yp).name == "core:water_source" or
 		minetest.get_node(yp).name == "australia:water_source") then
 			pos.y = pos.y + 1
 			minetest.add_node(pos, {name = "australia:kelp_brown"}) else
@@ -167,7 +167,7 @@ minetest.register_abm({
 	chance =     10,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
-		if (minetest.get_node(yp).name == "default:water_source" or
+		if (minetest.get_node(yp).name == "core:water_source" or
 		minetest.get_node(yp).name == "australia:water_source") then
 			pos.y = pos.y + 1
 			minetest.add_node(pos, {name = "australia:kelp_giant_brown"}) else
@@ -185,11 +185,11 @@ minetest.register_abm({
 		local yyp = {x = pos.x, y = pos.y + 2, z = pos.z}
 		local yyyp = {x = pos.x, y = pos.y + 3, z = pos.z}
 		if minetest.get_node(pos).name == "australia:kelp_giant_brown" and
-			(minetest.get_node(yp).name == "default:water_source" or
+			(minetest.get_node(yp).name == "core:water_source" or
 			minetest.get_node(yp).name == "australia:water_source") then
-				if (minetest.get_node(yyp).name == "default:water_source" or
+				if (minetest.get_node(yyp).name == "core:water_source" or
 				minetest.get_node(yyp).name == "australia:water_source") then
-					if (minetest.get_node(yyyp).name == "default:water_source" or
+					if (minetest.get_node(yyyp).name == "core:water_source" or
 					minetest.get_node(yyyp).name == "australia:water_source") then
 						minetest.add_node(pos, {name = "australia:kelp_giant_brown_middle"}) 
 						pos.y = pos.y + 1
@@ -209,17 +209,17 @@ minetest.register_abm({
 	action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
 		if minetest.get_node(pos).name == "australia:woodship" and
-		(minetest.get_node(yp).name == "default:water_source" or
+		(minetest.get_node(yp).name == "core:water_source" or
 		minetest.get_node(yp).name == "australia:water_source") then
 
-			minetest.add_node(pos, {name = "default:sand"})
+			minetest.add_node(pos, {name = "core:sand"})
 
 			pos.y = pos.y + 1
 			pos.x = pos.x - 6
 
 			for a = 1, 11 do
 				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "default:tree"})
+				minetest.add_node(pos, {name = "core:tree"})
 			end
 
 			pos.z = pos.z + 1
@@ -227,7 +227,7 @@ minetest.register_abm({
 
 			for a = 1, 9 do
 				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "default:tree"})
+				minetest.add_node(pos, {name = "core:tree"})
 			end
 
 			pos.z = pos.z - 2
@@ -235,7 +235,7 @@ minetest.register_abm({
 
 			for a = 1, 9 do
 				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "default:tree"})
+				minetest.add_node(pos, {name = "core:tree"})
 			end
 
 
@@ -245,7 +245,7 @@ minetest.register_abm({
 
 			for a = 1, 7 do
 				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "default:tree"})
+				minetest.add_node(pos, {name = "core:tree"})
 			end
 
 			pos.z = pos.z + 4
@@ -253,38 +253,38 @@ minetest.register_abm({
 
 			for a = 1, 7 do
 				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "default:tree"})
+				minetest.add_node(pos, {name = "core:tree"})
 			end
 
 			pos.z = pos.z - 1
 			pos.x = pos.x + 1
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			pos.z = pos.z - 1
 			pos.x = pos.x + 1
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			pos.x = pos.x + 1
-			minetest.add_node(pos, {name = "default:tree"})
+			minetest.add_node(pos, {name = "core:tree"})
 
 			pos.z = pos.z - 1
 			pos.x = pos.x - 2
-			minetest.add_node(pos, {name = "default:tree"})
+			minetest.add_node(pos, {name = "core:tree"})
 
 			pos.z = pos.z + 2
 			pos.x = pos.x - 8
-			minetest.add_node(pos, {name = "default:tree"})
+			minetest.add_node(pos, {name = "core:tree"})
 
 			pos.z = pos.z - 1
 			pos.x = pos.x - 1
-			minetest.add_node(pos, {name = "default:tree"})
+			minetest.add_node(pos, {name = "core:tree"})
 
 			pos.x = pos.x - 1
-			minetest.add_node(pos, {name = "default:tree"})
+			minetest.add_node(pos, {name = "core:tree"})
 
 			pos.z = pos.z - 1
 			pos.x = pos.x + 2
-			minetest.add_node(pos, {name = "default:tree"})
+			minetest.add_node(pos, {name = "core:tree"})
 
 
 			pos.y = pos.y + 1
@@ -292,7 +292,7 @@ minetest.register_abm({
 
 			for a = 1, 7 do
 				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "default:wood"})
+				minetest.add_node(pos, {name = "core:wood"})
 			end
 
 			pos.z = pos.z + 4
@@ -300,61 +300,61 @@ minetest.register_abm({
 
 			for a = 1, 7 do
 				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "default:wood"})
+				minetest.add_node(pos, {name = "core:wood"})
 			end
 
 			pos.z = pos.z - 1
 			pos.x = pos.x + 1
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			pos.z = pos.z - 1
 			pos.x = pos.x + 1
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			pos.z = pos.z - 1
 			pos.x = pos.x - 1
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			pos.z = pos.z + 2
 			pos.x = pos.x - 8
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			pos.z = pos.z - 1
 			pos.x = pos.x - 1
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			for a = 1, 3 do
 				pos.x = pos.x - 1
-				minetest.add_node(pos, {name = "default:wood"})
+				minetest.add_node(pos, {name = "core:wood"})
 			end
 
 			pos.z = pos.z - 1
 			pos.x = pos.x + 4
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			pos.z = pos.z + 1
 			pos.x = pos.x + 3
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			pos.y = pos.y + 1
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			pos.y = pos.y - 2
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			pos.y = pos.y + 3
 			pos.z = pos.z - 4
 
 			for a = 1, 7 do
 				pos.z = pos.z + 1
-				minetest.add_node(pos, {name = "default:wood"})
+				minetest.add_node(pos, {name = "core:wood"})
 			end
 
 			pos.z = pos.z - 3
 
 			for a = 1, 2 do
 				pos.y = pos.y + 1
-				minetest.add_node(pos, {name = "default:wood"})
+				minetest.add_node(pos, {name = "core:wood"})
 			end
 
 			pos.y = pos.y + 1
@@ -362,12 +362,12 @@ minetest.register_abm({
 
 			for a = 1, 5 do
 				pos.z = pos.z + 1
-				minetest.add_node(pos, {name = "default:wood"})
+				minetest.add_node(pos, {name = "core:wood"})
 			end
 
 			pos.y = pos.y + 1
 			pos.z = pos.z - 2
-			minetest.add_node(pos, {name = "default:wood"})
+			minetest.add_node(pos, {name = "core:wood"})
 
 			pos.y = pos.y - 7
 			pos.z = pos.z + 1

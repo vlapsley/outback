@@ -136,16 +136,16 @@ minetest.register_node("australia:flame_grevillea_leaves", {
 		}
 	},
 	sounds = core.node_sound_leaves_defaults(),
-	after_place_node = default.after_place_leaves,
+	after_place_node = core.after_place_leaves,
 })
 
 minetest.register_node("australia:flame_grevillea_sapling", {
 	description = "Flame Grevillea Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"default_acacia_sapling.png"},
-	inventory_image = "default_acacia_sapling.png",
-	wield_image = "default_acacia_sapling.png",
+	tiles = {"core_acacia_sapling.png"},
+	inventory_image = "core_acacia_sapling.png",
+	wield_image = "core_acacia_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -160,7 +160,7 @@ minetest.register_node("australia:flame_grevillea_sapling", {
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
 			"australia:flame_grevillea_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
@@ -389,7 +389,7 @@ minetest.register_node("australia:red_bottlebrush_leaves", {
 		}
 	},
 	sounds = core.node_sound_leaves_defaults(),
-	after_place_node = default.after_place_leaves,
+	after_place_node = core.after_place_leaves,
 })
 
 minetest.register_node("australia:red_bottlebrush_sapling", {
@@ -413,7 +413,7 @@ minetest.register_node("australia:red_bottlebrush_sapling", {
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
 			"australia:red_bottlebrush_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
@@ -504,16 +504,16 @@ minetest.register_node("australia:waratah_leaves", {
 		}
 	},
 	sounds = core.node_sound_leaves_defaults(),
-	after_place_node = default.after_place_leaves,
+	after_place_node = core.after_place_leaves,
 })
 
 minetest.register_node("australia:waratah_sapling", {
 	description = "Waratah Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"default_acacia_sapling.png"},
-	inventory_image = "default_acacia_sapling.png",
-	wield_image = "default_acacia_sapling.png",
+	tiles = {"core_acacia_sapling.png"},
+	inventory_image = "core_acacia_sapling.png",
+	wield_image = "core_acacia_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -528,7 +528,7 @@ minetest.register_node("australia:waratah_sapling", {
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
 			"australia:waratah_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked

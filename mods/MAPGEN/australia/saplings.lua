@@ -7,7 +7,7 @@
 -- Sapling ABM
 
 function aus.grow_sapling(pos)
-	if not default.can_grow(pos) then
+	if not core.can_grow(pos) then
 		-- try a bit later again
 		minetest.get_node_timer(pos):start(math.random(24, 60))
 		return
