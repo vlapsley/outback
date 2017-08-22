@@ -114,12 +114,12 @@ function hbhunger.item_eat(hunger_change, replace_with_item, poisen, heal, sound
 	end
 end
 
-if minetest.get_modpath("default") ~= nil then
-	hbhunger.register_food("default:apple", 2)
+if minetest.get_modpath("core") ~= nil then
+	hbhunger.register_food("core:apple", 2)
 end
-if minetest.get_modpath("flowers") ~= nil then
-	hbhunger.register_food("flowers:mushroom_brown", 1)
-	hbhunger.register_food("flowers:mushroom_red", 1, "", 3)
+if minetest.get_modpath("mushrooms") ~= nil then
+	hbhunger.register_food("mushrooms:mushroom_brown", 1)
+	hbhunger.register_food("mushrooms:mushroom_red", 1, "", 3)
 end
 if minetest.get_modpath("farming") ~= nil then
 	hbhunger.register_food("farming:bread", 4)
@@ -218,16 +218,6 @@ if minetest.get_modpath("bushes_classic") then
 		hbhunger.register_food("bushes:"..berry.."_pie_raw", 2)
 		hbhunger.register_food("bushes:"..berry.."_pie_cooked", 5)
 		hbhunger.register_food("bushes:basket_"..berry, 15)
-	end
-end
-
-if minetest.get_modpath("mushroom") ~= nil then
-	hbhunger.register_food("mushroom:brown", 1)
-	hbhunger.register_food("mushroom:red", 1, "", 3)
-	-- mushroom potions: red = strong poison, brown = light restorative
-	if minetest.get_modpath("vessels") then
-		hbhunger.register_food("mushroom:brown_essence", 1, "vessels:glass_bottle", nil, 4)
-		hbhunger.register_food("mushroom:poison", 1, "vessels:glass_bottle", 10)
 	end
 end
 

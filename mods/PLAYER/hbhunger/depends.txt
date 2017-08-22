@@ -1,6 +1,6 @@
 hudbars
+core?
 intllib?
-default?
 flowers?
 animalmaterials?
 bucket?
@@ -26,7 +26,7 @@ mobs?
 moretrees?
 mtfoods?
 mush45?
-mushroom?
+mushrooms?
 seaplants?
 pizza?
 nssm?
