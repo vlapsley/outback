@@ -87,30 +87,6 @@ minetest.register_node("australia:kelp_giant_brown_middle", {
 	sounds = core.node_sound_leaves_defaults(),
 })
 
--- Narrowleaf Seagrass
-minetest.register_node("australia:sea_grass", {
-	description = "Narrowleaf Seagrass",
-	drawtype = "plantlike",
-	waving = 1,
-	visual_scale = 1.0,
-	tiles = {"aus_sea_grass.png"},
-	inventory_image = {"aus_sea_grass.png"},
-	wield_image = {"aus_sea_grass.png"},
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	climable = true,
-	buildable_to = false,
-	drowning = 1,
-	is_ground_content = true,
-	groups = {snappy = 3, attached_node = 1, sea = 1},
-	sounds = core.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
-	},
-})
-
 minetest.register_node("australia:woodship", {
 	description = "Sand",
 	tiles = {"core_sand.png"},

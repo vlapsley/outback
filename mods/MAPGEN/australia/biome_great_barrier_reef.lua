@@ -43,18 +43,6 @@ minetest.register_ore({
 	Decorations
 --]]
 
--- Narrowleaf Seagrass
-minetest.register_decoration({
-	deco_type =   "simple",
-	place_on =    {"core:sand"},
-	sidelen =     80,
-	fill_ratio =  0.01,
-	biomes =      {"great_barrier_reef"},
-	y_min =       -10,
-	y_max =       -2,
-	decoration =  "australia:sea_grass",
-	flags =       "force_placement",
-})
 
 
 --[[

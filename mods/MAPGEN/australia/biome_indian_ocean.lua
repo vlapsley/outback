@@ -103,19 +103,6 @@ register_dry_grass_decoration(0.01, 0.05,  5)
 register_dry_grass_decoration(0.03, 0.03,  4)
 register_dry_grass_decoration(0.05, 0.01,  3)
 
--- Narrowleaf Seagrass
-minetest.register_decoration({
-	deco_type =   "simple",
-	place_on =    {"core:sand"},
-	sidelen =     80,
-	fill_ratio =  0.01,
-	biomes =      {"indian_ocean"},
-	y_min =       -10,
-	y_max =       -2,
-	decoration =  "australia:sea_grass",
-	flags =       "force_placement",
-})
-
 
 --[[
 	Trees
