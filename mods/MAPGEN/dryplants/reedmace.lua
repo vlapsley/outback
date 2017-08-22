@@ -334,7 +334,7 @@ minetest.register_entity("dryplants:reedmace_water_entity",{
 biome_lib:register_generate_plant({
     surface = {
 		"base:sand",
-		"australia:mangrove_mud"
+		"base:mangrove_mud"
 	},
     max_count = REEDMACE_NEAR_WATER_PER_MAPBLOCK,
     rarity = 101 - REEDMACE_NEAR_WATER_RARITY,
@@ -352,7 +352,7 @@ biome_lib:register_generate_plant({
 -- mangroves
 biome_lib:register_generate_plant({
     surface = {
-		"australia:mangrove_mud"
+		"base:mangrove_mud"
 	},
     max_count = REEDMACE_NEAR_WATER_PER_MAPBLOCK,
     rarity = 101 - REEDMACE_NEAR_WATER_RARITY,
@@ -371,7 +371,7 @@ biome_lib:register_generate_plant({
 biome_lib:register_generate_plant({
     surface = {
 		"base:clay",
-		"australia:mangrove_mud"
+		"base:mangrove_mud"
 	},
     max_count = REEDMACE_IN_WATER_PER_MAPBLOCK,
 	rarity = 101 - REEDMACE_IN_WATER_RARITY,

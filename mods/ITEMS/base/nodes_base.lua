@@ -361,6 +361,16 @@ minetest.register_node("base:ice", {
 	sounds = base.node_sound_glass_defaults(),
 })
 
+minetest.register_node("base:mangrove_mud", {
+	description = "Mangrove Mud",
+	tiles = {"base_mangrove_mud.png"},
+	groups = {crumbly = 2, soil = 1, disable_jump = 1},
+	sounds = base.node_sound_dirt_defaults({
+		footstep = {name = "base_mangrove_mud", gain = 0.4},
+		dug = {name = "base_mangrove_mud", gain = 0.4},
+	}),
+})
+
 
 --
 -- Ores

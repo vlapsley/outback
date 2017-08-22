@@ -79,17 +79,6 @@ minetest.register_node("australia:red_gravel", {
 	}),
 })
 
-minetest.register_node("australia:mangrove_mud", {
-	description = "Mangrove Mud",
-	tiles = {"aus_mangrove_mud.png"},
-	liquid_viscosity = 5,
-	groups = {crumbly = 2, soil = 1, disable_jump = 1},
-	sounds = base.node_sound_dirt_defaults({
-		footstep = {name = "aus_mangrove_mud", gain = 0.4},
-		dug = {name = "aus_mangrove_mud", gain = 0.4},
-	}),
-})
-
 minetest.register_node("australia:mineral_salt", {
 	description = "Salt Mineral",
 	tiles = {"aus_red_sand.png^aus_mineral_salt.png"},

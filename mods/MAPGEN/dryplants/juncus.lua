@@ -98,7 +98,7 @@ biome_lib:register_generate_plant({
 		"base:dirt_with_grass", 
 		"base:dirt_with_dry_grass", 
 		"base:sand",
-		"australia:mangrove_mud"
+		"base:mangrove_mud"
 	},
     max_count = JUNCUS_NEAR_WATER_PER_MAPBLOCK,
     rarity = 101 - JUNCUS_NEAR_WATER_RARITY,

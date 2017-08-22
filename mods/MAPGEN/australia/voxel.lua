@@ -225,7 +225,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 		node["red_dirt"] = minetest.get_content_id("australia:red_dirt")
 		node["red_gravel"] = minetest.get_content_id("australia:red_gravel")
 		node["red_sand"] = minetest.get_content_id("australia:red_sand")
-		node["mud"] = minetest.get_content_id("australia:mangrove_mud")
+		node["mud"] = minetest.get_content_id("base:mangrove_mud")
 		node["salt"] = minetest.get_content_id("australia:mineral_salt")
 		-- Water
 		node["water"] = minetest.get_content_id("base:water_source")

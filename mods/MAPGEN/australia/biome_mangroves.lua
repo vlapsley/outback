@@ -6,7 +6,7 @@ local math_random = math.random
 -- mangroves
 minetest.register_biome({
 	name =              "mangroves",
-	node_top =          "australia:mangrove_mud",
+	node_top =          "base:mangrove_mud",
 	depth_top =         3,
 	node_filler =       "base:clay",
 	depth_filler =      1,
@@ -36,7 +36,7 @@ minetest.register_biome({
 minetest.register_decoration({
 	deco_type =   "simple",
 	place_on =    {
-		"australia:mangrove_mud",
+		"base:mangrove_mud",
 		"base:sand",
 		"base:dirt",
 		"base:dirt_with_grass"
@@ -53,7 +53,7 @@ minetest.register_decoration({
 minetest.register_decoration({
 	deco_type =   "simple",
 	place_on =    {
-		"australia:mangrove_mud",
+		"base:mangrove_mud",
 		"base:sand",
 		"base:dirt",
 		"base:dirt_with_grass"
@@ -70,7 +70,7 @@ minetest.register_decoration({
 minetest.register_decoration({
 	deco_type = "schematic",
 	place_on =    {
-		"australia:mangrove_mud",
+		"base:mangrove_mud",
 		"base:sand",
 		"base:dirt",
 	},
@@ -108,7 +108,7 @@ for h = 4, max_ht do
 		deco_type =   "schematic",
 		sidelen =     80,
 		place_on =    {
-			"australia:mangrove_mud",
+			"base:mangrove_mud",
 			"base:sand",
 			"base:dirt",
 			"base:dirt_with_grass",
@@ -159,7 +159,7 @@ for h = 4, max_ht do
 		deco_type =   "schematic",
 		sidelen =     80,
 		place_on =    {
-			"australia:mangrove_mud",
+			"base:mangrove_mud",
 			"base:sand",
 			"base:dirt",
 			"base:dirt_with_grass",
