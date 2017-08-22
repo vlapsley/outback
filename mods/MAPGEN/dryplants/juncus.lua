@@ -103,7 +103,7 @@ biome_lib:register_generate_plant({
     max_count = JUNCUS_NEAR_WATER_PER_MAPBLOCK,
     rarity = 101 - JUNCUS_NEAR_WATER_RARITY,
     min_elevation = 1, -- above sea level
-	near_nodes = {"base:river_water_source","australia:muddy_river_water_source"},
+	near_nodes = {"base:river_water_source","base:muddy_water_source"},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,

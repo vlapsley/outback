@@ -2,9 +2,9 @@
 
 -- Bucket muddy_water
 bucket.register_liquid(
-	"australia:muddy_river_water_source",
-	"australia:muddy_river_water_flowing",
-	"australia:bucket_muddy_river_water",
+	"base:muddy_water_source",
+	"base:muddy_water_flowing",
+	"australia:bucket_muddy_water",
 	"aus_bucket_muddy_water.png",
 	"Muddy Water Bucket",
 	{water_bucket = 1}

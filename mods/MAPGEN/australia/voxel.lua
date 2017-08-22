@@ -229,7 +229,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 		node["salt"] = minetest.get_content_id("australia:mineral_salt")
 		-- Water
 		node["water"] = minetest.get_content_id("base:water_source")
-		node["muddyriver"] = minetest.get_content_id("australia:muddy_river_water_source")
+		node["muddy_water"] = minetest.get_content_id("base:muddy_water_source")
 		-- Air and Ignore
 		node["air"] = minetest.get_content_id("air")
 		node["ignore"] = minetest.get_content_id("ignore")

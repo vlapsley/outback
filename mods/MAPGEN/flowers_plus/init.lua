@@ -300,7 +300,7 @@ flowers_plus.grow_waterlily = function(pos)
 end
 
 biome_lib:register_generate_plant({
-	surface = {"base:river_water_source", "australia:muddy_water_source"},
+	surface = {"base:river_water_source", "base:muddy_water_source"},
 	max_count = lilies_max_count,
 	rarity = lilies_rarity,
 	min_elevation = 1,
@@ -382,7 +382,7 @@ biome_lib:spawn_on_surfaces({
 	},
 	avoid_radius = 2.5,
 	spawn_chance = SPAWN_CHANCE*4,
-	spawn_surfaces = {"base:river_water_source", "australia:muddy_water_source"},
+	spawn_surfaces = {"base:river_water_source", "base:muddy_water_source"},
 	avoid_nodes = {"group:flower", "group:flora" },
 	seed_diff = flowers_seed_diff,
 	light_min = 9,
