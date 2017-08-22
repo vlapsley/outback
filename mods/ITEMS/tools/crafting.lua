@@ -25,7 +25,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:pick_steel',
 	recipe = {
-		{'core:steel_ingot', 'core:steel_ingot', 'core:steel_ingot'},
+		{'base:steel_ingot', 'base:steel_ingot', 'base:steel_ingot'},
 		{'', 'group:stick', ''},
 		{'', 'group:stick', ''},
 	}
@@ -34,7 +34,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:pick_bronze',
 	recipe = {
-		{'core:bronze_ingot', 'core:bronze_ingot', 'core:bronze_ingot'},
+		{'base:bronze_ingot', 'base:bronze_ingot', 'base:bronze_ingot'},
 		{'', 'group:stick', ''},
 		{'', 'group:stick', ''},
 	}
@@ -43,7 +43,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:pick_diamond',
 	recipe = {
-		{'core:diamond', 'core:diamond', 'core:diamond'},
+		{'base:diamond', 'base:diamond', 'base:diamond'},
 		{'', 'group:stick', ''},
 		{'', 'group:stick', ''},
 	}
@@ -70,7 +70,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:shovel_steel',
 	recipe = {
-		{'core:steel_ingot'},
+		{'base:steel_ingot'},
 		{'group:stick'},
 		{'group:stick'},
 	}
@@ -79,7 +79,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:shovel_bronze',
 	recipe = {
-		{'core:bronze_ingot'},
+		{'base:bronze_ingot'},
 		{'group:stick'},
 		{'group:stick'},
 	}
@@ -88,7 +88,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:shovel_diamond',
 	recipe = {
-		{'core:diamond'},
+		{'base:diamond'},
 		{'group:stick'},
 		{'group:stick'},
 	}
@@ -115,8 +115,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:axe_steel',
 	recipe = {
-		{'core:steel_ingot', 'core:steel_ingot'},
-		{'core:steel_ingot', 'group:stick'},
+		{'base:steel_ingot', 'base:steel_ingot'},
+		{'base:steel_ingot', 'group:stick'},
 		{'', 'group:stick'},
 	}
 })
@@ -124,8 +124,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:axe_bronze',
 	recipe = {
-		{'core:bronze_ingot', 'core:bronze_ingot'},
-		{'core:bronze_ingot', 'group:stick'},
+		{'base:bronze_ingot', 'base:bronze_ingot'},
+		{'base:bronze_ingot', 'group:stick'},
 		{'', 'group:stick'},
 	}
 })
@@ -133,8 +133,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:axe_diamond',
 	recipe = {
-		{'core:diamond', 'core:diamond'},
-		{'core:diamond', 'group:stick'},
+		{'base:diamond', 'base:diamond'},
+		{'base:diamond', 'group:stick'},
 		{'', 'group:stick'},
 	}
 })
@@ -160,8 +160,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:axe_steel',
 	recipe = {
-		{'core:steel_ingot', 'core:steel_ingot'},
-		{'group:stick', 'core:steel_ingot'},
+		{'base:steel_ingot', 'base:steel_ingot'},
+		{'group:stick', 'base:steel_ingot'},
 		{'group:stick', ''},
 	}
 })
@@ -169,8 +169,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:axe_bronze',
 	recipe = {
-		{'core:bronze_ingot', 'core:bronze_ingot'},
-		{'group:stick', 'core:bronze_ingot'},
+		{'base:bronze_ingot', 'base:bronze_ingot'},
+		{'group:stick', 'base:bronze_ingot'},
 		{'group:stick', ''},
 	}
 })
@@ -178,8 +178,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:axe_diamond',
 	recipe = {
-		{'core:diamond', 'core:diamond'},
-		{'group:stick', 'core:diamond'},
+		{'base:diamond', 'base:diamond'},
+		{'group:stick', 'base:diamond'},
 		{'group:stick', ''},
 	}
 })
@@ -205,8 +205,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:sword_steel',
 	recipe = {
-		{'core:steel_ingot'},
-		{'core:steel_ingot'},
+		{'base:steel_ingot'},
+		{'base:steel_ingot'},
 		{'group:stick'},
 	}
 })
@@ -214,8 +214,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:sword_bronze',
 	recipe = {
-		{'core:bronze_ingot'},
-		{'core:bronze_ingot'},
+		{'base:bronze_ingot'},
+		{'base:bronze_ingot'},
 		{'group:stick'},
 	}
 })
@@ -223,8 +223,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:sword_diamond',
 	recipe = {
-		{'core:diamond'},
-		{'core:diamond'},
+		{'base:diamond'},
+		{'base:diamond'},
 		{'group:stick'},
 	}
 })
@@ -232,20 +232,20 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'tools:skeleton_key',
 	recipe = {
-		{'core:gold_ingot'},
+		{'base:gold_ingot'},
 	}
 })
 
 minetest.register_craft({
 	type = 'cooking',
-	output = 'core:gold_ingot',
+	output = 'base:gold_ingot',
 	recipe = 'tools:key',
 	cooktime = 5,
 })
 
 minetest.register_craft({
 	type = 'cooking',
-	output = 'core:gold_ingot',
+	output = 'base:gold_ingot',
 	recipe = 'tools:skeleton_key',
 	cooktime = 5,
 })

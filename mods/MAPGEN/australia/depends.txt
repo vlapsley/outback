@@ -1,4 +1,4 @@
-core
+base
 biome_lib
 ferns
 bucket

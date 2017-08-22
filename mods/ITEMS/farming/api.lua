@@ -52,7 +52,7 @@ farming.hoe_on_use = function(itemstack, user, pointed_thing, uses)
 
 	-- turn the node into soil and play sound
 	minetest.set_node(pt.under, {name = regN[under.name].soil.dry})
-	minetest.sound_play("core_dig_crumbly", {
+	minetest.sound_play("base_dig_crumbly", {
 		pos = pt.under,
 		gain = 0.5,
 	})
@@ -101,7 +101,7 @@ farming.register_hoe = function(name, def)
 			return farming.hoe_on_use(itemstack, user, pointed_thing, def.max_uses)
 		end,
 		groups = def.groups,
-		sound = {breaks = "core_tool_breaks"},
+		sound = {breaks = "base_tool_breaks"},
 	})
 	-- Register its recipe
 	if def.material == nil then
@@ -308,10 +308,10 @@ farming.register_plant = function(name, def)
 			fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 		},
 		fertility = def.fertility,
-		sounds = core.node_sound_dirt_defaults({
+		sounds = base.node_sound_dirt_defaults({
 			dig = {name = "", gain = 0},
-			dug = {name = "core_grass_footstep", gain = 0.2},
-			place = {name = "core_place_node", gain = 0.25},
+			dug = {name = "base_grass_footstep", gain = 0.2},
+			place = {name = "base_place_node", gain = 0.25},
 		}),
 
 		on_place = function(itemstack, placer, pointed_thing)
@@ -378,7 +378,7 @@ farming.register_plant = function(name, def)
 				fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 			},
 			groups = nodegroups,
-			sounds = core.node_sound_leaves_defaults(),
+			sounds = base.node_sound_leaves_defaults(),
 			next_plant = next_plant,
 			on_timer = farming.grow_plant,
 			minlight = def.minlight,

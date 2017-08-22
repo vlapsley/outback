@@ -6,13 +6,13 @@ local math_random = math.random
 -- tasmania
 minetest.register_biome({
 	name =              "tasmania",
-	node_top =          "core:dirt_with_grass",
+	node_top =          "base:dirt_with_grass",
 	depth_top =         1,
-	node_filler =       "core:dirt",
+	node_filler =       "base:dirt",
 	depth_filler =      3,
-	node_stone =        "core:stone",
-	node_river_water =  "core:river_water_source",
-	node_riverbed =     "core:sand",
+	node_stone =        "base:stone",
+	node_river_water =  "base:river_water_source",
+	node_riverbed =     "base:sand",
 	depth_riverbed =    1,
 	y_min =             4,
 	y_max =             31000,
@@ -36,7 +36,7 @@ minetest.register_biome({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"core:dirt_with_grass"},
+		place_on =      {"base:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -49,7 +49,7 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"tasmania"},
 		y_min =         4,
 		y_max =         170,
-		decoration =    "core:grass_"..length,
+		decoration =    "base:grass_"..length,
 	})
 end
 
@@ -62,7 +62,7 @@ register_grass_decoration(0.06,   0.06,  1)
 -- Grass near rivers
 local function register_rivergrass(length)
 	aus.register_plant({
-		nodes =     {"core:grass_"..length},
+		nodes =     {"base:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
 		priority =  25,
@@ -78,13 +78,13 @@ register_rivergrass(4)
 -- Snow
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"core:dirt_with_grass"},
+	place_on =    {"base:dirt_with_grass"},
 	sidelen =     80,
 	fill_ratio =  0.3,
 	biomes =      {"tasmania"},
 	y_min =       140,
 	y_max =       31000,
-	decoration =  "core:snow",
+	decoration =  "base:snow",
 })
 
 -- Small stone rocks
@@ -93,7 +93,7 @@ local function register_small_stone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "australia:small_stone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"core:dirt_with_grass"},
+		place_on =    {"base:dirt_with_grass"},
 		fill_ratio =  0.001,
 		y_min =       48,
 		biomes =      {"tasmania"},

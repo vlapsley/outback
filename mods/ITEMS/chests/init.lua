@@ -92,29 +92,29 @@ function chests.register_chest(name, d)
 			local meta = minetest.get_meta(pos);
 			local inv = meta:get_inventory()
 			return inv:is_empty("main") and
-					core.can_interact_with_node(player, pos)
+					base.can_interact_with_node(player, pos)
 		end
 		def.allow_metadata_inventory_move = function(pos, from_list, from_index,
 				to_list, to_index, count, player)
-			if not core.can_interact_with_node(player, pos) then
+			if not base.can_interact_with_node(player, pos) then
 				return 0
 			end
 			return count
 		end
 		def.allow_metadata_inventory_put = function(pos, listname, index, stack, player)
-			if not core.can_interact_with_node(player, pos) then
+			if not base.can_interact_with_node(player, pos) then
 				return 0
 			end
 			return stack:get_count()
 		end
 		def.allow_metadata_inventory_take = function(pos, listname, index, stack, player)
-			if not core.can_interact_with_node(player, pos) then
+			if not base.can_interact_with_node(player, pos) then
 				return 0
 			end
 			return stack:get_count()
 		end
 		def.on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-			if not core.can_interact_with_node(clicker, pos) then
+			if not base.can_interact_with_node(clicker, pos) then
 				return itemstack
 			end
 
@@ -217,7 +217,7 @@ function chests.register_chest(name, d)
 	end
 	def.on_blast = function(pos)
 		local drops = {}
-		core.get_inventory_drops(pos, "main", drops)
+		base.get_inventory_drops(pos, "main", drops)
 		drops[#drops+1] = "chests:chest"
 		minetest.remove_node(pos)
 		return drops
@@ -258,7 +258,7 @@ chests.register_chest("chest", {
 		"chests_chest_front.png",
 		"chests_chest_inside.png"
 	},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 	sound_open = "chests_chest_open",
 	sound_close = "chests_chest_close",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2},
@@ -274,7 +274,7 @@ chests.register_chest("chest_locked", {
 		"chests_chest_lock.png",
 		"chests_chest_inside.png"
 	},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 	sound_open = "chests_chest_open",
 	sound_close = "chests_chest_close",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2},
@@ -295,7 +295,7 @@ minetest.register_craft({
 	output = 'chests:chest_locked',
 	recipe = {
 		{'group:wood', 'group:wood', 'group:wood'},
-		{'group:wood', 'core:steel_ingot', 'group:wood'},
+		{'group:wood', 'base:steel_ingot', 'group:wood'},
 		{'group:wood', 'group:wood', 'group:wood'},
 	}
 })
@@ -303,7 +303,7 @@ minetest.register_craft({
 minetest.register_craft( {
 	type = "shapeless",
 	output = "chests:chest_locked",
-	recipe = {"chests:chest", "core:steel_ingot"},
+	recipe = {"chests:chest", "base:steel_ingot"},
 })
 
 minetest.register_craft({

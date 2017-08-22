@@ -54,7 +54,7 @@ for i in ipairs(lilies_list) do
 		paramtype2 = "facedir",
 		walkable = false,
 		groups = lily_groups,
-		sounds = core.node_sound_leaves_defaults(),
+		sounds = base.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",
 			fixed = { -0.4, -0.5, -0.4, 0.4, -0.45, 0.4 },
@@ -79,9 +79,9 @@ for i in ipairs(lilies_list) do
 			local top_node   = minetest.get_node(top_pos)
 
 			if biome_lib:get_nodedef_field(under_node.name, "buildable_to") then
-				if under_node.name ~= "core:water_source" then
+				if under_node.name ~= "base:water_source" then
 					place_pos = pt.under
-				elseif top_node.name ~= "core:water_source"
+				elseif top_node.name ~= "base:water_source"
 				       and biome_lib:get_nodedef_field(top_node.name, "buildable_to") then
 					place_pos = top_pos
 				else
@@ -93,7 +93,7 @@ for i in ipairs(lilies_list) do
 
 			if place_pos and not minetest.is_protected(place_pos, placer:get_player_name()) then
 
-			local nodename = "core:cobble" -- if this block appears, something went....wrong :-)
+			local nodename = "base:cobble" -- if this block appears, something went....wrong :-)
 
 				if not keys["sneak"] then
 					local node = minetest.get_node(pt.under)
@@ -155,7 +155,7 @@ for i in ipairs(algae_list) do
 		paramtype2 = "facedir",
 		walkable = false,
 		groups = algae_groups,
-		sounds = core.node_sound_leaves_defaults(),
+		sounds = base.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",
 			fixed = { -0.4, -0.5, -0.4, 0.4, -0.45, 0.4 },
@@ -179,9 +179,9 @@ for i in ipairs(algae_list) do
 			local top_node   = minetest.get_node(top_pos)
 
 			if biome_lib:get_nodedef_field(under_node.name, "buildable_to") then
-				if under_node.name ~= "core:water_source" then
+				if under_node.name ~= "base:water_source" then
 					place_pos = pt.under
-				elseif top_node.name ~= "core:water_source"
+				elseif top_node.name ~= "base:water_source"
 				       and biome_lib:get_nodedef_field(top_node.name, "buildable_to") then
 					place_pos = top_pos
 				else
@@ -193,7 +193,7 @@ for i in ipairs(algae_list) do
 
 			if not minetest.is_protected(place_pos, placer:get_player_name()) then
 
-			local nodename = "core:cobble" -- :D
+			local nodename = "base:cobble" -- :D
 
 				if not keys["sneak"] then
 					--local node = minetest.get_node(pt.under)
@@ -244,7 +244,7 @@ minetest.register_node(":flowers:sunflower", {
 	buildable_to = true,
 	is_ground_content = true,
 	groups = { dig_immediate=3, flora=1, flammable=3 },
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 	selection_box = box,
 	collision_box = box,
 	drop = {
@@ -300,12 +300,12 @@ flowers_plus.grow_waterlily = function(pos)
 end
 
 biome_lib:register_generate_plant({
-	surface = {"core:river_water_source", "australia:muddy_water_source"},
+	surface = {"base:river_water_source", "australia:muddy_water_source"},
 	max_count = lilies_max_count,
 	rarity = lilies_rarity,
 	min_elevation = 1,
 	max_elevation = 25,
-	near_nodes = {"core:dirt_with_grass"},
+	near_nodes = {"base:dirt_with_grass"},
 	near_nodes_size = 4,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,
@@ -320,12 +320,12 @@ flowers_plus.grow_seaweed = function(pos)
 end
 
 biome_lib:register_generate_plant({
-    surface = {"core:water_source"},
+    surface = {"base:water_source"},
     max_count = seaweed_max_count,
     rarity = seaweed_rarity,
     min_elevation = 1,
 	max_elevation = 2,
-	near_nodes = {"core:dirt_with_grass"},
+	near_nodes = {"base:dirt_with_grass"},
 	near_nodes_size = 4,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,
@@ -336,12 +336,12 @@ biome_lib:register_generate_plant({
 
 -- seaweed at beaches
 biome_lib:register_generate_plant({
-	surface = {"core:water_source"},
+	surface = {"base:water_source"},
 	max_count = seaweed_max_count,
 	rarity = seaweed_rarity,
 	min_elevation = 1,
 	max_elevation = 2,
-	near_nodes = {"core:sand"},
+	near_nodes = {"base:sand"},
 	near_nodes_size = 1,
 	near_nodes_vertical = 0,
 	near_nodes_count = 3,
@@ -351,12 +351,12 @@ biome_lib:register_generate_plant({
 )
 
 biome_lib:register_generate_plant({
-    surface = {"core:sand"},
+    surface = {"base:sand"},
     max_count = seaweed_max_count*2,
     rarity = seaweed_rarity/2,
     min_elevation = 1,
 	max_elevation = 2,
-	near_nodes = {"core:water_source"},
+	near_nodes = {"base:water_source"},
 	near_nodes_size = 1,
 	near_nodes_vertical = 0,
 	near_nodes_count = 3,
@@ -382,7 +382,7 @@ biome_lib:spawn_on_surfaces({
 	},
 	avoid_radius = 2.5,
 	spawn_chance = SPAWN_CHANCE*4,
-	spawn_surfaces = {"core:river_water_source", "australia:muddy_water_source"},
+	spawn_surfaces = {"base:river_water_source", "australia:muddy_water_source"},
 	avoid_nodes = {"group:flower", "group:flora" },
 	seed_diff = flowers_seed_diff,
 	light_min = 9,
@@ -394,12 +394,12 @@ biome_lib:spawn_on_surfaces({
 	spawn_delay = SPAWN_DELAY*2,
 	spawn_plants = {"flowers:seaweed"},
 	spawn_chance = SPAWN_CHANCE*2,
-	spawn_surfaces = {"core:water_source"},
+	spawn_surfaces = {"base:water_source"},
 	avoid_nodes = {"group:flower", "group:flora"},
 	seed_diff = flowers_seed_diff,
 	light_min = 4,
 	light_max = 10,
-	neighbors = {"core:dirt_with_grass"},
+	neighbors = {"base:dirt_with_grass"},
 	facedir = 1
 })
 
@@ -407,12 +407,12 @@ biome_lib:spawn_on_surfaces({
 	spawn_delay = SPAWN_DELAY*2,
 	spawn_plants = {"flowers:seaweed"},
 	spawn_chance = SPAWN_CHANCE*2,
-	spawn_surfaces = {"core:dirt_with_grass"},
+	spawn_surfaces = {"base:dirt_with_grass"},
 	avoid_nodes = {"group:flower", "group:flora" },
 	seed_diff = flowers_seed_diff,
 	light_min = 4,
 	light_max = 10,
-	neighbors = {"core:water_source"},
+	neighbors = {"base:water_source"},
 	ncount = 1,
 	facedir = 1
 })
@@ -421,12 +421,12 @@ biome_lib:spawn_on_surfaces({
 	spawn_delay = SPAWN_DELAY*2,
 	spawn_plants = {"flowers:seaweed"},
 	spawn_chance = SPAWN_CHANCE*2,
-	spawn_surfaces = {"core:stone"},
+	spawn_surfaces = {"base:stone"},
 	avoid_nodes = {"group:flower", "group:flora" },
 	seed_diff = flowers_seed_diff,
 	light_min = 4,
 	light_max = 10,
-	neighbors = {"core:water_source"},
+	neighbors = {"base:water_source"},
 	ncount = 6,
 	facedir = 1
 })

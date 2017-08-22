@@ -66,7 +66,7 @@ minetest.register_craft({ -- twigs_roof_corner_2 --> twigs
 -- STiCK
 -----------------------------------------------------------------------------------------------
 minetest.register_craft({ -- twig --> stick
-	output = "core:stick",
+	output = "base:stick",
 	recipe = {{"trunks:twig_1"}}
 })
 

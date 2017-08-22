@@ -48,27 +48,27 @@ local function register_sign(material, desc, def)
 end
 
 register_sign("wood", "Wooden", {
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 	groups = {choppy = 2, attached_node = 1, flammable = 2, oddly_breakable_by_hand = 3}
 })
 
 register_sign("steel", "Steel", {
-	sounds = core.node_sound_metal_defaults(),
+	sounds = base.node_sound_metal_defaults(),
 	groups = {cracky = 2, attached_node = 1}
 })
 
 
 minetest.register_craft({
-	output = 'core:sign_wall_steel 3',
+	output = 'base:sign_wall_steel 3',
 	recipe = {
-		{'core:steel_ingot', 'core:steel_ingot', 'core:steel_ingot'},
-		{'core:steel_ingot', 'core:steel_ingot', 'core:steel_ingot'},
+		{'base:steel_ingot', 'base:steel_ingot', 'base:steel_ingot'},
+		{'base:steel_ingot', 'base:steel_ingot', 'base:steel_ingot'},
 		{'', 'group:stick', ''},
 	}
 })
 
 minetest.register_craft({
-	output = 'core:sign_wall_wood 3',
+	output = 'base:sign_wall_wood 3',
 	recipe = {
 		{'group:wood', 'group:wood', 'group:wood'},
 		{'group:wood', 'group:wood', 'group:wood'},
@@ -78,7 +78,7 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "core:sign_wall_wood",
+	recipe = "base:sign_wall_wood",
 	burntime = 10,
 })
 

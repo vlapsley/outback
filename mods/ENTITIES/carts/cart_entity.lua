@@ -383,7 +383,7 @@ minetest.register_craftitem("carts:cart", {
 			return
 		end
 
-		minetest.sound_play({name = "core_place_node_metal", gain = 0.5},
+		minetest.sound_play({name = "base_place_node_metal", gain = 0.5},
 			{pos = pointed_thing.above})
 
 		if not (creative and creative.is_enabled_for
@@ -397,7 +397,7 @@ minetest.register_craftitem("carts:cart", {
 minetest.register_craft({
 	output = "carts:cart",
 	recipe = {
-		{"core:steel_ingot", "", "core:steel_ingot"},
-		{"core:steel_ingot", "core:steel_ingot", "core:steel_ingot"},
+		{"base:steel_ingot", "", "base:steel_ingot"},
+		{"base:steel_ingot", "base:steel_ingot", "base:steel_ingot"},
 	},
 })

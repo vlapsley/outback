@@ -114,8 +114,8 @@ function hbhunger.item_eat(hunger_change, replace_with_item, poisen, heal, sound
 	end
 end
 
-if minetest.get_modpath("core") ~= nil then
-	hbhunger.register_food("core:apple", 2)
+if minetest.get_modpath("base") ~= nil then
+	hbhunger.register_food("base:apple", 2)
 end
 if minetest.get_modpath("mushrooms") ~= nil then
 	hbhunger.register_food("mushrooms:mushroom_brown", 1)

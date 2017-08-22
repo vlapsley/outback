@@ -24,10 +24,10 @@
 --]]
 
 local water_nodes = {
-	"core:water_source",
-	"core:water_flowing",
-	"core:river_water_source",
-	"core:river_water_flowing",
+	"base:water_source",
+	"base:water_flowing",
+	"base:river_water_source",
+	"base:river_water_flowing",
 }
 
 local aus_nodes = {
@@ -39,9 +39,9 @@ local aus_nodes = {
 
 for _, name in pairs(water_nodes) do
 	local water = table.copy(minetest.registered_nodes[name])
-	local new_name = string.gsub(name, 'core', 'australia')
-	local new_source = string.gsub(water.liquid_alternative_source, 'core', 'australia')
-	local new_flowing = string.gsub(water.liquid_alternative_flowing, 'core', 'australia')
+	local new_name = string.gsub(name, 'base', 'australia')
+	local new_source = string.gsub(water.liquid_alternative_source, 'base', 'australia')
+	local new_flowing = string.gsub(water.liquid_alternative_flowing, 'base', 'australia')
 	water.alpha = 0
 	water.liquid_alternative_source = new_source
 	water.liquid_alternative_flowing = new_flowing

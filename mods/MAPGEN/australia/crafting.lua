@@ -52,7 +52,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "core:cobble",
+	output = "base:cobble",
 	recipe = {
 		{"", "", ""},
 		{"australia:small_stone_rocks", "australia:small_stone_rocks", ""},
@@ -198,7 +198,7 @@ minetest.register_craft({
 
 -- Arnhem Cypress Pine
 minetest.register_craft({
-	output = "core:pine_wood 4",
+	output = "base:pine_wood 4",
 	recipe = {
 		{"australia:arnhem_cypress_pine_tree"}
 	}
@@ -230,7 +230,7 @@ minetest.register_craft({
 
 -- Boab Tree
 minetest.register_craft({
-	output = "core:wood 4",
+	output = "base:wood 4",
 	recipe = {
 		{"australia:boab_tree"}
 	}
@@ -246,7 +246,7 @@ minetest.register_craft({
 
 -- Coast Banksia
 minetest.register_craft({
-	output = "core:acacia_wood 4",
+	output = "base:acacia_wood 4",
 	recipe = {
 		{"australia:coast_banksia_tree"}
 	}
@@ -278,7 +278,7 @@ minetest.register_craft({
 
 -- Desert Oak
 minetest.register_craft({
-	output = "core:acacia_wood 4",
+	output = "base:acacia_wood 4",
 	recipe = {
 		{"australia:desert_oak_tree"}
 	}
@@ -294,7 +294,7 @@ minetest.register_craft({
 
 -- Illawarra Flame Tree
 minetest.register_craft({
-	output = "core:wood 4",
+	output = "base:wood 4",
 	recipe = {
 		{"australia:illawarra_flame_tree"}
 	}
@@ -326,7 +326,7 @@ minetest.register_craft({
 
 -- Macadamia Tree
 minetest.register_craft({
-	output = "core:wood 4",
+	output = "base:wood 4",
 	recipe = {
 		{"australia:macadamia_tree"}
 	}
@@ -350,7 +350,7 @@ minetest.register_craft({
 
 -- Moreton Bay Fig Tree
 minetest.register_craft({
-	output = "core:wood 4",
+	output = "base:wood 4",
 	recipe = {
 		{"australia:moreton_bay_fig_tree"}
 	}
@@ -358,7 +358,7 @@ minetest.register_craft({
 
 -- Mulga Tree
 minetest.register_craft({
-	output = "core:acacia_wood 4",
+	output = "base:acacia_wood 4",
 	recipe = {
 		{"australia:mulga_tree"}
 	}
@@ -366,7 +366,7 @@ minetest.register_craft({
 
 -- Paperbark Tree
 minetest.register_craft({
-	output = "core:acacia_wood 4",
+	output = "base:acacia_wood 4",
 	recipe = {
 		{"australia:paperbark_tree"}
 	}
@@ -374,7 +374,7 @@ minetest.register_craft({
 
 -- River Oak
 minetest.register_craft({
-	output = "core:acacia_wood 4",
+	output = "base:acacia_wood 4",
 	recipe = {
 		{"australia:river_oak_tree"}
 	}
@@ -390,7 +390,7 @@ minetest.register_craft({
 
 -- Rottnest Island Pine Tree
 minetest.register_craft({
-	output = "core:pine_wood 4",
+	output = "base:pine_wood 4",
 	recipe = {
 		{"australia:rottnest_island_pine_tree"}
 	}
@@ -406,7 +406,7 @@ minetest.register_craft({
 
 -- Shoestring Acacia
 minetest.register_craft({
-	output = "core:acacia_wood 4",
+	output = "base:acacia_wood 4",
 	recipe = {
 		{"australia:shoestring_acacia_tree"}
 	}

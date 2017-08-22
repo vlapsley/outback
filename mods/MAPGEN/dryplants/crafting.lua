@@ -4,7 +4,7 @@
 -- by Mossmanikin
 -- License (everything): 	WTFPL		
 -- Looked at code from:		darkage, default, farming, sickle, stairs
--- Dependencies: 			core, farming
+-- Dependencies: 			base, farming
 -- Supports:				flint, stoneage, sumpf			
 -----------------------------------------------------------------------------------------------
 
@@ -12,7 +12,7 @@
 -- Short Grass
 -----------------------------------------------------------------------------------------------
 minetest.register_craft({
-	output = "core:dirt",
+	output = "base:dirt",
 	recipe = {
 		{"dryplants:grass_short"},
 	}
@@ -25,13 +25,13 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "dryplants:grass",
 	recipe = {
-		{"core:grass_1"},
+		{"base:grass_1"},
 	}
 })
 minetest.register_craft({
 	output = "dryplants:grass",
 	recipe = {
-		{"core:junglegrass"},
+		{"base:junglegrass"},
 	}
 })
 if minetest.get_modpath("sumpf") ~= nil then
@@ -50,8 +50,8 @@ minetest.register_craft({
 	output = "dryplants:sickle",
 	recipe = {
 		{"group:stone",""},
-		{"", "core:stick"},
-		{"core:stick",""}
+		{"", "base:stick"},
+		{"base:stick",""}
 	}
 })
 if minetest.get_modpath("flint") ~= nil then
@@ -59,8 +59,8 @@ if minetest.get_modpath("flint") ~= nil then
 		output = "dryplants:sickle",
 		recipe = {
 			{"flint:flintstone",""},
-			{"", "core:stick"},
-			{"core:stick",""}
+			{"", "base:stick"},
+			{"base:stick",""}
 		}
 	})
 end
@@ -69,8 +69,8 @@ if minetest.get_modpath("stoneage") ~= nil then
 		output = "dryplants:sickle",
 		recipe = {
 			{"stoneage:silex",""},
-			{"", "core:stick"},
-			{"core:stick",""}
+			{"", "base:stick"},
+			{"base:stick",""}
 		}
 	})
 end
@@ -98,8 +98,8 @@ minetest.register_craft({
 minetest.register_craft({ -- papyrus -> wetreed
 	output = "dryplants:wetreed 2",
 	recipe = {
-		{"core:papyrus","core:papyrus"},
-		{"core:papyrus","core:papyrus"},
+		{"base:papyrus","base:papyrus"},
+		{"base:papyrus","base:papyrus"},
 	}
 })
 minetest.register_craft({ -- reedmace_sapling -> wetreed

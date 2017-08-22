@@ -37,12 +37,12 @@ end
 
 minetest.register_node("books:bookshelf", {
 	description = "Bookshelf",
-	tiles = {"core_wood.png", "core_wood.png", "core_wood.png",
-		"core_wood.png", "books_bookshelf.png", "books_bookshelf.png"},
+	tiles = {"base_wood.png", "base_wood.png", "base_wood.png",
+		"base_wood.png", "books_bookshelf.png", "books_bookshelf.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
@@ -80,7 +80,7 @@ minetest.register_node("books:bookshelf", {
 	end,
 	on_blast = function(pos)
 		local drops = {}
-		core.get_inventory_drops(pos, "books", drops)
+		base.get_inventory_drops(pos, "books", drops)
 		drops[#drops+1] = "books:bookshelf"
 		minetest.remove_node(pos)
 		return drops
@@ -269,9 +269,9 @@ end)
 minetest.register_craft({
 	output = 'books:book',
 	recipe = {
-		{'core:paper'},
-		{'core:paper'},
-		{'core:paper'},
+		{'base:paper'},
+		{'base:paper'},
+		{'base:paper'},
 	}
 })
 

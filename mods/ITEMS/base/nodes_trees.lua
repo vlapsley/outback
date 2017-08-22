@@ -1,54 +1,54 @@
 --[[
-	Core tree nodes
+	Base tree nodes
 --]]
 
 
-minetest.register_node("core:tree", {
+minetest.register_node("base:tree", {
 	description = "Tree",
-	tiles = {"core_tree_top.png", "core_tree_top.png", "core_tree.png"},
+	tiles = {"base_tree_top.png", "base_tree_top.png", "base_tree.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("core:wood", {
+minetest.register_node("base:wood", {
 	description = "Wooden Planks",
 	paramtype2 = "facedir",
 	place_param2 = 0,
-	tiles = {"core_wood.png"},
+	tiles = {"base_wood.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
-minetest.register_node("core:sapling", {
+minetest.register_node("base:sapling", {
 	description = "Sapling",
 	drawtype = "plantlike",
-	tiles = {"core_sapling.png"},
-	inventory_image = "core_sapling.png",
-	wield_image = "core_sapling.png",
+	tiles = {"base_sapling.png"},
+	inventory_image = "base_sapling.png",
+	wield_image = "base_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = core.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 	},
 	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 		attached_node = 1, sapling = 1},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
 
 	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
-			"core:sapling",
+		itemstack = base.sapling_on_place(itemstack, placer, pointed_thing,
+			"base:sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -2, y = 1, z = -2},
@@ -60,12 +60,12 @@ minetest.register_node("core:sapling", {
 	end,
 })
 
-minetest.register_node("core:leaves", {
+minetest.register_node("base:leaves", {
 	description = "Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
-	tiles = {"core_leaves.png"},
-	special_tiles = {"core_leaves_simple.png"},
+	tiles = {"base_leaves.png"},
+	special_tiles = {"base_leaves_simple.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
@@ -74,26 +74,26 @@ minetest.register_node("core:leaves", {
 		items = {
 			{
 				-- player will get sapling with 1/20 chance
-				items = {'core:sapling'},
+				items = {'base:sapling'},
 				rarity = 20,
 			},
 			{
 				-- player will get leaves only if he get no saplings,
 				-- this is because max_items is 1
-				items = {'core:leaves'},
+				items = {'base:leaves'},
 			}
 		}
 	},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
-	after_place_node = core.after_place_leaves,
+	after_place_node = base.after_place_leaves,
 })
 
-minetest.register_node("core:apple", {
+minetest.register_node("base:apple", {
 	description = "Apple",
 	drawtype = "plantlike",
-	tiles = {"core_apple.png"},
-	inventory_image = "core_apple.png",
+	tiles = {"base_apple.png"},
+	inventory_image = "base_apple.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -105,84 +105,84 @@ minetest.register_node("core:apple", {
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 2,
 		leafdecay = 3, leafdecay_drop = 1},
 	on_use = minetest.item_eat(2),
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
-			minetest.set_node(pos, {name = "core:apple", param2 = 1})
+			minetest.set_node(pos, {name = "base:apple", param2 = 1})
 		end
 	end,
 })
 
 
-minetest.register_node("core:jungletree", {
+minetest.register_node("base:jungletree", {
 	description = "Jungle Tree",
-	tiles = {"core_jungletree_top.png", "core_jungletree_top.png",
-		"core_jungletree.png"},
+	tiles = {"base_jungletree_top.png", "base_jungletree_top.png",
+		"base_jungletree.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("core:junglewood", {
+minetest.register_node("base:junglewood", {
 	description = "Jungle Wood Planks",
 	paramtype2 = "facedir",
 	place_param2 = 0,
-	tiles = {"core_junglewood.png"},
+	tiles = {"base_junglewood.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
-minetest.register_node("core:jungleleaves", {
+minetest.register_node("base:jungleleaves", {
 	description = "Jungle Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
-	tiles = {"core_jungleleaves.png"},
-	special_tiles = {"core_jungleleaves_simple.png"},
+	tiles = {"base_jungleleaves.png"},
+	special_tiles = {"base_jungleleaves_simple.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {'core:junglesapling'}, rarity = 20},
-			{items = {'core:jungleleaves'}}
+			{items = {'base:junglesapling'}, rarity = 20},
+			{items = {'base:jungleleaves'}}
 		}
 	},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
-	after_place_node = core.after_place_leaves,
+	after_place_node = base.after_place_leaves,
 })
 
-minetest.register_node("core:junglesapling", {
+minetest.register_node("base:junglesapling", {
 	description = "Jungle Sapling",
 	drawtype = "plantlike",
-	tiles = {"core_junglesapling.png"},
-	inventory_image = "core_junglesapling.png",
-	wield_image = "core_junglesapling.png",
+	tiles = {"base_junglesapling.png"},
+	inventory_image = "base_junglesapling.png",
+	wield_image = "base_junglesapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = core.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 	},
 	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 		attached_node = 1, sapling = 1},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
 
 	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
-			"core:junglesapling",
+		itemstack = base.sapling_on_place(itemstack, placer, pointed_thing,
+			"base:junglesapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -2, y = 1, z = -2},
@@ -195,32 +195,32 @@ minetest.register_node("core:junglesapling", {
 })
 
 
-minetest.register_node("core:pine_tree", {
+minetest.register_node("base:pine_tree", {
 	description = "Pine Tree",
-	tiles = {"core_pine_tree_top.png", "core_pine_tree_top.png",
-		"core_pine_tree.png"},
+	tiles = {"base_pine_tree_top.png", "base_pine_tree_top.png",
+		"base_pine_tree.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("core:pine_wood", {
+minetest.register_node("base:pine_wood", {
 	description = "Pine Wood Planks",
 	paramtype2 = "facedir",
 	place_param2 = 0,
-	tiles = {"core_pine_wood.png"},
+	tiles = {"base_pine_wood.png"},
 	is_ground_content = false,
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
-minetest.register_node("core:pine_needles",{
+minetest.register_node("base:pine_needles",{
 	description = "Pine Needles",
 	drawtype = "allfaces_optional",
-	tiles = {"core_pine_needles.png"},
+	tiles = {"base_pine_needles.png"},
 	waving = 1,
 	paramtype = "light",
 	is_ground_content = false,
@@ -228,40 +228,40 @@ minetest.register_node("core:pine_needles",{
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"core:pine_sapling"}, rarity = 20},
-			{items = {"core:pine_needles"}}
+			{items = {"base:pine_sapling"}, rarity = 20},
+			{items = {"base:pine_needles"}}
 		}
 	},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
-	after_place_node = core.after_place_leaves,
+	after_place_node = base.after_place_leaves,
 })
 
-minetest.register_node("core:pine_sapling", {
+minetest.register_node("base:pine_sapling", {
 	description = "Pine Sapling",
 	drawtype = "plantlike",
-	tiles = {"core_pine_sapling.png"},
-	inventory_image = "core_pine_sapling.png",
-	wield_image = "core_pine_sapling.png",
+	tiles = {"base_pine_sapling.png"},
+	inventory_image = "base_pine_sapling.png",
+	wield_image = "base_pine_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = core.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 	},
 	groups = {snappy = 2, dig_immediate = 3, flammable = 3,
 		attached_node = 1, sapling = 1},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
 
 	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
-			"core:pine_sapling",
+		itemstack = base.sapling_on_place(itemstack, placer, pointed_thing,
+			"base:pine_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -2, y = 1, z = -2},
@@ -274,33 +274,33 @@ minetest.register_node("core:pine_sapling", {
 })
 
 
-minetest.register_node("core:acacia_tree", {
+minetest.register_node("base:acacia_tree", {
 	description = "Acacia Tree",
-	tiles = {"core_acacia_tree_top.png", "core_acacia_tree_top.png",
-		"core_acacia_tree.png"},
+	tiles = {"base_acacia_tree_top.png", "base_acacia_tree_top.png",
+		"base_acacia_tree.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("core:acacia_wood", {
+minetest.register_node("base:acacia_wood", {
 	description = "Acacia Wood Planks",
 	paramtype2 = "facedir",
 	place_param2 = 0,
-	tiles = {"core_acacia_wood.png"},
+	tiles = {"base_acacia_wood.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
-minetest.register_node("core:acacia_leaves", {
+minetest.register_node("base:acacia_leaves", {
 	description = "Acacia Leaves",
 	drawtype = "allfaces_optional",
-	tiles = {"core_acacia_leaves.png"},
-	special_tiles = {"core_acacia_leaves_simple.png"},
+	tiles = {"base_acacia_leaves.png"},
+	special_tiles = {"base_acacia_leaves_simple.png"},
 	waving = 1,
 	paramtype = "light",
 	is_ground_content = false,
@@ -308,40 +308,40 @@ minetest.register_node("core:acacia_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"core:acacia_sapling"}, rarity = 20},
-			{items = {"core:acacia_leaves"}}
+			{items = {"base:acacia_sapling"}, rarity = 20},
+			{items = {"base:acacia_leaves"}}
 		}
 	},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
-	after_place_node = core.after_place_leaves,
+	after_place_node = base.after_place_leaves,
 })
 
-minetest.register_node("core:acacia_sapling", {
+minetest.register_node("base:acacia_sapling", {
 	description = "Acacia Tree Sapling",
 	drawtype = "plantlike",
-	tiles = {"core_acacia_sapling.png"},
-	inventory_image = "core_acacia_sapling.png",
-	wield_image = "core_acacia_sapling.png",
+	tiles = {"base_acacia_sapling.png"},
+	inventory_image = "base_acacia_sapling.png",
+	wield_image = "base_acacia_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = core.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 	},
 	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
 		attached_node = 1, sapling = 1},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
 
 	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
-			"core:acacia_sapling",
+		itemstack = base.sapling_on_place(itemstack, placer, pointed_thing,
+			"base:acacia_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -4, y = 1, z = -4},
@@ -353,32 +353,32 @@ minetest.register_node("core:acacia_sapling", {
 	end,
 })
 
-minetest.register_node("core:aspen_tree", {
+minetest.register_node("base:aspen_tree", {
 	description = "Aspen Tree",
-	tiles = {"core_aspen_tree_top.png", "core_aspen_tree_top.png",
-		"core_aspen_tree.png"},
+	tiles = {"base_aspen_tree_top.png", "base_aspen_tree_top.png",
+		"base_aspen_tree.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("core:aspen_wood", {
+minetest.register_node("base:aspen_wood", {
 	description = "Aspen Wood Planks",
 	paramtype2 = "facedir",
 	place_param2 = 0,
-	tiles = {"core_aspen_wood.png"},
+	tiles = {"base_aspen_wood.png"},
 	is_ground_content = false,
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
-minetest.register_node("core:aspen_leaves", {
+minetest.register_node("base:aspen_leaves", {
 	description = "Aspen Leaves",
 	drawtype = "allfaces_optional",
-	tiles = {"core_aspen_leaves.png"},
+	tiles = {"base_aspen_leaves.png"},
 	waving = 1,
 	paramtype = "light",
 	is_ground_content = false,
@@ -386,40 +386,40 @@ minetest.register_node("core:aspen_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"core:aspen_sapling"}, rarity = 20},
-			{items = {"core:aspen_leaves"}}
+			{items = {"base:aspen_sapling"}, rarity = 20},
+			{items = {"base:aspen_leaves"}}
 		}
 	},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
-	after_place_node = core.after_place_leaves,
+	after_place_node = base.after_place_leaves,
 })
 
-minetest.register_node("core:aspen_sapling", {
+minetest.register_node("base:aspen_sapling", {
 	description = "Aspen Tree Sapling",
 	drawtype = "plantlike",
-	tiles = {"core_aspen_sapling.png"},
-	inventory_image = "core_aspen_sapling.png",
-	wield_image = "core_aspen_sapling.png",
+	tiles = {"base_aspen_sapling.png"},
+	inventory_image = "base_aspen_sapling.png",
+	wield_image = "base_aspen_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = core.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, 0.5, 3 / 16}
 	},
 	groups = {snappy = 2, dig_immediate = 3, flammable = 3,
 		attached_node = 1, sapling = 1},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(2400,4800))
 	end,
 
 	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
-			"core:aspen_sapling",
+		itemstack = base.sapling_on_place(itemstack, placer, pointed_thing,
+			"base:aspen_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -2, y = 1, z = -2},
@@ -440,7 +440,7 @@ local random = math.random
 
 -- 'can grow' function
 
-function core.can_grow(pos)
+function base.can_grow(pos)
 	local node_under = minetest.get_node_or_nil({x = pos.x, y = pos.y - 1, z = pos.z})
 	if not node_under then
 		return false
@@ -467,8 +467,8 @@ end
 
 -- Sapling ABM
 
-function core.grow_sapling(pos)
-	if not core.can_grow(pos) then
+function base.grow_sapling(pos)
+	if not base.can_grow(pos) then
 		-- try a bit later again
 		minetest.get_node_timer(pos):start(math.random(240, 600))
 		return
@@ -476,57 +476,57 @@ function core.grow_sapling(pos)
 
 	local mg_name = minetest.get_mapgen_setting("mg_name")
 	local node = minetest.get_node(pos)
-	if node.name == "core:sapling" then
+	if node.name == "base:sapling" then
 		minetest.log("action", "A sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
 		if mg_name == "v6" then
-			core.grow_tree(pos, random(1, 4) == 1)
+			base.grow_tree(pos, random(1, 4) == 1)
 		else
-			core.grow_new_apple_tree(pos)
+			base.grow_new_apple_tree(pos)
 		end
-	elseif node.name == "core:junglesapling" then
+	elseif node.name == "base:junglesapling" then
 		minetest.log("action", "A jungle sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
 		if mg_name == "v6" then
-			core.grow_jungle_tree(pos)
+			base.grow_jungle_tree(pos)
 		else
-			core.grow_new_jungle_tree(pos)
+			base.grow_new_jungle_tree(pos)
 		end
-	elseif node.name == "core:pine_sapling" then
+	elseif node.name == "base:pine_sapling" then
 		minetest.log("action", "A pine sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
 		local snow = is_snow_nearby(pos)
 		if mg_name == "v6" then
-			core.grow_pine_tree(pos, snow)
+			base.grow_pine_tree(pos, snow)
 		elseif snow then
-			core.grow_new_snowy_pine_tree(pos)
+			base.grow_new_snowy_pine_tree(pos)
 		else
-			core.grow_new_pine_tree(pos)
+			base.grow_new_pine_tree(pos)
 		end
-	elseif node.name == "core:acacia_sapling" then
+	elseif node.name == "base:acacia_sapling" then
 		minetest.log("action", "An acacia sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		core.grow_new_acacia_tree(pos)
-	elseif node.name == "core:aspen_sapling" then
+		base.grow_new_acacia_tree(pos)
+	elseif node.name == "base:aspen_sapling" then
 		minetest.log("action", "An aspen sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		core.grow_new_aspen_tree(pos)
-	elseif node.name == "core:bush_sapling" then
+		base.grow_new_aspen_tree(pos)
+	elseif node.name == "base:bush_sapling" then
 		minetest.log("action", "A bush sapling grows into a bush at "..
 			minetest.pos_to_string(pos))
-		core.grow_bush(pos)
-	elseif node.name == "core:acacia_bush_sapling" then
+		base.grow_bush(pos)
+	elseif node.name == "base:acacia_bush_sapling" then
 		minetest.log("action", "An acacia bush sapling grows into a bush at "..
 			minetest.pos_to_string(pos))
-		core.grow_acacia_bush(pos)
+		base.grow_acacia_bush(pos)
 	end
 end
 
 minetest.register_lbm({
-	name = "core:convert_saplings_to_node_timer",
-	nodenames = {"core:sapling", "core:junglesapling",
-			"core:pine_sapling", "core:acacia_sapling",
-			"core:aspen_sapling"},
+	name = "base:convert_saplings_to_node_timer",
+	nodenames = {"base:sapling", "base:junglesapling",
+			"base:pine_sapling", "base:acacia_sapling",
+			"base:aspen_sapling"},
 	action = function(pos)
 		minetest.get_node_timer(pos):start(math.random(1200, 2400))
 	end
@@ -543,7 +543,7 @@ local function add_trunk_and_leaves(data, a, pos, tree_cid, leaves_cid,
 	local x, y, z = pos.x, pos.y, pos.z
 	local c_air = minetest.get_content_id("air")
 	local c_ignore = minetest.get_content_id("ignore")
-	local c_apple = minetest.get_content_id("core:apple")
+	local c_apple = minetest.get_content_id("base:apple")
 
 	-- Trunk
 	data[a:index(x, y, z)] = tree_cid -- Force-place lowest trunk node to replace sapling
@@ -598,20 +598,20 @@ end
 
 -- Apple tree
 
-function core.grow_tree(pos, is_apple_tree, bad)
+function base.grow_tree(pos, is_apple_tree, bad)
 	--[[
 		NOTE: Tree-placing code is currently duplicated in the engine
 		and in games that have saplings; both are deprecated but not
 		replaced yet
 	--]]
 	if bad then
-		error("Deprecated use of core.grow_tree")
+		error("Deprecated use of base.grow_tree")
 	end
 
 	local x, y, z = pos.x, pos.y, pos.z
 	local height = random(4, 5)
-	local c_tree = minetest.get_content_id("core:tree")
-	local c_leaves = minetest.get_content_id("core:leaves")
+	local c_tree = minetest.get_content_id("base:tree")
+	local c_leaves = minetest.get_content_id("base:leaves")
 
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
@@ -631,22 +631,22 @@ end
 
 -- Jungle tree
 
-function core.grow_jungle_tree(pos, bad)
+function base.grow_jungle_tree(pos, bad)
 	--[[
 		NOTE: Jungletree-placing code is currently duplicated in the engine
 		and in games that have saplings; both are deprecated but not
 		replaced yet
 	--]]
 	if bad then
-		error("Deprecated use of core.grow_jungle_tree")
+		error("Deprecated use of base.grow_jungle_tree")
 	end
 
 	local x, y, z = pos.x, pos.y, pos.z
 	local height = random(8, 12)
 	local c_air = minetest.get_content_id("air")
 	local c_ignore = minetest.get_content_id("ignore")
-	local c_jungletree = minetest.get_content_id("core:jungletree")
-	local c_jungleleaves = minetest.get_content_id("core:jungleleaves")
+	local c_jungletree = minetest.get_content_id("base:jungletree")
+	local c_jungleleaves = minetest.get_content_id("base:jungleleaves")
 
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
@@ -698,15 +698,15 @@ local function add_snow(data, vi, c_air, c_ignore, c_snow)
 	end
 end
 
-function core.grow_pine_tree(pos, snow)
+function base.grow_pine_tree(pos, snow)
 	local x, y, z = pos.x, pos.y, pos.z
 	local maxy = y + random(9, 13) -- Trunk top
 
 	local c_air = minetest.get_content_id("air")
 	local c_ignore = minetest.get_content_id("ignore")
-	local c_pine_tree = minetest.get_content_id("core:pine_tree")
-	local c_pine_needles  = minetest.get_content_id("core:pine_needles")
-	local c_snow = minetest.get_content_id("core:snow")
+	local c_pine_tree = minetest.get_content_id("base:pine_tree")
+	local c_pine_needles  = minetest.get_content_id("base:pine_needles")
+	local c_snow = minetest.get_content_id("base:snow")
 
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
@@ -809,22 +809,22 @@ end
 
 
 -- Aliases for schematic nodes
-minetest.register_alias("default:tree", "core:tree")
-minetest.register_alias("default:leaves", "core:leaves")
-minetest.register_alias("default:apple", "core:apple")
-minetest.register_alias("default:jungletree", "core:jungletree")
-minetest.register_alias("default:jungleleaves", "core:jungleleaves")
-minetest.register_alias("default:pine_tree", "core:pine_tree")
-minetest.register_alias("default:pine_leaves", "core:pine_leaves")
-minetest.register_alias("default:acacia_tree", "core:acacia_tree")
-minetest.register_alias("default:acacia_leaves", "core:acacia_leaves")
-minetest.register_alias("default:aspen_tree", "core:aspen_tree")
-minetest.register_alias("default:aspen_leaves", "core:aspen_leaves")
+minetest.register_alias("default:tree", "base:tree")
+minetest.register_alias("default:leaves", "base:leaves")
+minetest.register_alias("default:apple", "base:apple")
+minetest.register_alias("default:jungletree", "base:jungletree")
+minetest.register_alias("default:jungleleaves", "base:jungleleaves")
+minetest.register_alias("default:pine_tree", "base:pine_tree")
+minetest.register_alias("default:pine_leaves", "base:pine_leaves")
+minetest.register_alias("default:acacia_tree", "base:acacia_tree")
+minetest.register_alias("default:acacia_leaves", "base:acacia_leaves")
+minetest.register_alias("default:aspen_tree", "base:aspen_tree")
+minetest.register_alias("default:aspen_leaves", "base:aspen_leaves")
 
 
 -- New apple tree
 
-function core.grow_new_apple_tree(pos)
+function base.grow_new_apple_tree(pos)
 	local path = minetest.get_modpath("core") ..
 		"/schematics/apple_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 1, z = pos.z - 2},
@@ -834,7 +834,7 @@ end
 
 -- New jungle tree
 
-function core.grow_new_jungle_tree(pos)
+function base.grow_new_jungle_tree(pos)
 	local path = minetest.get_modpath("core") ..
 		"/schematics/jungle_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 1, z = pos.z - 2},
@@ -844,7 +844,7 @@ end
 
 -- New pine tree
 
-function core.grow_new_pine_tree(pos)
+function base.grow_new_pine_tree(pos)
 	local path = minetest.get_modpath("core") ..
 		"/schematics/pine_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 1, z = pos.z - 2},
@@ -854,7 +854,7 @@ end
 
 -- New snowy pine tree
 
-function core.grow_new_snowy_pine_tree(pos)
+function base.grow_new_snowy_pine_tree(pos)
 	local path = minetest.get_modpath("core") ..
 		"/schematics/snowy_pine_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 1, z = pos.z - 2},
@@ -864,7 +864,7 @@ end
 
 -- New acacia tree
 
-function core.grow_new_acacia_tree(pos)
+function base.grow_new_acacia_tree(pos)
 	local path = minetest.get_modpath("core") ..
 		"/schematics/acacia_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 4, y = pos.y - 1, z = pos.z - 4},
@@ -874,7 +874,7 @@ end
 
 -- New aspen tree
 
-function core.grow_new_aspen_tree(pos)
+function base.grow_new_aspen_tree(pos)
 	local path = minetest.get_modpath("core") ..
 		"/schematics/aspen_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 1, z = pos.z - 2},
@@ -887,7 +887,7 @@ end
 
 -- Bush
 
-function core.grow_bush(pos)
+function base.grow_bush(pos)
 	local path = minetest.get_modpath("core") ..
 		"/schematics/bush.mts"
 	minetest.place_schematic({x = pos.x - 1, y = pos.y - 1, z = pos.z - 1},
@@ -897,7 +897,7 @@ end
 
 -- Acacia bush
 
-function core.grow_acacia_bush(pos)
+function base.grow_acacia_bush(pos)
 	local path = minetest.get_modpath("core") ..
 		"/schematics/acacia_bush.mts"
 	minetest.place_schematic({x = pos.x - 1, y = pos.y - 1, z = pos.z - 1},
@@ -909,7 +909,7 @@ end
 -- Sapling 'on place' function to check protection of node and resulting tree volume
 --
 
-function core.sapling_on_place(itemstack, placer, pointed_thing,
+function base.sapling_on_place(itemstack, placer, pointed_thing,
 		sapling_name, minp_relative, maxp_relative, interval)
 	-- Position of sapling
 	local pos = pointed_thing.under
@@ -936,7 +936,7 @@ function core.sapling_on_place(itemstack, placer, pointed_thing,
 		return itemstack
 	end
 	-- Check tree volume for protection
-	if core.intersects_protection(
+	if base.intersects_protection(
 			vector.add(pos, minp_relative),
 			vector.add(pos, maxp_relative),
 			player_name,
@@ -987,44 +987,44 @@ end
 -- register trees for leafdecay
 --
 
-core.register_leafdecay({
-	trunks = {"core:tree"},
-	leaves = {"core:apple", "core:leaves"},
+base.register_leafdecay({
+	trunks = {"base:tree"},
+	leaves = {"base:apple", "base:leaves"},
 	radius = 3,
 })
 
-core.register_leafdecay({
-	trunks = {"core:jungletree"},
-	leaves = {"core:jungleleaves"},
+base.register_leafdecay({
+	trunks = {"base:jungletree"},
+	leaves = {"base:jungleleaves"},
 	radius = 2,
 })
 
-core.register_leafdecay({
-	trunks = {"core:pine_tree"},
-	leaves = {"core:pine_needles"},
+base.register_leafdecay({
+	trunks = {"base:pine_tree"},
+	leaves = {"base:pine_needles"},
 	radius = 2,
 })
 
-core.register_leafdecay({
-	trunks = {"core:acacia_tree"},
-	leaves = {"core:acacia_leaves"},
+base.register_leafdecay({
+	trunks = {"base:acacia_tree"},
+	leaves = {"base:acacia_leaves"},
 	radius = 2,
 })
 
-core.register_leafdecay({
-	trunks = {"core:aspen_tree"},
-	leaves = {"core:aspen_leaves"},
+base.register_leafdecay({
+	trunks = {"base:aspen_tree"},
+	leaves = {"base:aspen_leaves"},
 	radius = 3,
 })
 
-core.register_leafdecay({
-	trunks = {"core:bush_stem"},
-	leaves = {"core:bush_leaves"},
+base.register_leafdecay({
+	trunks = {"base:bush_stem"},
+	leaves = {"base:bush_leaves"},
 	radius = 1,
 })
 
-core.register_leafdecay({
-	trunks = {"core:acacia_bush_stem"},
-	leaves = {"core:acacia_bush_leaves"},
+base.register_leafdecay({
+	trunks = {"base:acacia_bush_stem"},
+	leaves = {"base:acacia_bush_leaves"},
 	radius = 1,
 })

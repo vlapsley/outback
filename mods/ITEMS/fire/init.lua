@@ -77,7 +77,7 @@ minetest.register_node("fire:permanent_flame", {
 minetest.register_tool("fire:flint_and_steel", {
 	description = "Flint and Steel",
 	inventory_image = "fire_flint_steel.png",
-	sound = {breaks = "core_tool_breaks"},
+	sound = {breaks = "base_tool_breaks"},
 
 	on_use = function(itemstack, user, pointed_thing)
 		local sound_pos = pointed_thing.above or user:get_pos()
@@ -120,7 +120,7 @@ minetest.register_tool("fire:flint_and_steel", {
 minetest.register_craft({
 	output = "fire:flint_and_steel",
 	recipe = {
-		{"core:flint", "core:steel_ingot"}
+		{"base:flint", "base:steel_ingot"}
 	}
 })
 
@@ -128,7 +128,7 @@ minetest.register_craft({
 -- Override coalblock to enable permanent flame above
 -- Coalblock is non-flammable to avoid unwanted basic_flame nodes
 
-minetest.override_item("core:coalblock", {
+minetest.override_item("base:coalblock", {
 	after_destruct = function(pos, oldnode)
 		pos.y = pos.y + 1
 		if minetest.get_node(pos).name == "fire:permanent_flame" then

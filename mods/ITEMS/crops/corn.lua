@@ -28,7 +28,7 @@ minetest.register_node("crops:corn", {
 	node_placement_prediction = "crops:corn_base_seed",
 	groups = { snappy=3,flammable=3,flora=1,attached_node=1 },
 	drop = {},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
 	on_place = function(itemstack, placer, pointed_thing)
 		local under = minetest.get_node(pointed_thing.under)
@@ -79,7 +79,7 @@ minetest.register_node("crops:corn_base_seed", {
 	paramtype = "light",
 	groups = { snappy=3,flammable=3,flora=1,attached_node=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5,  0.5, -0.3, 0.5}
@@ -112,7 +112,7 @@ minetest.register_node("crops:corn_base_1", {
 	paramtype = "light",
 	groups = { snappy=3,flammable=3,flora=1,attached_node=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 })
 
 minetest.register_abm({
@@ -146,7 +146,7 @@ minetest.register_node("crops:corn_base_2", {
 	paramtype = "light",
 	groups = { snappy=3,flammable=3,flora=1,attached_node=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 	on_dig = function(pos, node, digger)
 		local above = {x = pos.x, y = pos.y + 1, z = pos.z}
 		if minetest.get_node(above).name == "crops:corn_top_1" or minetest.get_node(above).name == "crops:corn_top_2" then
@@ -169,7 +169,7 @@ minetest.register_node("crops:corn_base_2", {
 		end
 		minetest.set_node(pos, { name = "crops:corn_base_3", param2 = 3 })
 		minetest.set_node(above, { name = "crops:corn_top_4", param2 = 3 })
-		core.handle_node_drops(above, drops, digger)
+		base.handle_node_drops(above, drops, digger)
 	end
 })
 
@@ -184,7 +184,7 @@ minetest.register_node("crops:corn_base_3", {
 	paramtype = "light",
 	groups = { snappy=3,flammable=3,flora=1,attached_node=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 	on_dig = function(pos, node, digger)
 		local above = {x = pos.x, y = pos.y + 1, z = pos.z}
 		if minetest.get_node(above).name == "crops:corn_top_4" then
@@ -206,7 +206,7 @@ minetest.register_node("crops:corn_top_1", {
 	paramtype = "light",
 	groups = { snappy=3,flammable=3,flora=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 	on_dig = function(pos, node, digger)
 		local below = {x = pos.x, y = pos.y - 1, z = pos.z}
 		if not minetest.get_node(below).name == "crops:base_2" then
@@ -242,7 +242,7 @@ minetest.register_node("crops:corn_top_2", {
 	paramtype = "light",
 	groups = { snappy=3,flammable=3,flora=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
 	on_dig = function(pos, node, digger)
 		local below = {x = pos.x, y = pos.y - 1, z = pos.z}
@@ -281,7 +281,7 @@ minetest.register_node("crops:corn_top_3", {
 	paramtype = "light",
 	groups = { snappy=3,flammable=3,flora=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
 	on_dig = function(pos, node, digger)
 		local below = { x = pos.x, y = pos.y - 1, z = pos.z }
@@ -295,7 +295,7 @@ minetest.register_node("crops:corn_top_3", {
 			table.insert(drops, ('crops:corn_cob'))
 		end
 		crops.die(below)
-		core.handle_node_drops(pos, drops, digger)
+		base.handle_node_drops(pos, drops, digger)
 	end
 })
 
@@ -311,7 +311,7 @@ minetest.register_node("crops:corn_top_4", {
 	paramtype = "light",
 	groups = { snappy=3,flammable=3,flora=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 
 	on_dig = function(pos, node, digger)
 		local below = {x = pos.x, y = pos.y - 1, z = pos.z}

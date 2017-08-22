@@ -28,8 +28,8 @@ minetest.register_craft({
 	output = "crops:unbaked_clay_bowl",
 	recipe = {
 		{ "", "", "" },
-		{ "core:clay_lump", "", "core:clay_lump" },
-		{ "", "core:clay_lump", "" }
+		{ "base:clay_lump", "", "base:clay_lump" },
+		{ "", "base:clay_lump", "" }
 	}
 })
 

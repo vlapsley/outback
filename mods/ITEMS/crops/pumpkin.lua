@@ -59,7 +59,7 @@ minetest.register_node("crops:pumpkin_plant_" .. stage , {
 	paramtype = "light",
 	groups = { snappy=3, flammable=3, flora=1, attached_node=1, not_in_creative_inventory=1 },
 	drop = "crops:pumpkin_seed",
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5,  0.5, -0.5 + (((math.min(stage, 4)) + 1) / 5), 0.5}
@@ -80,7 +80,7 @@ minetest.register_node("crops:pumpkin_plant_5_attached", {
 	paramtype = "light",
 	groups = { snappy=3, flammable=3, flora=1, attached_node=1, not_in_creative_inventory=1 },
 	drop = "crops:pumpkin_seed",
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 })
 
 
@@ -117,9 +117,9 @@ minetest.register_node("crops:pumpkin", {
 	walkable = true,
 	groups = { snappy=3, flammable=3, oddly_breakable_by_hand=2 },
 	paramtype2 = "facedir",
-	sounds = core.node_sound_wood_defaults({
-		dig = { name = "core_dig_oddly_breakable_by_hand" },
-		dug = { name = "core_dig_choppy" }
+	sounds = base.node_sound_wood_defaults({
+		dig = { name = "base_dig_oddly_breakable_by_hand" },
+		dug = { name = "base_dig_choppy" }
 	}),
 	after_dig_node = function(pos, node)
 		for face = 1, 4 do

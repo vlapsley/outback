@@ -1,13 +1,13 @@
 --[[
-	Core climbable nodes
+	Base climbable nodes
 --]]
 
-minetest.register_node("core:ladder_wood", {
+minetest.register_node("base:ladder_wood", {
 	description = "Wooden Ladder",
 	drawtype = "signlike",
-	tiles = {"core_ladder_wood.png"},
-	inventory_image = "core_ladder_wood.png",
-	wield_image = "core_ladder_wood.png",
+	tiles = {"base_ladder_wood.png"},
+	inventory_image = "base_ladder_wood.png",
+	wield_image = "base_ladder_wood.png",
 	paramtype = "light",
 	paramtype2 = "wallmounted",
 	sunlight_propagates = true,
@@ -22,15 +22,15 @@ minetest.register_node("core:ladder_wood", {
 	},
 	groups = {choppy = 2, oddly_breakable_by_hand = 3, flammable = 2},
 	legacy_wallmounted = true,
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
-minetest.register_node("core:ladder_steel", {
+minetest.register_node("base:ladder_steel", {
 	description = "Steel Ladder",
 	drawtype = "signlike",
-	tiles = {"core_ladder_steel.png"},
-	inventory_image = "core_ladder_steel.png",
-	wield_image = "core_ladder_steel.png",
+	tiles = {"base_ladder_steel.png"},
+	inventory_image = "base_ladder_steel.png",
+	wield_image = "base_ladder_steel.png",
 	paramtype = "light",
 	paramtype2 = "wallmounted",
 	sunlight_propagates = true,
@@ -44,6 +44,6 @@ minetest.register_node("core:ladder_steel", {
 		--wall_side = = <default>
 	},
 	groups = {cracky = 2},
-	sounds = core.node_sound_metal_defaults(),
+	sounds = base.node_sound_metal_defaults(),
 })
 

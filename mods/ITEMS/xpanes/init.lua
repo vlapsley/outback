@@ -147,14 +147,14 @@ end
 
 xpanes.register_pane("pane", {
 	description = "Glass Pane",
-	textures = {"core_glass.png","xpanes_pane_half.png","xpanes_white.png"},
-	inventory_image = "core_glass.png",
-	wield_image = "core_glass.png",
-	sounds = core.node_sound_glass_defaults(),
+	textures = {"base_glass.png","xpanes_pane_half.png","xpanes_white.png"},
+	inventory_image = "base_glass.png",
+	wield_image = "base_glass.png",
+	sounds = base.node_sound_glass_defaults(),
 	groups = {snappy=2, cracky=3, oddly_breakable_by_hand=3},
 	recipe = {
-		{"core:glass", "core:glass", "core:glass"},
-		{"core:glass", "core:glass", "core:glass"}
+		{"base:glass", "base:glass", "base:glass"},
+		{"base:glass", "base:glass", "base:glass"}
 	}
 })
 
@@ -164,10 +164,10 @@ xpanes.register_pane("bar", {
 	inventory_image = "xpanes_bar.png",
 	wield_image = "xpanes_bar.png",
 	groups = {cracky=2},
-	sounds = core.node_sound_metal_defaults(),
+	sounds = base.node_sound_metal_defaults(),
 	recipe = {
-		{"core:steel_ingot", "core:steel_ingot", "core:steel_ingot"},
-		{"core:steel_ingot", "core:steel_ingot", "core:steel_ingot"}
+		{"base:steel_ingot", "base:steel_ingot", "base:steel_ingot"},
+		{"base:steel_ingot", "base:steel_ingot", "base:steel_ingot"}
 	}
 })
 

@@ -55,7 +55,7 @@ local function create_nodes()
 			walkable = false,
 			buildable_to = true,
 			groups = {snappy=3,flammable=2,attached_node=1,horsetail=1},
-			sounds = core.node_sound_leaves_defaults(),
+			sounds = base.node_sound_leaves_defaults(),
 			selection_box = {
 				type = "fixed",
 				fixed = selection_boxes[i],
@@ -81,16 +81,16 @@ if abstract_ferns.config.enable_horsetails_spawning == true then
 		spawn_plants = node_names,
 		spawn_chance = 400,
 		spawn_surfaces = {
-			"core:dirt_with_grass",
-			"core:mossycobble",
-			"core:gravel"
+			"base:dirt_with_grass",
+			"base:mossycobble",
+			"base:gravel"
 		},
 		seed_diff = 329,
 		min_elevation = 30,
 		max_elevation = 120,
 		near_nodes = {
 			"group:water",
-			"core:gravel"
+			"base:gravel"
 		},
 		near_nodes_size = 2,
 		near_nodes_vertical = 1,
@@ -105,17 +105,17 @@ end
 
 if abstract_ferns.config.enable_horsetails_on_grass == true then
 	biome_lib:register_generate_plant({
-		surface = {"core:dirt_with_grass"},
+		surface = {"base:dirt_with_grass"},
 		max_count = 35,
 		rarity = 40,
 		min_elevation = 30,
 		max_elevation = 120,
 		near_nodes = {
 			"group:water", -- likes water (of course)
-			"core:gravel", -- near those on gravel
-			"core:clay", -- some like clay
-			"core:mossycobble",
-			"core:cobble"
+			"base:gravel", -- near those on gravel
+			"base:clay", -- some like clay
+			"base:mossycobble",
+			"base:cobble"
 		},
 		near_nodes_size = 3,
 		near_nodes_vertical = 2,
@@ -129,8 +129,8 @@ end
 if abstract_ferns.config.enable_horsetails_on_stones == true then
 	biome_lib:register_generate_plant({
 		surface = {
-			"core:gravel", -- roots go deep
-			"core:mossycobble"
+			"base:gravel", -- roots go deep
+			"base:mossycobble"
 		},
 		max_count = 35,
 		rarity = 20,

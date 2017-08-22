@@ -1,5 +1,5 @@
 --[[
-	Core functions
+	Base functions
 --]]
 
 
@@ -7,25 +7,25 @@
 -- Lavacooling
 --
 
-core.cool_lava = function(pos, node)
-	if node.name == "core:lava_source" then
-		minetest.set_node(pos, {name = "core:obsidian"})
+base.cool_lava = function(pos, node)
+	if node.name == "base:lava_source" then
+		minetest.set_node(pos, {name = "base:obsidian"})
 	else -- Lava flowing
-		minetest.set_node(pos, {name = "core:stone"})
+		minetest.set_node(pos, {name = "base:stone"})
 	end
-	minetest.sound_play("core_cool_lava",
+	minetest.sound_play("base_cool_lava",
 		{pos = pos, max_hear_distance = 16, gain = 0.25})
 end
 
 if minetest.settings:get_bool("enable_lavacooling") ~= false then
 	minetest.register_abm({
 		label = "Lava cooling",
-		nodenames = {"core:lava_source", "core:lava_flowing"},
+		nodenames = {"base:lava_source", "base:lava_flowing"},
 		neighbors = {"group:cools_lava", "group:water"},
 		interval = 1,
 		chance = 2,
 		catch_up = false,
-		action = core.cool_lava,
+		action = base.cool_lava,
 	})
 end
 
@@ -33,7 +33,7 @@ end
 -- optimized helper to put all items in an inventory into a drops list
 --
 
-function core.get_inventory_drops(pos, inventory, drops)
+function base.get_inventory_drops(pos, inventory, drops)
 	local inv = minetest.get_meta(pos):get_inventory()
 	local n = #drops
 	for i = 1, inv:get_size(inventory) do
@@ -51,7 +51,7 @@ end
 
 -- wrapping the functions in abm action is necessary to make overriding them possible
 
-function core.grow_cactus(pos, node)
+function base.grow_cactus(pos, node)
 	if node.param2 >= 4 then
 		return
 	end
@@ -61,7 +61,7 @@ function core.grow_cactus(pos, node)
 	end
 	pos.y = pos.y + 1
 	local height = 0
-	while node.name == "core:cactus" and height < 4 do
+	while node.name == "base:cactus" and height < 4 do
 		height = height + 1
 		pos.y = pos.y + 1
 		node = minetest.get_node(pos)
@@ -72,14 +72,14 @@ function core.grow_cactus(pos, node)
 	if minetest.get_node_light(pos) < 13 then
 		return
 	end
-	minetest.set_node(pos, {name = "core:cactus"})
+	minetest.set_node(pos, {name = "base:cactus"})
 	return true
 end
 
-function core.grow_papyrus(pos, node)
+function base.grow_papyrus(pos, node)
 	pos.y = pos.y - 1
 	local name = minetest.get_node(pos).name
-	if name ~= "core:dirt_with_grass" and name ~= "core:dirt" then
+	if name ~= "base:dirt_with_grass" and name ~= "base:dirt" then
 		return
 	end
 	if not minetest.find_node_near(pos, 3, {"group:water"}) then
@@ -87,7 +87,7 @@ function core.grow_papyrus(pos, node)
 	end
 	pos.y = pos.y + 1
 	local height = 0
-	while node.name == "core:papyrus" and height < 4 do
+	while node.name == "base:papyrus" and height < 4 do
 		height = height + 1
 		pos.y = pos.y + 1
 		node = minetest.get_node(pos)
@@ -98,26 +98,26 @@ function core.grow_papyrus(pos, node)
 	if minetest.get_node_light(pos) < 13 then
 		return
 	end
-	minetest.set_node(pos, {name = "core:papyrus"})
+	minetest.set_node(pos, {name = "base:papyrus"})
 	return true
 end
 
 minetest.register_abm({
 	label = "Grow cactus",
-	nodenames = {"core:cactus"},
+	nodenames = {"base:cactus"},
 	neighbors = {"group:sand"},
 	interval = 12,
 	chance = 83,
-	action = core.grow_cactus
+	action = base.grow_cactus
 })
 
 minetest.register_abm({
 	label = "Grow papyrus",
-	nodenames = {"core:papyrus"},
-	neighbors = {"core:dirt", "core:dirt_with_grass"},
+	nodenames = {"base:papyrus"},
+	neighbors = {"base:dirt", "base:dirt_with_grass"},
 	interval = 14,
 	chance = 71,
-	action = core.grow_papyrus
+	action = base.grow_papyrus
 })
 
 
@@ -125,7 +125,7 @@ minetest.register_abm({
 -- dig upwards
 --
 
-function core.dig_up(pos, node, digger)
+function base.dig_up(pos, node, digger)
 	if digger == nil then return end
 	local np = {x = pos.x, y = pos.y + 1, z = pos.z}
 	local nn = minetest.get_node(np)
@@ -141,7 +141,7 @@ end
 
 -- Prevent decay of placed leaves
 
-core.after_place_leaves = function(pos, placer, itemstack, pointed_thing)
+base.after_place_leaves = function(pos, placer, itemstack, pointed_thing)
 	if placer and not placer:get_player_control().sneak then
 		local node = minetest.get_node(pos)
 		node.param2 = 1
@@ -189,7 +189,7 @@ local function leafdecay_on_timer(pos, def)
 	minetest.check_for_falling(pos)
 end
 
-function core.register_leafdecay(def)
+function base.register_leafdecay(def)
 	assert(def.leaves)
 	assert(def.trunks)
 	assert(def.radius)
@@ -215,12 +215,12 @@ end
 
 minetest.register_abm({
 	label = "Grass spread",
-	nodenames = {"core:dirt"},
+	nodenames = {"base:dirt"},
 	neighbors = {
 		"air",
 		"group:grass",
 		"group:dry_grass",
-		"core:snow",
+		"base:snow",
 	},
 	interval = 6,
 	chance = 50,
@@ -244,13 +244,13 @@ minetest.register_abm({
 		-- Else, any seeding nodes on top?
 		local name = minetest.get_node(above).name
 		-- Snow check is cheapest, so comes first
-		if name == "core:snow" then
-			minetest.set_node(pos, {name = "core:dirt_with_snow"})
+		if name == "base:snow" then
+			minetest.set_node(pos, {name = "base:dirt_with_snow"})
 		-- Most likely case first
 		elseif minetest.get_item_group(name, "grass") ~= 0 then
-			minetest.set_node(pos, {name = "core:dirt_with_grass"})
+			minetest.set_node(pos, {name = "base:dirt_with_grass"})
 		elseif minetest.get_item_group(name, "dry_grass") ~= 0 then
-			minetest.set_node(pos, {name = "core:dirt_with_dry_grass"})
+			minetest.set_node(pos, {name = "base:dirt_with_dry_grass"})
 		end
 	end
 })
@@ -273,7 +273,7 @@ minetest.register_abm({
 		if name ~= "ignore" and nodedef and not ((nodedef.sunlight_propagates or
 				nodedef.paramtype == "light") and
 				nodedef.liquidtype == "none") then
-			minetest.set_node(pos, {name = "core:dirt"})
+			minetest.set_node(pos, {name = "base:dirt"})
 		end
 	end
 })
@@ -285,14 +285,14 @@ minetest.register_abm({
 
 minetest.register_abm({
 	label = "Moss growth",
-	nodenames = {"core:cobble", "stairs:slab_cobble", "stairs:stair_cobble", "walls:cobble"},
+	nodenames = {"base:cobble", "stairs:slab_cobble", "stairs:stair_cobble", "walls:cobble"},
 	neighbors = {"group:water"},
 	interval = 16,
 	chance = 200,
 	catch_up = false,
 	action = function(pos, node)
-		if node.name == "core:cobble" then
-			minetest.set_node(pos, {name = "core:mossycobble"})
+		if node.name == "base:cobble" then
+			minetest.set_node(pos, {name = "base:mossycobble"})
 		elseif node.name == "stairs:slab_cobble" then
 			minetest.set_node(pos, {name = "stairs:slab_mossycobble", param2 = node.param2})
 		elseif node.name == "stairs:stair_cobble" then
@@ -308,7 +308,7 @@ minetest.register_abm({
 -- Checks if specified volume intersects a protected volume
 --
 
-function core.intersects_protection(minp, maxp, player_name, interval)
+function base.intersects_protection(minp, maxp, player_name, interval)
 	-- 'interval' is the largest allowed interval for the 3D lattice of checks
 
 	-- Compute the optimal float step 'd' for each axis so that all corners and
@@ -322,7 +322,7 @@ function core.intersects_protection(minp, maxp, player_name, interval)
 		elseif maxp[c] == minp[c] then
 			d[c] = 1 -- Any value larger than 0 to avoid division by zero
 		else -- maxp[c] < minp[c], print error and treat as protection intersected
-			minetest.log("error", "maxp < minp in 'core.intersects_protection()'")
+			minetest.log("error", "maxp < minp in 'base.intersects_protection()'")
 			return true
 		end
 	end
@@ -349,7 +349,7 @@ end
 -- This method may change in future.
 --
 
-function core.can_interact_with_node(player, pos)
+function base.can_interact_with_node(player, pos)
 	if player then
 		if minetest.check_player_privs(player, "protection_bypass") then
 			return true
@@ -367,7 +367,7 @@ function core.can_interact_with_node(player, pos)
 
 	-- is player wielding the right key?
 	local item = player:get_wielded_item()
-	if item:get_name() == "core:key" then
+	if item:get_name() == "base:key" then
 		local key_meta = item:get_meta()
 
 		if key_meta:get_string("secret") == "" then

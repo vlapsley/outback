@@ -17,19 +17,19 @@ farming.register_hoe(":farming:hoe_steel", {
 	description = "Steel Hoe",
 	inventory_image = "farming_tool_steelhoe.png",
 	max_uses = 200,
-	material = "core:steel_ingot"
+	material = "base:steel_ingot"
 })
 
 farming.register_hoe(":farming:hoe_bronze", {
 	description = "Bronze Hoe",
 	inventory_image = "farming_tool_bronzehoe.png",
 	max_uses = 220,
-	material = "core:bronze_ingot"
+	material = "base:bronze_ingot"
 })
 
 farming.register_hoe(":farming:hoe_diamond", {
 	description = "Diamond Hoe",
 	inventory_image = "farming_tool_diamondhoe.png",
 	max_uses = 500,
-	material = "core:diamond"
+	material = "base:diamond"
 })

@@ -23,7 +23,7 @@ stairs.register_stair_and_slab(
 	{"aus_eucalyptus_wood.png"},
 	"Eucalyptus Wood Stair",
 	"Eucalyptus Wood Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Blackwood
@@ -34,7 +34,7 @@ stairs.register_stair_and_slab(
 	{"aus_blackwood.png"},
 	"Blackwood Stair",
 	"Blackwood Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Blue Gum
@@ -45,7 +45,7 @@ stairs.register_stair_and_slab(
 	{"aus_blue_gum.png"},
 	"Blue Gum Stair",
 	"Blue Gum Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Celery-top Pine
@@ -56,7 +56,7 @@ stairs.register_stair_and_slab(
 	{"aus_celery_top_pine.png"},
 	"Celery-top Pine Stair",
 	"Celery-top Pine Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Red Mahogany
@@ -67,7 +67,7 @@ stairs.register_stair_and_slab(
 	{"aus_red_mahogany.png"},
 	"Red Mahogany Stair",
 	"Red Mahogany Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Huon Pine
@@ -78,7 +78,7 @@ stairs.register_stair_and_slab(
 	{"aus_huon_pine.png"},
 	"Huon Pine Stair",
 	"Huon Pine Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Jarrah
@@ -89,7 +89,7 @@ stairs.register_stair_and_slab(
 	{"aus_jarrah.png"},
 	"Jarrah Stair",
 	"Jarrah Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Karri
@@ -100,7 +100,7 @@ stairs.register_stair_and_slab(
 	{"aus_karri.png"},
 	"Karri Stair",
 	"Karri Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Marri
@@ -111,7 +111,7 @@ stairs.register_stair_and_slab(
 	{"aus_marri.png"},
 	"Marri Stair",
 	"Marri Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Merbau
@@ -122,7 +122,7 @@ stairs.register_stair_and_slab(
 	{"aus_merbau.png"},
 	"Merbau Stair",
 	"Merbau Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Red Gum
@@ -133,7 +133,7 @@ stairs.register_stair_and_slab(
 	{"aus_red_gum.png"},
 	"Red Gum Stair",
 	"Red Gum Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Southern Sassafras
@@ -144,7 +144,7 @@ stairs.register_stair_and_slab(
 	{"aus_southern_sassafras.png"},
 	"Southern Sassafras Stair",
 	"Southern Sassafras Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Tasmanian Oak
@@ -155,7 +155,7 @@ stairs.register_stair_and_slab(
 	{"aus_tasmanian_oak.png"},
 	"Tasmanian Oak Stair",
 	"Tasmanian Oak Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 -- Tasmanian Myrtle
@@ -166,7 +166,7 @@ stairs.register_stair_and_slab(
 	{"aus_tasmanian_myrtle.png"},
 	"Tasmanian Myrtle Stair",
 	"Tasmanian Myrtle Slab",
-	core.node_sound_wood_defaults()
+	base.node_sound_wood_defaults()
 )
 
 
@@ -180,7 +180,7 @@ doors.register_fencegate("australia:fencegate_eucalyptus", {
 	texture = "aus_eucalyptus_wood.png",
 	material = "australia:eucalyptus_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Blackwood
@@ -189,7 +189,7 @@ description = "Blackwood Fence Gate",
 	texture = "aus_blackwood.png",
 	material = "australia:blackwood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Blue Gum
@@ -198,7 +198,7 @@ description = "Blue Gum Fence Gate",
 	texture = "aus_blue_gum.png",
 	material = "australia:blue_gum",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Celery-top Pine
@@ -207,7 +207,7 @@ description = "Celery-top Pine Fence Gate",
 	texture = "aus_celery_top_pine.png",
 	material = "australia:celery_top_pine",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Red Mahogany
@@ -216,7 +216,7 @@ description = "Red Mahogany Fence Gate",
 	texture = "aus_red_mahogany.png",
 	material = "australia:red_mahogany",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Huon Pine
@@ -225,7 +225,7 @@ description = "Huon Pine Fence Gate",
 	texture = "aus_huon_pine.png",
 	material = "australia:huon_pine",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Jarrah
@@ -234,7 +234,7 @@ description = "Jarrah Fence Gate",
 	texture = "aus_jarrah.png",
 	material = "australia:jarrah",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Karri
@@ -243,7 +243,7 @@ description = "Karri Fence Gate",
 	texture = "aus_karri.png",
 	material = "australia:karri",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Marri
@@ -252,7 +252,7 @@ description = "Marri Fence Gate",
 	texture = "aus_marri.png",
 	material = "australia:marri",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Merbau
@@ -261,7 +261,7 @@ description = "Merbau Fence Gate",
 	texture = "aus_merbau.png",
 	material = "australia:merbau",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Red Gum
@@ -270,7 +270,7 @@ description = "Red Gum Fence Gate",
 	texture = "aus_red_gum.png",
 	material = "australia:red_gum",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Southern Sassafras
@@ -279,7 +279,7 @@ description = "Southern Sassafras Fence Gate",
 	texture = "aus_southern_sassafras.png",
 	material = "australia:southern_sassafras",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Tasmanian Oak
@@ -288,7 +288,7 @@ description = "Tasmanian Oak Fence Gate",
 	texture = "aus_tasmanian_oak.png",
 	material = "australia:tasmanian_oak",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 -- Tasmanian Myrtle
@@ -297,5 +297,5 @@ description = "Tasmanian Myrtle Fence Gate",
 	texture = "aus_tasmanian_myrtle.png",
 	material = "australia:tasmanian_myrtle",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })

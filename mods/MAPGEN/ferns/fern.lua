@@ -52,7 +52,7 @@ local function create_nodes()
 			walkable = false,
 			buildable_to = true,
 			groups = {snappy=3,flammable=2,attached_node=1,not_in_creative_inventory=1},
-			sounds = core.node_sound_leaves_defaults(),
+			sounds = base.node_sound_leaves_defaults(),
 			selection_box = {
 				type = "fixed",
 				fixed = {-7/16, -1/2, -7/16, 7/16, 0, 7/16},
@@ -76,8 +76,8 @@ create_nodes()
 if abstract_ferns.config.lady_ferns_near_tree == true then
 	biome_lib:register_generate_plant({ -- near trees (woodlands)
 		surface = {
-			"core:dirt_with_grass",
-			"core:mossycobble"
+			"base:dirt_with_grass",
+			"base:mossycobble"
 		},
 		max_count = 30,
 		rarity = 62,
@@ -103,8 +103,8 @@ end
 if abstract_ferns.config.lady_ferns_near_rock == true then
 	biome_lib:register_generate_plant({ -- near stone (mountains)
 		surface = {
-			"core:dirt_with_grass",
-			"core:mossycobble",
+			"base:dirt_with_grass",
+			"base:mossycobble",
 			"group:falling_node"
 		},
 		max_count = 35,
@@ -124,10 +124,10 @@ end
 if abstract_ferns.config.lady_ferns_near_ores == true then -- this one causes a huge fps drop
 	biome_lib:register_generate_plant({ -- near ores (potential mining sites)
 		surface = {
-			"core:dirt_with_grass",
-			"core:mossycobble",
-			"core:stone_with_coal",
-			"core:stone_with_iron",
+			"base:dirt_with_grass",
+			"base:mossycobble",
+			"base:stone_with_coal",
+			"base:stone_with_iron",
 			"moreores:mineral_tin",
 			"moreores:mineral_silver"
 		},
@@ -136,11 +136,11 @@ if abstract_ferns.config.lady_ferns_near_ores == true then -- this one causes a 
 		min_elevation = 5,
 		max_elevation = 140,
 		near_nodes = {
-			"core:stone_with_iron",
-			--"core:stone_with_copper",
-			--"core:stone_with_mese",
-			--"core:stone_with_gold",
-			--"core:stone_with_diamond",
+			"base:stone_with_iron",
+			--"base:stone_with_copper",
+			--"base:stone_with_mese",
+			--"base:stone_with_gold",
+			--"base:stone_with_diamond",
 			"moreores:mineral_tin",
 			"moreores:mineral_silver"
 			--"moreores:mineral_mithril"
@@ -158,10 +158,10 @@ end
 if abstract_ferns.config.lady_ferns_in_groups == true then -- this one is meant as a replacement of Ferns_near_Ores
 	biome_lib:register_generate_plant({
 		surface = {
-			"core:dirt_with_grass",
-			"core:mossycobble",
-			"core:stone_with_coal",
-			"core:stone_with_iron",
+			"base:dirt_with_grass",
+			"base:mossycobble",
+			"base:stone_with_coal",
+			"base:stone_with_iron",
 			"moreores:mineral_tin",
 			"moreores:mineral_silver"
 		},
@@ -170,7 +170,7 @@ if abstract_ferns.config.lady_ferns_in_groups == true then -- this one is meant 
 		min_elevation = 5,
 		max_elevation = 140,
 		near_nodes = {
-			"core:stone"
+			"base:stone"
 		},
 		near_nodes_size = 2,
 		near_nodes_vertical = 2,

@@ -64,51 +64,51 @@ end
 fences.register_fence("fences:fence_wood", {
 	description = "Wooden Fence",
 	texture = "fences_fence_wood.png",
-	inventory_image = "fences_fence_overlay.png^core_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fences_fence_overlay.png^core_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	material = "core:wood",
+	inventory_image = "fences_fence_overlay.png^base_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "fences_fence_overlay.png^base_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	material = "base:wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 fences.register_fence("fences:fence_acacia_wood", {
 	description = "Acacia Fence",
 	texture = "fences_fence_acacia_wood.png",
-	inventory_image = "fences_fence_overlay.png^core_acacia_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fences_fence_overlay.png^core_acacia_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	material = "core:acacia_wood",
+	inventory_image = "fences_fence_overlay.png^base_acacia_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "fences_fence_overlay.png^base_acacia_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	material = "base:acacia_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 fences.register_fence("fences:fence_junglewood", {
 	description = "Jungle Wood Fence",
 	texture = "fences_fence_junglewood.png",
-	inventory_image = "fences_fence_overlay.png^core_junglewood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fences_fence_overlay.png^core_junglewood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	material = "core:junglewood",
+	inventory_image = "fences_fence_overlay.png^base_junglewood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "fences_fence_overlay.png^base_junglewood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	material = "base:junglewood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 fences.register_fence("fences:fence_pine_wood", {
 	description = "Pine Fence",
 	texture = "fences_fence_pine_wood.png",
-	inventory_image = "fences_fence_overlay.png^core_pine_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fences_fence_overlay.png^core_pine_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	material = "core:pine_wood",
+	inventory_image = "fences_fence_overlay.png^base_pine_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "fences_fence_overlay.png^base_pine_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	material = "base:pine_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 fences.register_fence("fences:fence_aspen_wood", {
 	description = "Aspen Fence",
 	texture = "fences_fence_aspen_wood.png",
-	inventory_image = "fences_fence_overlay.png^core_aspen_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	wield_image = "fences_fence_overlay.png^core_aspen_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
-	material = "core:aspen_wood",
+	inventory_image = "fences_fence_overlay.png^base_aspen_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	wield_image = "fences_fence_overlay.png^base_aspen_wood.png^fences_fence_overlay.png^[makealpha:255,126,126",
+	material = "base:aspen_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
-	sounds = core.node_sound_wood_defaults()
+	sounds = base.node_sound_wood_defaults()
 })
 
 fences.register_fence("fences:fence_eucalyptus_wood", {
@@ -116,7 +116,7 @@ fences.register_fence("fences:fence_eucalyptus_wood", {
 	texture = "aus_eucalyptus_wood.png",
 	material = "australia:eucalyptus_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_blackwood", {
@@ -124,7 +124,7 @@ fences.register_fence("fences:fence_blackwood", {
 	texture = "aus_blackwood.png",
 	material = "australia:blackwood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_blue_gum", {
@@ -132,7 +132,7 @@ fences.register_fence("fences:fence_blue_gum", {
 	texture = "aus_blue_gum.png",
 	material = "australia:bluegum",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_celery_top_pine", {
@@ -140,7 +140,7 @@ fences.register_fence("fences:fence_celery_top_pine", {
 	texture = "aus_celery_top_pine.png",
 	material = "australia:celery_top_pine",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_red_mahogany", {
@@ -148,7 +148,7 @@ fences.register_fence("fences:fence_red_mahogany", {
 	texture = "aus_red_mahogany.png",
 	material = "australia:red_mahogany",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_huon_pine", {
@@ -156,7 +156,7 @@ fences.register_fence("fences:fence_huon_pine", {
 	texture = "aus_huon_pine.png",
 	material = "australia:huon_pine",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_jarrah", {
@@ -164,7 +164,7 @@ fences.register_fence("fences:fence_jarrah", {
 	texture = "aus_jarrah.png",
 	material = "australia:jarrah",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_karri", {
@@ -172,7 +172,7 @@ fences.register_fence("fences:fence_karri", {
 	texture = "aus_karri.png",
 	material = "australia:karri",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_marri", {
@@ -180,7 +180,7 @@ fences.register_fence("fences:fence_marri", {
 	texture = "aus_marri.png",
 	material = "australia:marri",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_merbau", {
@@ -188,7 +188,7 @@ fences.register_fence("fences:fence_merbau", {
 	texture = "aus_merbau.png",
 	material = "australia:merbau",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_red_gum", {
@@ -196,7 +196,7 @@ fences.register_fence("fences:fence_red_gum", {
 	texture = "aus_red_gum.png",
 	material = "australia:red_gum",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_southern_sassafras", {
@@ -204,7 +204,7 @@ fences.register_fence("fences:fence_southern_sassafras", {
 	texture = "aus_southern_sassafras.png",
 	material = "australia:southern_sassafras",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_tasmanian_oak", {
@@ -212,7 +212,7 @@ fences.register_fence("fences:fence_tasmanian_oak", {
 	texture = "aus_tasmanian_oak.png",
 	material = "australia:tasmanian_oak",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 fences.register_fence("fences:fence_tasmanian_myrtle", {
@@ -220,7 +220,7 @@ fences.register_fence("fences:fence_tasmanian_myrtle", {
 	texture = "aus_tasmanian_myrtle.png",
 	material = "australia:tasmanian_myrtle",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 })
 
 

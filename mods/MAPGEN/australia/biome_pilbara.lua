@@ -10,7 +10,7 @@ minetest.register_biome({
 	depth_top =         2,
 	node_filler =       "australia:red_stone",
 	depth_filler =      2,
-	node_stone =        "core:stone",
+	node_stone =        "base:stone",
 	node_river_water =  "australia:muddy_river_water_source",
 	node_riverbed =     "australia:red_gravel",
 	depth_riverbed =    1,
@@ -30,8 +30,8 @@ minetest.register_biome({
 -- Iron
 minetest.register_ore({
 	ore_type =         "blob",
-	ore =              "core:stone_with_iron",
-	wherein =          {"core:stone"},
+	ore =              "base:stone_with_iron",
+	wherein =          {"base:stone"},
 	clust_scarcity =   24 * 24 * 24,
 	clust_size =       8,
 	biomes =           {"pilbara"},
@@ -70,7 +70,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"pilbara"},
 		y_min =         4,
 		y_max =         300,
-		decoration =    "core:dry_grass_"..length,
+		decoration =    "base:dry_grass_"..length,
 	})
 end
 

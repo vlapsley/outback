@@ -75,10 +75,10 @@ local stuck_path_timeout = 10 -- how long will mob follow path before giving up
 -- default nodes
 local node_fire = "fire:basic_flame"
 local node_permanent_flame = "fire:permanent_flame"
-local node_ice = "core:ice"
-local node_snowblock = "core:snowblock"
-local node_snow = "core:snow"
-mobs.fallback_node = minetest.registered_aliases["mapgen_dirt"] or "core:dirt"
+local node_ice = "base:ice"
+local node_snowblock = "base:snowblock"
+local node_snow = "base:snow"
+mobs.fallback_node = minetest.registered_aliases["mapgen_dirt"] or "base:dirt"
 
 -- play sound
 local mob_sound = function(self, sound)
@@ -3285,7 +3285,7 @@ function mobs:capture_mob(self, clicker, chance_hand, chance_net, chance_lasso, 
 
 			self.object:remove()
 
-			mob_sound(self, "core_place_node_hard")
+			mob_sound(self, "base_place_node_hard")
 
 
 		else

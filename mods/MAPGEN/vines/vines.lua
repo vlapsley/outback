@@ -11,8 +11,8 @@ vines.register_vine( 'root', {
   spawn_delay = 500,
   spawn_chance = 10,
   spawn_surfaces = {
-    "core:dirt_with_grass",
-    "core:dirt"
+    "base:dirt_with_grass",
+    "base:dirt"
   },
   spawn_on_bottom = true,
   plantlife_limit = -0.6,
@@ -41,7 +41,7 @@ vines.register_vine( 'side', {
   average_length = 6,
 },{
   choose_random_wall = true,
-  avoid_nodes = {"group:vines", "core:apple"},
+  avoid_nodes = {"group:vines", "base:apple"},
   avoid_radius = 3,
   spawn_delay = 500,
   spawn_chance = 100,

@@ -9,8 +9,8 @@ end
 -- loss probabilities array (one in X will be lost)
 local loss_prob = {}
 
-loss_prob["core:cobble"] = 3
-loss_prob["core:dirt"] = 4
+loss_prob["base:cobble"] = 3
+loss_prob["base:dirt"] = 4
 
 local tnt_radius = tonumber(minetest.settings:get("tnt_radius") or 3)
 
@@ -431,7 +431,7 @@ minetest.register_node("tnt:gunpowder", {
 	},
 	groups = {dig_immediate = 2, attached_node = 1, flammable = 5,
 		connect_to_raillike = minetest.raillike_group("gunpowder")},
-	sounds = core.node_sound_leaves_cores(),
+	sounds = base.node_sound_leaves_defaults(),
 
 	on_punch = function(pos, node, puncher)
 		if puncher:get_wielded_item():get_name() == "torches:torch" then
@@ -504,7 +504,7 @@ minetest.register_node("tnt:gunpowder_burning", {
 		attached_node = 1,
 		connect_to_raillike = minetest.raillike_group("gunpowder")
 	},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 	on_timer = function(pos, elapsed)
 		for dx = -1, 1 do
 		for dz = -1, 1 do
@@ -532,7 +532,7 @@ minetest.register_node("tnt:gunpowder_burning", {
 minetest.register_craft({
 	output = "tnt:gunpowder 5",
 	type = "shapeless",
-	recipe = {"core:coal_lump", "core:gravel"}
+	recipe = {"base:coal_lump", "base:gravel"}
 })
 
 if enable_tnt then
@@ -548,7 +548,7 @@ if enable_tnt then
 	minetest.register_abm({
 		label = "TNT ignition",
 		nodenames = {"group:tnt", "tnt:gunpowder"},
-		neighbors = {"fire:basic_flame", "core:lava_source", "core:lava_flowing"},
+		neighbors = {"fire:basic_flame", "base:lava_source", "base:lava_flowing"},
 		interval = 4,
 		chance = 1,
 		action = function(pos, node)
@@ -578,7 +578,7 @@ function tnt.register_tnt(def)
 			tiles = {tnt_top, tnt_bottom, tnt_side},
 			is_ground_content = false,
 			groups = {dig_immediate = 2, mesecon = 2, tnt = 1, flammable = 5},
-			sounds = core.node_sound_wood_defaults(),
+			sounds = base.node_sound_wood_defaults(),
 			on_punch = function(pos, node, puncher)
 				if puncher:get_wielded_item():get_name() == "torches:torch" then
 					minetest.set_node(pos, {name = name .. "_burning"})
@@ -623,7 +623,7 @@ function tnt.register_tnt(def)
 			},
 		light_source = 5,
 		drop = "",
-		sounds = core.node_sound_wood_defaults(),
+		sounds = base.node_sound_wood_defaults(),
 		groups = {falling_node = 1},
 		on_timer = function(pos, elapsed)
 			tnt.boom(pos, def)

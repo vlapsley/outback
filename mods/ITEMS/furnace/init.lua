@@ -263,7 +263,7 @@ minetest.register_node("furnace:furnace", {
 	groups = {cracky=2},
 	legacy_facedir_simple = true,
 	is_ground_content = false,
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 
 	can_dig = can_dig,
 
@@ -287,9 +287,9 @@ minetest.register_node("furnace:furnace", {
 	end,
 	on_blast = function(pos)
 		local drops = {}
-		core.get_inventory_drops(pos, "src", drops)
-		core.get_inventory_drops(pos, "fuel", drops)
-		core.get_inventory_drops(pos, "dst", drops)
+		base.get_inventory_drops(pos, "src", drops)
+		base.get_inventory_drops(pos, "fuel", drops)
+		base.get_inventory_drops(pos, "dst", drops)
 		drops[#drops+1] = "furnace:furnace"
 		minetest.remove_node(pos)
 		return drops
@@ -323,7 +323,7 @@ minetest.register_node("furnace:furnace_active", {
 	groups = {cracky=2, not_in_creative_inventory=1},
 	legacy_facedir_simple = true,
 	is_ground_content = false,
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 	on_timer = furnace_node_timer,
 
 	can_dig = can_dig,

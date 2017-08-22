@@ -5,7 +5,7 @@ minetest.register_node("australia:red_stone", {
 	tiles = {"aus_red_stone.png"},
 	groups = {cracky = 3, stone = 1},
 	drop = "australia:red_cobble",
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:red_cobble", {
@@ -13,7 +13,7 @@ minetest.register_node("australia:red_cobble", {
 	tiles = {"aus_red_cobble.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:red_stonebrick", {
@@ -21,14 +21,14 @@ minetest.register_node("australia:red_stonebrick", {
 	tiles = {"aus_red_stonebrick.png"},
 	is_ground_content = false,
 	groups = {cracky = 2, stone = 1},
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:sandstone_cobble", {
 	description = "Sandstone Cobble",
 	tiles = {"aus_sandstone_cobble.png"},
 	groups = {crumbly = 1, cracky = 3, oddly_breakable_by_hand = 1},
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:bluestone", {
@@ -36,7 +36,7 @@ minetest.register_node("australia:bluestone", {
 	tiles = {"aus_bluestone.png"},
 	groups = {cracky = 2, stone = 1},
 	drop = "australia:bluestone_cobble",
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:bluestone_cobble", {
@@ -44,7 +44,7 @@ minetest.register_node("australia:bluestone_cobble", {
 	tiles = {"aus_bluestone_cobble.png"},
 	is_ground_content = false,
 	groups = {cracky = 2, stone = 2},
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:bluestone_brick", {
@@ -52,30 +52,30 @@ minetest.register_node("australia:bluestone_brick", {
 	tiles = {"aus_bluestone_brick.png"},
 	is_ground_content = false,
 	groups = {cracky = 1, stone = 1},
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:red_dirt", {
 	description = "Red Dirt",
 	tiles = {"aus_red_dirt.png"},
 	groups = {crumbly = 3,soil = 1},
-	sounds = core.node_sound_dirt_defaults(),
+	sounds = base.node_sound_dirt_defaults(),
 })
 
 minetest.register_node("australia:red_sand", {
 	description = "Red Sand",
 	tiles = {"aus_red_sand.png"},
 	groups = {crumbly = 3, falling_node = 1, sand = 1},
-	sounds = core.node_sound_sand_defaults(),
+	sounds = base.node_sound_sand_defaults(),
 })
 
 minetest.register_node("australia:red_gravel", {
 	description = "Red Gravel",
 	tiles = {"aus_red_gravel.png"},
 	groups = {crumbly = 2, falling_node = 1},
-	sounds = core.node_sound_dirt_defaults({
-		footstep = {name = "core_gravel_footstep", gain = 0.5},
-		dug = {name = "core_gravel_footstep", gain = 1.0},
+	sounds = base.node_sound_dirt_defaults({
+		footstep = {name = "base_gravel_footstep", gain = 0.5},
+		dug = {name = "base_gravel_footstep", gain = 1.0},
 	}),
 })
 
@@ -84,7 +84,7 @@ minetest.register_node("australia:mangrove_mud", {
 	tiles = {"aus_mangrove_mud.png"},
 	liquid_viscosity = 5,
 	groups = {crumbly = 2, soil = 1, disable_jump = 1},
-	sounds = core.node_sound_dirt_defaults({
+	sounds = base.node_sound_dirt_defaults({
 		footstep = {name = "aus_mangrove_mud", gain = 0.4},
 		dug = {name = "aus_mangrove_mud", gain = 0.4},
 	}),
@@ -102,7 +102,7 @@ minetest.register_node("australia:mineral_salt", {
 			{items = {"australia:salt"} }
 		}
 	},
-	sounds = core.node_sound_dirt_defaults,
+	sounds = base.node_sound_dirt_defaults,
 })
 
 minetest.register_node("australia:salt", {
@@ -116,7 +116,7 @@ minetest.register_node("australia:salt", {
 	walkable = false,
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 1},
 	on_use = minetest.item_eat(1),
-	sounds = core.node_sound_defaults(),
+	sounds = base.node_sound_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
@@ -129,19 +129,19 @@ minetest.register_node("australia:salt", {
 
 minetest.register_node( "australia:salt_block", {
 	description = "Salt Block",
-	tiles = {"core_clay.png^aus_salt_block.png"},
+	tiles = {"base_clay.png^aus_salt_block.png"},
 	is_ground_content = true,
 	groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 	on_use = minetest.item_eat(9),
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:stone_with_opal", {
 	description = "Opal Ore",
-	tiles = {"core_stone.png^aus_mineral_opal.png"},
+	tiles = {"base_stone.png^aus_mineral_opal.png"},
 	groups = {cracky = 2},
 	drop = "australia:opal",
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:opal",{
@@ -160,7 +160,7 @@ minetest.register_node("australia:opal",{
 		type = "fixed",
 		fixed = {-5/16, -8/16, -6/16, 5/16, -1/32, 5/16},
 	},
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 
@@ -208,7 +208,7 @@ for grid_count = 1, 6 do
 		},
 		groups = {stone = 1, oddly_breakable_by_hand = 3},
 		drop = "australia:small_red_rocks",
-		sounds = core.node_sound_stone_defaults(),
+		sounds = base.node_sound_stone_defaults(),
 	})
 
 	default_grid_red_rocks = grid
@@ -228,7 +228,7 @@ minetest.register_node("australia:small_red_rocks", {
 		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
 	groups = {stone = 1, oddly_breakable_by_hand = 3},
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 	on_place = function(itemstack, placer, pointed_thing)
 		local pos = pointed_thing.above
 		local player_name = placer:get_player_name()
@@ -261,7 +261,7 @@ for grid_count = 1, 6 do
 
 	minetest.register_node("australia:small_sandstone_rocks"..grid_count, {
 		description = "Small Sandstone Rocks",
-		tiles = {"core_sandstone.png"},
+		tiles = {"base_sandstone.png"},
 		is_ground_content = true,
 		walkable = false,
 		paramtype = "light",
@@ -274,7 +274,7 @@ for grid_count = 1, 6 do
 		},
 		groups = {stone = 1, oddly_breakable_by_hand = 3},
 		drop = "australia:small_sandstone_rocks",
-		sounds = core.node_sound_stone_defaults(),
+		sounds = base.node_sound_stone_defaults(),
 	})
 
 	default_grid_sandstone_rocks = grid
@@ -282,7 +282,7 @@ end
 
 minetest.register_node("australia:small_sandstone_rocks", {
 	description = "Small Sandstone Rocks",
-	tiles = {"core_sandstone.png"},
+	tiles = {"base_sandstone.png"},
 	inventory_image = "aus_small_sandstone_rocks.png",
 	is_ground_content = true,
 	walkable = false,
@@ -294,7 +294,7 @@ minetest.register_node("australia:small_sandstone_rocks", {
 		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
 	groups = {stone = 1, oddly_breakable_by_hand = 3},
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 	on_place = function(itemstack, placer, pointed_thing)
 		local pos = pointed_thing.above
 		local player_name = placer:get_player_name()
@@ -327,7 +327,7 @@ for grid_count = 1, 6 do
 
 	minetest.register_node("australia:small_stone_rocks"..grid_count, {
 		description = "Small Stone Rocks",
-		tiles = {"core_stone.png"},
+		tiles = {"base_stone.png"},
 		is_ground_content = true,
 		walkable = false,
 		paramtype = "light",
@@ -340,7 +340,7 @@ for grid_count = 1, 6 do
 		},
 		groups = {stone = 1, oddly_breakable_by_hand = 3},
 		drop = "australia:small_stone_rocks",
-		sounds = core.node_sound_stone_defaults(),
+		sounds = base.node_sound_stone_defaults(),
 	})
 
 	default_grid_stone_rocks = grid
@@ -348,7 +348,7 @@ end
 
 minetest.register_node("australia:small_stone_rocks", {
 	description = "Small Stone Rocks",
-	tiles = {"core_stone.png"},
+	tiles = {"base_stone.png"},
 	inventory_image = "aus_small_stone_rocks.png",
 	is_ground_content = true,
 	walkable = false,
@@ -360,7 +360,7 @@ minetest.register_node("australia:small_stone_rocks", {
 		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
 	groups = {stone = 1, oddly_breakable_by_hand = 3},
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 	on_place = function(itemstack, placer, pointed_thing)
 		local pos = pointed_thing.above
 		local player_name = placer:get_player_name()
@@ -479,43 +479,43 @@ minetest.register_node("australia:muddy_river_water_flowing", {
 --]]
 
 walls.register(":walls:bluestone", "Bluestone Cobble Wall", "aus_bluestone_cobble.png",
-		"australia:bluestone_cobble", core.node_sound_stone_defaults())
+		"australia:bluestone_cobble", base.node_sound_stone_defaults())
 
 walls.register(":walls:bluestone_cobble", "Bluestone Wall", "aus_bluestone.png",
-		"australia:bluestone", core.node_sound_stone_defaults())
+		"australia:bluestone", base.node_sound_stone_defaults())
 
 walls.register(":walls:bluestone_brick", "Bluestone Brick Wall", "aus_bluestone_brick.png",
-		"australia:bluestone_brick", core.node_sound_stone_defaults())
+		"australia:bluestone_brick", base.node_sound_stone_defaults())
 
-walls.register(":walls:brick", "Brick Wall", "core_brick.png",
-		"core:brick", core.node_sound_stone_defaults())
+walls.register(":walls:brick", "Brick Wall", "base_brick.png",
+		"base:brick", base.node_sound_stone_defaults())
 
-walls.register(":walls:desert_stone", "Desert Stone Wall", "core_desert_stone.png",
-		"core:desert_stone", core.node_sound_stone_defaults())
+walls.register(":walls:desert_stone", "Desert Stone Wall", "base_desert_stone.png",
+		"base:desert_stone", base.node_sound_stone_defaults())
 
-walls.register(":walls:desert_stonebrick", "Desert Stone Brick Wall", "core_desert_stone_brick.png",
-		"core:desert_stonebrick", core.node_sound_stone_defaults())
+walls.register(":walls:desert_stonebrick", "Desert Stone Brick Wall", "base_desert_stone_brick.png",
+		"base:desert_stonebrick", base.node_sound_stone_defaults())
 
 walls.register(":walls:red_stone", "Red Cobblestone Wall", "aus_red_cobble.png",
-		"australia:red_cobble", core.node_sound_stone_defaults())
+		"australia:red_cobble", base.node_sound_stone_defaults())
 
 walls.register(":walls:red_cobble", "Red Stone Wall", "aus_red_stone.png",
-		"australia:red_stone", core.node_sound_stone_defaults())
+		"australia:red_stone", base.node_sound_stone_defaults())
 
 walls.register(":walls:red_stonebrick", "Red Stone Brick Wall", "aus_red_stonebrick.png",
-		"australia:red_stonebrick", core.node_sound_stone_defaults())
+		"australia:red_stonebrick", base.node_sound_stone_defaults())
 
-walls.register(":walls:sandstone", "Sandstone Wall", "core_sandstone.png",
-		"core:sandstone", core.node_sound_stone_defaults())
+walls.register(":walls:sandstone", "Sandstone Wall", "base_sandstone.png",
+		"base:sandstone", base.node_sound_stone_defaults())
 
-walls.register(":walls:sandstone_brick", "Sandstone Brick Wall", "core_sandstone_brick.png",
-		"core:sandstonebrick", core.node_sound_stone_defaults())
+walls.register(":walls:sandstone_brick", "Sandstone Brick Wall", "base_sandstone_brick.png",
+		"base:sandstonebrick", base.node_sound_stone_defaults())
 
 walls.register(":walls:sandstone_cobble", "Sandstone Cobble Wall", "aus_sandstone_cobble.png",
-		"australia:sandstone_cobble", core.node_sound_stone_defaults())
+		"australia:sandstone_cobble", base.node_sound_stone_defaults())
 
-walls.register(":walls:stone", "Stone Wall", "core_stone.png",
-		"core:stone", core.node_sound_stone_defaults())
+walls.register(":walls:stone", "Stone Wall", "base_stone.png",
+		"base:stone", base.node_sound_stone_defaults())
 
-walls.register(":walls:stone_brick", "Stone Brick Wall", "core_stone_brick.png",
-		"core:stonebrick", core.node_sound_stone_defaults())
+walls.register(":walls:stone_brick", "Stone Brick Wall", "base_stone_brick.png",
+		"base:stonebrick", base.node_sound_stone_defaults())

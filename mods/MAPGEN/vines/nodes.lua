@@ -6,12 +6,12 @@ minetest.register_node("vines:rope_block", {
   sunlight_propagates = true,
   paramtype = "light",
   tiles = {
-    "core_wood.png^vines_rope.png",
-    "core_wood.png^vines_rope.png",
-    "core_wood.png",
-    "core_wood.png",
-    "core_wood.png^vines_rope.png",
-    "core_wood.png^vines_rope.png",
+    "base_wood.png^vines_rope.png",
+    "base_wood.png^vines_rope.png",
+    "base_wood.png",
+    "base_wood.png",
+    "base_wood.png^vines_rope.png",
+    "base_wood.png^vines_rope.png",
   },
   groups = { flammable=2, choppy=2, oddly_breakable_by_hand=1 },
   after_place_node = function(pos)
@@ -42,7 +42,7 @@ minetest.register_node("vines:rope", {
   tiles = { "vines_rope.png" },
   drawtype = "plantlike",
   groups = {flammable=2, not_in_creative_inventory=1},
-  sounds =  core.node_sound_leaves_defaults(),
+  sounds =  base.node_sound_leaves_defaults(),
   selection_box = {
     type = "fixed",
     fixed = {-1/7, -1/2, -1/7, 1/7, 1/2, 1/7},
@@ -59,7 +59,7 @@ minetest.register_node("vines:rope_end", {
   tiles = { "vines_rope_end.png" },
   drawtype = "plantlike",
   groups = {flammable=2, not_in_creative_inventory=1},
-  sounds =  core.node_sound_leaves_defaults(),
+  sounds =  base.node_sound_leaves_defaults(),
   after_place_node = function(pos)
     local yesh  = {x = pos.x, y= pos.y-1, z=pos.z}
     minetest.add_node(yesh, {name="vines:rope"})

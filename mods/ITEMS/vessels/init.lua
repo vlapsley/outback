@@ -36,12 +36,12 @@ end
 
 minetest.register_node("vessels:shelf", {
 	description = "Vessels Shelf",
-	tiles = {"core_wood.png", "core_wood.png", "core_wood.png",
-		"core_wood.png", "vessels_shelf.png", "vessels_shelf.png"},
+	tiles = {"base_wood.png", "base_wood.png", "base_wood.png",
+		"base_wood.png", "vessels_shelf.png", "vessels_shelf.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
-	sounds = core.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
@@ -79,7 +79,7 @@ minetest.register_node("vessels:shelf", {
 	end,
 	on_blast = function(pos)
 		local drops = {}
-		core.get_inventory_drops(pos, "vessels", drops)
+		base.get_inventory_drops(pos, "vessels", drops)
 		drops[#drops + 1] = "vessels:shelf"
 		minetest.remove_node(pos)
 		return drops
@@ -109,15 +109,15 @@ minetest.register_node("vessels:glass_bottle", {
 		fixed = {-0.25, -0.5, -0.25, 0.25, 0.3, 0.25}
 	},
 	groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
-	sounds = core.node_sound_glass_defaults(),
+	sounds = base.node_sound_glass_defaults(),
 })
 
 minetest.register_craft( {
 	output = "vessels:glass_bottle 10",
 	recipe = {
-		{"core:glass", "", "core:glass"},
-		{"core:glass", "", "core:glass"},
-		{"", "core:glass", ""}
+		{"base:glass", "", "base:glass"},
+		{"base:glass", "", "base:glass"},
+		{"", "base:glass", ""}
 	}
 })
 
@@ -135,15 +135,15 @@ minetest.register_node("vessels:drinking_glass", {
 		fixed = {-0.25, -0.5, -0.25, 0.25, 0.3, 0.25}
 	},
 	groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
-	sounds = core.node_sound_glass_defaults(),
+	sounds = base.node_sound_glass_defaults(),
 })
 
 minetest.register_craft( {
 	output = "vessels:drinking_glass 14",
 	recipe = {
-		{"core:glass", "", "core:glass"},
-		{"core:glass", "", "core:glass"},
-		{"core:glass", "core:glass", "core:glass"}
+		{"base:glass", "", "base:glass"},
+		{"base:glass", "", "base:glass"},
+		{"base:glass", "base:glass", "base:glass"}
 	}
 })
 
@@ -161,15 +161,15 @@ minetest.register_node("vessels:steel_bottle", {
 		fixed = {-0.25, -0.5, -0.25, 0.25, 0.3, 0.25}
 	},
 	groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
-	sounds = core.node_sound_defaults(),
+	sounds = base.node_sound_defaults(),
 })
 
 minetest.register_craft( {
 	output = "vessels:steel_bottle 5",
 	recipe = {
-		{"core:steel_ingot", "", "core:steel_ingot"},
-		{"core:steel_ingot", "", "core:steel_ingot"},
-		{"", "core:steel_ingot", ""}
+		{"base:steel_ingot", "", "base:steel_ingot"},
+		{"base:steel_ingot", "", "base:steel_ingot"},
+		{"", "base:steel_ingot", ""}
 	}
 })
 
@@ -201,13 +201,13 @@ minetest.register_craft( {
 
 minetest.register_craft({
 	type = "cooking",
-	output = "core:glass",
+	output = "base:glass",
 	recipe = "vessels:glass_fragments",
 })
 
 minetest.register_craft( {
 	type = "cooking",
-	output = "core:steel_ingot",
+	output = "base:steel_ingot",
 	recipe = "vessels:steel_bottle",
 })
 

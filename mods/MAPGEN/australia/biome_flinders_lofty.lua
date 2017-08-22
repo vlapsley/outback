@@ -6,13 +6,13 @@ local math_random = math.random
 -- flinders / lofty
 minetest.register_biome({
 	name =              "flinders_lofty",
-	node_top =          "core:dirt_with_dry_grass",
+	node_top =          "base:dirt_with_dry_grass",
 	depth_top =         1,
 	node_filler =       "australia:red_dirt",
 	depth_filler =      2,
-	node_stone =        "core:stone",
+	node_stone =        "base:stone",
 	node_river_water =  "australia:muddy_river_water_source",
-	node_riverbed =     "core:dirt",
+	node_riverbed =     "base:dirt",
 	depth_riverbed =    1,
 	y_min =             4,
 	y_max =             31000,
@@ -31,7 +31,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =         "blob",
 	ore =              "australia:bluestone",
-	wherein =          {"core:stone"},
+	wherein =          {"base:stone"},
 	clust_scarcity =   24 * 24 * 24,
 	clust_size =       8,
 	biomes =           {"flinders_lofty"},
@@ -51,7 +51,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =                "sheet",
 	ore =                     "australia:bluestone",
-	wherein =                 "core:stone",
+	wherein =                 "base:stone",
 	column_height_min =       2,
 	column_height_max =       4,
 	column_midpoint_factor =  0.5,
@@ -72,8 +72,8 @@ minetest.register_ore({
 -- Copper (Olympic Dam)
 minetest.register_ore({
 	ore_type =         "vein",
-	ore =              "core:stone_with_copper",
-	wherein =          "core:stone",
+	ore =              "base:stone_with_copper",
+	wherein =          "base:stone",
 	biomes =           {"flinders_lofty"},
 	y_min =            -64,
 	y_max =            34,
@@ -98,7 +98,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"core:dirt_with_dry_grass"},
+		place_on =      {"base:dirt_with_dry_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -111,14 +111,14 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"flinders_lofty"},
 		y_min =         4,
 		y_max =         73,
-		decoration =    "core:grass_"..length,
+		decoration =    "base:grass_"..length,
 	})
 end
 
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"core:dirt_with_dry_grass"},
+		place_on =      {"base:dirt_with_dry_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -131,7 +131,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"flinders_lofty"},
 		y_min =         68,
 		y_max =         240,
-		decoration =    "core:dry_grass_"..length,
+		decoration =    "base:dry_grass_"..length,
 	})
 end
 
@@ -147,7 +147,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 -- Grass near rivers
 local function register_rivergrass(length)
 	aus.register_plant({
-		nodes =     {"core:grass_"..length},
+		nodes =     {"base:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
 		priority =  25,
@@ -209,7 +209,7 @@ local function register_small_stone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "australia:small_stone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"core:dirt_with_dry_grass"},
+		place_on =    {"base:dirt_with_dry_grass"},
 		fill_ratio =  0.002,
 		y_min =       24,
 		biomes =      {"flinders_lofty"},

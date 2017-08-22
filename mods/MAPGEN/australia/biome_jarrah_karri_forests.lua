@@ -6,13 +6,13 @@ local math_random = math.random
 -- jarrah / karri forests
 minetest.register_biome({
 	name =              "jarrah_karri_forests",
-	node_top =          "core:dirt_with_grass",
+	node_top =          "base:dirt_with_grass",
 	depth_top =         1,
-	node_filler =       "core:dirt",
+	node_filler =       "base:dirt",
 	depth_filler =      3,
-	node_stone =        "core:sandstone",
+	node_stone =        "base:sandstone",
 	node_river_water =  "australia:muddy_river_water_source",
-	node_riverbed =     "core:dirt",
+	node_riverbed =     "base:dirt",
 	depth_riverbed =    1,
 	y_min =             4,
 	y_max =             31000,
@@ -31,7 +31,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =                "sheet",
 	ore =                     "australia:bluestone",
-	wherein =                 "core:stone",
+	wherein =                 "base:stone",
 	column_height_min =       2,
 	column_height_max =       4,
 	column_midpoint_factor =  0.5,
@@ -58,7 +58,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"core:dirt_with_grass"},
+		place_on =      {"base:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -71,14 +71,14 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"jarrah_karri_forests"},
 		y_min =         4,
 		y_max =         50,
-		decoration =    "core:grass_"..length,
+		decoration =    "base:grass_"..length,
 	})
 end
 
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"core:dirt_with_grass"},
+		place_on =      {"base:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -91,7 +91,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"jarrah_karri_forests"},
 		y_min =         40,
 		y_max =         240,
-		decoration =    "core:dry_grass_"..length,
+		decoration =    "base:dry_grass_"..length,
 	})
 end
 
@@ -107,7 +107,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 -- Grass near rivers
 local function register_rivergrass(length)
 	aus.register_plant({
-		nodes =     {"core:grass_"..length},
+		nodes =     {"base:grass_"..length},
 		cover =     0.1,
 		density =   0.33,
 		priority =  25,
@@ -134,7 +134,7 @@ aus.register_plant({
 -- Flame Grevillea
 aus.register_plant({
 	nodes = {
-		stem =    "core:acacia_bush_stem",
+		stem =    "base:acacia_bush_stem",
 		leaves =  "australia:flame_grevillea_leaves",
 		air =     "air",
 		ignore =  "ignore",
@@ -179,7 +179,7 @@ local function register_small_stone_rocks(number)
 		deco_type =  "simple",
 		decoration =  "australia:small_stone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"core:dirt_with_grass"},
+		place_on =    {"base:dirt_with_grass"},
 		fill_ratio =  0.001,
 		y_min =       24,
 		biomes =      {"jarrah_karri_forests"},

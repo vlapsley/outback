@@ -12,7 +12,7 @@ minetest.register_node("sea:coral_brown", {
 	tiles = {"sea_coral_brown.png"},
 	groups = {cracky = 3},
 	drop = "sea:coral_skeleton",
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("sea:coral_orange", {
@@ -20,14 +20,14 @@ minetest.register_node("sea:coral_orange", {
 	tiles = {"sea_coral_orange.png"},
 	groups = {cracky = 3},
 	drop = "sea:coral_skeleton",
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("sea:coral_skeleton", {
 	description = "Coral Skeleton",
 	tiles = {"sea_coral_skeleton.png"},
 	groups = {cracky = 3},
-	sounds = core.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_alias("default:coral_brown", "sea:coral_brown")
@@ -53,7 +53,7 @@ minetest.register_abm({
 -- Coral
 minetest.register_decoration({
 	deco_type =     "schematic",
-	place_on =      {"core:sand"},
+	place_on =      {"base:sand"},
 	noise_params =  {
 		offset =   -0.004,
 		scale =    0.1,
@@ -90,7 +90,7 @@ minetest.register_node("sea:sea_grass", {
 	drowning = 1,
 	is_ground_content = true,
 	groups = {snappy = 3, attached_node = 1, sea = 1},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
@@ -100,7 +100,7 @@ minetest.register_node("sea:sea_grass", {
 -- Narrowleaf Seagrass
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"core:sand"},
+	place_on =    {"base:sand"},
 	sidelen =     80,
 	fill_ratio =  0.01,
 	biomes =      {
@@ -115,7 +115,7 @@ minetest.register_decoration({
 
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"core:sand"},
+	place_on =    {"base:sand"},
 	sidelen =     80,
 	fill_ratio =  0.02,
 	biomes =      {"timor_sea"},

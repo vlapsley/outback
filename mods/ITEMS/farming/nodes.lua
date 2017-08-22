@@ -1,30 +1,30 @@
-minetest.override_item("core:dirt", {
+minetest.override_item("base:dirt", {
 	soil = {
-		base = "core:dirt",
+		base = "base:dirt",
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
 })
 
-minetest.override_item("core:dirt_with_grass", {
+minetest.override_item("base:dirt_with_grass", {
 	soil = {
-		base = "core:dirt_with_grass",
+		base = "base:dirt_with_grass",
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
 })
 
-minetest.override_item("core:dirt_with_dry_grass", {
+minetest.override_item("base:dirt_with_dry_grass", {
 	soil = {
-		base = "core:dirt_with_dry_grass",
+		base = "base:dirt_with_dry_grass",
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
 })
 
-minetest.override_item("core:dirt_with_rainforest_litter", {
+minetest.override_item("base:dirt_with_rainforest_litter", {
 	soil = {
-		base = "core:dirt_with_rainforest_litter",
+		base = "base:dirt_with_rainforest_litter",
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
@@ -32,12 +32,12 @@ minetest.override_item("core:dirt_with_rainforest_litter", {
 
 minetest.register_node("farming:soil", {
 	description = "Soil",
-	tiles = {"core_dirt.png^farming_soil.png", "core_dirt.png"},
-	drop = "core:dirt",
+	tiles = {"base_dirt.png^farming_soil.png", "base_dirt.png"},
+	drop = "base:dirt",
 	groups = {crumbly=3, not_in_creative_inventory=1, soil=2, grassland = 1, field = 1},
-	sounds = core.node_sound_dirt_defaults(),
+	sounds = base.node_sound_dirt_defaults(),
 	soil = {
-		base = "core:dirt",
+		base = "base:dirt",
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
@@ -45,33 +45,33 @@ minetest.register_node("farming:soil", {
 
 minetest.register_node("farming:soil_wet", {
 	description = "Wet Soil",
-	tiles = {"core_dirt.png^farming_soil_wet.png", "core_dirt.png^farming_soil_wet_side.png"},
-	drop = "core:dirt",
+	tiles = {"base_dirt.png^farming_soil_wet.png", "base_dirt.png^farming_soil_wet_side.png"},
+	drop = "base:dirt",
 	groups = {crumbly=3, not_in_creative_inventory=1, soil=3, wet = 1, grassland = 1, field = 1},
-	sounds = core.node_sound_dirt_defaults(),
+	sounds = base.node_sound_dirt_defaults(),
 	soil = {
-		base = "core:dirt",
+		base = "base:dirt",
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
 })
 
-minetest.override_item("core:desert_sand", {
+minetest.override_item("base:desert_sand", {
 	groups = {crumbly=3, falling_node=1, sand=1, soil = 1},
 	soil = {
-		base = "core:desert_sand",
+		base = "base:desert_sand",
 		dry = "farming:desert_sand_soil",
 		wet = "farming:desert_sand_soil_wet"
 	}
 })
 minetest.register_node("farming:desert_sand_soil", {
 	description = "Desert Sand Soil",
-	drop = "core:desert_sand",
-	tiles = {"farming_desert_sand_soil.png", "core_desert_sand.png"},
+	drop = "base:desert_sand",
+	tiles = {"farming_desert_sand_soil.png", "base_desert_sand.png"},
 	groups = {crumbly=3, not_in_creative_inventory = 1, falling_node=1, sand=1, soil = 2, desert = 1, field = 1},
-	sounds = core.node_sound_sand_defaults(),
+	sounds = base.node_sound_sand_defaults(),
 	soil = {
-		base = "core:desert_sand",
+		base = "base:desert_sand",
 		dry = "farming:desert_sand_soil",
 		wet = "farming:desert_sand_soil_wet"
 	}
@@ -79,12 +79,12 @@ minetest.register_node("farming:desert_sand_soil", {
 
 minetest.register_node("farming:desert_sand_soil_wet", {
 	description = "Wet Desert Sand Soil",
-	drop = "core:desert_sand",
+	drop = "base:desert_sand",
 	tiles = {"farming_desert_sand_soil_wet.png", "farming_desert_sand_soil_wet_side.png"},
 	groups = {crumbly=3, falling_node=1, sand=1, not_in_creative_inventory=1, soil=3, wet = 1, desert = 1, field = 1},
-	sounds = core.node_sound_sand_defaults(),
+	sounds = base.node_sound_sand_defaults(),
 	soil = {
-		base = "core:desert_sand",
+		base = "base:desert_sand",
 		dry = "farming:desert_sand_soil",
 		wet = "farming:desert_sand_soil_wet"
 	}
@@ -95,7 +95,7 @@ minetest.register_node("farming:straw", {
 	tiles = {"farming_straw.png"},
 	is_ground_content = false,
 	groups = {snappy=3, flammable=4, fall_damage_add_percent=-30},
-	sounds = core.node_sound_leaves_defaults(),
+	sounds = base.node_sound_leaves_defaults(),
 })
 
 minetest.register_abm({
@@ -153,19 +153,19 @@ minetest.register_abm({
 
 
 for i = 1, 5 do
-	minetest.override_item("core:grass_"..i, {drop = {
+	minetest.override_item("base:grass_"..i, {drop = {
 		max_items = 1,
 		items = {
 			{items = {'farming:seed_wheat'},rarity = 5},
-			{items = {'core:grass_1'}},
+			{items = {'base:grass_1'}},
 		}
 	}})
 end
 
-minetest.override_item("core:junglegrass", {drop = {
+minetest.override_item("base:junglegrass", {drop = {
 	max_items = 1,
 	items = {
 		{items = {'farming:seed_cotton'},rarity = 8},
-		{items = {'core:junglegrass'}},
+		{items = {'base:junglegrass'}},
 	}
 }})

@@ -8,11 +8,11 @@ minetest.register_biome({
 	name =              "mangroves",
 	node_top =          "australia:mangrove_mud",
 	depth_top =         3,
-	node_filler =       "core:clay",
+	node_filler =       "base:clay",
 	depth_filler =      1,
-	node_stone =        "core:stone",
+	node_stone =        "base:stone",
 	node_river_water =  "australia:muddy_river_water_source",
-	node_riverbed =     "core:dirt",
+	node_riverbed =     "base:dirt",
 	depth_riverbed =    1,
 	y_min =             -2,
 	y_max =             3,
@@ -37,9 +37,9 @@ minetest.register_decoration({
 	deco_type =   "simple",
 	place_on =    {
 		"australia:mangrove_mud",
-		"core:sand",
-		"core:dirt",
-		"core:dirt_with_grass"
+		"base:sand",
+		"base:dirt",
+		"base:dirt_with_grass"
 	},
 	sidelen =     80,
 	fill_ratio =  0.2,
@@ -54,9 +54,9 @@ minetest.register_decoration({
 	deco_type =   "simple",
 	place_on =    {
 		"australia:mangrove_mud",
-		"core:sand",
-		"core:dirt",
-		"core:dirt_with_grass"
+		"base:sand",
+		"base:dirt",
+		"base:dirt_with_grass"
 	},
 	sidelen =     80,
 	fill_ratio =  0.1,
@@ -71,8 +71,8 @@ minetest.register_decoration({
 	deco_type = "schematic",
 	place_on =    {
 		"australia:mangrove_mud",
-		"core:sand",
-		"core:dirt",
+		"base:sand",
+		"base:dirt",
 	},
 	sidelen =     80,
 	fill_ratio =  0.3,
@@ -109,9 +109,9 @@ for h = 4, max_ht do
 		sidelen =     80,
 		place_on =    {
 			"australia:mangrove_mud",
-			"core:sand",
-			"core:dirt",
-			"core:dirt_with_grass",
+			"base:sand",
+			"base:dirt",
+			"base:dirt_with_grass",
 		},
 		fill_ratio =  0.005,
 		biomes =      {"mangroves"},
@@ -160,9 +160,9 @@ for h = 4, max_ht do
 		sidelen =     80,
 		place_on =    {
 			"australia:mangrove_mud",
-			"core:sand",
-			"core:dirt",
-			"core:dirt_with_grass",
+			"base:sand",
+			"base:dirt",
+			"base:dirt_with_grass",
 		},
 		fill_ratio =  0.003,
 		biomes =      {"mangroves"},
