@@ -3,6 +3,435 @@
 --]]
 
 
+minetest.register_node("core:tree", {
+	description = "Tree",
+	tiles = {"core_tree_top.png", "core_tree_top.png", "core_tree.png"},
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
+	sounds = core.node_sound_wood_defaults(),
+
+	on_place = minetest.rotate_node
+})
+
+minetest.register_node("core:wood", {
+	description = "Wooden Planks",
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"core_wood.png"},
+	is_ground_content = false,
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
+	sounds = core.node_sound_wood_defaults(),
+})
+
+minetest.register_node("core:sapling", {
+	description = "Sapling",
+	drawtype = "plantlike",
+	tiles = {"core_sapling.png"},
+	inventory_image = "core_sapling.png",
+	wield_image = "core_sapling.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	on_timer = core.grow_sapling,
+	selection_box = {
+		type = "fixed",
+		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
+	},
+	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
+		attached_node = 1, sapling = 1},
+	sounds = core.node_sound_leaves_defaults(),
+
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
+			"core:sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -2, y = 1, z = -2},
+			{x = 2, y = 6, z = 2},
+			-- maximum interval of interior volume check
+			4)
+
+		return itemstack
+	end,
+})
+
+minetest.register_node("core:leaves", {
+	description = "Leaves",
+	drawtype = "allfaces_optional",
+	waving = 1,
+	tiles = {"core_leaves.png"},
+	special_tiles = {"core_leaves_simple.png"},
+	paramtype = "light",
+	is_ground_content = false,
+	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{
+				-- player will get sapling with 1/20 chance
+				items = {'core:sapling'},
+				rarity = 20,
+			},
+			{
+				-- player will get leaves only if he get no saplings,
+				-- this is because max_items is 1
+				items = {'core:leaves'},
+			}
+		}
+	},
+	sounds = core.node_sound_leaves_defaults(),
+
+	after_place_node = core.after_place_leaves,
+})
+
+minetest.register_node("core:apple", {
+	description = "Apple",
+	drawtype = "plantlike",
+	tiles = {"core_apple.png"},
+	inventory_image = "core_apple.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	is_ground_content = false,
+	selection_box = {
+		type = "fixed",
+		fixed = {-3 / 16, -7 / 16, -3 / 16, 3 / 16, 4 / 16, 3 / 16}
+	},
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 2,
+		leafdecay = 3, leafdecay_drop = 1},
+	on_use = minetest.item_eat(2),
+	sounds = core.node_sound_leaves_defaults(),
+
+	after_place_node = function(pos, placer, itemstack)
+		if placer:is_player() then
+			minetest.set_node(pos, {name = "core:apple", param2 = 1})
+		end
+	end,
+})
+
+
+minetest.register_node("core:jungletree", {
+	description = "Jungle Tree",
+	tiles = {"core_jungletree_top.png", "core_jungletree_top.png",
+		"core_jungletree.png"},
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
+	sounds = core.node_sound_wood_defaults(),
+
+	on_place = minetest.rotate_node
+})
+
+minetest.register_node("core:junglewood", {
+	description = "Jungle Wood Planks",
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"core_junglewood.png"},
+	is_ground_content = false,
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
+	sounds = core.node_sound_wood_defaults(),
+})
+
+minetest.register_node("core:jungleleaves", {
+	description = "Jungle Leaves",
+	drawtype = "allfaces_optional",
+	waving = 1,
+	tiles = {"core_jungleleaves.png"},
+	special_tiles = {"core_jungleleaves_simple.png"},
+	paramtype = "light",
+	is_ground_content = false,
+	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {'core:junglesapling'}, rarity = 20},
+			{items = {'core:jungleleaves'}}
+		}
+	},
+	sounds = core.node_sound_leaves_defaults(),
+
+	after_place_node = core.after_place_leaves,
+})
+
+minetest.register_node("core:junglesapling", {
+	description = "Jungle Sapling",
+	drawtype = "plantlike",
+	tiles = {"core_junglesapling.png"},
+	inventory_image = "core_junglesapling.png",
+	wield_image = "core_junglesapling.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	on_timer = core.grow_sapling,
+	selection_box = {
+		type = "fixed",
+		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
+	},
+	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
+		attached_node = 1, sapling = 1},
+	sounds = core.node_sound_leaves_defaults(),
+
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
+			"core:junglesapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -2, y = 1, z = -2},
+			{x = 2, y = 15, z = 2},
+			-- maximum interval of interior volume check
+			4)
+
+		return itemstack
+	end,
+})
+
+
+minetest.register_node("core:pine_tree", {
+	description = "Pine Tree",
+	tiles = {"core_pine_tree_top.png", "core_pine_tree_top.png",
+		"core_pine_tree.png"},
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+	sounds = core.node_sound_wood_defaults(),
+
+	on_place = minetest.rotate_node
+})
+
+minetest.register_node("core:pine_wood", {
+	description = "Pine Wood Planks",
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"core_pine_wood.png"},
+	is_ground_content = false,
+	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+	sounds = core.node_sound_wood_defaults(),
+})
+
+minetest.register_node("core:pine_needles",{
+	description = "Pine Needles",
+	drawtype = "allfaces_optional",
+	tiles = {"core_pine_needles.png"},
+	waving = 1,
+	paramtype = "light",
+	is_ground_content = false,
+	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {"core:pine_sapling"}, rarity = 20},
+			{items = {"core:pine_needles"}}
+		}
+	},
+	sounds = core.node_sound_leaves_defaults(),
+
+	after_place_node = core.after_place_leaves,
+})
+
+minetest.register_node("core:pine_sapling", {
+	description = "Pine Sapling",
+	drawtype = "plantlike",
+	tiles = {"core_pine_sapling.png"},
+	inventory_image = "core_pine_sapling.png",
+	wield_image = "core_pine_sapling.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	on_timer = core.grow_sapling,
+	selection_box = {
+		type = "fixed",
+		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
+	},
+	groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		attached_node = 1, sapling = 1},
+	sounds = core.node_sound_leaves_defaults(),
+
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
+			"core:pine_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -2, y = 1, z = -2},
+			{x = 2, y = 12, z = 2},
+			-- maximum interval of interior volume check
+			4)
+
+		return itemstack
+	end,
+})
+
+
+minetest.register_node("core:acacia_tree", {
+	description = "Acacia Tree",
+	tiles = {"core_acacia_tree_top.png", "core_acacia_tree_top.png",
+		"core_acacia_tree.png"},
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
+	sounds = core.node_sound_wood_defaults(),
+
+	on_place = minetest.rotate_node
+})
+
+minetest.register_node("core:acacia_wood", {
+	description = "Acacia Wood Planks",
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"core_acacia_wood.png"},
+	is_ground_content = false,
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
+	sounds = core.node_sound_wood_defaults(),
+})
+
+minetest.register_node("core:acacia_leaves", {
+	description = "Acacia Leaves",
+	drawtype = "allfaces_optional",
+	tiles = {"core_acacia_leaves.png"},
+	special_tiles = {"core_acacia_leaves_simple.png"},
+	waving = 1,
+	paramtype = "light",
+	is_ground_content = false,
+	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {"core:acacia_sapling"}, rarity = 20},
+			{items = {"core:acacia_leaves"}}
+		}
+	},
+	sounds = core.node_sound_leaves_defaults(),
+
+	after_place_node = core.after_place_leaves,
+})
+
+minetest.register_node("core:acacia_sapling", {
+	description = "Acacia Tree Sapling",
+	drawtype = "plantlike",
+	tiles = {"core_acacia_sapling.png"},
+	inventory_image = "core_acacia_sapling.png",
+	wield_image = "core_acacia_sapling.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	on_timer = core.grow_sapling,
+	selection_box = {
+		type = "fixed",
+		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
+	},
+	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
+		attached_node = 1, sapling = 1},
+	sounds = core.node_sound_leaves_defaults(),
+
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
+			"core:acacia_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -4, y = 1, z = -4},
+			{x = 4, y = 6, z = 4},
+			-- maximum interval of interior volume check
+			4)
+
+		return itemstack
+	end,
+})
+
+minetest.register_node("core:aspen_tree", {
+	description = "Aspen Tree",
+	tiles = {"core_aspen_tree_top.png", "core_aspen_tree_top.png",
+		"core_aspen_tree.png"},
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
+	sounds = core.node_sound_wood_defaults(),
+
+	on_place = minetest.rotate_node
+})
+
+minetest.register_node("core:aspen_wood", {
+	description = "Aspen Wood Planks",
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"core_aspen_wood.png"},
+	is_ground_content = false,
+	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+	sounds = core.node_sound_wood_defaults(),
+})
+
+minetest.register_node("core:aspen_leaves", {
+	description = "Aspen Leaves",
+	drawtype = "allfaces_optional",
+	tiles = {"core_aspen_leaves.png"},
+	waving = 1,
+	paramtype = "light",
+	is_ground_content = false,
+	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {"core:aspen_sapling"}, rarity = 20},
+			{items = {"core:aspen_leaves"}}
+		}
+	},
+	sounds = core.node_sound_leaves_defaults(),
+
+	after_place_node = core.after_place_leaves,
+})
+
+minetest.register_node("core:aspen_sapling", {
+	description = "Aspen Tree Sapling",
+	drawtype = "plantlike",
+	tiles = {"core_aspen_sapling.png"},
+	inventory_image = "core_aspen_sapling.png",
+	wield_image = "core_aspen_sapling.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	on_timer = core.grow_sapling,
+	selection_box = {
+		type = "fixed",
+		fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, 0.5, 3 / 16}
+	},
+	groups = {snappy = 2, dig_immediate = 3, flammable = 3,
+		attached_node = 1, sapling = 1},
+	sounds = core.node_sound_leaves_defaults(),
+
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = core.sapling_on_place(itemstack, placer, pointed_thing,
+			"core:aspen_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -2, y = 1, z = -2},
+			{x = 2, y = 12, z = 2},
+			-- maximum interval of interior volume check
+			4)
+
+		return itemstack
+	end,
+})
+
+
 local random = math.random
 
 --
@@ -538,3 +967,50 @@ function core.sapling_on_place(itemstack, placer, pointed_thing,
 
 	return itemstack
 end
+
+
+--
+-- register trees for leafdecay
+--
+
+core.register_leafdecay({
+	trunks = {"core:tree"},
+	leaves = {"core:apple", "core:leaves"},
+	radius = 3,
+})
+
+core.register_leafdecay({
+	trunks = {"core:jungletree"},
+	leaves = {"core:jungleleaves"},
+	radius = 2,
+})
+
+core.register_leafdecay({
+	trunks = {"core:pine_tree"},
+	leaves = {"core:pine_needles"},
+	radius = 2,
+})
+
+core.register_leafdecay({
+	trunks = {"core:acacia_tree"},
+	leaves = {"core:acacia_leaves"},
+	radius = 2,
+})
+
+core.register_leafdecay({
+	trunks = {"core:aspen_tree"},
+	leaves = {"core:aspen_leaves"},
+	radius = 3,
+})
+
+core.register_leafdecay({
+	trunks = {"core:bush_stem"},
+	leaves = {"core:bush_leaves"},
+	radius = 1,
+})
+
+core.register_leafdecay({
+	trunks = {"core:acacia_bush_stem"},
+	leaves = {"core:acacia_bush_leaves"},
+	radius = 1,
+})
