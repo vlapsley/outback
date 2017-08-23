@@ -186,6 +186,62 @@ minetest.register_node("base:obsidian_block", {
 	groups = {cracky = 1, level = 2},
 })
 
+minetest.register_node("base:red_stone", {
+	description = "Red Stone",
+	tiles = {"base_red_stone.png"},
+	groups = {cracky = 3, stone = 1},
+	drop = "base:red_cobble",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:red_cobble", {
+	description = "Red Cobblestone",
+	tiles = {"base_red_cobble.png"},
+	is_ground_content = false,
+	groups = {cracky = 3, stone = 2},
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:red_stonebrick", {
+	description = "Red Stone Brick",
+	tiles = {"base_red_stonebrick.png"},
+	is_ground_content = false,
+	groups = {cracky = 2, stone = 1},
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:sandstone_cobble", {
+	description = "Sandstone Cobble",
+	tiles = {"base_sandstone_cobble.png"},
+	groups = {crumbly = 1, cracky = 3, oddly_breakable_by_hand = 1},
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:bluestone", {
+	description = "Bluestone (Basalt)",
+	tiles = {"base_bluestone.png"},
+	groups = {cracky = 2, stone = 1},
+	drop = "base:bluestone_cobble",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:bluestone_cobble", {
+	description = "Bluestone (Basalt) Cobble",
+	tiles = {"base_bluestone_cobble.png"},
+	is_ground_content = false,
+	groups = {cracky = 2, stone = 2},
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:bluestone_brick", {
+	description = "Bluestone Brick",
+	tiles = {"base_bluestone_brick.png"},
+	is_ground_content = false,
+	groups = {cracky = 1, stone = 1},
+	sounds = base.node_sound_stone_defaults(),
+})
+
+
 --
 -- Soft / Non-Stone
 --
@@ -193,6 +249,13 @@ minetest.register_node("base:obsidian_block", {
 minetest.register_node("base:dirt", {
 	description = "Dirt",
 	tiles = {"base_dirt.png"},
+	groups = {crumbly = 3, soil = 1},
+	sounds = base.node_sound_dirt_defaults(),
+})
+
+minetest.register_node("base:red_dirt", {
+	description = "Red Dirt",
+	tiles = {"base_red_dirt.png"},
 	groups = {crumbly = 3, soil = 1},
 	sounds = base.node_sound_dirt_defaults(),
 })
@@ -282,6 +345,13 @@ minetest.register_node("base:silver_sand", {
 	sounds = base.node_sound_sand_defaults(),
 })
 
+minetest.register_node("base:red_sand", {
+	description = "Red Sand",
+	tiles = {"base_red_sand.png"},
+	groups = {crumbly = 3, falling_node = 1, sand = 1},
+	sounds = base.node_sound_sand_defaults(),
+})
+
 minetest.register_node("base:gravel", {
 	description = "Gravel",
 	tiles = {"base_gravel.png"},
@@ -295,6 +365,15 @@ minetest.register_node("base:gravel", {
 		}
 	}
 })
+
+minetest.register_node("base:red_gravel", {
+	description = "Red Gravel",
+	tiles = {"base_red_gravel.png"},
+	groups = {crumbly = 2, falling_node = 1},
+	sounds = base.node_sound_gravel_defaults(),
+	}),
+})
+
 
 minetest.register_node("base:clay", {
 	description = "Clay",
@@ -371,13 +450,6 @@ minetest.register_node("base:mangrove_mud", {
 	}),
 })
 
-minetest.register_node("base:red_sand", {
-	description = "Red Sand",
-	tiles = {"base_red_sand.png"},
-	groups = {crumbly = 3, falling_node = 1, sand = 1},
-	sounds = base.node_sound_sand_defaults(),
-})
-
 minetest.register_node("base:mineral_salt", {
 	description = "Salt Mineral",
 	tiles = {"base_red_sand.png^base_mineral_salt.png"},
@@ -444,6 +516,14 @@ minetest.register_node("base:stone_with_copper", {
 	tiles = {"base_stone.png^base_mineral_copper.png"},
 	groups = {cracky = 2},
 	drop = 'base:copper_lump',
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:stone_with_opal", {
+	description = "Opal Ore",
+	tiles = {"base_stone.png^base_mineral_opal.png"},
+	groups = {cracky = 2},
+	drop = "base:opal",
 	sounds = base.node_sound_stone_defaults(),
 })
 

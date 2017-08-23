@@ -6,13 +6,13 @@ local math_random = math.random
 -- central australia
 minetest.register_biome({
 	name =              "central_australia",
-	node_top =          "australia:red_dirt",
+	node_top =          "base:red_dirt",
 	depth_top =         1,
-	node_filler =       "australia:red_stone",
+	node_filler =       "base:red_stone",
 	depth_filler =      2,
 	node_stone =        "base:stone",
 	node_river_water =  "base:muddy_water_source",
-	node_riverbed =     "australia:red_dirt",
+	node_riverbed =     "base:red_dirt",
 	depth_riverbed =    1,
 	y_min =             4,
 	y_max =             31000,
@@ -31,7 +31,7 @@ minetest.register_biome({
 -- Coober Pedy
 minetest.register_ore({
 	ore_type =         "vein",
-	ore =              "australia:stone_with_opal",
+	ore =              "base:stone_with_opal",
 	wherein =          "base:stone",
 	biomes =           {"central_australia"},
 	y_min =            -30,
@@ -179,9 +179,9 @@ aus.register_plant({
 local function register_small_red_rocks(number)
 	minetest.register_decoration({
 		deco_type =   "simple",
-		decoration =  "australia:small_red_rocks"..number,
+		decoration =  "base:small_red_rocks"..number,
 		sidelen =     80,
-		place_on =    {"australia:red_dirt"},
+		place_on =    {"base:red_dirt"},
 		fill_ratio =  0.002,
 		biomes =      {"central_australia"},
 		flags =       "place_center_x, place_center_z",

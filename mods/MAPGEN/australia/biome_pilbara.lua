@@ -6,13 +6,13 @@ local math_random = math.random
 -- pilbara
 minetest.register_biome({
 	name =              "pilbara",
-	node_top =          "australia:red_gravel",
+	node_top =          "base:red_gravel",
 	depth_top =         2,
-	node_filler =       "australia:red_stone",
+	node_filler =       "base:red_stone",
 	depth_filler =      2,
 	node_stone =        "base:stone",
 	node_river_water =  "base:muddy_water_source",
-	node_riverbed =     "australia:red_gravel",
+	node_riverbed =     "base:red_gravel",
 	depth_riverbed =    1,
 	y_min =             4,
 	y_max =             31000,
@@ -57,7 +57,7 @@ minetest.register_ore({
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"australia:red_gravel"},
+		place_on =      {"base:red_gravel"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -126,9 +126,9 @@ aus.register_plant({
 local function register_small_red_rocks(number)
 	minetest.register_decoration({
 		deco_type =   "simple",
-		decoration =  "australia:small_red_rocks"..number,
+		decoration =  "base:small_red_rocks"..number,
 		sidelen =     80,
-		place_on =    {"australia:red_gravel"},
+		place_on =    {"base:red_gravel"},
 		fill_ratio =  0.003,
 		biomes =      {"pilbara"},
 		flags =       "place_center_x, place_center_z",

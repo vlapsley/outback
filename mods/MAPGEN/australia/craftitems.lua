@@ -1,15 +1,5 @@
 -- mods/australia_modpack/australia/craftitems.lua
 
--- Bucket muddy_water
-bucket.register_liquid(
-	"base:muddy_water_source",
-	"base:muddy_water_flowing",
-	"australia:bucket_muddy_water",
-	"aus_bucket_muddy_water.png",
-	"Muddy Water Bucket",
-	{water_bucket = 1}
-)
-
 
 --[[
 	Stairs and slabs

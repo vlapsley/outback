@@ -30,7 +30,7 @@ minetest.register_biome({
 -- Bluestone (Basalt)
 minetest.register_ore({
 	ore_type =                "sheet",
-	ore =                     "australia:bluestone",
+	ore =                     "base:bluestone",
 	wherein =                 "base:stone",
 	column_height_min =       2,
 	column_height_max =       4,
@@ -177,7 +177,7 @@ aus.register_plant({
 local function register_small_stone_rocks(number)
 	minetest.register_decoration({
 		deco_type =  "simple",
-		decoration =  "australia:small_stone_rocks"..number,
+		decoration =  "base:small_stone_rocks"..number,
 		sidelen =     80,
 		place_on =    {"base:dirt_with_grass"},
 		fill_ratio =  0.001,

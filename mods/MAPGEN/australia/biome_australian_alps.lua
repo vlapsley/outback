@@ -29,7 +29,7 @@ minetest.register_biome({
 -- Bluestone (Basalt)
 minetest.register_ore({
 	ore_type =                "sheet",
-	ore =                     "australia:bluestone",
+	ore =                     "base:bluestone",
 	wherein =                 "base:stone",
 	column_height_min =       2,
 	column_height_max =       4,

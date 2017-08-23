@@ -8,7 +8,7 @@ minetest.register_biome({
 	name =              "mulga_lands",
 	node_top =          "base:dirt_with_dry_grass",
 	depth_top =         1,
-	node_filler =       "australia:red_dirt",
+	node_filler =       "base:red_dirt",
 	depth_filler =      2,
 	node_stone =        "base:stone",
 	node_river_water =  "base:muddy_water_source",
@@ -101,7 +101,7 @@ aus.register_plant({
 local function register_small_stone_rocks(number)
 	minetest.register_decoration({
 		deco_type =   "simple",
-		decoration =  "australia:small_stone_rocks"..number,
+		decoration =  "base:small_stone_rocks"..number,
 		sidelen =     80,
 		place_on =    {"base:dirt_with_dry_grass"},
 		fill_ratio =  0.001,

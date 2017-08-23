@@ -91,7 +91,7 @@ minetest.register_decoration({
 local function register_small_stone_rocks(number)
 	minetest.register_decoration({
 		deco_type =   "simple",
-		decoration =  "australia:small_stone_rocks"..number,
+		decoration =  "base:small_stone_rocks"..number,
 		sidelen =     80,
 		place_on =    {"base:dirt_with_grass"},
 		fill_ratio =  0.001,

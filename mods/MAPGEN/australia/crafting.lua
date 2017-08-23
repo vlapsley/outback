@@ -1,49 +1,5 @@
 -- mods/australia_modpack/australia/crafting.lua
 
-minetest.register_craft({
-	output = "australia:red_stonebrick 4",
-	recipe = {
-		{"australia:red_stone", "australia:red_stone"},
-		{"australia:red_stone", "australia:red_stone"},
-	}
-})
-
-minetest.register_craft({
-	output = "australia:bluestone_brick 4",
-	recipe = {
-		{"australia:bluestone", "australia:bluestone"},
-		{"australia:bluestone", "australia:bluestone"},
-	}
-})
-
--- Small rocks can be used to create cobblestone.
-minetest.register_craft({
-	output = "australia:red_cobble",
-	recipe = {
-		{"", "", ""},
-		{"australia:small_red_rocks", "australia:small_red_rocks", ""},
-		{"australia:small_red_rocks", "australia:small_red_rocks", ""},
-	}
-})
-
-minetest.register_craft({
-	output = "australia:sandstone_cobble",
-	recipe = {
-		{"", "", ""},
-		{"australia:small_sandstone_rocks", "australia:small_sandstone_rocks", ""},
-		{"australia:small_sandstone_rocks", "australia:small_sandstone_rocks", ""},
-	}
-})
-
-minetest.register_craft({
-	output = "base:cobble",
-	recipe = {
-		{"", "", ""},
-		{"australia:small_stone_rocks", "australia:small_stone_rocks", ""},
-		{"australia:small_stone_rocks", "australia:small_stone_rocks", ""},
-	}
-})
-
 
 --[[
 	Fences
@@ -452,19 +408,3 @@ minetest.register_craft({
 	}
 })
 
-
---[[
-	Cooking recipes
---]]
-
-minetest.register_craft({
-	type = "cooking",
-	output = "australia:bluestone",
-	recipe = "australia:bluestone_cobble",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "australia:red_stone",
-	recipe = "australia:red_cobble",
-})

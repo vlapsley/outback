@@ -496,6 +496,50 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "base:red_stonebrick 4",
+	recipe = {
+		{"base:red_stone", "base:red_stone"},
+		{"base:red_stone", "base:red_stone"},
+	}
+})
+
+minetest.register_craft({
+	output = "base:bluestone_brick 4",
+	recipe = {
+		{"base:bluestone", "base:bluestone"},
+		{"base:bluestone", "base:bluestone"},
+	}
+})
+
+-- Small rocks can be used to create cobblestone.
+minetest.register_craft({
+	output = "base:red_cobble",
+	recipe = {
+		{"", "", ""},
+		{"base:small_red_rocks", "base:small_red_rocks", ""},
+		{"base:small_red_rocks", "base:small_red_rocks", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "base:sandstone_cobble",
+	recipe = {
+		{"", "", ""},
+		{"base:small_sandstone_rocks", "base:small_sandstone_rocks", ""},
+		{"base:small_sandstone_rocks", "base:small_sandstone_rocks", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "base:cobble",
+	recipe = {
+		{"", "", ""},
+		{"base:small_stone_rocks", "base:small_stone_rocks", ""},
+		{"base:small_stone_rocks", "base:small_stone_rocks", ""},
+	}
+})
+
 
 --
 -- Crafting (tool repair)
@@ -568,6 +612,18 @@ minetest.register_craft({
 	type = "cooking",
 	output = "base:clay_brick",
 	recipe = "base:clay_lump",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:bluestone",
+	recipe = "base:bluestone_cobble",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:red_stone",
+	recipe = "base:red_cobble",
 })
 
 

@@ -8,7 +8,7 @@ minetest.register_biome({
 	name =            "great_barrier_reef",
 	node_top =        "base:sand",
 	depth_top =       3,
-	node_filler =     "australia:bluestone",
+	node_filler =     "base:bluestone",
 	depth_filler =    4,
 	node_stone =      "base:stone",
 	node_riverbed =   "base:sand",

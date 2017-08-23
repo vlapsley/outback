@@ -8,7 +8,7 @@ minetest.register_biome({
 	name =            "timor_sea",
 	node_top =        "base:sand",
 	depth_top =       3,
-	node_filler =     "australia:bluestone",
+	node_filler =     "base:bluestone",
 	depth_filler =    2,
 	node_stone =      "base:stone",
 	node_water =      "base:water_source",

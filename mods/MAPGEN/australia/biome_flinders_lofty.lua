@@ -8,7 +8,7 @@ minetest.register_biome({
 	name =              "flinders_lofty",
 	node_top =          "base:dirt_with_dry_grass",
 	depth_top =         1,
-	node_filler =       "australia:red_dirt",
+	node_filler =       "base:red_dirt",
 	depth_filler =      2,
 	node_stone =        "base:stone",
 	node_river_water =  "base:muddy_water_source",
@@ -30,7 +30,7 @@ minetest.register_biome({
 -- Bluestone (Basalt)
 minetest.register_ore({
 	ore_type =         "blob",
-	ore =              "australia:bluestone",
+	ore =              "base:bluestone",
 	wherein =          {"base:stone"},
 	clust_scarcity =   24 * 24 * 24,
 	clust_size =       8,
@@ -50,7 +50,7 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =                "sheet",
-	ore =                     "australia:bluestone",
+	ore =                     "base:bluestone",
 	wherein =                 "base:stone",
 	column_height_min =       2,
 	column_height_max =       4,
