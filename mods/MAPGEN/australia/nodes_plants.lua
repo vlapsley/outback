@@ -274,7 +274,7 @@ minetest.register_node("australia:mitchell_grass", {
 -- Nipa Palm
 minetest.register_node("australia:mangrove_palm_trunk", {
 	description = "Nipa Palm",
-	tiles = {"aus_mangrove_palm_trunk.png", "aus_mangrove_mud.png",
+	tiles = {"aus_mangrove_palm_trunk.png", "base_mangrove_mud.png",
 		"aus_mangrove_palm_trunk.png"},
 	inventory_image = "aus_mangrove_palm_trunk.png",
 	wield_image = "aus_mangrove_palm_trunk.png",

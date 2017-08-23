@@ -5,4 +5,3 @@ bucket
 doors
 fences
 stairs
-walls
