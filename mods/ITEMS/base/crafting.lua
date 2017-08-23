@@ -480,6 +480,23 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "base:salt_block",
+	recipe = {
+		{"base:salt", "base:salt", "base:salt"},
+		{"base:salt", "base:salt", "base:salt"},
+		{"base:salt", "base:salt", "base:salt"},
+	}
+})
+
+minetest.register_craft({
+	output = "base:salt 9",
+	recipe = {
+		{"base:salt_block"},
+	}
+})
+
+
 --
 -- Crafting (tool repair)
 --
@@ -487,6 +504,7 @@ minetest.register_craft({
 	type = "toolrepair",
 	additional_wear = -0.02,
 })
+
 
 --
 -- Cooking recipes

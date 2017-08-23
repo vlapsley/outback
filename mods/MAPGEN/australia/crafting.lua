@@ -16,22 +16,6 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
-	output = "australia:salt_block",
-	recipe = {
-		{"australia:salt", "australia:salt", "australia:salt"},
-		{"australia:salt", "australia:salt", "australia:salt"},
-		{"australia:salt", "australia:salt", "australia:salt"},
-	}
-})
-
-minetest.register_craft({
-	output = "australia:salt 9",
-	recipe = {
-		{"australia:salt_block"},
-	}
-})
-
 -- Small rocks can be used to create cobblestone.
 minetest.register_craft({
 	output = "australia:red_cobble",

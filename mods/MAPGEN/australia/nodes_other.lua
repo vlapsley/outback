@@ -62,13 +62,6 @@ minetest.register_node("australia:red_dirt", {
 	sounds = base.node_sound_dirt_defaults(),
 })
 
-minetest.register_node("australia:red_sand", {
-	description = "Red Sand",
-	tiles = {"aus_red_sand.png"},
-	groups = {crumbly = 3, falling_node = 1, sand = 1},
-	sounds = base.node_sound_sand_defaults(),
-})
-
 minetest.register_node("australia:red_gravel", {
 	description = "Red Gravel",
 	tiles = {"aus_red_gravel.png"},
@@ -77,52 +70,6 @@ minetest.register_node("australia:red_gravel", {
 		footstep = {name = "base_gravel_footstep", gain = 0.5},
 		dug = {name = "base_gravel_footstep", gain = 1.0},
 	}),
-})
-
-minetest.register_node("australia:mineral_salt", {
-	description = "Salt Mineral",
-	tiles = {"aus_red_sand.png^aus_mineral_salt.png"},
-	paramtype = "light",
-	is_ground_content = true,
-	groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
-	drop = {
-		items = {
-			{items = {"australia:red_sand"} },
-			{items = {"australia:salt"} }
-		}
-	},
-	sounds = base.node_sound_dirt_defaults,
-})
-
-minetest.register_node("australia:salt", {
-	description = "Salt",
-	drawtype = "plantlike",
-	visual_scale = 0.6,
-	tiles = {"aus_salt.png"},
-	inventory_image = "aus_salt.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	groups = {fleshy = 3, dig_immediate = 3, flammable = 1},
-	on_use = minetest.item_eat(1),
-	sounds = base.node_sound_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
-	},
-	collision_box = {
-		type = "fixed",
-		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
-	},
-})
-
-minetest.register_node( "australia:salt_block", {
-	description = "Salt Block",
-	tiles = {"base_clay.png^aus_salt_block.png"},
-	is_ground_content = true,
-	groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
-	on_use = minetest.item_eat(9),
-	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("australia:stone_with_opal", {

@@ -6,7 +6,7 @@ local math_random = math.random
 -- simpson desert
 minetest.register_biome({
 	name =              "simpson_desert",
-	node_top =          "australia:red_sand",
+	node_top =          "base:red_sand",
 	depth_top =         3,
 	node_filler =       "australia:red_stone",
 	depth_filler =      2,
@@ -38,7 +38,7 @@ local function register_small_red_rocks(number)
 		deco_type =   "simple",
 		decoration =  "australia:small_red_rocks"..number,
 		sidelen =     80,
-		place_on =    {"australia:red_sand"},
+		place_on =    {"base:red_sand"},
 		fill_ratio =  0.001,
 		y_min =       18,
 		biomes =      {"simpson_desert"},

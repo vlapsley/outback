@@ -371,6 +371,37 @@ minetest.register_node("base:mangrove_mud", {
 	}),
 })
 
+minetest.register_node("base:red_sand", {
+	description = "Red Sand",
+	tiles = {"base_red_sand.png"},
+	groups = {crumbly = 3, falling_node = 1, sand = 1},
+	sounds = base.node_sound_sand_defaults(),
+})
+
+minetest.register_node("base:mineral_salt", {
+	description = "Salt Mineral",
+	tiles = {"base_red_sand.png^base_mineral_salt.png"},
+	paramtype = "light",
+	is_ground_content = true,
+	groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
+	drop = {
+		items = {
+			{items = {"base:red_sand"} },
+			{items = {"base:salt"} }
+		}
+	},
+	sounds = base.node_sound_dirt_defaults,
+})
+
+minetest.register_node( "base:salt_block", {
+	description = "Salt Block",
+	tiles = {"base_clay.png^base_salt_block.png"},
+	is_ground_content = false,
+	groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
+	on_use = minetest.item_eat(3),
+	sounds = base.node_sound_stone_defaults(),
+})
+
 
 --
 -- Ores
