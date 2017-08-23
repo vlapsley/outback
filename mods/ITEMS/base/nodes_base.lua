@@ -371,7 +371,6 @@ minetest.register_node("base:red_gravel", {
 	tiles = {"base_red_gravel.png"},
 	groups = {crumbly = 2, falling_node = 1},
 	sounds = base.node_sound_gravel_defaults(),
-	}),
 })
 
 

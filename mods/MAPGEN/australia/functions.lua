@@ -22,11 +22,6 @@ function aus.schematic_array(width, height, depth)
 	return s
 end
 
--- Push an element onto a stack (table).
-function push(t, x)
-	t[#t+1] = x
-end
-
 -- Check if the table contains an element.
 function table.contains(table, element)
 	for key, value in pairs(table) do

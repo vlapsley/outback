@@ -46,7 +46,7 @@ minetest.register_node("australia:arnhem_cypress_pine_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -114,7 +114,7 @@ minetest.register_node("australia:black_box_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -192,7 +192,7 @@ minetest.register_node("australia:black_wattle_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -260,7 +260,7 @@ minetest.register_node("australia:blue_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -328,7 +328,7 @@ minetest.register_node("australia:boab_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -407,7 +407,7 @@ minetest.register_node("australia:bull_banksia_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -485,7 +485,7 @@ minetest.register_node("australia:celery_top_pine_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -564,7 +564,7 @@ minetest.register_node("australia:cherry_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -666,7 +666,7 @@ minetest.register_node("australia:coast_banksia_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -734,7 +734,7 @@ minetest.register_node("australia:coolabah_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -802,7 +802,7 @@ minetest.register_node("australia:daintree_stringybark_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -870,7 +870,7 @@ minetest.register_node("australia:darwin_woollybutt_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -938,7 +938,7 @@ minetest.register_node("australia:desert_oak_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1017,7 +1017,7 @@ minetest.register_node("australia:fan_palm_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1096,7 +1096,7 @@ minetest.register_node("australia:golden_wattle_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1175,7 +1175,7 @@ minetest.register_node("australia:grey_mangrove_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1243,7 +1243,7 @@ minetest.register_node("australia:huon_pine_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1311,7 +1311,7 @@ minetest.register_node("australia:illawarra_flame_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1379,7 +1379,7 @@ minetest.register_node("australia:jarrah_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1447,7 +1447,7 @@ minetest.register_node("australia:karri_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1515,7 +1515,7 @@ minetest.register_node("australia:lemon_eucalyptus_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1594,7 +1594,7 @@ minetest.register_node("australia:lemon_myrtle_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1673,7 +1673,7 @@ minetest.register_node("australia:lilly_pilly_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1775,7 +1775,7 @@ minetest.register_node("australia:macadamia_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1878,7 +1878,7 @@ minetest.register_node("australia:mangrove_apple_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -1970,7 +1970,7 @@ minetest.register_node("australia:marri_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2038,7 +2038,7 @@ minetest.register_node("australia:merbau_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2106,7 +2106,7 @@ minetest.register_node("australia:moreton_bay_fig_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2208,7 +2208,7 @@ minetest.register_node("australia:mulga_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2276,7 +2276,7 @@ minetest.register_node("australia:paperbark_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2355,7 +2355,7 @@ minetest.register_node("australia:quandong_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2447,7 +2447,7 @@ minetest.register_node("australia:river_oak_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2515,7 +2515,7 @@ minetest.register_node("australia:river_red_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2593,7 +2593,7 @@ minetest.register_node("australia:rottnest_island_pine_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2661,7 +2661,7 @@ minetest.register_node("australia:scribbly_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2729,7 +2729,7 @@ minetest.register_node("australia:shoestring_acacia_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2807,7 +2807,7 @@ minetest.register_node("australia:snow_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2885,7 +2885,7 @@ minetest.register_node("australia:southern_sassafras_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -2964,7 +2964,7 @@ minetest.register_node("australia:stilted_mangrove_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -3032,7 +3032,7 @@ minetest.register_node("australia:sugar_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -3100,7 +3100,7 @@ minetest.register_node("australia:swamp_bloodwood_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -3168,7 +3168,7 @@ minetest.register_node("australia:swamp_gum_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -3247,7 +3247,7 @@ minetest.register_node("australia:swamp_paperbark_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -3315,7 +3315,7 @@ minetest.register_node("australia:tasmanian_myrtle_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -3394,7 +3394,7 @@ minetest.register_node("australia:tea_tree_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -3462,7 +3462,7 @@ minetest.register_node("australia:white_box_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -3541,7 +3541,7 @@ minetest.register_node("australia:wirewood_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}

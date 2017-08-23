@@ -140,7 +140,7 @@ end
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"australia:dirt_with_grass"},
+		place_on =      {"base:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,

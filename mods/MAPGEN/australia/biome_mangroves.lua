@@ -103,7 +103,7 @@ local tree =    "australia:grey_mangrove_tree"
 local leaves =  "australia:grey_mangrove_leaves"
 for h = 4, max_ht do
 	local schem = aus.generate_mangrove_tree_schematic(3, tree, leaves)
-	push(aus.schematics.grey_mangrove, schem)
+	base.push(aus.schematics.grey_mangrove, schem)
 	minetest.register_decoration({
 		deco_type =   "schematic",
 		sidelen =     80,
@@ -154,7 +154,7 @@ local tree =    "australia:stilted_mangrove_tree"
 local leaves =  "australia:stilted_mangrove_leaves"
 for h = 4, max_ht do
 	local schem = aus.generate_mangrove_tree_schematic(3, tree, leaves)
-	push(aus.schematics.stilted_mangrove, schem)
+	base.push(aus.schematics.stilted_mangrove, schem)
 	minetest.register_decoration({
 		deco_type =   "schematic",
 		sidelen =     80,

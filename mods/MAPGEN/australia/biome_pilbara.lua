@@ -102,7 +102,7 @@ aus.register_plant({
 -- Spinifex
 minetest.register_decoration({
 	deco_type =  "simple",
-	place_on =    {"australia:red_gravel"},
+	place_on =    {"base:red_gravel"},
 	sidelen =     80,
 	fill_ratio =  0.02,
 	biomes =      {"pilbara"},

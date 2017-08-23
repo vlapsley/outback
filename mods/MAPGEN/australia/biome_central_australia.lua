@@ -82,7 +82,7 @@ end
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"australia:red_dirt"},
+		place_on =      {"base:red_dirt"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -155,7 +155,7 @@ aus.register_plant({
 -- Spinifex
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"australia:red_dirt"},
+	place_on =    {"base:red_dirt"},
 	sidelen =     80,
 	fill_ratio =  0.02,
 	biomes =      {"central_australia"},

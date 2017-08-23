@@ -149,7 +149,7 @@ minetest.register_node("australia:flame_grevillea_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -402,7 +402,7 @@ minetest.register_node("australia:red_bottlebrush_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
@@ -517,7 +517,7 @@ minetest.register_node("australia:waratah_sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	on_timer = aus.grow_sapling,
+	on_timer = base.grow_sapling,
 	selection_box = {
 		type = "fixed",
 		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
