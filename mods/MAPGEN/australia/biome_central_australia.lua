@@ -121,7 +121,7 @@ register_dryrivergrass(4)
 
 -- Bush Tomato
 plants_api.register_plant({
-	nodes =     {"australia:tomato_bush"},
+	nodes =     {"base:tomato_bush"},
 	cover =     0.0002,
 	density =   0.01,
 	priority =  30,
@@ -132,7 +132,7 @@ plants_api.register_plant({
 
 -- Mitchell Grass
 plants_api.register_plant({
-	nodes =     {"australia:mitchell_grass"},
+	nodes =     {"base:mitchell_grass"},
 	cover =     0.01,
 	density =   0.01,
 	priority =  35,
@@ -161,7 +161,7 @@ minetest.register_decoration({
 	biomes =      {"central_australia"},
 	y_min =       4,
 	y_max =       41,
-	decoration =  "australia:spinifex",
+	decoration =  "base:spinifex",
 })
 
 -- Sturt's Desert Pea

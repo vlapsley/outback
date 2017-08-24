@@ -28,7 +28,7 @@ minetest.register_biome({
 
 minetest.register_ore({
 	ore_type =        "scatter",
-	ore =             "australia:woodship",
+	ore =             "sea:woodship",
 	wherein =         {"base:sand"},
 	clust_scarcity =  60 * 60 * 60,
 	clust_num_ores =  1,

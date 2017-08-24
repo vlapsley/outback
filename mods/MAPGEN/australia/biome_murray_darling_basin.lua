@@ -143,7 +143,7 @@ plants_api.register_plant({
 
 -- Saltbush
 plants_api.register_plant({
-	nodes =     {"australia:saltbush"},
+	nodes =     {"base:saltbush"},
 	cover =     0.005,
 	density =   0.01,
 	priority =  35,

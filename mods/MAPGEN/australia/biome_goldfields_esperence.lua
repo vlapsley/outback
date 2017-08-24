@@ -89,7 +89,7 @@ minetest.register_decoration({
 	biomes =      {"goldfields_esperence"},
 	y_min =       4,
 	y_max =       41,
-	decoration =  "australia:spinifex",
+	decoration =  "base:spinifex",
 })
 
 -- Sturt's Desert Pea

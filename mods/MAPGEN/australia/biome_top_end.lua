@@ -188,7 +188,7 @@ register_rivergrass(4)
 
 -- Mitchell Grass
 plants_api.register_plant({
-	nodes =     {"australia:mitchell_grass"},
+	nodes =     {"base:mitchell_grass"},
 	cover =     0.001,
 	density =   0.01,
 	priority =  35,

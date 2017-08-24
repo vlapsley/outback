@@ -79,7 +79,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 
 -- Mitchell Grass
 plants_api.register_plant({
-	nodes =     {"australia:mitchell_grass"},
+	nodes =     {"base:mitchell_grass"},
 	cover =     0.001,
 	density =   0.001,
 	priority =  35,
@@ -108,7 +108,7 @@ minetest.register_decoration({
 	biomes =      {"pilbara"},
 	y_min =       4,
 	y_max =       41,
-	decoration =  "australia:spinifex",
+	decoration =  "base:spinifex",
 })
 
 -- Sturt's Desert Pea

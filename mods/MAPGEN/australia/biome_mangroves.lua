@@ -46,7 +46,7 @@ minetest.register_decoration({
 	biomes =      {"mangroves"},
 	y_min =       2,
 	y_max =       3,
-	decoration =  "australia:mangrove_fern",
+	decoration =  "base:mangrove_fern",
 })
 
 -- Mangrove Lily
@@ -83,9 +83,9 @@ minetest.register_decoration({
 		size = {x = 1, y = 4, z = 1},
 		data = {
 			{name = "ignore", param1 = 0, param2 = 0},
-			{name = "australia:mangrove_palm_trunk", param1 = 255, param2 = 0},
-			{name = "australia:mangrove_palm_leaf_bot", param1 = 255, param2 = 0},
-			{name = "australia:mangrove_palm_leaf_top", param1 = 255, param2 = 0},
+			{name = "base:mangrove_palm_trunk", param1 = 255, param2 = 0},
+			{name = "base:mangrove_palm_leaf_bot", param1 = 255, param2 = 0},
+			{name = "base:mangrove_palm_leaf_top", param1 = 255, param2 = 0},
 		},
 	},
 	flags =       "force_placement",

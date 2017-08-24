@@ -163,8 +163,8 @@ register_rivergrass(4)
 -- Lavender Grevillea
 plants_api.register_plant({
 	nodes = {
-		trunk =  "australia:lavender_grevillea",
-		leaves =  "australia:lavender_grevillea",
+		trunk =  "base:lavender_grevillea",
+		leaves =  "base:lavender_grevillea",
 		air =     "air",
 		ignore =  "ignore",
 	},
