@@ -122,15 +122,15 @@ minetest.register_node("sea:woodshipchest", {
 		elseif math_random(1, 100) >= 46 or math_random(1, 100) <= 50 then
 			contents = {main = {[1] = "base:diamond 24"}}
 		elseif math_random(1, 100) >= 51 or math_random(1, 100) <= 60 then
-			contents = {main = {[1] = "australia:huon_pine_tree 18"}}
+			contents = {main = {[1] = "base:huon_pine_tree 18"}}
 		elseif math_random(1, 100) >= 61 or math_random(1, 100) <= 70 then
-			contents = {main = {[1] = "australia:jarrah_tree 18"}}
+			contents = {main = {[1] = "base:jarrah_tree 18"}}
 		elseif math_random(1, 100) >= 71 or math_random(1, 100) <= 80 then
-			contents = {main = {[1] = "australia:marri_tree 18"}}
+			contents = {main = {[1] = "base:marri_tree 18"}}
 		elseif math_random(1, 100) >= 81 or math_random(1, 100) <= 90 then
-			contents = {main = {[1] = "australia:merbau_tree 18"}}
+			contents = {main = {[1] = "base:merbau_tree 18"}}
 		else
-			contents = {main = {[1] = "australia:river_red_gum_tree 18"}}
+			contents = {main = {[1] = "base:river_red_gum_tree 18"}}
 		end
 		meta:from_table({
 			inventory = contents,
@@ -362,7 +362,7 @@ function sea.place_woodship(pos)
 	pos.y = pos.y - 7
 	pos.z = pos.z + 1
 	pos.x = pos.x - 2
-	minetest.add_node(pos, {name = "australia:woodshipchest"})
+	minetest.add_node(pos, {name = "sea:woodshipchest"})
 end
 
 function sea.place_submarine(pos)
