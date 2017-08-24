@@ -218,7 +218,6 @@ function sea.place_woodship(pos)
 
 	pos.y = pos.y + 1
 	pos.x = pos.x - 6
-
 	for a = 1, 11 do
 		pos.x = pos.x + 1
 		minetest.add_node(pos, {name = "base:tree"})
@@ -226,7 +225,6 @@ function sea.place_woodship(pos)
 
 	pos.z = pos.z + 1
 	pos.x = pos.x - 10
-
 	for a = 1, 9 do
 		pos.x = pos.x + 1
 		minetest.add_node(pos, {name = "base:tree"})
@@ -234,17 +232,14 @@ function sea.place_woodship(pos)
 
 	pos.z = pos.z - 2
 	pos.x = pos.x - 9
-
 	for a = 1, 9 do
 		pos.x = pos.x + 1
 		minetest.add_node(pos, {name = "base:tree"})
 	end
 
-
 	pos.y = pos.y + 1
 	pos.x = pos.x - 8
 	pos.z = pos.z - 1
-
 	for a = 1, 7 do
 		pos.x = pos.x + 1
 		minetest.add_node(pos, {name = "base:tree"})
@@ -252,7 +247,6 @@ function sea.place_woodship(pos)
 
 	pos.z = pos.z + 4
 	pos.x = pos.x - 7
-
 	for a = 1, 7 do
 		pos.x = pos.x + 1
 		minetest.add_node(pos, {name = "base:tree"})
@@ -291,7 +285,6 @@ function sea.place_woodship(pos)
 
 	pos.y = pos.y + 1
 	pos.z = pos.z - 1
-
 	for a = 1, 7 do
 		pos.x = pos.x + 1
 		minetest.add_node(pos, {name = "base:wood"})
@@ -299,7 +292,6 @@ function sea.place_woodship(pos)
 
 	pos.z = pos.z + 4
 	pos.x = pos.x - 7
-
 	for a = 1, 7 do
 		pos.x = pos.x + 1
 		minetest.add_node(pos, {name = "base:wood"})
@@ -324,7 +316,6 @@ function sea.place_woodship(pos)
 	pos.z = pos.z - 1
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:wood"})
-
 	for a = 1, 3 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:wood"})
@@ -346,14 +337,12 @@ function sea.place_woodship(pos)
 
 	pos.y = pos.y + 3
 	pos.z = pos.z - 4
-
 	for a = 1, 7 do
 		pos.z = pos.z + 1
 		minetest.add_node(pos, {name = "base:wood"})
 	end
 
 	pos.z = pos.z - 3
-
 	for a = 1, 2 do
 		pos.y = pos.y + 1
 		minetest.add_node(pos, {name = "base:wood"})
@@ -361,7 +350,6 @@ function sea.place_woodship(pos)
 
 	pos.y = pos.y + 1
 	pos.z = pos.z - 3
-
 	for a = 1, 5 do
 		pos.z = pos.z + 1
 		minetest.add_node(pos, {name = "base:wood"})
@@ -382,7 +370,6 @@ function sea.place_submarine(pos)
 
 	pos.y = pos.y + 1
 	pos.x = pos.x - 15
-
 	for a = 1, 31 do
 		pos.x = pos.x + 1
 		minetest.add_node(pos, {name = "base:copperblock"})
@@ -390,7 +377,6 @@ function sea.place_submarine(pos)
 
 	pos.z = pos.z + 1
 	pos.x = pos.x + 1
-
 	for a = 1, 31 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:copperblock"})
@@ -398,7 +384,6 @@ function sea.place_submarine(pos)
 
 	pos.z = pos.z + 1
 	pos.x = pos.x +1
-
 	for a = 1, 27 do
 		pos.x = pos.x + 1
 		minetest.add_node(pos, {name = "base:copperblock"})
@@ -406,7 +391,6 @@ function sea.place_submarine(pos)
 
 	pos.z = pos.z - 3
 	pos.x = pos.x + 1
-
 	for a = 1, 27 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:copperblock"})
@@ -414,7 +398,6 @@ function sea.place_submarine(pos)
 
 	pos.z = pos.z - 1
 	pos.x = pos.x + 2
-
 	for a = 1, 21 do
 		pos.x = pos.x + 1
 		minetest.add_node(pos, {name = "base:copperblock"})
@@ -422,7 +405,6 @@ function sea.place_submarine(pos)
 
 	pos.z = pos.z + 5
 	pos.x = pos.x + 1
-
 	for a = 1, 21 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:copperblock"})
@@ -431,7 +413,6 @@ function sea.place_submarine(pos)
 	pos.y = pos.y + 1
 	pos.z = pos.z + 1
 	pos.x = pos.x - 1
-
 	for a = 1, 21 do
 		pos.x = pos.x + 1
 		minetest.add_node(pos, {name = "base:copperblock"})
@@ -439,7 +420,6 @@ function sea.place_submarine(pos)
 
 	pos.z = pos.z - 7
 	pos.x = pos.x + 1
-
 	for a = 1, 21 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:copperblock"})
@@ -448,50 +428,62 @@ function sea.place_submarine(pos)
 	pos.z = pos.z + 1
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x + 24
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.z = pos.z + 5
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x - 22
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.z = pos.z - 1
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x + 29
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.z = pos.z - 3
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x - 28
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
@@ -523,36 +515,44 @@ function sea.place_submarine(pos)
 	pos.z = pos.z - 1
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:steelblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:steelblock"})
 
 	pos.x = pos.x + 28
 	minetest.add_node(pos, {name = "base:steelblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:steelblock"})
 
 	pos.z = pos.z + 3
 	minetest.add_node(pos, {name = "base:steelblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:steelblock"})
 
 	pos.x = pos.x - 28
 	minetest.add_node(pos, {name = "base:steelblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:steelblock"})
 
 	pos.z = pos.z + 1
 	pos.x = pos.x + 2
 	minetest.add_node(pos, {name = "base:steelblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:obsidian_glass"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:steelblock"})
 
 	pos.x = pos.x + 22
 	minetest.add_node(pos, {name = "base:steelblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:obsidian_glass"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:steelblock"})
 
@@ -565,7 +565,6 @@ function sea.place_submarine(pos)
 
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:obsidian_glass"})
-
 	for a = 1, 3 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:steelblock"})
@@ -573,7 +572,6 @@ function sea.place_submarine(pos)
 
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:obsidian_glass"})
-
 	for a = 1, 3 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:steelblock"})
@@ -581,7 +579,6 @@ function sea.place_submarine(pos)
 
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:obsidian_glass"})
-
 	for a = 1, 9 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:steelblock"})
@@ -590,21 +587,24 @@ function sea.place_submarine(pos)
 	pos.z = pos.z - 6
 	pos.x = pos.x - 3
 	minetest.add_node(pos, {name = "base:steelblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:obsidian_glass"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:steelblock"})
 
 	pos.x = pos.x + 22
 	minetest.add_node(pos, {name = "base:steelblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:obsidian_glass"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:steelblock"})
 
 	pos.z = pos.z - 1
 	pos.x = pos.x - 2
-
 	for a = 1, 3 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:steelblock"})
@@ -612,7 +612,6 @@ function sea.place_submarine(pos)
 
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:obsidian_glass"})
-
 	for a = 1, 3 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:steelblock"})
@@ -620,7 +619,6 @@ function sea.place_submarine(pos)
 
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:obsidian_glass"})
-
 	for a = 1, 3 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:steelblock"})
@@ -628,7 +626,6 @@ function sea.place_submarine(pos)
 
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:obsidian_glass"})
-
 	for a = 1, 9 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:steelblock"})
@@ -644,7 +641,6 @@ function sea.place_submarine(pos)
 
 	pos.z = pos.z - 7
 	pos.x = pos.x + 1
-
 	for a = 1, 21 do
 		pos.x = pos.x - 1
 		minetest.add_node(pos, {name = "base:copperblock"})
@@ -653,50 +649,62 @@ function sea.place_submarine(pos)
 	pos.z = pos.z + 1
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x + 24
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.z = pos.z + 5
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x - 22
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.z = pos.z - 1
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x + 29
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.z = pos.z - 3
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x - 28
 	minetest.add_node(pos, {name = "base:copperblock"})
+	
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
@@ -716,50 +724,62 @@ function sea.place_submarine(pos)
 	pos.y = pos.y + 1
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x + 28
 	minetest.add_node(pos, {name = "base:copperblock"})
+	
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.z = pos.z - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x - 28
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.z = pos.z - 1
 	pos.x = pos.x + 2
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x + 22
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x + 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.z = pos.z + 3
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 
 	pos.x = pos.x - 22
 	minetest.add_node(pos, {name = "base:copperblock"})
+
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
+	
 	pos.x = pos.x - 1
 	minetest.add_node(pos, {name = "base:copperblock"})
 

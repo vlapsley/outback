@@ -91,11 +91,8 @@ minetest.register_abm({
 	chance =     1,
 	action = function(pos, node)
 		local yp = {x = pos.x, y = pos.y + 8, z = pos.z}
-		if node.name == "sea:submarine"
-		and (
-			minetest.get_node(yp).name == "base:water_source"
-			or minetest.get_node(yp).name == "australia:water_source"
-		) then
+		if node.name == "sea:submarine" and
+				minetest.get_node(yp).name == "base:water_source" then
 			sea.place_submarine(pos)
 		end
 	end

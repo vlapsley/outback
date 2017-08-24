@@ -139,8 +139,7 @@ aus.biome_australian_alps        = true
 -- Load files
 dofile(aus.path .. "/functions.lua")
 dofile(aus.path .. "/trees.lua")
-dofile(aus.path .. "/nodes.lua")
-dofile(aus.path .. "/noairblocks.lua")
+dofile(aus.path .. "/nodes_plants.lua")
 dofile(aus.path .. "/mapgen.lua")
 dofile(aus.path .. "/voxel.lua")
 
