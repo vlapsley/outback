@@ -370,7 +370,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 							slopes = slopes,
 							biome = aus.biome_ids[biomemap[i2d]]
 							}
-						aus.choose_generate_plant(conditions,
+						plants_api.choose_generate_plant(conditions,
 								{x=x,y=y+1,z=z}, data, a, ivm + ystride)
 					end
 				end

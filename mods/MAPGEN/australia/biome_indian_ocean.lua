@@ -97,7 +97,7 @@ register_dry_grass_decoration(0.05, 0.01,  3)
 --]]
 
 -- Rottnest Island Pine
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:rottnest_island_pine_tree",
 		leaves =  "base:rottnest_island_pine_leaves",

@@ -61,7 +61,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 
 -- Grass near rivers
 local function register_rivergrass(length)
-	aus.register_plant({
+	plants_api.register_plant({
 		nodes =     {"base:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
@@ -76,7 +76,7 @@ register_rivergrass(5)
 register_rivergrass(4)
 
 -- Bush Tomato
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"australia:tomato_bush"},
 	cover =     0.0003,
 	density =   0.01,
@@ -87,7 +87,7 @@ aus.register_plant({
 })
 
 -- Mitchell Grass
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"australia:mitchell_grass"},
 	cover =     0.01,
 	density =   0.01,
@@ -125,7 +125,7 @@ register_small_stone_rocks(1)
 --]]
 
 -- Coolabah Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coolabah_tree",
 		leaves =  "base:coolabah_leaves",
@@ -147,7 +147,7 @@ aus.register_plant({
 })
 
 -- Mulga Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:mulga_tree",
 		leaves =  "base:mulga_leaves",
@@ -168,7 +168,7 @@ aus.register_plant({
 })
 
 -- Quandong
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:quandong_tree",
 		leaves =  "base:quandong_leaves",
@@ -192,7 +192,7 @@ aus.register_plant({
 })
 
 -- Quandong
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:quandong_tree",
 		leaves =  "base:quandong_leaves",
@@ -216,7 +216,7 @@ aus.register_plant({
 })
 
 -- River Oak
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:river_oak_tree",
 		leaves =  "base:river_oak_leaves",
@@ -237,7 +237,7 @@ aus.register_plant({
 })
 
 -- River Red Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:river_red_gum_tree",
 		leaves =  "base:river_red_gum_leaves",
@@ -259,7 +259,7 @@ aus.register_plant({
 })
 
 -- Shoestring Acacia
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:shoestring_acacia_tree",
 		leaves =  "base:shoestring_acacia_leaves",
@@ -280,7 +280,7 @@ aus.register_plant({
 })
 
 -- Shoestring Acacia
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:shoestring_acacia_tree",
 		leaves =  "base:shoestring_acacia_leaves",

@@ -61,7 +61,7 @@ register_grass_decoration(0.06,   0.06,  1)
 
 -- Grass near rivers
 local function register_rivergrass(length)
-	aus.register_plant({
+	plants_api.register_plant({
 		nodes =     {"base:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
@@ -115,7 +115,7 @@ register_small_stone_rocks(1)
 --]]
 
 -- Black Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:black_wattle_tree",
 		leaves =  "base:black_wattle_leaves",
@@ -136,7 +136,7 @@ aus.register_plant({
 })
 
 -- Black Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:black_wattle_tree",
 		leaves =  "base:black_wattle_leaves",
@@ -157,7 +157,7 @@ aus.register_plant({
 })
 
 -- Blue Gum (in valleys)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:blue_gum_tree",
 		leaves =  "base:blue_gum_leaves",
@@ -179,7 +179,7 @@ aus.register_plant({
 })
 
 -- Blue Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:blue_gum_tree",
 		leaves =  "base:blue_gum_leaves",
@@ -201,7 +201,7 @@ aus.register_plant({
 })
 
 -- Celery-top Pine (forest)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:celery_top_pine_tree",
 		leaves =  "base:celery_top_pine_leaves",
@@ -222,7 +222,7 @@ aus.register_plant({
 })
 
 -- Celery-top Pine
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:celery_top_pine_tree",
 		leaves =  "base:celery_top_pine_leaves",
@@ -243,7 +243,7 @@ aus.register_plant({
 })
 
 -- Celery-top Pine
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:celery_top_pine_tree",
 		leaves =  "base:celery_top_pine_leaves",
@@ -264,7 +264,7 @@ aus.register_plant({
 })
 
 -- Huon Pine (along rivers)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:huon_pine_tree",
 		leaves =  "base:huon_pine_leaves",
@@ -286,7 +286,7 @@ aus.register_plant({
 })
 
 -- Huon Pine
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:huon_pine_tree",
 		leaves =  "base:huon_pine_leaves",
@@ -308,7 +308,7 @@ aus.register_plant({
 })
 
 -- Southern Sassafras (along rivers)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:southern_sassafras_tree",
 		leaves =  "base:southern_sassafras_leaves",
@@ -329,7 +329,7 @@ aus.register_plant({
 })
 
 -- Southern Sassafras (in valleys)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:southern_sassafras_tree",
 		leaves =  "base:southern_sassafras_leaves",
@@ -350,7 +350,7 @@ aus.register_plant({
 })
 
 -- Swamp Gum (forest)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:swamp_gum_tree",
 		leaves =  "base:swamp_gum_leaves",
@@ -372,7 +372,7 @@ aus.register_plant({
 })
 
 -- Tasmanian Myrtle (forest)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:tasmanian_myrtle_tree",
 		leaves =  "base:tasmanian_myrtle_leaves",
@@ -394,7 +394,7 @@ aus.register_plant({
 })
 
 -- Tasmanian Myrtle (low alt - bigger tree)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:tasmanian_myrtle_tree",
 		leaves =  "base:tasmanian_myrtle_leaves",
@@ -416,7 +416,7 @@ aus.register_plant({
 })
 
 -- Tasmanian Myrtle (high alt - smaller tree)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:tasmanian_myrtle_tree",
 		leaves =  "base:tasmanian_myrtle_leaves",

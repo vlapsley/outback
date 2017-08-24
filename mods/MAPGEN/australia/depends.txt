@@ -1,8 +1,5 @@
 base
 biome_lib
+plants_api
 ferns
 flowers
-bucket
-doors
-fences
-stairs

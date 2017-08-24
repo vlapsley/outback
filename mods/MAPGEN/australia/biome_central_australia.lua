@@ -105,7 +105,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 
 -- Grass near rivers
 local function register_dryrivergrass(length)
-	aus.register_plant({
+	plants_api.register_plant({
 		nodes =     {"base:dry_grass_"..length},
 		cover =     0.1,
 		density =   0.33,
@@ -120,7 +120,7 @@ register_dryrivergrass(5)
 register_dryrivergrass(4)
 
 -- Bush Tomato
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"australia:tomato_bush"},
 	cover =     0.0002,
 	density =   0.01,
@@ -131,7 +131,7 @@ aus.register_plant({
 })
 
 -- Mitchell Grass
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"australia:mitchell_grass"},
 	cover =     0.01,
 	density =   0.01,
@@ -142,7 +142,7 @@ aus.register_plant({
 })
 
 -- Pink Mulla Mulla
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:pink_mulla_mulla"},
 	cover =     0.0015,
 	density =   0.005,
@@ -165,7 +165,7 @@ minetest.register_decoration({
 })
 
 -- Sturt's Desert Pea
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:sturts_desert_pea"},
 	cover =     0.001,
 	density =   0.2,
@@ -202,7 +202,7 @@ register_small_red_rocks(1)
 --]]
 
 -- Coolabah Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coolabah_tree",
 		leaves =  "base:coolabah_leaves",
@@ -224,7 +224,7 @@ aus.register_plant({
 })
 
 -- Desert Oak
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:desert_oak_tree",
 		leaves =  "base:desert_oak_leaves",
@@ -245,7 +245,7 @@ aus.register_plant({
 })
 
 -- Quandong
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:quandong_tree",
 		leaves =  "base:quandong_leaves",
@@ -269,7 +269,7 @@ aus.register_plant({
 })
 
 -- Quandong
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:quandong_tree",
 		leaves =  "base:quandong_leaves",
@@ -293,7 +293,7 @@ aus.register_plant({
 })
 
 -- River Red Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:river_red_gum_tree",
 		leaves =  "base:river_red_gum_leaves",
@@ -315,7 +315,7 @@ aus.register_plant({
 })
 
 -- Wirewood
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:wirewood_tree",
 		leaves =  "base:wirewood_leaves",
@@ -336,7 +336,7 @@ aus.register_plant({
 })
 
 -- Wirewood
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:wirewood_tree",
 		leaves =  "base:wirewood_leaves",

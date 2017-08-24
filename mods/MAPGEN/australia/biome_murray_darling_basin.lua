@@ -105,7 +105,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 
 -- Grass near rivers
 local function register_rivergrass(length)
-	aus.register_plant({
+	plants_api.register_plant({
 		nodes =     {"base:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
@@ -120,7 +120,7 @@ register_rivergrass(5)
 register_rivergrass(4)
 
 -- Darling Lily
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:darling_lily"},
 	cover =     0.01,
 	density =   0.1,
@@ -131,7 +131,7 @@ aus.register_plant({
 })
 
 -- Darling Lily
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:darling_lily"},
 	cover =     0.005,
 	density =   0.01,
@@ -142,7 +142,7 @@ aus.register_plant({
 })
 
 -- Saltbush
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"australia:saltbush"},
 	cover =     0.005,
 	density =   0.01,
@@ -153,7 +153,7 @@ aus.register_plant({
 })
 
 -- Silver Daisy
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:silver_daisy"},
 	cover =     0.005,
 	density =   0.001,
@@ -191,7 +191,7 @@ register_small_stone_rocks(1)
 --]]
 
 -- Black Box
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:black_box_tree",
 		leaves =  "base:black_box_leaves",
@@ -213,7 +213,7 @@ aus.register_plant({
 })
 
 -- Black Box
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:black_box_tree",
 		leaves =  "base:black_box_leaves",
@@ -235,7 +235,7 @@ aus.register_plant({
 })
 
 -- Coolabah Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coolabah_tree",
 		leaves =  "base:coolabah_leaves",
@@ -257,7 +257,7 @@ aus.register_plant({
 })
 
 -- Golden Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:golden_wattle_tree",
 		leaves =  "base:golden_wattle_leaves",
@@ -278,7 +278,7 @@ aus.register_plant({
 })
 
 -- Golden Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:golden_wattle_tree",
 		leaves =  "base:golden_wattle_leaves",
@@ -299,7 +299,7 @@ aus.register_plant({
 })
 
 -- Quandong
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:quandong_tree",
 		leaves =  "base:quandong_leaves",
@@ -323,7 +323,7 @@ aus.register_plant({
 })
 
 -- Quandong
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:quandong_tree",
 		leaves =  "base:quandong_leaves",
@@ -347,7 +347,7 @@ aus.register_plant({
 })
 
 -- River Red Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:river_red_gum_tree",
 		leaves =  "base:river_red_gum_leaves",
@@ -369,7 +369,7 @@ aus.register_plant({
 })
 
 -- Shoestring Acacia
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:shoestring_acacia_tree",
 		leaves =  "base:shoestring_acacia_leaves",
@@ -390,7 +390,7 @@ aus.register_plant({
 })
 
 -- Shoestring Acacia
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:shoestring_acacia_tree",
 		leaves =  "base:shoestring_acacia_leaves",
@@ -411,7 +411,7 @@ aus.register_plant({
 })
 
 -- White Box
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:white_box_tree",
 		leaves =  "base:white_box_leaves",

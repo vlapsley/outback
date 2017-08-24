@@ -87,7 +87,7 @@ register_dry_grass_decoration(0.06, 0.06,  1)
 
 -- Grass near rivers
 local function register_rivergrass(length)
-	aus.register_plant({
+	plants_api.register_plant({
 		nodes =     {"base:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
@@ -102,7 +102,7 @@ register_rivergrass(5)
 register_rivergrass(4)
 
 -- Cooktown Orchid
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:cooktown_orchid"},
 	cover =     0.0015,
 	density =   0.01,
@@ -140,7 +140,7 @@ register_small_stone_rocks(1)
 --]]
 
 -- Black Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:black_wattle_tree",
 		leaves =  "base:black_wattle_leaves",
@@ -161,7 +161,7 @@ aus.register_plant({
 })
 
 -- Daintree Stringybark
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:daintree_stringybark_tree",
 		leaves =  "base:daintree_stringybark_leaves",
@@ -183,7 +183,7 @@ aus.register_plant({
 })
 
 -- Darwin Woollybutt
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:darwin_woollybutt_tree",
 		leaves =  "base:darwin_woollybutt_leaves",
@@ -205,7 +205,7 @@ aus.register_plant({
 })
 
 -- Fan Palm
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:fan_palm_tree",
 		leaves =  "base:fan_palm_leaves",
@@ -226,7 +226,7 @@ aus.register_plant({
 })
 
 -- Fan Palm
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:fan_palm_tree",
 		leaves =  "base:fan_palm_leaves",
@@ -247,7 +247,7 @@ aus.register_plant({
 })
 
 -- Illawarra Flame Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:illawarra_flame_tree",
 		leaves =  "base:illawarra_flame_leaves",
@@ -269,7 +269,7 @@ aus.register_plant({
 })
 
 -- Lemon Eucalyptus
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:lemon_eucalyptus_tree",
 		leaves =  "base:lemon_eucalyptus_leaves",
@@ -291,7 +291,7 @@ aus.register_plant({
 })
 
 -- Lilly Pilly
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:lilly_pilly_tree",
 		leaves =  "base:lilly_pilly_leaves",
@@ -315,7 +315,7 @@ aus.register_plant({
 })
 
 -- Merbau
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:merbau_tree",
 		leaves =  "base:merbau_leaves",
@@ -336,7 +336,7 @@ aus.register_plant({
 })
 
 -- River Oak
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:river_oak_tree",
 		leaves =  "base:river_oak_leaves",
@@ -357,7 +357,7 @@ aus.register_plant({
 })
 
 -- River Oak
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:river_oak_tree",
 		leaves =  "base:river_oak_leaves",

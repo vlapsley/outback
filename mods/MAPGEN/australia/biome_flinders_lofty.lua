@@ -146,7 +146,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 
 -- Grass near rivers
 local function register_rivergrass(length)
-	aus.register_plant({
+	plants_api.register_plant({
 		nodes =     {"base:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
@@ -161,7 +161,7 @@ register_rivergrass(5)
 register_rivergrass(4)
 
 -- Lavender Grevillea
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =  "australia:lavender_grevillea",
 		leaves =  "australia:lavender_grevillea",
@@ -182,7 +182,7 @@ aus.register_plant({
 })
 
 -- Pink Mulla Mulla
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:pink_mulla_mulla"},
 	cover =     0.0015,
 	density =   0.01,
@@ -193,7 +193,7 @@ aus.register_plant({
 })
 
 -- Sturt's Desert Pea'
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:sturts_desert_pea"},
 	cover =     0.0025,
 	density =   0.2,
@@ -231,7 +231,7 @@ register_small_stone_rocks(1)
 --]]
 
 -- Black Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:black_wattle_tree",
 		leaves =  "base:black_wattle_leaves",
@@ -252,7 +252,7 @@ aus.register_plant({
 })
 
 -- Black Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:black_wattle_tree",
 		leaves =  "base:black_wattle_leaves",
@@ -273,7 +273,7 @@ aus.register_plant({
 })
 
 -- Australian Cherry
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:cherry_tree",
 		leaves =  "base:cherry_leaves",
@@ -297,7 +297,7 @@ aus.register_plant({
 })
 
 -- Coolabah
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coolabah_tree",
 		leaves =  "base:coolabah_leaves",
@@ -319,7 +319,7 @@ aus.register_plant({
 })
 
 -- Golden Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:golden_wattle_tree",
 		leaves =  "base:golden_wattle_leaves",
@@ -340,7 +340,7 @@ aus.register_plant({
 })
 
 -- Golden Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:golden_wattle_tree",
 		leaves =  "base:golden_wattle_leaves",
@@ -361,7 +361,7 @@ aus.register_plant({
 })
 
 -- River Red Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:river_red_gum_tree",
 		leaves =  "base:river_red_gum_leaves",
@@ -383,7 +383,7 @@ aus.register_plant({
 })
 
 -- Sugar Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:sugar_gum_tree",
 		leaves =  "base:sugar_gum_leaves",

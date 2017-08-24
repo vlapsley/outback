@@ -60,7 +60,7 @@ register_small_red_rocks(1)
 --]]
 
 -- Coolabah Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coolabah_tree",
 		leaves =  "base:coolabah_leaves",
@@ -82,7 +82,7 @@ aus.register_plant({
 })
 
 -- Quandong
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:quandong_tree",
 		leaves =  "base:quandong_leaves",
@@ -106,7 +106,7 @@ aus.register_plant({
 })
 
 -- Quandong
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:quandong_tree",
 		leaves =  "base:quandong_leaves",

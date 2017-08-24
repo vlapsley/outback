@@ -124,7 +124,7 @@ for h = 4, max_ht do
 end
 
 -- Mangrove Apple
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:mangrove_apple_tree",
 		leaves =  "base:mangrove_apple_leaves",

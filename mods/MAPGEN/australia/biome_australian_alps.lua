@@ -95,7 +95,7 @@ minetest.register_decoration({
 --]]
 
 -- Snow Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:snow_gum_tree",
 		leaves =  "base:snow_gum_leaves",

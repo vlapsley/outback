@@ -106,7 +106,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 
 -- Grass near rivers
 local function register_rivergrass(length)
-	aus.register_plant({
+	plants_api.register_plant({
 		nodes =     {"base:grass_"..length},
 		cover =     0.1,
 		density =   0.33,
@@ -121,7 +121,7 @@ register_rivergrass(5)
 register_rivergrass(4)
 
 -- Couch Honeypot
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:couch_honeypot"},
 	cover =     0.0015,
 	density =   0.01,
@@ -132,7 +132,7 @@ aus.register_plant({
 })
 
 -- Flame Grevillea
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		stem =    "base:acacia_bush_stem",
 		leaves =  "base:flame_grevillea_leaves",
@@ -153,7 +153,7 @@ aus.register_plant({
 })
 
 -- Kangaroo Paw
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:kangaroo_paw"},
 	cover =     0.0015,
 	density =   0.01,
@@ -163,7 +163,7 @@ aus.register_plant({
 	end,
 })
 
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {"flowers:kangaroo_paw"},
 	cover =     0.0015,
 	density =   0.01,
@@ -201,7 +201,7 @@ register_small_stone_rocks(1)
 --]]
 
 -- Bull Banksia
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:bull_banksia_tree",
 		leaves =  "base:bull_banksia_leaves",
@@ -222,7 +222,7 @@ aus.register_plant({
 })
 
 -- Coolabah
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coolabah_tree",
 		leaves =  "base:coolabah_leaves",
@@ -244,7 +244,7 @@ aus.register_plant({
 })
 
 -- Jarrah
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:jarrah_tree",
 		leaves =  "base:jarrah_leaves",
@@ -266,7 +266,7 @@ aus.register_plant({
 })
 
 -- Karri
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:karri_tree",
 		leaves =  "base:karri_leaves",
@@ -288,7 +288,7 @@ aus.register_plant({
 })
 
 -- Marri
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:marri_tree",
 		leaves =  "base:marri_leaves",
@@ -310,7 +310,7 @@ aus.register_plant({
 })
 
 -- Rottnest Island Pine
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:rottnest_island_pine_tree",
 		leaves =  "base:rottnest_island_pine_leaves",
@@ -331,7 +331,7 @@ aus.register_plant({
 })
 
 -- Swamp Paperbark
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:swamp_paperbark_tree",
 		leaves =  "base:swamp_paperbark_leaves",
@@ -352,7 +352,7 @@ aus.register_plant({
 })
 
 -- Swamp Paperbark
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:swamp_paperbark_tree",
 		leaves =  "base:swamp_paperbark_leaves",

@@ -148,7 +148,6 @@ dofile(aus.path .. "/functions.lua")
 dofile(aus.path .. "/trees.lua")
 dofile(aus.path .. "/nodes.lua")
 dofile(aus.path .. "/noairblocks.lua")
-dofile(aus.path .. "/plants_api.lua")
 dofile(aus.path .. "/mapgen.lua")
 dofile(aus.path .. "/voxel.lua")
 

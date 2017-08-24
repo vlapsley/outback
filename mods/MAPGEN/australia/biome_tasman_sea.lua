@@ -97,7 +97,7 @@ register_dry_grass_decoration(0.05, 0.01,  3)
 --]]
 
 -- Coast Banksia (small)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coast_banksia_tree",
 		leaves =  "base:coast_banksia_leaves",

@@ -78,7 +78,7 @@ register_dry_grass_decoration(0.07, -0.01, 2)
 register_dry_grass_decoration(0.09, -0.03, 1)
 
 -- Mitchell Grass
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"australia:mitchell_grass"},
 	cover =     0.001,
 	density =   0.001,
@@ -89,7 +89,7 @@ aus.register_plant({
 })
 
 -- Pink Mulla Mulla
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:pink_mulla_mulla"},
 	cover =     0.0015,
 	density =   0.001,
@@ -112,7 +112,7 @@ minetest.register_decoration({
 })
 
 -- Sturt's Desert Pea
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:sturts_desert_pea"},
 	cover =     0.001,
 	density =   0.2,
@@ -149,7 +149,7 @@ register_small_red_rocks(1)
 --]]
 
 -- Desert Oak
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:desert_oak_tree",
 		leaves =  "base:desert_oak_leaves",
@@ -170,7 +170,7 @@ aus.register_plant({
 })
 
 -- Wirewood
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:wirewood_tree",
 		leaves =  "base:wirewood_leaves",
@@ -191,7 +191,7 @@ aus.register_plant({
 })
 
 -- Wirewood
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:wirewood_tree",
 		leaves =  "base:wirewood_leaves",

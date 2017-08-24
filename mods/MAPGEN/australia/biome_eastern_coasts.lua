@@ -105,7 +105,7 @@ register_grass_decoration(0.03,   0.03,  1)
 
 -- Grass near rivers
 local function register_rivergrass(length)
-	aus.register_plant({
+	plants_api.register_plant({
 		nodes =     {"base:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
@@ -120,7 +120,7 @@ register_rivergrass(5)
 register_rivergrass(4)
 
 -- Waratah
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		stem =    "base:bush_stem",
 		leaves =  "base:waratah_leaves",
@@ -180,7 +180,7 @@ register_small_stone_rocks(1)
 --]]
 
 -- Black Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:black_wattle_tree",
 		leaves =  "base:black_wattle_leaves",
@@ -201,7 +201,7 @@ aus.register_plant({
 })
 
 -- Black Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk = "base:black_wattle_tree",
 		leaves = "base:black_wattle_leaves",
@@ -222,7 +222,7 @@ aus.register_plant({
 })
 
 -- Australian Cherry
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk = "base:cherry_tree",
 		leaves = "base:cherry_leaves",
@@ -246,7 +246,7 @@ aus.register_plant({
 })
 
 -- Coast Banksia (big)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coast_banksia_tree",
 		leaves =  "base:coast_banksia_leaves",
@@ -267,7 +267,7 @@ aus.register_plant({
 })
 
 -- Coast Banksia (small)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coast_banksia_tree",
 		leaves =  "base:coast_banksia_leaves",
@@ -288,7 +288,7 @@ aus.register_plant({
 })
 
 -- Coast Banksia (small and along rivers)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coast_banksia_tree",
 		leaves =  "base:coast_banksia_leaves",
@@ -309,7 +309,7 @@ aus.register_plant({
 })
 
 -- Coolabah
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coolabah_tree",
 		leaves =  "base:coolabah_leaves",
@@ -331,7 +331,7 @@ aus.register_plant({
 })
 
 -- Illawarra Flame Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:illawarra_flame_tree",
 		leaves =  "base:illawarra_flame_leaves",
@@ -353,7 +353,7 @@ aus.register_plant({
 })
 
 -- Lemon Eucalyptus
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:lemon_eucalyptus_tree",
 		leaves =  "base:lemon_eucalyptus_leaves",
@@ -375,7 +375,7 @@ aus.register_plant({
 })
 
 -- Lemon Eucalyptus (forest)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:lemon_eucalyptus_tree",
 		leaves =  "base:lemon_eucalyptus_leaves",
@@ -397,7 +397,7 @@ aus.register_plant({
 })
 
 -- Lemon Myrtle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:lemon_myrtle_tree",
 		leaves =  "base:lemon_myrtle_leaves",
@@ -418,7 +418,7 @@ aus.register_plant({
 })
 
 -- Lilly Pilly
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:lilly_pilly_tree",
 		leaves =  "base:lilly_pilly_leaves",
@@ -442,7 +442,7 @@ aus.register_plant({
 })
 
 -- Macadamia Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:macadamia_tree",
 		leaves =  "base:macadamia_leaves",
@@ -466,7 +466,7 @@ aus.register_plant({
 })
 
 -- Moreton Bay Fig
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:moreton_bay_fig_tree",
 		leaves =  "base:moreton_bay_fig_leaves",
@@ -490,7 +490,7 @@ aus.register_plant({
 })
 
 -- Paperbark Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:paperbark_tree",
 		leaves =  "base:paperbark_leaves",
@@ -512,7 +512,7 @@ aus.register_plant({
 })
 
 -- Paperbark Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:paperbark_tree",
 		leaves =  "base:paperbark_leaves",
@@ -534,7 +534,7 @@ aus.register_plant({
 })
 
 -- River Oak
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:river_oak_tree",
 		leaves =  "base:river_oak_leaves",
@@ -555,7 +555,7 @@ aus.register_plant({
 })
 
 -- River Red Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:river_red_gum_tree",
 		leaves =  "base:river_red_gum_leaves",
@@ -577,7 +577,7 @@ aus.register_plant({
 })
 
 -- Scribbly Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:scribbly_gum_tree",
 		leaves =  "base:scribbly_gum_leaves",
@@ -599,7 +599,7 @@ aus.register_plant({
 })
 
 -- Scribbly Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:scribbly_gum_tree",
 		leaves =  "base:scribbly_gum_leaves",
@@ -621,7 +621,7 @@ aus.register_plant({
 })
 
 -- Snow Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:snow_gum_tree",
 		leaves =  "base:snow_gum_leaves",
@@ -642,7 +642,7 @@ aus.register_plant({
 })
 
 -- Tea Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:tea_tree_tree",
 		leaves =  "base:tea_tree_leaves",
@@ -663,7 +663,7 @@ aus.register_plant({
 })
 
 -- Tea Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:tea_tree_tree",
 		leaves =  "base:tea_tree_leaves",

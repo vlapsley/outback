@@ -126,7 +126,7 @@ register_grass_decoration(0.03,   0.03,  1)
 
 -- Grass near rivers
 local function register_rivergrass(length)
-	aus.register_plant({
+	plants_api.register_plant({
 		nodes =     {"base:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
@@ -141,7 +141,7 @@ register_rivergrass(5)
 register_rivergrass(4)
 
 -- Red Bottlebrush
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		stem =    "base:bush_stem",
 		leaves =  "base:red_bottlebrush_leaves",
@@ -201,7 +201,7 @@ register_small_stone_rocks(1)
 --]]
 
 -- Black Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:black_wattle_tree",
 		leaves =  "base:black_wattle_leaves",
@@ -222,7 +222,7 @@ aus.register_plant({
 })
 
 -- Black Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:black_wattle_tree",
 		leaves =  "base:black_wattle_leaves",
@@ -243,7 +243,7 @@ aus.register_plant({
 })
 
 -- Black Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:black_wattle_tree",
 		leaves =  "base:black_wattle_leaves",
@@ -264,7 +264,7 @@ aus.register_plant({
 })
 
 -- Blue Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:blue_gum_tree",
 		leaves =  "base:blue_gum_leaves",
@@ -286,7 +286,7 @@ aus.register_plant({
 })
 
 -- Blue Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:blue_gum_tree",
 		leaves =  "base:blue_gum_leaves",
@@ -308,7 +308,7 @@ aus.register_plant({
 })
 
 -- Coolabah Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:coolabah_tree",
 		leaves =  "base:coolabah_leaves",
@@ -330,7 +330,7 @@ aus.register_plant({
 })
 
 -- Golden Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:golden_wattle_tree",
 		leaves =  "base:golden_wattle_leaves",
@@ -351,7 +351,7 @@ aus.register_plant({
 })
 
 -- Golden Wattle
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:golden_wattle_tree",
 		leaves =  "base:golden_wattle_leaves",
@@ -372,7 +372,7 @@ aus.register_plant({
 })
 
 -- Lilly Pilly
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:lilly_pilly_tree",
 		leaves =  "base:lilly_pilly_leaves",
@@ -396,7 +396,7 @@ aus.register_plant({
 })
 
 -- River Red Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:river_red_gum_tree",
 		leaves =  "base:river_red_gum_leaves",
@@ -418,7 +418,7 @@ aus.register_plant({
 })
 
 -- Snow Gum
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:snow_gum_tree",
 		leaves =  "base:snow_gum_leaves",
@@ -439,7 +439,7 @@ aus.register_plant({
 })
 
 -- Swamp Gum (forest)
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:swamp_gum_tree",
 		leaves =  "base:swamp_gum_leaves",
@@ -461,7 +461,7 @@ aus.register_plant({
 })
 
 -- White Box
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:white_box_tree",
 		leaves =  "base:white_box_leaves",
@@ -483,7 +483,7 @@ aus.register_plant({
 })
 
 -- White Box
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:white_box_tree",
 		leaves =  "base:white_box_leaves",

@@ -93,7 +93,7 @@ minetest.register_decoration({
 })
 
 -- Sturt's Desert Pea
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:sturts_desert_pea"},
 	cover =     0.001,
 	density =   0.2,
@@ -130,7 +130,7 @@ register_small_sandstone_rocks(1)
 --]]
 
 -- Quandong
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:quandong_tree",
 		leaves =  "base:quandong_leaves",

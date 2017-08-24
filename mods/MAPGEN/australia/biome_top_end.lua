@@ -171,7 +171,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 
 -- Grass near rivers
 local function register_rivergrass(length)
-	aus.register_plant({
+	plants_api.register_plant({
 		nodes =     {"base:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
@@ -187,7 +187,7 @@ register_rivergrass(4)
 
 
 -- Mitchell Grass
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"australia:mitchell_grass"},
 	cover =     0.001,
 	density =   0.01,
@@ -198,7 +198,7 @@ aus.register_plant({
 })
 
 -- Pink Mulla Mulla
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"flowers:pink_mulla_mulla"},
 	cover =     0.0015,
 	density =   0.01,
@@ -209,7 +209,7 @@ aus.register_plant({
 })
 
 -- Spear Grass
-aus.register_plant({
+plants_api.register_plant({
 	nodes =     {"dryplants:spear_grass"},
 	cover =     0.5,
 	density =   0.33,
@@ -247,7 +247,7 @@ register_small_sandstone_rocks(1)
 --]]
 
 -- Arnhem Cypress Pine
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:arnhem_cypress_pine_tree",
 		leaves =  "base:arnhem_cypress_pine_leaves",
@@ -268,7 +268,7 @@ aus.register_plant({
 })
 
 -- Arnhem Cypress Pine
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:arnhem_cypress_pine_tree",
 		leaves =  "base:arnhem_cypress_pine_leaves",
@@ -289,7 +289,7 @@ aus.register_plant({
 })
 
 -- Boab Tree
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:boab_tree",
 		leaves =  "base:boab_leaves",
@@ -311,7 +311,7 @@ aus.register_plant({
 })
 
 -- Darwin Woollybutt
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:darwin_woollybutt_tree",
 		leaves =  "base:darwin_woollybutt_leaves",
@@ -333,7 +333,7 @@ aus.register_plant({
 })
 
 -- Darwin Woollybutt
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:darwin_woollybutt_tree",
 		leaves =  "base:darwin_woollybutt_leaves",
@@ -355,7 +355,7 @@ aus.register_plant({
 })
 
 -- River Oak
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:river_oak_tree",
 		leaves =  "base:river_oak_leaves",
@@ -376,7 +376,7 @@ aus.register_plant({
 })
 
 -- Swamp Bloodwood
-aus.register_plant({
+plants_api.register_plant({
 	nodes = {
 		trunk =   "base:swamp_bloodwood_tree",
 		leaves =  "base:swamp_bloodwood_leaves",
