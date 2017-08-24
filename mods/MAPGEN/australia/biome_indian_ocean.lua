@@ -28,7 +28,7 @@ minetest.register_biome({
 
 minetest.register_ore({
 	ore_type =        "scatter",
-	ore =             "australia:woodship",
+	ore =             "sea:woodship",
 	wherein =         "base:sand",
 	clust_scarcity =  30 * 30 * 30,
 	clust_num_ores =  1,
@@ -123,178 +123,19 @@ plants_api.register_plant({
 --]]
 
 minetest.register_abm({
-	nodenames =  {"australia:woodship"},
+	nodenames =  {"sea:woodship"},
 	interval =   1,
 	chance =     1,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-	local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
-		if minetest.get_node(pos).name == "australia:woodship" and
-		(minetest.get_node(yp).name == "base:water_source" or
-		minetest.get_node(yp).name == "australia:water_source") then
-			minetest.add_node(pos, {name = "base:sand"})
-
-			pos.y = pos.y + 1
-			pos.x = pos.x - 6
-
-			for a = 1, 11 do
-				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "base:tree"})
-			end
-
-			pos.z = pos.z + 1
-			pos.x = pos.x - 10
-
-			for a = 1, 9 do
-				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "base:tree"})
-			end
-
-			pos.z = pos.z - 2
-			pos.x = pos.x - 9
-
-			for a = 1, 9 do
-				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "base:tree"})
-			end
-
-
-			pos.y = pos.y + 1
-			pos.x = pos.x - 8
-			pos.z = pos.z - 1
-
-			for a = 1, 7 do
-				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "base:tree"})
-			end
-
-			pos.z = pos.z + 4
-			pos.x = pos.x - 7
-
-			for a = 1, 7 do
-				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "base:tree"})
-			end
-
-			pos.z = pos.z - 1
-			pos.x = pos.x + 1
-			minetest.add_node(pos, {name = "base:wood"})
-
-			pos.z = pos.z - 1
-			pos.x = pos.x + 1
-			minetest.add_node(pos, {name = "base:wood"})
-
-			pos.x = pos.x + 1
-			minetest.add_node(pos, {name = "base:tree"})
-
-			pos.z = pos.z - 1
-			pos.x = pos.x - 2
-			minetest.add_node(pos, {name = "base:tree"})
-
-			pos.z = pos.z + 2
-			pos.x = pos.x - 8
-			minetest.add_node(pos, {name = "base:tree"})
-
-			pos.z = pos.z - 1
-			pos.x = pos.x - 1
-			minetest.add_node(pos, {name = "base:tree"})
-
-			pos.x = pos.x - 1
-			minetest.add_node(pos, {name = "base:tree"})
-
-			pos.z = pos.z - 1
-			pos.x = pos.x + 2
-			minetest.add_node(pos, {name = "base:tree"})
-
-
-			pos.y = pos.y + 1
-			pos.z = pos.z - 1
-
-			for a = 1, 7 do
-				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "base:wood"})
-			end
-
-			pos.z = pos.z + 4
-			pos.x = pos.x - 7
-
-			for a = 1, 7 do
-				pos.x = pos.x + 1
-				minetest.add_node(pos, {name = "base:wood"})
-			end
-
-			pos.z = pos.z - 1
-			pos.x = pos.x + 1
-			minetest.add_node(pos, {name = "base:wood"})
-
-			pos.z = pos.z - 1
-			pos.x = pos.x + 1
-			minetest.add_node(pos, {name = "base:wood"})
-
-			pos.z = pos.z - 1
-			pos.x = pos.x - 1
-			minetest.add_node(pos, {name = "base:wood"})
-
-			pos.z = pos.z + 2
-			pos.x = pos.x - 8
-			minetest.add_node(pos, {name = "base:wood"})
-
-			pos.z = pos.z - 1
-			pos.x = pos.x - 1
-			minetest.add_node(pos, {name = "base:wood"})
-
-			for a = 1, 3 do
-				pos.x = pos.x - 1
-				minetest.add_node(pos, {name = "base:wood"})
-			end
-
-			pos.z = pos.z - 1
-			pos.x = pos.x + 4
-			minetest.add_node(pos, {name = "base:wood"})
-
-			pos.z = pos.z + 1
-			pos.x = pos.x + 3
-			minetest.add_node(pos, {name = "base:wood"})
-
-			pos.y = pos.y + 1
-			minetest.add_node(pos, {name = "base:wood"})
-
-			pos.y = pos.y - 2
-			minetest.add_node(pos, {name = "base:wood"})
-
-			pos.y = pos.y + 3
-			pos.z = pos.z - 4
-
-			for a = 1, 7 do
-				pos.z = pos.z + 1
-				minetest.add_node(pos, {name = "base:wood"})
-			end
-
-			pos.z = pos.z - 3
-
-			for a = 1, 2 do
-				pos.y = pos.y + 1
-				minetest.add_node(pos, {name = "base:wood"})
-			end
-
-			pos.y = pos.y + 1
-			pos.z = pos.z - 3
-
-			for a = 1, 5 do
-				pos.z = pos.z + 1
-				minetest.add_node(pos, {name = "base:wood"})
-			end
-
-			pos.y = pos.y + 1
-			pos.z = pos.z - 2
-			minetest.add_node(pos, {name = "base:wood"})
-
-			pos.y = pos.y - 7
-			pos.z = pos.z + 1
-			pos.x = pos.x - 2
-			minetest.add_node(pos, {name = "australia:woodshipchest"})
-
-		else
-			return
+	action = function(pos, node)
+		local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
+		if node.name == "sea:woodship"
+		and (
+			minetest.get_node(yp).name == "base:water_source"
+			or minetest.get_node(yp).name == "australia:water_source"
+		) then
+			sea.place_woodship(pos)
 		end
 	end
 })
+
+

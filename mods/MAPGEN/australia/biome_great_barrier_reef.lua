@@ -28,7 +28,7 @@ minetest.register_biome({
 
 minetest.register_ore({
 	ore_type =        "scatter",
-	ore =             "australia:woodship",
+	ore =             "sea:woodship",
 	wherein =         "base:sand",
 	clust_scarcity =  30 * 30 * 30,
 	clust_num_ores =  1,
@@ -57,3 +57,21 @@ minetest.register_ore({
 --[[
 	ABM's
 --]]
+
+minetest.register_abm({
+	nodenames =  {"sea:woodship"},
+	interval =   1,
+	chance =     1,
+	action = function(pos, node)
+		local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
+		if node.name == "sea:woodship"
+		and (
+			minetest.get_node(yp).name == "base:water_source"
+			or minetest.get_node(yp).name == "australia:water_source"
+		) then
+			sea.place_woodship(pos)
+		end
+	end
+})
+
+
