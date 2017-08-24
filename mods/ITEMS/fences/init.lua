@@ -255,7 +255,7 @@ fences.fuel = {
 	{"fence_tasmanian_myrtle", 7},
 }
 
-for _,item in pairs(fenes.fuel) do
+for _,item in pairs(fences.fuel) do
 	add_fence_fuel(unpack(item))
 end
 
