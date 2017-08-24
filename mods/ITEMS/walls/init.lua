@@ -39,6 +39,7 @@ walls.register = function(wall_name, wall_desc, wall_texture, wall_mat, wall_sou
 
 end
 
+
 walls.register("walls:cobble", "Cobblestone Wall", "base_cobble.png",
 		"base:cobble", base.node_sound_stone_defaults())
 
@@ -48,14 +49,14 @@ walls.register("walls:mossycobble", "Mossy Cobblestone Wall", "base_mossycobble.
 walls.register("walls:desertcobble", "Desert Cobblestone Wall", "base_desert_cobble.png",
 		"base:desert_cobble", base.node_sound_stone_defaults())
 
-walls.register("walls:bluestone", "Bluestone Cobble Wall", "aus_bluestone_cobble.png",
-		"australia:bluestone_cobble", base.node_sound_stone_defaults())
+walls.register("walls:bluestone", "Bluestone Cobble Wall", "base_bluestone_cobble.png",
+		"base:bluestone_cobble", base.node_sound_stone_defaults())
 
-walls.register("walls:bluestone_cobble", "Bluestone Wall", "aus_bluestone.png",
-		"australia:bluestone", base.node_sound_stone_defaults())
+walls.register("walls:bluestone_cobble", "Bluestone Wall", "base_bluestone.png",
+		"base:bluestone", base.node_sound_stone_defaults())
 
-walls.register("walls:bluestone_brick", "Bluestone Brick Wall", "aus_bluestone_brick.png",
-		"australia:bluestone_brick", base.node_sound_stone_defaults())
+walls.register("walls:bluestone_brick", "Bluestone Brick Wall", "base_bluestone_brick.png",
+		"base:bluestone_brick", base.node_sound_stone_defaults())
 
 walls.register("walls:brick", "Brick Wall", "base_brick.png",
 		"base:brick", base.node_sound_stone_defaults())
@@ -66,14 +67,14 @@ walls.register("walls:desert_stone", "Desert Stone Wall", "base_desert_stone.png
 walls.register("walls:desert_stonebrick", "Desert Stone Brick Wall", "base_desert_stone_brick.png",
 		"base:desert_stonebrick", base.node_sound_stone_defaults())
 
-walls.register("walls:red_stone", "Red Cobblestone Wall", "aus_red_cobble.png",
-		"australia:red_cobble", base.node_sound_stone_defaults())
+walls.register("walls:red_stone", "Red Cobblestone Wall", "base_red_cobble.png",
+		"base:red_cobble", base.node_sound_stone_defaults())
 
-walls.register("walls:red_cobble", "Red Stone Wall", "aus_red_stone.png",
-		"australia:red_stone", base.node_sound_stone_defaults())
+walls.register("walls:red_cobble", "Red Stone Wall", "base_red_stone.png",
+		"base:red_stone", base.node_sound_stone_defaults())
 
-walls.register("walls:red_stonebrick", "Red Stone Brick Wall", "aus_red_stonebrick.png",
-		"australia:red_stonebrick", base.node_sound_stone_defaults())
+walls.register("walls:red_stonebrick", "Red Stone Brick Wall", "base_red_stonebrick.png",
+		"base:red_stonebrick", base.node_sound_stone_defaults())
 
 walls.register("walls:sandstone", "Sandstone Wall", "base_sandstone.png",
 		"base:sandstone", base.node_sound_stone_defaults())
@@ -81,8 +82,8 @@ walls.register("walls:sandstone", "Sandstone Wall", "base_sandstone.png",
 walls.register("walls:sandstone_brick", "Sandstone Brick Wall", "base_sandstone_brick.png",
 		"base:sandstonebrick", base.node_sound_stone_defaults())
 
-walls.register("walls:sandstone_cobble", "Sandstone Cobble Wall", "aus_sandstone_cobble.png",
-		"australia:sandstone_cobble", base.node_sound_stone_defaults())
+walls.register("walls:sandstone_cobble", "Sandstone Cobble Wall", "base_sandstone_cobble.png",
+		"base:sandstone_cobble", base.node_sound_stone_defaults())
 
 walls.register("walls:stone", "Stone Wall", "base_stone.png",
 		"base:stone", base.node_sound_stone_defaults())
