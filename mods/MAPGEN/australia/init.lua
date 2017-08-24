@@ -136,13 +136,6 @@ aus.biome_simpson_desert         = true
 aus.biome_australian_alps        = true
 
 
-aus.registered_on_first_mapgen = {}
-
-function aus.register_on_first_mapgen(func) -- Callback
-	table.insert(aus.registered_on_first_mapgen, func)
-end
-
-
 -- Load files
 dofile(aus.path .. "/functions.lua")
 dofile(aus.path .. "/trees.lua")

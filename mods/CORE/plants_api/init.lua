@@ -3,6 +3,8 @@
 --]]
 
 
+plants_api = {}
+
 plants_api.registered_plants = {}
 
 -- Localize math routines for performance
@@ -14,32 +16,6 @@ function plants_api.register_plant(params)
 	params.priority = math_floor(params.priority) + 1 / n
 	plants_api.registered_plants[n] = params
 end
-
-local function get_content_id(value) -- get content ID recursively from a table.
-	local typeval = type(value)
-
-	if typeval == "string" then
-		return minetest.get_content_id(value)
-	elseif typeval == "table" then
-		for k, v in pairs(value) do
-			value[k] = get_content_id(v)
-		end
-	end
-
-	return value
-end
-
-plants_api.register_on_first_mapgen(function()
-	table.sort(plants_api.registered_plants,
-		function(a, b)
-			return a.priority > b.priority
-		end
-	)
-
-	for _, plant in ipairs(plants_api.registered_plants) do  -- convert 'nodes' into content IDs
-		plant.nodes = get_content_id(plant.nodes)
-	end
-end)
 
 function plants_api.choose_generate_plant(conditions, pos, data, area, ivm)
 	local rand = math_random()  -- Random number to choose the plant
