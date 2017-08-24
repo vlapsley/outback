@@ -123,7 +123,7 @@ register_rivergrass(4)
 aus.register_plant({
 	nodes = {
 		stem =    "base:bush_stem",
-		leaves =  "australia:waratah_leaves",
+		leaves =  "base:waratah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -182,8 +182,8 @@ register_small_stone_rocks(1)
 -- Black Wattle
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:black_wattle_tree",
-		leaves =  "australia:black_wattle_leaves",
+		trunk =   "base:black_wattle_tree",
+		leaves =  "base:black_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -203,8 +203,8 @@ aus.register_plant({
 -- Black Wattle
 aus.register_plant({
 	nodes = {
-		trunk = "australia:black_wattle_tree",
-		leaves = "australia:black_wattle_leaves",
+		trunk = "base:black_wattle_tree",
+		leaves = "base:black_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -224,9 +224,9 @@ aus.register_plant({
 -- Australian Cherry
 aus.register_plant({
 	nodes = {
-		trunk = "australia:cherry_tree",
-		leaves = "australia:cherry_leaves",
-		fruit = "australia:cherry",
+		trunk = "base:cherry_tree",
+		leaves = "base:cherry_leaves",
+		fruit = "base:cherry",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -248,8 +248,8 @@ aus.register_plant({
 -- Coast Banksia (big)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:coast_banksia_tree",
-		leaves =  "australia:coast_banksia_leaves",
+		trunk =   "base:coast_banksia_tree",
+		leaves =  "base:coast_banksia_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -269,8 +269,8 @@ aus.register_plant({
 -- Coast Banksia (small)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:coast_banksia_tree",
-		leaves =  "australia:coast_banksia_leaves",
+		trunk =   "base:coast_banksia_tree",
+		leaves =  "base:coast_banksia_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -290,8 +290,8 @@ aus.register_plant({
 -- Coast Banksia (small and along rivers)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:coast_banksia_tree",
-		leaves =  "australia:coast_banksia_leaves",
+		trunk =   "base:coast_banksia_tree",
+		leaves =  "base:coast_banksia_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -311,8 +311,8 @@ aus.register_plant({
 -- Coolabah
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:coolabah_tree",
-		leaves =  "australia:coolabah_leaves",
+		trunk =   "base:coolabah_tree",
+		leaves =  "base:coolabah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -333,8 +333,8 @@ aus.register_plant({
 -- Illawarra Flame Tree
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:illawarra_flame_tree",
-		leaves =  "australia:illawarra_flame_leaves",
+		trunk =   "base:illawarra_flame_tree",
+		leaves =  "base:illawarra_flame_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -355,8 +355,8 @@ aus.register_plant({
 -- Lemon Eucalyptus
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:lemon_eucalyptus_tree",
-		leaves =  "australia:lemon_eucalyptus_leaves",
+		trunk =   "base:lemon_eucalyptus_tree",
+		leaves =  "base:lemon_eucalyptus_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -377,8 +377,8 @@ aus.register_plant({
 -- Lemon Eucalyptus (forest)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:lemon_eucalyptus_tree",
-		leaves =  "australia:lemon_eucalyptus_leaves",
+		trunk =   "base:lemon_eucalyptus_tree",
+		leaves =  "base:lemon_eucalyptus_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -399,8 +399,8 @@ aus.register_plant({
 -- Lemon Myrtle
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:lemon_myrtle_tree",
-		leaves =  "australia:lemon_myrtle_leaves",
+		trunk =   "base:lemon_myrtle_tree",
+		leaves =  "base:lemon_myrtle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -420,9 +420,9 @@ aus.register_plant({
 -- Lilly Pilly
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:lilly_pilly_tree",
-		leaves =  "australia:lilly_pilly_leaves",
-		fruit =   "australia:lilly_pilly_berries",
+		trunk =   "base:lilly_pilly_tree",
+		leaves =  "base:lilly_pilly_leaves",
+		fruit =   "base:lilly_pilly_berries",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -444,9 +444,9 @@ aus.register_plant({
 -- Macadamia Tree
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:macadamia_tree",
-		leaves =  "australia:macadamia_leaves",
-		fruit =   "australia:macadamia",
+		trunk =   "base:macadamia_tree",
+		leaves =  "base:macadamia_leaves",
+		fruit =   "base:macadamia",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -468,9 +468,9 @@ aus.register_plant({
 -- Moreton Bay Fig
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:moreton_bay_fig_tree",
-		leaves =  "australia:moreton_bay_fig_leaves",
-		fruit =   "australia:moreton_bay_fig",
+		trunk =   "base:moreton_bay_fig_tree",
+		leaves =  "base:moreton_bay_fig_leaves",
+		fruit =   "base:moreton_bay_fig",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -492,8 +492,8 @@ aus.register_plant({
 -- Paperbark Tree
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:paperbark_tree",
-		leaves =  "australia:paperbark_leaves",
+		trunk =   "base:paperbark_tree",
+		leaves =  "base:paperbark_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -514,8 +514,8 @@ aus.register_plant({
 -- Paperbark Tree
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:paperbark_tree",
-		leaves =  "australia:paperbark_leaves",
+		trunk =   "base:paperbark_tree",
+		leaves =  "base:paperbark_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -536,8 +536,8 @@ aus.register_plant({
 -- River Oak
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:river_oak_tree",
-		leaves =  "australia:river_oak_leaves",
+		trunk =   "base:river_oak_tree",
+		leaves =  "base:river_oak_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -557,8 +557,8 @@ aus.register_plant({
 -- River Red Gum
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:river_red_gum_tree",
-		leaves =  "australia:river_red_gum_leaves",
+		trunk =   "base:river_red_gum_tree",
+		leaves =  "base:river_red_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -579,8 +579,8 @@ aus.register_plant({
 -- Scribbly Gum
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:scribbly_gum_tree",
-		leaves =  "australia:scribbly_gum_leaves",
+		trunk =   "base:scribbly_gum_tree",
+		leaves =  "base:scribbly_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -601,8 +601,8 @@ aus.register_plant({
 -- Scribbly Gum
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:scribbly_gum_tree",
-		leaves =  "australia:scribbly_gum_leaves",
+		trunk =   "base:scribbly_gum_tree",
+		leaves =  "base:scribbly_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -623,8 +623,8 @@ aus.register_plant({
 -- Snow Gum
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:snow_gum_tree",
-		leaves =  "australia:snow_gum_leaves",
+		trunk =   "base:snow_gum_tree",
+		leaves =  "base:snow_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -644,8 +644,8 @@ aus.register_plant({
 -- Tea Tree
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:tea_tree_tree",
-		leaves =  "australia:tea_tree_leaves",
+		trunk =   "base:tea_tree_tree",
+		leaves =  "base:tea_tree_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -665,8 +665,8 @@ aus.register_plant({
 -- Tea Tree
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:tea_tree_tree",
-		leaves =  "australia:tea_tree_leaves",
+		trunk =   "base:tea_tree_tree",
+		leaves =  "base:tea_tree_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},

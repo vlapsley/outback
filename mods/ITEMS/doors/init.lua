@@ -807,47 +807,140 @@ doors.register_fencegate("doors:gate_aspen_wood", {
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 })
 
+doors.register_fencegate("doors:gate_eucalyptus", {
+	description = "Eucalyptus Fence Gate",
+	texture = "base_eucalyptus_wood.png",
+	material = "base:eucalyptus_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+})
+
+doors.register_fencegate("doors:gate_blackwood", {
+	description = "Blackwood Fence Gate",
+	texture = "base_blackwood.png",
+	material = "base:blackwood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+})
+
+doors.register_fencegate("doors:gate_blue_gum", {
+	description = "Blue Gum Fence Gate",
+	texture = "base_blue_gum.png",
+	material = "base:blue_gum",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+})
+
+doors.register_fencegate("doors:gate_celery_top_pine", {
+	description = "Celery-top Pine Fence Gate",
+	texture = "base_celery_top_pine.png",
+	material = "base:celery_top_pine",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
+})
+
+doors.register_fencegate("doors:gate_red_mahogany", {
+	description = "Red Mahogany Fence Gate",
+	texture = "base_red_mahogany.png",
+	material = "base:red_mahogany",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+})
+
+doors.register_fencegate("doors:gate_huon_pine", {
+	description = "Huon Pine Fence Gate",
+	texture = "base_huon_pine.png",
+	material = "base:huon_pine",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
+})
+
+doors.register_fencegate("doors:gate_jarrah", {
+	description = "Jarrah Fence Gate",
+	texture = "base_jarrah.png",
+	material = "base:jarrah",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+})
+
+doors.register_fencegate("doors:gate_karri", {
+	description = "Karri Fence Gate",
+	texture = "base_karri.png",
+	material = "base:karri",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+})
+
+doors.register_fencegate("doors:gate_marri", {
+	description = "Marri Fence Gate",
+	texture = "base_marri.png",
+	material = "base:marri",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+})
+
+doors.register_fencegate("doors:gate_merbau", {
+	description = "Merbau Fence Gate",
+	texture = "base_merbau.png",
+	material = "base:merbau",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+})
+
+doors.register_fencegate("doors:gate_red_gum", {
+	description = "Red Gum Fence Gate",
+	texture = "base_red_gum.png",
+	material = "base:red_gum",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+})
+
+doors.register_fencegate("doors:gate_southern_sassafras", {
+	description = "Southern Sassafras Fence Gate",
+	texture = "base_southern_sassafras.png",
+	material = "base:southern_sassafras",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+})
+
+doors.register_fencegate("doors:gate_tasmanian_oak", {
+	description = "Tasmanian Oak Fence Gate",
+	texture = "base_tasmanian_oak.png",
+	material = "base:tasmanian_oak",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
+})
+
+doors.register_fencegate("doors:gate_tasmanian_myrtle", {
+	description = "Tasmanian Myrtle Fence Gate",
+	texture = "base_tasmanian_myrtle.png",
+	material = "base:tasmanian_myrtle",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+})
+
 
 ----fuels----
 
-minetest.register_craft({
-	type = "fuel",
-	recipe = "doors:trapdoor",
-	burntime = 7,
-})
+local function add_doors_fuel(name, burntime)
+	minetest.register_craft({
+		type = "fuel",
+		recipe = "doors:" .. name,
+		burntime = burntime,
+	})
+end
 
-minetest.register_craft({
-	type = "fuel",
-	recipe = "doors:door_wood",
-	burntime = 14,
-})
+doors.fuel = {
+	{"trapdoor", 7},
+	{"door_wood", 14},
+	{"gate_wood_closed", 7},
+	{"gate_acacia_wood_closed", 8},
+	{"gate_junglewood_closed", 9},
+	{"gate_pine_wood_closed", 6},
+	{"gate_aspen_wood_closed", 5},
+	{"gate_eucalyptus_closed", 8},
+	{"gate_blackwood_closed", 7},
+	{"gate_blue_gum_closed", 7},
+	{"gate_celery_top_pine_closed", 6},
+	{"gate_red_mahogany_closed", 8},
+	{"gate_huon_pine_closed", 7},
+	{"gate_jarrah_closed", 9},
+	{"gate_karri_closed", 8},
+	{"gate_marri_closed", 8},
+	{"gate_merbau_closed", 8},
+	{"gate_red_gum_closed", 8},
+	{"gate_southern_sassafras_closed", 7},
+	{"gate_tasmanian_oak_closed", 6},
+	{"gate_tasmanian_myrtle_closed", 8},
+}
 
-minetest.register_craft({
-	type = "fuel",
-	recipe = "doors:gate_wood_closed",
-	burntime = 7,
-})
+for _,item in pairs(doors.fuel) do
+	add_doors_fuel(unpack(item))
+end
 
-minetest.register_craft({
-	type = "fuel",
-	recipe = "doors:gate_acacia_wood_closed",
-	burntime = 8,
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "doors:gate_junglewood_closed",
-	burntime = 9,
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "doors:gate_pine_wood_closed",
-	burntime = 6,
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "doors:gate_aspen_wood_closed",
-	burntime = 5,
-})

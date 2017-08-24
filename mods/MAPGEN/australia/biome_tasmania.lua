@@ -117,8 +117,8 @@ register_small_stone_rocks(1)
 -- Black Wattle
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:black_wattle_tree",
-		leaves =  "australia:black_wattle_leaves",
+		trunk =   "base:black_wattle_tree",
+		leaves =  "base:black_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -138,8 +138,8 @@ aus.register_plant({
 -- Black Wattle
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:black_wattle_tree",
-		leaves =  "australia:black_wattle_leaves",
+		trunk =   "base:black_wattle_tree",
+		leaves =  "base:black_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -159,8 +159,8 @@ aus.register_plant({
 -- Blue Gum (in valleys)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:blue_gum_tree",
-		leaves =  "australia:blue_gum_leaves",
+		trunk =   "base:blue_gum_tree",
+		leaves =  "base:blue_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -181,8 +181,8 @@ aus.register_plant({
 -- Blue Gum
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:blue_gum_tree",
-		leaves =  "australia:blue_gum_leaves",
+		trunk =   "base:blue_gum_tree",
+		leaves =  "base:blue_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -203,8 +203,8 @@ aus.register_plant({
 -- Celery-top Pine (forest)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:celery_top_pine_tree",
-		leaves =  "australia:celery_top_pine_leaves",
+		trunk =   "base:celery_top_pine_tree",
+		leaves =  "base:celery_top_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -224,8 +224,8 @@ aus.register_plant({
 -- Celery-top Pine
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:celery_top_pine_tree",
-		leaves =  "australia:celery_top_pine_leaves",
+		trunk =   "base:celery_top_pine_tree",
+		leaves =  "base:celery_top_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -245,8 +245,8 @@ aus.register_plant({
 -- Celery-top Pine
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:celery_top_pine_tree",
-		leaves =  "australia:celery_top_pine_leaves",
+		trunk =   "base:celery_top_pine_tree",
+		leaves =  "base:celery_top_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -266,8 +266,8 @@ aus.register_plant({
 -- Huon Pine (along rivers)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:huon_pine_tree",
-		leaves =  "australia:huon_pine_leaves",
+		trunk =   "base:huon_pine_tree",
+		leaves =  "base:huon_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -288,8 +288,8 @@ aus.register_plant({
 -- Huon Pine
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:huon_pine_tree",
-		leaves =  "australia:huon_pine_leaves",
+		trunk =   "base:huon_pine_tree",
+		leaves =  "base:huon_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -310,8 +310,8 @@ aus.register_plant({
 -- Southern Sassafras (along rivers)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:southern_sassafras_tree",
-		leaves =  "australia:southern_sassafras_leaves",
+		trunk =   "base:southern_sassafras_tree",
+		leaves =  "base:southern_sassafras_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -331,8 +331,8 @@ aus.register_plant({
 -- Southern Sassafras (in valleys)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:southern_sassafras_tree",
-		leaves =  "australia:southern_sassafras_leaves",
+		trunk =   "base:southern_sassafras_tree",
+		leaves =  "base:southern_sassafras_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -352,8 +352,8 @@ aus.register_plant({
 -- Swamp Gum (forest)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:swamp_gum_tree",
-		leaves =  "australia:swamp_gum_leaves",
+		trunk =   "base:swamp_gum_tree",
+		leaves =  "base:swamp_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -374,8 +374,8 @@ aus.register_plant({
 -- Tasmanian Myrtle (forest)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:tasmanian_myrtle_tree",
-		leaves =  "australia:tasmanian_myrtle_leaves",
+		trunk =   "base:tasmanian_myrtle_tree",
+		leaves =  "base:tasmanian_myrtle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -396,8 +396,8 @@ aus.register_plant({
 -- Tasmanian Myrtle (low alt - bigger tree)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:tasmanian_myrtle_tree",
-		leaves =  "australia:tasmanian_myrtle_leaves",
+		trunk =   "base:tasmanian_myrtle_tree",
+		leaves =  "base:tasmanian_myrtle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -418,8 +418,8 @@ aus.register_plant({
 -- Tasmanian Myrtle (high alt - smaller tree)
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:tasmanian_myrtle_tree",
-		leaves =  "australia:tasmanian_myrtle_leaves",
+		trunk =   "base:tasmanian_myrtle_tree",
+		leaves =  "base:tasmanian_myrtle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},

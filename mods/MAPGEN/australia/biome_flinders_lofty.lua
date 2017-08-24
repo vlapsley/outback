@@ -233,8 +233,8 @@ register_small_stone_rocks(1)
 -- Black Wattle
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:black_wattle_tree",
-		leaves =  "australia:black_wattle_leaves",
+		trunk =   "base:black_wattle_tree",
+		leaves =  "base:black_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -254,8 +254,8 @@ aus.register_plant({
 -- Black Wattle
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:black_wattle_tree",
-		leaves =  "australia:black_wattle_leaves",
+		trunk =   "base:black_wattle_tree",
+		leaves =  "base:black_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -275,9 +275,9 @@ aus.register_plant({
 -- Australian Cherry
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:cherry_tree",
-		leaves =  "australia:cherry_leaves",
-		fruit =   "australia:cherry",
+		trunk =   "base:cherry_tree",
+		leaves =  "base:cherry_leaves",
+		fruit =   "base:cherry",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -299,8 +299,8 @@ aus.register_plant({
 -- Coolabah
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:coolabah_tree",
-		leaves =  "australia:coolabah_leaves",
+		trunk =   "base:coolabah_tree",
+		leaves =  "base:coolabah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -321,8 +321,8 @@ aus.register_plant({
 -- Golden Wattle
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:golden_wattle_tree",
-		leaves =  "australia:golden_wattle_leaves",
+		trunk =   "base:golden_wattle_tree",
+		leaves =  "base:golden_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -342,8 +342,8 @@ aus.register_plant({
 -- Golden Wattle
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:golden_wattle_tree",
-		leaves =  "australia:golden_wattle_leaves",
+		trunk =   "base:golden_wattle_tree",
+		leaves =  "base:golden_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -363,8 +363,8 @@ aus.register_plant({
 -- River Red Gum
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:river_red_gum_tree",
-		leaves =  "australia:river_red_gum_leaves",
+		trunk =   "base:river_red_gum_tree",
+		leaves =  "base:river_red_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -385,8 +385,8 @@ aus.register_plant({
 -- Sugar Gum
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:sugar_gum_tree",
-		leaves =  "australia:sugar_gum_leaves",
+		trunk =   "base:sugar_gum_tree",
+		leaves =  "base:sugar_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},

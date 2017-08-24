@@ -611,3 +611,158 @@ stairs.register_stair_and_slab(
 		dig = {name = "base_snow_footstep", gain = 0.2}
 	})
 )
+
+-- Eucalyptus Wood
+stairs.register_stair_and_slab(
+	"eucalyptus_wood",
+	"base:eucalyptus_wood",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	{"base_eucalyptus_wood.png"},
+	"Eucalyptus Wood Stair",
+	"Eucalyptus Wood Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Blackwood
+stairs.register_stair_and_slab(
+	"blackwood",
+	"base:blackwood",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	{"base_blackwood.png"},
+	"Blackwood Stair",
+	"Blackwood Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Blue Gum
+stairs.register_stair_and_slab(
+	"blue_gum",
+	"base:blue_gum",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	{"base_blue_gum.png"},
+	"Blue Gum Stair",
+	"Blue Gum Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Celery-top Pine
+stairs.register_stair_and_slab(
+	"celery_top_pine",
+	"base:celery_top_pine",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
+	{"base_celery_top_pine.png"},
+	"Celery-top Pine Stair",
+	"Celery-top Pine Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Red Mahogany
+stairs.register_stair_and_slab(
+	"red_mahogany",
+	"base:red_mahogany",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	{"base_red_mahogany.png"},
+	"Red Mahogany Stair",
+	"Red Mahogany Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Huon Pine
+stairs.register_stair_and_slab(
+	"huon_pine",
+	"base:huon_pine",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
+	{"base_huon_pine.png"},
+	"Huon Pine Stair",
+	"Huon Pine Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Jarrah
+stairs.register_stair_and_slab(
+	"jarrah",
+	"base:jarrah",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	{"base_jarrah.png"},
+	"Jarrah Stair",
+	"Jarrah Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Karri
+stairs.register_stair_and_slab(
+	"karri",
+	"base:karri",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	{"base_karri.png"},
+	"Karri Stair",
+	"Karri Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Marri
+stairs.register_stair_and_slab(
+	"marri",
+	"base:marri",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	{"base_marri.png"},
+	"Marri Stair",
+	"Marri Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Merbau
+stairs.register_stair_and_slab(
+	"merbau",
+	"base:merbau",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	{"base_merbau.png"},
+	"Merbau Stair",
+	"Merbau Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Red Gum
+stairs.register_stair_and_slab(
+	"red_gum",
+	"base:red_gum",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	{"base_red_gum.png"},
+	"Red Gum Stair",
+	"Red Gum Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Southern Sassafras
+stairs.register_stair_and_slab(
+	"southern_sassafras",
+	"base:southern_sassafras",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	{"base_southern_sassafras.png"},
+	"Southern Sassafras Stair",
+	"Southern Sassafras Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Tasmanian Oak
+stairs.register_stair_and_slab(
+	"tasmanian_oak",
+	"base:tasmanian_oak",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
+	{"base_tasmanian_oak.png"},
+	"Tasmanian Oak Stair",
+	"Tasmanian Oak Slab",
+	base.node_sound_wood_defaults()
+)
+
+-- Tasmanian Myrtle
+stairs.register_stair_and_slab(
+	"tasmanian_myrtle",
+	"base:tasmanian_myrtle",
+	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	{"base_tasmanian_myrtle.png"},
+	"Tasmanian Myrtle Stair",
+	"Tasmanian Myrtle Slab",
+	base.node_sound_wood_defaults()
+)
+

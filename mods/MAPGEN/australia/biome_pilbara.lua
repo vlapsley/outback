@@ -151,8 +151,8 @@ register_small_red_rocks(1)
 -- Desert Oak
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:desert_oak_tree",
-		leaves =  "australia:desert_oak_leaves",
+		trunk =   "base:desert_oak_tree",
+		leaves =  "base:desert_oak_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -172,8 +172,8 @@ aus.register_plant({
 -- Wirewood
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:wirewood_tree",
-		leaves =  "australia:wirewood_leaves",
+		trunk =   "base:wirewood_tree",
+		leaves =  "base:wirewood_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -193,8 +193,8 @@ aus.register_plant({
 -- Wirewood
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:wirewood_tree",
-		leaves =  "australia:wirewood_leaves",
+		trunk =   "base:wirewood_tree",
+		leaves =  "base:wirewood_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},

@@ -99,8 +99,8 @@ minetest.register_decoration({
 -- Grey Mangrove
 aus.schematics.grey_mangrove = {}
 local max_ht =  6
-local tree =    "australia:grey_mangrove_tree"
-local leaves =  "australia:grey_mangrove_leaves"
+local tree =    "base:grey_mangrove_tree"
+local leaves =  "base:grey_mangrove_leaves"
 for h = 4, max_ht do
 	local schem = aus.generate_mangrove_tree_schematic(3, tree, leaves)
 	base.push(aus.schematics.grey_mangrove, schem)
@@ -126,9 +126,9 @@ end
 -- Mangrove Apple
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:mangrove_apple_tree",
-		leaves =  "australia:mangrove_apple_leaves",
-		fruit =   "australia:mangrove_apple",
+		trunk =   "base:mangrove_apple_tree",
+		leaves =  "base:mangrove_apple_leaves",
+		fruit =   "base:mangrove_apple",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -150,8 +150,8 @@ aus.register_plant({
 -- Stilted Mangrove
 aus.schematics.stilted_mangrove = {}
 local max_ht =  6
-local tree =    "australia:stilted_mangrove_tree"
-local leaves =  "australia:stilted_mangrove_leaves"
+local tree =    "base:stilted_mangrove_tree"
+local leaves =  "base:stilted_mangrove_leaves"
 for h = 4, max_ht do
 	local schem = aus.generate_mangrove_tree_schematic(3, tree, leaves)
 	base.push(aus.schematics.stilted_mangrove, schem)

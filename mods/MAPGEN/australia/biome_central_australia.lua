@@ -204,8 +204,8 @@ register_small_red_rocks(1)
 -- Coolabah Tree
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:coolabah_tree",
-		leaves =  "australia:coolabah_leaves",
+		trunk =   "base:coolabah_tree",
+		leaves =  "base:coolabah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -226,8 +226,8 @@ aus.register_plant({
 -- Desert Oak
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:desert_oak_tree",
-		leaves =  "australia:desert_oak_leaves",
+		trunk =   "base:desert_oak_tree",
+		leaves =  "base:desert_oak_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -247,9 +247,9 @@ aus.register_plant({
 -- Quandong
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:quandong_tree",
-		leaves =  "australia:quandong_leaves",
-		fruit =   "australia:quandong",
+		trunk =   "base:quandong_tree",
+		leaves =  "base:quandong_leaves",
+		fruit =   "base:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -271,9 +271,9 @@ aus.register_plant({
 -- Quandong
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:quandong_tree",
-		leaves =  "australia:quandong_leaves",
-		fruit =   "australia:quandong",
+		trunk =   "base:quandong_tree",
+		leaves =  "base:quandong_leaves",
+		fruit =   "base:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -295,8 +295,8 @@ aus.register_plant({
 -- River Red Gum
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:river_red_gum_tree",
-		leaves =  "australia:river_red_gum_leaves",
+		trunk =   "base:river_red_gum_tree",
+		leaves =  "base:river_red_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -317,8 +317,8 @@ aus.register_plant({
 -- Wirewood
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:wirewood_tree",
-		leaves =  "australia:wirewood_leaves",
+		trunk =   "base:wirewood_tree",
+		leaves =  "base:wirewood_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -338,8 +338,8 @@ aus.register_plant({
 -- Wirewood
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:wirewood_tree",
-		leaves =  "australia:wirewood_leaves",
+		trunk =   "base:wirewood_tree",
+		leaves =  "base:wirewood_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},

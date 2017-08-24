@@ -132,9 +132,9 @@ register_small_sandstone_rocks(1)
 -- Quandong
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:quandong_tree",
-		leaves =  "australia:quandong_leaves",
-		fruit =   "australia:quandong",
+		trunk =   "base:quandong_tree",
+		leaves =  "base:quandong_leaves",
+		fruit =   "base:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},

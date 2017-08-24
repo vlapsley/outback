@@ -62,8 +62,8 @@ register_small_red_rocks(1)
 -- Coolabah Tree
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:coolabah_tree",
-		leaves =  "australia:coolabah_leaves",
+		trunk =   "base:coolabah_tree",
+		leaves =  "base:coolabah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -84,9 +84,9 @@ aus.register_plant({
 -- Quandong
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:quandong_tree",
-		leaves =  "australia:quandong_leaves",
-		fruit =   "australia:quandong",
+		trunk =   "base:quandong_tree",
+		leaves =  "base:quandong_leaves",
+		fruit =   "base:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -108,9 +108,9 @@ aus.register_plant({
 -- Quandong
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:quandong_tree",
-		leaves =  "australia:quandong_leaves",
-		fruit =   "australia:quandong",
+		trunk =   "base:quandong_tree",
+		leaves =  "base:quandong_leaves",
+		fruit =   "base:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},

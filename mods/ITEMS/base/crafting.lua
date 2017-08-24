@@ -38,6 +38,245 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "base:pine_wood 4",
+	recipe = {
+		{"base:arnhem_cypress_pine_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:eucalyptus_wood 4",
+	recipe = {
+		{"base:black_box_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:blackwood 4",
+	recipe = {
+		{"base:black_wattle_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:blue_gum 4",
+	recipe = {
+		{"base:blue_gum_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:wood 4",
+	recipe = {
+		{"base:boab_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:celery_top_pine 4",
+	recipe = {
+		{"base:celery_top_pine_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:acacia_wood 4",
+	recipe = {
+		{"base:coast_banksia_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:eucalyptus_wood 4",
+	recipe = {
+		{"base:coolabah_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:red_mahogany 4",
+	recipe = {
+		{"base:daintree_stringybark_tree"}
+	}
+})
+
+-- Darwin Woollybutt
+minetest.register_craft({
+	output = "base:eucalyptus_wood 4",
+	recipe = {
+		{"base:darwin_woollybutt_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:acacia_wood 4",
+	recipe = {
+		{"base:desert_oak_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:huon_pine 4",
+	recipe = {
+		{"base:huon_pine_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:wood 4",
+	recipe = {
+		{"base:illawarra_flame_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:jarrah 4",
+	recipe = {
+		{"base:jarrah_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:karri 4",
+	recipe = {
+		{"base:karri_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:eucalyptus_wood 4",
+	recipe = {
+		{"base:lemon_eucalyptus_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:wood 4",
+	recipe = {
+		{"base:macadamia_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:marri 4",
+	recipe = {
+		{"base:marri_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:merbau 4",
+	recipe = {
+		{"base:merbau_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:wood 4",
+	recipe = {
+		{"base:moreton_bay_fig_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:acacia_wood 4",
+	recipe = {
+		{"base:mulga_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:acacia_wood 4",
+	recipe = {
+		{"base:paperbark_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:acacia_wood 4",
+	recipe = {
+		{"base:river_oak_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:red_gum 4",
+	recipe = {
+		{"base:river_red_gum_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:pine_wood 4",
+	recipe = {
+		{"base:rottnest_island_pine_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:eucalyptus_wood 4",
+	recipe = {
+		{"base:scribbly_gum_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:acacia_wood 4",
+	recipe = {
+		{"base:shoestring_acacia_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:eucalyptus_wood 4",
+	recipe = {
+		{"base:snow_gum_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:southern_sassafras 4",
+	recipe = {
+		{"base:southern_sassafras_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:eucalyptus_wood 4",
+	recipe = {
+		{"base:sugar_gum_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:eucalyptus_wood 4",
+	recipe = {
+		{"base:swamp_bloodwood_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:tasmanian_oak 4",
+	recipe = {
+		{"base:swamp_gum_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:tasmanian_myrtle 4",
+	recipe = {
+		{"base:tasmanian_myrtle_tree"}
+	}
+})
+
+minetest.register_craft({
+	output = "base:eucalyptus_wood 4",
+	recipe = {
+		{"base:white_box_tree"}
+	}
+})
+
+minetest.register_craft({
 	output = 'base:wood',
 	recipe = {
 		{'base:bush_stem'},

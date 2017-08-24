@@ -193,8 +193,8 @@ register_small_stone_rocks(1)
 -- Black Box
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:black_box_tree",
-		leaves =  "australia:black_box_leaves",
+		trunk =   "base:black_box_tree",
+		leaves =  "base:black_box_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -215,8 +215,8 @@ aus.register_plant({
 -- Black Box
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:black_box_tree",
-		leaves =  "australia:black_box_leaves",
+		trunk =   "base:black_box_tree",
+		leaves =  "base:black_box_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -237,8 +237,8 @@ aus.register_plant({
 -- Coolabah Tree
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:coolabah_tree",
-		leaves =  "australia:coolabah_leaves",
+		trunk =   "base:coolabah_tree",
+		leaves =  "base:coolabah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -259,8 +259,8 @@ aus.register_plant({
 -- Golden Wattle
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:golden_wattle_tree",
-		leaves =  "australia:golden_wattle_leaves",
+		trunk =   "base:golden_wattle_tree",
+		leaves =  "base:golden_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -280,8 +280,8 @@ aus.register_plant({
 -- Golden Wattle
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:golden_wattle_tree",
-		leaves =  "australia:golden_wattle_leaves",
+		trunk =   "base:golden_wattle_tree",
+		leaves =  "base:golden_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -301,9 +301,9 @@ aus.register_plant({
 -- Quandong
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:quandong_tree",
-		leaves =  "australia:quandong_leaves",
-		fruit =   "australia:quandong",
+		trunk =   "base:quandong_tree",
+		leaves =  "base:quandong_leaves",
+		fruit =   "base:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -325,9 +325,9 @@ aus.register_plant({
 -- Quandong
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:quandong_tree",
-		leaves =  "australia:quandong_leaves",
-		fruit =   "australia:quandong",
+		trunk =   "base:quandong_tree",
+		leaves =  "base:quandong_leaves",
+		fruit =   "base:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -349,8 +349,8 @@ aus.register_plant({
 -- River Red Gum
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:river_red_gum_tree",
-		leaves =  "australia:river_red_gum_leaves",
+		trunk =   "base:river_red_gum_tree",
+		leaves =  "base:river_red_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -371,8 +371,8 @@ aus.register_plant({
 -- Shoestring Acacia
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:shoestring_acacia_tree",
-		leaves =  "australia:shoestring_acacia_leaves",
+		trunk =   "base:shoestring_acacia_tree",
+		leaves =  "base:shoestring_acacia_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -392,8 +392,8 @@ aus.register_plant({
 -- Shoestring Acacia
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:shoestring_acacia_tree",
-		leaves =  "australia:shoestring_acacia_leaves",
+		trunk =   "base:shoestring_acacia_tree",
+		leaves =  "base:shoestring_acacia_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -413,8 +413,8 @@ aus.register_plant({
 -- White Box
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:white_box_tree",
-		leaves =  "australia:white_box_leaves",
+		trunk =   "base:white_box_tree",
+		leaves =  "base:white_box_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},

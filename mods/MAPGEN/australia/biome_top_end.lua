@@ -249,8 +249,8 @@ register_small_sandstone_rocks(1)
 -- Arnhem Cypress Pine
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:arnhem_cypress_pine_tree",
-		leaves =  "australia:arnhem_cypress_pine_leaves",
+		trunk =   "base:arnhem_cypress_pine_tree",
+		leaves =  "base:arnhem_cypress_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -270,8 +270,8 @@ aus.register_plant({
 -- Arnhem Cypress Pine
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:arnhem_cypress_pine_tree",
-		leaves =  "australia:arnhem_cypress_pine_leaves",
+		trunk =   "base:arnhem_cypress_pine_tree",
+		leaves =  "base:arnhem_cypress_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -291,8 +291,8 @@ aus.register_plant({
 -- Boab Tree
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:boab_tree",
-		leaves =  "australia:boab_leaves",
+		trunk =   "base:boab_tree",
+		leaves =  "base:boab_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -313,8 +313,8 @@ aus.register_plant({
 -- Darwin Woollybutt
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:darwin_woollybutt_tree",
-		leaves =  "australia:darwin_woollybutt_leaves",
+		trunk =   "base:darwin_woollybutt_tree",
+		leaves =  "base:darwin_woollybutt_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -335,8 +335,8 @@ aus.register_plant({
 -- Darwin Woollybutt
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:darwin_woollybutt_tree",
-		leaves =  "australia:darwin_woollybutt_leaves",
+		trunk =   "base:darwin_woollybutt_tree",
+		leaves =  "base:darwin_woollybutt_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -357,8 +357,8 @@ aus.register_plant({
 -- River Oak
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:river_oak_tree",
-		leaves =  "australia:river_oak_leaves",
+		trunk =   "base:river_oak_tree",
+		leaves =  "base:river_oak_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -378,8 +378,8 @@ aus.register_plant({
 -- Swamp Bloodwood
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:swamp_bloodwood_tree",
-		leaves =  "australia:swamp_bloodwood_leaves",
+		trunk =   "base:swamp_bloodwood_tree",
+		leaves =  "base:swamp_bloodwood_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},

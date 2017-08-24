@@ -135,7 +135,7 @@ aus.register_plant({
 aus.register_plant({
 	nodes = {
 		stem =    "base:acacia_bush_stem",
-		leaves =  "australia:flame_grevillea_leaves",
+		leaves =  "base:flame_grevillea_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -203,8 +203,8 @@ register_small_stone_rocks(1)
 -- Bull Banksia
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:bull_banksia_tree",
-		leaves =  "australia:bull_banksia_leaves",
+		trunk =   "base:bull_banksia_tree",
+		leaves =  "base:bull_banksia_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -224,8 +224,8 @@ aus.register_plant({
 -- Coolabah
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:coolabah_tree",
-		leaves =  "australia:coolabah_leaves",
+		trunk =   "base:coolabah_tree",
+		leaves =  "base:coolabah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -246,8 +246,8 @@ aus.register_plant({
 -- Jarrah
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:jarrah_tree",
-		leaves =  "australia:jarrah_leaves",
+		trunk =   "base:jarrah_tree",
+		leaves =  "base:jarrah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -268,8 +268,8 @@ aus.register_plant({
 -- Karri
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:karri_tree",
-		leaves =  "australia:karri_leaves",
+		trunk =   "base:karri_tree",
+		leaves =  "base:karri_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -290,8 +290,8 @@ aus.register_plant({
 -- Marri
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:marri_tree",
-		leaves =  "australia:marri_leaves",
+		trunk =   "base:marri_tree",
+		leaves =  "base:marri_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -312,8 +312,8 @@ aus.register_plant({
 -- Rottnest Island Pine
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:rottnest_island_pine_tree",
-		leaves =  "australia:rottnest_island_pine_leaves",
+		trunk =   "base:rottnest_island_pine_tree",
+		leaves =  "base:rottnest_island_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -333,8 +333,8 @@ aus.register_plant({
 -- Swamp Paperbark
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:swamp_paperbark_tree",
-		leaves =  "australia:swamp_paperbark_leaves",
+		trunk =   "base:swamp_paperbark_tree",
+		leaves =  "base:swamp_paperbark_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -354,8 +354,8 @@ aus.register_plant({
 -- Swamp Paperbark
 aus.register_plant({
 	nodes = {
-		trunk =   "australia:swamp_paperbark_tree",
-		leaves =  "australia:swamp_paperbark_leaves",
+		trunk =   "base:swamp_paperbark_tree",
+		leaves =  "base:swamp_paperbark_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
