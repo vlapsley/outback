@@ -28,18 +28,6 @@ minetest.register_biome({
 
 minetest.register_ore({
 	ore_type =        "scatter",
-	ore =             "australia:stone_kelp_brown",
-	wherein =         "base:sandstone",
-	clust_scarcity =  9 * 9 * 9,
-	clust_num_ores =  25,
-	clust_size =      6,
-	biomes =          {"great_australian_bight"},
-	y_min =           -10,
-	y_max =           -3,
-})
-
-minetest.register_ore({
-	ore_type =        "scatter",
 	ore =             "australia:submarine",
 	wherein =         "base:sand",
 	clust_scarcity =  80 * 80 * 80,
@@ -66,21 +54,6 @@ minetest.register_ore({
 --[[
 	ABM's
 --]]
-
-minetest.register_abm({
-	nodenames =  {"australia:stone_kelp_brown"},
-	interval =   15,
-	chance =     5,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		local yp = {x = pos.x, y = pos.y + 1, z = pos.z}
-		if (minetest.get_node(yp).name == "base:water_source" or
-		minetest.get_node(yp).name == "australia:water_source") then
-			pos.y = pos.y + 1
-			minetest.add_node(pos, {name = "australia:kelp_brown"}) else
-			return
-		end
-	end
-})
 
 minetest.register_abm({
 	nodenames =  {"australia:woodship"},
