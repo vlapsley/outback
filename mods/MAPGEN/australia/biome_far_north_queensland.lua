@@ -103,7 +103,7 @@ register_rivergrass(4)
 
 -- Cooktown Orchid
 aus.register_plant({
-	nodes =     {"australia:cooktown_orchid"},
+	nodes =     {"flowers:cooktown_orchid"},
 	cover =     0.0015,
 	density =   0.01,
 	priority =  35,

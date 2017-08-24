@@ -94,7 +94,7 @@ minetest.register_decoration({
 
 -- Sturt's Desert Pea
 aus.register_plant({
-	nodes =     {"australia:sturts_desert_pea"},
+	nodes =     {"flowers:sturts_desert_pea"},
 	cover =     0.001,
 	density =   0.2,
 	priority =  30,

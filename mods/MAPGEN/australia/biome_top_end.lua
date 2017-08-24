@@ -199,7 +199,7 @@ aus.register_plant({
 
 -- Pink Mulla Mulla
 aus.register_plant({
-	nodes =     {"australia:pink_mulla_mulla"},
+	nodes =     {"flowers:pink_mulla_mulla"},
 	cover =     0.0015,
 	density =   0.01,
 	priority =  30,

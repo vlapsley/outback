@@ -13,6 +13,7 @@ flowers = {}
 local function add_simple_flower(name, desc, box, f_groups)
 	-- Common flowers' groups
 	f_groups.snappy = 3
+	f_groups.flammable = 1
 	f_groups.flower = 1
 	f_groups.flora = 1
 	f_groups.attached_node = 1
@@ -42,38 +43,92 @@ flowers.datas = {
 	{
 		"rose",
 		"Rose",
-		{-2 / 16, -0.5, -2 / 16, 2 / 16, 5 / 16, 2 / 16},
-		{color_red = 1, flammable = 1}
+		{-2/16, -8/16, -2/16, 2/16, 5/16, 2/16},
+		{color_red = 1}
 	},
 	{
 		"tulip",
 		"Orange Tulip",
-		{-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
-		{color_orange = 1, flammable = 1}
+		{-2/16, -8/16, -2/16, 2/16, 3/16, 2/16},
+		{color_orange = 1}
 	},
 	{
 		"dandelion_yellow",
 		"Yellow Dandelion",
-		{-2 / 16, -0.5, -2 / 16, 2 / 16, 4 / 16, 2 / 16},
-		{color_yellow = 1, flammable = 1}
+		{-2/16, -8/16, -2/16, 2/16, 4/16, 2/16},
+		{color_yellow = 1}
 	},
 	{
 		"geranium",
 		"Blue Geranium",
-		{-2 / 16, -0.5, -2 / 16, 2 / 16, 2 / 16, 2 / 16},
-		{color_blue = 1, flammable = 1}
+		{-2/16, -8/16, -2/16, 2/16, 2/16, 2/16},
+		{color_blue = 1}
 	},
 	{
 		"viola",
 		"Viola",
-		{-5 / 16, -0.5, -5 / 16, 5 / 16, -1 / 16, 5 / 16},
-		{color_violet = 1, flammable = 1}
+		{-5/16, -8/16, -5/16, 5/16, -1/16, 5/16},
+		{color_violet = 1}
 	},
 	{
 		"dandelion_white",
-		"White dandelion",
-		{-5 / 16, -0.5, -5 / 16, 5 / 16, -2 / 16, 5 / 16},
-		{color_white = 1, flammable = 1}
+		"White Dandelion",
+		{-5/16, -8/16, -5/16, 5/16, -2/16, 5/16},
+		{color_white = 1}
+	},
+	{
+		"bottlebrush_orchid",
+		"Bottlebrush Orchid",
+		{-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
+		{color_green = 1}
+	},
+	{
+		"cooktown_orchid",
+		"Cooktown Orchid",
+		{-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
+		{color_pink = 1}
+	},
+	{
+		"couch_honeypot",
+		"Couch Honeypot",
+		{-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
+		{color_orange = 1}
+	},
+	{
+		"darling_lily",
+		"Darling Lily",
+		{-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
+		{color_white = 1}
+	},
+	{
+		"kangaroo_paw",
+		"Kangaroo Paw",
+		{-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
+		{color_red = 1}
+	},
+	{
+		"mangrove_lily",
+		"Mangrove Lily",
+		{-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
+		{color_white = 1}
+	},
+	{
+		"pink_mulla_mulla",
+		"Pink Mulla Mulla",
+		{-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
+		{color_pink = 1}
+	},
+	{
+		"silver_daisy",
+		"Silver Daisy",
+		{-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
+		{color_grey = 1}
+	},
+	{
+		"sturts_desert_pea",
+		"Sturt's Desert Pea",
+		{-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
+		{color_red = 1}
 	},
 }
 

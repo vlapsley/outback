@@ -1,27 +1,6 @@
 -- mods/australia_modpack/australia/nodes_plants.lua
 
 
--- Bottlebrush Orchid
-minetest.register_node("australia:bottlebrush_orchid", {
-	description = "Bottlebrush Orchid",
-	drawtype = "plantlike",
-	waving = 1,
-	visual_scale = 1.0,
-	tiles = {"aus_bottlebrush_orchid.png"},
-	inventory_image = "aus_bottlebrush_orchid.png",
-	wield_image = "aus_bottlebrush_orchid.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	buildable_to = false,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = base.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
-	},
-})
-
 -- Bush Tomato plant
 minetest.register_node("australia:tomato_bush", {
 	description = "Bush Tomato plant",
@@ -55,69 +34,6 @@ minetest.register_craftitem("australia:bush_tomato", {
 	inventory_image = "aus_bush_tomato.png",
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 1},
 	on_use = minetest.item_eat(1),
-})
-
--- Cooktown Orchid
-minetest.register_node("australia:cooktown_orchid", {
-	description = "Cooktown Orchid",
-	drawtype = "plantlike",
-	waving = 0,
-	visual_scale = 1.0,
-	tiles = {"aus_cooktown_orchid.png"},
-	inventory_image = "aus_cooktown_orchid.png",
-	wield_image = "aus_cooktown_orchid.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	buildable_to = false,
-	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
-	sounds = base.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
-	},
-})
-
--- Couch Honeypot
-minetest.register_node("australia:couch_honeypot", {
-	description = "Couch Honeypot",
-	drawtype = "plantlike",
-	waving = 0,
-	visual_scale = 1.0,
-	tiles = {"aus_couch_honeypot.png"},
-	inventory_image = "aus_couch_honeypot.png",
-	wield_image = "aus_couch_honeypot.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	buildable_to = false,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = base.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
-	},
-})
-
--- Darling Lily
-minetest.register_node("australia:darling_lily", {
-	description = "Darling Lily",
-	drawtype = "plantlike",
-	waving = 1,
-	visual_scale = 1.0,
-	tiles = {"aus_darling_lily.png"},
-	inventory_image = "aus_darling_lily.png",
-	wield_image = "aus_darling_lily.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	buildable_to = false,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = base.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
-	},
 })
 
 -- Flame Grevillea
@@ -172,27 +88,6 @@ minetest.register_node("australia:flame_grevillea_sapling", {
 	end,
 })
 
--- Kangaroo Paw
-minetest.register_node("australia:kangaroo_paw", {
-	description = "Kangaroo Paw",
-	drawtype = "plantlike",
-	waving = 0,
-	visual_scale = 1.0,
-	tiles = {"aus_kangaroo_paw.png"},
-	inventory_image = "aus_kangaroo_paw.png",
-	wield_image = "aus_kangaroo_paw.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	buildable_to = false,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
-	sounds = base.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
-	},
-})
-
 -- Lavender Grevillea
 minetest.register_node("australia:lavender_grevillea", {
 	description = "Lavender Grevillea",
@@ -217,27 +112,6 @@ minetest.register_node("australia:mangrove_fern", {
 	tiles = {"aus_mangrove_fern.png"},
 	inventory_image = "aus_mangrove_fern.png",
 	wield_image = "aus_mangrove_fern.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	buildable_to = false,
-	groups = {snappy = 3, flammable = 1, flora = 1, attached_node = 1},
-	sounds = base.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
-	},
-})
-
--- Mangrove Lily
-minetest.register_node("australia:mangrove_lily", {
-	description = "Mangrove Lily",
-	drawtype = "plantlike",
-	waving = 1,
-	visual_scale = 1.0,
-	tiles = {"aus_mangrove_lily.png"},
-	inventory_image = "aus_mangrove_lily.png",
-	wield_image = "aus_mangrove_lily.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -352,27 +226,6 @@ minetest.register_node("australia:saltbush", {
 	},
 })
 
--- Pink Mulla Mulla
-minetest.register_node("australia:pink_mulla_mulla", {
-	description = "Pink Mulla Mulla",
-	drawtype = "plantlike",
-	waving = 1,
-	visual_scale = 1.0,
-	tiles = {"aus_pink_mulla_mulla.png"},
-	inventory_image = "aus_pink_mulla_mulla.png",
-	wield_image = "aus_pink_mulla_mulla.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	buildable_to = false,
-	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
-	sounds = base.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
-	},
-})
-
 -- Red Bottlebrush
 minetest.register_node("australia:red_bottlebrush_leaves", {
 	description = "Red Bottlebrush Leaves",
@@ -425,27 +278,6 @@ minetest.register_node("australia:red_bottlebrush_sapling", {
 	end,
 })
 
--- Silver Daisy
-minetest.register_node("australia:silver_daisy", {
-	description = "Silver Daisy",
-	drawtype = "plantlike",
-	waving = 1,
-	visual_scale = 1.0,
-	tiles = {"aus_silver_daisy.png"},
-	inventory_image = "aus_silver_daisy.png",
-	wield_image = "aus_silver_daisy.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	buildable_to = false,
-	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
-	sounds = base.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
-	},
-})
-
 -- Spinifex
 minetest.register_node("australia:spinifex", {
 	description = "Spinifex",
@@ -460,27 +292,6 @@ minetest.register_node("australia:spinifex", {
 	walkable = false,
 	buildable_to = false,
 	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
-	sounds = base.node_sound_leaves_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-8/16, -8/16, -8/16, 8/16, -5/16, 8/16},
-	},
-})
-
--- Sturt's Desert Pea
-minetest.register_node("australia:sturts_desert_pea", {
-	description = "Sturt's Desert Pea",
-	drawtype = "plantlike",
-	waving = 1,
-	visual_scale = 1.0,
-	tiles = {"aus_sturts_desert_pea.png"},
-	inventory_image = "aus_sturts_desert_pea.png",
-	wield_image = "aus_sturts_desert_pea.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	buildable_to = false,
-	groups = {snappy = 3, flammable = 2, flora = 1, attached_node = 1},
 	sounds = base.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",

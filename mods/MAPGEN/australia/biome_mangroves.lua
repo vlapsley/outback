@@ -63,7 +63,7 @@ minetest.register_decoration({
 	biomes =      {"mangroves"},
 	y_min =       2,
 	y_max =       3,
-	decoration =  "australia:mangrove_lily",
+	decoration =  "flowers:mangrove_lily",
 })
 
 -- Nipa Palm

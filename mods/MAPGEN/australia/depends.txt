@@ -1,6 +1,7 @@
 base
 biome_lib
 ferns
+flowers
 bucket
 doors
 fences

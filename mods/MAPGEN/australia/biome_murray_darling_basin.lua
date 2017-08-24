@@ -121,7 +121,7 @@ register_rivergrass(4)
 
 -- Darling Lily
 aus.register_plant({
-	nodes =     {"australia:darling_lily"},
+	nodes =     {"flowers:darling_lily"},
 	cover =     0.01,
 	density =   0.1,
 	priority =  30,
@@ -132,7 +132,7 @@ aus.register_plant({
 
 -- Darling Lily
 aus.register_plant({
-	nodes =     {"australia:darling_lily"},
+	nodes =     {"flowers:darling_lily"},
 	cover =     0.005,
 	density =   0.01,
 	priority =  30,
@@ -154,7 +154,7 @@ aus.register_plant({
 
 -- Silver Daisy
 aus.register_plant({
-	nodes =     {"australia:silver_daisy"},
+	nodes =     {"flowers:silver_daisy"},
 	cover =     0.005,
 	density =   0.001,
 	priority =  35,

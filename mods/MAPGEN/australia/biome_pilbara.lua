@@ -90,7 +90,7 @@ aus.register_plant({
 
 -- Pink Mulla Mulla
 aus.register_plant({
-	nodes =     {"australia:pink_mulla_mulla"},
+	nodes =     {"flowers:pink_mulla_mulla"},
 	cover =     0.0015,
 	density =   0.001,
 	priority =  30,
@@ -113,7 +113,7 @@ minetest.register_decoration({
 
 -- Sturt's Desert Pea
 aus.register_plant({
-	nodes =     {"australia:sturts_desert_pea"},
+	nodes =     {"flowers:sturts_desert_pea"},
 	cover =     0.001,
 	density =   0.2,
 	priority =  30,

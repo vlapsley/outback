@@ -122,7 +122,7 @@ register_rivergrass(4)
 
 -- Couch Honeypot
 aus.register_plant({
-	nodes =     {"australia:couch_honeypot"},
+	nodes =     {"flowers:couch_honeypot"},
 	cover =     0.0015,
 	density =   0.01,
 	priority =  35,
@@ -154,7 +154,7 @@ aus.register_plant({
 
 -- Kangaroo Paw
 aus.register_plant({
-	nodes =     {"australia:kangaroo_paw"},
+	nodes =     {"flowers:kangaroo_paw"},
 	cover =     0.0015,
 	density =   0.01,
 	priority =  30,
@@ -164,7 +164,7 @@ aus.register_plant({
 })
 
 aus.register_plant({
-	nodes = {"australia:kangaroo_paw"},
+	nodes = {"flowers:kangaroo_paw"},
 	cover =     0.0015,
 	density =   0.01,
 	priority =  30,
