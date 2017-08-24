@@ -224,33 +224,38 @@ fences.register_fence("fences:fence_tasmanian_myrtle", {
 })
 
 
-minetest.register_craft({
-	type = "fuel",
-	recipe = "fences:fence_aspen_wood",
-	burntime = 5,
-})
 
-minetest.register_craft({
-	type = "fuel",
-	recipe = "fences:fence_pine_wood",
-	burntime = 6,
-})
+local function add_fence_fuel(name, burntime)
+	minetest.register_craft({
+		type = "fuel",
+		recipe = "fences:" .. name,
+		burntime = burntime,
+	})
+end
 
-minetest.register_craft({
-	type = "fuel",
-	recipe = "fences:fence_wood",
-	burntime = 7,
-})
+fences.fuel = {
+	{"fence_aspen_wood", 5},
+	{"fence_pine_wood", 6},
+	{"fence_wood", 7},
+	{"fence_acacia_wood", 8},
+	{"fence_junglewood", 9},
+	{"fence_eucalyptus_wood", 7},
+	{"fence_blackwood", 5},
+	{"fence_blue_gum", 7},
+	{"fence_celery_top_pine", 6},
+	{"fence_red_mahogany", 7},
+	{"fence_huon_pine", 7},
+	{"fence_jarrah", 8},
+	{"fence_karri", 7},
+	{"fence_marri", 7},
+	{"fence_merbau", 8},
+	{"fence_red_gum", 7},
+	{"fence_southern_sassafras", 7},
+	{"fence_tasmanian_oak", 6},
+	{"fence_tasmanian_myrtle", 7},
+}
 
-minetest.register_craft({
-	type = "fuel",
-	recipe = "fences:fence_acacia_wood",
-	burntime = 8,
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "fences:fence_junglewood",
-	burntime = 9,
-})
+for _,item in pairs(fenes.fuel) do
+	add_fence_fuel(unpack(item))
+end
 
