@@ -19,7 +19,6 @@ end
 -- Definitions made by this mod that other mods can use too.
 aus = {}
 aus.path = minetest.get_modpath("australia")
-aus.schematics = {}
 
 
 --[[

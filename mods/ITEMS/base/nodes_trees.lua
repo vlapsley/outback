@@ -3,6 +3,8 @@
 --]]
 
 
+base.schematics = {}
+
 minetest.register_node("base:tree", {
 	description = "Tree",
 	tiles = {"base_tree_top.png", "base_tree_top.png", "base_tree.png"},
