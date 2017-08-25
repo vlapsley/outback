@@ -4826,6 +4826,55 @@ local function make_treetrunk3(x0, y0, z0, data, area, height, trunk, air, base)
 end
 
 
+-- Make leaves on a tree in a noise blob.
+function base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore, radius, np, limbs, fruit_chance, fruit)
+	limbs = limbs
+	fruit_chance = fruit_chance or 0
+	np.seed = math_random(0, 16777215) -- noise seed
+	local minp = vector.subtract(pos, radius) -- minimal corner of the leavesblob
+	local maxp = vector.add(pos, radius) -- maximal corner of the leavesblob
+	 -- Same positions, but with integer coordinates
+	local int_minp = {x = math_floor(minp.x), y = math_floor(minp.y), z = math_floor(minp.z)}
+	local int_maxp = {x = math_ceil(maxp.x), y = math_ceil(maxp.y), z = math_ceil(maxp.z)}
+
+	local length = vector.subtract(int_maxp, int_minp)
+	local chulens = vector.add(length, 1)
+	local obj = minetest.get_perlin_map(np, chulens)
+	local pmap = obj:get3dMap_flat(minp)
+	local i = 1
+	-- iterate for every position
+	-- calculate the distance from the center by the Pythagorean theorem: d = sqrt(x²+y²+z²)
+	for x = int_minp.x, int_maxp.x do
+		-- calculate x², y², z² separately, to avoid recalculating x² for every
+		-- y or z iteration. Divided by the radius to scale it to 0…1
+		local xval = ((x - pos.x) / radius.x) ^ 2
+		for y = int_minp.y, int_maxp.y do
+			local yval = ((y - pos.y) / radius.y) ^ 2
+			for z = int_minp.z, int_maxp.z do
+				local zval = ((z - pos.z) / radius.z) ^ 2
+				local dist = math_sqrt(xval + yval + zval) -- Calculate the distance
+				local nval = pmap[i] -- Get the noise value
+				if nval > dist then -- if the noise is bigger than the distance, make leaves
+					local iv = area:index(x, y, z)
+					if data[iv] == air or data[iv] == ignore then
+						 -- make some branches within the leaf structure
+						if nval > dist * 1.5 and limbs and math_random(5) == 1 then
+							data[iv] = trunk
+						-- if a fruit tree add fruit
+						elseif math_random() < fruit_chance then
+							data[iv] = fruit
+						else
+							data[iv] = leaves
+						end
+					end
+				end
+				i = i + 1 -- increment noise index
+			end
+		end
+	end
+end
+
+
 -- Generic bush function.
 function base.make_bush(pos, data, area, height, radius, stem, leaves, air,
 		ignore)
@@ -4902,7 +4951,7 @@ end
 
 function base.make_boab(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	local ystride = area.ystride -- Useful to get the index above
-	local base = 0.8
+	local width = 0.8
 	local ybot = pos.y - 1
 	for x = pos.x - 1, pos.x + 1 do
 		for y = 1, height do
@@ -4910,9 +4959,9 @@ function base.make_boab(pos, data, area, height, radius, trunk, leaves, air, ign
 				local iv = area:index(x, ybot, z)
 				for i = 0, height + 1 do
 					if data[iv] == air then -- find the ground level
-						if math_random() < base then
+						if math_random() < width then
 							data[iv-ystride] = trunk -- make tree trunk below
-							if math_random() < base then
+							if math_random() < width then
 								data[iv] = trunk -- make tree trunk at this air node
 							end
 						end
@@ -5210,54 +5259,6 @@ function base.make_tasmanian_myrtle(pos, data, area, height, radius, trunk,
 	pos.y = pos.y + height
 	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs)
-end
-
--- Make leaves on a tree in a noise blob.
-function base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore, radius, np, limbs, fruit_chance, fruit)
-	limbs = limbs
-	fruit_chance = fruit_chance or 0
-	np.seed = math_random(0, 16777215) -- noise seed
-	local minp = vector.subtract(pos, radius) -- minimal corner of the leavesblob
-	local maxp = vector.add(pos, radius) -- maximal corner of the leavesblob
-	 -- Same positions, but with integer coordinates
-	local int_minp = {x = math_floor(minp.x), y = math_floor(minp.y), z = math_floor(minp.z)}
-	local int_maxp = {x = math_ceil(maxp.x), y = math_ceil(maxp.y), z = math_ceil(maxp.z)}
-
-	local length = vector.subtract(int_maxp, int_minp)
-	local chulens = vector.add(length, 1)
-	local obj = minetest.get_perlin_map(np, chulens)
-	local pmap = obj:get3dMap_flat(minp)
-	local i = 1
-	-- iterate for every position
-	-- calculate the distance from the center by the Pythagorean theorem: d = sqrt(x²+y²+z²)
-	for x = int_minp.x, int_maxp.x do
-		-- calculate x², y², z² separately, to avoid recalculating x² for every
-		-- y or z iteration. Divided by the radius to scale it to 0…1
-		local xval = ((x - pos.x) / radius.x) ^ 2
-		for y = int_minp.y, int_maxp.y do
-			local yval = ((y - pos.y) / radius.y) ^ 2
-			for z = int_minp.z, int_maxp.z do
-				local zval = ((z - pos.z) / radius.z) ^ 2
-				local dist = math_sqrt(xval + yval + zval) -- Calculate the distance
-				local nval = pmap[i] -- Get the noise value
-				if nval > dist then -- if the noise is bigger than the distance, make leaves
-					local iv = area:index(x, y, z)
-					if data[iv] == air or data[iv] == ignore then
-						 -- make some branches within the leaf structure
-						if nval > dist * 1.5 and limbs and math_random(5) == 1 then
-							data[iv] = trunk
-						-- if a fruit tree add fruit
-						elseif math_random() < fruit_chance then
-							data[iv] = fruit
-						else
-							data[iv] = leaves
-						end
-					end
-				end
-				i = i + 1 -- increment noise index
-			end
-		end
-	end
 end
 
 
