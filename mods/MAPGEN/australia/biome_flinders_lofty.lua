@@ -49,6 +49,20 @@ minetest.register_ore({
 })
 
 minetest.register_ore({
+	ore_type       = "sheet",
+	ore            = "base:marble",
+	wherein        = "base:stone",
+	clust_scarcity = 1,
+	clust_num_ores = 1,
+	clust_size     = 3,
+	biomes         = {"flinders_lofty"},
+	y_min          = -1000,
+	y_max          = -5,
+	noise_threshold = 0.4,
+	noise_params = {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
+})
+
+minetest.register_ore({
 	ore_type =                "sheet",
 	ore =                     "base:bluestone",
 	wherein =                 "base:stone",

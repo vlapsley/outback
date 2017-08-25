@@ -50,42 +50,6 @@ minetest.register_node("base:mossycobble", {
 	sounds = base.node_sound_stone_defaults(),
 })
 
-
-minetest.register_node("base:desert_stone", {
-	description = "Desert Stone",
-	tiles = {"base_desert_stone.png"},
-	groups = {cracky = 3, stone = 1},
-	drop = 'base:desert_cobble',
-	legacy_mineral = true,
-	sounds = base.node_sound_stone_defaults(),
-})
-
-minetest.register_node("base:desert_cobble", {
-	description = "Desert Cobblestone",
-	tiles = {"base_desert_cobble.png"},
-	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = base.node_sound_stone_defaults(),
-})
-
-minetest.register_node("base:desert_stonebrick", {
-	description = "Desert Stone Brick",
-	paramtype2 = "facedir",
-	place_param2 = 0,
-	tiles = {"base_desert_stone_brick.png"},
-	is_ground_content = false,
-	groups = {cracky = 2, stone = 1},
-	sounds = base.node_sound_stone_defaults(),
-})
-
-minetest.register_node("base:desert_stone_block", {
-	description = "Desert Stone Block",
-	tiles = {"base_desert_stone_block.png"},
-	is_ground_content = false,
-	groups = {cracky = 2, stone = 1},
-	sounds = base.node_sound_stone_defaults(),
-})
-
 minetest.register_node("base:sandstone", {
 	description = "Sandstone",
 	tiles = {"base_sandstone.png"},
@@ -136,31 +100,6 @@ minetest.register_node("base:desert_sandstone_block", {
 	sounds = base.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:silver_sandstone", {
-	description = "Silver Sandstone",
-	tiles = {"base_silver_sandstone.png"},
-	groups = {crumbly = 1, cracky = 3},
-	sounds = base.node_sound_stone_defaults(),
-})
-
-minetest.register_node("base:silver_sandstone_brick", {
-	description = "Silver Sandstone Brick",
-	paramtype2 = "facedir",
-	place_param2 = 0,
-	tiles = {"base_silver_sandstone_brick.png"},
-	is_ground_content = false,
-	groups = {cracky = 2},
-	sounds = base.node_sound_stone_defaults(),
-})
-
-minetest.register_node("base:silver_sandstone_block", {
-	description = "Silver Sandstone Block",
-	tiles = {"base_silver_sandstone_block.png"},
-	is_ground_content = false,
-	groups = {cracky = 2},
-	sounds = base.node_sound_stone_defaults(),
-})
-
 minetest.register_node("base:obsidian", {
 	description = "Obsidian",
 	tiles = {"base_obsidian.png"},
@@ -184,30 +123,6 @@ minetest.register_node("base:obsidian_block", {
 	is_ground_content = false,
 	sounds = base.node_sound_stone_defaults(),
 	groups = {cracky = 1, level = 2},
-})
-
-minetest.register_node("base:red_stone", {
-	description = "Red Stone",
-	tiles = {"base_red_stone.png"},
-	groups = {cracky = 3, stone = 1},
-	drop = "base:red_cobble",
-	sounds = base.node_sound_stone_defaults(),
-})
-
-minetest.register_node("base:red_cobble", {
-	description = "Red Cobblestone",
-	tiles = {"base_red_cobble.png"},
-	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = base.node_sound_stone_defaults(),
-})
-
-minetest.register_node("base:red_stonebrick", {
-	description = "Red Stone Brick",
-	tiles = {"base_red_stonebrick.png"},
-	is_ground_content = false,
-	groups = {cracky = 2, stone = 1},
-	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("base:sandstone_cobble", {
@@ -240,6 +155,41 @@ minetest.register_node("base:bluestone_brick", {
 	groups = {cracky = 1, stone = 1},
 	sounds = base.node_sound_stone_defaults(),
 })
+
+minetest.register_node("base:diorite", {
+	description = "Diorite",
+	tiles = {"base_diorite.png"},
+	groups = {cracky = 2, stone = 1},
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:granite", {
+	description = "Granite",
+	tiles = {"base_granite.png"},
+	groups = {cracky = 2, stone = 1},
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:limestone", {
+	description = "Limestone",
+	tiles = {"base_limestone.png"},
+	groups = {cracky = 3, stone = 1},
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:marble", {
+	description = "Marble",
+	tiles = {"base_marble.png"},
+	groups = {cracky = 3, stone = 1},
+	sounds = base.node_sound_stone_defaults(),
+}) 
+
+minetest.register_node("base:marble_brick", {
+	description = "Marble Brick",
+	tiles = {"base_marble_brick.png"},
+	groups = {cracky = 3, stone = 1},
+	sounds = base.node_sound_stone_defaults(),
+}) 
 
 
 --
@@ -334,13 +284,6 @@ minetest.register_node("base:sand", {
 minetest.register_node("base:desert_sand", {
 	description = "Desert Sand",
 	tiles = {"base_desert_sand.png"},
-	groups = {crumbly = 3, falling_node = 1, sand = 1},
-	sounds = base.node_sound_sand_defaults(),
-})
-
-minetest.register_node("base:silver_sand", {
-	description = "Silver Sand",
-	tiles = {"base_silver_sand.png"},
 	groups = {crumbly = 3, falling_node = 1, sand = 1},
 	sounds = base.node_sound_sand_defaults(),
 })

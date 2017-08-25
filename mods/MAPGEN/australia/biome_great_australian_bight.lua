@@ -6,12 +6,12 @@ local math_random = math.random
 -- great australian bight
 minetest.register_biome({
 	name =            "great_australian_bight",
-	node_top =        "base:sandstone",
+	node_top =        "base:limestone",
 	depth_top =       3,
 	node_filler =     "base:bluestone",
 	depth_filler =    4,
 	node_stone =      "base:stone",
-	node_riverbed =   "base:sandstone",
+	node_riverbed =   "base:limestone",
 	depth_riverbed =  1,
 	y_min =           -192,
 	y_max =           3,

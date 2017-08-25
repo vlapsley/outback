@@ -8,7 +8,7 @@ minetest.register_biome({
 	name =              "central_australia",
 	node_top =          "base:red_dirt",
 	depth_top =         1,
-	node_filler =       "base:red_stone",
+	node_filler =       "base:granite",
 	depth_filler =      2,
 	node_stone =        "base:stone",
 	node_river_water =  "base:muddy_water_source",

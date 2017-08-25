@@ -155,7 +155,7 @@ end
 
 -- Rocky beaches
 function rock_beach(x, y, z, a, data)
-	local c_granite = minetest.get_content_id("technic:granite")
+	local c_granite = minetest.get_content_id("base:granite")
 	local dx = math.random() * 15 + 1
 	local dy = math.random() * 15 + 1
 	local dz = math.random() * 15 + 1

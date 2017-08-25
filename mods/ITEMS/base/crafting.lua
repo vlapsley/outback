@@ -501,38 +501,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:silver_sandstone",
-	recipe = {
-		{"base:silver_sand", "base:silver_sand"},
-		{"base:silver_sand", "base:silver_sand"},
-	}
-})
-
-minetest.register_craft({
-	output = "base:silver_sand 4",
-	recipe = {
-		{"base:silver_sandstone"},
-	}
-})
-
-minetest.register_craft({
-	output = "base:silver_sandstone_brick 4",
-	recipe = {
-		{"base:silver_sandstone", "base:silver_sandstone"},
-		{"base:silver_sandstone", "base:silver_sandstone"},
-	}
-})
-
-minetest.register_craft({
-	output = "base:silver_sandstone_block 9",
-	recipe = {
-		{"base:silver_sandstone", "base:silver_sandstone", "base:silver_sandstone"},
-		{"base:silver_sandstone", "base:silver_sandstone", "base:silver_sandstone"},
-		{"base:silver_sandstone", "base:silver_sandstone", "base:silver_sandstone"},
-	}
-})
-
-minetest.register_craft({
 	output = 'base:clay',
 	recipe = {
 		{'base:clay_lump', 'base:clay_lump'},
@@ -753,29 +721,29 @@ minetest.register_craft({
 
 -- Small rocks can be used to create cobblestone.
 minetest.register_craft({
-	output = "base:red_cobble",
+	output = "base:granite",
 	recipe = {
-		{"", "", ""},
-		{"base:small_red_rocks", "base:small_red_rocks", ""},
-		{"base:small_red_rocks", "base:small_red_rocks", ""},
+		{"base:small_red_rocks", "base:small_red_rocks", "base:small_red_rocks"},
+		{"base:small_red_rocks", "base:small_red_rocks", "base:small_red_rocks"},
+		{"base:small_red_rocks", "base:small_red_rocks", "base:small_red_rocks"},
 	}
 })
 
 minetest.register_craft({
 	output = "base:sandstone_cobble",
 	recipe = {
-		{"", "", ""},
-		{"base:small_sandstone_rocks", "base:small_sandstone_rocks", ""},
-		{"base:small_sandstone_rocks", "base:small_sandstone_rocks", ""},
+		{"base:small_sandstone_rocks", "base:small_sandstone_rocks", "base:small_sandstone_rocks"},
+		{"base:small_sandstone_rocks", "base:small_sandstone_rocks", "base:small_sandstone_rocks"},
+		{"base:small_sandstone_rocks", "base:small_sandstone_rocks", "base:small_sandstone_rocks"},
 	}
 })
 
 minetest.register_craft({
 	output = "base:cobble",
 	recipe = {
-		{"", "", ""},
-		{"base:small_stone_rocks", "base:small_stone_rocks", ""},
-		{"base:small_stone_rocks", "base:small_stone_rocks", ""},
+		{"base:small_stone_rocks", "base:small_stone_rocks", "base:small_stone_rocks"},
+		{"base:small_stone_rocks", "base:small_stone_rocks", "base:small_stone_rocks"},
+		{"base:small_stone_rocks", "base:small_stone_rocks", "base:small_stone_rocks"},
 	}
 })
 

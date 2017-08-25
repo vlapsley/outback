@@ -133,6 +133,52 @@ minetest.register_ore({
 	},
 })
 
+-- Diorite
+minetest.register_ore({
+	ore_type       = "blob",
+	ore            = "base:diorite",
+	wherein        = {"base:stone"},
+	clust_scarcity = 15*15*15,
+	clust_num_ores = 33,
+	clust_size     = 5,
+	y_min          = -31000,
+	y_max          = 31000,
+})
+
+minetest.register_ore({
+	ore_type       = "blob",
+	ore            = "base:diorite",
+	wherein        = {"base:stone"},
+	clust_scarcity = 10*10*10,
+	clust_num_ores = 58,
+	clust_size     = 7,
+	y_min          = -31000,
+	y_max          = 31000,
+})
+
+-- Granite
+minetest.register_ore({
+	ore_type       = "blob",
+	ore            = "base:granite",
+	wherein        = {"base:stone"},
+	clust_scarcity = 15*15*15,
+	clust_num_ores = 33,
+	clust_size     = 5,
+	y_min          = -31000,
+	y_max          = 31000,
+})
+
+minetest.register_ore({
+	ore_type       = "blob",
+	ore            = "base:granite",
+	wherein        = {"base:stone"},
+	clust_scarcity = 10*10*10,
+	clust_num_ores = 58,
+	clust_size     = 7,
+	y_min          = -31000,
+	y_max          = 31000,
+})
+
 -- Coal
 minetest.register_ore({
 	ore_type        = "scatter",

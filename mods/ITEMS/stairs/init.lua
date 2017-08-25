@@ -369,42 +369,42 @@ stairs.register_stair_and_slab(
 )
 
 stairs.register_stair_and_slab(
-	"desert_stone",
-	"base:desert_stone",
-	{cracky = 3},
-	{"base_desert_stone.png"},
-	"Desert Stone Stair",
-	"Desert Stone Slab",
-	base.node_sound_stone_defaults()
-)
-
-stairs.register_stair_and_slab(
-	"desert_cobble",
-	"base:desert_cobble",
-	{cracky = 3},
-	{"base_desert_cobble.png"},
-	"Desert Cobblestone Stair",
-	"Desert Cobblestone Slab",
-	base.node_sound_stone_defaults()
-)
-
-stairs.register_stair_and_slab(
-	"desert_stonebrick",
-	"base:desert_stonebrick",
+	"diorite",
+	"base:diorite",
 	{cracky = 2},
-	{"base_desert_stone_brick.png"},
-	"Desert Stone Brick Stair",
-	"Desert Stone Brick Slab",
+	{"base_diorite.png"},
+	"Diorite Stair",
+	"Diorite Slab",
 	base.node_sound_stone_defaults()
 )
 
 stairs.register_stair_and_slab(
-	"desert_stone_block",
-	"base:desert_stone_block",
+	"granite",
+	"base:granite",
 	{cracky = 2},
-	{"base_desert_stone_block.png"},
-	"Desert Stone Block Stair",
-	"Desert Stone Block Slab",
+	{"base_granite.png"},
+	"Granite Stair",
+	"Granite Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
+	"marble",
+	"base:marble",
+	{cracky = 2},
+	{"base_marble.png"},
+	"Marble Stair",
+	"Marble Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
+	"marble_brick",
+	"base:marble_brick",
+	{cracky = 2},
+	{"base_marble_brick.png"},
+	"Marble Brick Stair",
+	"Marble Brick Slab",
 	base.node_sound_stone_defaults()
 )
 
@@ -465,36 +465,6 @@ stairs.register_stair_and_slab(
 	{"base_desert_sandstone_block.png"},
 	"Desert Sandstone Block Stair",
 	"Desert Sandstone Block Slab",
-	base.node_sound_stone_defaults()
-)
-
-stairs.register_stair_and_slab(
-	"silver_sandstone",
-	"base:silver_sandstone",
-	{crumbly = 1, cracky = 3},
-	{"base_silver_sandstone.png"},
-	"Silver Sandstone Stair",
-	"Silver Sandstone Slab",
-	base.node_sound_stone_defaults()
-)
-
-stairs.register_stair_and_slab(
-	"silver_sandstone_brick",
-	"base:silver_sandstone_brick",
-	{cracky = 2},
-	{"base_silver_sandstone_brick.png"},
-	"Silver Sandstone Brick Stair",
-	"Silver Sandstone Brick Slab",
-	base.node_sound_stone_defaults()
-)
-
-stairs.register_stair_and_slab(
-	"silver_sandstone_block",
-	"base:silver_sandstone_block",
-	{cracky = 2},
-	{"base_silver_sandstone_block.png"},
-	"Silver Sandstone Block Stair",
-	"Silver Sandstone Block Slab",
 	base.node_sound_stone_defaults()
 )
 

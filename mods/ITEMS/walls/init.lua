@@ -46,9 +46,6 @@ walls.register("walls:cobble", "Cobblestone Wall", "base_cobble.png",
 walls.register("walls:mossycobble", "Mossy Cobblestone Wall", "base_mossycobble.png",
 		"base:mossycobble", base.node_sound_stone_defaults())
 
-walls.register("walls:desertcobble", "Desert Cobblestone Wall", "base_desert_cobble.png",
-		"base:desert_cobble", base.node_sound_stone_defaults())
-
 walls.register("walls:bluestone", "Bluestone Cobble Wall", "base_bluestone_cobble.png",
 		"base:bluestone_cobble", base.node_sound_stone_defaults())
 
@@ -58,23 +55,26 @@ walls.register("walls:bluestone_cobble", "Bluestone Wall", "base_bluestone.png",
 walls.register("walls:bluestone_brick", "Bluestone Brick Wall", "base_bluestone_brick.png",
 		"base:bluestone_brick", base.node_sound_stone_defaults())
 
+walls.register("walls:diorite", "Diorite Wall", "base_diorite.png",
+		"base:diorite", base.node_sound_stone_defaults())
+
+walls.register("walls:granite", "Granite Wall", "base_granite.png",
+		"base:granite", base.node_sound_stone_defaults())
+
+walls.register("walls:marble", "Marble Wall", "base_marble.png",
+		"base:marble", base.node_sound_stone_defaults())
+
+walls.register("walls:marble_brick", "Marble Brick Wall", "base_marble_brick.png",
+		"base:marble_brick", base.node_sound_stone_defaults())
+
 walls.register("walls:brick", "Brick Wall", "base_brick.png",
 		"base:brick", base.node_sound_stone_defaults())
 
-walls.register("walls:desert_stone", "Desert Stone Wall", "base_desert_stone.png",
-		"base:desert_stone", base.node_sound_stone_defaults())
+walls.register("walls:desert_sandstone", "Desert Sandstone Wall", "base_desert_sandstone.png",
+		"base:desert_sandstone", base.node_sound_stone_defaults())
 
-walls.register("walls:desert_stonebrick", "Desert Stone Brick Wall", "base_desert_stone_brick.png",
-		"base:desert_stonebrick", base.node_sound_stone_defaults())
-
-walls.register("walls:red_stone", "Red Cobblestone Wall", "base_red_cobble.png",
-		"base:red_cobble", base.node_sound_stone_defaults())
-
-walls.register("walls:red_cobble", "Red Stone Wall", "base_red_stone.png",
-		"base:red_stone", base.node_sound_stone_defaults())
-
-walls.register("walls:red_stonebrick", "Red Stone Brick Wall", "base_red_stonebrick.png",
-		"base:red_stonebrick", base.node_sound_stone_defaults())
+walls.register("walls:desert_sandstone_brick", "Desert Sandstone Brick Wall", "base_desert_sandstone_brick.png",
+		"base:desert_sandstonebrick", base.node_sound_stone_defaults())
 
 walls.register("walls:sandstone", "Sandstone Wall", "base_sandstone.png",
 		"base:sandstone", base.node_sound_stone_defaults())
