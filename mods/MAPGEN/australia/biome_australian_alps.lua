@@ -111,6 +111,6 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(2, 4)
 		local radius =  2
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })

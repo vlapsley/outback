@@ -113,7 +113,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 4)
 		local radius =  3
-		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 

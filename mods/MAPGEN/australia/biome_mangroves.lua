@@ -97,13 +97,13 @@ minetest.register_decoration({
 --]]
 
 -- Grey Mangrove
-aus.schematics.grey_mangrove = {}
+base.schematics.grey_mangrove = {}
 local max_ht =  6
 local tree =    "base:grey_mangrove_tree"
 local leaves =  "base:grey_mangrove_leaves"
 for h = 4, max_ht do
-	local schem = aus.generate_mangrove_tree_schematic(3, tree, leaves)
-	base.push(aus.schematics.grey_mangrove, schem)
+	local schem = base.generate_mangrove_tree_schematic(3, tree, leaves)
+	base.push(base.schematics.grey_mangrove, schem)
 	minetest.register_decoration({
 		deco_type =   "schematic",
 		sidelen =     80,
@@ -143,18 +143,18 @@ plants_api.register_plant({
 		local radius =        math_random(3,4)
 		local limbs =         nil
 		local fruit_chance =  0.2
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
 	end,
 })
 
 -- Stilted Mangrove
-aus.schematics.stilted_mangrove = {}
+base.schematics.stilted_mangrove = {}
 local max_ht =  6
 local tree =    "base:stilted_mangrove_tree"
 local leaves =  "base:stilted_mangrove_leaves"
 for h = 4, max_ht do
-	local schem = aus.generate_mangrove_tree_schematic(3, tree, leaves)
-	base.push(aus.schematics.stilted_mangrove, schem)
+	local schem = base.generate_mangrove_tree_schematic(3, tree, leaves)
+	base.push(base.schematics.stilted_mangrove, schem)
 	minetest.register_decoration({
 		deco_type =   "schematic",
 		sidelen =     80,

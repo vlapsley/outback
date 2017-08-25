@@ -149,6 +149,6 @@ plants_api.register_plant({
 		local radius =        2
 		local limbs =         nil
 		local fruit_chance =  0.1
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
 	end,
 })

@@ -263,7 +263,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(10, 15)
 		local radius =  4
-		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -284,7 +284,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(10, 15)
 		local radius =  4
-		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -306,7 +306,7 @@ plants_api.register_plant({
 		local height =  math_random(5, 6)
 		local radius =  math_random(4, 5)
 		local limbs =   true
-		aus.make_boab(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_boab(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -328,7 +328,7 @@ plants_api.register_plant({
 		local height =  math_random(8, 13)
 		local radius =  math_random(4, 5)
 		local limbs =   true
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -350,7 +350,7 @@ plants_api.register_plant({
 		local height =  math_random(8, 13)
 		local radius =  math_random(4, 5)
 		local limbs =   true
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -371,7 +371,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(5, 6)
 		local radius =  math_random(2, 3)
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -393,6 +393,6 @@ plants_api.register_plant({
 		local height =  math_random(6, 8)
 		local radius =  math_random(3, 4)
 		local limbs =   true
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })

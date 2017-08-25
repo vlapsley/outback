@@ -4200,206 +4200,206 @@ function base.grow_sapling(pos)
 		minetest.log("action", "An acacia bush sapling grows into a bush at "..
 			minetest.pos_to_string(pos))
 		base.grow_acacia_bush(pos)
-	elseif node.name == "australia:arnhem_cypress_pine_sapling" then
+	elseif node.name == "base:arnhem_cypress_pine_sapling" then
 		minetest.log("action", "An Arnhem Cypress Pine sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_arnhem_cypress_pine(pos)
-	elseif node.name == "australia:black_box_sapling" then
+		base.grow_arnhem_cypress_pine(pos)
+	elseif node.name == "base:black_box_sapling" then
 		minetest.log("action", "A Black Box sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_black_box(pos)
-	elseif node.name == "australia:black_wattle_sapling" then
+		base.grow_black_box(pos)
+	elseif node.name == "base:black_wattle_sapling" then
 		minetest.log("action", "A Black Wattle sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_black_wattle(pos)
-	elseif node.name == "australia:blue_gum_sapling" then
+		base.grow_black_wattle(pos)
+	elseif node.name == "base:blue_gum_sapling" then
 		minetest.log("action", "A Blue Gum sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_blue_gum(pos)
-	elseif node.name == "australia:boab_sapling" then
+		base.grow_blue_gum(pos)
+	elseif node.name == "base:boab_sapling" then
 		minetest.log("action", "A Boab sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_boab(pos)
-	elseif node.name == "australia:bull_banksia_sapling" then
+		base.grow_boab(pos)
+	elseif node.name == "base:bull_banksia_sapling" then
 		minetest.log("action", "A Bull Banksia sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_bull_banksia(pos)
-	elseif node.name == "australia:celery_top_pine_sapling" then
+		base.grow_bull_banksia(pos)
+	elseif node.name == "base:celery_top_pine_sapling" then
 		minetest.log("action", "A Celery-top Pine sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_celery_top_pine(pos)
-	elseif node.name == "australia:cherry_sapling" then
+		base.grow_celery_top_pine(pos)
+	elseif node.name == "base:cherry_sapling" then
 		minetest.log("action", "A Cherry sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_cherry(pos)
-	elseif node.name == "australia:coast_banksia_sapling" then
+		base.grow_cherry(pos)
+	elseif node.name == "base:coast_banksia_sapling" then
 		minetest.log("action", "A Coast Banksia sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_coast_banksia(pos)
-	elseif node.name == "australia:coolabah_sapling" then
+		base.grow_coast_banksia(pos)
+	elseif node.name == "base:coolabah_sapling" then
 		minetest.log("action", "A Coolabah sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_coolabah(pos)
-	elseif node.name == "australia:daintree_stringybark_sapling" then
+		base.grow_coolabah(pos)
+	elseif node.name == "base:daintree_stringybark_sapling" then
 		minetest.log("action", "A Daintree Stringybark sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_daintree_stringybark(pos)
-	elseif node.name == "australia:darwin_woollybutt_sapling" then
+		base.grow_daintree_stringybark(pos)
+	elseif node.name == "base:darwin_woollybutt_sapling" then
 		minetest.log("action", "A Darwin Woollybutt sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_darwin_woollybutt(pos)
-	elseif node.name == "australia:desert_oak_sapling" then
+		base.grow_darwin_woollybutt(pos)
+	elseif node.name == "base:desert_oak_sapling" then
 		minetest.log("action", "A Desert Oak sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_desert_oak(pos)
-	elseif node.name == "australia:fan_palm_sapling" then
+		base.grow_desert_oak(pos)
+	elseif node.name == "base:fan_palm_sapling" then
 		minetest.log("action", "A Fan Palm sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_fan_palm(pos)
-	elseif node.name == "australia:flame_grevillea_sapling" then
+		base.grow_fan_palm(pos)
+	elseif node.name == "base:flame_grevillea_sapling" then
 		minetest.log("action", "A Flame Grevillea sapling grows into a bush at "..
 			minetest.pos_to_string(pos))
-		aus.grow_flame_grevillea(pos)
-	elseif node.name == "australia:golden_wattle_sapling" then
+		base.grow_flame_grevillea(pos)
+	elseif node.name == "base:golden_wattle_sapling" then
 		minetest.log("action", "A Golden Wattle sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_golden_wattle(pos)
-	elseif node.name == "australia:grey_mangrove_sapling" then
+		base.grow_golden_wattle(pos)
+	elseif node.name == "base:grey_mangrove_sapling" then
 		minetest.log("action", "A Grey Mangrove sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_grey_mangrove(pos)
-	elseif node.name == "australia:huon_pine_sapling" then
+		base.grow_grey_mangrove(pos)
+	elseif node.name == "base:huon_pine_sapling" then
 		minetest.log("action", "A Huon Pine sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_huon_pine(pos)
-	elseif node.name == "australia:illawarra_flame_sapling" then
+		base.grow_huon_pine(pos)
+	elseif node.name == "base:illawarra_flame_sapling" then
 		minetest.log("action", "A Illawarra Flame Tree sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_illawarra_flame(pos)
-	elseif node.name == "australia:jarrah_sapling" then
+		base.grow_illawarra_flame(pos)
+	elseif node.name == "base:jarrah_sapling" then
 		minetest.log("action", "A Jarrah sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_jarrah(pos)
-	elseif node.name == "australia:karri_sapling" then
+		base.grow_jarrah(pos)
+	elseif node.name == "base:karri_sapling" then
 		minetest.log("action", "A Karri sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_karri(pos)
-	elseif node.name == "australia:lemon_eucalyptus_sapling" then
+		base.grow_karri(pos)
+	elseif node.name == "base:lemon_eucalyptus_sapling" then
 		minetest.log("action", "A Lemon Eucalyptus sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_lemon_eucalyptus(pos)
-	elseif node.name == "australia:lemon_myrtle_sapling" then
+		base.grow_lemon_eucalyptus(pos)
+	elseif node.name == "base:lemon_myrtle_sapling" then
 		minetest.log("action", "A Lemon Myrtle sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_lemon_myrtle(pos)
-	elseif node.name == "australia:lilly_pilly_sapling" then
+		base.grow_lemon_myrtle(pos)
+	elseif node.name == "base:lilly_pilly_sapling" then
 		minetest.log("action", "A Lilly Pilly sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_lilly_pilly(pos)
-	elseif node.name == "australia:macadamia_sapling" then
+		base.grow_lilly_pilly(pos)
+	elseif node.name == "base:macadamia_sapling" then
 		minetest.log("action", "A Macadamia sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_macadamia(pos)
-	elseif node.name == "australia:mangrove_apple_sapling" then
+		base.grow_macadamia(pos)
+	elseif node.name == "base:mangrove_apple_sapling" then
 		minetest.log("action", "A Mangrove Apple sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_mangrove_apple(pos)
-	elseif node.name == "australia:marri_sapling" then
+		base.grow_mangrove_apple(pos)
+	elseif node.name == "base:marri_sapling" then
 		minetest.log("action", "A Marri sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_marri(pos)
-	elseif node.name == "australia:merbau_sapling" then
+		base.grow_marri(pos)
+	elseif node.name == "base:merbau_sapling" then
 		minetest.log("action", "A Merbau sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_merbau(pos)
-	elseif node.name == "australia:moreton_bay_fig_sapling" then
+		base.grow_merbau(pos)
+	elseif node.name == "base:moreton_bay_fig_sapling" then
 		minetest.log("action", "A Moreton Bay Fig sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_moreton_bay_fig(pos)
-	elseif node.name == "australia:mulga_sapling" then
+		base.grow_moreton_bay_fig(pos)
+	elseif node.name == "base:mulga_sapling" then
 		minetest.log("action", "A Mulga sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_mulga(pos)
-	elseif node.name == "australia:paperbark_sapling" then
+		base.grow_mulga(pos)
+	elseif node.name == "base:paperbark_sapling" then
 		minetest.log("action", "A Paperbark sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_paperbark(pos)
-	elseif node.name == "australia:quandong_sapling" then
+		base.grow_paperbark(pos)
+	elseif node.name == "base:quandong_sapling" then
 		minetest.log("action", "A Quandong sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_quandong(pos)
-	elseif node.name == "australia:red_bottlebrush_sapling" then
+		base.grow_quandong(pos)
+	elseif node.name == "base:red_bottlebrush_sapling" then
 		minetest.log("action", "A Red Bottlebrush sapling grows into a bush at "..
 			minetest.pos_to_string(pos))
-		aus.grow_red_bottlebrush(pos)
-	elseif node.name == "australia:river_oak_sapling" then
+		base.grow_red_bottlebrush(pos)
+	elseif node.name == "base:river_oak_sapling" then
 		minetest.log("action", "A River Oak sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_river_oak(pos)
-	elseif node.name == "australia:river_red_gum_sapling" then
+		base.grow_river_oak(pos)
+	elseif node.name == "base:river_red_gum_sapling" then
 		minetest.log("action", "A River Red Gum sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_river_red_gum(pos)
-	elseif node.name == "australia:rottnest_island_pine_sapling" then
+		base.grow_river_red_gum(pos)
+	elseif node.name == "base:rottnest_island_pine_sapling" then
 		minetest.log("action", "A Rottnest Island Pine sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_rottnest_island_pine(pos)
-	elseif node.name == "australia:scribbly_gum_sapling" then
+		base.grow_rottnest_island_pine(pos)
+	elseif node.name == "base:scribbly_gum_sapling" then
 		minetest.log("action", "A Scribbly Gum sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_scribbly_gum(pos)
-	elseif node.name == "australia:shoestring_acacia_sapling" then
+		base.grow_scribbly_gum(pos)
+	elseif node.name == "base:shoestring_acacia_sapling" then
 		minetest.log("action", "A Shoestring Acacia sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_shoestring_acacia(pos)
-	elseif node.name == "australia:snow_gum_sapling" then
+		base.grow_shoestring_acacia(pos)
+	elseif node.name == "base:snow_gum_sapling" then
 		minetest.log("action", "A Snow Gum sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_snow_gum(pos)
-	elseif node.name == "australia:southern_sassafras_sapling" then
+		base.grow_snow_gum(pos)
+	elseif node.name == "base:southern_sassafras_sapling" then
 		minetest.log("action", "A Southern Sassafras sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_southern_sassafras(pos)
-	elseif node.name == "australia:stilted_mangrove_sapling" then
+		base.grow_southern_sassafras(pos)
+	elseif node.name == "base:stilted_mangrove_sapling" then
 		minetest.log("action", "A Stilted Mangrove sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_stilted_mangrove(pos)
-	elseif node.name == "australia:sugar_gum_sapling" then
+		base.grow_stilted_mangrove(pos)
+	elseif node.name == "base:sugar_gum_sapling" then
 		minetest.log("action", "A Sugar Gum sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_sugar_gum(pos)
-	elseif node.name == "australia:swamp_bloodwood_sapling" then
+		base.grow_sugar_gum(pos)
+	elseif node.name == "base:swamp_bloodwood_sapling" then
 		minetest.log("action", "A Swamp Bloodwood sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_swamp_bloodwood(pos)
-	elseif node.name == "australia:swamp_gum_sapling" then
+		base.grow_swamp_bloodwood(pos)
+	elseif node.name == "base:swamp_gum_sapling" then
 		minetest.log("action", "A Swamp Gum sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_swamp_gum(pos)
-	elseif node.name == "australia:swamp_paperbark_sapling" then
+		base.grow_swamp_gum(pos)
+	elseif node.name == "base:swamp_paperbark_sapling" then
 		minetest.log("action", "A Swamp Paperbark sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_swamp_paperbark(pos)
-	elseif node.name == "australia:tasmanian_myrtle_sapling" then
+		base.grow_swamp_paperbark(pos)
+	elseif node.name == "base:tasmanian_myrtle_sapling" then
 		minetest.log("action", "A Tasmanian Myrtle sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_tasmanian_myrtle(pos)
-	elseif node.name == "australia:tea_tree_sapling" then
+		base.grow_tasmanian_myrtle(pos)
+	elseif node.name == "base:tea_tree_sapling" then
 		minetest.log("action", "A Tea Tree sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_tea_tree(pos)
-	elseif node.name == "australia:waratah_sapling" then
+		base.grow_tea_tree(pos)
+	elseif node.name == "base:waratah_sapling" then
 		minetest.log("action", "A Waratah sapling grows into a bush at "..
 			minetest.pos_to_string(pos))
-		aus.grow_waratah(pos)
-	elseif node.name == "australia:white_box_sapling" then
+		base.grow_waratah(pos)
+	elseif node.name == "base:white_box_sapling" then
 		minetest.log("action", "A White Box sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_white_box(pos)
-	elseif node.name == "australia:wirewood_sapling" then
+		base.grow_white_box(pos)
+	elseif node.name == "base:wirewood_sapling" then
 		minetest.log("action", "A Wirewood sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
-		aus.grow_wirewood(pos)
+		base.grow_wirewood(pos)
 	end
 end
 
@@ -4411,56 +4411,56 @@ minetest.register_lbm({
 			"base:pine_sapling",
 			"base:acacia_sapling",
 			"base:aspen_sapling",
-			"australia:arnhem_cypress_pine_sapling",
-			"australia:black_box_sapling",
-			"australia:black_wattle_sapling",
-			"australia:blue_gum_sapling",
-			"australia:boab_sapling",
-			"australia:bull_banksia_sapling",
-			"australia:celery_top_pine_sapling",
-			"australia:cherry_sapling",
-			"australia:coast_banksia_sapling",
-			"australia:coolabah_sapling",
-			"australia:daintree_stringybark_sapling",
-			"australia:darwin_woollybutt_sapling",
-			"australia:desert_oak_sapling",
-			"australia:fan_palm_sapling",
-			"australia:flame_grevillea_sapling",
-			"australia:golden_wattle_sapling",
-			"australia:grey_mangrove_sapling",
-			"australia:huon_pine_sapling",
-			"australia:illawarra_flame_sapling",
-			"australia:jarrah_sapling",
-			"australia:karri_sapling",
-			"australia:lemon_eucalyptus_sapling",
-			"australia:lemon_myrtle_sapling",
-			"australia:lilly_pilly_sapling",
-			"australia:macadamia_sapling",
-			"australia:mangrove_apple_sapling",
-			"australia:marri_sapling",
-			"australia:merbau_sapling",
-			"australia:moreton_bay_fig_sapling",
-			"australia:mulga_sapling",
-			"australia:paperbark_sapling",
-			"australia:quandong_sapling",
-			"australia:red_bottlebrush_sapling",
-			"australia:river_oak_sapling",
-			"australia:river_red_gum_sapling",
-			"australia:rottnest_island_pine_sapling",
-			"australia:scribbly_gum_sapling",
-			"australia:shoestring_acacia_sapling",
-			"australia:snow_gum_sapling",
-			"australia:southern_sassafras_sapling",
-			"australia:stilted_mangrove_sapling",
-			"australia:sugar_gum_sapling",
-			"australia:swamp_bloodwood_sapling",
-			"australia:swamp_gum_sapling",
-			"australia:swamp_paperbark_sapling",
-			"australia:tasmanian_myrtle_sapling",
-			"australia:tea_tree_sapling",
-			"australia:waratah_sapling",
-			"australia:white_box_sapling",
-			"australia:wirewood_sapling"
+			"base:arnhem_cypress_pine_sapling",
+			"base:black_box_sapling",
+			"base:black_wattle_sapling",
+			"base:blue_gum_sapling",
+			"base:boab_sapling",
+			"base:bull_banksia_sapling",
+			"base:celery_top_pine_sapling",
+			"base:cherry_sapling",
+			"base:coast_banksia_sapling",
+			"base:coolabah_sapling",
+			"base:daintree_stringybark_sapling",
+			"base:darwin_woollybutt_sapling",
+			"base:desert_oak_sapling",
+			"base:fan_palm_sapling",
+			"base:flame_grevillea_sapling",
+			"base:golden_wattle_sapling",
+			"base:grey_mangrove_sapling",
+			"base:huon_pine_sapling",
+			"base:illawarra_flame_sapling",
+			"base:jarrah_sapling",
+			"base:karri_sapling",
+			"base:lemon_eucalyptus_sapling",
+			"base:lemon_myrtle_sapling",
+			"base:lilly_pilly_sapling",
+			"base:macadamia_sapling",
+			"base:mangrove_apple_sapling",
+			"base:marri_sapling",
+			"base:merbau_sapling",
+			"base:moreton_bay_fig_sapling",
+			"base:mulga_sapling",
+			"base:paperbark_sapling",
+			"base:quandong_sapling",
+			"base:red_bottlebrush_sapling",
+			"base:river_oak_sapling",
+			"base:river_red_gum_sapling",
+			"base:rottnest_island_pine_sapling",
+			"base:scribbly_gum_sapling",
+			"base:shoestring_acacia_sapling",
+			"base:snow_gum_sapling",
+			"base:southern_sassafras_sapling",
+			"base:stilted_mangrove_sapling",
+			"base:sugar_gum_sapling",
+			"base:swamp_bloodwood_sapling",
+			"base:swamp_gum_sapling",
+			"base:swamp_paperbark_sapling",
+			"base:tasmanian_myrtle_sapling",
+			"base:tea_tree_sapling",
+			"base:waratah_sapling",
+			"base:white_box_sapling",
+			"base:wirewood_sapling"
 	},
 	action = function(pos)
 		minetest.get_node_timer(pos):start(math.random(1200, 2400))
@@ -4743,6 +4743,1661 @@ function base.grow_pine_tree(pos, snow)
 end
 
 
+-- Localize math routines for performance.
+local math_abs = math.abs
+local math_ceil = math.ceil
+local math_floor = math.floor
+local math_max = math.max
+local math_random = math.random
+local math_sqrt = math.sqrt
+
+-- Create and initialize a table for a schematic.
+function base.schematic_array(width, height, depth)
+	-- Dimensions of data array.
+	local s = {size = {x = width, y = height, z = depth}}
+	s.data = {}
+
+	for z = 0, depth - 1 do
+		for y = 0, height - 1 do
+			for x = 0, width - 1 do
+				local i = z * width * height + y * width + x + 1
+				s.data[i] = {}
+				s.data[i].name = "air"
+				s.data[i].param1 = 000
+			end
+		end
+	end
+
+	s.yslice_prob = {}
+
+	return s
+end
+
+-- Make a tree trunk 2-nodes wide.
+local function make_treetrunk2(x0, y0, z0, data, area, height, trunk, air, base)
+	local ystride = area.ystride
+	local ybot = y0 - 1
+	for x = x0, x0 + 1 do
+		for y = 1,height do
+			for z = z0, z0 + 1 do -- iterate in a 2x2 square around the trunk
+				local iv = area:index(x, ybot, z)
+				for i = 0, height + 1 do
+					if data[iv] == air then -- find the ground level
+						if math_random() < base then
+							data[iv-ystride] = trunk -- make tree trunk below
+							if math_random() < base then
+								data[iv] = trunk -- make tree trunk at this air node
+							end
+						end
+						break
+					end
+					iv = iv + ystride -- increment by one node up
+				end
+			end
+		end
+	end
+end
+
+-- Make a tree trunk 3-nodes wide.
+local function make_treetrunk3(x0, y0, z0, data, area, height, trunk, air, base)
+	local ystride = area.ystride
+	local ybot = y0 - 1
+	for x = x0 - 1, x0 + 1 do
+		for y = 1, height do
+			for z = z0 - 1, z0 + 1 do -- iterate in a 3x3 square around the trunk
+				local iv = area:index(x, ybot, z)
+				for i = 0, height + 1 do
+					if data[iv] == air then -- find the ground level
+						if math_random() < base then
+							data[iv-ystride] = trunk -- make tree trunk below
+							if math_random() < base then
+								data[iv] = trunk -- make tree trunk at this air node
+							end
+						end
+						break
+					end
+					iv = iv + ystride -- increment by one node up
+				end
+			end
+		end
+	end
+end
+
+
+-- Generic bush function.
+function base.make_bush(pos, data, area, height, radius, stem, leaves, air,
+		ignore)
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = stem
+		iv = iv + ystride -- increment by one node up
+	end
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height
+	base.make_leavesblob(pos, data, area, stem, leaves, air, ignore,
+			{x = radius, y = radius, z = radius}, np)
+end
+
+-- Generic tree function.
+function base.make_tree(pos, data, area, height, radius, trunk, leaves, air,
+		ignore, limbs, fruit_chance, fruit)
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height - 1
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius, z = radius}, np, limbs, fruit_chance, fruit)
+end
+
+function base.make_black_box(pos, data, area, height, radius, trunk, leaves,
+		air, ignore, limbs, fruit)
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.5)
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height - 1
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius * 0.8, z = radius}, np, limbs)
+end
+
+function base.make_black_wattle(pos, data, area, height, radius, trunk, leaves,
+		air, ignore, limbs, fruit)
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height - 1
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius * 1.5, z = radius}, np, limbs)
+end
+
+function base.make_tall_gum(pos, data, area, height, radius, trunk, leaves, air,
+		ignore, limbs, fruit)
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.2)
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height - 1
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius * 1.25, z = radius}, np, limbs)
+end
+
+function base.make_boab(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	local ystride = area.ystride -- Useful to get the index above
+	local base = 0.8
+	local ybot = pos.y - 1
+	for x = pos.x - 1, pos.x + 1 do
+		for y = 1, height do
+			for z = pos.z - 1, pos.z + 1 do -- iterate in a 3x3 square around the trunk
+				local iv = area:index(x, ybot, z)
+				for i = 0, height + 1 do
+					if data[iv] == air then -- find the ground level
+						if math_random() < base then
+							data[iv-ystride] = trunk -- make tree trunk below
+							if math_random() < base then
+								data[iv] = trunk -- make tree trunk at this air node
+							end
+						end
+						break
+					end
+					iv = iv + ystride -- increment by one node up
+				end
+			end
+		end
+	end
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height - 1
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius * 0.5, z = radius}, np, limbs)
+end
+
+function base.make_conifer(pos, data, area, height, radius, trunk, leaves, air,
+		ignore, limbs, fruit_chance, fruit)
+	local x, y, z = pos.x, pos.y, pos.z
+	fruit_chance = fruit_chance or 0
+	-- Trunk
+	for y_dist = 0, height - 1 do
+		local iv = area:index(x, y + y_dist, z)
+		if y_dist == 0 or data[iv] == air or data[iv] == leaves then
+			data[iv] = trunk
+		end
+	end
+	-- Add rings of leaves randomly
+	local d = 0
+	for yi = height + 1, 2 + math_random(0, 1), -1 do
+		for xi = -d, d do
+			for zi = -d, d do
+				if math_abs(xi) + math_abs(zi) <= d or math_abs(zi) + math_abs(xi) <= d then
+					local iv = area:index(x + xi, y + yi, z + zi)
+					if data[iv] == air or data[iv] == ignore then
+						if math_random() < fruit_chance then
+							data[iv] = fruit
+						else
+							data[iv] = leaves
+						end
+					end
+				end
+			end
+		end
+	d = d + 1
+	if d > math_random(2,4) then d = 1 end
+	end
+end
+
+function base.make_fan_palm(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius * 0.5, z = radius}, np)
+end
+
+function base.make_jarrah(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	local x, y, z = pos.x, pos.y, pos.z
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.8)
+	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.4)
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius, z = radius}, np, limbs)
+end
+
+function base.make_karri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	local x, y, z = pos.x, pos.y, pos.z
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.8)
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius, z = radius}, np, limbs)
+end
+
+function base.make_mangrove(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	local x, y, z = pos.x, pos.y, pos.z
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius * 0.5, z = radius}, np)
+	for z_dist = -1, 1 do
+		local vi_1 = area:index(x - 1, y - 1, z + z_dist)
+		local vi_2 = area:index(x - 1, y, z + z_dist)
+		local vi_3 = area:index(x - 1, y + 1, z + z_dist)
+		for x_dist = -1, 1 do
+			if math_random(1, 3) >= 2 then
+				if data[vi_1] == air or data[vi_1] == ignore then
+					data[vi_1] = trunk
+				elseif data[vi_2] == air or data[vi_2] == ignore then
+					data[vi_2] = trunk
+				elseif data[vi_3] == air or data[vi_3] == ignore then
+					data[vi_3] = trunk
+				end
+			end
+			vi_1 = vi_1 + 1
+			vi_2 = vi_2 + 1
+		end
+	end
+end
+
+-- Mangrove trees use schematic placement because the vocelmanipulator cannot place nodes under sea level.
+function base.generate_mangrove_tree_schematic(trunk_height, trunk, leaf)
+	local height = trunk_height * 2 + 1
+	local radius = 2
+	local width = 2 * radius + 1
+	local trunk_top = height - 3
+	local s = base.schematic_array(width, height, width)
+
+	-- roots, trunk, and extra leaves
+	for z = -1, 1 do
+		for y = 1, trunk_top do
+			for x = -1, 1 do
+				local i = (z + radius) * width * height + y * width + (x + radius) + 1
+				if x == 0 and z == 0 then
+					s.data[i].name = trunk
+					s.data[i].param1 = 255
+					s.data[i].force_place = true
+				elseif (x == 0 or z == 0) and y < 3 then
+					s.data[i].name = trunk
+					s.data[i].param1 = 255
+					s.data[i].force_place = true
+				elseif y > 3 then
+					s.data[i].name = leaf
+					s.data[i].param1 = 50
+				end
+			end
+		end
+	end
+
+	-- canopy
+	for y = 1, trunk_top + 2 do
+		if y > trunk_height and (y == trunk_top or math_random(1, height - y) == 1) then
+			local x, z = 0, 0
+			while x == 0 and z == 0 do
+				x = math_random(-1, 1) * 2
+				z = math_random(-1, 1) * 2
+			end
+			for j = -1, 1, 2 do
+				base.generate_canopy(s, leaf, {x = j * x, y = y, z = j * z})
+			end
+		end
+	end
+	return s
+end
+
+-- Create a canopy of leaves.
+function base.generate_canopy(s, leaf, pos)
+	local height = s.size.y
+	local width = s.size.x
+	local rx = math_floor(s.size.x / 2)
+	local rz = math_floor(s.size.z / 2)
+	local r1 = 4  -- leaf decay radius
+	local probs = {255, 200, 150, 100, 75}
+
+	for z = -r1, r1 do
+		for y = 0, 1 do
+			for x = -r1, r1 do
+				if x+pos.x >= -rx and x + pos.x <= rx and y + pos.y >= 0 and
+						y + pos.y < height and z + pos.z >= -rz and z + pos.z <= rz then
+					local i = (z + pos.z + rz) * width * height + (y + pos.y) * width + (x + pos.x + rx) + 1
+					local dist1 = math_sqrt(x^2 + y^2 + z^2)
+					local dist2 = math_sqrt((x+pos.x)^2 + (z+pos.z)^2)
+					if dist1 <= r1 then
+						local newprob = probs[math_max(1, math_ceil(dist1))]
+						if s.data[i].name == "air" then
+							s.data[i].name = leaf
+							s.data[i].param1 = newprob
+						elseif s.data[i].name == leaf then
+							s.data[i].param1 = math_max(s.data[i].param1, newprob)
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+function base.make_marri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	local x, y, z = pos.x, pos.y, pos.z
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.6)
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius, z = radius}, np, limbs)
+end
+
+function base.make_merbau(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	local x, y, z = pos.x, pos.y, pos.z
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.2)
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius * 0.5, z = radius}, np)
+end
+
+function base.make_moreton_bay_fig(pos, data, area, height, radius, trunk,
+		leaves, air, ignore, limbs, fruit_chance, fruit)
+	local x, y, z = pos.x, pos.y, pos.z
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.7)
+	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.3)
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius, z = radius}, np, limbs, fruit_chance, fruit)
+end
+
+function base.make_river_red_gum(pos, data, area, height, radius, trunk, leaves,
+		air, ignore, limbs)
+	local x, y, z = pos.x, pos.y, pos.z
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.7)
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius, z = radius}, np, limbs)
+end
+
+function base.make_swamp_gum(pos, data, area, height, radius, trunk, leaves,
+		air, ignore, limbs)
+	local x, y, z = pos.x, pos.y, pos.z
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.8)
+	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.5)
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
+			octaves = 3, persist = 0.5}
+	pos.y = pos.y + height
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius * 0.8, y = radius * 1.2, z = radius * 0.8}, np, limbs)
+end
+
+function base.make_tasmanian_myrtle(pos, data, area, height, radius, trunk,
+		leaves, air, ignore, limbs)
+	local x, y, z = pos.x, pos.y, pos.z
+	local ystride = area.ystride -- Useful to get the index above
+	local iv = area:indexp(pos)
+	for i = 1, height do -- Build the trunk
+		data[iv] = trunk
+		iv = iv + ystride -- increment by one node up
+	end
+	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.6)
+	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
+	pos.y = pos.y + height
+	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+			{x = radius, y = radius, z = radius}, np, limbs)
+end
+
+-- Make leaves on a tree in a noise blob.
+function base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore, radius, np, limbs, fruit_chance, fruit)
+	limbs = limbs
+	fruit_chance = fruit_chance or 0
+	np.seed = math_random(0, 16777215) -- noise seed
+	local minp = vector.subtract(pos, radius) -- minimal corner of the leavesblob
+	local maxp = vector.add(pos, radius) -- maximal corner of the leavesblob
+	 -- Same positions, but with integer coordinates
+	local int_minp = {x = math_floor(minp.x), y = math_floor(minp.y), z = math_floor(minp.z)}
+	local int_maxp = {x = math_ceil(maxp.x), y = math_ceil(maxp.y), z = math_ceil(maxp.z)}
+
+	local length = vector.subtract(int_maxp, int_minp)
+	local chulens = vector.add(length, 1)
+	local obj = minetest.get_perlin_map(np, chulens)
+	local pmap = obj:get3dMap_flat(minp)
+	local i = 1
+	-- iterate for every position
+	-- calculate the distance from the center by the Pythagorean theorem: d = sqrt(x²+y²+z²)
+	for x = int_minp.x, int_maxp.x do
+		-- calculate x², y², z² separately, to avoid recalculating x² for every
+		-- y or z iteration. Divided by the radius to scale it to 0…1
+		local xval = ((x - pos.x) / radius.x) ^ 2
+		for y = int_minp.y, int_maxp.y do
+			local yval = ((y - pos.y) / radius.y) ^ 2
+			for z = int_minp.z, int_maxp.z do
+				local zval = ((z - pos.z) / radius.z) ^ 2
+				local dist = math_sqrt(xval + yval + zval) -- Calculate the distance
+				local nval = pmap[i] -- Get the noise value
+				if nval > dist then -- if the noise is bigger than the distance, make leaves
+					local iv = area:index(x, y, z)
+					if data[iv] == air or data[iv] == ignore then
+						 -- make some branches within the leaf structure
+						if nval > dist * 1.5 and limbs and math_random(5) == 1 then
+							data[iv] = trunk
+						-- if a fruit tree add fruit
+						elseif math_random() < fruit_chance then
+							data[iv] = fruit
+						else
+							data[iv] = leaves
+						end
+					end
+				end
+				i = i + 1 -- increment noise index
+			end
+		end
+	end
+end
+
+
+function base.grow_arnhem_cypress_pine(pos)
+	-- individual parameters
+	local height = math_random(10, 15)
+	local radius = 4
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:arnhem_cypress_pine_tree")
+	local leaves = minetest.get_content_id("base:arnhem_cypress_pine_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 4, y = pos.y, z = pos.z - 4},
+		{x = pos.x + 4, y = pos.y + height + 2, z = pos.z + 4}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_black_box(pos)
+	-- individual parameters
+	local height = math_random(5, 10)
+	local radius = math_random(4, 6)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:black_box_tree")
+	local leaves = minetest.get_content_id("base:black_box_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 6, y = pos.y, z = pos.z - 6},
+		{x = pos.x + 6, y = pos.y + height + 6, z = pos.z + 6}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_black_box(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_black_wattle(pos)
+	-- individual parameters
+	local height = math_random(6, 8)
+	local radius = 3
+	local limbs = false
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:black_wattle_tree")
+	local leaves = minetest.get_content_id("base:black_wattle_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 3, y = pos.y, z = pos.z - 3},
+		{x = pos.x + 3, y = pos.y + height + 3, z = pos.z + 3}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_black_wattle(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_blue_gum(pos)
+	-- individual parameters
+	local height = math_random(12, 22)
+	local radius = math_random(5, 7)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:blue_gum_tree")
+	local leaves = minetest.get_content_id("base:blue_gum_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 7, y = pos.y, z = pos.z - 7},
+		{x = pos.x + 7, y = pos.y + height + 9, z = pos.z + 7}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tall_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_boab(pos)
+	-- individual parameters
+	local height = math_random(5, 6)
+	local radius = math_random(4, 5)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:boab_tree")
+	local leaves = minetest.get_content_id("base:boab_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 5, y = pos.y, z = pos.z - 5},
+		{x = pos.x + 5, y = pos.y + height + 3, z = pos.z + 5}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_boab(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_bull_banksia(pos)
+	-- individual parameters
+	local height = math_random(3, 5)
+	local radius = math_random(2, 3)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:bull_banksia_tree")
+	local leaves = minetest.get_content_id("base:bull_banksia_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 3, y = pos.y, z = pos.z - 3},
+		{x = pos.x + 3, y = pos.y + height + 3, z = pos.z + 3}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_celery_top_pine(pos)
+	-- individual parameters
+	local height = math_random(8, 10)
+	local radius = math_random(3, 4)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:celery_top_pine_tree")
+	local leaves = minetest.get_content_id("base:celery_top_pine_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 4, y = pos.y, z = pos.z - 4},
+		{x = pos.x + 4, y = pos.y + height + 2, z = pos.z + 4}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_cherry(pos)
+	-- individual parameters
+	local height = math_random(3, 4)
+	local radius = 3
+	local limbs = nil
+	local fruit_chance = 0.2
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:cherry_tree")
+	local leaves = minetest.get_content_id("base:cherry_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local fruit = minetest.get_content_id("base:cherry")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 3, y = pos.y, z = pos.z - 3},
+		{x = pos.x + 3, y = pos.y + height + 2, z = pos.z + 3}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_coast_banksia(pos)
+	-- individual parameters
+	local height = math_random(8, 13)
+	local radius = math_random(5, 6)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:coast_banksia_tree")
+	local leaves = minetest.get_content_id("base:coast_banksia_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 5, y = pos.y, z = pos.z - 5},
+		{x = pos.x + 5, y = pos.y + height + 5, z = pos.z + 5}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_coolabah(pos)
+	-- individual parameters
+	local height = math_random(7, 10)
+	local radius = math_random(4, 5)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:coolabah_tree")
+	local leaves = minetest.get_content_id("base:coolabah_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 5, y = pos.y, z = pos.z - 5},
+		{x = pos.x + 5, y = pos.y + height + 5, z = pos.z + 5}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_daintree_stringybark(pos)
+	-- individual parameters
+	local height = math_random(15, 20)
+	local radius = math_random(7, 9)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:daintree_stringybark_tree")
+	local leaves = minetest.get_content_id("base:daintree_stringybark_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 9, y = pos.y, z = pos.z - 9},
+		{x = pos.x + 9, y = pos.y + height + 11, z = pos.z + 9}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tall_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_darwin_woollybutt(pos)
+	-- individual parameters
+	local height = math_random(8, 13)
+	local radius = math_random(4, 5)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:darwin_woollybutt_tree")
+	local leaves = minetest.get_content_id("base:darwin_woollybutt_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 5, y = pos.y, z = pos.z - 5},
+		{x = pos.x + 5, y = pos.y + height + 5, z = pos.z + 5}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_desert_oak(pos)
+	-- individual parameters
+	local height = math_random(4, 8)
+	local radius = math_random(2, 4)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:desert_oak_tree")
+	local leaves = minetest.get_content_id("base:desert_oak_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 4, y = pos.y, z = pos.z - 4},
+		{x = pos.x + 4, y = pos.y + height + 4, z = pos.z + 4}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_fan_palm(pos)
+	-- individual parameters
+	local height = math_random(6, 8)
+	local radius = 3
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:fan_palm_tree")
+	local leaves = minetest.get_content_id("base:fan_palm_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 3, y = pos.y - 1, z = pos.z - 3},
+		{x = pos.x + 3, y = pos.y + height + 2, z = pos.z + 3}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_fan_palm(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_flame_grevillea(pos)
+	-- individual parameters
+	local height = 1
+	local radius = math_random(2, 3)
+	-- voxelmanip stuff
+	local stem = minetest.get_content_id("base:acacia_bush_stem")
+	local leaves = minetest.get_content_id("base:flame_grevillea_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 3, y = pos.y, z = pos.z - 3},
+		{x = pos.x + 3, y = pos.y + height + 3, z = pos.z + 3}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_bush(pos, data, area, height, radius, stem, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_golden_wattle(pos)
+	-- individual parameters
+	local height = math_random(3, 4)
+	local radius = 2
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:golden_wattle_tree")
+	local leaves = minetest.get_content_id("base:golden_wattle_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 2, y = pos.y, z = pos.z - 2},
+		{x = pos.x + 2, y = pos.y + height + 2, z = pos.z + 2}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_grey_mangrove(pos)
+	-- individual parameters
+	local height = math_random(3, 4)
+	local radius = 2
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:grey_mangrove_tree")
+	local leaves = minetest.get_content_id("base:grey_mangrove_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 2, y = pos.y - 1, z = pos.z - 2},
+		{x = pos.x + 2, y = pos.y + height + 1, z = pos.z + 2}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_mangrove(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_huon_pine(pos)
+	-- individual parameters
+	local height = math_random(8, 13)
+	local radius = math_random(5, 6)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:huon_pine_tree")
+	local leaves = minetest.get_content_id("base:huon_pine_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 6, y = pos.y, z = pos.z - 6},
+		{x = pos.x + 6, y = pos.y + height + 6, z = pos.z + 6}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_illawarra_flame(pos)
+	-- individual parameters
+	local height = math_random(9, 11)
+	local radius = math_random(6, 7)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:illawarra_flame_tree")
+	local leaves = minetest.get_content_id("base:illawarra_flame_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 7, y = pos.y, z = pos.z - 7},
+		{x = pos.x + 7, y = pos.y + height + 7, z = pos.z + 7}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_jarrah(pos)
+	-- individual parameters
+	local height = math_random(15, 20)
+	local radius = math_random(8, 10)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:jarrah_tree")
+	local leaves = minetest.get_content_id("base:jarrah_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 10, y = pos.y, z = pos.z - 10},
+		{x = pos.x + 10, y = pos.y + height + 10, z = pos.z + 10}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_jarrah(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_karri(pos)
+	-- individual parameters
+	local height = math_random(20, 30)
+	local radius = math_random(8, 10)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:karri_tree")
+	local leaves = minetest.get_content_id("base:karri_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 10, y = pos.y, z = pos.z - 10},
+		{x = pos.x + 10, y = pos.y + height + 10, z = pos.z + 10}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_karri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_lemon_eucalyptus(pos)
+	-- individual parameters
+	local height = math_random(12, 18)
+	local radius = math_random(5, 6)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:lemon_eucalyptus_tree")
+	local leaves = minetest.get_content_id("base:lemon_eucalyptus_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 6, y = pos.y, z = pos.z - 6},
+		{x = pos.x + 6, y = pos.y + height + 6, z = pos.z + 6}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_lemon_myrtle(pos)
+	-- individual parameters
+	local height = math_random(3, 5)
+	local radius = math_random(2, 3)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:lemon_myrtle_tree")
+	local leaves = minetest.get_content_id("base:lemon_myrtle_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 3, y = pos.y, z = pos.z - 3},
+		{x = pos.x + 3, y = pos.y + height + 3, z = pos.z + 3}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_lilly_pilly(pos)
+	-- individual parameters
+	local height = math_random(4, 6)
+	local radius = math_random(4, 6)
+	local limbs = nil
+	local fruit_chance = 0.3
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:lilly_pilly_tree")
+	local leaves = minetest.get_content_id("base:lilly_pilly_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local fruit = minetest.get_content_id("base:lilly_pilly_berries")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 6, y = pos.y, z = pos.z - 6},
+		{x = pos.x + 6, y = pos.y + height + 6, z = pos.z + 6}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_macadamia(pos)
+	-- individual parameters
+	local height = math_random(6, 8)
+	local radius = math_random(3, 4)
+	local limbs = nil
+	local fruit_chance = 0.3
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:macadamia_tree")
+	local leaves = minetest.get_content_id("base:macadamia_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local fruit = minetest.get_content_id("base:macadamia")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 4, y = pos.y, z = pos.z - 4},
+		{x = pos.x + 4, y = pos.y + height + 4, z = pos.z + 4}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_mangrove_apple(pos)
+	-- individual parameters
+	local height = math_random(6, 8)
+	local radius = math_random(3, 4)
+	local limbs = nil
+	local fruit_chance = 0.2
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:mangrove_apple_tree")
+	local leaves = minetest.get_content_id("base:mangrove_apple_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local fruit = minetest.get_content_id("base:mangrove_apple")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 4, y = pos.y, z = pos.z - 4},
+		{x = pos.x + 4, y = pos.y + height + 4, z = pos.z + 4}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_marri(pos)
+	-- individual parameters
+	local height = math_random(15, 20)
+	local radius = math_random(7, 10)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:marri_tree")
+	local leaves = minetest.get_content_id("base:marri_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 10, y = pos.y, z = pos.z - 10},
+		{x = pos.x + 10, y = pos.y + height + 10, z = pos.z + 10}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_marri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_merbau(pos)
+	-- individual parameters
+	local height = math_random(16, 20)
+	local radius = math_random(4, 5)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:merbau_tree")
+	local leaves = minetest.get_content_id("base:merbau_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 5, y = pos.y - 1, z = pos.z - 5},
+		{x = pos.x + 5, y = pos.y + height + 3, z = pos.z + 5}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_merbau(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_moreton_bay_fig(pos)
+	-- individual parameters
+	local height = math_random(15, 20)
+	local radius = math_random(13, 15)
+	local limbs = true
+	local fruit_chance = 0.2
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:moreton_bay_fig_tree")
+	local leaves = minetest.get_content_id("base:moreton_bay_fig_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local fruit = minetest.get_content_id("base:moreton_bay_fig")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 15, y = pos.y, z = pos.z - 15},
+		{x = pos.x + 15, y = pos.y + height + 15, z = pos.z + 15}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_moreton_bay_fig(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_mulga(pos)
+	-- individual parameters
+	local height = math_random(4, 7)
+	local radius = math_random(2, 3)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:mulga_tree")
+	local leaves = minetest.get_content_id("base:mulga_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 3, y = pos.y, z = pos.z - 3},
+		{x = pos.x + 3, y = pos.y + height + 3, z = pos.z + 3}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_paperbark(pos)
+	-- individual parameters
+	local height = math_random(6, 10)
+	local radius = math_random(4, 5)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:paperbark_tree")
+	local leaves = minetest.get_content_id("base:paperbark_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 5, y = pos.y, z = pos.z - 5},
+		{x = pos.x + 5, y = pos.y + height + 5, z = pos.z + 5}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_quandong(pos)
+	-- individual parameters
+	local height = math_random(2, 3)
+	local radius = 2
+	local limbs = nil
+	local fruit_chance = 0.2
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:quandong_tree")
+	local leaves = minetest.get_content_id("base:quandong_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local fruit = minetest.get_content_id("base:quandong")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 2, y = pos.y, z = pos.z - 2},
+		{x = pos.x + 2, y = pos.y + height + 2, z = pos.z + 2}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_red_bottlebrush(pos)
+	-- individual parameters
+	local height = 1
+	local radius = math_random(2, 3)
+	-- voxelmanip stuff
+	local stem = minetest.get_content_id("base:bush_stem")
+	local leaves = minetest.get_content_id("base:red_bottlebrush_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 3, y = pos.y, z = pos.z - 3},
+		{x = pos.x + 3, y = pos.y + height + 3, z = pos.z + 3}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_bush(pos, data, area, height, radius, stem, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_river_oak(pos)
+	-- individual parameters
+	local height = math_random(12, 15)
+	local radius = math_random(4, 5)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:river_oak_tree")
+	local leaves = minetest.get_content_id("base:river_oak_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 5, y = pos.y, z = pos.z - 5},
+		{x = pos.x + 5, y = pos.y + height + 5, z = pos.z + 5}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_river_red_gum(pos)
+	-- individual parameters
+	local height = math_random(12, 18)
+	local radius = math_random(6, 8)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:river_red_gum_tree")
+	local leaves = minetest.get_content_id("base:river_red_gum_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 8, y = pos.y, z = pos.z - 8},
+		{x = pos.x + 8, y = pos.y + height + 8, z = pos.z + 8}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_river_red_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_rottnest_island_pine(pos)
+	-- individual parameters
+	local height = math_random(3, 4)
+	local radius = 3
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:rottnest_island_pine_tree")
+	local leaves = minetest.get_content_id("base:rottnest_island_pine_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 3, y = pos.y, z = pos.z - 3},
+		{x = pos.x + 3, y = pos.y + height + 2, z = pos.z + 3}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_scribbly_gum(pos)
+	-- individual parameters
+	local height = math_random(6, 8)
+	local radius = math_random(4, 5)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:scribbly_gum_tree")
+	local leaves = minetest.get_content_id("base:scribbly_gum_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 5, y = pos.y, z = pos.z - 5},
+		{x = pos.x + 5, y = pos.y + height + 5, z = pos.z + 5}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_shoestring_acacia(pos)
+	-- individual parameters
+	local height = math_random(3, 5)
+	local radius = math_random(3, 4)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:shoestring_acacia_tree")
+	local leaves = minetest.get_content_id("base:shoestring_acacia_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 4, y = pos.y, z = pos.z - 4},
+		{x = pos.x + 4, y = pos.y + height + 4, z = pos.z + 4}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_snow_gum(pos)
+	-- individual parameters
+	local height = math_random(2, 4)
+	local radius = 2
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:snow_gum_tree")
+	local leaves = minetest.get_content_id("base:snow_gum_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 2, y = pos.y, z = pos.z - 2},
+		{x = pos.x + 2, y = pos.y + height + 4, z = pos.z + 2}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_southern_sassafras(pos)
+	-- individual parameters
+	local height = math_random(7, 13)
+	local radius = math_random(3, 4)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:southern_sassafras_tree")
+	local leaves = minetest.get_content_id("base:southern_sassafras_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 4, y = pos.y, z = pos.z - 4},
+		{x = pos.x + 4, y = pos.y + height + 2, z = pos.z + 4}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_stilted_mangrove(pos)
+	-- individual parameters
+	local height = math_random(4, 7)
+	local radius = math_random(2, 3)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:stilted_mangrove_tree")
+	local leaves = minetest.get_content_id("base:stilted_mangrove_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 3, y = pos.y - 1, z = pos.z - 3},
+		{x = pos.x + 3, y = pos.y + height + 2, z = pos.z + 3}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_mangrove(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_sugar_gum(pos)
+	-- individual parameters
+	local height = math_random(9, 13)
+	local radius = math_random(8, 10)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:sugar_gum_tree")
+	local leaves = minetest.get_content_id("base:sugar_gum_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 10, y = pos.y, z = pos.z - 10},
+		{x = pos.x + 10, y = pos.y + height + 10, z = pos.z + 10}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_swamp_bloodwood(pos)
+	-- individual parameters
+	local height = math_random(6, 8)
+	local radius = math_random(3, 4)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:swamp_bloodwood_tree")
+	local leaves = minetest.get_content_id("base:swamp_bloodwood_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 4, y = pos.y, z = pos.z - 4},
+		{x = pos.x + 4, y = pos.y + height + 4, z = pos.z + 4}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_swamp_gum(pos)
+	-- individual parameters
+	local height = math_random(30, 40)
+	local radius = math_random(8, 10)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:swamp_gum_tree")
+	local leaves = minetest.get_content_id("base:swamp_gum_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 10, y = pos.y, z = pos.z - 10},
+		{x = pos.x + 10, y = pos.y + height + 12, z = pos.z + 10}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_swamp_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_swamp_paperbark(pos)
+	-- individual parameters
+	local height = math_random(3, 4)
+	local radius = 2
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:swamp_paperbark_tree")
+	local leaves = minetest.get_content_id("base:swamp_paperbark_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 2, y = pos.y, z = pos.z - 2},
+		{x = pos.x + 2, y = pos.y + height + 2, z = pos.z + 2}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_tasmanian_myrtle(pos)
+	-- individual parameters
+	local height = math_random(15, 20)
+	local radius = math_random(7, 9)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:tasmanian_myrtle_tree")
+	local leaves = minetest.get_content_id("base:tasmanian_myrtle_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 9, y = pos.y - 1, z = pos.z - 9},
+		{x = pos.x + 9, y = pos.y + height + 9, z = pos.z + 9}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tasmanian_myrtle(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_tea_tree(pos)
+	-- individual parameters
+	local height = math_random(3, 4)
+	local radius = math_random(2, 3)
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:tea_tree_tree")
+	local leaves = minetest.get_content_id("base:tea_tree_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 3, y = pos.y, z = pos.z - 3},
+		{x = pos.x + 3, y = pos.y + height + 3, z = pos.z + 3}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_waratah(pos)
+	-- individual parameters
+	local height = 1
+	local radius = math_random(1, 2)
+	-- voxelmanip stuff
+	local stem = minetest.get_content_id("base:bush_stem")
+	local leaves = minetest.get_content_id("base:waratah_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 2, y = pos.y, z = pos.z - 2},
+		{x = pos.x + 2, y = pos.y + height + 2, z = pos.z + 2}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_bush(pos, data, area, height, radius, stem, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_white_box(pos)
+	-- individual parameters
+	local height = math_random(7, 12)
+	local radius = math_random(6, 8)
+	local limbs = true
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:white_box_tree")
+	local leaves = minetest.get_content_id("base:white_box_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 8, y = pos.y, z = pos.z - 8},
+		{x = pos.x + 8, y = pos.y + height + 8, z = pos.z + 8}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+function base.grow_wirewood(pos)
+	-- individual parameters
+	local height = math_random(6, 8)
+	local radius = 2
+	-- voxelmanip stuff
+	local trunk = minetest.get_content_id("base:wirewood_tree")
+	local leaves = minetest.get_content_id("base:wirewood_leaves")
+	local air = minetest.get_content_id("air")
+	local ignore = minetest.get_content_id("ignore")
+	local vm = minetest.get_voxel_manip()
+	local minp, maxp = vm:read_from_map(
+		{x = pos.x - 2, y = pos.y, z = pos.z - 2},
+		{x = pos.x + 2, y = pos.y + height + 2, z = pos.z + 2}
+	)
+	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
+	local data = vm:get_data()
+	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	vm:set_data(data)
+	vm:write_to_map()
+	vm:update_map()
+end
+
+
 -- Aliases for schematic nodes
 minetest.register_alias("default:tree", "base:tree")
 minetest.register_alias("default:leaves", "base:leaves")
@@ -4760,7 +6415,7 @@ minetest.register_alias("default:aspen_leaves", "base:aspen_leaves")
 -- New apple tree
 
 function base.grow_new_apple_tree(pos)
-	local path = minetest.get_modpath("core") ..
+	local path = minetest.get_modpath("base") ..
 		"/schematics/apple_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 1, z = pos.z - 2},
 		path, "random", nil, false)
@@ -4770,7 +6425,7 @@ end
 -- New jungle tree
 
 function base.grow_new_jungle_tree(pos)
-	local path = minetest.get_modpath("core") ..
+	local path = minetest.get_modpath("base") ..
 		"/schematics/jungle_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 1, z = pos.z - 2},
 		path, "random", nil, false)
@@ -4780,7 +6435,7 @@ end
 -- New pine tree
 
 function base.grow_new_pine_tree(pos)
-	local path = minetest.get_modpath("core") ..
+	local path = minetest.get_modpath("base") ..
 		"/schematics/pine_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 1, z = pos.z - 2},
 		path, "0", nil, false)
@@ -4790,7 +6445,7 @@ end
 -- New snowy pine tree
 
 function base.grow_new_snowy_pine_tree(pos)
-	local path = minetest.get_modpath("core") ..
+	local path = minetest.get_modpath("base") ..
 		"/schematics/snowy_pine_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 1, z = pos.z - 2},
 		path, "random", nil, false)
@@ -4800,7 +6455,7 @@ end
 -- New acacia tree
 
 function base.grow_new_acacia_tree(pos)
-	local path = minetest.get_modpath("core") ..
+	local path = minetest.get_modpath("base") ..
 		"/schematics/acacia_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 4, y = pos.y - 1, z = pos.z - 4},
 		path, "random", nil, false)
@@ -4810,7 +6465,7 @@ end
 -- New aspen tree
 
 function base.grow_new_aspen_tree(pos)
-	local path = minetest.get_modpath("core") ..
+	local path = minetest.get_modpath("base") ..
 		"/schematics/aspen_tree_from_sapling.mts"
 	minetest.place_schematic({x = pos.x - 2, y = pos.y - 1, z = pos.z - 2},
 		path, "0", nil, false)
@@ -4823,7 +6478,7 @@ end
 -- Bush
 
 function base.grow_bush(pos)
-	local path = minetest.get_modpath("core") ..
+	local path = minetest.get_modpath("base") ..
 		"/schematics/bush.mts"
 	minetest.place_schematic({x = pos.x - 1, y = pos.y - 1, z = pos.z - 1},
 		path, "0", nil, false)
@@ -4833,7 +6488,7 @@ end
 -- Acacia bush
 
 function base.grow_acacia_bush(pos)
-	local path = minetest.get_modpath("core") ..
+	local path = minetest.get_modpath("base") ..
 		"/schematics/acacia_bush.mts"
 	minetest.place_schematic({x = pos.x - 1, y = pos.y - 1, z = pos.z - 1},
 		path, "0", nil, false)
@@ -4923,43 +6578,31 @@ end
 --
 
 base.register_leafdecay({
-	trunks = {"base:tree"},
-	leaves = {"base:apple", "base:leaves"},
-	radius = 3,
+	trunks = {"base:tree"}, leaves = {"base:apple", "base:leaves"}, radius = 3,
 })
 
 base.register_leafdecay({
-	trunks = {"base:jungletree"},
-	leaves = {"base:jungleleaves"},
-	radius = 2,
+	trunks = {"base:jungletree"}, leaves = {"base:jungleleaves"}, radius = 2,
 })
 
 base.register_leafdecay({
-	trunks = {"base:pine_tree"},
-	leaves = {"base:pine_needles"},
-	radius = 2,
+	trunks = {"base:pine_tree"}, leaves = {"base:pine_needles"}, radius = 2,
 })
 
 base.register_leafdecay({
-	trunks = {"base:acacia_tree"},
-	leaves = {"base:acacia_leaves"},
-	radius = 2,
+	trunks = {"base:acacia_tree"}, leaves = {"base:acacia_leaves"}, radius = 2,
 })
 
 base.register_leafdecay({
-	trunks = {"base:aspen_tree"},
-	leaves = {"base:aspen_leaves"},
-	radius = 3,
+	trunks = {"base:aspen_tree"}, leaves = {"base:aspen_leaves"}, radius = 3,
 })
 
 base.register_leafdecay({
-	trunks = {"base:bush_stem"},
-	leaves = {"base:bush_leaves"},
-	radius = 1,
+	trunks = {"base:bush_stem"}, leaves = {"base:bush_leaves"}, radius = 1,
 })
 
 base.register_leafdecay({
-	trunks = {"base:acacia_bush_stem"},
-	leaves = {"base:acacia_bush_leaves"},
-	radius = 1,
+	trunks = {"base:acacia_bush_stem"}, leaves = {"base:acacia_bush_leaves"}, radius = 1,
 })
+
+

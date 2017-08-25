@@ -142,7 +142,7 @@ plants_api.register_plant({
 		local height =  math_random(8, 10)
 		local radius =  math_random(4, 5)
 		local limbs =   true
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -163,7 +163,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(4, 7)
 		local radius =  math_random(2, 3)
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -187,7 +187,7 @@ plants_api.register_plant({
 		local radius =        2
 		local limbs =         nil
 		local fruit_chance =  0.2
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
 	end,
 })
 
@@ -211,7 +211,7 @@ plants_api.register_plant({
 		local radius =        2
 		local limbs =         nil
 		local fruit_chance =  0.1
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
 	end,
 })
 
@@ -232,7 +232,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(12, 15)
 		local radius =  math_random(4, 5)
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -254,7 +254,7 @@ plants_api.register_plant({
 		local height =  math_random(12, 18)
 		local radius =  math_random(6, 8)
 		local limbs =   true
-		aus.make_river_red_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_river_red_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -275,7 +275,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 5)
 		local radius =  math_random(3, 4)
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -296,6 +296,6 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 5)
 		local radius =  math_random(3, 4)
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })

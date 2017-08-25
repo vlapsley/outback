@@ -131,7 +131,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(9, 15)
 		local radius =  math_random(5, 6)
-		aus.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -152,7 +152,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(6, 8)
 		local radius =  3
-		aus.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -174,7 +174,7 @@ plants_api.register_plant({
 		local height =  math_random(12, 22)
 		local radius =  math_random(5, 7)
 		local limbs =   true
-		aus.make_tall_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_tall_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -196,7 +196,7 @@ plants_api.register_plant({
 		local height =  math_random(12, 22)
 		local radius =  math_random(5, 7)
 		local limbs =   true
-		aus.make_tall_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_tall_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -217,7 +217,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(8, 10)
 		local radius =  math_random(3, 4)
-		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -238,7 +238,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(8, 10)
 		local radius =  math_random(3, 4)
-		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -259,7 +259,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(8, 10)
 		local radius =  math_random(3, 4)
-		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -281,7 +281,7 @@ plants_api.register_plant({
 		local height =  math_random(8, 13)
 		local radius =  math_random(5, 6)
 		local limbs =   true
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -303,7 +303,7 @@ plants_api.register_plant({
 		local height =  math_random(8, 13)
 		local radius =  math_random(5, 6)
 		local limbs =   true
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -324,7 +324,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(8, 13)
 		local radius =  math_random(6, 8)
-		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -345,7 +345,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(8, 13)
 		local radius =  math_random(6, 8)
-		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -367,7 +367,7 @@ plants_api.register_plant({
 		local height =  math_random(30, 40)
 		local radius =  math_random(8, 10)
 		local limbs =   true
-		aus.make_swamp_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_swamp_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -389,7 +389,7 @@ plants_api.register_plant({
 		local height =  math_random(15, 20)
 		local radius =  math_random(7, 9)
 		local limbs =   true
-		aus.make_tasmanian_myrtle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_tasmanian_myrtle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -411,7 +411,7 @@ plants_api.register_plant({
 		local height =  math_random(15, 20)
 		local radius =  math_random(7, 9)
 		local limbs =   true
-		aus.make_tasmanian_myrtle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_tasmanian_myrtle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
@@ -433,6 +433,6 @@ plants_api.register_plant({
 		local height =  math_random(10, 14)
 		local radius =  math_random(5, 6)
 		local limbs =   true
-		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
