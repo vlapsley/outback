@@ -27,10 +27,10 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
--- Bluestone (Basalt)
+-- Basalt
 minetest.register_ore({
 	ore_type =         "blob",
-	ore =              "base:bluestone",
+	ore =              "base:basalt",
 	wherein =          {"base:stone"},
 	clust_scarcity =   24 * 24 * 24,
 	clust_size =       8,

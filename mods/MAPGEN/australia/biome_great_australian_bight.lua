@@ -8,7 +8,7 @@ minetest.register_biome({
 	name =            "great_australian_bight",
 	node_top =        "base:limestone",
 	depth_top =       3,
-	node_filler =     "base:bluestone",
+	node_filler =     "base:basalt",
 	depth_filler =    4,
 	node_stone =      "base:stone",
 	node_riverbed =   "base:limestone",
