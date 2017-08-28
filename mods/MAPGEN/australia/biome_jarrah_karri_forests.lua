@@ -27,7 +27,7 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
--- Bluestone (Basalt)
+-- Basalt
 minetest.register_ore({
 	ore_type =                "sheet",
 	ore =                     "base:basalt",

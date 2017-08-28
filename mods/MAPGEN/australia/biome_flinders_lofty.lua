@@ -64,7 +64,7 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =                "sheet",
-	ore =                     "base:bluestone",
+	ore =                     "base:basalt",
 	wherein =                 "base:stone",
 	column_height_min =       2,
 	column_height_max =       4,
