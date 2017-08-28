@@ -249,12 +249,13 @@ minetest.register_node("base:marble", {
 	sounds = base.node_sound_stone_defaults(),
 }) 
 
-minetest.register_node("base:marble_brick", {
-	description = "Marble Brick",
-	tiles = {"base_marble_brick.png"},
-	groups = {cracky = 3, stone = 1},
-	sounds = base.node_sound_stone_defaults(),
-}) 
+minetest.register_node("base:marble_tile", {
+	description = "Marble Tile",
+	tiles = {"base_marble_tile.png"},
+	is_ground_content = false,
+	groups = {cracky = 2, stone = 1},
+	sounds = base.node_sound_stone_defaults()
+})
 
 minetest.register_node("base:shale", {
 	description = "Shale",

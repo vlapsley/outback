@@ -399,12 +399,12 @@ stairs.register_stair_and_slab(
 )
 
 stairs.register_stair_and_slab(
-	"marble_brick",
-	"base:marble_brick",
+	"marble_tile",
+	"base:marble_tile",
 	{cracky = 2},
-	{"base_marble_brick.png"},
-	"Marble Brick Stair",
-	"Marble Brick Slab",
+	{"base_marble_tile.png"},
+	"Marble Tile Stair",
+	"Marble Tile Slab",
 	base.node_sound_stone_defaults()
 )
 
