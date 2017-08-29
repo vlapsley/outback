@@ -608,6 +608,22 @@ minetest.register_node("base:bronzeblock", {
 	sounds = base.node_sound_metal_defaults(),
 })
 
+minetest.register_node("base:stone_with_uranium", {
+	description = "Uranium Ore",
+	tiles = {"base_stone.png^base_mineral_uranium.png" },
+	groups = {cracky = 3, radioactive = 1},
+	drop = "base:uranium_lump",
+	sounds = base.node_sound_stone_defaults(),
+}) 
+
+minetest.register_node("base:uraniumblock", {
+	description = "Uranium Block",
+	tiles = {"base_uranium_block.png"},
+	is_ground_content = false,
+	groups = {uranium_block = 1, cracky = 1, level = 2, radioactive = 2},
+	sounds = base.node_sound_stone_defaults(),
+})
+
 minetest.register_node("base:stone_with_mese", {
 	description = "Mese Ore",
 	tiles = {"base_stone.png^base_mineral_mese.png"},
