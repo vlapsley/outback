@@ -704,24 +704,50 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:red_stonebrick 4",
+	output = "base:basalt_brick 4",
 	recipe = {
-		{"base:red_stone", "base:red_stone"},
-		{"base:red_stone", "base:red_stone"},
+		{"base:basalt", "base:basalt"},
+		{"base:basalt", "base:basalt"},
 	}
 })
 
 minetest.register_craft({
-	output = "base:bluestone_brick 4",
+	output = "base:diorite_brick 4",
 	recipe = {
-		{"base:bluestone", "base:bluestone"},
-		{"base:bluestone", "base:bluestone"},
+		{"base:diorite", "base:diorite"},
+		{"base:diorite", "base:diorite"},
+	}
+})
+
+minetest.register_craft({
+	output = "base:granite_brick 4",
+	recipe = {
+		{"base:granite", "base:granite"},
+		{"base:granite", "base:granite"},
+	}
+})
+
+minetest.register_craft({
+	output = "base:slate_tile 4",
+	recipe = {
+		{"base:slate","base:slate"},
+		{"base:slate","base:slate"},
+		{"base:sand","base:clay"},
+	}
+})
+
+minetest.register_craft({
+	output = "base:marble_tile 4",
+	recipe = {
+		{"base:marble","base:marble"},
+		{"base:marble","base:marble"},
+		{"base:sand","base:clay"},
 	}
 })
 
 -- Small rocks can be used to create cobblestone.
 minetest.register_craft({
-	output = "base:granite",
+	output = "base:red_sandstone_cobble",
 	recipe = {
 		{"base:small_red_rocks", "base:small_red_rocks", "base:small_red_rocks"},
 		{"base:small_red_rocks", "base:small_red_rocks", "base:small_red_rocks"},
@@ -823,14 +849,50 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "cooking",
-	output = "base:bluestone",
-	recipe = "base:bluestone_cobble",
+	output = "base:basalt",
+	recipe = "base:basalt_cobble",
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "base:red_stone",
-	recipe = "base:red_cobble",
+	output = "base:diorite",
+	recipe = "base:diorite_cobble",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:granite",
+	recipe = "base:granite_cobble",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:limestone",
+	recipe = "base:limestone_cobble",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:red_sandstone",
+	recipe = "base:red_sandstone_cobble",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:slate",
+	recipe = "base:shale",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:slate",
+	recipe = "base:slate_cobble",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:shale",
+	recipe = "base:mangrove_mud",
 })
 
 

@@ -369,6 +369,36 @@ stairs.register_stair_and_slab(
 )
 
 stairs.register_stair_and_slab(
+	"basalt",
+	"base:basalt",
+	{cracky = 2},
+	{"base_basalt.png"},
+	"Basalt Stair",
+	"Basalt Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
+	"basalt_brick",
+	"base:basalt_brick",
+	{cracky = 2},
+	{"base_basalt_brick.png"},
+	"Basalt Brick Stair",
+	"Basalt Brick Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
+	"basalt_cobble",
+	"base:basalt_cobble",
+	{cracky = 2},
+	{"base_basalt_cobble.png"},
+	"Basalt Cobble Stair",
+	"Basalt Cobble Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
 	"diorite",
 	"base:diorite",
 	{cracky = 2},
@@ -379,12 +409,72 @@ stairs.register_stair_and_slab(
 )
 
 stairs.register_stair_and_slab(
+	"diorite_brick",
+	"base:diorite_brick",
+	{cracky = 2},
+	{"base_diorite.png"},
+	"Diorite Brick Stair",
+	"Diorite Brick Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
+	"diorite_cobble",
+	"base:diorite_cobble",
+	{cracky = 2},
+	{"base_diorite_cobble.png"},
+	"Diorite Cobble Stair",
+	"Diorite Cobble Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
 	"granite",
 	"base:granite",
 	{cracky = 2},
 	{"base_granite.png"},
 	"Granite Stair",
 	"Granite Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
+	"granite_brick",
+	"base:granite_brick",
+	{cracky = 2},
+	{"base_granite_brick.png"},
+	"Granite Brick Stair",
+	"Granite Brick Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
+	"granite_cobble",
+	"base:granite_cobble",
+	{cracky = 2},
+	{"base_granite_cobble.png"},
+	"Granite Cobble Stair",
+	"Granite Cobble Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
+	"limestone",
+	"base:limestone",
+	{cracky = 2},
+	{"base_limestone.png"},
+	"Limestone Stair",
+	"Limestone Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
+	"limestone_cobble",
+	"base:limestone_cobble",
+	{cracky = 2},
+	{"base_limestone_cobble.png"},
+	"Limestone Cobble Stair",
+	"Limestone Cobble Slab",
 	base.node_sound_stone_defaults()
 )
 
@@ -435,6 +525,16 @@ stairs.register_stair_and_slab(
 	{"base_sandstone_block.png"},
 	"Sandstone Block Stair",
 	"Sandstone Block Slab",
+	base.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab(
+	"slate",
+	"base:sate",
+	{cracky = 2},
+	{"base_slate.png"},
+	"Slate Stair",
+	"Slate Slab",
 	base.node_sound_stone_defaults()
 )
 
