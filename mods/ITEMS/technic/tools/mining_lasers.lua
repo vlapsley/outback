@@ -10,25 +10,25 @@ local S = technic.getter
 minetest.register_craft({
 	output = 'technic:laser_mk1',
 	recipe = {
-		{'default:diamond', 'technic:brass_ingot',        'default:obsidian_glass'},
+		{'base:diamond', 'technic:brass_ingot',        'base:obsidian_glass'},
 		{'',                'technic:brass_ingot',        'technic:red_energy_crystal'},
-		{'',                '',                           'default:copper_ingot'},
+		{'',                '',                           'base:copper_ingot'},
 	}
 })
 minetest.register_craft({
 	output = 'technic:laser_mk2',
 	recipe = {
-		{'default:diamond', 'technic:carbon_steel_ingot', 'technic:laser_mk1'},
+		{'base:diamond', 'technic:carbon_steel_ingot', 'technic:laser_mk1'},
 		{'',                'technic:carbon_steel_ingot', 'technic:green_energy_crystal'},
-		{'',                '',                           'default:copper_ingot'},
+		{'',                '',                           'base:copper_ingot'},
 	}
 })
 minetest.register_craft({
 	output = 'technic:laser_mk3',
 	recipe = {
-		{'default:diamond', 'technic:carbon_steel_ingot', 'technic:laser_mk2'},
+		{'base:diamond', 'technic:carbon_steel_ingot', 'technic:laser_mk2'},
 		{'',                'technic:carbon_steel_ingot', 'technic:blue_energy_crystal'},
-		{'',                '',                           'default:copper_ingot'},
+		{'',                '',                           'base:copper_ingot'},
 	}
 })
 
@@ -51,8 +51,8 @@ end
 
 local no_destroy = {
 	["air"] = true,
-	["default:lava_source"] = true,
-	["default:lava_flowing"] = true,
+	["base:lava_source"] = true,
+	["base:lava_flowing"] = true,
 }
 local function laser_shoot(player, range, particle_texture, sound)
 	local player_pos = player:getpos()

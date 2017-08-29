@@ -5,10 +5,10 @@ local function deploy_node(inv, slot_name, pos, node, machine_node)
 	if node.param2 > 3 then return end
 	if node.name ~= "air" then
 		if node.name == "ignore" or
-		   node.name == "default:lava_source" or
-		   node.name == "default:lava_flowing" or
-		   node.name == "default:water_source" or
-		   node.name == "default:water_flowing" then
+		   node.name == "base:lava_source" or
+		   node.name == "base:lava_flowing" or
+		   node.name == "base:water_source" or
+		   node.name == "base:water_flowing" then
 			return
 		end
 		local drops = minetest.get_node_drops(node.name, "")
@@ -131,7 +131,7 @@ local function make_constructor(mark, length)
 		paramtype2 = "facedir",
 		groups = {snappy=2, choppy=2, oddly_breakable_by_hand=2, mesecon = 2},
 		mesecons = {effector = {action_on = make_on(mark, length)}},
-		sounds = default.node_sound_stone_defaults(),
+		sounds = base.node_sound_stone_defaults(),
 		on_construct = function(pos)
 			local meta = minetest.get_meta(pos)
 			local formspec = "size[8,9;]"..
@@ -178,7 +178,7 @@ local function make_constructor(mark, length)
 		groups = {snappy=2, choppy=2, oddly_breakable_by_hand=2,
 			mesecon=2, not_in_creative_inventory=1},
 		mesecons= {effector = {action_off = make_off(mark)}},
-		sounds = default.node_sound_stone_defaults(),
+		sounds = base.node_sound_stone_defaults(),
 		allow_metadata_inventory_put = technic.machine_inventory_put,
 		allow_metadata_inventory_take = technic.machine_inventory_take,
 		allow_metadata_inventory_move = technic.machine_inventory_move,

@@ -13,7 +13,7 @@ local S = technic.getter
 minetest.register_craft({
 	output = 'technic:cnc',
 	recipe = {
-		{'default:glass',              'technic:diamond_drill_head', 'default:glass'},
+		{'base:glass',              'technic:diamond_drill_head', 'base:glass'},
 		{'technic:control_logic_unit', 'technic:machine_casing',     'technic:motor'},
 		{'technic:carbon_steel_ingot', 'technic:lv_cable',           'technic:carbon_steel_ingot'},
 	},

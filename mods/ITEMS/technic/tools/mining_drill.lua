@@ -6,9 +6,9 @@ local S = technic.getter
 minetest.register_craft({
 	output = 'technic:mining_drill',
 	recipe = {
-		{'moreores:tin_ingot',            'technic:diamond_drill_head', 'moreores:tin_ingot'},
+		{'moreores:tin_ingot',            'technic:diamond_drill_head', 'base:tin_ingot'},
 		{'technic:stainless_steel_ingot', 'technic:motor',              'technic:stainless_steel_ingot'},
-		{'',                              'technic:red_energy_crystal', 'default:copper_ingot'},
+		{'',                              'technic:red_energy_crystal', 'base:copper_ingot'},
 	}
 })
 minetest.register_craft({
@@ -53,10 +53,10 @@ local function drill_dig_it0 (pos,player)
 	end
 	local node=minetest.get_node(pos)
 	if node.name == "air" or node.name == "ignore" then return end
-	if node.name == "default:lava_source" then return end
-	if node.name == "default:lava_flowing" then return end
-	if node.name == "default:water_source" then minetest.remove_node(pos) return end
-	if node.name == "default:water_flowing" then minetest.remove_node(pos) return end
+	if node.name == "base:lava_source" then return end
+	if node.name == "base:lava_flowing" then return end
+	if node.name == "base:water_source" then minetest.remove_node(pos) return end
+	if node.name == "base:water_flowing" then minetest.remove_node(pos) return end
 	minetest.node_dig(pos,node,player)
 end
 

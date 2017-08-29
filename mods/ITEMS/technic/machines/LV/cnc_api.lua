@@ -264,9 +264,9 @@ technic.cnc.programs = {
 
 -- Allow disabling certain programs for some node. Default is allowing all types for all nodes
 technic.cnc.programs_disable = {
-	-- ["default:brick"] = {"technic_cnc_stick"}, -- Example: Disallow the stick for brick
+	-- ["base:brick"] = {"technic_cnc_stick"}, -- Example: Disallow the stick for brick
 	-- ...
-	["default:dirt"] = {"technic_cnc_oblate_spheroid", "technic_cnc_slope_upsdown", "technic_cnc_edge",
+	["base:dirt"] = {"technic_cnc_oblate_spheroid", "technic_cnc_slope_upsdown", "technic_cnc_edge",
 	                    "technic_cnc_inner_edge", "technic_cnc_slope_edge_upsdown",
 	                    "technic_cnc_slope_inner_edge_upsdown", "technic_cnc_stick",
 	                    "technic_cnc_cylinder_horizontal"}

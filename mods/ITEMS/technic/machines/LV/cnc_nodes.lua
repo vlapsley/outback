@@ -5,67 +5,67 @@ local S = technic.getter
 
 -- DIRT
 -------
-technic.cnc.register_all("default:dirt",
+technic.cnc.register_all("base:dirt",
                 {snappy=2,choppy=2,oddly_breakable_by_hand=3,not_in_creative_inventory=1},
-                {"default_grass.png", "default_dirt.png", "default_grass.png"},
+                {"base_grass.png", "base_dirt.png", "base_grass.png"},
                 S("Dirt"))
 -- WOOD
 -------
-technic.cnc.register_all("default:wood",
+technic.cnc.register_all("base:wood",
                 {snappy=2, choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
-                {"default_wood.png"},
+                {"base_wood.png"},
                 S("Wooden"))
 -- STONE
 --------
-technic.cnc.register_all("default:stone",
+technic.cnc.register_all("base:stone",
                 {cracky=3, not_in_creative_inventory=1},
-                {"default_stone.png"},
+                {"base_stone.png"},
                 S("Stone"))
 -- COBBLE
 ---------
-technic.cnc.register_all("default:cobble",
+technic.cnc.register_all("base:cobble",
                 {cracky=3, not_in_creative_inventory=1},
-                {"default_cobble.png"},
+                {"base_cobble.png"},
                 S("Cobble"))
 -- BRICK
 --------
-technic.cnc.register_all("default:brick",
+technic.cnc.register_all("base:brick",
                 {cracky=3, not_in_creative_inventory=1},
-                {"default_brick.png"},
+                {"base_brick.png"},
                 S("Brick"))
 
 -- SANDSTONE
 ------------
-technic.cnc.register_all("default:sandstone",
+technic.cnc.register_all("base:sandstone",
                 {crumbly=2, cracky=3, not_in_creative_inventory=1},
-                {"default_sandstone.png"},
+                {"base_sandstone.png"},
                 S("Sandstone"))
 
 -- LEAVES
 ---------
-technic.cnc.register_all("default:leaves",
+technic.cnc.register_all("base:leaves",
                 {snappy=2, choppy=2, oddly_breakable_by_hand=3, not_in_creative_inventory=1},
-                {"default_leaves.png"},
+                {"base_leaves.png"},
                 S("Leaves"))
 -- TREE
 -------
-technic.cnc.register_all("default:tree",
+technic.cnc.register_all("base:tree",
                 {snappy=1, choppy=2, oddly_breakable_by_hand=2, flammable=3, wood=1, not_in_creative_inventory=1},
-                {"default_tree.png"},
+                {"base_tree.png"},
                 S("Tree"))
 
 -- WROUGHT IRON
 ---------------
-technic.cnc.register_all("default:steelblock",
+technic.cnc.register_all("base:steelblock",
                 {cracky=1, level=2, not_in_creative_inventory=1},
                 {"technic_wrought_iron_block.png"},
                 S("Wrought Iron"))
 
 -- Bronze
 --------
-technic.cnc.register_all("default:bronzeblock",
+technic.cnc.register_all("base:bronzeblock",
                 {cracky=1, level=2, not_in_creative_inventory=1},
-                {"default_bronze_block.png"},
+                {"base_bronze_block.png"},
                 S("Bronze"))
 
 -- Stainless Steel
@@ -77,15 +77,15 @@ technic.cnc.register_all("technic:stainless_steel_block",
 
 -- Marble
 ------------
-technic.cnc.register_all("technic:marble",
+technic.cnc.register_all("base:marble",
                 {cracky=3, not_in_creative_inventory=1},
-                {"technic_marble.png"},
+                {"base_marble.png"},
                 S("Marble"))
 
 -- Granite
 ------------
-technic.cnc.register_all("technic:granite",
+technic.cnc.register_all("base:granite",
                 {cracky=1, not_in_creative_inventory=1},
-                {"technic_granite.png"},
+                {"base_granite.png"},
                 S("Granite"))
 

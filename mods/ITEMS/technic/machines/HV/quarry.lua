@@ -215,7 +215,7 @@ minetest.register_node("technic:quarry", {
 		"technic_carbon_steel_block.png"..cable_entry,
 		"technic_carbon_steel_block.png"..cable_entry,
 		"technic_carbon_steel_block.png"..cable_entry,
-		"technic_carbon_steel_block.png^default_tool_mesepick.png",
+		"technic_carbon_steel_block.png^tools_tool_mesepick.png",
 		"technic_carbon_steel_block.png"..cable_entry
 	},
 	paramtype2 = "facedir",

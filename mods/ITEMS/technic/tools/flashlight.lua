@@ -20,7 +20,7 @@ minetest.register_tool("technic:flashlight", {
 minetest.register_craft({
 	output = "technic:flashlight",
 	recipe = {
-		{"technic:rubber",                "default:glass",   "technic:rubber"},
+		{"technic:rubber",                "base:glass",   "technic:rubber"},
 		{"technic:stainless_steel_ingot", "technic:battery", "technic:stainless_steel_ingot"},
 		{"",                              "technic:battery", ""}
 	}

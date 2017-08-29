@@ -6,9 +6,9 @@ local S = technic.getter
 minetest.register_craft({
 	output = 'technic:coal_alloy_furnace',
 	recipe = {
-		{'default:brick', 'default:brick', 'default:brick'},
-		{'default:brick', '',              'default:brick'},
-		{'default:brick', 'default:brick', 'default:brick'},
+		{'base:brick', 'base:brick', 'base:brick'},
+		{'base:brick', '',              'base:brick'},
+		{'base:brick', 'base:brick', 'base:brick'},
 	}
 })
 
@@ -16,7 +16,7 @@ local machine_name = S("Fuel-Fired Alloy Furnace")
 local formspec =
 	"size[8,9]"..
 	"label[0,0;"..machine_name.."]"..
-	"image[2,2;1,1;default_furnace_fire_bg.png]"..
+	"image[2,2;1,1;furnace_furnace_fire_bg.png]"..
 	"list[current_name;fuel;2,3;1,1;]"..
 	"list[current_name;src;2,1;2,1;]"..
 	"list[current_name;dst;5,1;2,2;]"..
@@ -36,7 +36,7 @@ minetest.register_node("technic:coal_alloy_furnace", {
 	paramtype2 = "facedir",
 	groups = {cracky=2},
 	legacy_facedir_simple = true,
-	sounds = default.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("formspec", formspec)
@@ -62,7 +62,7 @@ minetest.register_node("technic:coal_alloy_furnace_active", {
 	drop = "technic:coal_alloy_furnace",
 	groups = {cracky=2, not_in_creative_inventory=1},
 	legacy_facedir_simple = true,
-	sounds = default.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 	can_dig = technic.machine_can_dig,
 	allow_metadata_inventory_put = technic.machine_inventory_put,
 	allow_metadata_inventory_take = technic.machine_inventory_take,
@@ -127,8 +127,8 @@ minetest.register_abm({
 			meta:set_string("formspec",
 					"size[8,9]"..
 					"label[0,0;"..machine_name.."]"..
-					"image[2,2;1,1;default_furnace_fire_bg.png^[lowpart:"..
-					(100 - percent)..":default_furnace_fire_fg.png]"..
+					"image[2,2;1,1;furnace_furnace_fire_bg.png^[lowpart:"..
+					(100 - percent)..":furnace_furnace_fire_fg.png]"..
 					"list[current_name;fuel;2,3;1,1;]"..
 					"list[current_name;src;2,1;2,1;]"..
 					"list[current_name;dst;5,1;2,2;]"..

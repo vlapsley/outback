@@ -38,7 +38,7 @@ function technic.register_generator(data)
 		"invsize[8,9;]"..
 		"label[0,0;"..S("Fuel-Fired %s Generator"):format(tier).."]"..
 		"list[current_name;src;3,1;1,1;]"..
-		"image[4,1;1,1;default_furnace_fire_bg.png]"..
+		"image[4,1;1,1;furnace_furnace_fire_bg.png]"..
 		"list[current_player;main;0,5;8,4;]"..
 		"listring[]"
 	
@@ -100,8 +100,8 @@ function technic.register_generator(data)
 			"size[8, 9]"..
 			"label[0, 0;"..minetest.formspec_escape(desc).."]"..
 			"list[current_name;src;3, 1;1, 1;]"..
-			"image[4, 1;1, 1;default_furnace_fire_bg.png^[lowpart:"..
-			(percent)..":default_furnace_fire_fg.png]"..
+			"image[4, 1;1, 1;furnace_furnace_fire_bg.png^[lowpart:"..
+			(percent)..":furnace_furnace_fire_fg.png]"..
 			"list[current_player;main;0, 5;8, 4;]"..
 			"listring[]"..
 			form_buttons
@@ -125,7 +125,7 @@ function technic.register_generator(data)
 		groups = groups,
 		connect_sides = {"bottom", "back", "left", "right"},
 		legacy_facedir_simple = true,
-		sounds = default.node_sound_wood_defaults(),
+		sounds = base.node_sound_wood_defaults(),
 		tube = data.tube and tube or nil,
 		on_construct = function(pos)
 			local meta = minetest.get_meta(pos)
@@ -193,7 +193,7 @@ function technic.register_generator(data)
 		groups = active_groups,
 		connect_sides = {"bottom"},
 		legacy_facedir_simple = true,
-		sounds = default.node_sound_wood_defaults(),
+		sounds = base.node_sound_wood_defaults(),
 		tube = data.tube and tube or nil,
 		drop = "technic:"..ltier.."_generator",
 		can_dig = technic.machine_can_dig,
@@ -244,8 +244,8 @@ function technic.register_generator(data)
 				"size[8, 9]"..
 				"label[0, 0;"..minetest.formspec_escape(desc).."]"..
 				"list[current_name;src;3, 1;1, 1;]"..
-				"image[4, 1;1, 1;default_furnace_fire_bg.png^[lowpart:"..
-				(percent)..":default_furnace_fire_fg.png]"..
+				"image[4, 1;1, 1;furnace_furnace_fire_bg.png^[lowpart:"..
+				(percent)..":furnace_furnace_fire_fg.png]"..
 				"list[current_player;main;0, 5;8, 4;]"..
 				"listring[]"..
 				form_buttons
@@ -278,8 +278,8 @@ function technic.register_generator(data)
 				"size[8, 9]"..
 				"label[0, 0;"..minetest.formspec_escape(desc).."]"..
 				"list[current_name;src;3, 1;1, 1;]"..
-				"image[4, 1;1, 1;default_furnace_fire_bg.png^[lowpart:"..
-				(percent)..":default_furnace_fire_fg.png]"..
+				"image[4, 1;1, 1;furnace_furnace_fire_bg.png^[lowpart:"..
+				(percent)..":furnace_furnace_fire_fg.png]"..
 				"list[current_player;main;0, 5;8, 4;]"..
 				"listring[]"..
 				form_buttons

@@ -17,9 +17,9 @@ local cable_entry = "^technic_cable_connection_overlay.png"
 minetest.register_craft({
 	output = "technic:forcefield_emitter_off",
 	recipe = {
-		{"default:mese",         "technic:motor",          "default:mese"        },
+		{"base:mese",         "technic:motor",          "base:mese"        },
 		{"technic:deployer_off", "technic:machine_casing", "technic:deployer_off"},
-		{"default:mese",         "technic:hv_cable",       "default:mese"        },
+		{"base:mese",         "technic:hv_cable",       "base:mese"        },
 	}
 })
 
@@ -352,7 +352,7 @@ minetest.register_node("technic:forcefield", {
 	drawtype = "glasslike",
 	groups = {not_in_creative_inventory=1},
 	paramtype = "light",
-	light_source = default.LIGHT_MAX,
+	light_source = 14,
 	diggable = false,
 	drop = '',
 	tiles = {{

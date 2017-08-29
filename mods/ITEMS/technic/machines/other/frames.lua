@@ -875,9 +875,9 @@ minetest.register_node("technic:template_motor",{
 minetest.register_craft({
 	output = 'technic:frame_111111',
 	recipe = {
-		{'',			'default:stick',	''},
-		{'default:stick',	'technic:brass_ingot',	'default:stick'},
-		{'',			'default:stick',	''},
+		{'',			'base:stick',	''},
+		{'base:stick',	'technic:brass_ingot',	'base:stick'},
+		{'',			'base:stick',	''},
 	}
 })
 
@@ -894,7 +894,7 @@ minetest.register_craft({
 	output = 'technic:template 10',
 	recipe = {
 		{'',			'technic:brass_ingot',	''},
-		{'technic:brass_ingot',	'default:mese_crystal',	'technic:brass_ingot'},
+		{'technic:brass_ingot',	'base:mese_crystal',	'technic:brass_ingot'},
 		{'',			'technic:brass_ingot',	''},
 	}
 })
@@ -922,7 +922,7 @@ minetest.register_craft({
 	output = 'technic:template_tool',
 	recipe = {
 		{'',				'technic:template',	''},
-		{'default:mese_crystal',	'default:stick',	'default:mese_crystal'},
-		{'',				'default:stick',	''},
+		{'base:mese_crystal',	'base:stick',	'base:mese_crystal'},
+		{'',				'base:stick',	''},
 	}
 })

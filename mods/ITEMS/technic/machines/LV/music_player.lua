@@ -7,9 +7,9 @@ minetest.register_alias("music_player", "technic:music_player")
 minetest.register_craft({
 	output = 'technic:music_player',
 	recipe = {
-		{'technic:chromium_ingot', 'default:diamond',        'technic:chromium_ingot'},
-		{'default:diamond',        'technic:machine_casing', 'default:diamond'},
-		{'default:mossycobble',    'technic:lv_cable',       'default:mossycobble'},
+		{'technic:chromium_ingot', 'base:diamond',        'technic:chromium_ingot'},
+		{'base:diamond',        'technic:machine_casing', 'base:diamond'},
+		{'base:mossycobble',    'technic:lv_cable',       'base:mossycobble'},
 	}
 })
 
@@ -97,7 +97,7 @@ minetest.register_node("technic:music_player", {
 	groups = {snappy=2, choppy=2, oddly_breakable_by_hand=2,
 		technic_machine=1, technic_lv=1},
 	connect_sides = {"bottom"},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("infotext", S("%s Music Player"):format("LV"))

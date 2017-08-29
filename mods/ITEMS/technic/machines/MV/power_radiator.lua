@@ -122,7 +122,7 @@ minetest.register_node("technic:power_radiator", {
 	tiles  = {"technic_lv_cable.png", "technic_lv_cable.png", "technic_lv_cable.png",
 	          "technic_lv_cable.png", "technic_lv_cable.png", "technic_lv_cable.png"},
 	groups = {snappy=2, choppy=2, oddly_breakable_by_hand=2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = base.node_sound_wood_defaults(),
 	drawtype = "nodebox",
 	paramtype = "light",
 	is_ground_content = true,

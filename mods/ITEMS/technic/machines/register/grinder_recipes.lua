@@ -10,29 +10,29 @@ end
 
 local recipes = {
 	-- Dusts
-	{"default:coal_lump",          "technic:coal_dust 2"},
-	{"default:copper_lump",        "technic:copper_dust 2"},
-	{"default:desert_stone",       "default:desert_sand"},
-	{"default:gold_lump",          "technic:gold_dust 2"},
-	{"default:iron_lump",          "technic:wrought_iron_dust 2"},
+	{"base:coal_lump",          "technic:coal_dust 2"},
+	{"base:copper_lump",        "technic:copper_dust 2"},
+	{"base:desert_sandstone",       "base:desert_sand"},
+	{"base:gold_lump",          "technic:gold_dust 2"},
+	{"base:iron_lump",          "technic:wrought_iron_dust 2"},
 	{"technic:chromium_lump",      "technic:chromium_dust 2"},
 	{"technic:uranium_lump",       "technic:uranium_dust 2"},
 	{"technic:zinc_lump",          "technic:zinc_dust 2"},
 	{"technic:lead_lump",          "technic:lead_dust 2"},
 	{"technic:sulfur_lump",        "technic:sulfur_dust 2"},
-	{"default:stone",              "technic:stone_dust"},
-	{"default:sand",               "technic:stone_dust"},
+	{"base:stone",              "technic:stone_dust"},
+	{"base:sand",               "technic:stone_dust"},
 	
 	-- Other
-	{"default:cobble",          "default:gravel"},
-	{"default:gravel",          "default:sand"},
-	{"default:sandstone",       "default:sand 2"}, -- reverse recipe can be found in the compressor
+	{"base:cobble",          "base:gravel"},
+	{"base:gravel",          "base:sand"},
+	{"base:sandstone",       "base:sand 2"}, -- reverse recipe can be found in the compressor
 }
 
 -- defuse the sandstone -> 4 sand recipe to avoid infinite sand bugs (also consult the inverse compressor recipe)
 minetest.clear_craft({
 	recipe = {
-		{'default:sandstone'}
+		{'base:sandstone'}
 	},
 })
 
@@ -82,21 +82,21 @@ end
 
 -- Sorted alphibeticaly
 register_dust("Brass",           "technic:brass_ingot")
-register_dust("Bronze",          "default:bronze_ingot")
+register_dust("Bronze",          "base:bronze_ingot")
 register_dust("Carbon Steel",    "technic:carbon_steel_ingot")
 register_dust("Cast Iron",       "technic:cast_iron_ingot")
 register_dust("Chernobylite",    "technic:chernobylite_block")
 register_dust("Chromium",        "technic:chromium_ingot")
 register_dust("Coal",            nil)
-register_dust("Copper",          "default:copper_ingot")
+register_dust("Copper",          "base:copper_ingot")
 register_dust("Lead",            "technic:lead_ingot")
-register_dust("Gold",            "default:gold_ingot")
+register_dust("Gold",            "base:gold_ingot")
 register_dust("Mithril",         "moreores:mithril_ingot")
 register_dust("Silver",          "moreores:silver_ingot")
 register_dust("Stainless Steel", "technic:stainless_steel_ingot")
-register_dust("Stone",            "default:stone")
+register_dust("Stone",            "base:stone")
 register_dust("Sulfur",          nil)
-register_dust("Tin",             "moreores:tin_ingot")
+register_dust("Tin",             "base:tin_ingot")
 register_dust("Wrought Iron",    "technic:wrought_iron_ingot")
 register_dust("Zinc",            "technic:zinc_ingot")
 if minetest.get_modpath("gloopores") or minetest.get_modpath("glooptest") then

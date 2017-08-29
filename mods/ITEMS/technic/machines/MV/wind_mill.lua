@@ -22,10 +22,10 @@ minetest.register_craft({
 minetest.register_node("technic:wind_mill_frame", {
 	description = S("Wind Mill Frame"),
 	drawtype = "glasslike_framed",
-	tiles = {"technic_carbon_steel_block.png", "default_glass.png"},
+	tiles = {"technic_carbon_steel_block.png", "base_glass.png"},
 	sunlight_propagates = true,
 	groups = {cracky=3},
-	sounds = default.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 	paramtype = "light",
 })
 
@@ -71,7 +71,7 @@ minetest.register_node("technic:wind_mill", {
 	paramtype2 = "facedir",
 	groups = {cracky=1, technic_machine=1, technic_mv=1},
 	connect_sides = {"top", "bottom", "back", "left", "right"},
-	sounds = default.node_sound_stone_defaults(),
+	sounds = base.node_sound_stone_defaults(),
 	drawtype = "nodebox",
 	paramtype = "light",
 	node_box = {
