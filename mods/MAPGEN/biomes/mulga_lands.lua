@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_mulga_lands.lua
+--[[
+	Mulga Lands
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

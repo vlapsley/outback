@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_jarrah_karri_forests.lua
+--[[
+	Jarrah / Karri Forests
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

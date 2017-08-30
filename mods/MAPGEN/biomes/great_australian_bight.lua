@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_great_australian_bight.lua
+--[[
+	Great Australian Bight
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

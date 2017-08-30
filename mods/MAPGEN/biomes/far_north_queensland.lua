@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_far_north_queensland.lua
+--[[
+	Far North Queensland
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

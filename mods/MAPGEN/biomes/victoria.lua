@@ -1,11 +1,14 @@
--- mods/australia_modpack/australia/biome_victorian_forests.lua
+--[[
+	Victoria
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random
 
--- victorian forests
+-- victoria
 minetest.register_biome({
-	name =              "victorian_forests",
+	name =              "victoria",
 	node_top =          "base:dirt_with_grass",
 	depth_top =         1,
 	node_filler =       "base:dirt",
@@ -34,7 +37,7 @@ minetest.register_ore({
 	column_height_min =       2,
 	column_height_max =       4,
 	column_midpoint_factor =  0.5,
-	biomes =                  {"victorian_forests"},
+	biomes =                  {"victoria"},
 	y_min =                   -192,
 	y_max =                   0,
 	noise_threshold =         1.25,
@@ -53,7 +56,7 @@ minetest.register_ore({
 	ore_type =         "vein",
 	ore =              "base:stone_with_gold",
 	wherein =          {"base:stone"},
-	biomes =           {"victorian_forests"},
+	biomes =           {"victoria"},
 	y_min =            -192,
 	y_max =            44,
 	random_factor =    0.23,
@@ -77,7 +80,7 @@ minetest.register_ore({
 	column_height_min =       2,
 	column_height_max =       4,
 	column_midpoint_factor =  0.5,
-	biomes =                  {"victorian_forests"},
+	biomes =                  {"victoria"},
 	y_min =                   -192,
 	y_max =                   128,
 	noise_threshold =         1.25,
@@ -110,7 +113,7 @@ local function register_grass_decoration(offset, scale, length)
 			octaves =  3,
 			persist =  0.6
 		},
-		biomes =        {"victorian_forests"},
+		biomes =        {"victoria"},
 		y_min =         4,
 		y_max =         200,
 		decoration =    "base:grass_"..length,
@@ -131,7 +134,7 @@ local function register_rivergrass(length)
 		density =   0.5,
 		priority =  25,
 		check = function(t, pos)
-			return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 4 and pos.y <= 200 and table.contains({"victorian_forests"}, t.biome)
+			return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 4 and pos.y <= 200 and table.contains({"victoria"}, t.biome)
 		end,
 	})
 end
@@ -151,7 +154,7 @@ plants_api.register_plant({
 	density =   0.0025,
 	priority =  50,
 	check = function(t, pos)
-		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 100 and table.contains({"victorian_forests"}, t.biome)
+		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 100 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  1
@@ -166,7 +169,7 @@ minetest.register_decoration({
 	place_on =    {"base:dirt_with_grass"},
 	sidelen =     80,
 	fill_ratio =  0.3,
-	biomes =      {"victorian_forests"},
+	biomes =      {"victoria"},
 	y_min =       140,
 	y_max =       31000,
 	decoration =  "base:snow",
@@ -181,7 +184,7 @@ local function register_small_stone_rocks(number)
 		place_on =    {"base:dirt_with_grass"},
 		fill_ratio =  0.003,
 		y_min =       12,
-		biomes =      {"victorian_forests"},
+		biomes =      {"victoria"},
 		flags =       "place_center_x, place_center_z",
 		rotation =    "random",
 	})
@@ -211,7 +214,7 @@ plants_api.register_plant({
 	density =   0.0001,
 	priority =  35,
 	check = function(t, pos)
-		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 40 and table.contains({"victorian_forests"}, t.biome)
+		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 40 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(9, 15)
@@ -232,7 +235,7 @@ plants_api.register_plant({
 	density =   0.0001,
 	priority =  35,
 	check = function(t, pos)
-		return t.v4 < 0.5 and pos.y >= 5 and pos.y <= 40 and table.contains({"victorian_forests"}, t.biome)
+		return t.v4 < 0.5 and pos.y >= 5 and pos.y <= 40 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(9, 15)
@@ -253,7 +256,7 @@ plants_api.register_plant({
 	density =   0.005,
 	priority =  35,
 	check = function(t, pos)
-		return pos.y >= 41 and pos.y <= 125 and table.contains({"victorian_forests"}, t.biome)
+		return pos.y >= 41 and pos.y <= 125 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(6, 8)
@@ -274,7 +277,7 @@ plants_api.register_plant({
 	density =   0.01,
 	priority =  80,
 	check = function(t, pos)
-		return t.valleys > 0 and t.valleys < 0.3 and pos.y >= 5 and pos.y <= 40 and table.contains({"victorian_forests"}, t.biome)
+		return t.valleys > 0 and t.valleys < 0.3 and pos.y >= 5 and pos.y <= 40 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(12, 22)
@@ -296,7 +299,7 @@ plants_api.register_plant({
 	density =   0.01,
 	priority =  80,
 	check = function(t, pos)
-		return t.v4 > 0.5 and pos.y >= 5 and pos.y <= 40 and table.contains({"victorian_forests"}, t.biome)
+		return t.v4 > 0.5 and pos.y >= 5 and pos.y <= 40 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(12, 22)
@@ -318,7 +321,7 @@ plants_api.register_plant({
 	density =   0.0025,
 	priority =  40,
 	check = function(t, pos)
-		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 60 and table.contains({"victorian_forests"}, t.biome)
+		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 60 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(7, 10)
@@ -340,7 +343,7 @@ plants_api.register_plant({
 	density =   0.0025,
 	priority =  40,
 	check = function(t, pos)
-		return t.v4 < 0.5 and pos.y >= 5 and pos.y <= 150 and table.contains({"victorian_forests"}, t.biome)
+		return t.v4 < 0.5 and pos.y >= 5 and pos.y <= 150 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 4)
@@ -361,7 +364,7 @@ plants_api.register_plant({
 	density =   0.0025,
 	priority =  40,
 	check = function(t, pos)
-		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 150 and table.contains({"victorian_forests"}, t.biome)
+		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 150 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 4)
@@ -383,7 +386,7 @@ plants_api.register_plant({
 	density =   0.001,
 	priority =  40,
 	check = function(t, pos)
-		return pos.y >= 5 and pos.y <= 60 and table.contains({"victorian_forests"}, t.biome)
+		return pos.y >= 5 and pos.y <= 60 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =        math_random(4, 6)
@@ -406,7 +409,7 @@ plants_api.register_plant({
 	density =   0.0025,
 	priority =  70,
 	check = function(t, pos)
-		return t.v2 > 0 and t.v2 < 0.03 and pos.y >= 5 and pos.y <= 72 and table.contains({"victorian_forests"}, t.biome)
+		return t.v2 > 0 and t.v2 < 0.03 and pos.y >= 5 and pos.y <= 72 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(12, 18)
@@ -428,7 +431,7 @@ plants_api.register_plant({
 	density =   0.05,
 	priority =  50,
 	check = function(t, pos)
-		return pos.y >= 130 and pos.y <= 180 and table.contains({"victorian_forests"}, t.biome)
+		return pos.y >= 130 and pos.y <= 180 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(2, 4)
@@ -449,7 +452,7 @@ plants_api.register_plant({
 	density =   0.005,
 	priority =  65,
 	check = function(t, pos)
-		return t.valleys > 0 and t.valleys < 0.3 and t.v4 > 0.6 and pos.y >= 45 and pos.y <= 64 and table.contains({"victorian_forests"}, t.biome)
+		return t.valleys > 0 and t.valleys < 0.3 and t.v4 > 0.6 and pos.y >= 45 and pos.y <= 64 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(30, 40)
@@ -471,7 +474,7 @@ plants_api.register_plant({
 	density =   0.003,
 	priority =  75,
 	check = function(t, pos)
-		return t.valleys > 0.3 and t.v4 < 0.5 and pos.y >= 5 and pos.y <= 40 and table.contains({"victorian_forests"}, t.biome)
+		return t.valleys > 0.3 and t.v4 < 0.5 and pos.y >= 5 and pos.y <= 40 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(7, 12)
@@ -493,7 +496,7 @@ plants_api.register_plant({
 	density =   0.005,
 	priority =  75,
 	check = function(t, pos)
-		return t.valleys > 0.3 and pos.y >= 41 and pos.y <= 145 and table.contains({"victorian_forests"}, t.biome)
+		return t.valleys > 0.3 and pos.y >= 41 and pos.y <= 145 and table.contains({"victoria"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(7, 12)

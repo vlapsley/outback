@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_underground.lua
+--[[
+	Underground
+--]]
+
 
 -- underground
 minetest.register_biome({

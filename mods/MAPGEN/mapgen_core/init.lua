@@ -46,6 +46,9 @@ minetest.register_alias("mapgen_stair_sandstone_block", "stairs:stair_sandstone_
 minetest.set_mapgen_setting("mg_flags", "caves,nodungeons,decorations,light", true)
 
 
+minetest.clear_registered_decorations()
+minetest.clear_registered_ores()
+
 
 --[[
 	Ores

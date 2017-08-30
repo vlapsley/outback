@@ -1,4 +1,7 @@
--- mods/australian_modpack/australia/biome_eastern_coasts.lua
+--[[
+	Eastern Coasts
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

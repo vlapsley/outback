@@ -1,11 +1,14 @@
--- mods/australia_modpack/australia/biome_goldfields_esperence.lua
+--[[
+	Nullabor Plains
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random
 
--- goldfields / esperence
+-- nullabor plains
 minetest.register_biome({
-	name =              "goldfields_esperence",
+	name =              "nullabor_plains",
 	node_top =          "base:desert_sand",
 	depth_top =         2,
 	node_filler =       "base:sandstone",
@@ -32,7 +35,7 @@ minetest.register_ore({
 	ore_type =         "vein",
 	ore =              "base:stone_with_gold",
 	wherein =          {"base:stone"},
-	biomes =           {"goldfields_esperence"},
+	biomes =           {"nullabor_plains"},
 	y_min =            -192,
 	y_max =            47,
 	random_factor =    0.23,
@@ -67,7 +70,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 			octaves =  3,
 			persist =  0.6
 		},
-		biomes =        {"goldfields_esperence"},
+		biomes =        {"nullabor_plains"},
 		y_min =         4,
 		y_max =         240,
 		decoration =    "base:dry_grass_"..length,
@@ -86,7 +89,7 @@ minetest.register_decoration({
 	place_on =    {"base:desert_sand"},
 	sidelen =     80,
 	fill_ratio =  0.03,
-	biomes =      {"goldfields_esperence"},
+	biomes =      {"nullabor_plains"},
 	y_min =       4,
 	y_max =       41,
 	decoration =  "base:spinifex",
@@ -99,7 +102,7 @@ plants_api.register_plant({
 	density =   0.2,
 	priority =  30,
 	check = function(t, pos)
-		return t.v2 > 0.1 and t.v4 > 0.5 and t.v3 < 40 and pos.y >= 5 and pos.y <= 50 and table.contains({"goldfields_esperence"}, t.biome)
+		return t.v2 > 0.1 and t.v4 > 0.5 and t.v3 < 40 and pos.y >= 5 and pos.y <= 50 and table.contains({"nullabor_plains"}, t.biome)
 	end,
 })
 
@@ -111,7 +114,7 @@ local function register_small_sandstone_rocks(number)
 		sidelen =     80,
 		place_on =    {"base:desert_sand"},
 		fill_ratio =  0.002,
-		biomes =      {"goldfields_esperence"},
+		biomes =      {"nullabor_plains"},
 		flags =       "place_center_x, place_center_z",
 		rotation =    "random",
 	})
@@ -142,7 +145,7 @@ plants_api.register_plant({
 	density =   0.0025,
 	priority =  50,
 	check = function(t, pos)
-		return t.v2 > 0 and t.v2 < 0.01 and pos.y >= 10 and pos.y <= 77 and table.contains({"goldfields_esperence"}, t.biome)
+		return t.v2 > 0 and t.v2 < 0.01 and pos.y >= 10 and pos.y <= 77 and table.contains({"nullabor_plains"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
 		local height =        math_random(2, 3)

@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_indian_ocean.lua
+--[[
+	Indian Ocean
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

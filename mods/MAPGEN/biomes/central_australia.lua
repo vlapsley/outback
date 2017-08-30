@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_central_australia.lua
+--[[
+	Central Australia
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

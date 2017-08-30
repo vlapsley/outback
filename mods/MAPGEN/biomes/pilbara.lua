@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_pilbara.lua
+--[[
+	Pilbara
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

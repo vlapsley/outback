@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_flinders_lofty.lua
+--[[
+	Flinders / Lofty
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

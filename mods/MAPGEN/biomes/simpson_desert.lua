@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_simpson_desert.lua
+--[[
+	Simpson Desert
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

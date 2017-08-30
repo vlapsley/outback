@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_timor_sea.lua
+--[[
+	Timor Sea
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_great_barrier_reef.lua
+--[[
+	Great Barrier Reef
+--]]
+
 
 -- Localize math routines for performance.
 local math_random = math.random

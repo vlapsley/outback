@@ -1,4 +1,7 @@
--- mods/australia/biome_mangroves.lua
+--[[
+	Mangroves
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_tasman_sea.lua
+--[[
+	Tasman Sea
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

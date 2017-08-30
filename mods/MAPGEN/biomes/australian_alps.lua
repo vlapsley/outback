@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_australian_alps.lua
+--[[
+	Australian Alps
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random

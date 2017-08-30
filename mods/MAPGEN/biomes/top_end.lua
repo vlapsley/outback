@@ -1,4 +1,7 @@
--- mods/australia_modpack/australia/biome_top_end.lua
+--[[
+	Top End
+--]]
+
 
 -- localize math routines for performance
 local math_random = math.random
