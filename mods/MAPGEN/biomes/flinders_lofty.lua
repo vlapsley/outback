@@ -30,27 +30,6 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
--- Basalt
-minetest.register_ore({
-	ore_type =         "blob",
-	ore =              "base:basalt",
-	wherein =          {"base:stone"},
-	clust_scarcity =   24 * 24 * 24,
-	clust_size =       8,
-	biomes =           {"flinders_lofty"},
-	y_min =            0,
-	y_max =            47,
-	noise_threshold =  0.2,
-	noise_params =     {
-		offset =   0.5,
-		scale =    0.2,
-		spread =   {x = 5, y = 5, z = 5},
-		seed =     774,
-		octaves =  1,
-		persist =  0.0
-	},
-})
-
 minetest.register_ore({
 	ore_type       = "sheet",
 	ore            = "base:marble",
@@ -63,27 +42,6 @@ minetest.register_ore({
 	y_max          = -5,
 	noise_threshold = 0.4,
 	noise_params = {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
-})
-
-minetest.register_ore({
-	ore_type =                "sheet",
-	ore =                     "base:basalt",
-	wherein =                 "base:stone",
-	column_height_min =       2,
-	column_height_max =       4,
-	column_midpoint_factor =  0.5,
-	biomes =                  {"flinders_lofty"},
-	y_min =                   -192,
-	y_max =                   0,
-	noise_threshold =         1.25,
-	noise_params =            {
-		offset =   0,
-		scale =    2,
-		spread =   {x = 19, y = 19, z = 11},
-		seed =     677,
-		octaves =  2,
-		persist =  0.8,
-	},
 })
 
 -- Copper (Olympic Dam)

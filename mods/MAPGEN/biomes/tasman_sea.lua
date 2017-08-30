@@ -16,7 +16,7 @@ minetest.register_biome({
 	node_stone =      "base:stone",
 	node_riverbed =   "base:sand",
 	depth_riverbed =  1,
-	y_min =           -192,
+	y_min =           -255,
 	y_max =           3,
 	heat_point =      10,
 	humidity_point =  10,

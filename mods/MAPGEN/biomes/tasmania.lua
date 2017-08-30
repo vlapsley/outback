@@ -30,6 +30,31 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
+-- Basalt
+minetest.register_ore({
+	ore_type       = "blob",
+	ore            = "base:basalt",
+	wherein        = {"base:stone"},
+	clust_scarcity = 15*15*15,
+	clust_num_ores = 33,
+	clust_size     = 5,
+	biomes         = {"tasmania"},
+	y_min          = -255,
+	y_max          = 31000,
+})
+
+minetest.register_ore({
+	ore_type       = "blob",
+	ore            = "base:basalt",
+	wherein        = {"base:stone"},
+	clust_scarcity = 10*10*10,
+	clust_num_ores = 58,
+	clust_size     = 7,
+	biomes         = {"tasmania"},
+	y_min          = -255,
+	y_max          = 31000,
+})
+
 
 --[[
 	Decorations

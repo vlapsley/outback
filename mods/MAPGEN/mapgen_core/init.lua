@@ -182,6 +182,30 @@ minetest.register_ore({
 	y_max          = 31000,
 })
 
+-- Basalt
+minetest.register_ore({
+	ore_type       = "blob",
+	ore            = "base:basalt",
+	wherein        = {"base:stone"},
+	clust_scarcity = 18*18*18,
+	clust_num_ores = 33,
+	clust_size     = 5,
+	y_min          = -31000,
+	y_max          = -256,
+})
+
+minetest.register_ore({
+	ore_type       = "blob",
+	ore            = "base:basalt",
+	wherein        = {"base:stone"},
+	clust_scarcity = 12*12*12,
+	clust_num_ores = 58,
+	clust_size     = 7,
+	y_min          = -31000,
+	y_max          = -256,
+})
+
+
 -- Coal
 minetest.register_ore({
 	ore_type        = "scatter",
