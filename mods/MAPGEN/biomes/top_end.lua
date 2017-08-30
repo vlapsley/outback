@@ -64,55 +64,49 @@ minetest.register_ore({
 	y_max =           17,
 })
 
--- Uranium from Technic modpack: technic_worldgen mod
--- Ranger
-if minetest.get_modpath("technic_worldgen") then
-	minetest.register_ore({
-		ore_type =         "scatter",
-		ore =              "technic:mineral_uranium",
-		wherein =          {"base:stone"},
-		clust_scarcity =   28 * 28 * 28,
-		clust_num_ores =   4,
-		clust_size =       3,
-		biomes =           {"top_end"},
-		y_min =            -192,
-		y_max =            19,
-		noise_threshold =  0.6,
-		noise_params =     {
-			offset =   0,
-			scale =    1,
-			spread =   {x = 100, y = 100, z = 100},
-			seed =     420,
-			octaves =  3,
-			persist =  0.7
-			},
-	})
-end
+-- Uranium (Ranger)
+minetest.register_ore({
+	ore_type =         "scatter",
+	ore =              "base:stone_with_uranium",
+	wherein =          {"base:stone"},
+	clust_scarcity =   28 * 28 * 28,
+	clust_num_ores =   4,
+	clust_size =       3,
+	biomes =           {"top_end"},
+	y_min =            -192,
+	y_max =            19,
+	noise_threshold =  0.6,
+	noise_params =     {
+		offset =   0,
+		scale =    1,
+		spread =   {x = 100, y = 100, z = 100},
+		seed =     420,
+		octaves =  3,
+		persist =  0.7
+		},
+})
 
--- Uranium from Technic modpack: technic_worldgen mod
--- Jabiluka
-if minetest.get_modpath("technic_worldgen") then
-	minetest.register_ore({
-		ore_type =         "scatter",
-		ore =              "technic:mineral_uranium",
-		wherein =          {"base:stone"},
-		clust_scarcity =   26 * 26 * 26,
-		clust_num_ores =   4,
-		clust_size =       3,
-		biomes =           {"top_end"},
-		y_min =            -192,
-		y_max =            6,
-		noise_threshold =  0.6,
-		noise_params =     {
-			offset =   0,
-			scale =    1,
-			spread =   {x = 100, y = 100, z = 100},
-			seed =     241,
-			octaves =  3,
-			persist =  0.7
-			},
-	})
-end
+-- Uranium (Jabiluka)
+minetest.register_ore({
+	ore_type =         "scatter",
+	ore =              "technic:stone_with_uranium",
+	wherein =          {"base:stone"},
+	clust_scarcity =   26 * 26 * 26,
+	clust_num_ores =   4,
+	clust_size =       3,
+	biomes =           {"top_end"},
+	y_min =            -192,
+	y_max =            6,
+	noise_threshold =  0.6,
+	noise_params =     {
+		offset =   0,
+		scale =    1,
+		spread =   {x = 100, y = 100, z = 100},
+		seed =     241,
+		octaves =  3,
+		persist =  0.7
+		},
+})
 
 
 --[[

@@ -51,30 +51,27 @@ minetest.register_ore({
 	},
 })
 
--- Uranium from Technic modpack: technic_worldgen mod
--- Olympic Dam
-if minetest.get_modpath("technic_worldgen") then
-	minetest.register_ore({
-		ore_type =         "scatter",
-		ore =              "technic:mineral_uranium",
-		wherein =          "base:stone",
-		clust_scarcity =   20 * 20 * 20,
-		clust_num_ores =   6,
-		clust_size =       4,
-		biomes =           {"central_australia"},
-		y_min =            -64,
-		y_max =            11,
-		noise_threshold =  0.6,
-		noise_params =     {
-			offset =   0,
-			scale =    1,
-			spread =   {x = 100, y = 100, z = 100},
-			seed =     419,
-			octaves =  3,
-			persist =  0.7
-		},
-	})
-end
+-- Uranium (Olympic Dam)
+minetest.register_ore({
+	ore_type =         "scatter",
+	ore =              "base:stone_with_uranium",
+	wherein =          "base:stone",
+	clust_scarcity =   20 * 20 * 20,
+	clust_num_ores =   6,
+	clust_size =       4,
+	biomes =           {"central_australia"},
+	y_min =            -64,
+	y_max =            11,
+	noise_threshold =  0.6,
+	noise_params =     {
+		offset =   0,
+		scale =    1,
+		spread =   {x = 100, y = 100, z = 100},
+		seed =     419,
+		octaves =  3,
+		persist =  0.7
+	},
+})
 
 
 --[[
