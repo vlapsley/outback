@@ -865,6 +865,18 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "cooking",
+	output = "base:zinc_ingot",
+	recipe = "base:zinc_lump",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:lead_ingot",
+	recipe = "base:lead_lump",
+})
+
+minetest.register_craft({
+	type = "cooking",
 	output = "base:clay_brick",
 	recipe = "base:clay_lump",
 })

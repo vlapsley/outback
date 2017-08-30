@@ -624,6 +624,47 @@ minetest.register_node("base:uraniumblock", {
 	sounds = base.node_sound_stone_defaults(),
 })
 
+minetest.register_node("base:stone_with_zinc", {
+	description = "Zinc Ore",
+	tiles = {"base_stone.png^base_mineral_zinc.png" },
+	is_ground_content = true,
+	groups = {cracky = 3},
+	drop = "base:zinc_lump",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:zincblock", {
+	description = "Zinc Block",
+	tiles = {"base_zinc_block.png"},
+	is_ground_content = false,
+	groups = {cracky = 1, level = 2},
+	sounds = base.node_sound_metal_defaults(),
+})
+
+minetest.register_node("base:stone_with_lead", {
+	description = "Lead Ore",
+	tiles = {"base_stone.png^base_mineral_lead.png" },
+	groups = {cracky = 3},
+	drop = "base:lead_lump",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:leadblock", {
+	description = "Lead Block",
+	tiles = {"base_lead_block.png"},
+	is_ground_content = false,
+	groups = {cracky = 1, level = 2},
+	sounds = base.node_sound_metal_defaults(),
+})
+
+minetest.register_node("base:stone_with_sulfur", {
+	description = "Sulfur Ore",
+	tiles = {"base_stone.png^base_mineral_sulfur.png" },
+	groups = {cracky = 3},
+	drop = "base:sulfur_lump",
+	sounds = base.node_sound_stone_defaults(),
+})
+
 minetest.register_node("base:stone_with_mese", {
 	description = "Mese Ore",
 	tiles = {"base_stone.png^base_mineral_mese.png"},
