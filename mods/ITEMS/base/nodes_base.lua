@@ -665,6 +665,22 @@ minetest.register_node("base:stone_with_sulfur", {
 	sounds = base.node_sound_stone_defaults(),
 })
 
+minetest.register_node("base:stone_with_silver", {
+	description = "Silver Ore",
+	tiles = {"base_stone.png^base_mineral_silver.png" },
+	groups = {cracky = 3},
+	drop = "base:silver_lump",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:silverblock", {
+	description = "Silver Block",
+	tiles = {"base_silver_block.png"},
+	is_ground_content = false,
+	groups = {cracky = 1, level = 2},
+	sounds = base.node_sound_metal_defaults(),
+})
+
 minetest.register_node("base:stone_with_mese", {
 	description = "Mese Ore",
 	tiles = {"base_stone.png^base_mineral_mese.png"},

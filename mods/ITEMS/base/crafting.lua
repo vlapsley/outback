@@ -437,6 +437,54 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = 'base:zincblock',
+	recipe = {
+		{'base:zinc_ingot', 'base:zinc_ingot', 'base:zinc_ingot'},
+		{'base:zinc_ingot', 'base:zinc_ingot', 'base:zinc_ingot'},
+		{'base:zinc_ingot', 'base:zinc_ingot', 'base:zinc_ingot'},
+	}
+})
+
+minetest.register_craft({
+	output = 'base:zinc_ingot 9',
+	recipe = {
+		{'base:zincblock'},
+	}
+})
+
+minetest.register_craft({
+	output = 'base:leadblock',
+	recipe = {
+		{'base:lead_ingot', 'base:lead_ingot', 'base:lead_ingot'},
+		{'base:lead_ingot', 'base:lead_ingot', 'base:lead_ingot'},
+		{'base:lead_ingot', 'base:lead_ingot', 'base:lead_ingot'},
+	}
+})
+
+minetest.register_craft({
+	output = 'base:lead_ingot 9',
+	recipe = {
+		{'base:leadblock'},
+	}
+})
+
+minetest.register_craft({
+	output = 'base:silverblock',
+	recipe = {
+		{'base:silver_ingot', 'base:silver_ingot', 'base:silver_ingot'},
+		{'base:silver_ingot', 'base:silver_ingot', 'base:silver_ingot'},
+		{'base:silver_ingot', 'base:silver_ingot', 'base:silver_ingot'},
+	}
+})
+
+minetest.register_craft({
+	output = 'base:silver_ingot 9',
+	recipe = {
+		{'base:silverblock'},
+	}
+})
+
+minetest.register_craft({
 	output = 'base:diamondblock',
 	recipe = {
 		{'base:diamond', 'base:diamond', 'base:diamond'},
@@ -873,6 +921,12 @@ minetest.register_craft({
 	type = "cooking",
 	output = "base:lead_ingot",
 	recipe = "base:lead_lump",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:silver_ingot",
+	recipe = "base:silver_lump",
 })
 
 minetest.register_craft({

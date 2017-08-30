@@ -65,6 +65,11 @@ minetest.register_craftitem("base:sulfur_lump", {
 	inventory_image = "base_sulfur_lump.png",
 })
 
+minetest.register_craftitem("base:silver_lump", {
+	description = "Silver Lump",
+	inventory_image = "base_silver_lump.png",
+})
+
 minetest.register_craftitem("base:diamond", {
 	description = "Diamond",
 	inventory_image = "base_diamond.png",
@@ -114,6 +119,11 @@ minetest.register_craftitem("base:zinc_ingot", {
 minetest.register_craftitem("base:lead_ingot", {
 	description = "Lead Ingot",
 	inventory_image = "base_lead_ingot.png",
+})
+
+minetest.register_craftitem("base:silver_ingot", {
+	description = "Silver Ingot",
+	inventory_image = "base_silver_ingot.png",
 })
 
 minetest.register_craftitem("base:mese_crystal_fragment", {
