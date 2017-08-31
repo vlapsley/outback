@@ -54,7 +54,7 @@ minetest.register_ore({
 -- Uranium (Olympic Dam)
 minetest.register_ore({
 	ore_type =         "scatter",
-	ore =              "base:stone_with_uranium",
+	ore =              "technic:stone_with_uranium",
 	wherein =          "base:stone",
 	clust_scarcity =   20 * 20 * 20,
 	clust_num_ores =   6,

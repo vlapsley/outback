@@ -67,7 +67,7 @@ minetest.register_ore({
 -- Uranium (Ranger)
 minetest.register_ore({
 	ore_type =         "scatter",
-	ore =              "base:stone_with_uranium",
+	ore =              "technic:stone_with_uranium",
 	wherein =          {"base:stone"},
 	clust_scarcity =   28 * 28 * 28,
 	clust_num_ores =   4,
@@ -89,7 +89,7 @@ minetest.register_ore({
 -- Uranium (Jabiluka)
 minetest.register_ore({
 	ore_type =         "scatter",
-	ore =              "base:stone_with_uranium",
+	ore =              "technic:stone_with_uranium",
 	wherein =          {"base:stone"},
 	clust_scarcity =   26 * 26 * 26,
 	clust_num_ores =   4,

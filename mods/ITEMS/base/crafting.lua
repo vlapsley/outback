@@ -421,22 +421,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'base:uraniumblock',
-	recipe = {
-		{'base:uranium_ingot', 'base:uranium_ingot', 'base:uranium_ingot'},
-		{'base:uranium_ingot', 'base:uranium_ingot', 'base:uranium_ingot'},
-		{'base:uranium_ingot', 'base:uranium_ingot', 'base:uranium_ingot'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:uranium_ingot 9',
-	recipe = {
-		{'base:uraniumblock'},
-	}
-})
-
-minetest.register_craft({
 	output = 'base:zincblock',
 	recipe = {
 		{'base:zinc_ingot', 'base:zinc_ingot', 'base:zinc_ingot'},
@@ -903,12 +887,6 @@ minetest.register_craft({
 	type = "cooking",
 	output = "base:gold_ingot",
 	recipe = "base:gold_lump",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:uranium_ingot",
-	recipe = "base:uranium_lump",
 })
 
 minetest.register_craft({

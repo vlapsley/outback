@@ -45,11 +45,6 @@ minetest.register_craftitem("base:gold_lump", {
 	inventory_image = "base_gold_lump.png",
 })
 
-minetest.register_craftitem("base:uranium_lump", {
-	description = "Uranium Lump",
-	inventory_image = "base_uranium_lump.png",
-})
-
 minetest.register_craftitem("base:zinc_lump", {
 	description = "Zinc Lump",
 	inventory_image = "base_zinc_lump.png",
@@ -103,12 +98,6 @@ minetest.register_craftitem("base:bronze_ingot", {
 minetest.register_craftitem("base:gold_ingot", {
 	description = "Gold Ingot",
 	inventory_image = "base_gold_ingot.png"
-})
-
-minetest.register_craftitem("base:uranium_ingot", {
-	description = "Uranium Ingot",
-	inventory_image = "base_uranium_ingot.png",
-	groups = {uranium_ingot =1},
 })
 
 minetest.register_craftitem("base:zinc_ingot", {
