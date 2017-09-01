@@ -11,7 +11,7 @@ minetest.register_node("technic:stone_with_uranium", {
 	sounds = base.node_sound_stone_defaults(),
 }) 
 
-minetest.register_node("technic:uraniumblock", {
+minetest.register_node("technic:uranium_block", {
 	description = "Uranium Block",
 	tiles = {"technic_uranium_block.png"},
 	is_ground_content = false,
@@ -31,7 +31,7 @@ minetest.register_craftitem("technic:uranium_ingot", {
 })
 
 minetest.register_craft({
-	output = 'technic:uraniumblock',
+	output = 'technic:uranium_block',
 	recipe = {
 		{'technic:uranium_ingot', 'technic:uranium_ingot', 'technic:uranium_ingot'},
 		{'technic:uranium_ingot', 'technic:uranium_ingot', 'technic:uranium_ingot'},
