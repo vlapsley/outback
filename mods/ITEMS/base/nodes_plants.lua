@@ -345,7 +345,7 @@ minetest.register_node("base:spinifex", {
 	description = "Spinifex",
 	drawtype = "plantlike",
 	waving = 0,
-	visual_scale = 1.2,
+	visual_scale = 2,
 	tiles = {"base_spinifex.png"},
 	inventory_image = "base_spinifex.png",
 	wield_image = "base_spinifex.png",
