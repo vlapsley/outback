@@ -762,6 +762,70 @@ minetest.register_node("base:diamondblock", {
 	sounds = base.node_sound_stone_defaults(),
 })
 
+minetest.register_node("base:stone_with_agate", {
+	description = "Agate Ore",
+	tiles = {"base_stone.png^base_mineral_agate.png"},
+	groups = {cracky = 1},
+	drop = "base:agate",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:stone_with_amethyst", {
+	description = "Amethyst Ore",
+	tiles = {"base_stone.png^base_mineral_amethyst.png"},
+	groups = {cracky = 1},
+	drop = "base:amethyst",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:stone_with_citrine", {
+	description = "Citrine Ore",
+	tiles = {"base_stone.png^base_mineral_citrine.png"},
+	groups = {cracky = 1},
+	drop = "base:citrine",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:stone_with_emerald", {
+	description = "Emerald Ore",
+	tiles = {"base_stone.png^base_mineral_emerald.png"},
+	groups = {cracky = 1},
+	drop = "base:emerald",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:stone_with_jade", {
+	description = "Jade Ore",
+	tiles = {"base_stone.png^base_mineral_jade.png"},
+	groups = {cracky = 1},
+	drop = "base:jade",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:stone_with_ruby", {
+	description = "Ruby Ore",
+	tiles = {"base_stone.png^base_mineral_ruby.png"},
+	groups = {cracky = 1},
+	drop = "base:ruby",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:stone_with_sapphire", {
+	description = "Sapphire Ore",
+	tiles = {"base_stone.png^base_mineral_sapphire.png"},
+	groups = {cracky = 1},
+	drop = "base:sapphire",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:stone_with_smoky_quartz", {
+	description = "Smoky Quartz Ore",
+	tiles = {"base_stone.png^base_mineral_smoky_quartz.png"},
+	groups = {cracky = 1},
+	drop = "base:smoky_quartz",
+	sounds = base.node_sound_stone_defaults(),
+})
+
 
 --
 -- Other
