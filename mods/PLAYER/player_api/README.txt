@@ -16,6 +16,7 @@ Authors of media (textures, models and sounds)
 MirceaKitsune (CC BY-SA 3.0):
   character.x
 
-Jordach (CC BY-SA 3.0):
+JDMracer95 (no license):
   character.png
+  https://www.planetminecraft.com/skin/safari-man-better-in-preview/
 
