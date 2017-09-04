@@ -35,6 +35,16 @@ minetest.register_craftitem("base:tin_lump", {
 	inventory_image = "base_tin_lump.png",
 })
 
+minetest.register_craftitem("base:aluminium_lump", {
+	description = "Aluminium Lump",
+	inventory_image = "base_aluminium_lump.png",
+})
+
+minetest.register_craftitem("base:nickel_lump", {
+	description = "Nickel Lump",
+	inventory_image = "base_nickel_lump.png",
+})
+
 minetest.register_craftitem("base:mese_crystal", {
 	description = "Mese Crystal",
 	inventory_image = "base_mese_crystal.png",
@@ -88,6 +98,16 @@ minetest.register_craftitem("base:copper_ingot", {
 minetest.register_craftitem("base:tin_ingot", {
 	description = "Tin Ingot",
 	inventory_image = "base_tin_ingot.png",
+})
+
+minetest.register_craftitem("base:aluminium_ingot", {
+	description = "Aluminium Ingot",
+	inventory_image = "base_aluminium_ingot.png",
+})
+
+minetest.register_craftitem("base:nickel_ingot", {
+	description = "Nickel Ingot",
+	inventory_image = "base_nickel_ingot.png",
 })
 
 minetest.register_craftitem("base:bronze_ingot", {

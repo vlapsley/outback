@@ -536,6 +536,14 @@ minetest.register_node("base:stone_with_coal", {
 	sounds = base.node_sound_stone_defaults(),
 })
 
+minetest.register_node("base:diorite_with_coal", {
+	description = "Coal Ore",
+	tiles = {"base_diorite.png^base_mineral_coal.png"},
+	groups = {cracky = 3},
+	drop = 'base:coal_lump',
+	sounds = base.node_sound_stone_defaults(),
+})
+
 minetest.register_node("base:coalblock", {
 	description = "Coal Block",
 	tiles = {"base_coal_block.png"},
@@ -547,6 +555,14 @@ minetest.register_node("base:coalblock", {
 minetest.register_node("base:stone_with_iron", {
 	description = "Iron Ore",
 	tiles = {"base_stone.png^base_mineral_iron.png"},
+	groups = {cracky = 2},
+	drop = 'base:iron_lump',
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:granite_with_iron", {
+	description = "Iron Ore",
+	tiles = {"base_granite.png^base_mineral_iron.png"},
 	groups = {cracky = 2},
 	drop = 'base:iron_lump',
 	sounds = base.node_sound_stone_defaults(),
@@ -568,20 +584,20 @@ minetest.register_node("base:stone_with_copper", {
 	sounds = base.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:stone_with_opal", {
-	description = "Opal Ore",
-	tiles = {"base_stone.png^base_mineral_opal.png"},
-	groups = {cracky = 2},
-	drop = "base:opal",
-	sounds = base.node_sound_stone_defaults(),
-})
-
 minetest.register_node("base:copperblock", {
 	description = "Copper Block",
 	tiles = {"base_copper_block.png"},
 	is_ground_content = false,
 	groups = {cracky = 1, level = 2},
 	sounds = base.node_sound_metal_defaults(),
+})
+
+minetest.register_node("base:stone_with_opal", {
+	description = "Opal Ore",
+	tiles = {"base_stone.png^base_mineral_opal.png"},
+	groups = {cracky = 2},
+	drop = "base:opal",
+	sounds = base.node_sound_stone_defaults(),
 })
 
 minetest.register_node("base:stone_with_tin", {
@@ -595,6 +611,38 @@ minetest.register_node("base:stone_with_tin", {
 minetest.register_node("base:tinblock", {
 	description = "Tin Block",
 	tiles = {"base_tin_block.png"},
+	is_ground_content = false,
+	groups = {cracky = 1, level = 2},
+	sounds = base.node_sound_metal_defaults(),
+})
+
+minetest.register_node("base:stone_with_aluminium", {
+	description = "Aluminium Ore",
+	tiles = {"base_stone.png^base_mineral_aluminium.png"},
+	groups = {cracky = 2},
+	drop = "base:aluminium_lump",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:aluminiumblock", {
+	description = "Aluminium Block",
+	tiles = {"base_aluminium_block.png"},
+	is_ground_content = false,
+	groups = {cracky = 1, level = 2},
+	sounds = base.node_sound_metal_defaults(),
+})
+
+minetest.register_node("base:stone_with_nickel", {
+	description = "Nickel Ore",
+	tiles = {"base_stone.png^base_mineral_nickel.png"},
+	groups = {cracky = 2},
+	drop = "base:nickel_lump",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_node("base:nickelblock", {
+	description = "Nickel Block",
+	tiles = {"base_nickel_block.png"},
 	is_ground_content = false,
 	groups = {cracky = 1, level = 2},
 	sounds = base.node_sound_metal_defaults(),

@@ -380,6 +380,38 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "base:aluminiumblock",
+	recipe = {
+		{"base:aluminium_ingot", "base:aluminium_ingot", "base:aluminium_ingot"},
+		{"base:aluminium_ingot", "base:aluminium_ingot", "base:aluminium_ingot"},
+		{"base:aluminium_ingot", "base:aluminium_ingot", "base:aluminium_ingot"},
+	}
+})
+
+minetest.register_craft({
+	output = "base:aluminium_ingot 9",
+	recipe = {
+		{"base:aluminiumblock"},
+	}
+})
+
+minetest.register_craft({
+	output = "base:nickelblock",
+	recipe = {
+		{"base:nickel_ingot", "base:nickel_ingot", "base:nickel_ingot"},
+		{"base:nickel_ingot", "base:nickel_ingot", "base:nickel_ingot"},
+		{"base:nickel_ingot", "base:nickel_ingot", "base:nickel_ingot"},
+	}
+})
+
+minetest.register_craft({
+	output = "base:nickel_ingot 9",
+	recipe = {
+		{"base:nickelblock"},
+	}
+})
+
+minetest.register_craft({
 	output = "base:bronze_ingot 9",
 	recipe = {
 		{"base:copper_ingot", "base:copper_ingot", "base:copper_ingot"},
@@ -881,6 +913,18 @@ minetest.register_craft({
 	type = "cooking",
 	output = "base:tin_ingot",
 	recipe = "base:tin_lump",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:aluminium_ingot",
+	recipe = "base:aluminium_lump",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "base:nickel_ingot",
+	recipe = "base:nickel_lump",
 })
 
 minetest.register_craft({
