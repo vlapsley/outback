@@ -17,7 +17,7 @@ minetest.register_biome({
 	node_river_water =  "base:river_water_source",
 	node_riverbed =     "base:sand",
 	depth_riverbed =    1,
-	y_min =             4,
+	y_min =             -255,
 	y_max =             31000,
 	heat_point =        88,
 	humidity_point =    73,
@@ -35,7 +35,7 @@ minetest.register_ore({
 	ore_type       = "blob",
 	ore            = "base:basalt",
 	wherein        = {"base:stone"},
-	clust_scarcity = 15*15*15,
+	clust_scarcity = 3375,
 	clust_num_ores = 33,
 	clust_size     = 5,
 	biomes         = {"far_north_queensland"},
@@ -47,26 +47,12 @@ minetest.register_ore({
 	ore_type       = "blob",
 	ore            = "base:basalt",
 	wherein        = {"base:stone"},
-	clust_scarcity = 10*10*10,
+	clust_scarcity = 1000,
 	clust_num_ores = 58,
 	clust_size     = 7,
 	biomes         = {"far_north_queensland"},
 	y_min          = -255,
 	y_max          = 31000,
-})
-
-minetest.register_ore({
-	ore_type       = "sheet",
-	ore            = "base:marble",
-	wherein        = "base:stone",
-	clust_scarcity = 1,
-	clust_num_ores = 1,
-	clust_size     = 3,
-	biomes         = {"far_north_queensland"},
-	y_min          = -1000,
-	y_max          = -5,
-	noise_threshold = 0.4,
-	noise_params = {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
 })
 
 

@@ -592,9 +592,9 @@ minetest.register_node("base:copperblock", {
 	sounds = base.node_sound_metal_defaults(),
 })
 
-minetest.register_node("base:stone_with_opal", {
+minetest.register_node("base:granite_with_opal", {
 	description = "Opal Ore",
-	tiles = {"base_stone.png^base_mineral_opal.png"},
+	tiles = {"base_granite.png^base_mineral_opal.png"},
 	groups = {cracky = 2},
 	drop = "base:opal",
 	sounds = base.node_sound_stone_defaults(),

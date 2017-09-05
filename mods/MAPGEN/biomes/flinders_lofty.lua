@@ -17,7 +17,7 @@ minetest.register_biome({
 	node_river_water =  "base:muddy_water_source",
 	node_riverbed =     "base:dirt",
 	depth_riverbed =    1,
-	y_min =             4,
+	y_min =             -255,
 	y_max =             31000,
 	heat_point =        40,
 	humidity_point =    20,
@@ -62,6 +62,21 @@ minetest.register_ore({
 		persist =  0.6,
 		flags =    "eased",
 	},
+})
+
+-- Marble
+minetest.register_ore({
+	ore_type       = "sheet",
+	ore            = "base:marble",
+	wherein        = "base:stone",
+	clust_scarcity = 1,
+	clust_num_ores = 1,
+	clust_size     = 3,
+	biomes         = {"flinders_lofty"},
+	y_min          = -255,
+	y_max          = -5,
+	noise_threshold = 0.4,
+	noise_params = {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
 })
 
 

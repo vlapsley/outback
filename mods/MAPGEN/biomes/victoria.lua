@@ -8,19 +8,19 @@ local math_random = math.random
 
 -- victoria
 minetest.register_biome({
-	name =              "victoria",
-	node_top =          "base:dirt_with_grass",
-	depth_top =         1,
-	node_filler =       "base:dirt",
-	depth_filler =      3,
-	node_stone =        "base:stone",
-	node_river_water =  "base:muddy_water_source",
-	node_riverbed =     "base:dirt",
-	depth_riverbed =    1,
-	y_min =             4,
-	y_max =             31000,
-	heat_point =        17,
-	humidity_point =    18,
+	name =             "victoria",
+	node_top =         "base:dirt_with_grass",
+	depth_top =        1,
+	node_filler =      "base:dirt",
+	depth_filler =     3,
+	node_stone =       "base:stone",
+	node_river_water = "base:muddy_water_source",
+	node_riverbed =    "base:dirt",
+	depth_riverbed =   1,
+	y_min =            -255,
+	y_max =            31000,
+	heat_point =       17,
+	humidity_point =   18,
 })
 
 
@@ -35,7 +35,7 @@ minetest.register_ore({
 	ore_type       = "blob",
 	ore            = "base:basalt",
 	wherein        = {"base:stone"},
-	clust_scarcity = 15*15*15,
+	clust_scarcity = 3375,
 	clust_num_ores = 33,
 	clust_size     = 5,
 	biomes         = {"victoria"},
@@ -47,55 +47,12 @@ minetest.register_ore({
 	ore_type       = "blob",
 	ore            = "base:basalt",
 	wherein        = {"base:stone"},
-	clust_scarcity = 10*10*10,
+	clust_scarcity = 1000,
 	clust_num_ores = 58,
 	clust_size     = 7,
 	biomes         = {"victoria"},
 	y_min          = -255,
 	y_max          = 31000,
-})
-
--- Gold
-minetest.register_ore({
-	ore_type =         "vein",
-	ore =              "base:stone_with_gold",
-	wherein =          {"base:stone"},
-	biomes =           {"victoria"},
-	y_min =            -192,
-	y_max =            44,
-	random_factor =    0.23,
-	noise_threshold =  0.97,
-	noise_params =     {
-		offset =   0,
-		scale =    3,
-		spread =   {x = 73, y = 251, z = 73},
-		seed =     894,
-		octaves =  4,
-		persist =  0.5,
-	    flags =    "eased",
-	},
-})
-
--- Coal
-minetest.register_ore({
-	ore_type =                "sheet",
-	ore =                     "base:stone_with_coal",
-	wherein =                 {"base:stone"},
-	column_height_min =       2,
-	column_height_max =       4,
-	column_midpoint_factor =  0.5,
-	biomes =                  {"victoria"},
-	y_min =                   -192,
-	y_max =                   128,
-	noise_threshold =         1.25,
-	noise_params =            {
-		offset =   0,
-		scale =    2,
-		spread =   {x = 19, y = 19, z = 11},
-		seed =     963,
-		octaves =  2,
-		persist =  0.8,
-	},
 })
 
 

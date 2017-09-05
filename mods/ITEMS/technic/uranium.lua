@@ -11,6 +11,14 @@ minetest.register_node("technic:stone_with_uranium", {
 	sounds = base.node_sound_stone_defaults(),
 }) 
 
+minetest.register_node("technic:granite_with_uranium", {
+	description = "Uranium Ore",
+	tiles = {"base_granite.png^technic_mineral_uranium.png" },
+	groups = {cracky = 3, radioactive = 1},
+	drop = "technic:uranium_lump",
+	sounds = base.node_sound_stone_defaults(),
+}) 
+
 minetest.register_node("technic:uranium_block", {
 	description = "Uranium Block",
 	tiles = {"technic_uranium_block.png"},
