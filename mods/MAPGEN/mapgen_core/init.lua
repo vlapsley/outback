@@ -306,7 +306,7 @@ minetest.register_ore({
 	clust_num_ores = 5,
 	clust_size     = 3,
 	y_min          = -31000,
-	y_max          = 0,
+	y_max          = -256,
 })
 
 minetest.register_ore({
@@ -317,7 +317,7 @@ minetest.register_ore({
 	clust_num_ores = 5,
 	clust_size     = 3,
 	y_min          = -31000,
-	y_max          = 0,
+	y_max          = -256,
 })
 
 minetest.register_ore({
@@ -328,7 +328,7 @@ minetest.register_ore({
 	clust_num_ores = 27,
 	clust_size     = 6,
 	y_min          = -31000,
-	y_max          = -64,
+	y_max          = -512,
 })
 
 minetest.register_ore({
@@ -339,7 +339,7 @@ minetest.register_ore({
 	clust_num_ores = 27,
 	clust_size     = 6,
 	y_min          = -31000,
-	y_max          = -64,
+	y_max          = -512,
 })
 
 -- Gold

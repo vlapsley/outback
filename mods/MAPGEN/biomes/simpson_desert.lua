@@ -11,9 +11,9 @@ minetest.register_biome({
 	name =              "simpson_desert",
 	node_top =          "base:red_sand",
 	depth_top =         3,
-	node_filler =       "base:granite",
+	node_filler =       "base:red_sandstone",
 	depth_filler =      2,
-	node_stone =        "base:stone",
+	node_stone =        "base:granite",
 	node_river_water =  "base:muddy_water_source",
 	node_riverbed =     "base:red_gravel",
 	depth_riverbed =    1,
@@ -22,13 +22,6 @@ minetest.register_biome({
 	heat_point =        90,
 	humidity_point =    10,
 })
-
-
---[[
-	Ores
---]]
-
--- Blob ore first to avoid other ores inside blobs
 
 
 --[[
