@@ -8,19 +8,19 @@ local math_random = math.random
 
 -- mangroves
 minetest.register_biome({
-	name =              "mangroves",
-	node_top =          "base:mangrove_mud",
-	depth_top =         3,
-	node_filler =       "base:clay",
-	depth_filler =      1,
-	node_stone =        "base:stone",
-	node_river_water =  "base:muddy_water_source",
-	node_riverbed =     "base:dirt",
-	depth_riverbed =    1,
-	y_min =             -2,
-	y_max =             3,
-	heat_point =        80,
-	humidity_point =    80,
+	name =             "mangroves",
+	node_top =         "base:mangrove_mud",
+	depth_top =        3,
+	node_filler =      "base:clay",
+	depth_filler =     1,
+	node_stone =       "base:stone",
+	node_river_water = "base:muddy_water_source",
+	node_riverbed =    "base:dirt",
+	depth_riverbed =   1,
+	y_min =            -2,
+	y_max =            3,
+	heat_point =       80,
+	humidity_point =   80,
 })
 
 

@@ -8,19 +8,19 @@ local math_random = math.random
 
 -- simpson desert
 minetest.register_biome({
-	name =              "simpson_desert",
-	node_top =          "base:red_sand",
-	depth_top =         3,
-	node_filler =       "base:red_sandstone",
-	depth_filler =      2,
-	node_stone =        "base:granite",
-	node_river_water =  "base:muddy_water_source",
-	node_riverbed =     "base:red_gravel",
-	depth_riverbed =    1,
-	y_min =             -255,
-	y_max =             31000,
-	heat_point =        90,
-	humidity_point =    10,
+	name =             "simpson_desert",
+	node_top =         "base:red_sand",
+	depth_top =        3,
+	node_filler =      "base:red_sandstone",
+	depth_filler =     2,
+	node_stone =       "base:granite",
+	node_river_water = "base:muddy_water_source",
+	node_riverbed =    "base:red_gravel",
+	depth_riverbed =   1,
+	y_min =            -32,
+	y_max =            31000,
+	heat_point =       90,
+	humidity_point =   10,
 })
 
 

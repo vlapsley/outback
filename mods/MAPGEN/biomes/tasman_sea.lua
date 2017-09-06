@@ -8,18 +8,19 @@ local math_random = math.random
 
 -- tasman sea
 minetest.register_biome({
-	name =            "tasman_sea",
-	node_top =        "base:sand",
-	depth_top =       3,
-	node_filler =     "base:basalt",
-	depth_filler =    4,
-	node_stone =      "base:stone",
-	node_riverbed =   "base:sand",
-	depth_riverbed =  1,
-	y_min =           -255,
-	y_max =           3,
-	heat_point =      10,
-	humidity_point =  10,
+	name =             "tasman_sea",
+	node_top =         "base:sand",
+	depth_top =        3,
+	node_filler =      "base:stone",
+	depth_filler =     4,
+	node_stone =       "base:basalt",
+	node_river_water = "base:muddy_water_source",
+	node_riverbed =    "base:sand",
+	depth_riverbed =   1,
+	y_min =            -32,
+	y_max =            3,
+	heat_point =       10,
+	humidity_point =   10,
 })
 
 
@@ -30,15 +31,15 @@ minetest.register_biome({
 -- Blob ore first to avoid other ores inside blobs
 
 minetest.register_ore({
-	ore_type =        "scatter",
-	ore =             "sea:woodship",
-	wherein =         {"base:sand"},
-	clust_scarcity =  60 * 60 * 60,
-	clust_num_ores =  1,
-	clust_size =      12,
-	biomes =          {"tasman_sea"},
-	y_min =           -64,
-	y_max =           -6,
+	ore_type =       "scatter",
+	ore =            "sea:woodship",
+	wherein =        {"base:sand"},
+	clust_scarcity = 216000,
+	clust_num_ores = 1,
+	clust_size =     12,
+	biomes =         {"tasman_sea"},
+	y_min =          -32,
+	y_max =          -6,
 })
 
 

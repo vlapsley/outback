@@ -11,30 +11,32 @@ minetest.clear_registered_biomes()
 
 
 -- Set the following variables to true to enable each biome
-biomes.underground            = true
-biomes.mangroves              = true
-biomes.tasman_sea             = true
+biomes.deep_underground =       true
+biomes.underground =            true
+biomes.mangroves =              true
+biomes.tasman_sea =             true
 biomes.great_australian_bight = true
-biomes.indian_ocean           = true
-biomes.great_barrier_reef     = true
-biomes.timor_sea              = true
-biomes.tasmania               = true
-biomes.victoria               = true
-biomes.jarrah_karri_forests   = true
-biomes.eastern_coasts         = true
-biomes.flinders_lofty         = true
-biomes.murray_darling_basin   = true
-biomes.nullabor_plains        = true
-biomes.mulga_lands            = true
-biomes.far_north_queensland   = true
-biomes.central_australia      = true
-biomes.top_end                = true
-biomes.pilbara                = true
-biomes.simpson_desert         = true
-biomes.australian_alps        = true
+biomes.indian_ocean =           true
+biomes.great_barrier_reef =     true
+biomes.timor_sea =              true
+biomes.tasmania =               true
+biomes.victoria =               true
+biomes.jarrah_karri_forests =   true
+biomes.eastern_coasts =         true
+biomes.flinders_lofty =         true
+biomes.murray_darling_basin =   true
+biomes.nullabor_plains =        true
+biomes.mulga_lands =            true
+biomes.far_north_queensland =   true
+biomes.central_australia =      true
+biomes.top_end =                true
+biomes.pilbara =                true
+biomes.simpson_desert =         true
+biomes.australian_alps =        true
 
 
 -- Underground
+if biomes.deep_underground then dofile(biomes.path.."/deep_underground.lua") end
 if biomes.underground then dofile(biomes.path.."/underground.lua") end
 
 -- Coast/Ocean

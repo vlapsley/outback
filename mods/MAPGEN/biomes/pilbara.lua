@@ -8,19 +8,19 @@ local math_random = math.random
 
 -- pilbara
 minetest.register_biome({
-	name =              "pilbara",
-	node_top =          "base:red_gravel",
-	depth_top =         1,
-	node_filler =       "base:red_sandstone",
-	depth_filler =      2,
-	node_stone =        "base:granite",
-	node_river_water =  "base:muddy_water_source",
-	node_riverbed =     "base:red_gravel",
-	depth_riverbed =    1,
-	y_min =             -255,
-	y_max =             31000,
-	heat_point =        90,
-	humidity_point =    39,
+	name =             "pilbara",
+	node_top =         "base:red_gravel",
+	depth_top =        1,
+	node_filler =      "base:red_sandstone",
+	depth_filler =     2,
+	node_stone =       "base:granite",
+	node_river_water = "base:muddy_water_source",
+	node_riverbed =    "base:red_gravel",
+	depth_riverbed =   1,
+	y_min =            -32,
+	y_max =            31000,
+	heat_point =       90,
+	humidity_point =   39,
 })
 
 
@@ -32,59 +32,38 @@ minetest.register_biome({
 
 -- Iron
 minetest.register_ore({
-	ore_type =         "blob",
-	ore =              "base:granite_with_iron",
-	wherein =          {"base:granite"},
-	clust_scarcity =   13824,
-	clust_size =       8,
-	biomes =           {"pilbara"},
-	y_min =            -32,
-	y_max =            35,
-	noise_threshold =  1,
-	noise_params =     {
-		offset =   0,
-		scale =    3,
-		spread =   {x = 16, y = 16, z = 16},
-		seed =     895,
-		octaves =  3,
-		persist =  0.6
-	},
-})
-
--- Iron
-minetest.register_ore({
-	ore_type =         "blob",
-	ore =              "base:stone_with_iron",
-	wherein =          {"base:stone"},
-	clust_scarcity =   13824,
-	clust_size =       8,
-	biomes =           {"pilbara"},
-	y_min =            -255,
-	y_max =            -32,
-	noise_threshold =  1,
-	noise_params =     {
-		offset =   0,
-		scale =    3,
-		spread =   {x = 16, y = 16, z = 16},
-		seed =     895,
-		octaves =  3,
-		persist =  0.6
+	ore_type =        "blob",
+	ore =             "base:granite_with_iron",
+	wherein =         {"base:granite"},
+	clust_scarcity =  13824,
+	clust_size =      8,
+	biomes =          {"pilbara"},
+	y_min =           -32,
+	y_max =           35,
+	noise_threshold = 1,
+	noise_params =    {
+		offset =  0,
+		scale =   3,
+		spread =  {x = 16, y = 16, z = 16},
+		seed =    895,
+		octaves = 3,
+		persist = 0.6
 	},
 })
 
 -- Marble
 minetest.register_ore({
-	ore_type       = "sheet",
-	ore            = "base:marble",
-	wherein        = "base:stone",
-	clust_scarcity = 1,
-	clust_num_ores = 1,
-	clust_size     = 3,
-	biomes         = {"pilbara"},
-	y_min          = -255,
-	y_max          = -5,
+	ore_type =        "sheet",
+	ore =             "base:marble",
+	wherein =         {"base:granite"},
+	clust_scarcity =  1,
+	clust_num_ores =  1,
+	clust_size =      3,
+	biomes =          {"pilbara"},
+	y_min =           -32,
+	y_max =           -5,
 	noise_threshold = 0.4,
-	noise_params = {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
+	noise_params =    {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
 })
 
 

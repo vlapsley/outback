@@ -8,19 +8,19 @@ local math_random = math.random
 
 -- nullabor plains
 minetest.register_biome({
-	name =              "nullabor_plains",
-	node_top =          "base:desert_sand",
-	depth_top =         2,
-	node_filler =       "base:sandstone",
-	depth_filler =      2,
-	node_stone =        "base:stone",
-	node_river_water =  "base:dirt_with_dry_grass",
-	node_riverbed =     "base:sandstone",
-	depth_riverbed =    1,
-	y_min =             4,
-	y_max =             31000,
-	heat_point =        65,
-	humidity_point =    13,
+	name =             "nullabor_plains",
+	node_top =         "base:desert_sand",
+	depth_top =        2,
+	node_filler =      "base:sandstone",
+	depth_filler =     2,
+	node_stone =       "base:stone",
+	node_river_water = "base:dirt_with_dry_grass",
+	node_riverbed =    "base:sandstone",
+	depth_riverbed =   1,
+	y_min =            4,
+	y_max =            31000,
+	heat_point =       65,
+	humidity_point =   13,
 })
 
 
@@ -32,22 +32,22 @@ minetest.register_biome({
 
 -- Gold
 minetest.register_ore({
-	ore_type =         "vein",
-	ore =              "base:stone_with_gold",
-	wherein =          {"base:stone"},
-	biomes =           {"nullabor_plains"},
-	y_min =            -192,
-	y_max =            47,
-	random_factor =    0.23,
-	noise_threshold =  0.97,
-	noise_params =     {
-		offset =   0,
-		scale =    3,
-		spread =   {x = 73, y = 251, z = 73},
-		seed =     891,
-		octaves =  4,
-		persist =  0.5,
-	    flags =    "eased",
+	ore_type =        "vein",
+	ore =             "base:stone_with_gold",
+	wherein =         {"base:stone"},
+	biomes =          {"nullabor_plains"},
+	y_min =           -32,
+	y_max =           47,
+	random_factor =   0.23,
+	noise_threshold = 0.97,
+	noise_params =    {
+		offset =  0,
+		scale =   3,
+		spread =  {x = 73, y = 251, z = 73},
+		seed =    891,
+		octaves = 4,
+		persist = 0.5,
+	    flags =   "eased",
 	},
 })
 

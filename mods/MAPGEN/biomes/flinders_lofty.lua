@@ -8,19 +8,19 @@ local math_random = math.random
 
 -- flinders / lofty
 minetest.register_biome({
-	name =              "flinders_lofty",
-	node_top =          "base:dirt_with_dry_grass",
-	depth_top =         1,
-	node_filler =       "base:red_dirt",
-	depth_filler =      2,
-	node_stone =        "base:stone",
-	node_river_water =  "base:muddy_water_source",
-	node_riverbed =     "base:dirt",
-	depth_riverbed =    1,
-	y_min =             -255,
-	y_max =             31000,
-	heat_point =        40,
-	humidity_point =    20,
+	name =             "flinders_lofty",
+	node_top =         "base:dirt_with_dry_grass",
+	depth_top =        1,
+	node_filler =      "base:red_dirt",
+	depth_filler =     2,
+	node_stone =       base:stone",
+	node_river_water = "base:muddy_water_source",
+	node_riverbed =    "base:dirt",
+	depth_riverbed =   1,
+	y_min =            4,
+	y_max =            31000,
+	heat_point =       40,
+	humidity_point =   20,
 })
 
 
@@ -30,53 +30,39 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
-minetest.register_ore({
-	ore_type       = "sheet",
-	ore            = "base:marble",
-	wherein        = "base:stone",
-	clust_scarcity = 1,
-	clust_num_ores = 1,
-	clust_size     = 3,
-	biomes         = {"flinders_lofty"},
-	y_min          = -1000,
-	y_max          = -5,
-	noise_threshold = 0.4,
-	noise_params = {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
-})
-
 -- Copper (Olympic Dam)
 minetest.register_ore({
-	ore_type =         "vein",
-	ore =              "base:stone_with_copper",
-	wherein =          "base:stone",
-	biomes =           {"flinders_lofty"},
-	y_min =            -64,
-	y_max =            34,
-	noise_threshold =  1.6,
-	noise_params =     {
-		offset =   0,
-		scale =    3,
-		spread =   {x=211, y=211, z=211},
-		seed =     4825,
-		octaves =  3,
-		persist =  0.6,
-		flags =    "eased",
+	ore_type =        "vein",
+	ore =             "base:stone_with_copper",
+	wherein =         "base:stone",
+	biomes =          {"flinders_lofty"},
+	y_min =           -32,
+	y_max =           34,
+	noise_threshold = 1.6,
+	noise_params =    {
+		offset =  0,
+		scale =   3,
+		spread =  {x=211, y=211, z=211},
+		seed =    4825,
+		octaves = 3,
+		persist = 0.6,
+		flags =   "eased",
 	},
 })
 
 -- Marble
 minetest.register_ore({
-	ore_type       = "sheet",
-	ore            = "base:marble",
-	wherein        = "base:stone",
-	clust_scarcity = 1,
-	clust_num_ores = 1,
-	clust_size     = 3,
-	biomes         = {"flinders_lofty"},
-	y_min          = -255,
-	y_max          = -5,
+	ore_type =        "sheet",
+	ore =             "base:marble",
+	wherein =         "base:stone",
+	clust_scarcity =  1,
+	clust_num_ores =  1,
+	clust_size =      3,
+	biomes =          {"flinders_lofty"},
+	y_min =           -32,
+	y_max =           -5,
 	noise_threshold = 0.4,
-	noise_params = {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
+	noise_params =    {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
 })
 
 

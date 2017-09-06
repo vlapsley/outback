@@ -8,19 +8,19 @@ local math_random = math.random
 
 -- central australia
 minetest.register_biome({
-	name =              "central_australia",
-	node_top =          "base:red_dirt",
-	depth_top =         1,
-	node_filler =       "base:red_sandstone",
-	depth_filler =      2,
-	node_stone =        "base:granite",
-	node_river_water =  "base:muddy_water_source",
-	node_riverbed =     "base:red_dirt",
-	depth_riverbed =    1,
-	y_min =             -255,
-	y_max =             31000,
-	heat_point =        38,
-	humidity_point =    66,
+	name =             "central_australia",
+	node_top =         "base:red_dirt",
+	depth_top =        1,
+	node_filler =      "base:red_sandstone",
+	depth_filler =     2,
+	node_stone =       "base:granite",
+	node_river_water = "base:muddy_water_source",
+	node_riverbed =    "base:red_dirt",
+	depth_riverbed =   1,
+	y_min =            4,
+	y_max =            31000,
+	heat_point =       38,
+	humidity_point =   66,
 })
 
 
@@ -32,64 +32,43 @@ minetest.register_biome({
 
 -- Opal (Coober Pedy)
 minetest.register_ore({
-	ore_type =         "vein",
-	ore =              "base:granite_with_opal",
-	wherein =          "base:granite",
-	biomes =           {"central_australia"},
-	y_min =            -32,
-	y_max =            23,
-	noise_threshold =  1.7,
-	noise_params =     {
-		offset =   0,
-		scale =    3,
-		spread =   {x=211, y=211, z=211},
-		seed =     3223,
-		octaves =  3,
-		persist =  0.5,
-		flags =    "eased",
+	ore_type =        "vein",
+	ore =             "base:granite_with_opal",
+	wherein =         "base:granite",
+	biomes =          {"central_australia"},
+	y_min =           -32,
+	y_max =           23,
+	noise_threshold = 1.7,
+	noise_params =    {
+		offset =  0,
+		scale =   3,
+		spread =  {x=211, y=211, z=211},
+		seed =    3223,
+		octaves = 3,
+		persist = 0.5,
+		flags =   "eased",
 	},
 })
 
 -- Uranium (Olympic Dam)
 minetest.register_ore({
-	ore_type =         "scatter",
-	ore =              "technic:granite_with_uranium",
-	wherein =          "base:granite",
-	clust_scarcity =   8000,
-	clust_num_ores =   6,
-	clust_size =       4,
-	biomes =           {"central_australia"},
-	y_min =            -32,
-	y_max =            11,
-	noise_threshold =  0.6,
-	noise_params =     {
-		offset =   0,
-		scale =    1,
-		spread =   {x = 100, y = 100, z = 100},
-		seed =     419,
-		octaves =  3,
-		persist =  0.7
-	},
-})
-
-minetest.register_ore({
-	ore_type =         "scatter",
-	ore =              "technic:stone_with_uranium",
-	wherein =          "base:stone",
-	clust_scarcity =   8000,
-	clust_num_ores =   8,
-	clust_size =       5,
-	biomes =           {"central_australia"},
-	y_min =            -64,
-	y_max =            -33,
-	noise_threshold =  0.6,
-	noise_params =     {
-		offset =   0,
-		scale =    1,
-		spread =   {x = 100, y = 100, z = 100},
-		seed =     419,
-		octaves =  3,
-		persist =  0.7
+	ore_type =        "scatter",
+	ore =             "technic:granite_with_uranium",
+	wherein =         "base:granite",
+	clust_scarcity =  8000,
+	clust_num_ores =  8,
+	clust_size =      5,
+	biomes =          {"central_australia"},
+	y_min =           -32,
+	y_max =           1,
+	noise_threshold = 0.6,
+	noise_params =    {
+		offset =  0,
+		scale =   1,
+		spread =  {x = 100, y = 100, z = 100},
+		seed =    419,
+		octaves = 3,
+		persist = 0.7
 	},
 })
 

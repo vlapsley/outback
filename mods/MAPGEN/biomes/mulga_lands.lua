@@ -8,19 +8,19 @@ local math_random = math.random
 
 -- mulga lands
 minetest.register_biome({
-	name =              "mulga_lands",
-	node_top =          "base:dirt_with_dry_grass",
-	depth_top =         1,
-	node_filler =       "base:red_dirt",
-	depth_filler =      2,
-	node_stone =        "base:stone",
-	node_river_water =  "base:muddy_water_source",
-	node_riverbed =     "base:dirt",
-	depth_riverbed =    1,
-	y_min =             4,
-	y_max =             31000,
-	heat_point =        62,
-	humidity_point =    75,
+	name =             "mulga_lands",
+	node_top =         "base:dirt_with_dry_grass",
+	depth_top =        1,
+	node_filler =      "base:red_dirt",
+	depth_filler =     2,
+	node_stone =       "base:stone",
+	node_river_water = "base:muddy_water_source",
+	node_riverbed =    "base:dirt",
+	depth_riverbed =   1,
+	y_min =            4,
+	y_max =            31000,
+	heat_point =       62,
+	humidity_point =   75,
 })
 
 

@@ -32,27 +32,27 @@ minetest.register_biome({
 
 -- Basalt
 minetest.register_ore({
-	ore_type       = "blob",
-	ore            = "base:basalt",
-	wherein        = {"base:stone"},
+	ore_type =       "blob",
+	ore =            "base:basalt",
+	wherein =        {"base:stone"},
 	clust_scarcity = 3375,
 	clust_num_ores = 33,
-	clust_size     = 5,
-	biomes         = {"australian_alps"},
-	y_min          = -255,
-	y_max          = 31000,
+	clust_size =     5,
+	biomes =         {"australian_alps"},
+	y_min =          -32,
+	y_max =          31000,
 })
 
 minetest.register_ore({
-	ore_type       = "blob",
-	ore            = "base:basalt",
-	wherein        = {"base:stone"},
+	ore_type =       "blob",
+	ore =            "base:basalt",
+	wherein =        {"base:stone"},
 	clust_scarcity = 1000,
 	clust_num_ores = 58,
-	clust_size     = 7,
-	biomes         = {"australian_alps"},
-	y_min          = -255,
-	y_max          = 31000,
+	clust_size =     7,
+	biomes =         {"australian_alps"},
+	y_min =          -32,
+	y_max =          31000,
 })
 
 

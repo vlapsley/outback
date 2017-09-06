@@ -8,19 +8,19 @@ local math_random = math.random
 
 -- jarrah / karri forests
 minetest.register_biome({
-	name =              "jarrah_karri_forests",
-	node_top =          "base:dirt_with_grass",
-	depth_top =         1,
-	node_filler =       "base:dirt",
-	depth_filler =      3,
-	node_stone =        "base:sandstone",
-	node_river_water =  "base:muddy_water_source",
-	node_riverbed =     "base:dirt",
-	depth_riverbed =    1,
-	y_min =             4,
-	y_max =             31000,
-	heat_point =        6,
-	humidity_point =    91,
+	name =             "jarrah_karri_forests",
+	node_top =         "base:dirt_with_grass",
+	depth_top =        1,
+	node_filler =      "base:dirt",
+	depth_filler =     3,
+	node_stone =       "base:sandstone",
+	node_river_water = "base:muddy_water_source",
+	node_riverbed =    "base:dirt",
+	depth_riverbed =   1,
+	y_min =            4,
+	y_max =            31000,
+	heat_point =       6,
+	humidity_point =   91,
 })
 
 

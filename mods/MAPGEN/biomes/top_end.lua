@@ -8,19 +8,19 @@ local math_random = math.random
 
 -- top end
 minetest.register_biome({
-	name =              "top_end",
-	node_top =          "base:dirt_with_grass",
-	depth_top =         1,
-	node_filler =       "base:sandstone",
-	depth_filler =      3,
-	node_stone =        "base:stone",
-	node_river_water =  "base:muddy_water_source",
-	node_riverbed =     "base:dirt",
-	depth_riverbed =    1,
-	y_min =             -255,
-	y_max =             31000,
-	heat_point =        86,
-	humidity_point =    86,
+	name =             "top_end",
+	node_top =         "base:dirt_with_grass",
+	depth_top =        1,
+	node_filler =      "base:sandstone",
+	depth_filler =     3,
+	node_stone =       "base:stone",
+	node_river_water = "base:muddy_water_source",
+	node_riverbed =    "base:dirt",
+	depth_riverbed =   1,
+	y_min =            -32,
+	y_max =            31000,
+	heat_point =       86,
+	humidity_point =   86,
 })
 
 
@@ -30,81 +30,102 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
--- Copper
+-- Lead (McArthur River)
 minetest.register_ore({
-	ore_type =         "blob",
-	ore =              "base:stone_with_copper",
-	wherein =          {"base:stone"},
-	clust_scarcity =   44 * 44 * 44,
-	clust_size =       8,
-	biomes =           {"top_end"},
-	y_min =            -192,
-	y_max =            0,
-	noise_threshold =  1,
-	noise_params =     {
-		offset =   0,
-		scale =    3,
-		spread =   {x = 16, y = 16, z = 16},
-		seed =     890,
-		octaves =  3,
-		persist =  0.6
+	ore_type =        "blob",
+	ore =             "base:stone_with_lead",
+	wherein =         {"base:stone"},
+	clust_scarcity =  85184,
+	clust_size =      8,
+	biomes =          {"top_end"},
+	y_min =           -32,
+	y_max =           0,
+	noise_threshold = 1.1,
+	noise_params =    {
+		offset =  0,
+		scale =   3,
+		spread =  {x = 16, y = 16, z = 16},
+		seed =    556,
+		octaves = 3,
+		persist = 0.6
 	},
 })
 
--- Diamond
+-- Zinc (McArthur River)
 minetest.register_ore({
-	ore_type =        "scatter",
-	ore =             "base:stone_with_diamond",
+	ore_type =        "blob",
+	ore =             "base:stone_with_zinc",
 	wherein =         {"base:stone"},
-	clust_scarcity =  64000,
-	clust_num_ores =  12,
-	clust_size =      6,
+	clust_scarcity =  85184,
+	clust_size =      8,
 	biomes =          {"top_end"},
-	y_min =           -60,
-	y_max =           17,
+	y_min =           -32,
+	y_max =           0,
+	noise_threshold = 1.2,
+	noise_params =    {
+		offset =  0,
+		scale =   3,
+		spread =  {x = 16, y = 16, z = 16},
+		seed =    557,
+		octaves = 3,
+		persist = 0.6
+	},
+})
+
+-- Diamonds (Argyle)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_diamond",
+	wherein =        {"base:stone"},
+	clust_scarcity = 64000,
+	clust_num_ores = 12,
+	clust_size =     6,
+	biomes =         {"top_end"},
+	y_min =          -32,
+	y_max =          17,
 })
 
 -- Uranium (Ranger)
 minetest.register_ore({
-	ore_type =         "scatter",
-	ore =              "technic:stone_with_uranium",
-	wherein =          {"base:stone"},
-	clust_scarcity =   21952,
-	clust_num_ores =   4,
-	clust_size =       3,
-	biomes =           {"top_end"},
-	y_min =            -255,
-	y_max =            19,
-	noise_threshold =  0.6,
-	noise_params =     {
-		offset =   0,
-		scale =    1,
-		spread =   {x = 100, y = 100, z = 100},
-		seed =     420,
-		octaves =  3,
-		persist =  0.7
+	ore_type =        "scatter",
+	ore =             "technic:stone_with_uranium",
+	wherein =         {"base:stone"},
+	clust_scarcity =  21952,
+	clust_num_ores =  4,
+	clust_size =      3,
+	biomes =          {"top_end"},
+	y_min =           -32,
+	y_max =           19,
+	noise_threshold = 0.6,
+	noise_params =    {
+		offset =  0,
+		scale =   1,
+		spread =  {x = 100, y = 100, z = 100},
+		seed =    420,
+		octaves = 3,
+		persist = 0.7
 		},
 })
 
 -- Uranium (Jabiluka)
 minetest.register_ore({
-	ore_type =         "scatter",
-	ore =              "technic:stone_with_uranium",
-	wherein =          {"base:stone"},
-	clust_scarcity =   17576,
-	clust_num_ores =   4,
-	clust_size =       3,
-	biomes =           {"top_end"},
-	y_min =            -255,
-	y_max =            6,
-	noise_threshold =  0.6,
-	noise_params =     {
-		offset =   0,
-		scale =    1,
-		spread =   {x = 100, y = 100, z = 100},
-		seed =     241,
-		octaves =  3,
-		persist =  0.7
+	ore_type =        "scatter",
+	ore =             "technic:stone_with_uranium",
+	wherein =         {"base:stone"},
+	clust_scarcity =  17576,
+	clust_num_ores =  4,
+	clust_size =      3,
+	biomes =          {"top_end"},
+	y_min =           -32,
+	y_max =           6,
+	noise_threshold = 0.6,
+	noise_params =    {
+		offset =  0,
+		scale =   1,
+		spread =  {x = 100, y = 100, z = 100},
+		seed =    241,
+		octaves = 3,
+		persist = 0.7
 		},
 })
 

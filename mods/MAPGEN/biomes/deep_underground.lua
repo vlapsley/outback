@@ -1,14 +1,14 @@
 --[[
-	Underground
+	Deep Underground
 --]]
 
 
--- underground
+-- deep_underground
 minetest.register_biome({
-	name =           "underground",
+	name =           "deep_underground",
 	node_stone =     "base:stone",
-	y_min =          -1072,
-	y_max =          -33,
+	y_min =          -31000,
+	y_max =          -1072,
 	heat_point =     50,
 	humidity_point = 50,
 })
