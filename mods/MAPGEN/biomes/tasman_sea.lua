@@ -17,7 +17,7 @@ minetest.register_biome({
 	node_river_water = "base:muddy_water_source",
 	node_riverbed =    "base:sand",
 	depth_riverbed =   1,
-	y_min =            -32,
+	y_min =            -31,
 	y_max =            3,
 	heat_point =       10,
 	humidity_point =   10,
@@ -38,7 +38,7 @@ minetest.register_ore({
 	clust_num_ores = 1,
 	clust_size =     12,
 	biomes =         {"tasman_sea"},
-	y_min =          -32,
+	y_min =          -31,
 	y_max =          -6,
 })
 

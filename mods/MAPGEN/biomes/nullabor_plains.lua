@@ -36,7 +36,7 @@ minetest.register_ore({
 	ore =             "base:stone_with_gold",
 	wherein =         {"base:stone"},
 	biomes =          {"nullabor_plains"},
-	y_min =           -32,
+	y_min =           -31,
 	y_max =           47,
 	random_factor =   0.23,
 	noise_threshold = 0.97,

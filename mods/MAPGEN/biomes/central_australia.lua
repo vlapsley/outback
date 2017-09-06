@@ -36,7 +36,7 @@ minetest.register_ore({
 	ore =             "base:granite_with_opal",
 	wherein =         "base:granite",
 	biomes =          {"central_australia"},
-	y_min =           -32,
+	y_min =           -31,
 	y_max =           23,
 	noise_threshold = 1.7,
 	noise_params =    {
@@ -59,7 +59,7 @@ minetest.register_ore({
 	clust_num_ores =  8,
 	clust_size =      5,
 	biomes =          {"central_australia"},
-	y_min =           -32,
+	y_min =           -31,
 	y_max =           1,
 	noise_threshold = 0.6,
 	noise_params =    {

@@ -18,7 +18,7 @@ minetest.register_biome({
 	node_water =       "base:water_source",
 	node_riverbed =    "base:sand",
 	depth_riverbed =   1,
-	y_min =            -32,
+	y_min =            -31,
 	y_max =            3,
 	heat_point =       70,
 	humidity_point =   90,
@@ -39,7 +39,7 @@ minetest.register_ore({
 	clust_num_ores = 1,
 	clust_size =     12,
 	biomes =         {"timor_sea"},
-	y_min =          -32,
+	y_min =          -31,
 	y_max =          -8,
 })
 

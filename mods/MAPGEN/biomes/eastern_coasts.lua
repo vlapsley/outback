@@ -39,7 +39,7 @@ minetest.register_ore({
 	clust_num_ores = 33,
 	clust_size =     5,
 	biomes =         {"eastern_coasts"},
-	y_min =          -32,
+	y_min =          -31,
 	y_max =          31000,
 })
 
@@ -51,7 +51,7 @@ minetest.register_ore({
 	clust_num_ores = 58,
 	clust_size =     7,
 	biomes =         {"eastern_coasts"},
-	y_min =          -32,
+	y_min =          -31,
 	y_max =          31000,
 })
 
@@ -64,7 +64,7 @@ minetest.register_ore({
 	column_height_max =      4,
 	column_midpoint_factor = 0.5,
 	biomes =                 {"eastern_coasts"},
-	y_min =                  -32,
+	y_min =                  -31,
 	y_max =                  70,
 	noise_threshold =        1.25,
 	noise_params =           {

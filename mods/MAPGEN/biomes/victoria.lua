@@ -17,7 +17,7 @@ minetest.register_biome({
 	node_river_water = "base:muddy_water_source",
 	node_riverbed =    "base:dirt",
 	depth_riverbed =   1,
-	y_min =            -32,
+	y_min =            -31,
 	y_max =            31000,
 	heat_point =       17,
 	humidity_point =   18,
@@ -39,7 +39,7 @@ minetest.register_ore({
 	clust_num_ores = 33,
 	clust_size =     5,
 	biomes =         {"victoria"},
-	y_min =          -32,
+	y_min =          -31,
 	y_max =          31000,
 })
 
@@ -51,7 +51,7 @@ minetest.register_ore({
 	clust_num_ores = 58,
 	clust_size =     7,
 	biomes =         {"victoria"},
-	y_min =          -32,
+	y_min =          -31,
 	y_max =          31000,
 })
 

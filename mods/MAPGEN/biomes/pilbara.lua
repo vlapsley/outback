@@ -17,7 +17,7 @@ minetest.register_biome({
 	node_river_water = "base:muddy_water_source",
 	node_riverbed =    "base:red_gravel",
 	depth_riverbed =   1,
-	y_min =            -32,
+	y_min =            4,
 	y_max =            31000,
 	heat_point =       90,
 	humidity_point =   39,
@@ -38,7 +38,7 @@ minetest.register_ore({
 	clust_scarcity =  13824,
 	clust_size =      8,
 	biomes =          {"pilbara"},
-	y_min =           -32,
+	y_min =           -31,
 	y_max =           35,
 	noise_threshold = 1,
 	noise_params =    {
@@ -60,7 +60,7 @@ minetest.register_ore({
 	clust_num_ores =  1,
 	clust_size =      3,
 	biomes =          {"pilbara"},
-	y_min =           -32,
+	y_min =           -31,
 	y_max =           -5,
 	noise_threshold = 0.4,
 	noise_params =    {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}

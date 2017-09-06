@@ -17,7 +17,7 @@ minetest.register_biome({
 	node_river_water = "base:muddy_water_source",
 	node_riverbed =    "base:dirt",
 	depth_riverbed =   1,
-	y_min =            -32,
+	y_min =            4,
 	y_max =            31000,
 	heat_point =       86,
 	humidity_point =   86,
@@ -38,7 +38,7 @@ minetest.register_ore({
 	clust_scarcity =  85184,
 	clust_size =      8,
 	biomes =          {"top_end"},
-	y_min =           -32,
+	y_min =           -31,
 	y_max =           0,
 	noise_threshold = 1.1,
 	noise_params =    {
@@ -59,7 +59,7 @@ minetest.register_ore({
 	clust_scarcity =  85184,
 	clust_size =      8,
 	biomes =          {"top_end"},
-	y_min =           -32,
+	y_min =           -31,
 	y_max =           0,
 	noise_threshold = 1.2,
 	noise_params =    {
@@ -81,7 +81,7 @@ minetest.register_ore({
 	clust_num_ores = 12,
 	clust_size =     6,
 	biomes =         {"top_end"},
-	y_min =          -32,
+	y_min =          -31,
 	y_max =          17,
 })
 
@@ -94,7 +94,7 @@ minetest.register_ore({
 	clust_num_ores =  4,
 	clust_size =      3,
 	biomes =          {"top_end"},
-	y_min =           -32,
+	y_min =           -31,
 	y_max =           19,
 	noise_threshold = 0.6,
 	noise_params =    {
@@ -116,7 +116,7 @@ minetest.register_ore({
 	clust_num_ores =  4,
 	clust_size =      3,
 	biomes =          {"top_end"},
-	y_min =           -32,
+	y_min =           -31,
 	y_max =           6,
 	noise_threshold = 0.6,
 	noise_params =    {
