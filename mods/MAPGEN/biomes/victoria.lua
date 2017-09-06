@@ -17,7 +17,7 @@ minetest.register_biome({
 	node_river_water = "base:muddy_water_source",
 	node_riverbed =    "base:dirt",
 	depth_riverbed =   1,
-	y_min =            -31,
+	y_min =            4,
 	y_max =            31000,
 	heat_point =       17,
 	humidity_point =   18,
