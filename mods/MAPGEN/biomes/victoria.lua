@@ -55,6 +55,18 @@ minetest.register_ore({
 	y_max =          31000,
 })
 
+--Coal
+minetest.register_ore({
+	ore_type        = "scatter",
+	ore             = "base:stone_with_coal",
+	wherein         = "base:stone",
+	clust_scarcity  = 512,
+	clust_num_ores  = 8,
+	clust_size      = 3,
+	y_min           = -31,
+	y_max           = 15,
+})
+
 
 --[[
 	Decorations
