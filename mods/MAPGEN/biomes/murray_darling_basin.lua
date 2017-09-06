@@ -30,6 +30,27 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
+-- Zinc (Broken Hill)
+minetest.register_ore({
+	ore_type =        "blob",
+	ore =             "base:stone_with_zinc",
+	wherein =         {"base:stone"},
+	clust_scarcity =  85184,
+	clust_size =      5,
+	biomes =          {"murray_darling_basin"},
+	y_min =           -31,
+	y_max =           32,
+	noise_threshold = 1.5,
+	noise_params =    {
+		offset =  0,
+		scale =   3,
+		spread =  {x = 16, y = 16, z = 16},
+		seed =    557,
+		octaves = 3,
+		persist = 0.6
+	},
+})
+
 
 --[[
 	Decorations

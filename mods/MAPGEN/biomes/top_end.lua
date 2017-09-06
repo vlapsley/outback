@@ -39,7 +39,7 @@ minetest.register_ore({
 	clust_size =      8,
 	biomes =          {"top_end"},
 	y_min =           -31,
-	y_max =           0,
+	y_max =           4,
 	noise_threshold = 1.1,
 	noise_params =    {
 		offset =  0,
@@ -60,7 +60,7 @@ minetest.register_ore({
 	clust_size =      8,
 	biomes =          {"top_end"},
 	y_min =           -31,
-	y_max =           0,
+	y_max =           4,
 	noise_threshold = 1.2,
 	noise_params =    {
 		offset =  0,

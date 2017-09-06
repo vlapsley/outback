@@ -30,6 +30,69 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
+-- Lead (Mount Isa)
+minetest.register_ore({
+	ore_type =        "blob",
+	ore =             "base:stone_with_lead",
+	wherein =         {"base:stone"},
+	clust_scarcity =  85184,
+	clust_size =      8,
+	biomes =          {"mulga_lands"},
+	y_min =           -31,
+	y_max =           36,
+	noise_threshold = 1,
+	noise_params =    {
+		offset =  0,
+		scale =   3,
+		spread =  {x = 16, y = 16, z = 16},
+		seed =    556,
+		octaves = 3,
+		persist = 0.6
+	},
+})
+
+-- Silver (Mount Isa)
+minetest.register_ore({
+	ore_type =        "blob",
+	ore =             "base:stone_with_silver",
+	wherein =         {"base:stone"},
+	clust_scarcity =  85184,
+	clust_size =      8,
+	biomes =          {"mulga_lands"},
+	y_min =           -31,
+	y_max =           36,
+	noise_threshold = 1,
+	noise_params =    {
+		offset =  0,
+		scale =   3,
+		spread =  {x = 16, y = 16, z = 16},
+		seed =    558,
+		octaves = 3,
+		persist = 0.6
+	},
+})
+
+-- Zinc (Mount Isa)
+minetest.register_ore({
+	ore_type =        "blob",
+	ore =             "base:stone_with_zinc",
+	wherein =         {"base:stone"},
+	clust_scarcity =  85184,
+	clust_size =      8,
+	biomes =          {"mulga_lands"},
+	y_min =           -31,
+	y_max =           36,
+	noise_threshold = 1,
+	noise_params =    {
+		offset =  0,
+		scale =   3,
+		spread =  {x = 16, y = 16, z = 16},
+		seed =    557,
+		octaves = 3,
+		persist = 0.6
+	},
+})
+
 
 --[[
 	Decorations
