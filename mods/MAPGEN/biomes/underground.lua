@@ -95,3 +95,16 @@ minetest.register_ore({
 	y_max =          -512,
 })
 
+-- Silver
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_silver",
+	wherein =        {"base:stone"},
+	biomes =         {"underground"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -1071,
+	y_max =          -512,
+})
+
