@@ -228,51 +228,6 @@ minetest.register_ore({
 	y_max          = -1072,
 })
 
--- Iron
-minetest.register_ore({
-	ore_type       = "scatter",
-	ore            = "base:stone_with_iron",
-	wherein        = "base:stone",
-	clust_scarcity = 343,
-	clust_num_ores = 5,
-	clust_size     = 3,
-	y_min          = -31000,
-	y_max          = -512,
-})
-
-minetest.register_ore({
-	ore_type       = "scatter",
-	ore            = "base:granite_with_iron",
-	wherein        = "base:granite",
-	clust_scarcity = 343,
-	clust_num_ores = 5,
-	clust_size     = 3,
-	y_min          = -31000,
-	y_max          = -512,
-})
-
-minetest.register_ore({
-	ore_type       = "scatter",
-	ore            = "base:stone_with_iron",
-	wherein        = "base:stone",
-	clust_scarcity = 13824,
-	clust_num_ores = 27,
-	clust_size     = 6,
-	y_min          = -31000,
-	y_max          = -1072,
-})
-
-minetest.register_ore({
-	ore_type       = "scatter",
-	ore            = "base:granite_with_iron",
-	wherein        = "base:granite",
-	clust_scarcity = 13824,
-	clust_num_ores = 27,
-	clust_size     = 6,
-	y_min          = -31000,
-	y_max          = -1072,
-})
-
 -- Gold
 minetest.register_ore({
 	ore_type       = "scatter",

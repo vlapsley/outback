@@ -35,7 +35,7 @@ minetest.register_ore({
 	ore_type =        "blob",
 	ore =             "base:granite_with_iron",
 	wherein =         {"base:granite"},
-	clust_scarcity =  13824,
+	clust_scarcity =  10648,
 	clust_size =      8,
 	biomes =          {"pilbara"},
 	y_min =           -31,
