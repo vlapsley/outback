@@ -584,6 +584,14 @@ minetest.register_node("base:stone_with_copper", {
 	sounds = base.node_sound_stone_defaults(),
 })
 
+minetest.register_node("base:granite_with_copper", {
+	description = "Copper Ore",
+	tiles = {"base_granite.png^base_mineral_copper.png"},
+	groups = {cracky = 2},
+	drop = 'base:copper_lump',
+	sounds = base.node_sound_stone_defaults(),
+})
+
 minetest.register_node("base:copperblock", {
 	description = "Copper Block",
 	tiles = {"base_copper_block.png"},

@@ -51,6 +51,19 @@ minetest.register_ore({
 	},
 })
 
+--Copper (Cadia)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_copper",
+	wherein =        {"base:stone"},
+	biomes =         {"murray_darling_basin"},
+	clust_scarcity = 1728,
+	clust_num_ores = 4,
+	clust_size =     3,
+	y_min =          -31,
+	y_max =          69,
+})
+
 -- Gold (Cadia)
 minetest.register_ore({
 	ore_type =       "scatter",

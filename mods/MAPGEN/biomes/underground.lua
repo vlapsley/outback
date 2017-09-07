@@ -70,6 +70,19 @@ minetest.register_ore({
 	y_max =          -256,
 })
 
+--Copper
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_copper",
+	wherein =        {"base:stone"},
+	biomes =         {"underground"},
+	clust_scarcity = 1728,
+	clust_num_ores = 4,
+	clust_size =     3,
+	y_min =          -1071,
+	y_max =          -384,
+})
+
 -- Iron
 minetest.register_ore({
 	ore_type =       "scatter",

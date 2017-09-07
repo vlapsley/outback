@@ -30,6 +30,27 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
+-- Copper (Olympic Dam)
+minetest.register_ore({
+	ore_type =        "blob",
+	ore =             "base:granite_with_copper",
+	wherein =         {"base:granite"},
+	clust_scarcity =  85184,
+	clust_size =      8,
+	biomes =          {"central_australia"},
+	y_min =           -31,
+	y_max =           12,
+	noise_threshold = 1,
+	noise_params =    {
+		offset =  0,
+		scale =   3,
+		spread =  {x = 16, y = 16, z = 16},
+		seed =    555,
+		octaves = 3,
+		persist = 0.6
+	},
+})
+
 -- Opal (Coober Pedy)
 minetest.register_ore({
 	ore_type =        "vein",
@@ -37,7 +58,7 @@ minetest.register_ore({
 	wherein =         "base:granite",
 	biomes =          {"central_australia"},
 	y_min =           -31,
-	y_max =           23,
+	y_max =           21,
 	noise_threshold = 1.7,
 	noise_params =    {
 		offset =  0,
@@ -60,7 +81,7 @@ minetest.register_ore({
 	clust_size =      5,
 	biomes =          {"central_australia"},
 	y_min =           -31,
-	y_max =           1,
+	y_max =           12,
 	noise_threshold = 0.6,
 	noise_params =    {
 		offset =  0,
