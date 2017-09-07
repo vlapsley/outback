@@ -59,7 +59,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =               "sheet",
 	ore =                    "base:stone_with_coal",
-	wherein =                "base:stone",
+	wherein =                {"base:stone"},
 	column_height_min =      2,
 	column_height_max =      4,
 	column_midpoint_factor = 0.5,
