@@ -35,10 +35,10 @@ minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
 	wherein =        {"base:stone"},
+	biomes =         {"tasmania"},
 	clust_scarcity = 3375,
 	clust_num_ores = 33,
 	clust_size =     5,
-	biomes =         {"tasmania"},
 	y_min =          -31,
 	y_max =          31000,
 })
@@ -47,12 +47,37 @@ minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
 	wherein =        {"base:stone"},
+	biomes =         {"tasmania"},
 	clust_scarcity = 1000,
 	clust_num_ores = 58,
 	clust_size =     7,
-	biomes =         {"tasmania"},
 	y_min =          -31,
 	y_max =          31000,
+})
+
+-- Tin
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_tin",
+	wherein =        {"base:stone"},
+	biomes =         {"tasmania"},
+	clust_scarcity = 2197,
+	clust_num_ores = 5,
+	clust_size =     3,
+	y_min =          -31,
+	y_max =          20,
+})
+
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:granite_with_tin",
+	wherein =        {"base:granite"},
+	biomes =         {"tasmania"},
+	clust_scarcity = 2197,
+	clust_num_ores = 5,
+	clust_size =     3,
+	y_min =          -31,
+	y_max =          20,
 })
 
 

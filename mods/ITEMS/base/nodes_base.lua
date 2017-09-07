@@ -608,6 +608,14 @@ minetest.register_node("base:stone_with_tin", {
 	sounds = base.node_sound_stone_defaults(),
 })
 
+minetest.register_node("base:granite_with_tin", {
+	description = "Tin Ore",
+	tiles = {"base_granite.png^base_mineral_tin.png"},
+	groups = {cracky = 2},
+	drop = "base:tin_lump",
+	sounds = base.node_sound_stone_defaults(),
+})
+
 minetest.register_node("base:tinblock", {
 	description = "Tin Block",
 	tiles = {"base_tin_block.png"},
