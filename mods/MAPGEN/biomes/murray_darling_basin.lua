@@ -51,6 +51,19 @@ minetest.register_ore({
 	},
 })
 
+-- Gold (Cadia)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_gold",
+	wherein =        {"base:stone"},
+	biomes =         {"murray_darling_basin"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          69,
+})
+
 
 --[[
 	Decorations

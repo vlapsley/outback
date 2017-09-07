@@ -13,7 +13,7 @@ minetest.register_biome({
 	depth_top =        1,
 	node_filler =      "base:dirt",
 	depth_filler =     3,
-	node_stone =       "base:sandstone",
+	node_stone =       "base:stone",
 	node_river_water = "base:muddy_water_source",
 	node_riverbed =    "base:dirt",
 	depth_riverbed =   1,
@@ -29,6 +29,19 @@ minetest.register_biome({
 --]]
 
 -- Blob ore first to avoid other ores inside blobs
+
+-- Gold (Boddington)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_gold",
+	wherein =        {"base:stone"},
+	biomes =         {"jarrah_karri_forests"},
+	clust_scarcity = 2197,
+	clust_num_ores = 5,
+	clust_size =     3,
+	y_min =          -31,
+	y_max =          27,
+})
 
 
 --[[
