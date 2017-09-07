@@ -94,6 +94,43 @@ minetest.register_ore({
 	y_max =          -1072,
 })
 
+-- Diamond
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_diamond",
+	wherein =        {"base:stone"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 4913,
+	clust_num_ores = 4,
+	clust_size =     3,
+	y_min =          -1607,
+	y_max =          -1072,
+})
+
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_diamond",
+	wherein =        {"base:stone"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 3375,
+	clust_num_ores = 4,
+	clust_size =     3,
+	y_min =          -31000,
+	y_max =          -1608,
+})
+
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:basalt_with_diamond",
+	wherein =        {"base:basalt"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 3375,
+	clust_num_ores = 4,
+	clust_size =     3,
+	y_min =          -31000,
+	y_max =          -1608,
+})
+
 -- Iron
 minetest.register_ore({
 	ore_type =       "scatter",

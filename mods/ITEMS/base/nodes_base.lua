@@ -754,6 +754,14 @@ minetest.register_node("base:stone_with_diamond", {
 	sounds = base.node_sound_stone_defaults(),
 })
 
+minetest.register_node("base:basalt_with_diamond", {
+	description = "Diamond Ore",
+	tiles = {"base_basalt.png^base_mineral_diamond.png"},
+	groups = {cracky = 1},
+	drop = "base:diamond",
+	sounds = base.node_sound_stone_defaults(),
+})
+
 minetest.register_node("base:diamondblock", {
 	description = "Diamond Block",
 	tiles = {"base_diamond_block.png"},
