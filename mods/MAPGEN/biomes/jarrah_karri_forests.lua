@@ -243,7 +243,7 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 60 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(7, 10)
+		local height =  math_random(7, 9)
 		local radius =  math_random(4, 5)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
@@ -265,8 +265,8 @@ plants_api.register_plant({
 		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 35 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(15, 20)
-		local radius =  math_random(8, 10)
+		local height =  math_random(12, 16)
+		local radius =  math_random(7, 8)
 		local limbs =   true
 		base.make_jarrah(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
@@ -287,8 +287,8 @@ plants_api.register_plant({
 		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 35 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(20, 30)
-		local radius =  math_random(8, 10)
+		local height =  math_random(15, 20)
+		local radius =  math_random(7, 8)
 		local limbs =   true
 		base.make_karri(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
@@ -309,8 +309,8 @@ plants_api.register_plant({
 		return t.valleys > 0.3 and pos.y >= 5 and pos.y <= 35 and table.contains({"jarrah_karri_forests"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(15, 20)
-		local radius =  math_random(7, 10)
+		local height =  math_random(12, 16)
+		local radius =  math_random(6, 8)
 		local limbs =   true
 		base.make_marri(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,

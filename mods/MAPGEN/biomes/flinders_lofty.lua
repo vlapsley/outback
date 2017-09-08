@@ -234,8 +234,8 @@ plants_api.register_plant({
 		return pos.y >= 5 and pos.y <= 50 and table.contains({"flinders_lofty"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(9, 15)
-		local radius =  math_random(5, 6)
+		local height =  math_random(7, 12)
+		local radius =  math_random(4, 5)
 		base.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
@@ -255,7 +255,7 @@ plants_api.register_plant({
 		return pos.y >= 51 and pos.y <= 125 and table.contains({"flinders_lofty"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(6, 8)
+		local height =  math_random(5, 7)
 		local radius =  3
 		base.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
@@ -300,7 +300,7 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 60 and table.contains({"flinders_lofty"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(7, 10)
+		local height =  math_random(7, 9)
 		local radius =  math_random(4, 5)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
@@ -364,8 +364,8 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.03 and pos.y >= 5 and pos.y <= 72 and table.contains({"flinders_lofty"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(12, 18)
-		local radius =  math_random(6, 8)
+		local height =  math_random(10, 15)
+		local radius =  math_random(5, 7)
 		local limbs =   true
 		base.make_river_red_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
@@ -386,8 +386,8 @@ plants_api.register_plant({
 		return pos.y >= 5 and pos.y < 60 and table.contains({"flinders_lofty"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(9, 13)
-		local radius =  math_random(8, 10)
+		local height =  math_random(7, 11)
+		local radius =  math_random(6, 8)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
