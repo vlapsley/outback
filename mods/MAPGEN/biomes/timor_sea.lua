@@ -10,10 +10,10 @@ local math_random = math.random
 minetest.register_biome({
 	name =             "timor_sea",
 	node_top =         "base:sand",
-	depth_top =        3,
+	depth_top =        2,
 	node_filler =      "base:sandstone",
 	depth_filler =     2,
-	node_stone =       "base:basalt",
+	node_stone =       "base:stone",
 	node_river_water = "base:muddy_water_source",
 	node_water =       "base:water_source",
 	node_riverbed =    "base:sand",
@@ -30,6 +30,28 @@ minetest.register_biome({
 --]]
 
 -- Blob ore first to avoid other ores inside blobs
+
+-- Oil
+minetest.register_ore({
+	ore_type =               "sheet",
+	ore =                    "base:crude_oil_source",
+	wherein =                {"base:stone"},
+	biomes =                 {"timor_sea"},
+	column_height_min =      2,
+	column_height_max =      4,
+	column_midpoint_factor = 0.5,
+	y_min =                  -31,
+	y_max =                  -3,
+	noise_threshold =        1.25,
+	noise_params =           {
+		offset =  0,
+		scale =   2,
+		spread =  {x = 24, y = 24, z = 24},
+		seed =    812,
+		octaves = 2,
+		persist = 0.5,
+	},
+})
 
 minetest.register_ore({
 	ore_type =       "scatter",
