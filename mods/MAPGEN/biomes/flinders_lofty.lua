@@ -30,6 +30,19 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
+-- Slate (Adelaide Hills / Mintaro / Spalding)
+minetest.register_ore({
+	ore_type =       "blob",
+	ore =            "base:slate",
+	wherein =        {"base:stone"},
+	biomes =         {"flinders_lofty"},
+	clust_scarcity = 8000,
+	clust_num_ores = 10,
+	clust_size =     4,
+	y_min =          -31,
+	y_max =          73,
+})
+
 -- Copper (Olympic Dam)
 minetest.register_ore({
 	ore_type =        "vein",
