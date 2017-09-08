@@ -30,6 +30,19 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
+-- Aluminium (Darling Scarp)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_aluminium",
+	wherein =        {"base:stone"},
+	biomes =         {"jarrah_karri_forests"},
+	clust_scarcity = 1728,
+	clust_num_ores = 8,
+	clust_size =     4,
+	y_min =          -31,
+	y_max =          58,
+})
+
 -- Gold (Boddington)
 minetest.register_ore({
 	ore_type =       "scatter",

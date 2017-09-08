@@ -35,10 +35,10 @@ minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
 	wherein =        {"base:stone"},
+	biomes =         {"far_north_queensland"},
 	clust_scarcity = 3375,
 	clust_num_ores = 33,
 	clust_size =     5,
-	biomes =         {"far_north_queensland"},
 	y_min =          -31,
 	y_max =          31000,
 })
@@ -47,12 +47,25 @@ minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
 	wherein =        {"base:stone"},
+	biomes =         {"far_north_queensland"},
 	clust_scarcity = 1000,
 	clust_num_ores = 58,
 	clust_size =     7,
-	biomes =         {"far_north_queensland"},
 	y_min =          -31,
 	y_max =          31000,
+})
+
+-- Aluminium (Weipa / Cape York)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_aluminium",
+	wherein =        {"base:stone"},
+	biomes =         {"far_north_queensland"},
+	clust_scarcity = 512,
+	clust_num_ores = 5,
+	clust_size =     3,
+	y_min =          -31,
+	y_max =          5,
 })
 
 
