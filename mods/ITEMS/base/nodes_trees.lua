@@ -5264,7 +5264,7 @@ end
 
 function base.grow_arnhem_cypress_pine(pos)
 	-- individual parameters
-	local height = math_random(10, 15)
+	local height = math_random(8, 12)
 	local radius = 4
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:arnhem_cypress_pine_tree")
@@ -5286,7 +5286,7 @@ end
 
 function base.grow_black_box(pos)
 	-- individual parameters
-	local height = math_random(5, 10)
+	local height = math_random(5, 9)
 	local radius = math_random(4, 6)
 	local limbs = true
 	-- voxelmanip stuff
@@ -5309,7 +5309,7 @@ end
 
 function base.grow_black_wattle(pos)
 	-- individual parameters
-	local height = math_random(6, 8)
+	local height = math_random(5, 7)
 	local radius = 3
 	local limbs = false
 	-- voxelmanip stuff
@@ -5332,8 +5332,8 @@ end
 
 function base.grow_blue_gum(pos)
 	-- individual parameters
-	local height = math_random(12, 22)
-	local radius = math_random(5, 7)
+	local height = math_random(10, 18)
+	local radius = math_random(5, 6)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:blue_gum_tree")
@@ -5400,7 +5400,7 @@ end
 
 function base.grow_celery_top_pine(pos)
 	-- individual parameters
-	local height = math_random(8, 10)
+	local height = math_random(7, 9)
 	local radius = math_random(3, 4)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:celery_top_pine_tree")
@@ -5447,8 +5447,8 @@ end
 
 function base.grow_coast_banksia(pos)
 	-- individual parameters
-	local height = math_random(8, 13)
-	local radius = math_random(5, 6)
+	local height = math_random(7, 12)
+	local radius = math_random(4, 5)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:coast_banksia_tree")
 	local leaves = minetest.get_content_id("base:coast_banksia_leaves")
@@ -5469,7 +5469,7 @@ end
 
 function base.grow_coolabah(pos)
 	-- individual parameters
-	local height = math_random(7, 10)
+	local height = math_random(7, 9)
 	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
@@ -5492,8 +5492,8 @@ end
 
 function base.grow_daintree_stringybark(pos)
 	-- individual parameters
-	local height = math_random(15, 20)
-	local radius = math_random(7, 9)
+	local height = math_random(12, 16)
+	local radius = math_random(6, 8)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:daintree_stringybark_tree")
@@ -5515,7 +5515,7 @@ end
 
 function base.grow_darwin_woollybutt(pos)
 	-- individual parameters
-	local height = math_random(8, 13)
+	local height = math_random(7, 12)
 	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
@@ -5560,7 +5560,7 @@ end
 
 function base.grow_fan_palm(pos)
 	-- individual parameters
-	local height = math_random(6, 8)
+	local height = math_random(5, 7)
 	local radius = 3
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:fan_palm_tree")
@@ -5648,7 +5648,7 @@ end
 
 function base.grow_huon_pine(pos)
 	-- individual parameters
-	local height = math_random(8, 13)
+	local height = math_random(7, 12)
 	local radius = math_random(5, 6)
 	local limbs = true
 	-- voxelmanip stuff
@@ -5671,8 +5671,8 @@ end
 
 function base.grow_illawarra_flame(pos)
 	-- individual parameters
-	local height = math_random(9, 11)
-	local radius = math_random(6, 7)
+	local height = math_random(8, 10)
+	local radius = math_random(5, 6)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:illawarra_flame_tree")
 	local leaves = minetest.get_content_id("base:illawarra_flame_leaves")
@@ -5693,8 +5693,8 @@ end
 
 function base.grow_jarrah(pos)
 	-- individual parameters
-	local height = math_random(15, 20)
-	local radius = math_random(8, 10)
+	local height = math_random(12, 16)
+	local radius = math_random(7, 8)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:jarrah_tree")
@@ -5716,8 +5716,8 @@ end
 
 function base.grow_karri(pos)
 	-- individual parameters
-	local height = math_random(20, 30)
-	local radius = math_random(8, 10)
+	local height = math_random(15, 20)
+	local radius = math_random(7, 8)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:karri_tree")
@@ -5739,8 +5739,8 @@ end
 
 function base.grow_lemon_eucalyptus(pos)
 	-- individual parameters
-	local height = math_random(12, 18)
-	local radius = math_random(5, 6)
+	local height = math_random(10, 15)
+	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:lemon_eucalyptus_tree")
@@ -5784,8 +5784,8 @@ end
 
 function base.grow_lilly_pilly(pos)
 	-- individual parameters
-	local height = math_random(4, 6)
-	local radius = math_random(4, 6)
+	local height = math_random(3, 5)
+	local radius = math_random(3, 5)
 	local limbs = nil
 	local fruit_chance = 0.3
 	-- voxelmanip stuff
@@ -5809,7 +5809,7 @@ end
 
 function base.grow_macadamia(pos)
 	-- individual parameters
-	local height = math_random(6, 8)
+	local height = math_random(5, 7)
 	local radius = math_random(3, 4)
 	local limbs = nil
 	local fruit_chance = 0.3
@@ -5859,8 +5859,8 @@ end
 
 function base.grow_marri(pos)
 	-- individual parameters
-	local height = math_random(15, 20)
-	local radius = math_random(7, 10)
+	local height = math_random(12, 16)
+	local radius = math_random(6, 8)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:marri_tree")
@@ -5882,7 +5882,7 @@ end
 
 function base.grow_merbau(pos)
 	-- individual parameters
-	local height = math_random(16, 20)
+	local height = math_random(12, 16)
 	local radius = math_random(4, 5)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:merbau_tree")
@@ -5904,8 +5904,8 @@ end
 
 function base.grow_moreton_bay_fig(pos)
 	-- individual parameters
-	local height = math_random(15, 20)
-	local radius = math_random(13, 15)
+	local height = math_random(12, 16)
+	local radius = math_random(10, 12)
 	local limbs = true
 	local fruit_chance = 0.2
 	-- voxelmanip stuff
@@ -5929,7 +5929,7 @@ end
 
 function base.grow_mulga(pos)
 	-- individual parameters
-	local height = math_random(4, 7)
+	local height = math_random(3, 6)
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:mulga_tree")
@@ -5951,8 +5951,8 @@ end
 
 function base.grow_paperbark(pos)
 	-- individual parameters
-	local height = math_random(6, 10)
-	local radius = math_random(4, 5)
+	local height = math_random(5, 8)
+	local radius = math_random(3, 4)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:paperbark_tree")
@@ -6021,8 +6021,8 @@ end
 
 function base.grow_river_oak(pos)
 	-- individual parameters
-	local height = math_random(12, 15)
-	local radius = math_random(4, 5)
+	local height = math_random(10, 12)
+	local radius = math_random(3, 4)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:river_oak_tree")
 	local leaves = minetest.get_content_id("base:river_oak_leaves")
@@ -6043,8 +6043,8 @@ end
 
 function base.grow_river_red_gum(pos)
 	-- individual parameters
-	local height = math_random(12, 18)
-	local radius = math_random(6, 8)
+	local height = math_random(10, 15)
+	local radius = math_random(5, 7)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:river_red_gum_tree")
@@ -6088,8 +6088,8 @@ end
 
 function base.grow_scribbly_gum(pos)
 	-- individual parameters
-	local height = math_random(6, 8)
-	local radius = math_random(4, 5)
+	local height = math_random(5, 7)
+	local radius = math_random(3, 4)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:scribbly_gum_tree")
@@ -6155,7 +6155,7 @@ end
 
 function base.grow_southern_sassafras(pos)
 	-- individual parameters
-	local height = math_random(7, 13)
+	local height = math_random(6, 12)
 	local radius = math_random(3, 4)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:southern_sassafras_tree")
@@ -6199,8 +6199,8 @@ end
 
 function base.grow_sugar_gum(pos)
 	-- individual parameters
-	local height = math_random(9, 13)
-	local radius = math_random(8, 10)
+	local height = math_random(7, 11)
+	local radius = math_random(6, 8)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:sugar_gum_tree")
@@ -6222,7 +6222,7 @@ end
 
 function base.grow_swamp_bloodwood(pos)
 	-- individual parameters
-	local height = math_random(6, 8)
+	local height = math_random(5, 7)
 	local radius = math_random(3, 4)
 	local limbs = true
 	-- voxelmanip stuff
@@ -6245,8 +6245,8 @@ end
 
 function base.grow_swamp_gum(pos)
 	-- individual parameters
-	local height = math_random(30, 40)
-	local radius = math_random(8, 10)
+	local height = math_random(20, 30)
+	local radius = math_random(7, 9)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:swamp_gum_tree")
@@ -6290,8 +6290,8 @@ end
 
 function base.grow_tasmanian_myrtle(pos)
 	-- individual parameters
-	local height = math_random(15, 20)
-	local radius = math_random(7, 9)
+	local height = math_random(12, 15)
+	local radius = math_random(5, 7)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:tasmanian_myrtle_tree")
@@ -6357,8 +6357,8 @@ end
 
 function base.grow_white_box(pos)
 	-- individual parameters
-	local height = math_random(7, 12)
-	local radius = math_random(6, 8)
+	local height = math_random(6, 10)
+	local radius = math_random(5, 7)
 	local limbs = true
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:white_box_tree")
@@ -6380,7 +6380,7 @@ end
 
 function base.grow_wirewood(pos)
 	-- individual parameters
-	local height = math_random(6, 8)
+	local height = math_random(5, 7)
 	local radius = 2
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:wirewood_tree")

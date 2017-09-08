@@ -213,8 +213,8 @@ plants_api.register_plant({
 		return pos.y >= 5 and pos.y <= 50 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(9, 15)
-		local radius =  math_random(5, 6)
+		local height =  math_random(8, 12)
+		local radius =  math_random(4, 5)
 		base.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
@@ -234,7 +234,7 @@ plants_api.register_plant({
 		return pos.y >= 51 and pos.y <= 125 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(6, 8)
+		local height =  math_random(5, 7)
 		local radius =  3
 		base.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
@@ -279,8 +279,8 @@ plants_api.register_plant({
 		return t.v2 > 0.5 and pos.y >= 16 and pos.y <= 150 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(8, 13)
-		local radius =  math_random(5, 6)
+		local height =  math_random(7, 12)
+		local radius =  math_random(4, 5)
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
@@ -342,7 +342,7 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 60 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(7, 10)
+		local height =  math_random(7, 9)
 		local radius =  math_random(4, 5)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
@@ -364,8 +364,8 @@ plants_api.register_plant({
 		return pos.y >= 5 and pos.y <= 100 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(9, 11)
-		local radius =  math_random(6, 7)
+		local height =  math_random(8, 10)
+		local radius =  math_random(5, 6)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
@@ -386,8 +386,8 @@ plants_api.register_plant({
 		return pos.y >= 5 and pos.y <= 110 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(12, 18)
-		local radius =  math_random(5, 6)
+		local height =  math_random(10, 15)
+		local radius =  math_random(4, 5)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
@@ -408,8 +408,8 @@ plants_api.register_plant({
 		return t.v4 > 0.5 and t.v2 > 0.1 and pos.y >= 20 and pos.y <= 60 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(12, 18)
-		local radius =  math_random(5, 6)
+		local height =  math_random(10, 15)
+		local radius =  math_random(4, 5)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
@@ -452,8 +452,8 @@ plants_api.register_plant({
 		return t.valleys > 0 and t.valleys < 0.25 and pos.y >= 5 and pos.y <= 60 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =        math_random(4, 6)
-		local radius =        math_random(4, 6)
+		local height =        math_random(3, 5)
+		local radius =        math_random(3, 5)
 		local limbs =         nil
 		local fruit_chance =  0.3
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
@@ -476,7 +476,7 @@ plants_api.register_plant({
 		return pos.y >= 5 and pos.y <= 100 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =        math_random(6, 8)
+		local height =        math_random(5, 7)
 		local radius =        math_random(3, 4)
 		local limbs =         nil
 		local fruit_chance =  0.3
@@ -500,8 +500,8 @@ plants_api.register_plant({
 		return pos.y >= 5 and pos.y <= 50 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =        math_random(15, 20)
-		local radius =        math_random(13, 15)
+		local height =        math_random(12, 16)
+		local radius =        math_random(10, 12)
 		local limbs =         true
 		local fruit_chance =  0.2
 		base.make_moreton_bay_fig(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
@@ -523,8 +523,8 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.025 and pos.y >= 5 and pos.y <= 20 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(6, 10)
-		local radius =  math_random(4, 5)
+		local height =  math_random(5, 8)
+		local radius =  math_random(3, 4)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
@@ -545,8 +545,8 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.3 and t.v4 > 0.5 and pos.y >= 5 and pos.y <= 20 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(6, 10)
-		local radius =  math_random(4, 5)
+		local height =  math_random(5, 8)
+		local radius =  math_random(3, 4)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
@@ -567,8 +567,8 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 120 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(12, 15)
-		local radius =  math_random(4,5 )
+		local height =  math_random(10, 12)
+		local radius =  math_random(3, 4)
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
@@ -588,8 +588,8 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 72 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(12, 18)
-		local radius =  math_random(6, 8)
+		local height =  math_random(10, 15)
+		local radius =  math_random(5, 7)
 		local limbs =   true
 		base.make_river_red_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
@@ -610,8 +610,8 @@ plants_api.register_plant({
 		return t.valleys > 0.5 and pos.y >= 5 and pos.y <= 35 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(6, 8)
-		local radius =  math_random(4, 5)
+		local height =  math_random(5, 7)
+		local radius =  math_random(3, 4)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
@@ -632,8 +632,8 @@ plants_api.register_plant({
 		return t.v4 > 0.5 and pos.y >= 5 and pos.y <= 35 and table.contains({"eastern_coasts"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(6, 8)
-		local radius =  math_random(4, 5)
+		local height =  math_random(5, 7)
+		local radius =  math_random(3, 4)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
