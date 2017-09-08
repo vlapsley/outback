@@ -10,9 +10,9 @@ local math_random = math.random
 minetest.register_biome({
 	name =             "nullabor_plains",
 	node_top =         "base:desert_sand",
-	depth_top =        2,
+	depth_top =        1,
 	node_filler =      "base:sandstone",
-	depth_filler =     2,
+	depth_filler =     3,
 	node_stone =       "base:stone",
 	node_river_water = "base:dirt_with_dry_grass",
 	node_riverbed =    "base:sandstone",
@@ -30,14 +30,14 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
--- Gold
+-- Gold (Kalgoorlie / Boulder)
 minetest.register_ore({
 	ore_type =        "vein",
 	ore =             "base:stone_with_gold",
 	wherein =         {"base:stone"},
 	biomes =          {"nullabor_plains"},
 	y_min =           -31,
-	y_max =           47,
+	y_max =           38,
 	random_factor =   0.23,
 	noise_threshold = 0.97,
 	noise_params =    {
@@ -49,6 +49,19 @@ minetest.register_ore({
 		persist = 0.5,
 	    flags =   "eased",
 	},
+})
+
+-- Nickel (Mount Margaret / Ravensthorpe)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_nickel",
+	wherein =        {"base:stone"},
+	biomes =         {"nullabor_plains"},
+	clust_scarcity = 512,
+	clust_num_ores = 5,
+	clust_size =     3,
+	y_min =          -31,
+	y_max =          44,
 })
 
 
