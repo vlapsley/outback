@@ -45,6 +45,19 @@ minetest.register_ore({
 	y_max =          -256,
 })
 
+-- Shale
+minetest.register_ore({
+	ore_type =       "blob",
+	ore =            "base:shale",
+	wherein =        {"base:stone"},
+	biomes =         {"underground"},
+	clust_scarcity = 27000,
+	clust_num_ores = 6,
+	clust_size =     3,
+	y_min =          -1071,
+	y_max =          -256,
+})
+
 -- Coal
 minetest.register_ore({
 	ore_type =       "scatter",

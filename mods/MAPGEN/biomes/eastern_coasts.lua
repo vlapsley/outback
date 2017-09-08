@@ -35,10 +35,10 @@ minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
 	wherein =        {"base:stone"},
+	biomes =         {"eastern_coasts"},
 	clust_scarcity = 3375,
 	clust_num_ores = 33,
 	clust_size =     5,
-	biomes =         {"eastern_coasts"},
 	y_min =          -31,
 	y_max =          31000,
 })
@@ -47,10 +47,23 @@ minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
 	wherein =        {"base:stone"},
+	biomes =         {"eastern_coasts"},
 	clust_scarcity = 1000,
 	clust_num_ores = 58,
 	clust_size =     7,
+	y_min =          -31,
+	y_max =          31000,
+})
+
+-- Shale
+minetest.register_ore({
+	ore_type =       "blob",
+	ore =            "base:shale",
+	wherein =        {"base:stone"},
 	biomes =         {"eastern_coasts"},
+	clust_scarcity = 15625,
+	clust_num_ores = 6,
+	clust_size =     3,
 	y_min =          -31,
 	y_max =          31000,
 })
