@@ -234,7 +234,7 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.03 and pos.y >= 5 and pos.y <= 45 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(5, 10)
+		local height =  math_random(5, 9)
 		local radius =  math_random(4, 6)
 		local limbs =   true
 		base.make_black_box(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
@@ -256,7 +256,7 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.3 and t.v4 > 0.5 and pos.y >= 5 and pos.y <= 45 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(5, 10)
+		local height =  math_random(5, 9)
 		local radius =  math_random(4, 6)
 		local limbs =   true
 		base.make_black_box(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
@@ -278,7 +278,7 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 60 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(7, 10)
+		local height =  math_random(7, 9)
 		local radius =  math_random(4, 5)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
@@ -390,8 +390,8 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.05 and pos.y >= 5 and pos.y <= 72 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(12, 18)
-		local radius =  math_random(6, 8)
+		local height =  math_random(10, 15)
+		local radius =  math_random(5, 7)
 		local limbs =   true
 		base.make_river_red_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
@@ -454,8 +454,8 @@ plants_api.register_plant({
 		return t.valleys > 0.3 and pos.y >= 65 and pos.y <= 145 and table.contains({"murray_darling_basin"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(7, 12)
-		local radius =  math_random(6, 8)
+		local height =  math_random(6, 10)
+		local radius =  math_random(5, 7)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,

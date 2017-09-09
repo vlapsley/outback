@@ -70,7 +70,7 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.01 and pos.y >= 5 and pos.y <= 60 and table.contains({"simpson_desert"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(8, 10)
+		local height =  math_random(7, 9)
 		local radius =  math_random(4, 5)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)

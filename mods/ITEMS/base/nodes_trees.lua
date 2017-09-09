@@ -5929,7 +5929,7 @@ end
 
 function base.grow_mulga(pos)
 	-- individual parameters
-	local height = math_random(3, 6)
+	local height = math_random(4, 6)
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:mulga_tree")
@@ -6155,8 +6155,8 @@ end
 
 function base.grow_southern_sassafras(pos)
 	-- individual parameters
-	local height = math_random(6, 12)
-	local radius = math_random(3, 4)
+	local height = math_random(7, 12)
+	local radius = math_random(5, 7)
 	-- voxelmanip stuff
 	local trunk = minetest.get_content_id("base:southern_sassafras_tree")
 	local leaves = minetest.get_content_id("base:southern_sassafras_leaves")

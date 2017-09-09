@@ -279,7 +279,7 @@ plants_api.register_plant({
 		return pos.y >= 10 and pos.y <= 20 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(10, 15)
+		local height =  math_random(8, 12)
 		local radius =  4
 		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
@@ -300,7 +300,7 @@ plants_api.register_plant({
 		return pos.y >= 21 and pos.y <= 90 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(10, 15)
+		local height =  math_random(8, 12)
 		local radius =  4
 		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
@@ -343,7 +343,7 @@ plants_api.register_plant({
 		return pos.y >= 5 and pos.y <= 10 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(8, 13)
+		local height =  math_random(7, 12)
 		local radius =  math_random(4, 5)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
@@ -365,7 +365,7 @@ plants_api.register_plant({
 		return pos.y >= 11 and pos.y <= 35 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(8, 13)
+		local height =  math_random(7, 12)
 		local radius =  math_random(4, 5)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
@@ -408,7 +408,7 @@ plants_api.register_plant({
 		return t.v2 > 0.05 and t.v2 < 0.2 and t.v4 > 0.5 and pos.y >= 5 and pos.y <= 20 and table.contains({"top_end"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(6, 8)
+		local height =  math_random(5, 7)
 		local radius =  math_random(3, 4)
 		local limbs =   true
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)

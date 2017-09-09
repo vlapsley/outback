@@ -202,7 +202,7 @@ plants_api.register_plant({
 		return t.v2 > 0 and t.v2 < 0.02 and pos.y >= 5 and pos.y <= 75 and table.contains({"pilbara"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(6, 8)
+		local height =  math_random(5, 7)
 		local radius =  2
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
@@ -223,7 +223,7 @@ plants_api.register_plant({
 		return t.v4 > 0.5 and pos.y >= 5 and pos.y <= 75 and table.contains({"pilbara"}, t.biome)
 	end,
 	grow = function(nodes, pos, data, area)
-		local height =  math_random(6, 8)
+		local height =  math_random(5, 7)
 		local radius =  2
 		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
