@@ -53,10 +53,6 @@ minetest.register_ore({
 	Trees
 --]]
 
--- Placeholder for Palm Tree
--- Awaiting a fix for L-system lighting bug #3421.
--- https://github.com/minetest/minetest/issues/3421
-
 
 --[[
 	ABM's

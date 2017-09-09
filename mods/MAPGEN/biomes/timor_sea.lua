@@ -102,9 +102,6 @@ register_grass_decoration(0.03,   0.03,  1)
 	Trees
 --]]
 
--- placeholder for Palm Tree
--- awaiting fix for L-system lighting bug #3421
--- https://github.com/minetest/minetest/issues/3421
 
 
 --[[

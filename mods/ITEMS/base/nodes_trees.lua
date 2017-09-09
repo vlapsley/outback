@@ -2664,6 +2664,74 @@ minetest.register_node("base:mulga_sapling", {
 	end,
 })
 
+-- Palm Tree
+minetest.register_node("base:palm_tree", {
+	description = "Palm Tree",
+	tiles = {
+		"base_palm_tree_top.png",
+		"base_palm_tree_top.png",
+		"base_palm_tree.png"
+	},
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = {tree = 1, choppy = 2, flammable = 2},
+	sounds = base.node_sound_wood_defaults(),
+	on_place = minetest.rotate_node
+})
+
+minetest.register_node("base:palm_leaves", {
+	description = "Palm Leaves",
+	drawtype = "allfaces_optional",
+	waving = 1,
+	visual_scale = 1.0,
+	tiles = {"base_palm_leaves.png"},
+	paramtype = "light",
+	is_ground_content = false,
+	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {"base:palm_sapling"}, rarity = 20,},
+			{items = {"base:palm_leaves"},}
+		}
+	},
+	sounds = base.node_sound_leaves_defaults(),
+	after_place_node = base.after_place_leaves,
+})
+
+minetest.register_node("base:palm_sapling", {
+	description = "Palm Sapling",
+	drawtype = "plantlike",
+	visual_scale = 1.0,
+	tiles = {"base_palm_sapling.png"},
+	inventory_image = "base_palm_sapling.png",
+	wield_image = "base_palm_sapling.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	on_timer = base.grow_sapling,
+	selection_box = {
+		type = "fixed",
+		fixed = {-5/16, -8/16, -5/16, 5/16, 11/32, 5/16}
+	},
+	groups = {snappy = 2, dig_immediate = 2, flammable = 2, attached_node = 1, sapling = 1},
+	sounds = base.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(2400,4800))
+	end,
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = base.sapling_on_place(itemstack, placer, pointed_thing,
+			"base:palm_sapling",
+			-- minp, maxp to be checked, relative to sapling pos
+			-- minp_relative.y = 1 because sapling pos has been checked
+			{x = -5, y = 1, z = -5},
+			{x = 5, y = 15, z = 5},
+			-- maximum interval of interior volume check
+			4)
+		return itemstack
+	end,
+})
+
 -- Paper Bark
 minetest.register_node("base:paperbark_tree", {
 	description = "Paper Bark Tree",
@@ -4322,6 +4390,10 @@ function base.grow_sapling(pos)
 		minetest.log("action", "A Mulga sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
 		base.grow_mulga(pos)
+	elseif node.name == "base:palm_sapling" then
+		minetest.log("action", "A Palm sapling grows into a tree at "..
+			minetest.pos_to_string(pos))
+		base.grow_paperbark(pos)
 	elseif node.name == "base:paperbark_sapling" then
 		minetest.log("action", "A Paperbark sapling grows into a tree at "..
 			minetest.pos_to_string(pos))
@@ -4443,6 +4515,7 @@ minetest.register_lbm({
 			"base:merbau_sapling",
 			"base:moreton_bay_fig_sapling",
 			"base:mulga_sapling",
+			"base:palm_sapling",
 			"base:paperbark_sapling",
 			"base:quandong_sapling",
 			"base:red_bottlebrush_sapling",
@@ -6399,6 +6472,24 @@ function base.grow_wirewood(pos)
 	vm:write_to_map()
 	vm:update_map()
 end
+
+
+base.palm_model={
+	axiom="FFcccccc&FFFFFdddRA//A//A//A//A//A",
+	rules_a="[&fb&bbb[++f--&ffff&ff][--f++&ffff&ff]&ffff&bbbb&b]",
+	rules_b="f",
+	rules_c="/",
+	rules_d="F",
+	trunk="base:palm_tree",
+	leaves="base:palm_leaves",
+	angle=30,
+	iterations=2,
+	random_level=0,
+	trunk_type="single",
+	thin_branches=true,
+	fruit="base:palm_tree",
+	fruit_chance=0
+}
 
 
 -- Aliases for schematic nodes

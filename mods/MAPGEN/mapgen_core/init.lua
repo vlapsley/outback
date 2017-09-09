@@ -182,3 +182,24 @@ minetest.register_ore({
 	y_max          = 31000,
 })
 
+
+--[[
+	Trees
+--]]
+
+--Palm trees on beaches in warmer biomes
+biome_lib:register_generate_plant({
+	surface = {"base:sand"},
+	max_count = 4,
+	rarity = 33,
+	seed_diff = 330,
+	min_elevation = -1,
+    max_elevation = 3,
+	near_nodes = {"base:water_source"},
+	near_nodes_size = 15,
+	near_nodes_count = 10,
+	temp_min = -0.2,
+	},
+	base.palm_model
+)
+
