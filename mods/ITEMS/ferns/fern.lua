@@ -84,11 +84,11 @@ if abstract_ferns.config.lady_ferns_near_tree == true then
 		min_elevation = 5,
 		max_elevation = 140,
 		near_nodes = {
-			"australia:blue_gum_tree",
-			"australia:celery_top_pine_tree",
-			"australia:southern_sassafras_tree",
-			"australia:swamp_gum_tree",
-			"australia:tasmanian_myrtle_tree"
+			"base:blue_gum_tree",
+			"base:celery_top_pine_tree",
+			"base:southern_sassafras_tree",
+			"base:swamp_gum_tree",
+			"base:tasmanian_myrtle_tree"
 		},
 		near_nodes_size = 3,
 		near_nodes_vertical = 2,
@@ -128,8 +128,8 @@ if abstract_ferns.config.lady_ferns_near_ores == true then -- this one causes a 
 			"base:mossycobble",
 			"base:stone_with_coal",
 			"base:stone_with_iron",
-			"moreores:mineral_tin",
-			"moreores:mineral_silver"
+			"base:stone_with_tin",
+			"base:stone_with_silver"
 		},
 		max_count = 1200,
 		rarity = 25,
@@ -137,13 +137,11 @@ if abstract_ferns.config.lady_ferns_near_ores == true then -- this one causes a 
 		max_elevation = 140,
 		near_nodes = {
 			"base:stone_with_iron",
-			--"base:stone_with_copper",
-			--"base:stone_with_mese",
-			--"base:stone_with_gold",
-			--"base:stone_with_diamond",
-			"moreores:mineral_tin",
-			"moreores:mineral_silver"
-			--"moreores:mineral_mithril"
+			"base:stone_with_copper",
+			"base:stone_with_gold",
+			"base:stone_with_diamond",
+			"base:stone_with_tin",
+			"base:stone_with_silver"
 		},
 		near_nodes_size = 2,
 		near_nodes_vertical = 4,
@@ -162,8 +160,8 @@ if abstract_ferns.config.lady_ferns_in_groups == true then -- this one is meant 
 			"base:mossycobble",
 			"base:stone_with_coal",
 			"base:stone_with_iron",
-			"moreores:mineral_tin",
-			"moreores:mineral_silver"
+			"base:stone_with_tin",
+			"base:stone_with_silver"
 		},
 		max_count = 70,
 		rarity = 25,

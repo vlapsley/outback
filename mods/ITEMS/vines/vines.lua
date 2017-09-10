@@ -29,7 +29,7 @@ vines.register_vine( 'vine', {
   spawn_delay = 500,
   spawn_chance = 100,
   spawn_surfaces = {
-    "australia:merbau_leaves"
+    "base:merbau_leaves"
   },
   spawn_on_bottom = true,
   plantlife_limit = -0.9,
@@ -46,7 +46,7 @@ vines.register_vine( 'side', {
   spawn_delay = 500,
   spawn_chance = 100,
   spawn_surfaces = {
-    "australia:merbau_leaves"
+    "base:merbau_leaves"
   },
   spawn_on_side = true,
   plantlife_limit = -0.9,
@@ -59,7 +59,7 @@ vines.register_vine( "merbau", {
 },{
   choose_random_wall = true,
   neighbors = {
-    "australia:merbau_leaves"
+    "base:merbau_leaves"
   },
   avoid_nodes = {
     "vines:merbau_middle",
@@ -69,7 +69,7 @@ vines.register_vine( "merbau", {
   spawn_delay = 500,
   spawn_chance = 100,
   spawn_surfaces = {
-    "australia:merbau_tree"
+    "base:merbau_tree"
   },
   spawn_on_side = true,
   plantlife_limit = -0.9,
