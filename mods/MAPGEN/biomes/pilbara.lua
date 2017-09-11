@@ -39,7 +39,7 @@ minetest.register_ore({
 	clust_size =      6,
 	biomes =          {"pilbara"},
 	y_min =           -31,
-	y_max =           35,
+	y_max =           54,
 	noise_threshold = 1,
 	noise_params =    {
 		offset =  0,
@@ -64,6 +64,32 @@ minetest.register_ore({
 	y_max =           -5,
 	noise_threshold = 0.4,
 	noise_params =    {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
+})
+
+-- Amethyst (Ashburton River)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:granite_with_amethyst",
+	wherein =        {"base:granite"},
+	biomes =         {"pilbara"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          50,
+})
+
+-- Emerald (Poona)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:granite_with_emerald",
+	wherein =        {"base:granite"},
+	biomes =         {"pilbara"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          47,
 })
 
 
