@@ -63,7 +63,7 @@ minetest.register_ore({
 	},
 })
 
--- Marble
+-- Marble (Penrice)
 minetest.register_ore({
 	ore_type =        "sheet",
 	ore =             "base:marble",

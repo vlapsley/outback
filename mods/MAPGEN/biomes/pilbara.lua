@@ -30,13 +30,13 @@ minetest.register_biome({
 
 -- Blob ore first to avoid other ores inside blobs
 
--- Iron
+-- Iron (Newman / Pannawonica / Tom Price / Paraburdoo)
 minetest.register_ore({
 	ore_type =        "blob",
 	ore =             "base:granite_with_iron",
 	wherein =         {"base:granite"},
-	clust_scarcity =  10648,
-	clust_size =      8,
+	clust_scarcity =  4096,
+	clust_size =      6,
 	biomes =          {"pilbara"},
 	y_min =           -31,
 	y_max =           35,
@@ -51,7 +51,7 @@ minetest.register_ore({
 	},
 })
 
--- Marble
+-- Marble (Maroonah)
 minetest.register_ore({
 	ore_type =        "sheet",
 	ore =             "base:marble",
