@@ -71,6 +71,19 @@ minetest.register_ore({
 	},
 })
 
+-- Smoky Quartz (Kalkarindji)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:granite_with_smoky_quartz",
+	wherein =        {"base:granite"},
+	biomes =         {"central_australia"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          19,
+})
+
 -- Uranium (Olympic Dam)
 minetest.register_ore({
 	ore_type =        "scatter",

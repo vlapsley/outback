@@ -61,7 +61,7 @@ minetest.register_ore({
 	clust_size =      3,
 	biomes =          {"pilbara"},
 	y_min =           -31,
-	y_max =           -5,
+	y_max =           24,
 	noise_threshold = 0.4,
 	noise_params =    {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
 })

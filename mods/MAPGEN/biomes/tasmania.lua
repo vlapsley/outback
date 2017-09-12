@@ -68,6 +68,19 @@ minetest.register_ore({
 	y_max =          31000,
 })
 
+-- Agate (Lune River)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_agate",
+	wherein =        {"base:stone"},
+	biomes =         {"tasmania"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          12,
+})
+
 -- Tin
 minetest.register_ore({
 	ore_type =       "scatter",

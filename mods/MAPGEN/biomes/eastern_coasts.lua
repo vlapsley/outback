@@ -90,6 +90,45 @@ minetest.register_ore({
 	},
 })
 
+-- Amethyst (Oban River)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_amethyst",
+	wherein =        {"base:stone"},
+	biomes =         {"eastern_coasts"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          120,
+})
+
+-- Citrine (Oban River)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_citrine",
+	wherein =        {"base:stone"},
+	biomes =         {"eastern_coasts"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          120,
+})
+
+-- Smoky Quartz (Kingsgate)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_smoky_quartz",
+	wherein =        {"base:stone"},
+	biomes =         {"eastern_coasts"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          115,
+})
+
 
 --
 -- Decorations

@@ -63,6 +63,19 @@ minetest.register_ore({
 	},
 })
 
+-- Jade (Cowell)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_jade",
+	wherein =        {"base:stone"},
+	biomes =         {"flinders_lofty"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          2,
+})
+
 -- Marble (Penrice)
 minetest.register_ore({
 	ore_type =        "sheet",
@@ -73,7 +86,7 @@ minetest.register_ore({
 	clust_size =      3,
 	biomes =          {"flinders_lofty"},
 	y_min =           -31,
-	y_max =           -5,
+	y_max =           34,
 	noise_threshold = 0.4,
 	noise_params =    {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
 })

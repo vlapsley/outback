@@ -39,7 +39,7 @@ minetest.register_ore({
 	clust_size =      5,
 	biomes =          {"murray_darling_basin"},
 	y_min =           -31,
-	y_max =           32,
+	y_max =           33,
 	noise_threshold = 1.5,
 	noise_params =    {
 		offset =  0,
@@ -49,6 +49,19 @@ minetest.register_ore({
 		octaves = 3,
 		persist = 0.6
 	},
+})
+
+-- Amethyst (Broken Hill)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_amethyst",
+	wherein =        {"base:stone"},
+	biomes =         {"murray_darling_basin"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          33,
 })
 
 --Copper (Cadia)
