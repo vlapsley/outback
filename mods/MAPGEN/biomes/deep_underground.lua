@@ -270,3 +270,107 @@ minetest.register_ore({
 	y_max =          -1072,
 })
 
+-- Agate
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_agate",
+	wherein =        {"base:stone"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31000,
+	y_max =          -1072,
+})
+
+-- Amethyst
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_amethyst",
+	wherein =        {"base:stone"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31000,
+	y_max =          -1072,
+})
+
+-- Citrine
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_citrine",
+	wherein =        {"base:stone"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31000,
+	y_max =          -1072,
+})
+
+-- Emerald
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_emerald",
+	wherein =        {"base:stone"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31000,
+	y_max =          -1072,
+})
+
+-- Jade
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_jade",
+	wherein =        {"base:stone"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31000,
+	y_max =          -1072,
+})
+
+-- Ruby
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_ruby",
+	wherein =        {"base:stone"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31000,
+	y_max =          -1072,
+})
+
+-- Sapphire
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_sapphire",
+	wherein =        {"base:stone"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31000,
+	y_max =          -1072,
+})
+
+-- Smoky Quartz
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_smoky_quartz",
+	wherein =        {"base:stone"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31000,
+	y_max =          -1072,
+})
+
