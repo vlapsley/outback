@@ -116,6 +116,32 @@ minetest.register_ore({
 	y_max =          120,
 })
 
+-- Ruby (Barrington Tops)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_ruby",
+	wherein =        {"base:stone"},
+	biomes =         {"eastern_coasts"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          129,
+})
+
+-- Sapphire (Kings Plains)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_sapphire",
+	wherein =        {"base:stone"},
+	biomes =         {"eastern_coasts"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          88,
+})
+
 -- Smoky Quartz (Kingsgate)
 minetest.register_ore({
 	ore_type =       "scatter",
