@@ -342,3 +342,261 @@ minetest.register_craft({
 	}
 })
 
+
+--
+-- Fuels
+--
+
+-- Support use of group:tree
+minetest.register_craft({
+	type = "fuel",
+	recipe = "group:tree",
+	burntime = 30,
+})
+
+-- Burn time for all woods are in order of wood density,
+-- which is also the order of wood colour darkness:
+-- aspen, pine, apple, acacia, jungle
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:aspen_tree",
+	burntime = 22,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:pine_tree",
+	burntime = 26,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:tree",
+	burntime = 30,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:acacia_tree",
+	burntime = 34,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:jungletree",
+	burntime = 38,
+})
+
+-- Support use of group:wood
+minetest.register_craft({
+	type = "fuel",
+	recipe = "group:wood",
+	burntime = 7,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:aspen_wood",
+	burntime = 5,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:pine_wood",
+	burntime = 6,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:wood",
+	burntime = 7,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:acacia_wood",
+	burntime = 8,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:junglewood",
+	burntime = 9,
+})
+
+-- Support use of group:sapling
+minetest.register_craft({
+	type = "fuel",
+	recipe = "group:sapling",
+	burntime = 10,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:bush_sapling",
+	burntime = 6,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:acacia_bush_sapling",
+	burntime = 7,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:aspen_sapling",
+	burntime = 8,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:pine_sapling",
+	burntime = 9,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:sapling",
+	burntime = 10,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:acacia_sapling",
+	burntime = 11,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:junglesapling",
+	burntime = 12,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:fence_aspen_wood",
+	burntime = 5,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:fence_pine_wood",
+	burntime = 6,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:fence_wood",
+	burntime = 7,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:fence_acacia_wood",
+	burntime = 8,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:fence_junglewood",
+	burntime = 9,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:bush_stem",
+	burntime = 7,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:acacia_bush_stem",
+	burntime = 8,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:junglegrass",
+	burntime = 2,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "group:leaves",
+	burntime = 1,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:cactus",
+	burntime = 15,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:papyrus",
+	burntime = 1,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:ladder_wood",
+	burntime = 2,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:lava_source",
+	burntime = 60,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:apple",
+	burntime = 3,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:coal_lump",
+	burntime = 40,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:coalblock",
+	burntime = 370,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:grass_1",
+	burntime = 2,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:dry_grass_1",
+	burntime = 2,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:paper",
+	burntime = 1,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:dry_shrub",
+	burntime = 2,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "group:stick",
+	burntime = 1,
+})
+
