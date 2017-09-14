@@ -351,12 +351,8 @@ minetest.register_craft({
 minetest.register_craft({
 	type = "fuel",
 	recipe = "group:tree",
-	burntime = 30,
+	burntime = 25,
 })
-
--- Burn time for all woods are in order of wood density,
--- which is also the order of wood colour darkness:
--- aspen, pine, apple, acacia, jungle
 
 minetest.register_craft({
 	type = "fuel",
@@ -372,8 +368,38 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
+	recipe = "base:huon_pine_tree",
+	burntime = 26,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:celery_top_pine_tree",
+	burntime = 26,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:southern_sassafras_tree",
+	burntime = 26,
+})
+
+minetest.register_craft({
+	type = "fuel",
 	recipe = "base:tree",
 	burntime = 30,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:tasmanian_myrtle_tree",
+	burntime = 31,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:swamp_gum_tree",
+	burntime = 32,
 })
 
 minetest.register_craft({
@@ -384,15 +410,64 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
+	recipe = "base:marri_tree",
+	burntime = 34,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:black_wattle_tree",
+	burntime = 35,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:merbau_tree",
+	burntime = 36,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:jarrah_tree",
+	burntime = 37,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:blue_gum_tree",
+	burntime = 37,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:karri_tree",
+	burntime = 37,
+})
+
+minetest.register_craft({
+	type = "fuel",
 	recipe = "base:jungletree",
 	burntime = 38,
 })
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:river_red_gum_tree",
+	burntime = 38,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:daintree_stringybark_tree",
+	burntime = 40,
+})
+
 
 -- Support use of group:wood
 minetest.register_craft({
 	type = "fuel",
 	recipe = "group:wood",
-	burntime = 7,
+	burntime = 6,
 })
 
 minetest.register_craft({
@@ -409,7 +484,37 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
+	recipe = "base:huon_pine",
+	burntime = 6,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:celery_top_pine",
+	burntime = 6,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:southern_sassafras",
+	burntime = 6,
+})
+
+minetest.register_craft({
+	type = "fuel",
 	recipe = "base:wood",
+	burntime = 7,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:tasmanian_myrtle",
+	burntime = 7,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:tasmanian_oak",
 	burntime = 7,
 })
 
@@ -421,15 +526,64 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
+	recipe = "base:marri",
+	burntime = 8,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:blackwood",
+	burntime = 8,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:merbau",
+	burntime = 8,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:jarrah",
+	burntime = 8,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:blue_gum",
+	burntime = 8,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:karri",
+	burntime = 8,
+})
+
+minetest.register_craft({
+	type = "fuel",
 	recipe = "base:junglewood",
 	burntime = 9,
 })
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:river_red_gum",
+	burntime = 9,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:red_mahogany",
+	burntime = 10,
+})
+
 
 -- Support use of group:sapling
 minetest.register_craft({
 	type = "fuel",
 	recipe = "group:sapling",
-	burntime = 10,
+	burntime = 9,
 })
 
 minetest.register_craft({
@@ -458,7 +612,37 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
+	recipe = "base:huon_pine_sapling",
+	burntime = 9,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:celery_top_pine_sapling",
+	burntime = 9,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:southern_sassafras_sapling",
+	burntime = 9,
+})
+
+minetest.register_craft({
+	type = "fuel",
 	recipe = "base:sapling",
+	burntime = 10,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:tasmanian_myrtle_sapling",
+	burntime = 10,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:swamp_gum_sapling",
 	burntime = 10,
 })
 
@@ -470,9 +654,58 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
+	recipe = "base:marri_sapling",
+	burntime = 11,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:black_wattle_sapling",
+	burntime = 11,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:merbau_sapling",
+	burntime = 11,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:jarrah_sapling",
+	burntime = 11,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:blue_gum_sapling",
+	burntime = 11,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:karri_sapling",
+	burntime = 1,
+})
+
+minetest.register_craft({
+	type = "fuel",
 	recipe = "base:junglesapling",
 	burntime = 12,
 })
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:river_red_gum_sapling",
+	burntime = 12,
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "base:daintree_stringybark_sapling",
+	burntime = 14,
+})
+
 
 minetest.register_craft({
 	type = "fuel",
