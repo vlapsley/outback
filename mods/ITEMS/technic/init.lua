@@ -26,8 +26,8 @@ dofile(modpath.."/config.lua")
 -- Helper functions
 dofile(modpath.."/helpers.lua")
 
--- Uranium
-dofile(modpath.."/uranium.lua")
+-- Ores
+dofile(modpath.."/ores.lua")
 
 -- Items 
 dofile(modpath.."/items.lua")

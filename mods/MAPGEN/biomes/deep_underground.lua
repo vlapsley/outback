@@ -71,6 +71,19 @@ minetest.register_ore({
 	y_max =          -1072,
 })
 
+-- Chromium
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:stone_with_chromium",
+	wherein =        {"base:stone"},
+	biomes =         {"deep_underground"},
+	clust_scarcity = 2197,
+	clust_num_ores = 5,
+	clust_size =     3,
+	y_min =          -31000,
+	y_max =          -1072,
+})
+
 -- Coal
 minetest.register_ore({
 	ore_type =       "scatter",
@@ -232,7 +245,7 @@ minetest.register_ore({
 	y_max =          -1072,
 })
 
---Silver
+-- Silver
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_silver",

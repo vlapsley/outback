@@ -66,6 +66,19 @@ minetest.register_ore({
 	noise_params =    {offset=0, scale=15, spread={x=150, y=150, z=150}, seed=23, octaves=3, persist=0.70}
 })
 
+-- Chromium (Coobina)
+minetest.register_ore({
+	ore_type =       "scatter",
+	ore =            "base:granite_with_chromium",
+	wherein =        {"base:granite"},
+	biomes =         {"pilbara"},
+	clust_scarcity = 3375,
+	clust_num_ores = 3,
+	clust_size =     2,
+	y_min =          -31,
+	y_max =          55,
+})
+
 -- Amethyst (Ashburton River)
 minetest.register_ore({
 	ore_type =       "scatter",
