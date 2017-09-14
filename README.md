@@ -58,19 +58,23 @@ The following features are incomplete or not yet implemented:
 * Pipeworks
 * Mesecons
 * Mobs - Great White Shark, Tiger Shark, Saltwater Crocodile, Brown Snake, Tiger Snake, Emu, Kangaroo, and Wombat.
-* Combat: weapons and armor
+* Combat: weapons (bows, pistol, rifle) and armor (kevlar)
 * Weather and seasons
 * Ambient sounds
 * Farming and crops
 * Fishing
 * Food recipies
+* Potentially add renewable fruit on trees
 * Wine and brewing
-* Villages - Pub, cattle station, sheep station, simple crop farmhouse.
-* Hunger, thirst and stamina.
-* Additions to survival mode - poison, medikits / first aid, Indigenous remedies.
-* Shipwrecks
+* Villages - Pub, cattle station, sheep station, simple crop farmhouse (apple, banana, sugar cane, pineapple, grapes/vineyard), general store.
+* Hunger
+* Thirst and drinking water
+* Stamina, exhaustion.
+* Additions to survival mode - poison (snake bite), medikits / first aid and Indigenous remedies.
+* Shipwrecks - extend items stored in the wrecks chest.
 * Sea grass and kelp
-* Subterrane monsters - just enough to keep you on your toes.
+* Subterrane monsters - just enough to keep you on your toes. Probably zombies.
+* Explore the skybox mod and potentially add some beautiful skylines.
 * Crafting guide
 * In-game help system
 * Licenses and credits
