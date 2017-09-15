@@ -65,11 +65,6 @@ minetest.register_craftitem("base:lead_lump", {
 	inventory_image = "base_lead_lump.png",
 })
 
-minetest.register_craftitem("base:sulfur_lump", {
-	description = "Sulfur Lump",
-	inventory_image = "base_sulfur_lump.png",
-})
-
 minetest.register_craftitem("base:silver_lump", {
 	description = "Silver Lump",
 	inventory_image = "base_silver_lump.png",

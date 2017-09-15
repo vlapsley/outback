@@ -705,14 +705,6 @@ minetest.register_node("base:leadblock", {
 	sounds = base.node_sound_metal_defaults(),
 })
 
-minetest.register_node("base:stone_with_sulfur", {
-	description = "Sulfur Ore",
-	tiles = {"base_stone.png^base_mineral_sulfur.png" },
-	groups = {cracky = 3},
-	drop = "base:sulfur_lump",
-	sounds = base.node_sound_stone_defaults(),
-})
-
 minetest.register_node("base:stone_with_silver", {
 	description = "Silver Ore",
 	tiles = {"base_stone.png^base_mineral_silver.png" },

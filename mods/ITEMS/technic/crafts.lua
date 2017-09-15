@@ -196,3 +196,76 @@ minetest.register_craft({
 		"group:sand",
 	},
 })
+
+
+minetest.register_craftitem("technic:brass_ingot", {
+	description = "Brass Ingot",
+	inventory_image = "technic_brass_ingot.png",
+})
+
+minetest.register_alias("technic:wrought_iron_ingot", "base:steel_ingot")
+
+minetest.override_item("base:steel_ingot", {
+	description = "Wrought Iron Ingot",
+	inventory_image = "technic_wrought_iron_ingot.png",
+})
+
+minetest.register_craftitem("technic:cast_iron_ingot", {
+	description = "Cast Iron Ingot",
+	inventory_image = "technic_cast_iron_ingot.png",
+})
+
+minetest.register_craftitem("technic:carbon_steel_ingot", {
+	description = "Carbon Steel Ingot",
+	inventory_image = "technic_carbon_steel_ingot.png",
+})
+
+minetest.register_craftitem("technic:stainless_steel_ingot", {
+	description = "Stainless Steel Ingot",
+	inventory_image = "technic_stainless_steel_ingot.png",
+})
+
+local function register_block(block, ingot)
+	minetest.register_craft({
+		output = block,
+		recipe = {
+			{ingot, ingot, ingot},
+			{ingot, ingot, ingot},
+			{ingot, ingot, ingot},
+		}
+	})
+
+	minetest.register_craft({
+		output = ingot.." 9",
+		recipe = {
+			{block}
+		}
+	})
+end
+
+register_block("technic:brass_block", "technic:brass_ingot")
+register_block("technic:cast_iron_block", "technic:cast_iron_ingot")
+register_block("technic:carbon_steel_block", "technic:carbon_steel_ingot")
+register_block("technic:stainless_steel_block", "technic:stainless_steel_ingot")
+
+
+minetest.register_craft({
+	type = 'cooking',
+	recipe = minetest.registered_aliases["technic:wrought_iron_ingot"],
+	output = "technic:cast_iron_ingot",
+})
+
+minetest.register_craft({
+	type = 'cooking',
+	recipe = "technic:cast_iron_ingot",
+	cooktime = 2,
+	output = "technic:wrought_iron_ingot",
+})
+
+minetest.register_craft({
+	type = 'cooking',
+	recipe = "technic:carbon_steel_ingot",
+	cooktime = 2,
+	output = "technic:wrought_iron_ingot",
+})
+

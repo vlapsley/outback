@@ -60,6 +60,24 @@ minetest.register_craft({
 
 
 --[[
+	Sulfur
+--]]
+
+minetest.register_node("technic:stone_with_sulfur", {
+	description = "Sulfur Ore",
+	tiles = {"base_stone.png^technic_mineral_sulfur.png" },
+	groups = {cracky=3},
+	drop = "technic:sulfur_lump",
+	sounds = base.node_sound_stone_defaults(),
+})
+
+minetest.register_craftitem("technic:sulfur_lump", {
+	description = "Sulfur Lump",
+	inventory_image = "technic_sulfur_lump.png",
+})
+
+
+--[[
 	Uranium
 --]]
 
