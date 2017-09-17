@@ -83,7 +83,7 @@ for grid_count = 1, 6 do
 
 	minetest.register_node("base:small_red_rocks"..grid_count, {
 		description = "Small Red Rocks",
-		tiles = {"base_granite.png"},
+		tiles = {"technic_granite.png"},
 		is_ground_content = true,
 		walkable = false,
 		paramtype = "light",
@@ -104,7 +104,7 @@ end
 
 minetest.register_node("base:small_red_rocks", {
 	description = "Small Red Rocks",
-	tiles = {"base_granite.png"},
+	tiles = {"technic_granite.png"},
 	inventory_image = "base_small_red_rocks.png",
 	is_ground_content = true,
 	walkable = false,
