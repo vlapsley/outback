@@ -12,16 +12,20 @@ technic.register_power_tool("technic:red_energy_crystal", 50000)
 technic.register_power_tool("technic:green_energy_crystal", 150000)
 technic.register_power_tool("technic:blue_energy_crystal", 450000)
 
--- Battery recipes:
--- Tin-copper recipe:
+-- Battery recipe:
 minetest.register_craft({
 	output = "technic:battery",
 	recipe = {
 		{"group:wood", "base:nickel_ingot", "group:wood"},
+<<<<<<< HEAD:mods/ITEMS/technic/technic/machines/register/battery_box.lua
 		{"group:wood", "base:aluminium_ingot",   "group:wood"},
+=======
+		{"group:wood", "base:aluminium_ingot", "group:wood"},
+>>>>>>> 25921a596b16961d1e3d66c7132ba4ad18850852:mods/ITEMS/technic/machines/register/battery_box.lua
 		{"group:wood", "base:nickel_ingot", "group:wood"},
 	}
 })
+
 
 minetest.register_tool("technic:battery", {
 	description = S("RE Battery"),
