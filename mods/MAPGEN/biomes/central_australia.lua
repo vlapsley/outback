@@ -13,7 +13,7 @@ minetest.register_biome({
 	depth_top =        1,
 	node_filler =      "base:red_sandstone",
 	depth_filler =     2,
-	node_stone =       "base:granite",
+	node_stone =       "technic:granite",
 	node_river_water = "base:muddy_water_source",
 	node_riverbed =    "base:red_dirt",
 	depth_riverbed =   1,
@@ -34,7 +34,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =        "blob",
 	ore =             "base:granite_with_copper",
-	wherein =         {"base:granite"},
+	wherein =         {"technic:granite"},
 	clust_scarcity =  85184,
 	clust_size =      8,
 	biomes =          {"central_australia"},
@@ -55,7 +55,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =        "vein",
 	ore =             "base:granite_with_opal",
-	wherein =         "base:granite",
+	wherein =         "technic:granite",
 	biomes =          {"central_australia"},
 	y_min =           -31,
 	y_max =           21,
@@ -75,7 +75,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:granite_with_smoky_quartz",
-	wherein =        {"base:granite"},
+	wherein =        {"technic:granite"},
 	biomes =         {"central_australia"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -87,8 +87,8 @@ minetest.register_ore({
 -- Uranium (Olympic Dam)
 minetest.register_ore({
 	ore_type =        "scatter",
-	ore =             "technic:granite_with_uranium",
-	wherein =         "base:granite",
+	ore =             "technic:granite_mineral_uranium",
+	wherein =         "technic:granite",
 	clust_scarcity =  8000,
 	clust_num_ores =  8,
 	clust_size =      5,

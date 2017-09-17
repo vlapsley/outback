@@ -54,7 +54,7 @@ minetest.register_ore({
 -- Lead (Mount Isa)
 minetest.register_ore({
 	ore_type =        "blob",
-	ore =             "base:stone_with_lead",
+	ore =             "technic:mineral_lead",
 	wherein =         {"base:stone"},
 	clust_scarcity =  85184,
 	clust_size =      8,
@@ -96,7 +96,7 @@ minetest.register_ore({
 -- Zinc (Mount Isa)
 minetest.register_ore({
 	ore_type =        "blob",
-	ore =             "base:stone_with_zinc",
+	ore =             "technic:mineral_zinc",
 	wherein =         {"base:stone"},
 	clust_scarcity =  85184,
 	clust_size =      8,

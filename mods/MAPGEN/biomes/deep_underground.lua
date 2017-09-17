@@ -74,7 +74,7 @@ minetest.register_ore({
 -- Chromium
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_chromium",
+	ore =            "technic:mineral_chromium",
 	wherein =        {"base:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 2197,
@@ -212,7 +212,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:granite_with_iron",
-	wherein =        {"base:granite"},
+	wherein =        {"technic:granite"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 343,
 	clust_num_ores = 5,
@@ -236,7 +236,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:granite_with_iron",
-	wherein =        {"base:granite"},
+	wherein =        {"technic:granite"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 13824,
 	clust_num_ores = 27,
@@ -274,7 +274,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:granite_with_tin",
-	wherein =        {"base:granite"},
+	wherein =        {"technic:granite"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 1000,
 	clust_num_ores = 5,

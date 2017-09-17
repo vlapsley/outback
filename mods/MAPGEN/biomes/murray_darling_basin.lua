@@ -33,7 +33,7 @@ minetest.register_biome({
 -- Zinc (Broken Hill)
 minetest.register_ore({
 	ore_type =        "blob",
-	ore =             "base:stone_with_zinc",
+	ore =             "technic:mineral_zinc",
 	wherein =         {"base:stone"},
 	clust_scarcity =  85184,
 	clust_size =      5,

@@ -97,7 +97,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:granite_with_tin",
-	wherein =        {"base:granite"},
+	wherein =        {"technic:granite"},
 	biomes =         {"tasmania"},
 	clust_scarcity = 2197,
 	clust_num_ores = 5,

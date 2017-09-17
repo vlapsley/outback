@@ -453,38 +453,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'base:zincblock',
-	recipe = {
-		{'base:zinc_ingot', 'base:zinc_ingot', 'base:zinc_ingot'},
-		{'base:zinc_ingot', 'base:zinc_ingot', 'base:zinc_ingot'},
-		{'base:zinc_ingot', 'base:zinc_ingot', 'base:zinc_ingot'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:zinc_ingot 9',
-	recipe = {
-		{'base:zincblock'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:leadblock',
-	recipe = {
-		{'base:lead_ingot', 'base:lead_ingot', 'base:lead_ingot'},
-		{'base:lead_ingot', 'base:lead_ingot', 'base:lead_ingot'},
-		{'base:lead_ingot', 'base:lead_ingot', 'base:lead_ingot'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:lead_ingot 9',
-	recipe = {
-		{'base:leadblock'},
-	}
-})
-
-minetest.register_craft({
 	output = 'base:silverblock',
 	recipe = {
 		{'base:silver_ingot', 'base:silver_ingot', 'base:silver_ingot'},
@@ -800,14 +768,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:granite_brick 4",
-	recipe = {
-		{"base:granite", "base:granite"},
-		{"base:granite", "base:granite"},
-	}
-})
-
-minetest.register_craft({
 	output = "base:slate_tile 4",
 	recipe = {
 		{"base:slate","base:slate"},
@@ -926,18 +886,6 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "cooking",
-	output = "base:zinc_ingot",
-	recipe = "base:zinc_lump",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:lead_ingot",
-	recipe = "base:lead_lump",
-})
-
-minetest.register_craft({
-	type = "cooking",
 	output = "base:silver_ingot",
 	recipe = "base:silver_lump",
 })
@@ -958,12 +906,6 @@ minetest.register_craft({
 	type = "cooking",
 	output = "base:diorite",
 	recipe = "base:diorite_cobble",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:granite",
-	recipe = "base:granite_cobble",
 })
 
 minetest.register_craft({

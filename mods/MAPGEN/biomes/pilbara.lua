@@ -13,7 +13,7 @@ minetest.register_biome({
 	depth_top =        1,
 	node_filler =      "base:red_sandstone",
 	depth_filler =     2,
-	node_stone =       "base:granite",
+	node_stone =       "technic:granite",
 	node_river_water = "base:muddy_water_source",
 	node_riverbed =    "base:red_gravel",
 	depth_riverbed =   1,
@@ -34,7 +34,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =        "blob",
 	ore =             "base:granite_with_iron",
-	wherein =         {"base:granite"},
+	wherein =         {"technic:granite"},
 	clust_scarcity =  4096,
 	clust_size =      6,
 	biomes =          {"pilbara"},
@@ -69,8 +69,8 @@ minetest.register_ore({
 -- Chromium (Coobina)
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:granite_with_chromium",
-	wherein =        {"base:granite"},
+	ore =            "technic:granite_mineral_chromium",
+	wherein =        {"technic:granite"},
 	biomes =         {"pilbara"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -83,7 +83,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:granite_with_amethyst",
-	wherein =        {"base:granite"},
+	wherein =        {"technic:granite"},
 	biomes =         {"pilbara"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -96,7 +96,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:granite_with_emerald",
-	wherein =        {"base:granite"},
+	wherein =        {"technic:granite"},
 	biomes =         {"pilbara"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,

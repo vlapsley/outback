@@ -197,28 +197,6 @@ minetest.register_node("base:diorite_brick", {
 	sounds = base.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:granite", {
-	description = "Granite",
-	tiles = {"base_granite.png"},
-	groups = {cracky = 2, stone = 1},
-	drop = 'base:granite_cobble',
-	sounds = base.node_sound_stone_defaults(),
-})
-
-minetest.register_node("base:granite_cobble", {
-	description = "Granite Cobble",
-	tiles = {"base_granite_cobble.png"},
-	groups = {cracky = 2, stone = 1},
-	sounds = base.node_sound_stone_defaults(),
-})
-
-minetest.register_node("base:granite_brick", {
-	description = "Granite Brick",
-	tiles = {"base_granite_brick.png"},
-	groups = {cracky = 2, stone = 1},
-	sounds = base.node_sound_stone_defaults(),
-})
-
 minetest.register_node("base:limestone", {
 	description = "Limestone",
 	tiles = {"base_limestone.png"},
@@ -562,7 +540,7 @@ minetest.register_node("base:stone_with_iron", {
 
 minetest.register_node("base:granite_with_iron", {
 	description = "Iron Ore",
-	tiles = {"base_granite.png^base_mineral_iron.png"},
+	tiles = {"technic_granite.png^base_mineral_iron.png"},
 	groups = {cracky = 2},
 	drop = 'base:iron_lump',
 	sounds = base.node_sound_stone_defaults(),
@@ -586,7 +564,7 @@ minetest.register_node("base:stone_with_copper", {
 
 minetest.register_node("base:granite_with_copper", {
 	description = "Copper Ore",
-	tiles = {"base_granite.png^base_mineral_copper.png"},
+	tiles = {"technic_granite.png^base_mineral_copper.png"},
 	groups = {cracky = 2},
 	drop = 'base:copper_lump',
 	sounds = base.node_sound_stone_defaults(),
@@ -602,7 +580,7 @@ minetest.register_node("base:copperblock", {
 
 minetest.register_node("base:granite_with_opal", {
 	description = "Opal Ore",
-	tiles = {"base_granite.png^base_mineral_opal.png"},
+	tiles = {"technic_granite.png^base_mineral_opal.png"},
 	groups = {cracky = 2},
 	drop = "base:opal",
 	sounds = base.node_sound_stone_defaults(),
@@ -618,7 +596,7 @@ minetest.register_node("base:stone_with_tin", {
 
 minetest.register_node("base:granite_with_tin", {
 	description = "Tin Ore",
-	tiles = {"base_granite.png^base_mineral_tin.png"},
+	tiles = {"technic_granite.png^base_mineral_tin.png"},
 	groups = {cracky = 2},
 	drop = "base:tin_lump",
 	sounds = base.node_sound_stone_defaults(),
@@ -667,39 +645,6 @@ minetest.register_node("base:nickelblock", {
 minetest.register_node("base:bronzeblock", {
 	description = "Bronze Block",
 	tiles = {"base_bronze_block.png"},
-	is_ground_content = false,
-	groups = {cracky = 1, level = 2},
-	sounds = base.node_sound_metal_defaults(),
-})
-
-minetest.register_node("base:stone_with_zinc", {
-	description = "Zinc Ore",
-	tiles = {"base_stone.png^base_mineral_zinc.png" },
-	is_ground_content = true,
-	groups = {cracky = 3},
-	drop = "base:zinc_lump",
-	sounds = base.node_sound_stone_defaults(),
-})
-
-minetest.register_node("base:zincblock", {
-	description = "Zinc Block",
-	tiles = {"base_zinc_block.png"},
-	is_ground_content = false,
-	groups = {cracky = 1, level = 2},
-	sounds = base.node_sound_metal_defaults(),
-})
-
-minetest.register_node("base:stone_with_lead", {
-	description = "Lead Ore",
-	tiles = {"base_stone.png^base_mineral_lead.png" },
-	groups = {cracky = 3},
-	drop = "base:lead_lump",
-	sounds = base.node_sound_stone_defaults(),
-})
-
-minetest.register_node("base:leadblock", {
-	description = "Lead Block",
-	tiles = {"base_lead_block.png"},
 	is_ground_content = false,
 	groups = {cracky = 1, level = 2},
 	sounds = base.node_sound_metal_defaults(),
@@ -796,7 +741,7 @@ minetest.register_node("base:stone_with_amethyst", {
 
 minetest.register_node("base:granite_with_amethyst", {
 	description = "Amethyst Ore",
-	tiles = {"base_granite.png^base_mineral_amethyst.png"},
+	tiles = {"technic_granite.png^base_mineral_amethyst.png"},
 	groups = {cracky = 1},
 	drop = "base:amethyst",
 	sounds = base.node_sound_stone_defaults(),
@@ -820,7 +765,7 @@ minetest.register_node("base:stone_with_emerald", {
 
 minetest.register_node("base:granite_with_emerald", {
 	description = "Emerald Ore",
-	tiles = {"base_granite.png^base_mineral_emerald.png"},
+	tiles = {"technic_granite.png^base_mineral_emerald.png"},
 	groups = {cracky = 1},
 	drop = "base:emerald",
 	sounds = base.node_sound_stone_defaults(),
@@ -860,7 +805,7 @@ minetest.register_node("base:stone_with_smoky_quartz", {
 
 minetest.register_node("base:granite_with_smoky_quartz", {
 	description = "Smoky Quartz Ore",
-	tiles = {"base_granite.png^base_mineral_smoky_quartz.png"},
+	tiles = {"technic_granite.png^base_mineral_smoky_quartz.png"},
 	groups = {cracky = 1},
 	drop = "base:smoky_quartz",
 	sounds = base.node_sound_stone_defaults(),

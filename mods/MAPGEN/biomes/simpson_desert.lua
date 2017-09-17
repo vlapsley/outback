@@ -13,7 +13,7 @@ minetest.register_biome({
 	depth_top =        3,
 	node_filler =      "base:red_sandstone",
 	depth_filler =     2,
-	node_stone =       "base:granite",
+	node_stone =       "technic:granite",
 	node_river_water = "base:muddy_water_source",
 	node_riverbed =    "base:red_gravel",
 	depth_riverbed =   1,

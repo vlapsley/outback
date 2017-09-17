@@ -33,7 +33,7 @@ minetest.register_biome({
 -- Lead (McArthur River)
 minetest.register_ore({
 	ore_type =        "blob",
-	ore =             "base:stone_with_lead",
+	ore =             "technic:mineral_lead",
 	wherein =         {"base:stone"},
 	clust_scarcity =  85184,
 	clust_size =      8,
@@ -54,7 +54,7 @@ minetest.register_ore({
 -- Zinc (McArthur River)
 minetest.register_ore({
 	ore_type =        "blob",
-	ore =             "base:stone_with_zinc",
+	ore =             "technic:mineral_zinc",
 	wherein =         {"base:stone"},
 	clust_scarcity =  85184,
 	clust_size =      8,
@@ -88,7 +88,7 @@ minetest.register_ore({
 -- Uranium (Ranger)
 minetest.register_ore({
 	ore_type =        "scatter",
-	ore =             "technic:stone_with_uranium",
+	ore =             "technic:mineral_uranium",
 	wherein =         {"base:stone"},
 	clust_scarcity =  21952,
 	clust_num_ores =  4,
@@ -110,7 +110,7 @@ minetest.register_ore({
 -- Uranium (Jabiluka)
 minetest.register_ore({
 	ore_type =        "scatter",
-	ore =             "technic:stone_with_uranium",
+	ore =             "technic:mineral_uranium",
 	wherein =         {"base:stone"},
 	clust_scarcity =  17576,
 	clust_num_ores =  4,
