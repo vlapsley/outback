@@ -17,11 +17,7 @@ minetest.register_craft({
 	output = "technic:battery",
 	recipe = {
 		{"group:wood", "base:nickel_ingot", "group:wood"},
-<<<<<<< HEAD:mods/ITEMS/technic/technic/machines/register/battery_box.lua
-		{"group:wood", "base:aluminium_ingot",   "group:wood"},
-=======
 		{"group:wood", "base:aluminium_ingot", "group:wood"},
->>>>>>> 25921a596b16961d1e3d66c7132ba4ad18850852:mods/ITEMS/technic/machines/register/battery_box.lua
 		{"group:wood", "base:nickel_ingot", "group:wood"},
 	}
 })
