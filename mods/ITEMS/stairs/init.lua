@@ -430,9 +430,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"granite",
-	"base:granite",
+	"technic:granite",
 	{cracky = 2},
-	{"base_granite.png"},
+	{"technic_granite.png"},
 	"Granite Stair",
 	"Granite Slab",
 	base.node_sound_stone_defaults()
@@ -440,9 +440,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"granite_brick",
-	"base:granite_brick",
+	"technic:granite_brick",
 	{cracky = 2},
-	{"base_granite_brick.png"},
+	{"technic_granite_brick.png"},
 	"Granite Brick Stair",
 	"Granite Brick Slab",
 	base.node_sound_stone_defaults()
@@ -450,9 +450,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"granite_cobble",
-	"base:granite_cobble",
+	"technic:granite_cobble",
 	{cracky = 2},
-	{"base_granite_cobble.png"},
+	{"technic_granite_cobble.png"},
 	"Granite Cobble Stair",
 	"Granite Cobble Slab",
 	base.node_sound_stone_defaults()

@@ -70,14 +70,14 @@ walls.register("walls:diorite_brick", "Diorite Brick Wall", "base_diorite_brick.
 walls.register("walls:diorite_cobble", "Diorite Cobble Wall", "base_diorite_cobble.png",
 		"base:diorite_cobble", base.node_sound_stone_defaults())
 
-walls.register("walls:granite", "Granite Wall", "base_granite.png",
-		"base:granite", base.node_sound_stone_defaults())
+walls.register("walls:granite", "Granite Wall", "technic_granite.png",
+		"technic:granite", base.node_sound_stone_defaults())
 
-walls.register("walls:granite_brick", "Granite Brick Wall", "base_granite_brick.png",
-		"base:granite_brick", base.node_sound_stone_defaults())
+walls.register("walls:granite_brick", "Granite Brick Wall", "technic_granite_brick.png",
+		"technic:granite_brick", base.node_sound_stone_defaults())
 
-walls.register("walls:granite_cobble", "Granite Cobble Wall", "base_granite_cobble.png",
-		"base:granite_cobble", base.node_sound_stone_defaults())
+walls.register("walls:granite_cobble", "Granite Cobble Wall", "technic_granite_cobble.png",
+		"technic:granite_cobble", base.node_sound_stone_defaults())
 
 walls.register("walls:limestone", "Limestone Wall", "base_limestone.png",
 		"base:limestone", base.node_sound_stone_defaults())
