@@ -1,12 +1,11 @@
---[[
-	Flowers
---]]
-
-
 -- Namespace for functions
 
 flowers = {}
 
+
+--[[
+	Flowers
+--]]
 
 -- Flower registration
 
@@ -249,3 +248,6 @@ minetest.register_node("flowers:waterlily", {
 		return itemstack
 	end
 })
+
+-- Aliases for schematic nodes
+minetest.register_alias("default:dirt", "base:dirt")

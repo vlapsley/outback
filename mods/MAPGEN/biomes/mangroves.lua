@@ -94,6 +94,23 @@ minetest.register_decoration({
 	flags =       "force_placement",
 })
 
+-- Waterlily
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {
+			"base:dirt",
+			"base:mangrove_mud",
+			"base:sand",
+	},
+	sidelen = 80,
+	fill_ratio =  0.3,
+	biomes = {"mangroves"},
+	y_min = 0,
+	y_max = 3,
+	schematic = minetest.get_modpath("flowers") .. "/schematics/waterlily.mts",
+	rotation = "random",
+})
+
 
 --[[
 	Trees

@@ -2,3 +2,4 @@ plants_api
 base
 mapgen_core
 technic
+flowers

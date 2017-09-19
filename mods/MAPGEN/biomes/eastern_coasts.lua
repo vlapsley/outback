@@ -224,6 +224,22 @@ plants_api.register_plant({
 	end,
 })
 
+-- Waterlily
+minetest.register_decoration({
+	deco_type = "schematic",
+	place_on = {
+			"base:dirt",
+			"base:sand",
+	},
+	sidelen = 80,
+	fill_ratio =  0.3,
+	biomes = {"eastern_coasts"},
+	y_min = 0,
+	y_max = 96,
+	schematic = minetest.get_modpath("flowers") .. "/schematics/waterlily.mts",
+	rotation = "random",
+})
+
 -- Snow
 minetest.register_decoration({
 	deco_type =   "simple",
