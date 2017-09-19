@@ -42,7 +42,7 @@ end
 flowers.datas = {
 	{
 		"rose",
-		"Rose",
+		"Red Rose",
 		{-2/16, -8/16, -2/16, 2/16, 5/16, 2/16},
 		{color_red = 1}
 	},
@@ -196,9 +196,9 @@ minetest.register_abm({
 })
 
 
---
--- Waterlily
---
+--[[
+	Waterlily
+--]]
 
 minetest.register_node("flowers:waterlily", {
 	description = "Waterlily",
@@ -218,11 +218,11 @@ minetest.register_node("flowers:waterlily", {
 	node_placement_prediction = "",
 	node_box = {
 		type = "fixed",
-		fixed = {-0.5, -31 / 64, -0.5, 0.5, -15 / 32, 0.5}
+		fixed = {-8/16, -31/64, -8/16, 8/16, -15/32, 8/16}
 	},
 	selection_box = {
 		type = "fixed",
-		fixed = {-7 / 16, -0.5, -7 / 16, 7 / 16, -15 / 32, 7 / 16}
+		fixed = {-7/16, -8/16, -7/16, 7/16, -15/32, 7/16}
 	},
 
 	on_place = function(itemstack, placer, pointed_thing)
