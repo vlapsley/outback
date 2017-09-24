@@ -15,10 +15,10 @@ if minetest.get_modpath("dye") then
 	-- register recipes with the same crafting ratios as `dye` provides
 	local dye_recipes = {
 		{"technic:coal_dust",                 "dye:black 2"},
-		{"base:grass_1",                   "dye:green 1"},
-		{"base:dry_shrub",                 "dye:brown 1"},
-		{"base:junglegrass",               "dye:green 2"},
-		{"base:cactus",                    "dye:green 4"},
+		{"default:grass_1",                   "dye:green 1"},
+		{"default:dry_shrub",                 "dye:brown 1"},
+		{"default:junglegrass",               "dye:green 2"},
+		{"default:cactus",                    "dye:green 4"},
 		{"flowers:geranium",                  "dye:blue 4"},
 		{"flowers:dandelion_white",           "dye:white 4"},
 		{"flowers:dandelion_yellow",          "dye:yellow 4"},
@@ -53,7 +53,7 @@ if minetest.get_modpath("dye") then
 		minetest.register_craft({
 			type = "shapeless",
 			output = "dye:green 1",
-			recipe = {"base:cactus"},
+			recipe = {"default:cactus"},
 		})
 	end
 end

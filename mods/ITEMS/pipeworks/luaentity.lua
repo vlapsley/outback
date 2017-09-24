@@ -9,16 +9,16 @@ local filename = minetest.get_worldpath().."/luaentities"
 local function read_file()
 	local f = io.open(filename, "r")
 	if f == nil then return {} end
-    	local t = f:read("*all")
-    	f:close()
+		local t = f:read("*all")
+		f:close()
 	if t == "" or t == nil then return {} end
 	return minetest.deserialize(t) or {}
 end
 
 local function write_file(tbl)
 	local f = io.open(filename, "w")
-    	f:write(minetest.serialize(tbl))
-    	f:close()
+		f:write(minetest.serialize(tbl))
+		f:close()
 end
 
 local function read_entities()
@@ -36,7 +36,7 @@ local function read_entities()
 		y=math.min(30927,y)
 		z=math.min(30927,z)
 
-		entity.start_pos.x = x                 
+		entity.start_pos.x = x
 		entity.start_pos.y = y
 		entity.start_pos.z = z
 
@@ -284,7 +284,7 @@ function luaentity.add_entity(pos, name)
 		_acceleration = {x = 0, y = 0, z = 0},
 		_attached_entities = {},
 	}
-	
+
 	local prototype = luaentity.registered_entities[name]
 	setmetatable(entity, prototype) -- Default to prototype for other methods
 	luaentity.entities[index] = entity

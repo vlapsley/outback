@@ -530,8 +530,8 @@ function biome_lib:spawn_on_surfaces(sd,sp,sr,sc,ss,sa)
 						end
 					else
 						local currentsurface = minetest.get_node(pos).name
-						if currentsurface ~= "base:water_source"
-						  or (currentsurface == "base:water_source" and #(minetest.find_nodes_in_area({x=pos.x, y=pos.y-biome.depth_max-1, z=pos.z}, {x=pos.x, y=pos.y, z=pos.z}, {"base:dirt", "base:dirt_with_grass", "base:sand"})) > 0 )
+						if currentsurface ~= "default:water_source"
+						  or (currentsurface == "default:water_source" and #(minetest.find_nodes_in_area({x=pos.x, y=pos.y-biome.depth_max-1, z=pos.z}, {x=pos.x, y=pos.y, z=pos.z}, {"default:dirt", "default:dirt_with_grass", "default:sand"})) > 0 )
 						  then
 							local rnd = math.random(1, biome.spawn_plants_count)
 							local plant_to_spawn = biome.spawn_plants[rnd]
@@ -573,8 +573,8 @@ function biome_lib:grow_plants(opts)
 	local options = opts
 
 	options.height_limit = options.height_limit or 5
-	options.ground_nodes = options.ground_nodes or { "base:dirt_with_grass" }
-	options.grow_nodes = options.grow_nodes or { "base:dirt_with_grass" }
+	options.ground_nodes = options.ground_nodes or { "default:dirt_with_grass" }
+	options.grow_nodes = options.grow_nodes or { "default:dirt_with_grass" }
 	options.seed_diff = options.seed_diff or 0
 
 	if options.grow_delay*time_scale >= 1 then
@@ -597,12 +597,12 @@ function biome_lib:grow_plants(opts)
 			if options.need_wall and options.verticals_list then
 				walldir = biome_lib:find_adjacent_wall(p_top, options.verticals_list, options.choose_random_wall)
 			end
-			if (n_top.name == "air" or n_top.name == "base:snow")
+			if (n_top.name == "air" or n_top.name == "default:snow")
 			  and (not options.need_wall or (options.need_wall and walldir)) then
 				-- corner case for changing short junglegrass
 				-- to dry shrub in desert
 				if n_bot.name == options.dry_early_node and options.grow_plant == "junglegrass:short" then
-					minetest.set_node(pos, { name = "base:dry_shrub" })
+					minetest.set_node(pos, { name = "default:dry_shrub" })
 
 				elseif options.grow_vertically and walldir then
 					if biome_lib:search_downward(pos, options.height_limit, options.ground_nodes) then

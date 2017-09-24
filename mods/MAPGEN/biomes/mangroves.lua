@@ -11,11 +11,11 @@ minetest.register_biome({
 	name =             "mangroves",
 	node_top =         "base:mangrove_mud",
 	depth_top =        3,
-	node_filler =      "base:clay",
+	node_filler =      "default:clay",
 	depth_filler =     1,
-	node_stone =       "base:stone",
+	node_stone =       "default:stone",
 	node_river_water = "base:muddy_water_source",
-	node_riverbed =    "base:dirt",
+	node_riverbed =    "default:dirt",
 	depth_riverbed =   1,
 	y_min =            -2,
 	y_max =            3,
@@ -40,9 +40,9 @@ minetest.register_decoration({
 	deco_type =   "simple",
 	place_on =    {
 		"base:mangrove_mud",
-		"base:sand",
-		"base:dirt",
-		"base:dirt_with_grass"
+		"default:sand",
+		"default:dirt",
+		"default:dirt_with_grass"
 	},
 	sidelen =     80,
 	fill_ratio =  0.2,
@@ -57,9 +57,9 @@ minetest.register_decoration({
 	deco_type =   "simple",
 	place_on =    {
 		"base:mangrove_mud",
-		"base:sand",
-		"base:dirt",
-		"base:dirt_with_grass"
+		"default:sand",
+		"default:dirt",
+		"default:dirt_with_grass"
 	},
 	sidelen =     80,
 	fill_ratio =  0.1,
@@ -74,8 +74,8 @@ minetest.register_decoration({
 	deco_type = "schematic",
 	place_on =    {
 		"base:mangrove_mud",
-		"base:sand",
-		"base:dirt",
+		"default:sand",
+		"default:dirt",
 	},
 	sidelen =     80,
 	fill_ratio =  0.3,
@@ -98,15 +98,15 @@ minetest.register_decoration({
 minetest.register_decoration({
 	deco_type = "schematic",
 	place_on = {
-			"base:dirt",
+			"default:dirt",
 			"base:mangrove_mud",
-			"base:sand",
+			"default:sand",
 	},
 	sidelen = 80,
 	fill_ratio =  0.3,
 	biomes = {"mangroves"},
 	y_min = 0,
-	y_max = 3,
+	y_max = 0,
 	schematic = minetest.get_modpath("flowers") .. "/schematics/waterlily.mts",
 	rotation = "random",
 })
@@ -129,9 +129,9 @@ for h = 4, max_ht do
 		sidelen =     80,
 		place_on =    {
 			"base:mangrove_mud",
-			"base:sand",
-			"base:dirt",
-			"base:dirt_with_grass",
+			"default:sand",
+			"default:dirt",
+			"default:dirt_with_grass",
 		},
 		fill_ratio =  0.005,
 		biomes =      {"mangroves"},
@@ -180,9 +180,9 @@ for h = 4, max_ht do
 		sidelen =     80,
 		place_on =    {
 			"base:mangrove_mud",
-			"base:sand",
-			"base:dirt",
-			"base:dirt_with_grass",
+			"default:sand",
+			"default:dirt",
+			"default:dirt_with_grass",
 		},
 		fill_ratio =  0.003,
 		biomes =      {"mangroves"},

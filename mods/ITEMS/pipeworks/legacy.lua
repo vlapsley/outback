@@ -1,5 +1,5 @@
 
-if not minetest.get_modpath("auto_tree_tap") and 
+if not minetest.get_modpath("auto_tree_tap") and
   minetest.get_modpath("technic") then
 
 	minetest.register_abm({
@@ -26,7 +26,7 @@ if not minetest.get_modpath("auto_tree_tap") and
 		is_ground_content = true,
 		paramtype2 = "facedir",
 		groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2, mesecon = 2,tubedevice=1, not_in_creative_inventory=1 },
-		sounds = base.node_sound_stone_defaults(),
+		sounds = default.node_sound_stone_defaults(),
 		tube = {connect_sides={back=1}},
 		on_construct = function(pos)
 			local meta = minetest.get_meta(pos)
@@ -37,10 +37,10 @@ if not minetest.get_modpath("auto_tree_tap") and
 		after_place_node = function (pos, placer)
 			pipeworks.scan_for_tube_objects(pos, placer)
 			local placer_pos = placer:getpos()
-		
+
 			--correct for the player's height
 			if placer:is_player() then placer_pos.y = placer_pos.y + 1.5 end
-		
+
 			--correct for 6d facedir
 			if placer_pos then
 				local dir = {

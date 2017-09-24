@@ -34,7 +34,7 @@ hbhunger.EXHAUST_LVL = 160 -- at what exhaustion player satiation gets lowerd
 
 --load custom settings
 local set = io.open(minetest.get_modpath("hbhunger").."/hbhunger.conf", "r")
-if set then 
+if set then
 	dofile(minetest.get_modpath("hbhunger").."/hbhunger.conf")
 	set:close()
 end
@@ -140,7 +140,6 @@ minetest.register_globalstep(function(dtime)
 
 			-- update all hud elements
 			update_hud(player)
-			
 			local controls = player:get_player_control()
 			-- Determine if the player is walking
 			if controls.up or controls.down or controls.left or controls.right then

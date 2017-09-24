@@ -2,14 +2,6 @@
 	Base miscellaneous nodes
 --]]
 
-minetest.register_node("base:cloud", {
-	description = "Cloud",
-	tiles = {"base_cloud.png"},
-	is_ground_content = false,
-	sounds = base.node_sound_defaults(),
-	groups = {not_in_creative_inventory = 1},
-})
-
 minetest.register_node("base:salt", {
 	description = "Salt",
 	drawtype = "plantlike",
@@ -21,7 +13,7 @@ minetest.register_node("base:salt", {
 	walkable = false,
 	groups = {fleshy = 3, dig_immediate = 3, flammable = 1},
 	on_use = minetest.item_eat(1),
-	sounds = base.node_sound_defaults(),
+	sounds = default.node_sound_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-3/32, -8/16, -3/32, 3/32, -4/16, 3/32},
@@ -48,7 +40,7 @@ minetest.register_node("base:opal",{
 		type = "fixed",
 		fixed = {-5/16, -8/16, -6/16, 5/16, -1/32, 5/16},
 	},
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 })
 
 
@@ -96,7 +88,7 @@ for grid_count = 1, 6 do
 		},
 		groups = {stone = 1, oddly_breakable_by_hand = 3},
 		drop = "base:small_red_rocks",
-		sounds = base.node_sound_stone_defaults(),
+		sounds = default.node_sound_stone_defaults(),
 	})
 
 	default_grid_red_rocks = grid
@@ -116,7 +108,7 @@ minetest.register_node("base:small_red_rocks", {
 		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
 	groups = {stone = 1, oddly_breakable_by_hand = 3},
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 	on_place = function(itemstack, placer, pointed_thing)
 		local pos = pointed_thing.above
 		local player_name = placer:get_player_name()
@@ -130,7 +122,6 @@ minetest.register_node("base:small_red_rocks", {
 			minetest.chat_send_player(player_name, "Node is protected")
 			minetest.record_protection_violation(pos, player_name)
 		end
-		
 		return itemstack
 	end
 })
@@ -149,7 +140,7 @@ for grid_count = 1, 6 do
 
 	minetest.register_node("base:small_sandstone_rocks"..grid_count, {
 		description = "Small Sandstone Rocks",
-		tiles = {"base_sandstone.png"},
+		tiles = {"default_sandstone.png"},
 		is_ground_content = true,
 		walkable = false,
 		paramtype = "light",
@@ -162,7 +153,7 @@ for grid_count = 1, 6 do
 		},
 		groups = {stone = 1, oddly_breakable_by_hand = 3},
 		drop = "base:small_sandstone_rocks",
-		sounds = base.node_sound_stone_defaults(),
+		sounds = default.node_sound_stone_defaults(),
 	})
 
 	default_grid_sandstone_rocks = grid
@@ -170,7 +161,7 @@ end
 
 minetest.register_node("base:small_sandstone_rocks", {
 	description = "Small Sandstone Rocks",
-	tiles = {"base_sandstone.png"},
+	tiles = {"default_sandstone.png"},
 	inventory_image = "base_small_sandstone_rocks.png",
 	is_ground_content = true,
 	walkable = false,
@@ -182,7 +173,7 @@ minetest.register_node("base:small_sandstone_rocks", {
 		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
 	groups = {stone = 1, oddly_breakable_by_hand = 3},
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 	on_place = function(itemstack, placer, pointed_thing)
 		local pos = pointed_thing.above
 		local player_name = placer:get_player_name()
@@ -196,7 +187,6 @@ minetest.register_node("base:small_sandstone_rocks", {
 			minetest.chat_send_player(player_name, "Node is protected")
 			minetest.record_protection_violation(pos, player_name)
 		end
-		
 		return itemstack
 	end
 })
@@ -215,7 +205,7 @@ for grid_count = 1, 6 do
 
 	minetest.register_node("base:small_stone_rocks"..grid_count, {
 		description = "Small Stone Rocks",
-		tiles = {"base_stone.png"},
+		tiles = {"default_stone.png"},
 		is_ground_content = true,
 		walkable = false,
 		paramtype = "light",
@@ -228,7 +218,7 @@ for grid_count = 1, 6 do
 		},
 		groups = {stone = 1, oddly_breakable_by_hand = 3},
 		drop = "base:small_stone_rocks",
-		sounds = base.node_sound_stone_defaults(),
+		sounds = default.node_sound_stone_defaults(),
 	})
 
 	default_grid_stone_rocks = grid
@@ -236,7 +226,7 @@ end
 
 minetest.register_node("base:small_stone_rocks", {
 	description = "Small Stone Rocks",
-	tiles = {"base_stone.png"},
+	tiles = {"default_stone.png"},
 	inventory_image = "base_small_stone_rocks.png",
 	is_ground_content = true,
 	walkable = false,
@@ -248,7 +238,7 @@ minetest.register_node("base:small_stone_rocks", {
 		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
 	groups = {stone = 1, oddly_breakable_by_hand = 3},
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 	on_place = function(itemstack, placer, pointed_thing)
 		local pos = pointed_thing.above
 		local player_name = placer:get_player_name()
@@ -262,7 +252,6 @@ minetest.register_node("base:small_stone_rocks", {
 			minetest.chat_send_player(player_name, "Node is protected")
 			minetest.record_protection_violation(pos, player_name)
 		end
-		
 		return itemstack
 	end
 })

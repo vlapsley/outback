@@ -154,7 +154,7 @@ if pipeworks.enable_mese_tube then
 		output = "pipeworks:mese_tube_000000 2",
 		recipe = {
 			{ "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" },
-			{ "", "base:mese_crystal", "" },
+			{ "", "default:mese_crystal", "" },
 			{ "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" }
 		},
 	})
@@ -164,10 +164,10 @@ if pipeworks.enable_mese_tube then
 		output = "pipeworks:mese_tube_000000",
 		recipe = {
 			"pipeworks:tube_1",
-			"base:mese_crystal_fragment",
-			"base:mese_crystal_fragment",
-			"base:mese_crystal_fragment",
-			"base:mese_crystal_fragment"
+			"default:mese_crystal_fragment",
+			"default:mese_crystal_fragment",
+			"default:mese_crystal_fragment",
+			"default:mese_crystal_fragment"
 		},
 	})
 end

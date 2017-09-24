@@ -155,7 +155,7 @@ end
 
 -- Rocky beaches
 function rock_beach(x, y, z, a, data)
-	local c_granite = minetest.get_content_id("base:granite")
+	local c_granite = minetest.get_content_id("technic:granite")
 	local dx = math.random() * 15 + 1
 	local dy = math.random() * 15 + 1
 	local dz = math.random() * 15 + 1
@@ -214,21 +214,21 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	-- Every nodename has its ID.
 	-- The VoxelManipulator uses content IDs instead of nodenames.
 	if not node["stone"] then
-		node["stone"] = minetest.get_content_id("base:stone")
-		node["sandstone"] = minetest.get_content_id("base:sandstone")
-		node["dirt"] = minetest.get_content_id("base:dirt")
-		node["lawn"] = minetest.get_content_id("base:dirt_with_grass")
-		node["dry"] = minetest.get_content_id("base:dirt_with_dry_grass")
-		node["snowblock"] = minetest.get_content_id("base:snowblock")
-		node["desert_sand"] = minetest.get_content_id("base:desert_sand")
-		node["sand"] = minetest.get_content_id("base:sand")
+		node["stone"] = minetest.get_content_id("default:stone")
+		node["sandstone"] = minetest.get_content_id("default:sandstone")
+		node["dirt"] = minetest.get_content_id("default:dirt")
+		node["lawn"] = minetest.get_content_id("default:dirt_with_grass")
+		node["dry"] = minetest.get_content_id("default:dirt_with_dry_grass")
+		node["snowblock"] = minetest.get_content_id("default:snowblock")
+		node["desert_sand"] = minetest.get_content_id("default:desert_sand")
+		node["sand"] = minetest.get_content_id("default:sand")
 		node["red_dirt"] = minetest.get_content_id("base:red_dirt")
 		node["red_gravel"] = minetest.get_content_id("base:red_gravel")
 		node["red_sand"] = minetest.get_content_id("base:red_sand")
 		node["mud"] = minetest.get_content_id("base:mangrove_mud")
 		node["salt"] = minetest.get_content_id("base:mineral_salt")
 		-- Water
-		node["water"] = minetest.get_content_id("base:water_source")
+		node["water"] = minetest.get_content_id("default:water_source")
 		node["muddy_water"] = minetest.get_content_id("base:muddy_water_source")
 		-- Air and Ignore
 		node["air"] = minetest.get_content_id("air")

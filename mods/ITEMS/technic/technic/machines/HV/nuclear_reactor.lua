@@ -24,7 +24,7 @@ local cable_entry = "^technic_cable_connection_overlay.png"
 minetest.register_craft({
 	output = 'technic:hv_nuclear_reactor_core',
 	recipe = {
-		{'technic:carbon_plate',          'base:obsidian_glass', 'technic:carbon_plate'},
+		{'technic:carbon_plate',          'default:obsidian_glass', 'technic:carbon_plate'},
 		{'technic:composite_plate',       'technic:machine_casing', 'technic:composite_plate'},
 		{'technic:stainless_steel_ingot', 'technic:hv_cable',       'technic:stainless_steel_ingot'},
 	}
@@ -149,8 +149,8 @@ local function reactor_structure_badness(pos)
 	local c_blast_concrete = minetest.get_content_id("technic:blast_resistant_concrete")
 	local c_lead = minetest.get_content_id("technic:lead_block")
 	local c_steel = minetest.get_content_id("technic:stainless_steel_block")
-	local c_water_source = minetest.get_content_id("base:water_source")
-	local c_water_flowing = minetest.get_content_id("base:water_flowing")
+	local c_water_source = minetest.get_content_id("default:water_source")
+	local c_water_flowing = minetest.get_content_id("default:water_flowing")
 
 	local blast_layer, steel_layer, lead_layer, water_layer = 0, 0, 0, 0
 
@@ -404,7 +404,7 @@ minetest.register_node("technic:hv_nuclear_reactor_core", {
 	mesh = "technic_reactor.obj",
 	groups = {cracky = 1, technic_machine = 1, technic_hv = 1, digiline_remote_receive = 1},
 	legacy_facedir_simple = true,
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 	paramtype = "light",
 	paramtype2 = "facedir",
 	stack_max = 1,
@@ -439,9 +439,9 @@ minetest.register_node("technic:hv_nuclear_reactor_core_active", {
 	groups = {cracky = 1, technic_machine = 1, technic_hv = 1, radioactive = 4,
 		not_in_creative_inventory = 1, digiline_remote_receive = 1},
 	legacy_facedir_simple = true,
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 	drop = "technic:hv_nuclear_reactor_core",
-	light_source = 14,
+	light_source = default.LIGHT_MAX,
 	paramtype = "light",
 	paramtype2 = "facedir",
 	on_receive_fields = nuclear_reactor_receive_fields,
@@ -455,8 +455,8 @@ minetest.register_node("technic:hv_nuclear_reactor_core_active", {
 	technic_run = run,
 	technic_on_disable = function(pos, node)
 		local timer = minetest.get_node_timer(pos)
-        	timer:start(1)
-        end,
+			timer:start(1)
+		end,
 	on_timer = function(pos, node)
 		local meta = minetest.get_meta(pos)
 

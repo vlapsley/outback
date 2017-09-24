@@ -3,20 +3,17 @@
 --]]
 
 
--- localize math routines for performance
-local math_random = math.random
-
 -- timor sea
 minetest.register_biome({
 	name =             "timor_sea",
-	node_top =         "base:sand",
+	node_top =         "default:sand",
 	depth_top =        2,
-	node_filler =      "base:sandstone",
+	node_filler =      "default:sandstone",
 	depth_filler =     2,
-	node_stone =       "base:stone",
+	node_stone =       "default:stone",
 	node_river_water = "base:muddy_water_source",
-	node_water =       "base:water_source",
-	node_riverbed =    "base:sand",
+	node_water =       "default:water_source",
+	node_riverbed =    "default:sand",
 	depth_riverbed =   1,
 	y_min =            -31,
 	y_max =            3,
@@ -35,7 +32,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =               "sheet",
 	ore =                    "base:crude_oil_source",
-	wherein =                {"base:stone"},
+	wherein =                {"default:stone"},
 	biomes =                 {"timor_sea"},
 	column_height_min =      2,
 	column_height_max =      4,
@@ -56,7 +53,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "sea:submarine",
-	wherein =        "base:sand",
+	wherein =        "default:sand",
 	clust_scarcity = 512000,
 	clust_num_ores = 1,
 	clust_size =     12,
@@ -73,7 +70,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:sand"},
+		place_on =      {"default:sand"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -86,7 +83,7 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"timor_sea"},
 		y_min =         3,
 		y_max =         3,
-		decoration =    "base:grass_"..length,
+		decoration =    "default:grass_"..length,
 	})
 end
 
@@ -115,7 +112,7 @@ minetest.register_abm({
 	action = function(pos, node)
 		local yp = {x = pos.x, y = pos.y + 8, z = pos.z}
 		if node.name == "sea:submarine" and
-				minetest.get_node(yp).name == "base:water_source" then
+				minetest.get_node(yp).name == "default:water_source" then
 			sea.place_submarine(pos)
 		end
 	end

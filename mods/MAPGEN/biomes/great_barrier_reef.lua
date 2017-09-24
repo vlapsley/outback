@@ -3,19 +3,16 @@
 --]]
 
 
--- Localize math routines for performance.
-local math_random = math.random
-
 -- great barrier reef
 minetest.register_biome({
 	name =             "great_barrier_reef",
-	node_top =         "base:sand",
+	node_top =         "default:sand",
 	depth_top =        2,
 	node_filler =      "base:basalt",
 	depth_filler =     3,
-	node_stone =       "base:stone",
-	node_river_water = "base:river_water_source",
-	node_riverbed =    "base:sand",
+	node_stone =       "default:stone",
+	node_river_water = "default:river_water_source",
+	node_riverbed =    "default:sand",
 	depth_riverbed =   1,
 	y_min =            -31,
 	y_max =            3,
@@ -33,7 +30,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "sea:woodship",
-	wherein =        "base:sand",
+	wherein =        "default:sand",
 	clust_scarcity = 27000,
 	clust_num_ores = 1,
 	clust_size =     12,
@@ -65,7 +62,7 @@ minetest.register_abm({
 	action = function(pos, node)
 		local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
 		if node.name == "sea:woodship" and
-				minetest.get_node(yp).name == "base:water_source" then
+				minetest.get_node(yp).name == "default:water_source" then
 			sea.place_woodship(pos)
 		end
 	end

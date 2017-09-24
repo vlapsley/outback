@@ -290,7 +290,7 @@ function technic.chests:definition(name, data)
 		groups = self.groups,
 		tube = self.tube,
 		legacy_facedir_simple = true,
-		sounds = base.node_sound_wood_defaults(),
+		sounds = default.node_sound_wood_defaults(),
 		after_place_node = locked_after_place,
 		after_dig_node = pipeworks.after_dig,
 
@@ -308,7 +308,7 @@ function technic.chests:definition(name, data)
 		on_metadata_inventory_take = self.on_inv_take,		
 		on_blast = function(pos)
 			local drops = {}
-			base.get_inventory_drops(pos, "main", drops)
+			inventory.get_inventory_drops(pos, "main", drops)
 			drops[#drops+1] = "technic:"..name:lower()..(data.locked and "_locked" or "").."_chest"
 			minetest.remove_node(pos)
 			return drops
@@ -322,7 +322,7 @@ function technic.chests:definition(name, data)
 		def.can_dig = function(pos,player)
 			local meta = minetest.get_meta(pos);
 			local inv = meta:get_inventory()
-			return inv:is_empty("main") and base.can_interact_with_node(player, pos)
+			return inv:is_empty("main") and default.can_interact_with_node(player, pos)
 		end
 		def.on_skeleton_key_use = function(pos, player, newsecret)
 			local meta = minetest.get_meta(pos)

@@ -239,7 +239,7 @@ technic.cnc.programs = {
 			type = "fixed",
 			fixed = {
 				{  4/16, -8/16,  4/16,  8/16, 8/16, 8/16 },
-				{     0, -8/16,     0,  4/16, 8/16, 8/16 },				
+				{     0, -8/16,     0,  4/16, 8/16, 8/16 },
 				{ -4/16, -8/16, -4/16,     0, 8/16, 8/16 },
 				{ -8/16, -8/16, -8/16, -4/16, 8/16, 8/16 }
 			}
@@ -259,17 +259,16 @@ technic.cnc.programs = {
 			}
 		}
 	},
-	
 }
 
 -- Allow disabling certain programs for some node. Default is allowing all types for all nodes
 technic.cnc.programs_disable = {
-	-- ["base:brick"] = {"technic_cnc_stick"}, -- Example: Disallow the stick for brick
+	-- ["default:brick"] = {"technic_cnc_stick"}, -- Example: Disallow the stick for brick
 	-- ...
-	["base:dirt"] = {"technic_cnc_oblate_spheroid", "technic_cnc_slope_upsdown", "technic_cnc_edge",
-	                    "technic_cnc_inner_edge", "technic_cnc_slope_edge_upsdown",
-	                    "technic_cnc_slope_inner_edge_upsdown", "technic_cnc_stick",
-	                    "technic_cnc_cylinder_horizontal"}
+	["default:dirt"] = {"technic_cnc_oblate_spheroid", "technic_cnc_slope_upsdown", "technic_cnc_edge",
+			"technic_cnc_inner_edge", "technic_cnc_slope_edge_upsdown",
+			"technic_cnc_slope_inner_edge_upsdown", "technic_cnc_stick",
+			"technic_cnc_cylinder_horizontal"}
 }
 
 -- Generic function for registering all the different node types

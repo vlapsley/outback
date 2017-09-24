@@ -9,13 +9,13 @@ local math_random = math.random
 -- top end
 minetest.register_biome({
 	name =             "top_end",
-	node_top =         "base:dirt_with_grass",
+	node_top =         "default:dirt_with_grass",
 	depth_top =        1,
-	node_filler =      "base:sandstone",
+	node_filler =      "default:sandstone",
 	depth_filler =     3,
-	node_stone =       "base:stone",
+	node_stone =       "default:stone",
 	node_river_water = "base:muddy_water_source",
-	node_riverbed =    "base:dirt",
+	node_riverbed =    "default:dirt",
 	depth_riverbed =   1,
 	y_min =            4,
 	y_max =            31000,
@@ -34,7 +34,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =        "blob",
 	ore =             "technic:mineral_lead",
-	wherein =         {"base:stone"},
+	wherein =         {"default:stone"},
 	clust_scarcity =  85184,
 	clust_size =      8,
 	biomes =          {"top_end"},
@@ -55,7 +55,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =        "blob",
 	ore =             "technic:mineral_zinc",
-	wherein =         {"base:stone"},
+	wherein =         {"default:stone"},
 	clust_scarcity =  85184,
 	clust_size =      8,
 	biomes =          {"top_end"},
@@ -75,8 +75,8 @@ minetest.register_ore({
 -- Diamonds (Argyle)
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_diamond",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_diamond",
+	wherein =        {"default:stone"},
 	clust_scarcity = 64000,
 	clust_num_ores = 12,
 	clust_size =     6,
@@ -89,7 +89,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =        "scatter",
 	ore =             "technic:mineral_uranium",
-	wherein =         {"base:stone"},
+	wherein =         {"default:stone"},
 	clust_scarcity =  21952,
 	clust_num_ores =  4,
 	clust_size =      3,
@@ -111,7 +111,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =        "scatter",
 	ore =             "technic:mineral_uranium",
-	wherein =         {"base:stone"},
+	wherein =         {"default:stone"},
 	clust_scarcity =  17576,
 	clust_num_ores =  4,
 	clust_size =      3,
@@ -138,7 +138,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:dirt_with_grass"},
+		place_on =      {"default:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -151,14 +151,14 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"top_end"},
 		y_min =         4,
 		y_max =         20,
-		decoration =    "base:grass_"..length,
+		decoration =    "default:grass_"..length,
 	})
 end
 
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:dirt_with_grass"},
+		place_on =      {"default:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -171,7 +171,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"top_end"},
 		y_min =         18,
 		y_max =         300,
-		decoration =    "base:dry_grass_"..length,
+		decoration =    "default:dry_grass_"..length,
 	})
 end
 
@@ -190,7 +190,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 -- Grass near rivers
 local function register_rivergrass(length)
 	plants_api.register_plant({
-		nodes =     {"base:grass_"..length},
+		nodes =     {"default:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
 		priority =  25,
@@ -241,8 +241,8 @@ plants_api.register_plant({
 minetest.register_decoration({
 	deco_type = "schematic",
 	place_on = {
-			"base:dirt",
-			"base:sand",
+			"default:dirt",
+			"default:sand",
 	},
 	sidelen = 80,
 	fill_ratio =  0.3,
@@ -259,7 +259,7 @@ local function register_small_sandstone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "base:small_sandstone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"base:dirt_with_grass"},
+		place_on =    {"default:dirt_with_grass"},
 		fill_ratio =  0.002,
 		y_min =       25,
 		biomes =      {"top_end"},

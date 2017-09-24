@@ -64,7 +64,7 @@ if pipeworks.enable_mese_sand_tube then
 		output = "pipeworks:mese_sand_tube_1 2",
 		recipe = {
 			{"homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" },
-			{"group:sand",                 "base:mese_crystal",       "group:sand" },
+			{"group:sand",                 "default:mese_crystal",       "group:sand" },
 			{"homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" }
 		},
 	})
@@ -74,10 +74,10 @@ if pipeworks.enable_mese_sand_tube then
 		output = "pipeworks:mese_sand_tube_1",
 		recipe = {
 			"pipeworks:sand_tube_1",
-			"base:mese_crystal_fragment",
-			"base:mese_crystal_fragment",
-			"base:mese_crystal_fragment",
-			"base:mese_crystal_fragment"
+			"default:mese_crystal_fragment",
+			"default:mese_crystal_fragment",
+			"default:mese_crystal_fragment",
+			"default:mese_crystal_fragment"
 		},
 	})
 end

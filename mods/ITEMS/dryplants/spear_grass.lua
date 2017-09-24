@@ -7,7 +7,7 @@
 
 -- License (everything): 	BSD
 -- Contains code from: 		biome_lib
--- Looked at code from:		default, trees				
+-- Looked at code from:		default, trees
 --------------------------------------------------------------------------------
 
 -- NOTES (from wikipedia, some of this might get implemented)
@@ -71,7 +71,7 @@ minetest.register_node("dryplants:spear_grass", {
 		attached_node=1
 	},
 	drop = 'dryplants:spear_grass',
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}

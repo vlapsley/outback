@@ -52,7 +52,7 @@ local function create_nodes()
 			walkable = false,
 			buildable_to = true,
 			groups = {snappy=3,flammable=2,attached_node=1,not_in_creative_inventory=1},
-			sounds = base.node_sound_leaves_defaults(),
+			sounds = default.node_sound_leaves_defaults(),
 			selection_box = {
 				type = "fixed",
 				fixed = {-7/16, -1/2, -7/16, 7/16, 0, 7/16},
@@ -76,8 +76,8 @@ create_nodes()
 if abstract_ferns.config.lady_ferns_near_tree == true then
 	biome_lib:register_generate_plant({ -- near trees (woodlands)
 		surface = {
-			"base:dirt_with_grass",
-			"base:mossycobble"
+			"default:dirt_with_grass",
+			"default:mossycobble"
 		},
 		max_count = 30,
 		rarity = 62,
@@ -103,8 +103,8 @@ end
 if abstract_ferns.config.lady_ferns_near_rock == true then
 	biome_lib:register_generate_plant({ -- near stone (mountains)
 		surface = {
-			"base:dirt_with_grass",
-			"base:mossycobble",
+			"default:dirt_with_grass",
+			"default:mossycobble",
 			"group:falling_node"
 		},
 		max_count = 35,
@@ -124,11 +124,11 @@ end
 if abstract_ferns.config.lady_ferns_near_ores == true then -- this one causes a huge fps drop
 	biome_lib:register_generate_plant({ -- near ores (potential mining sites)
 		surface = {
-			"base:dirt_with_grass",
-			"base:mossycobble",
-			"base:stone_with_coal",
-			"base:stone_with_iron",
-			"base:stone_with_tin",
+			"default:dirt_with_grass",
+			"default:mossycobble",
+			"default:stone_with_coal",
+			"default:stone_with_iron",
+			"default:stone_with_tin",
 			"base:stone_with_silver"
 		},
 		max_count = 1200,
@@ -136,11 +136,11 @@ if abstract_ferns.config.lady_ferns_near_ores == true then -- this one causes a 
 		min_elevation = 5,
 		max_elevation = 140,
 		near_nodes = {
-			"base:stone_with_iron",
-			"base:stone_with_copper",
-			"base:stone_with_gold",
-			"base:stone_with_diamond",
-			"base:stone_with_tin",
+			"default:stone_with_iron",
+			"default:stone_with_copper",
+			"default:stone_with_gold",
+			"default:stone_with_diamond",
+			"default:stone_with_tin",
 			"base:stone_with_silver"
 		},
 		near_nodes_size = 2,
@@ -156,11 +156,11 @@ end
 if abstract_ferns.config.lady_ferns_in_groups == true then -- this one is meant as a replacement of Ferns_near_Ores
 	biome_lib:register_generate_plant({
 		surface = {
-			"base:dirt_with_grass",
-			"base:mossycobble",
-			"base:stone_with_coal",
-			"base:stone_with_iron",
-			"base:stone_with_tin",
+			"default:dirt_with_grass",
+			"default:mossycobble",
+			"default:stone_with_coal",
+			"default:stone_with_iron",
+			"default:stone_with_tin",
 			"base:stone_with_silver"
 		},
 		max_count = 70,
@@ -168,7 +168,7 @@ if abstract_ferns.config.lady_ferns_in_groups == true then -- this one is meant 
 		min_elevation = 5,
 		max_elevation = 140,
 		near_nodes = {
-			"base:stone"
+			"default:stone"
 		},
 		near_nodes_size = 2,
 		near_nodes_vertical = 2,

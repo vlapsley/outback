@@ -9,12 +9,12 @@ local math_random = math.random
 -- tasmania
 minetest.register_biome({
 	name =             "tasmania",
-	node_top =         "base:dirt_with_grass",
+	node_top =         "default:dirt_with_grass",
 	depth_top =        1,
-	node_filler =      "base:dirt",
+	node_filler =      "default:dirt",
 	depth_filler =     3,
-	node_stone =       "base:stone",
-	node_river_water = "base:river_water_source",
+	node_stone =       "default:stone",
+	node_river_water = "default:river_water_source",
 	node_riverbed =    "base:shale",
 	depth_riverbed =   1,
 	y_min =            4,
@@ -34,7 +34,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"tasmania"},
 	clust_scarcity = 3375,
 	clust_num_ores = 33,
@@ -46,7 +46,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"tasmania"},
 	clust_scarcity = 1000,
 	clust_num_ores = 58,
@@ -59,7 +59,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:shale",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"tasmania"},
 	clust_scarcity = 27000,
 	clust_num_ores = 6,
@@ -72,7 +72,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_agate",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"tasmania"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -84,8 +84,8 @@ minetest.register_ore({
 -- Tin
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_tin",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_tin",
+	wherein =        {"default:stone"},
 	biomes =         {"tasmania"},
 	clust_scarcity = 2197,
 	clust_num_ores = 5,
@@ -115,7 +115,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:dirt_with_grass"},
+		place_on =      {"default:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -128,7 +128,7 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"tasmania"},
 		y_min =         4,
 		y_max =         170,
-		decoration =    "base:grass_"..length,
+		decoration =    "default:grass_"..length,
 	})
 end
 
@@ -141,7 +141,7 @@ register_grass_decoration(0.06,   0.06,  1)
 -- Grass near rivers
 local function register_rivergrass(length)
 	plants_api.register_plant({
-		nodes =     {"base:grass_"..length},
+		nodes =     {"default:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
 		priority =  25,
@@ -158,8 +158,8 @@ register_rivergrass(4)
 minetest.register_decoration({
 	deco_type = "schematic",
 	place_on = {
-			"base:dirt",
-			"base:sand",
+			"default:dirt",
+			"default:sand",
 			"base:shale",
 	},
 	sidelen = 80,
@@ -174,13 +174,13 @@ minetest.register_decoration({
 -- Snow
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"base:dirt_with_grass"},
+	place_on =    {"default:dirt_with_grass"},
 	sidelen =     80,
 	fill_ratio =  0.3,
 	biomes =      {"tasmania"},
 	y_min =       140,
 	y_max =       31000,
-	decoration =  "base:snow",
+	decoration =  "default:snow",
 })
 
 -- Small stone rocks
@@ -189,7 +189,7 @@ local function register_small_stone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "base:small_stone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"base:dirt_with_grass"},
+		place_on =    {"default:dirt_with_grass"},
 		fill_ratio =  0.001,
 		y_min =       48,
 		biomes =      {"tasmania"},

@@ -1,5 +1,6 @@
 init
-base
+inventory
+default
 chests
 tools
 mesecons?

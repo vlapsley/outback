@@ -55,7 +55,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =        "sheet",
 	ore =             "base:marble",
-	wherein =         {"base:granite"},
+	wherein =         {"technic:granite"},
 	clust_scarcity =  1,
 	clust_num_ores =  1,
 	clust_size =      3,
@@ -127,7 +127,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"pilbara"},
 		y_min =         4,
 		y_max =         300,
-		decoration =    "base:dry_grass_"..length,
+		decoration =    "default:dry_grass_"..length,
 	})
 end
 

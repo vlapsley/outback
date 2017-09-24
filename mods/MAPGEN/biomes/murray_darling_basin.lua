@@ -9,13 +9,13 @@ local math_random = math.random
 -- murray-darling basin
 minetest.register_biome({
 	name =             "murray_darling_basin",
-	node_top =         "base:dirt_with_dry_grass",
+	node_top =         "default:dirt_with_dry_grass",
 	depth_top =        1,
-	node_filler =      "base:dirt",
+	node_filler =      "default:dirt",
 	depth_filler =     3,
-	node_stone =       "base:stone",
+	node_stone =       "default:stone",
 	node_river_water = "base:muddy_water_source",
-	node_riverbed =    "base:dirt",
+	node_riverbed =    "default:dirt",
 	depth_riverbed =   1,
 	y_min =            4,
 	y_max =            31000,
@@ -34,7 +34,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =        "blob",
 	ore =             "technic:mineral_zinc",
-	wherein =         {"base:stone"},
+	wherein =         {"default:stone"},
 	clust_scarcity =  85184,
 	clust_size =      5,
 	biomes =          {"murray_darling_basin"},
@@ -55,7 +55,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_amethyst",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"murray_darling_basin"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -67,8 +67,8 @@ minetest.register_ore({
 --Copper (Cadia)
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_copper",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_copper",
+	wherein =        {"default:stone"},
 	biomes =         {"murray_darling_basin"},
 	clust_scarcity = 1728,
 	clust_num_ores = 4,
@@ -80,8 +80,8 @@ minetest.register_ore({
 -- Gold (Cadia)
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_gold",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_gold",
+	wherein =        {"default:stone"},
 	biomes =         {"murray_darling_basin"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -99,7 +99,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:dirt_with_dry_grass"},
+		place_on =      {"default:dirt_with_dry_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -112,14 +112,14 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"murray_darling_basin"},
 		y_min =         4,
 		y_max =         15,
-		decoration =    "base:grass_"..length,
+		decoration =    "default:grass_"..length,
 	})
 end
 
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:dirt_with_dry_grass"},
+		place_on =      {"default:dirt_with_dry_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -132,7 +132,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"murray_darling_basin"},
 		y_min =         9,
 		y_max =         240,
-		decoration =    "base:dry_grass_"..length,
+		decoration =    "default:dry_grass_"..length,
 	})
 end
 
@@ -148,7 +148,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 -- Grass near rivers
 local function register_rivergrass(length)
 	plants_api.register_plant({
-		nodes =     {"base:grass_"..length},
+		nodes =     {"default:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
 		priority =  25,
@@ -211,7 +211,7 @@ local function register_small_stone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "base:small_stone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"base:dirt_with_dry_grass"},
+		place_on =    {"default:dirt_with_dry_grass"},
 		fill_ratio =  0.001,
 		y_min =       24,
 		biomes =      {"murray_darling_basin"},

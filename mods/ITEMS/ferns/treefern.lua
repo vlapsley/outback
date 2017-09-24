@@ -17,7 +17,7 @@ abstract_ferns.grow_tree_fern = function(pos)
 	local pos_01 = {x = pos.x, y = pos.y + 1, z = pos.z}
 	if minetest.get_node(pos_01).name ~= "air"
 			and minetest.get_node(pos_01).name ~= "ferns:sapling_tree_fern"
-			and minetest.get_node(pos_01).name ~= "base:junglegrass" then
+			and minetest.get_node(pos_01).name ~= "default:junglegrass" then
 		return
 	end
 
@@ -84,7 +84,7 @@ minetest.register_node("ferns:tree_fern_leaves", {
 			}
 		}
 	},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-7/16, -1/2, -7/16, 7/16, 0, 7/16},
@@ -115,7 +115,7 @@ minetest.register_node("ferns:tree_fern_leaves_02", {
 			}
 		}
 	},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-7/16, -1/2, -7/16, 7/16, 0, 7/16},
@@ -142,7 +142,7 @@ minetest.register_node("ferns:fern_trunk", {
 		fixed = {-1/7, -1/2, -1/7, 1/7, 1/2, 1/7},
 	},
 	groups = {tree=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 	after_destruct = function(pos,oldnode)
         local node = minetest.get_node({x=pos.x,y=pos.y+1,z=pos.z})
         if node.name == "ferns:fern_trunk" then
@@ -164,7 +164,7 @@ minetest.register_node("ferns:sapling_tree_fern", {
 	inventory_image = "ferns_sapling_tree_fern.png",
 	walkable = false,
 	groups = {snappy=3,flammable=2,flora=1,attached_node=1},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-7/16, -1/2, -7/16, 7/16, 0, 7/16},
@@ -187,16 +187,18 @@ minetest.register_abm({
 -- in Victorian-Forests and Tasmania biomes
 if abstract_ferns.config.enable_treeferns_in_victas == true then
 	biome_lib:register_generate_plant({
-		surface = {"base:dirt_with_grass"},
+		surface = {"default:dirt_with_grass"},
 		max_count = 60,
 		avoid_nodes = {"group:tree"},
 		avoid_radius = 2,
 		rarity = 50,
 		seed_diff = 329,
 		min_elevation = 5,
-		near_nodes = {"base:blue_gum_tree",
+		near_nodes = {
+			"base:blue_gum_tree",
 			"base:swamp_gum_tree",
-			"base:tasmanian_myrtle_tree"},
+			"base:tasmanian_myrtle_tree"
+		},
 		near_nodes_size = 6,
 		near_nodes_vertical = 2,
 		near_nodes_count = 1,
@@ -209,7 +211,7 @@ end
 -- In Far North Queensland biome
 if abstract_ferns.config.enable_treeferns_in_fnq == true then
 	biome_lib:register_generate_plant({
-		surface = {"base:dirt_with_grass"},
+		surface = {"default:dirt_with_grass"},
 		max_count = 40,
 		rarity = 50,
 		seed_diff = 329,

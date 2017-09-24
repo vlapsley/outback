@@ -328,11 +328,11 @@ if crops.settings.hydration then
 			end
 
 			-- increase water for nearby water sources
-			local f = minetest.find_node_near(pos, 1, {"base:water_source", "base:water_flowing"})
+			local f = minetest.find_node_near(pos, 1, {"default:water_source", "default:water_flowing"})
 			if not f == nil then
 				water = math.min(100, water + 2)
 			else
-				f = minetest.find_node_near(pos, 2, {"base:water_source", "base:water_flowing"})
+				f = minetest.find_node_near(pos, 2, {"default:water_source", "default:water_flowing"})
 				if not f == nil then
 					water = math.min(100, water + 1)
 				end

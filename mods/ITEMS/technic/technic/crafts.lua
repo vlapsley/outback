@@ -5,7 +5,7 @@ local mesecons_materials = minetest.get_modpath("mesecons_materials")
 -- Bronze
 minetest.clear_craft({
 	type = "shapeless",
-	output = "base:bronze_ingot"
+	output = "default:bronze_ingot"
 })
 
 -- Accelerator tube
@@ -31,9 +31,9 @@ if pipeworks.enable_teleport_tube then
 	minetest.register_craft({
 		output = 'pipeworks:teleport_tube_1',
 		recipe = {
-			{'base:mese_crystal', 'technic:copper_coil', 'base:mese_crystal'},
+			{'default:mese_crystal', 'technic:copper_coil', 'default:mese_crystal'},
 			{'pipeworks:tube_1', 'technic:control_logic_unit', 'pipeworks:tube_1'},
-			{'base:mese_crystal', 'technic:copper_coil', 'base:mese_crystal'},
+			{'default:mese_crystal', 'technic:copper_coil', 'default:mese_crystal'},
 			}
 	})
 end
@@ -43,18 +43,18 @@ end
 minetest.register_craft({
 	output = 'technic:diamond_drill_head',
 	recipe = {
-		{'technic:stainless_steel_ingot', 'base:diamond', 'technic:stainless_steel_ingot'},
-		{'base:diamond',               '',                'base:diamond'},
-		{'technic:stainless_steel_ingot', 'base:diamond', 'technic:stainless_steel_ingot'},
+		{'technic:stainless_steel_ingot', 'default:diamond', 'technic:stainless_steel_ingot'},
+		{'default:diamond',               '',                'default:diamond'},
+		{'technic:stainless_steel_ingot', 'default:diamond', 'technic:stainless_steel_ingot'},
 	}
 })
 
 minetest.register_craft({
 	output = 'technic:green_energy_crystal',
 	recipe = {
-		{'base:gold_ingot', 'technic:battery', 'dye:green'},
+		{'default:gold_ingot', 'technic:battery', 'dye:green'},
 		{'technic:battery', 'technic:red_energy_crystal', 'technic:battery'},
-		{'dye:green', 'technic:battery', 'base:gold_ingot'},
+		{'dye:green', 'technic:battery', 'default:gold_ingot'},
 	}
 })
 
@@ -71,7 +71,7 @@ minetest.register_craft({
 	output = 'technic:red_energy_crystal',
 	recipe = {
 		{'moreores:silver_ingot', 'technic:battery', 'dye:red'},
-		{'technic:battery', 'base:diamondblock', 'technic:battery'},
+		{'technic:battery', 'default:diamondblock', 'technic:battery'},
 		{'dye:red', 'technic:battery', 'moreores:silver_ingot'},
 	}
 })
@@ -79,18 +79,18 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'technic:fine_copper_wire 2',
 	recipe = {
-		{'', 'base:copper_ingot', ''},
-		{'', 'base:copper_ingot', ''},
-		{'', 'base:copper_ingot', ''},
+		{'', 'default:copper_ingot', ''},
+		{'', 'default:copper_ingot', ''},
+		{'', 'default:copper_ingot', ''},
 	}
 })
 
 minetest.register_craft({
 	output = 'technic:fine_gold_wire 2',
 	recipe = {
-		{'', 'base:gold_ingot', ''},
-		{'', 'base:gold_ingot', ''},
-		{'', 'base:gold_ingot', ''},
+		{'', 'default:gold_ingot', ''},
+		{'', 'default:gold_ingot', ''},
+		{'', 'default:gold_ingot', ''},
 	}
 })
 
@@ -117,7 +117,7 @@ minetest.register_craft({
 	recipe = {
 		{'technic:carbon_steel_ingot', 'technic:copper_coil', 'technic:carbon_steel_ingot'},
 		{'technic:carbon_steel_ingot', 'technic:copper_coil', 'technic:carbon_steel_ingot'},
-		{'technic:carbon_steel_ingot', 'base:copper_ingot', 'technic:carbon_steel_ingot'},
+		{'technic:carbon_steel_ingot', 'default:copper_ingot', 'technic:carbon_steel_ingot'},
 	}
 })
 
@@ -154,7 +154,7 @@ minetest.register_craft({
 	output = 'technic:control_logic_unit',
 	recipe = {
 		{'', 'technic:fine_gold_wire', ''},
-		{'base:copper_ingot', 'technic:silicon_wafer', 'base:copper_ingot'},
+		{'default:copper_ingot', 'technic:silicon_wafer', 'default:copper_ingot'},
 		{'', 'technic:chromium_ingot', ''},
 	}
 })
@@ -163,7 +163,7 @@ minetest.register_craft({
 	output = 'technic:mixed_metal_ingot 9',
 	recipe = {
 		{'technic:stainless_steel_ingot', 'technic:stainless_steel_ingot', 'technic:stainless_steel_ingot'},
-		{'base:bronze_ingot',          'base:bronze_ingot',          'base:bronze_ingot'},
+		{'default:bronze_ingot',          'default:bronze_ingot',          'default:bronze_ingot'},
 		{'moreores:tin_ingot',            'moreores:tin_ingot',            'moreores:tin_ingot'},
 	}
 })
@@ -186,7 +186,7 @@ minetest.register_craft({
 
 
 minetest.register_craft({
-	output = "base:dirt 2",
+	output = "default:dirt 2",
 	type = "shapeless",
 	replacements = {{"bucket:bucket_water","bucket:bucket_empty"}},
 	recipe = {

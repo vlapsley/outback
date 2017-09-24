@@ -35,7 +35,7 @@ minetest.register_tool("tools:pick_wood", {
 		damage_groups = {fleshy=2},
 	},
 	groups = {flammable = 2},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:pick_stone", {
@@ -49,7 +49,7 @@ minetest.register_tool("tools:pick_stone", {
 		},
 		damage_groups = {fleshy=3},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:pick_steel", {
@@ -63,7 +63,7 @@ minetest.register_tool("tools:pick_steel", {
 		},
 		damage_groups = {fleshy=4},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:pick_bronze", {
@@ -77,7 +77,7 @@ minetest.register_tool("tools:pick_bronze", {
 		},
 		damage_groups = {fleshy=4},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:pick_diamond", {
@@ -91,7 +91,7 @@ minetest.register_tool("tools:pick_diamond", {
 		},
 		damage_groups = {fleshy=5},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 --
@@ -111,7 +111,7 @@ minetest.register_tool("tools:shovel_wood", {
 		damage_groups = {fleshy=2},
 	},
 	groups = {flammable = 2},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:shovel_stone", {
@@ -126,7 +126,7 @@ minetest.register_tool("tools:shovel_stone", {
 		},
 		damage_groups = {fleshy=2},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:shovel_steel", {
@@ -141,7 +141,7 @@ minetest.register_tool("tools:shovel_steel", {
 		},
 		damage_groups = {fleshy=3},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:shovel_bronze", {
@@ -156,7 +156,7 @@ minetest.register_tool("tools:shovel_bronze", {
 		},
 		damage_groups = {fleshy=3},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:shovel_diamond", {
@@ -171,7 +171,7 @@ minetest.register_tool("tools:shovel_diamond", {
 		},
 		damage_groups = {fleshy=4},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 --
@@ -190,7 +190,7 @@ minetest.register_tool("tools:axe_wood", {
 		damage_groups = {fleshy=2},
 	},
 	groups = {flammable = 2},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:axe_stone", {
@@ -204,7 +204,7 @@ minetest.register_tool("tools:axe_stone", {
 		},
 		damage_groups = {fleshy=3},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:axe_steel", {
@@ -218,7 +218,7 @@ minetest.register_tool("tools:axe_steel", {
 		},
 		damage_groups = {fleshy=4},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:axe_bronze", {
@@ -232,7 +232,7 @@ minetest.register_tool("tools:axe_bronze", {
 		},
 		damage_groups = {fleshy=4},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:axe_diamond", {
@@ -246,7 +246,7 @@ minetest.register_tool("tools:axe_diamond", {
 		},
 		damage_groups = {fleshy=7},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 --
@@ -265,7 +265,7 @@ minetest.register_tool("tools:sword_wood", {
 		damage_groups = {fleshy=2},
 	},
 	groups = {flammable = 2},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:sword_stone", {
@@ -279,7 +279,7 @@ minetest.register_tool("tools:sword_stone", {
 		},
 		damage_groups = {fleshy=4},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:sword_steel", {
@@ -293,7 +293,7 @@ minetest.register_tool("tools:sword_steel", {
 		},
 		damage_groups = {fleshy=6},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:sword_bronze", {
@@ -307,7 +307,7 @@ minetest.register_tool("tools:sword_bronze", {
 		},
 		damage_groups = {fleshy=6},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:sword_diamond", {
@@ -321,7 +321,7 @@ minetest.register_tool("tools:sword_diamond", {
 		},
 		damage_groups = {fleshy=8},
 	},
-	sound = {breaks = "base_tool_breaks"},
+	sound = {breaks = "default_tool_breaks"},
 })
 
 minetest.register_tool("tools:key", {

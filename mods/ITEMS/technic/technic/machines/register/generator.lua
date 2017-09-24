@@ -41,9 +41,9 @@ function technic.register_generator(data)
 		"image[4,1;1,1;furnace_furnace_fire_bg.png]"..
 		"list[current_player;main;0,5;8,4;]"..
 		"listring[]"
-	
+
 	local desc = S("Fuel-Fired %s Generator"):format(tier)
-	
+
 	local run = function(pos, node)
 		local meta = minetest.get_meta(pos)
 		local burn_time = meta:get_int("burn_time")
@@ -57,7 +57,7 @@ function technic.register_generator(data)
 		-- Burn another piece of fuel
 		if burn_time == 0 then
 			local inv = meta:get_inventory()
-			if not inv:is_empty("src") then 
+			if not inv:is_empty("src") then
 				local fuellist = inv:get_list("src")
 				local fuel
 				local afterfuel
@@ -120,12 +120,12 @@ function technic.register_generator(data)
 				"technic_"..ltier.."_generator_side.png"..tentry,
 				"technic_"..ltier.."_generator_side.png"..tentry,
 				"technic_"..ltier.."_generator_front.png"
-		}, 
+		},
 		paramtype2 = "facedir",
 		groups = groups,
 		connect_sides = {"bottom", "back", "left", "right"},
 		legacy_facedir_simple = true,
-		sounds = base.node_sound_wood_defaults(),
+		sounds = default.node_sound_wood_defaults(),
 		tube = data.tube and tube or nil,
 		on_construct = function(pos)
 			local meta = minetest.get_meta(pos)
@@ -193,7 +193,7 @@ function technic.register_generator(data)
 		groups = active_groups,
 		connect_sides = {"bottom"},
 		legacy_facedir_simple = true,
-		sounds = base.node_sound_wood_defaults(),
+		sounds = default.node_sound_wood_defaults(),
 		tube = data.tube and tube or nil,
 		drop = "technic:"..ltier.."_generator",
 		can_dig = technic.machine_can_dig,
@@ -204,15 +204,15 @@ function technic.register_generator(data)
 		technic_run = run,
 		technic_on_disable = function(pos, node)
 			local timer = minetest.get_node_timer(pos)
-        		timer:start(1)
-        	end,
+				timer:start(1)
+			end,
 		on_timer = function(pos, node)
 			local meta = minetest.get_meta(pos)
 			local node = minetest.get_node(pos)
 
 			-- Connected back?
 			if meta:get_int(tier.."_EU_timeout") > 0 then return false end
-			
+
 			local burn_time = meta:get_int("burn_time") or 0
 
 			if burn_time <= 0 then
@@ -240,7 +240,7 @@ function technic.register_generator(data)
 					}
 				)..pipeworks.button_label
 			end
-			meta:set_string("formspec", 
+			meta:set_string("formspec",
 				"size[8, 9]"..
 				"label[0, 0;"..minetest.formspec_escape(desc).."]"..
 				"list[current_name;src;3, 1;1, 1;]"..
@@ -274,7 +274,7 @@ function technic.register_generator(data)
 			local burn_time = meta:get_int("burn_time")
 			local percent = math.floor(burn_time / burn_totaltime * 100)
 
-			meta:set_string("formspec", 
+			meta:set_string("formspec",
 				"size[8, 9]"..
 				"label[0, 0;"..minetest.formspec_escape(desc).."]"..
 				"list[current_name;src;3, 1;1, 1;]"..

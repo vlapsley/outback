@@ -14,7 +14,7 @@ farming.register_plant("farming:wheat", {
 	inventory_image = "farming_wheat_seed.png",
 	steps = 8,
 	minlight = 13,
-	maxlight = 14,
+	maxlight = default.LIGHT_MAX,
 	fertility = {"grassland"},
 	groups = {flammable = 4},
 	place_param2 = 3,
@@ -51,7 +51,7 @@ farming.register_plant("farming:cotton", {
 	inventory_image = "farming_cotton_seed.png",
 	steps = 8,
 	minlight = 13,
-	maxlight = 14,
+	maxlight = default.LIGHT_MAX,
 	fertility = {"grassland", "desert"},
 	groups = {flammable = 4},
 })

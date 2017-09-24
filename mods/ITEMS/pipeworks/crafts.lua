@@ -3,9 +3,9 @@
 minetest.register_craft( {
         output = "pipeworks:pipe_1_empty 12",
         recipe = {
-                { "base:steel_ingot", "base:steel_ingot", "base:steel_ingot" },
+                { "default:steel_ingot", "default:steel_ingot", "default:steel_ingot" },
                 { "", "", "" },
-                { "base:steel_ingot", "base:steel_ingot", "base:steel_ingot" }
+                { "default:steel_ingot", "default:steel_ingot", "default:steel_ingot" }
         },
 })
 
@@ -20,9 +20,9 @@ minetest.register_craft( {
 minetest.register_craft( {
 	output = "pipeworks:entry_panel_empty 2",
 	recipe = {
-		{ "", "base:steel_ingot", "" },
+		{ "", "default:steel_ingot", "" },
 		{ "", "pipeworks:pipe_1_empty", "" },
-		{ "", "base:steel_ingot", "" },
+		{ "", "default:steel_ingot", "" },
 	},
 })
 
@@ -31,9 +31,9 @@ minetest.register_craft( {
 minetest.register_craft( {
         output = "pipeworks:pump_off 2",
         recipe = {
-                { "base:stone", "base:steel_ingot", "base:stone" },
-                { "base:copper_ingot", "base:mese_crystal_fragment", "base:copper_ingot" },
-                { "base:steel_ingot", "base:steel_ingot", "base:steel_ingot" }
+                { "default:stone", "default:steel_ingot", "default:stone" },
+                { "default:copper_ingot", "default:mese_crystal_fragment", "default:copper_ingot" },
+                { "default:steel_ingot", "default:steel_ingot", "default:steel_ingot" }
         },
 })
 
@@ -41,26 +41,26 @@ minetest.register_craft( {
         output = "pipeworks:valve_off_empty 2",
         recipe = {
                 { "", "group:stick", "" },
-                { "base:steel_ingot", "base:steel_ingot", "base:steel_ingot" },
-                { "", "base:steel_ingot", "" }
+                { "default:steel_ingot", "default:steel_ingot", "default:steel_ingot" },
+                { "", "default:steel_ingot", "" }
         },
 })
 
 minetest.register_craft( {
         output = "pipeworks:storage_tank_0 2",
         recipe = {
-                { "", "base:steel_ingot", "base:steel_ingot" },
-                { "base:steel_ingot", "base:glass", "base:steel_ingot" },
-                { "base:steel_ingot", "base:steel_ingot", "" }
+                { "", "default:steel_ingot", "default:steel_ingot" },
+                { "default:steel_ingot", "default:glass", "default:steel_ingot" },
+                { "default:steel_ingot", "default:steel_ingot", "" }
         },
 })
 
 minetest.register_craft( {
         output = "pipeworks:grating 2",
         recipe = {
-                { "base:steel_ingot", "", "base:steel_ingot" },
+                { "default:steel_ingot", "", "default:steel_ingot" },
                 { "", "pipeworks:pipe_1_empty", "" },
-                { "base:steel_ingot", "", "base:steel_ingot" }
+                { "default:steel_ingot", "", "default:steel_ingot" }
         },
 })
 
@@ -97,7 +97,7 @@ if minetest.get_modpath("homedecor") == nil then
 		    inventory_image = "homedecor_paraffin.png",
 	})
 
-	minetest.register_alias("homedecor:plastic_base", "homedecor:paraffin")
+	minetest.register_alias("homedecor:plastic_default", "homedecor:paraffin")
 
 	minetest.register_craftitem(":homedecor:plastic_sheeting", {
 		    description = "Plastic sheet",

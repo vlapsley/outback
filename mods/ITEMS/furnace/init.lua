@@ -261,7 +261,7 @@ minetest.register_node("furnace:furnace", {
 	groups = {cracky=2},
 	legacy_facedir_simple = true,
 	is_ground_content = false,
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 
 	can_dig = can_dig,
 
@@ -285,9 +285,9 @@ minetest.register_node("furnace:furnace", {
 	end,
 	on_blast = function(pos)
 		local drops = {}
-		base.get_inventory_drops(pos, "src", drops)
-		base.get_inventory_drops(pos, "fuel", drops)
-		base.get_inventory_drops(pos, "dst", drops)
+		inventory.get_inventory_drops(pos, "src", drops)
+		inventory.get_inventory_drops(pos, "fuel", drops)
+		inventory.get_inventory_drops(pos, "dst", drops)
 		drops[#drops+1] = "furnace:furnace"
 		minetest.remove_node(pos)
 		return drops
@@ -321,7 +321,7 @@ minetest.register_node("furnace:furnace_active", {
 	groups = {cracky=2, not_in_creative_inventory=1},
 	legacy_facedir_simple = true,
 	is_ground_content = false,
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 	on_timer = furnace_node_timer,
 
 	can_dig = can_dig,
@@ -346,33 +346,33 @@ minetest.register_craft({
 	Tree (trunks) fuel
 --]]
 
-local function add_tree_fuel(name, burntime)
+local function add_tree_fuel(node, burntime)
 	minetest.register_craft({
 		type = "fuel",
-		recipe = "base:" .. name,
+		recipe = node,
 		burntime = burntime,
 	})
 end
 
 furnace.tree_fuel = {
-	{"aspen_tree", 22},
-	{"pine_tree", 26},
-	{"huon_pine_tree", 26},
-	{"celery_top_pine_tree", 26},
-	{"southern_sassafras_tree", 26},
-	{"tree", 30},
-	{"tasmanian_myrtle_tree", 31},
-	{"swamp_gum_tree", 32},
-	{"acacia_tree", 34},
-	{"marri_tree", 34},
-	{"black_wattle_tree", 35},
-	{"merbau_tree", 36},
-	{"jarrah_tree", 37},
-	{"blue_gum_tree", 37},
-	{"karri_tree", 37},
-	{"jungletree", 38},
-	{"river_red_gum_tree", 38},
-	{"daintree_stringybark_tree", 40},
+	{"default:aspen_tree", 22},
+	{"default:pine_tree", 26},
+	{"base:huon_pine_tree", 26},
+	{"base:celery_top_pine_tree", 26},
+	{"base:southern_sassafras_tree", 26},
+	{"default:tree", 30},
+	{"base:tasmanian_myrtle_tree", 31},
+	{"base:swamp_gum_tree", 32},
+	{"default:acacia_tree", 34},
+	{"base:marri_tree", 34},
+	{"base:black_wattle_tree", 35},
+	{"base:merbau_tree", 36},
+	{"base:jarrah_tree", 37},
+	{"base:blue_gum_tree", 37},
+	{"base:karri_tree", 37},
+	{"default:jungletree", 38},
+	{"base:river_red_gum_tree", 38},
+	{"base:daintree_stringybark_tree", 40},
 }
 
 for _,item in pairs(furnace.tree_fuel) do
@@ -391,34 +391,34 @@ minetest.register_craft({
 	Wood (planks) fuel
 --]]
 
-local function add_wood_fuel(name, burntime)
+local function add_wood_fuel(node, burntime)
 	minetest.register_craft({
 		type = "fuel",
-		recipe = "base:" .. name,
+		recipe = node,
 		burntime = burntime,
 	})
 end
 
 furnace.wood_fuel = {
-	{"aspen_wood", 5},
-	{"pine_wood", 6},
-	{"eucalyptus_wood", 6},
-	{"huon_pine", 6},
-	{"celery_top_pine", 6},
-	{"southern_sassafras", 6},
-	{"wood", 7},
-	{"tasmanian_myrtle", 7},
-	{"tasmanian_oak", 7},
-	{"acacia_wood", 8},
-	{"marri", 8},
-	{"blackwood", 8},
-	{"merbau", 8},
-	{"jarrah", 8},
-	{"blue_gum", 8},
-	{"karri", 8},
-	{"junglewood", 9},
-	{"river_red_gum", 9},
-	{"red_mahogany", 10},
+	{"default:aspen_wood", 5},
+	{"default:pine_wood", 6},
+	{"base:eucalyptus_wood", 6},
+	{"base:huon_pine", 6},
+	{"base:celery_top_pine", 6},
+	{"base:southern_sassafras", 6},
+	{"default:wood", 7},
+	{"base:tasmanian_myrtle", 7},
+	{"base:tasmanian_oak", 7},
+	{"default:acacia_wood", 8},
+	{"base:marri", 8},
+	{"base:blackwood", 8},
+	{"base:merbau", 8},
+	{"base:jarrah", 8},
+	{"base:blue_gum", 8},
+	{"base:karri", 8},
+	{"default:junglewood", 9},
+	{"base:river_red_gum", 9},
+	{"base:red_mahogany", 10},
 }
 
 for _,item in pairs(furnace.wood_fuel) do
@@ -437,36 +437,36 @@ minetest.register_craft({
 	Sapling fuel
 --]]
 
-local function add_sapling_fuel(name, burntime)
+local function add_sapling_fuel(node, burntime)
 	minetest.register_craft({
 		type = "fuel",
-		recipe = "base:" .. name,
+		recipe = node,
 		burntime = burntime,
 	})
 end
 
 furnace.sapling_fuel = {
-	{"bush_sapling", 6},
-	{"acacia_bush_sapling", 7},
-	{"aspen_sapling", 8},
-	{"pine_sapling", 9},
-	{"eucalyptus_sapling", 9},
-	{"huon_pine_sapling", 9},
-	{"celery_top_pine_sapling", 9},
-	{"southern_sassafras_sapling", 9},
-	{"sapling", 10},
-	{"tasmanian_myrtle_sapling", 10},
-	{"swamp_gum_sapling", 10},
-	{"acacia_sapling", 11},
-	{"marri_sapling", 11},
-	{"black_wattle_sapling", 11},
-	{"merbau_sapling", 11},
-	{"jarrah_sapling", 11},
-	{"blue_gum_sapling", 11},
-	{"karri_sapling", 11},
-	{"junglesapling", 12},
-	{"river_red_gum_sapling", 12},
-	{"daintree_stringybark_sapling", 14},
+	{"default:bush_sapling", 6},
+	{"default:acacia_bush_sapling", 7},
+	{"default:aspen_sapling", 8},
+	{"default:pine_sapling", 9},
+	{"base:eucalyptus_sapling", 9},
+	{"base:huon_pine_sapling", 9},
+	{"base:celery_top_pine_sapling", 9},
+	{"base:southern_sassafras_sapling", 9},
+	{"default:sapling", 10},
+	{"base:tasmanian_myrtle_sapling", 10},
+	{"base:swamp_gum_sapling", 10},
+	{"default:acacia_sapling", 11},
+	{"base:marri_sapling", 11},
+	{"base:black_wattle_sapling", 11},
+	{"base:merbau_sapling", 11},
+	{"base:jarrah_sapling", 11},
+	{"base:blue_gum_sapling", 11},
+	{"base:karri_sapling", 11},
+	{"default:junglesapling", 12},
+	{"base:river_red_gum_sapling", 12},
+	{"base:daintree_stringybark_sapling", 14},
 }
 
 for _,item in pairs(furnace.sapling_fuel) do
@@ -522,19 +522,19 @@ end
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:bush_stem",
+	recipe = "default:bush_stem",
 	burntime = 7,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:acacia_bush_stem",
+	recipe = "default:acacia_bush_stem",
 	burntime = 8,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:junglegrass",
+	recipe = "default:junglegrass",
 	burntime = 2,
 })
 
@@ -546,67 +546,67 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:cactus",
+	recipe = "default:cactus",
 	burntime = 15,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:papyrus",
+	recipe = "default:papyrus",
 	burntime = 1,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:ladder_wood",
+	recipe = "default:ladder_wood",
 	burntime = 2,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:lava_source",
+	recipe = "default:lava_source",
 	burntime = 60,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:apple",
+	recipe = "default:apple",
 	burntime = 3,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:coal_lump",
+	recipe = "default:coal_lump",
 	burntime = 40,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:coalblock",
+	recipe = "default:coalblock",
 	burntime = 370,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:grass_1",
+	recipe = "default:grass_1",
 	burntime = 2,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:dry_grass_1",
+	recipe = "default:dry_grass_1",
 	burntime = 2,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:paper",
+	recipe = "default:paper",
 	burntime = 1,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "base:dry_shrub",
+	recipe = "default:dry_shrub",
 	burntime = 2,
 })
 

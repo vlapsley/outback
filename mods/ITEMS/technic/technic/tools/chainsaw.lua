@@ -9,22 +9,22 @@ local chainsaw_leaves = true
 
 -- The base trees
 local timber_nodenames = {
-	["base:acacia_tree"] = true,
-	["base:aspen_tree"]  = true,
-	["base:jungletree"]  = true,
-	["base:papyrus"]     = true,
-	["base:cactus"]      = true,
-	["base:tree"]        = true,
-	["base:apple"]       = true,
-	["base:pine_tree"]    = true,
+	["default:acacia_tree"] = true,
+	["default:aspen_tree"]  = true,
+	["default:jungletree"]  = true,
+	["default:papyrus"]     = true,
+	["default:cactus"]      = true,
+	["default:tree"]        = true,
+	["default:apple"]       = true,
+	["default:pine_tree"]    = true,
 }
 
 if chainsaw_leaves then
-	timber_nodenames["base:acacia_leaves"] = true
-	timber_nodenames["base:aspen_leaves"] = true
-	timber_nodenames["base:leaves"] = true
-	timber_nodenames["base:jungleleaves"] = true
-	timber_nodenames["base:pine_needles"] = true
+	timber_nodenames["default:acacia_leaves"] = true
+	timber_nodenames["default:aspen_leaves"] = true
+	timber_nodenames["default:leaves"] = true
+	timber_nodenames["default:jungleleaves"] = true
+	timber_nodenames["default:pine_needles"] = true
 end
 
 -- technic_worldgen defines rubber trees if moretrees isn't installed
@@ -357,7 +357,7 @@ minetest.register_tool("technic:chainsaw", {
 })
 
 local mesecons_button = minetest.get_modpath("mesecons_button")
-local trigger = mesecons_button and "mesecons_button:button_off" or "base:mese_crystal_fragment"
+local trigger = mesecons_button and "mesecons_button:button_off" or "default:mese_crystal_fragment"
 
 minetest.register_craft({
 	output = "technic:chainsaw",

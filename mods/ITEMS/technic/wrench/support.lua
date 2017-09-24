@@ -11,7 +11,7 @@ Syntax:
 		store_meta_always = true,
 	}
 	owned - nodes that are protected by owner requirements (Ex. locked chests)
-	store_meta_always - when nodes are broken this ensures metadata and 
+	store_meta_always - when nodes are broken this ensures metadata and
 	inventory is always stored (Ex. active state for machines)
 --]]
 
@@ -25,10 +25,10 @@ local INT, STRING, FLOAT  =
 	wrench.META_TYPE_FLOAT
 
 wrench.registered_nodes = {
-	["base:chest"] = {
+	["chests:chest"] = {
 		lists = {"main"},
 	},
-	["base:chest_locked"] = {
+	["chests:chest_locked"] = {
 		lists = {"main"},
 		metas = {owner = STRING,
 			infotext = STRING},

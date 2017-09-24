@@ -9,12 +9,12 @@ local math_random = math.random
 -- australian alps
 minetest.register_biome({
 	name =             "australian_alps",
-	node_top =         "base:snowblock",
+	node_top =         "default:snowblock",
 	depth_top =        2,
-	node_filler =      "base:dirt_with_snow",
+	node_filler =      "default:dirt_with_snow",
 	depth_filler =     1,
-	node_stone =       "base:stone",
-	node_river_water = "base:river_water_source",
+	node_stone =       "default:stone",
+	node_river_water = "default:river_water_source",
 	node_riverbed =    "base:shale",
 	depth_riverbed =   1,
 	y_min =            150,
@@ -34,7 +34,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	clust_scarcity = 3375,
 	clust_num_ores = 33,
 	clust_size =     5,
@@ -46,7 +46,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	clust_scarcity = 1000,
 	clust_num_ores = 58,
 	clust_size =     7,
@@ -64,7 +64,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:snowblock"},
+		place_on =      {"default:snowblock"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -77,7 +77,7 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"australian_alps"},
 		y_min =         150,
 		y_max =         210,
-		decoration =    "base:grass_"..length,
+		decoration =    "default:grass_"..length,
 	})
 end
 
@@ -87,13 +87,13 @@ register_grass_decoration(0.03,   0.03,  1)
 -- Snow
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"base:snowblock"},
+	place_on =    {"default:snowblock"},
 	sidelen =     80,
 	fill_ratio =  0.3,
 	biomes =      {"australian_alps"},
 	y_min =       150,
 	y_max =       31000,
-	decoration =  "base:snow",
+	decoration =  "default:snow",
 })
 
 

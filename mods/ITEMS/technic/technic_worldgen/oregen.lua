@@ -13,9 +13,9 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	local pr = PseudoRandom(17 * minp.x + 42 * minp.y + 101 * minp.z)
 	sulfur_noise = sulfur_noise or minetest.get_perlin(9876, 3, 0.5, 100)
 
-	local c_lava = minetest.get_content_id("base:lava_source")
-	local c_lava_flowing = minetest.get_content_id("base:lava_flowing")
-	local c_stone = minetest.get_content_id("base:stone")
+	local c_lava = minetest.get_content_id("default:lava_source")
+	local c_lava_flowing = minetest.get_content_id("default:lava_flowing")
+	local c_stone = minetest.get_content_id("default:stone")
 	local c_sulfur = minetest.get_content_id("technic:mineral_sulfur")
 
 	local grid_size = 5

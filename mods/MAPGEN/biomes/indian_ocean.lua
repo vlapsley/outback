@@ -9,13 +9,13 @@ local math_random = math.random
 -- indian ocean
 minetest.register_biome({
 	name =             "indian_ocean",
-	node_top =         "base:sand",
+	node_top =         "default:sand",
 	depth_top =        2,
 	node_filler =      "base:basalt",
 	depth_filler =     3,
-	node_stone =       "base:stone",
+	node_stone =       "default:stone",
 	node_river_water = "base:muddy_water_source",
-	node_riverbed =    "base:sand",
+	node_riverbed =    "default:sand",
 	depth_riverbed =   1,
 	y_min =            -31,
 	y_max =            3,
@@ -33,7 +33,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "sea:woodship",
-	wherein =        "base:sand",
+	wherein =        "default:sand",
 	clust_scarcity = 27000,
 	clust_num_ores = 1,
 	clust_size =     12,
@@ -51,7 +51,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:sand"},
+		place_on =      {"default:sand"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -64,14 +64,14 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"indian_ocean"},
 		y_min =         3,
 		y_max =         3,
-		decoration =    "base:grass_"..length,
+		decoration =    "default:grass_"..length,
 	})
 end
 
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:sand"},
+		place_on =      {"default:sand"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -84,7 +84,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"indian_ocean"},
 		y_min =         3,
 		y_max =         3,
-		decoration =    "base:dry_grass_"..length,
+		decoration =    "default:dry_grass_"..length,
 	})
 end
 
@@ -133,7 +133,7 @@ minetest.register_abm({
 	action = function(pos, node)
 		local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
 		if node.name == "sea:woodship" and
-				minetest.get_node(yp).name == "base:water_source" then
+				minetest.get_node(yp).name == "default:water_source" then
 			sea.place_woodship(pos)
 		end
 	end

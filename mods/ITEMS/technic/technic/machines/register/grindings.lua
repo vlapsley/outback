@@ -10,7 +10,7 @@ minetest.register_craftitem(sawdust, {
 	inventory_image = "technic_sawdust.png",
 })
 minetest.register_craft({ type = "fuel", recipe = sawdust, burntime = 6 })
-technic.register_compressor_recipe({ input = {sawdust .. " 4"}, output = "base:wood" })
+technic.register_compressor_recipe({ input = {sawdust .. " 4"}, output = "default:wood" })
 
 -- tree/wood grindings
 local function register_tree_grinding(name, tree, wood, extract, grinding_color)

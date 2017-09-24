@@ -1,8 +1,10 @@
 base
+default
 pipeworks
 technic_worldgen
 bucket?
 chests?
+dye?
 furnace?
 screwdriver?
 mesecons?

@@ -9,13 +9,13 @@ local math_random = math.random
 -- far north queensland
 minetest.register_biome({
 	name =             "far_north_queensland",
-	node_top =         "base:dirt_with_grass",
+	node_top =         "default:dirt_with_grass",
 	depth_top =        1,
-	node_filler =      "base:dirt",
+	node_filler =      "default:dirt",
 	depth_filler =     3,
-	node_stone =       "base:stone",
-	node_river_water = "base:river_water_source",
-	node_riverbed =    "base:sand",
+	node_stone =       "default:stone",
+	node_river_water = "default:river_water_source",
+	node_riverbed =    "default:sand",
 	depth_riverbed =   1,
 	y_min =            4,
 	y_max =            31000,
@@ -34,7 +34,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"far_north_queensland"},
 	clust_scarcity = 3375,
 	clust_num_ores = 33,
@@ -46,7 +46,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"far_north_queensland"},
 	clust_scarcity = 1000,
 	clust_num_ores = 58,
@@ -59,7 +59,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_aluminium",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"far_north_queensland"},
 	clust_scarcity = 512,
 	clust_num_ores = 5,
@@ -77,7 +77,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:dirt_with_grass"},
+		place_on =      {"default:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -90,14 +90,14 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"far_north_queensland"},
 		y_min =         4,
 		y_max =         90,
-		decoration =    "base:grass_"..length,
+		decoration =    "default:grass_"..length,
 	})
 end
 
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:dirt_with_grass"},
+		place_on =      {"default:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -110,7 +110,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"far_north_queensland"},
 		y_min =         91,
 		y_max =         300,
-		decoration =    "base:dry_grass_"..length,
+		decoration =    "default:dry_grass_"..length,
 	})
 end
 
@@ -129,7 +129,7 @@ register_dry_grass_decoration(0.06, 0.06,  1)
 -- Grass near rivers
 local function register_rivergrass(length)
 	plants_api.register_plant({
-		nodes =     {"base:grass_"..length},
+		nodes =     {"default:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
 		priority =  25,
@@ -157,8 +157,8 @@ plants_api.register_plant({
 minetest.register_decoration({
 	deco_type = "schematic",
 	place_on = {
-			"base:dirt",
-			"base:sand",
+			"default:dirt",
+			"default:sand",
 	},
 	sidelen = 80,
 	fill_ratio =  0.3,
@@ -175,7 +175,7 @@ local function register_small_stone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "base:small_stone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"base:dirt_with_grass"},
+		place_on =    {"default:dirt_with_grass"},
 		fill_ratio =  0.001,
 		y_min =       42,
 		biomes =      {"far_north_queensland"},

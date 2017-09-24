@@ -3,9 +3,6 @@
 --]]
 
 
--- localize math routines for performance
-local math_random = math.random
-
 -- great australian bight
 minetest.register_biome({
 	name =             "great_australian_bight",
@@ -13,7 +10,7 @@ minetest.register_biome({
 	depth_top =        3,
 	node_filler =      "base:basalt",
 	depth_filler =     3,
-	node_stone =       "base:stone",
+	node_stone =       "default:stone",
 	node_river_water = "base:muddy_water_source",
 	node_riverbed =    "base:limestone",
 	depth_riverbed =   1,
@@ -34,7 +31,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =               "sheet",
 	ore =                    "base:crude_oil_source",
-	wherein =                {"base:stone"},
+	wherein =                {"default:stone"},
 	biomes =                 {"great_australian_bight"},
 	column_height_min =      2,
 	column_height_max =      4,
@@ -55,7 +52,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "sea:submarine",
-	wherein =        "base:sand",
+	wherein =        "base:limestone",
 	clust_scarcity = 512000,
 	clust_num_ores = 1,
 	clust_size =     12,
@@ -67,7 +64,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "sea:woodship",
-	wherein =        "base:sandstone",
+	wherein =        "base:limestone",
 	clust_scarcity = 27000,
 	clust_num_ores = 1,
 	clust_size =     12,
@@ -88,7 +85,7 @@ minetest.register_abm({
 	action = function(pos, node)
 		local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
 		if node.name == "sea:woodship" and
-				minetest.get_node(yp).name == "base:water_source" then
+				minetest.get_node(yp).name == "default:water_source" then
 			sea.place_woodship(pos)
 		end
 	end
@@ -101,7 +98,7 @@ minetest.register_abm({
 	action = function(pos, node)
 		local yp = {x = pos.x, y = pos.y + 8, z = pos.z}
 		if node.name == "sea:submarine" and
-				minetest.get_node(yp).name == "base:water_source" then
+				minetest.get_node(yp).name == "default:water_source" then
 			sea.place_submarine(pos)
 		end
 	end

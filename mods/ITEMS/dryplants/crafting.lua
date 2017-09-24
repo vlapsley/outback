@@ -2,17 +2,17 @@
 -- Dry Plants - Recipes 0.1.0 -- Short Grass -> Dirt
 -----------------------------------------------------------------------------------------------
 -- by Mossmanikin
--- License (everything): 	WTFPL		
+-- License (everything): 	WTFPL
 -- Looked at code from:		darkage, default, farming, sickle, stairs
--- Dependencies: 			base, farming
--- Supports:				flint, stoneage, sumpf			
+-- Dependencies: 			default, farming
+-- Supports:				flint, stoneage, sumpf
 -----------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------
 -- Short Grass
 -----------------------------------------------------------------------------------------------
 minetest.register_craft({
-	output = "base:dirt",
+	output = "default:dirt",
 	recipe = {
 		{"dryplants:grass_short"},
 	}
@@ -25,13 +25,13 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "dryplants:grass",
 	recipe = {
-		{"base:grass_1"},
+		{"default:grass_1"},
 	}
 })
 minetest.register_craft({
 	output = "dryplants:grass",
 	recipe = {
-		{"base:junglegrass"},
+		{"default:junglegrass"},
 	}
 })
 if minetest.get_modpath("sumpf") ~= nil then
@@ -50,8 +50,8 @@ minetest.register_craft({
 	output = "dryplants:sickle",
 	recipe = {
 		{"group:stone",""},
-		{"", "base:stick"},
-		{"base:stick",""}
+		{"", "default:stick"},
+		{"default:stick",""}
 	}
 })
 if minetest.get_modpath("flint") ~= nil then
@@ -59,8 +59,8 @@ if minetest.get_modpath("flint") ~= nil then
 		output = "dryplants:sickle",
 		recipe = {
 			{"flint:flintstone",""},
-			{"", "base:stick"},
-			{"base:stick",""}
+			{"", "default:stick"},
+			{"default:stick",""}
 		}
 	})
 end
@@ -69,8 +69,8 @@ if minetest.get_modpath("stoneage") ~= nil then
 		output = "dryplants:sickle",
 		recipe = {
 			{"stoneage:silex",""},
-			{"", "base:stick"},
-			{"base:stick",""}
+			{"", "default:stick"},
+			{"default:stick",""}
 		}
 	})
 end
@@ -98,8 +98,8 @@ minetest.register_craft({
 minetest.register_craft({ -- papyrus -> wetreed
 	output = "dryplants:wetreed 2",
 	recipe = {
-		{"base:papyrus","base:papyrus"},
-		{"base:papyrus","base:papyrus"},
+		{"default:papyrus","default:papyrus"},
+		{"default:papyrus","default:papyrus"},
 	}
 })
 minetest.register_craft({ -- reedmace_sapling -> wetreed
@@ -220,7 +220,7 @@ for i in pairs(ReeD) do
 		recipe = {
 			{slab},
 		}
-	})	
+	})
 -----------------------------------------------------------------------------------------------
 -- Roof Corner
 -----------------------------------------------------------------------------------------------

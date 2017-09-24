@@ -11,18 +11,18 @@ for _, material in ipairs(material_list) do
 	minetest.register_craft({
 		output = 'technic:gold_chest',
 		recipe = {
-			{'base:gold_ingot','base:gold_ingot','base:gold_ingot'},
-			{'base:gold_ingot',"technic:"..material.."_chest",'base:gold_ingot'},
-			{'base:gold_ingot','base:gold_ingot','base:gold_ingot'},
+			{'default:gold_ingot','default:gold_ingot','default:gold_ingot'},
+			{'default:gold_ingot',"technic:"..material.."_chest",'default:gold_ingot'},
+			{'default:gold_ingot','default:gold_ingot','default:gold_ingot'},
 		}
 	})
 
 	minetest.register_craft({
 		output = 'technic:gold_locked_chest',
 		recipe = {
-			{'base:gold_ingot','base:gold_ingot','base:gold_ingot'},
-			{'base:gold_ingot',"technic:"..material.."_locked_chest",'base:gold_ingot'},
-			{'base:gold_ingot','base:gold_ingot','base:gold_ingot'},
+			{'default:gold_ingot','default:gold_ingot','default:gold_ingot'},
+			{'default:gold_ingot',"technic:"..material.."_locked_chest",'default:gold_ingot'},
+			{'default:gold_ingot','default:gold_ingot','default:gold_ingot'},
 		}
 	})
 end
@@ -30,7 +30,7 @@ end
 minetest.register_craft({
 	output = 'technic:gold_locked_chest',
 	recipe = {
-		{'base:steel_ingot'},
+		{'default:steel_ingot'},
 		{'technic:gold_chest'},
 	}
 })

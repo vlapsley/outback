@@ -8,7 +8,7 @@ local S = technic.getter
 technic.register_power_tool("technic:flashlight", flashlight_max_charge)
 
 minetest.register_alias("technic:light_off", "air")
-      
+
 minetest.register_tool("technic:flashlight", {
 	description = S("Flashlight"),
 	inventory_image = "technic_flashlight.png",
@@ -20,7 +20,7 @@ minetest.register_tool("technic:flashlight", {
 minetest.register_craft({
 	output = "technic:flashlight",
 	recipe = {
-		{"technic:rubber",                "base:glass",   "technic:rubber"},
+		{"technic:rubber",                "default:glass",   "technic:rubber"},
 		{"technic:stainless_steel_ingot", "technic:battery", "technic:stainless_steel_ingot"},
 		{"",                              "technic:battery", ""}
 	}
@@ -118,6 +118,6 @@ minetest.register_node("technic:light", {
 	walkable = false,
 	buildable_to = true,
 	sunlight_propagates = true,
-	light_source = LIGHT_MAX,
+	light_source = default.LIGHT_MAX,
 	pointable = false,
 })

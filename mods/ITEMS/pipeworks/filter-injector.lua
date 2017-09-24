@@ -373,7 +373,7 @@ for _, data in ipairs({
 		paramtype2 = "facedir",
 		groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 2, mesecon = 2},
 		legacy_facedir_simple = true,
-		sounds = base.node_sound_wood_defaults(),
+		sounds = default.node_sound_wood_defaults(),
 		on_construct = function(pos)
 			local meta = minetest.get_meta(pos)
 			set_filter_formspec(data, meta)
@@ -465,18 +465,18 @@ end
 minetest.register_craft( {
 	output = "pipeworks:filter 2",
 	recipe = {
-	        { "base:steel_ingot", "base:steel_ingot", "homedecor:plastic_sheeting" },
-	        { "group:stick", "base:mese_crystal", "homedecor:plastic_sheeting" },
-	        { "base:steel_ingot", "base:steel_ingot", "homedecor:plastic_sheeting" }
+	        { "default:steel_ingot", "default:steel_ingot", "homedecor:plastic_sheeting" },
+	        { "group:stick", "default:mese_crystal", "homedecor:plastic_sheeting" },
+	        { "default:steel_ingot", "default:steel_ingot", "homedecor:plastic_sheeting" }
 	},
 })
 
 minetest.register_craft( {
 	output = "pipeworks:mese_filter 2",
 	recipe = {
-	        { "base:steel_ingot", "base:steel_ingot", "homedecor:plastic_sheeting" },
-	        { "group:stick", "base:mese", "homedecor:plastic_sheeting" },
-	        { "base:steel_ingot", "base:steel_ingot", "homedecor:plastic_sheeting" }
+	        { "default:steel_ingot", "default:steel_ingot", "homedecor:plastic_sheeting" },
+	        { "group:stick", "default:mese", "homedecor:plastic_sheeting" },
+	        { "default:steel_ingot", "default:steel_ingot", "homedecor:plastic_sheeting" }
 	},
 })
 
@@ -484,9 +484,9 @@ if minetest.get_modpath("digilines") then
 	minetest.register_craft( {
 		output = "pipeworks:digiline_filter 2",
 		recipe = {
-			{ "base:steel_ingot", "base:steel_ingot", "homedecor:plastic_sheeting" },
+			{ "default:steel_ingot", "default:steel_ingot", "homedecor:plastic_sheeting" },
 			{ "group:stick", "digilines:wire_std_00000000", "homedecor:plastic_sheeting" },
-			{ "base:steel_ingot", "base:steel_ingot", "homedecor:plastic_sheeting" }
+			{ "default:steel_ingot", "default:steel_ingot", "homedecor:plastic_sheeting" }
 		},
 	})
 end

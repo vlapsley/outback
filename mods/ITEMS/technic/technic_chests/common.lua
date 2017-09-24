@@ -28,7 +28,7 @@ technic.chests.can_dig = function(pos, player)
 end
 
 local function inv_change(pos, count, player)
-	if not base.can_interact_with_node(player, pos) then
+	if not default.can_interact_with_node(player, pos) then
 		return 0
 	end
 	return count

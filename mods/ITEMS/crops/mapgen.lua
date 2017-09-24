@@ -3,7 +3,7 @@ local mg_params = minetest.get_mapgen_params()
 if mg_params.mgname ~= "v6" and mg_params.mgname ~= "singlenode" then
 	minetest.register_decoration({
 		deco_type = "simple",
-		place_on = { "base:dirt_with_grass" },
+		place_on = { "default:dirt_with_grass" },
 		sidelen = 16,
 		noise_params = {
 			offset = -0.02,
@@ -20,7 +20,7 @@ if mg_params.mgname ~= "v6" and mg_params.mgname ~= "singlenode" then
 	})
 	minetest.register_decoration({
 		deco_type = "simple",
-		place_on = { "base:dirt_with_grass" },
+		place_on = { "default:dirt_with_grass" },
 		sidelen = 16,
 		noise_params = {
 			offset = -0.02,
@@ -38,10 +38,10 @@ if mg_params.mgname ~= "v6" and mg_params.mgname ~= "singlenode" then
 end
 
 -- drop potatoes when digging in dirt
-minetest.override_item("base:dirt_with_grass", {
+minetest.override_item("default:dirt_with_grass", {
 	drop = {
 		items = {
-			{ items = {'base:dirt'}},
+			{ items = {'default:dirt'}},
 			{ items = {'crops:potato'}, rarity = 500 }
 		}
 	}

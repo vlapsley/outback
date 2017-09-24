@@ -1,5 +1,7 @@
 plants_api
+default
 base
 mapgen_core
-technic
-flowers
+technic?
+flowers?
+sea?

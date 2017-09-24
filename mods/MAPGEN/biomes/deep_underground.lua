@@ -6,7 +6,7 @@
 -- deep_underground
 minetest.register_biome({
 	name =           "deep_underground",
-	node_stone =     "base:stone",
+	node_stone =     "default:stone",
 	y_min =          -31000,
 	y_max =          -1072,
 	heat_point =     50,
@@ -24,7 +24,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 5832,
 	clust_num_ores = 33,
@@ -36,7 +36,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 1728,
 	clust_num_ores = 58,
@@ -49,7 +49,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:shale",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 15625,
 	clust_num_ores = 6,
@@ -62,7 +62,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:slate",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 64000,
 	clust_num_ores = 6,
@@ -75,7 +75,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "technic:mineral_chromium",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 2197,
 	clust_num_ores = 5,
@@ -87,8 +87,8 @@ minetest.register_ore({
 -- Coal
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_coal",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_coal",
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 13824,
 	clust_num_ores = 27,
@@ -111,8 +111,8 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_coal",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_coal",
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 512,
 	clust_num_ores = 8,
@@ -136,8 +136,8 @@ minetest.register_ore({
 -- Copper
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_copper",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_copper",
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 729,
 	clust_num_ores = 5,
@@ -149,8 +149,8 @@ minetest.register_ore({
 -- Diamond
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_diamond",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_diamond",
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 4913,
 	clust_num_ores = 4,
@@ -161,8 +161,8 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_diamond",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_diamond",
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 3375,
 	clust_num_ores = 4,
@@ -186,8 +186,8 @@ minetest.register_ore({
 -- Gold
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_gold",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_gold",
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 2197,
 	clust_num_ores = 5,
@@ -199,8 +199,8 @@ minetest.register_ore({
 -- Iron
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_iron",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_iron",
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 343,
 	clust_num_ores = 5,
@@ -223,8 +223,8 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_iron",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_iron",
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 13824,
 	clust_num_ores = 27,
@@ -249,7 +249,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_silver",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 2197,
 	clust_num_ores = 5,
@@ -261,8 +261,8 @@ minetest.register_ore({
 -- Tin
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_tin",
-	wherein =        {"base:stone"},
+	ore =            "default:stone_with_tin",
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 1000,
 	clust_num_ores = 5,
@@ -287,7 +287,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_agate",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -300,7 +300,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_amethyst",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -313,7 +313,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_citrine",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -326,7 +326,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_emerald",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -339,7 +339,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_jade",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -352,7 +352,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_ruby",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -365,7 +365,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_sapphire",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -378,7 +378,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_smoky_quartz",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"deep_underground"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,

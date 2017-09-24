@@ -58,7 +58,7 @@ minetest.register_node("crops:potato_plant_" .. stage , {
 	paramtype = "light",
 	groups = { snappy=3, flammable=3, flora=1, attached_node=1, not_in_creative_inventory=1 },
 	drop = {},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.45, -0.5, -0.45,  0.45, -0.6 + (((math.min(stage, 4)) + 1) / 5), 0.45}
@@ -83,7 +83,7 @@ minetest.register_craft({
 --
 minetest.register_node("crops:soil_with_potatoes", {
 	description = S("Soil with potatoes"),
-	tiles = { "base_dirt.png^crops_potato_soil.png", "base_dirt.png" },
+	tiles = { "default_dirt.png^crops_potato_soil.png", "default_dirt.png" },
 	sunlight_propagates = false,
 	use_texture_alpha = false,
 	walkable = true,
@@ -96,7 +96,7 @@ minetest.register_node("crops:soil_with_potatoes", {
 		{ items = {'crops:potato'}, rarity = 2 },
 		{ items = {'crops:potato'}, rarity = 5 },
 	}},
-	sounds = base.node_sound_dirt_defaults(),
+	sounds = default.node_sound_dirt_defaults(),
 	on_dig = function(pos, node, digger)
 		local drops = {}
 		-- damage 0   = drops 3-5
@@ -107,7 +107,7 @@ minetest.register_node("crops:soil_with_potatoes", {
 		for i = 1, math.random(3 - (3 * damage / 100), 5 - (4 * (damage / 100))) do
 			table.insert(drops, "crops:potato")
 		end
-		base.handle_node_drops(pos, drops, digger)
+		minetest.handle_node_drops(pos, drops, digger)
 		minetest.set_node(pos, { name = "farming:soil" })
 		local above = { x = pos.x, y = pos.y + 1, z = pos.z }
 		if minetest.get_node(above).name == "crops:potato_plant_4" then

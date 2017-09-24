@@ -109,7 +109,7 @@ local iclip_def = {
 	tiles = {"technic_insulator_clip.png"},
 	is_ground_content = false,
 	groups = {choppy=1, snappy=1, oddly_breakable_by_hand=1 },
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 }
 
 local iclipfence_def = {
@@ -143,7 +143,7 @@ local iclipfence_def = {
 	},
 	connects_to = {"group:fence", "group:wood", "group:tree"},
 	groups = {fence=1, choppy=1, snappy=1, oddly_breakable_by_hand=1 },
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 }
 
 if minetest.get_modpath("unifieddyes") then
@@ -162,7 +162,7 @@ if minetest.get_modpath("unifieddyes") then
 	iclipfence_def.after_place_node = unifieddyes.recolor_on_place
 	iclipfence_def.after_dig_node = unifieddyes.after_dig_node
 	iclipfence_def.groups = {fence=1, choppy=1, snappy=1, oddly_breakable_by_hand=1, ud_param2_colorable = 1}
-	iclipfence_def.place_param2 = 171 -- medium amber, low saturation, closest color to base:wood
+	iclipfence_def.place_param2 = 171 -- medium amber, low saturation, closest color to default:wood
 end
 
 minetest.register_node(":technic:insulator_clip", iclip_def)
@@ -173,7 +173,7 @@ minetest.register_craft({
 	recipe = {
 		{ "", "dye:white", ""},
 		{ "", "technic:raw_latex", ""},
-		{ "technic:raw_latex", "base:stone", "technic:raw_latex"},
+		{ "technic:raw_latex", "default:stone", "technic:raw_latex"},
 	}
 })
 
@@ -182,6 +182,6 @@ minetest.register_craft({
 	recipe = {
 		{ "", "dye:white", ""},
 		{ "", "technic:raw_latex", ""},
-		{ "technic:raw_latex", "base:fence_wood", "technic:raw_latex"},
+		{ "technic:raw_latex", "fences:fence_wood", "technic:raw_latex"},
 	}
 })

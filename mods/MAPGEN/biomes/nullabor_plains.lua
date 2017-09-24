@@ -9,13 +9,13 @@ local math_random = math.random
 -- nullabor plains
 minetest.register_biome({
 	name =             "nullabor_plains",
-	node_top =         "base:desert_sand",
+	node_top =         "default:desert_sand",
 	depth_top =        1,
-	node_filler =      "base:sandstone",
+	node_filler =      "default:sandstone",
 	depth_filler =     3,
-	node_stone =       "base:stone",
-	node_river_water = "base:dirt_with_dry_grass",
-	node_riverbed =    "base:sandstone",
+	node_stone =       "default:stone",
+	node_river_water = "default:dirt_with_dry_grass",
+	node_riverbed =    "default:sandstone",
 	depth_riverbed =   1,
 	y_min =            4,
 	y_max =            31000,
@@ -33,8 +33,8 @@ minetest.register_biome({
 -- Gold (Kalgoorlie / Boulder)
 minetest.register_ore({
 	ore_type =        "vein",
-	ore =             "base:stone_with_gold",
-	wherein =         {"base:stone"},
+	ore =             "default:stone_with_gold",
+	wherein =         {"default:stone"},
 	biomes =          {"nullabor_plains"},
 	y_min =           -31,
 	y_max =           38,
@@ -55,7 +55,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_nickel",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"nullabor_plains"},
 	clust_scarcity = 512,
 	clust_num_ores = 5,
@@ -73,7 +73,7 @@ minetest.register_ore({
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:desert_sand"},
+		place_on =      {"default:desert_sand"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -86,7 +86,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"nullabor_plains"},
 		y_min =         4,
 		y_max =         240,
-		decoration =    "base:dry_grass_"..length,
+		decoration =    "default:dry_grass_"..length,
 	})
 end
 
@@ -99,7 +99,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 -- Spinifex
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"base:desert_sand"},
+	place_on =    {"default:desert_sand"},
 	sidelen =     80,
 	fill_ratio =  0.03,
 	biomes =      {"nullabor_plains"},
@@ -125,7 +125,7 @@ local function register_small_sandstone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "base:small_sandstone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"base:desert_sand"},
+		place_on =    {"default:desert_sand"},
 		fill_ratio =  0.002,
 		biomes =      {"nullabor_plains"},
 		flags =       "place_center_x, place_center_z",

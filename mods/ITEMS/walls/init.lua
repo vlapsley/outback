@@ -41,95 +41,95 @@ end
 
 
 walls.register("walls:basalt", "Basalt Wall", "base_basalt.png",
-		"base:basalt", base.node_sound_stone_defaults())
+		"base:basalt", default.node_sound_stone_defaults())
 
 walls.register("walls:basalt_brick", "Basalt Brick Wall", "base_basalt_brick.png",
-		"base:basalt_brick", base.node_sound_stone_defaults())
+		"base:basalt_brick", default.node_sound_stone_defaults())
 
 walls.register("walls:basalt_cobble", "Basalt Cobble Wall", "base_basalt_cobble.png",
-		"base:basalt_cobble", base.node_sound_stone_defaults())
+		"base:basalt_cobble", default.node_sound_stone_defaults())
 
-walls.register("walls:brick", "Brick Wall", "base_brick.png",
-		"base:brick", base.node_sound_stone_defaults())
+walls.register("walls:brick", "Brick Wall", "default_brick.png",
+		"default:brick", default.node_sound_stone_defaults())
 
-walls.register("walls:cobble", "Cobblestone Wall", "base_cobble.png",
-		"base:cobble", base.node_sound_stone_defaults())
+walls.register("walls:cobble", "Cobblestone Wall", "default_cobble.png",
+		"default:cobble", default.node_sound_stone_defaults())
 
-walls.register("walls:desert_sandstone", "Desert Sandstone Wall", "base_desert_sandstone.png",
-		"base:desert_sandstone", base.node_sound_stone_defaults())
+walls.register("walls:desert_sandstone", "Desert Sandstone Wall", "default_desert_sandstone.png",
+		"default:desert_sandstone", default.node_sound_stone_defaults())
 
-walls.register("walls:desert_sandstone_brick", "Desert Sandstone Brick Wall", "base_desert_sandstone_brick.png",
-		"base:desert_sandstonebrick", base.node_sound_stone_defaults())
+walls.register("walls:desert_sandstone_brick", "Desert Sandstone Brick Wall", "default_desert_sandstone_brick.png",
+		"default:desert_sandstonebrick", default.node_sound_stone_defaults())
 
 walls.register("walls:diorite", "Diorite Wall", "base_diorite.png",
-		"base:diorite", base.node_sound_stone_defaults())
+		"base:diorite", default.node_sound_stone_defaults())
 
 walls.register("walls:diorite_brick", "Diorite Brick Wall", "base_diorite_brick.png",
-		"base:diorite_brick", base.node_sound_stone_defaults())
+		"base:diorite_brick", default.node_sound_stone_defaults())
 
 walls.register("walls:diorite_cobble", "Diorite Cobble Wall", "base_diorite_cobble.png",
-		"base:diorite_cobble", base.node_sound_stone_defaults())
+		"base:diorite_cobble", default.node_sound_stone_defaults())
 
 walls.register("walls:granite", "Granite Wall", "technic_granite.png",
-		"technic:granite", base.node_sound_stone_defaults())
+		"technic:granite", default.node_sound_stone_defaults())
 
 walls.register("walls:granite_brick", "Granite Brick Wall", "technic_granite_brick.png",
-		"technic:granite_brick", base.node_sound_stone_defaults())
+		"technic:granite_brick", default.node_sound_stone_defaults())
 
 walls.register("walls:granite_cobble", "Granite Cobble Wall", "technic_granite_cobble.png",
-		"technic:granite_cobble", base.node_sound_stone_defaults())
+		"technic:granite_cobble", default.node_sound_stone_defaults())
 
 walls.register("walls:limestone", "Limestone Wall", "base_limestone.png",
-		"base:limestone", base.node_sound_stone_defaults())
+		"base:limestone", default.node_sound_stone_defaults())
 
 walls.register("walls:limestone_brick", "Limestone Brick Wall", "base_limestone_brick.png",
-		"base:limestone_brick", base.node_sound_stone_defaults())
+		"base:limestone_brick", default.node_sound_stone_defaults())
 
 walls.register("walls:limestone_cobble", "Limestone Cobble Wall", "base_limestone_cobble.png",
-		"base:limestone_cobble", base.node_sound_stone_defaults())
+		"base:limestone_cobble", default.node_sound_stone_defaults())
 
 walls.register("walls:marble", "Marble Wall", "base_marble.png",
-		"base:marble", base.node_sound_stone_defaults())
+		"base:marble", default.node_sound_stone_defaults())
 
 walls.register("walls:marble_tile", "Marble Tile Wall", "base_marble_tile.png",
-		"base:marble_tile", base.node_sound_stone_defaults())
+		"base:marble_tile", default.node_sound_stone_defaults())
 
-walls.register("walls:mossycobble", "Mossy Cobblestone Wall", "base_mossycobble.png",
-		"base:mossycobble", base.node_sound_stone_defaults())
+walls.register("walls:mossycobble", "Mossy Cobblestone Wall", "default_mossycobble.png",
+		"default:mossycobble", default.node_sound_stone_defaults())
 
 walls.register("walls:red_sandstone", "Red Sandstone Wall", "base_red_sandstone.png",
-		"base:red_sandstone", base.node_sound_stone_defaults())
+		"base:red_sandstone", default.node_sound_stone_defaults())
 
 walls.register("walls:red_sandstone_brick", "Red Sandstone Brick Wall", "base_red_sandstone_brick.png",
-		"base:red_sandstonebrick", base.node_sound_stone_defaults())
+		"base:red_sandstonebrick", default.node_sound_stone_defaults())
 
-walls.register("walls:sandstone", "Sandstone Wall", "base_sandstone.png",
-		"base:sandstone", base.node_sound_stone_defaults())
+walls.register("walls:sandstone", "Sandstone Wall", "default_sandstone.png",
+		"default:sandstone", default.node_sound_stone_defaults())
 
-walls.register("walls:sandstone_brick", "Sandstone Brick Wall", "base_sandstone_brick.png",
-		"base:sandstonebrick", base.node_sound_stone_defaults())
+walls.register("walls:sandstone_brick", "Sandstone Brick Wall", "default_sandstone_brick.png",
+		"default:sandstonebrick", default.node_sound_stone_defaults())
 
 walls.register("walls:sandstone_cobble", "Sandstone Cobble Wall", "base_sandstone_cobble.png",
-		"base:sandstone_cobble", base.node_sound_stone_defaults())
+		"base:sandstone_cobble", default.node_sound_stone_defaults())
 
 walls.register("walls:shale", "Shale Wall", "base_shale.png",
-		"base:shale", base.node_sound_stone_defaults())
+		"base:shale", default.node_sound_stone_defaults())
 
 walls.register("walls:slate", "Slate Wall", "base_slate.png",
-		"base:slate", base.node_sound_stone_defaults())
+		"base:slate", default.node_sound_stone_defaults())
 
 walls.register("walls:slate_brick", "Slate Brick Wall", "base_slate_brick.png",
-		"base:slate_brick", base.node_sound_stone_defaults())
+		"base:slate_brick", default.node_sound_stone_defaults())
 
 walls.register("walls:slate_rubble", "Slate Rubble Wall", "base_slate_rubble.png",
-		"base:slate_rubble", base.node_sound_stone_defaults())
+		"base:slate_rubble", default.node_sound_stone_defaults())
 
-walls.register("walls:stone", "Stone Wall", "base_stone.png",
-		"base:stone", base.node_sound_stone_defaults())
+walls.register("walls:stone", "Stone Wall", "default_stone.png",
+		"default:stone", default.node_sound_stone_defaults())
 
-walls.register("walls:stonebrick", "Stone Brick Wall", "base_stone_brick.png",
-		"base:stonebrick", base.node_sound_stone_defaults())
+walls.register("walls:stonebrick", "Stone Brick Wall", "default_stone_brick.png",
+		"default:stonebrick", default.node_sound_stone_defaults())
 
-walls.register("walls:stone_block", "Stone Block Wall", "base_stone_block.png",
-		"base:stone_block", base.node_sound_stone_defaults())
+walls.register("walls:stone_block", "Stone Block Wall", "default_stone_block.png",
+		"default:stone_block", default.node_sound_stone_defaults())
 

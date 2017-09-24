@@ -1,4 +1,6 @@
+inventory
 base
+default
 chests
 moreores?
 pipeworks?

@@ -17,8 +17,8 @@ minetest.register_craft({
 	output = "crops:beanpoles",
 	recipe = {
 		{'', '', ''},
-		{'base:stick', '', 'base:stick'},
-		{'base:stick', '', 'base:stick'},
+		{'default:stick', '', 'default:stick'},
+		{'default:stick', '', 'default:stick'},
 	}
 })
 
@@ -86,7 +86,7 @@ local function crops_beanpole_on_dig(pos, node, digger)
 		) then
 		-- non-ripe
 		for i = 1,4 do
-			table.insert(drops, "base:stick")
+			table.insert(drops, "default:stick")
 		end
 		minetest.set_node(bottom, { name = "crops:beanpole_base"})
 		minetest.set_node(top, { name = "crops:beanpole_top"})
@@ -104,7 +104,7 @@ local function crops_beanpole_on_dig(pos, node, digger)
 	elseif bottom_n.name == "crops:beanpole_plant_base_6" and top_n.name == "crops:beanpole_plant_top_4" then
 		-- harvested beans
 		for i = 1,math.random(3,4) do
-			table.insert(drops, "base:stick")
+			table.insert(drops, "default:stick")
 		end
 		minetest.remove_node(bottom)
 		minetest.remove_node(top)
@@ -119,7 +119,7 @@ local function crops_beanpole_on_dig(pos, node, digger)
 		return
 	end
 
-	base.handle_node_drops(pos, drops, digger)
+	minetest.handle_node_drops(pos, drops, digger)
 end
 
 minetest.register_node("crops:beanpole_base", {
@@ -132,7 +132,7 @@ minetest.register_node("crops:beanpole_base", {
 	paramtype = "light",
 	groups = { snappy=3,flammable=3,flora=1,attached_node=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	on_dig = crops_beanpole_on_dig,
 })
 
@@ -146,7 +146,7 @@ minetest.register_node("crops:beanpole_top", {
 	paramtype = "light",
 	groups = { snappy=3,flammable=3,flora=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	on_dig = crops_beanpole_on_dig,
 })
 
@@ -161,7 +161,7 @@ minetest.register_node("crops:beanpoles", {
 	paramtype = "light",
 	groups = { snappy=3,flammable=3,flora=1,attached_node=1 },
 	drop = {},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	node_placement_prediction = "crops:beanpole_base",
 
 	on_place = function(itemstack, placer, pointed_thing)
@@ -225,7 +225,7 @@ minetest.register_node("crops:beanpole_plant_base_" .. stage, {
 	walkable = false,
 	groups = { snappy=3,flammable=3,flora=1,attached_node=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	on_dig = crops_beanpole_on_dig
 })
 end
@@ -241,7 +241,7 @@ minetest.register_node("crops:beanpole_plant_top_" .. stage, {
 	walkable = true,
 	groups = { snappy=3,flammable=3,flora=1,not_in_creative_inventory=1 },
 	drop = {},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	on_dig = crops_beanpole_on_dig
 })
 end

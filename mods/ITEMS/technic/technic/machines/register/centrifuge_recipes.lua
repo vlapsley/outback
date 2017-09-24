@@ -14,8 +14,8 @@ local recipes = {
 	{ "technic:bronze_dust 4",             "technic:copper_dust 3",       "technic:tin_dust"      },
 	{ "technic:stainless_steel_dust 4",    "technic:wrought_iron_dust 3", "technic:chromium_dust" },
 	{ "technic:brass_dust 3",              "technic:copper_dust 2",       "technic:zinc_dust"     },
-	{ "technic:chernobylite_dust",         "base:sand",                "technic:uranium3_dust" },
-	{ "base:dirt 4",                    "base:sand",                "base:gravel",       "base:clay_lump 2"     },
+	{ "technic:chernobylite_dust",         "default:sand",                "technic:uranium3_dust" },
+	{ "default:dirt 4",                    "default:sand",                "default:gravel",       "default:clay_lump 2"     },
 }
 
 local function uranium_dust(p)
@@ -27,12 +27,12 @@ end
 
 if minetest.get_modpath("bushes_classic") then
 	for _, berry in ipairs({ "blackberry", "blueberry", "gooseberry", "raspberry", "strawberry" }) do
-		table.insert(recipes, { "bushes:"..berry.."_bush", "base:stick 20", "bushes:"..berry.." 4" })
+		table.insert(recipes, { "bushes:"..berry.."_bush", "default:stick 20", "bushes:"..berry.." 4" })
 	end
 end
 
 if minetest.get_modpath("farming") then
-	table.insert(recipes, { "farming:wheat 4", "farming:seed_wheat 3", "base:dry_shrub 1" })
+	table.insert(recipes, { "farming:wheat 4", "farming:seed_wheat 3", "default:dry_shrub 1" })
 end
 
 for _, data in pairs(recipes) do

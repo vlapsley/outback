@@ -5,8 +5,8 @@ vines.recipes['rope_block'] = {
 }
 
 vines.recipes['shears'] = {
-  {'', 'base:steel_ingot', ''},
-  {'group:stick', 'group:wood', 'base:steel_ingot'},
+  {'', 'default:steel_ingot', ''},
+  {'group:stick', 'group:wood', 'default:steel_ingot'},
   {'', '', 'group:stick'}
 }
 

@@ -11,7 +11,7 @@ minetest.register_alias("water_mill", "technic:water_mill")
 minetest.register_craft({
 	output = 'technic:water_mill',
 	recipe = {
-		{'technic:marble', 'base:diamond',        'technic:marble'},
+		{'technic:marble', 'default:diamond',        'technic:marble'},
 		{'group:wood',     'technic:machine_casing', 'group:wood'},
 		{'technic:marble', 'technic:lv_cable',       'technic:marble'},
 	}
@@ -19,8 +19,8 @@ minetest.register_craft({
 
 local function check_node_around_mill(pos)
 	local node = minetest.get_node(pos)
-	if node.name == "base:water_flowing"
-	  or node.name == "base:river_water_flowing" then
+	if node.name == "default:water_flowing"
+	  or node.name == "default:river_water_flowing" then
 		return node.param2 -- returns approx. water flow, if any
 	end
 	return false
@@ -82,7 +82,7 @@ minetest.register_node("technic:water_mill", {
 	groups = {snappy=2, choppy=2, oddly_breakable_by_hand=2,
 		technic_machine=1, technic_lv=1},
 	legacy_facedir_simple = true,
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("infotext", S("Hydro %s Generator"):format("LV"))
@@ -100,7 +100,7 @@ minetest.register_node("technic:water_mill_active", {
 	groups = {snappy=2, choppy=2, oddly_breakable_by_hand=2,
 		technic_machine=1, technic_lv=1, not_in_creative_inventory=1},
 	legacy_facedir_simple = true,
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 	drop = "technic:water_mill",
 	technic_run = run,
 	technic_disabled_machine_name = "technic:water_mill",

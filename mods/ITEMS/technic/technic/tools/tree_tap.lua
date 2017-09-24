@@ -38,8 +38,8 @@ minetest.register_tool("technic:treetap", {
 minetest.register_craft({
 	output = "technic:treetap",
 	recipe = {
-		{"pipeworks:tube_1", "group:wood",    "base:stick"},
-		{"",               "base:stick", "base:stick"}
+		{"pipeworks:tube_1", "group:wood",    "default:stick"},
+		{"",               "default:stick", "default:stick"}
 	},
 })
 

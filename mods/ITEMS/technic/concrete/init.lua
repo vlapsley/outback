@@ -1,4 +1,4 @@
---Minetest 0.4.7 mod: concrete 
+--Minetest 0.4.7 mod: concrete
 --(c) 2013 by RealBadAngel <mk@realbadangel.pl>
 
 local technic = rawget(_G, "technic") or {}
@@ -20,7 +20,7 @@ local steel_ingot
 if minetest.get_modpath("technic_worldgen") then
 	steel_ingot = "technic:carbon_steel_ingot"
 else
-	steel_ingot = "base:steel_ingot"
+	steel_ingot = "default:steel_ingot"
 end
 
 minetest.register_craft({
@@ -35,9 +35,9 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'technic:concrete 5',
 	recipe = {
-		{'base:stone','technic:rebar','base:stone'},
-		{'technic:rebar','base:stone','technic:rebar'},
-		{'base:stone','technic:rebar','base:stone'},
+		{'default:stone','technic:rebar','default:stone'},
+		{'technic:rebar','default:stone','technic:rebar'},
+		{'default:stone','technic:rebar','default:stone'},
 	}
 })
 
@@ -51,9 +51,9 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'technic:concrete_post 12',
 	recipe = {
-		{'base:stone','technic:rebar','base:stone'},
-		{'base:stone','technic:rebar','base:stone'},
-		{'base:stone','technic:rebar','base:stone'},
+		{'default:stone','technic:rebar','default:stone'},
+		{'default:stone','technic:rebar','default:stone'},
+		{'default:stone','technic:rebar','default:stone'},
 	}
 })
 
@@ -75,14 +75,14 @@ minetest.register_node(":technic:concrete", {
 	description = S("Concrete Block"),
 	tiles = {"technic_concrete_block.png",},
 	groups = {cracky=1, level=2, concrete=1},
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_node(":technic:blast_resistant_concrete", {
 	description = S("Blast-resistant Concrete Block"),
 	tiles = {"technic_blast_resistant_concrete_block.png",},
 	groups = {cracky=1, level=3, concrete=1},
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 	on_blast = function(pos, intensity)
 		if intensity > 9 then
 			minetest.remove_node(pos)
@@ -103,17 +103,17 @@ minetest.register_node(":technic:concrete_post_platform", {
 	description = S("Concrete Post Platform"),
 	tiles = {"technic_concrete_block.png",},
 	groups={cracky=1, level=2},
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 	paramtype = "light",
-	drawtype = "nodebox", 
+	drawtype = "nodebox",
 	node_box = {
 		type = "fixed",
 		fixed = {box_platform}
 	},
 	on_place = function (itemstack, placer, pointed_thing)
 		local node = minetest.get_node(pointed_thing.under)
-		if node.name ~= "technic:concrete_post" then 
-			return minetest.item_place_node(itemstack, placer, pointed_thing) 
+		if node.name ~= "technic:concrete_post" then
+			return minetest.item_place_node(itemstack, placer, pointed_thing)
 		end
 		minetest.set_node(pointed_thing.under, {name="technic:concrete_post_with_platform"})
 		itemstack:take_item()
@@ -135,7 +135,7 @@ for platform = 0, 1 do
 		description = S("Concrete Post"),
 		tiles = {"technic_concrete_block.png"},
 		groups = {cracky=1, level=2, concrete_post=1, not_in_creative_inventory=platform},
-		sounds = base.node_sound_stone_defaults(),
+		sounds = default.node_sound_stone_defaults(),
 		drop = (platform == 1 and "technic:concrete_post_platform" or
 				"technic:concrete_post"),
 		paramtype = "light",

@@ -120,7 +120,7 @@ minetest.register_node('technic:homedecor_glowlight_half_yellow', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3 },
 	on_place = function(itemstack, placer, pointed_thing)
@@ -159,8 +159,8 @@ minetest.register_node('technic:homedecor_glowlight_half_yellow_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX,
-	sounds = base.node_sound_wood_defaults(),
+	light_source = default.LIGHT_MAX,
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},
 	drop="technic:homedecor_glowlight_half_yellow",
@@ -201,7 +201,7 @@ minetest.register_node('technic:homedecor_glowlight_quarter_yellow', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3 },
 	on_place = function(itemstack, placer, pointed_thing)
@@ -240,8 +240,8 @@ minetest.register_node('technic:homedecor_glowlight_quarter_yellow_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX-1,
-	sounds = base.node_sound_wood_defaults(),
+	light_source = default.LIGHT_MAX - 1,
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},
 	drop="technic:homedecor_glowlight_quarter_yellow",
@@ -283,7 +283,7 @@ minetest.register_node('technic:homedecor_glowlight_half_white', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3 },
 	on_place = function(itemstack, placer, pointed_thing)
@@ -322,8 +322,8 @@ minetest.register_node('technic:homedecor_glowlight_half_white_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX,
-	sounds = base.node_sound_wood_defaults(),
+	light_source = default.LIGHT_MAX,
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},
 	drop="technic:homedecor_glowlight_half_white",
@@ -364,7 +364,7 @@ minetest.register_node('technic:homedecor_glowlight_quarter_white', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3 },
 	on_place = function(itemstack, placer, pointed_thing)
@@ -403,8 +403,8 @@ minetest.register_node('technic:homedecor_glowlight_quarter_white_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX-1,
-	sounds = base.node_sound_wood_defaults(),
+	light_source = default.LIGHT_MAX - 1,
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},
 	drop="technic:homedecor_glowlight_quarter_white",
@@ -445,7 +445,7 @@ minetest.register_node('technic:homedecor_glowlight_small_cube_yellow', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3 },
 	on_place = function(itemstack, placer, pointed_thing)
@@ -484,8 +484,8 @@ minetest.register_node('technic:homedecor_glowlight_small_cube_yellow_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX-1,
-	sounds = base.node_sound_wood_defaults(),
+	light_source = default.LIGHT_MAX - 1,
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},
 	drop="technic:homedecor_glowlight_small_cube_yellow",
@@ -526,7 +526,7 @@ minetest.register_node('technic:homedecor_glowlight_small_cube_white', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3 },
 	on_place = function(itemstack, placer, pointed_thing)
@@ -565,8 +565,8 @@ minetest.register_node('technic:homedecor_glowlight_small_cube_white_active', {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
-	light_source = LIGHT_MAX-1,
-	sounds = base.node_sound_wood_defaults(),
+	light_source = default.LIGHT_MAX - 1,
+	sounds = default.node_sound_wood_defaults(),
 
 	groups = { snappy = 3, not_in_creative_inventory=1},
 	drop="technic:homedecor_glowlight_small_cube_white",

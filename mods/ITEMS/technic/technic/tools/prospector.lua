@@ -93,11 +93,11 @@ minetest.register_tool("technic:prospector", {
 			"label[0,7.5;Accuracy:]"..
 			"label[0,8;98%]")
 		return
-	end, 
+	end,
 })
 
 minetest.register_on_player_receive_fields(function(user, formname, fields)
-        if formname ~= "technic:prospector_control" then return false end
+	if formname ~= "technic:prospector_control" then return false end
 	if not user or not user:is_player() or user.is_fake_player then return end
 	local toolstack = user:get_wielded_item()
 	if toolstack:get_name() ~= "technic:prospector" then return true end

@@ -5,9 +5,9 @@
 minetest.register_craft({
 	output = 'technic:electric_furnace',
 	recipe = {
-		{'base:cobble', 'base:cobble',         'base:cobble'},
-		{'base:cobble', 'technic:machine_casing', 'base:cobble'},
-		{'base:cobble', 'technic:lv_cable',       'base:cobble'},
+		{'default:cobble', 'default:cobble',         'default:cobble'},
+		{'default:cobble', 'technic:machine_casing', 'default:cobble'},
+		{'default:cobble', 'technic:lv_cable',       'default:cobble'},
 	}
 })
 

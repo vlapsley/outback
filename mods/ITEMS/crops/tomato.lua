@@ -28,7 +28,7 @@ minetest.register_node("crops:tomato_seed", {
 	node_placement_prediction = "crops:tomato_plant_1",
 	groups = { snappy=3,flammable=3,flora=1,attached_node=1 },
 	drop = {},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 
 	on_place = function(itemstack, placer, pointed_thing)
 		local under = minetest.get_node(pointed_thing.under)
@@ -56,7 +56,7 @@ minetest.register_node("crops:tomato_plant_" .. stage , {
 	paramtype = "light",
 	groups = { snappy=3, flammable=3, flora=1, attached_node=1, not_in_creative_inventory=1 },
 	drop = {},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.45, -0.5, -0.45,  0.45, -0.6 + (((math.min(stage, 4)) + 1) / 5), 0.45}
@@ -76,7 +76,7 @@ minetest.register_node("crops:tomato_plant_5" , {
 	paramtype = "light",
 	groups = { snappy=3, flammable=3, flora=1, attached_node=1, not_in_creative_inventory=1 },
 	drop = {},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.45, -0.5, -0.45,  0.45, 0.45, 0.45}
@@ -86,7 +86,7 @@ minetest.register_node("crops:tomato_plant_5" , {
 		for i = 1, math.random(1, 2) do
 			table.insert(drops, "crops:tomato")
 		end
-		base.handle_node_drops(pos, drops, digger)
+		minetest.handle_node_drops(pos, drops, digger)
 
 		local meta = minetest.get_meta(pos)
 		local ttl = meta:get_int("crops_tomato_ttl")
@@ -111,7 +111,7 @@ minetest.register_node("crops:tomato_plant_6", {
 	paramtype = "light",
 	groups = { snappy=3, flammable=3, flora=1, attached_node=1, not_in_creative_inventory=1 },
 	drop = {},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.45, -0.5, -0.45,  0.45, 0.45, 0.45}

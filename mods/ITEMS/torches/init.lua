@@ -25,7 +25,7 @@ minetest.register_node("torches:torch", {
 		type = "wallmounted",
 		wall_bottom = {-1/8, -1/2, -1/8, 1/8, 2/16, 1/8},
 	},
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 	on_place = function(itemstack, placer, pointed_thing)
 		local under = pointed_thing.under
 		local node = minetest.get_node(under)
@@ -72,7 +72,7 @@ minetest.register_node("torches:torch_wall", {
 		type = "wallmounted",
 		wall_side = {-1/2, -1/2, -1/8, -1/8, 1/8, 1/8},
 	},
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 })
 
 minetest.register_node("torches:torch_ceiling", {
@@ -93,14 +93,14 @@ minetest.register_node("torches:torch_ceiling", {
 		type = "wallmounted",
 		wall_top = {-1/8, -1/16, -5/16, 1/8, 1/2, 1/8},
 	},
-	sounds = base.node_sound_wood_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 })
 
 
 minetest.register_craft({
 	output = 'torches:torch 4',
 	recipe = {
-		{'base:coal_lump'},
+		{'default:coal_lump'},
 		{'group:stick'},
 	}
 })

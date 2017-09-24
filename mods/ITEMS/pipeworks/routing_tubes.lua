@@ -83,7 +83,7 @@ if pipeworks.enable_priority_tube then
 		output = "pipeworks:priority_tube_1 6",
 		recipe = {
 			{ "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" },
-			{ "base:gold_ingot", "", "base:gold_ingot" },
+			{ "default:gold_ingot", "", "default:gold_ingot" },
 			{ "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" }
 		},
 	})
@@ -108,7 +108,7 @@ if pipeworks.enable_accelerator_tube then
 		output = "pipeworks:accelerator_tube_1 2",
 		recipe = {
 			{ "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" },
-			{ "base:mese_crystal_fragment", "base:steel_ingot", "base:mese_crystal_fragment" },
+			{ "default:mese_crystal_fragment", "default:steel_ingot", "default:mese_crystal_fragment" },
 			{ "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" }
 		},
 	})
@@ -147,7 +147,7 @@ if pipeworks.enable_one_way_tube then
 		node_box = {type = "fixed",
 			fixed = {{-1/2, -9/64, -9/64, 1/2, 9/64, 9/64}}},
 		groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 2, tubedevice = 1},
-		sounds = base.node_sound_wood_defaults(),
+		sounds = default.node_sound_wood_defaults(),
 		tube = {
 			connect_sides = {left = 1, right = 1},
 			can_go = function(pos, node, velocity, stack)
@@ -166,7 +166,7 @@ if pipeworks.enable_one_way_tube then
 		output = "pipeworks:one_way_tube 2",
 		recipe = {
 			{ "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" },
-			{ "group:stick", "base:mese_crystal", "homedecor:plastic_sheeting" },
+			{ "group:stick", "default:mese_crystal", "homedecor:plastic_sheeting" },
 			{ "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" }
 		},
 	})

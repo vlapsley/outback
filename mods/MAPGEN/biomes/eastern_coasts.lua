@@ -9,13 +9,13 @@ local math_random = math.random
 -- eastern coasts
 minetest.register_biome({
 	name =             "eastern_coasts",
-	node_top =         "base:dirt_with_grass",
+	node_top =         "default:dirt_with_grass",
 	depth_top =        1,
-	node_filler =      "base:dirt",
+	node_filler =      "default:dirt",
 	depth_filler =     3,
-	node_stone =       "base:stone",
+	node_stone =       "default:stone",
 	node_river_water = "base:muddy_water_source",
-	node_riverbed =    "base:dirt",
+	node_riverbed =    "default:dirt",
 	depth_riverbed =   1,
 	y_min =            4,
 	y_max =            31000,
@@ -34,7 +34,7 @@ minetest.register_biome({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"eastern_coasts"},
 	clust_scarcity = 3375,
 	clust_num_ores = 33,
@@ -46,7 +46,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:basalt",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"eastern_coasts"},
 	clust_scarcity = 1000,
 	clust_num_ores = 58,
@@ -59,7 +59,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "blob",
 	ore =            "base:shale",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"eastern_coasts"},
 	clust_scarcity = 15625,
 	clust_num_ores = 6,
@@ -71,8 +71,8 @@ minetest.register_ore({
 -- Coal
 minetest.register_ore({
 	ore_type =               "sheet",
-	ore =                    "base:stone_with_coal",
-	wherein =                {"base:stone"},
+	ore =                    "default:stone_with_coal",
+	wherein =                {"default:stone"},
 	column_height_min =      2,
 	column_height_max =      4,
 	column_midpoint_factor = 0.5,
@@ -94,7 +94,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_amethyst",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"eastern_coasts"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -107,7 +107,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_citrine",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"eastern_coasts"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -120,7 +120,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_ruby",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"eastern_coasts"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -133,7 +133,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_sapphire",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"eastern_coasts"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -146,7 +146,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "base:stone_with_smoky_quartz",
-	wherein =        {"base:stone"},
+	wherein =        {"default:stone"},
 	biomes =         {"eastern_coasts"},
 	clust_scarcity = 3375,
 	clust_num_ores = 3,
@@ -164,7 +164,7 @@ minetest.register_ore({
 local function register_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:dirt_with_grass"},
+		place_on =      {"default:dirt_with_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -177,7 +177,7 @@ local function register_grass_decoration(offset, scale, length)
 		biomes =        {"eastern_coasts"},
 		y_min =         4,
 		y_max =         200,
-		decoration =    "base:grass_"..length,
+		decoration =    "default:grass_"..length,
 	})
 end
 
@@ -190,7 +190,7 @@ register_grass_decoration(0.03,   0.03,  1)
 -- Grass near rivers
 local function register_rivergrass(length)
 	plants_api.register_plant({
-		nodes =     {"base:grass_"..length},
+		nodes =     {"default:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
 		priority =  25,
@@ -206,7 +206,7 @@ register_rivergrass(4)
 -- Waratah
 plants_api.register_plant({
 	nodes = {
-		stem =    "base:bush_stem",
+		stem =    "default:bush_stem",
 		leaves =  "base:waratah_leaves",
 		air =     "air",
 		ignore =  "ignore",
@@ -228,8 +228,8 @@ plants_api.register_plant({
 minetest.register_decoration({
 	deco_type = "schematic",
 	place_on = {
-			"base:dirt",
-			"base:sand",
+			"default:dirt",
+			"default:sand",
 	},
 	sidelen = 80,
 	fill_ratio =  0.3,
@@ -243,13 +243,13 @@ minetest.register_decoration({
 -- Snow
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"base:dirt_with_grass"},
+	place_on =    {"default:dirt_with_grass"},
 	sidelen =     80,
 	fill_ratio =  0.3,
 	biomes =      {"eastern_coasts"},
 	y_min =       140,
 	y_max =       31000,
-	decoration =  "base:snow",
+	decoration =  "default:snow",
 })
 
 -- Small stone rocks
@@ -258,7 +258,7 @@ local function register_small_stone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "base:small_stone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"base:dirt_with_grass"},
+		place_on =    {"default:dirt_with_grass"},
 		fill_ratio =  0.003,
 		y_min =       16,
 		biomes =      {"eastern_coasts"},

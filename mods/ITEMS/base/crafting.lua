@@ -2,43 +2,9 @@
 	Base crafting
 --]]
 
-minetest.register_craft({
-	output = 'base:wood 4',
-	recipe = {
-		{'base:tree'},
-	}
-})
 
 minetest.register_craft({
-	output = 'base:junglewood 4',
-	recipe = {
-		{'base:jungletree'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:pine_wood 4',
-	recipe = {
-		{'base:pine_tree'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:acacia_wood 4',
-	recipe = {
-		{'base:acacia_tree'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:aspen_wood 4',
-	recipe = {
-		{'base:aspen_tree'},
-	}
-})
-
-minetest.register_craft({
-	output = "base:pine_wood 4",
+	output = "default:pine_wood 4",
 	recipe = {
 		{"base:arnhem_cypress_pine_tree"}
 	}
@@ -66,7 +32,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:wood 4",
+	output = "default:wood 4",
 	recipe = {
 		{"base:boab_tree"}
 	}
@@ -80,7 +46,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:acacia_wood 4",
+	output = "default:acacia_wood 4",
 	recipe = {
 		{"base:coast_banksia_tree"}
 	}
@@ -109,7 +75,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:acacia_wood 4",
+	output = "default:acacia_wood 4",
 	recipe = {
 		{"base:desert_oak_tree"}
 	}
@@ -123,7 +89,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:wood 4",
+	output = "default:wood 4",
 	recipe = {
 		{"base:illawarra_flame_tree"}
 	}
@@ -151,7 +117,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:wood 4",
+	output = "default:wood 4",
 	recipe = {
 		{"base:macadamia_tree"}
 	}
@@ -172,28 +138,28 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:wood 4",
+	output = "default:wood 4",
 	recipe = {
 		{"base:moreton_bay_fig_tree"}
 	}
 })
 
 minetest.register_craft({
-	output = "base:acacia_wood 4",
+	output = "default:acacia_wood 4",
 	recipe = {
 		{"base:mulga_tree"}
 	}
 })
 
 minetest.register_craft({
-	output = "base:acacia_wood 4",
+	output = "default:acacia_wood 4",
 	recipe = {
 		{"base:paperbark_tree"}
 	}
 })
 
 minetest.register_craft({
-	output = "base:acacia_wood 4",
+	output = "default:acacia_wood 4",
 	recipe = {
 		{"base:river_oak_tree"}
 	}
@@ -207,7 +173,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:pine_wood 4",
+	output = "default:pine_wood 4",
 	recipe = {
 		{"base:rottnest_island_pine_tree"}
 	}
@@ -221,7 +187,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:acacia_wood 4",
+	output = "default:acacia_wood 4",
 	recipe = {
 		{"base:shoestring_acacia_tree"}
 	}
@@ -277,109 +243,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'base:wood',
-	recipe = {
-		{'base:bush_stem'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:acacia_wood',
-	recipe = {
-		{'base:acacia_bush_stem'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:stick 4',
-	recipe = {
-		{'group:wood'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:sign_wall_steel 3',
-	recipe = {
-		{'base:steel_ingot', 'base:steel_ingot', 'base:steel_ingot'},
-		{'base:steel_ingot', 'base:steel_ingot', 'base:steel_ingot'},
-		{'', 'group:stick', ''},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:sign_wall_wood 3',
-	recipe = {
-		{'group:wood', 'group:wood', 'group:wood'},
-		{'group:wood', 'group:wood', 'group:wood'},
-		{'', 'group:stick', ''},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:coalblock',
-	recipe = {
-		{'base:coal_lump', 'base:coal_lump', 'base:coal_lump'},
-		{'base:coal_lump', 'base:coal_lump', 'base:coal_lump'},
-		{'base:coal_lump', 'base:coal_lump', 'base:coal_lump'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:coal_lump 9',
-	recipe = {
-		{'base:coalblock'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:steelblock',
-	recipe = {
-		{'base:steel_ingot', 'base:steel_ingot', 'base:steel_ingot'},
-		{'base:steel_ingot', 'base:steel_ingot', 'base:steel_ingot'},
-		{'base:steel_ingot', 'base:steel_ingot', 'base:steel_ingot'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:steel_ingot 9',
-	recipe = {
-		{'base:steelblock'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:copperblock',
-	recipe = {
-		{'base:copper_ingot', 'base:copper_ingot', 'base:copper_ingot'},
-		{'base:copper_ingot', 'base:copper_ingot', 'base:copper_ingot'},
-		{'base:copper_ingot', 'base:copper_ingot', 'base:copper_ingot'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:copper_ingot 9',
-	recipe = {
-		{'base:copperblock'},
-	}
-})
-
-minetest.register_craft({
-	output = "base:tinblock",
-	recipe = {
-		{"base:tin_ingot", "base:tin_ingot", "base:tin_ingot"},
-		{"base:tin_ingot", "base:tin_ingot", "base:tin_ingot"},
-		{"base:tin_ingot", "base:tin_ingot", "base:tin_ingot"},
-	}
-})
-
-minetest.register_craft({
-	output = "base:tin_ingot 9",
-	recipe = {
-		{"base:tinblock"},
-	}
-})
-
-minetest.register_craft({
 	output = "base:aluminiumblock",
 	recipe = {
 		{"base:aluminium_ingot", "base:aluminium_ingot", "base:aluminium_ingot"},
@@ -412,47 +275,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:bronze_ingot 9",
-	recipe = {
-		{"base:copper_ingot", "base:copper_ingot", "base:copper_ingot"},
-		{"base:copper_ingot", "base:tin_ingot", "base:copper_ingot"},
-		{"base:copper_ingot", "base:copper_ingot", "base:copper_ingot"},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:bronzeblock',
-	recipe = {
-		{'base:bronze_ingot', 'base:bronze_ingot', 'base:bronze_ingot'},
-		{'base:bronze_ingot', 'base:bronze_ingot', 'base:bronze_ingot'},
-		{'base:bronze_ingot', 'base:bronze_ingot', 'base:bronze_ingot'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:bronze_ingot 9',
-	recipe = {
-		{'base:bronzeblock'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:goldblock',
-	recipe = {
-		{'base:gold_ingot', 'base:gold_ingot', 'base:gold_ingot'},
-		{'base:gold_ingot', 'base:gold_ingot', 'base:gold_ingot'},
-		{'base:gold_ingot', 'base:gold_ingot', 'base:gold_ingot'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:gold_ingot 9',
-	recipe = {
-		{'base:goldblock'},
-	}
-})
-
-minetest.register_craft({
 	output = 'base:silverblock',
 	recipe = {
 		{'base:silver_ingot', 'base:silver_ingot', 'base:silver_ingot'},
@@ -465,273 +287,6 @@ minetest.register_craft({
 	output = 'base:silver_ingot 9',
 	recipe = {
 		{'base:silverblock'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:diamondblock',
-	recipe = {
-		{'base:diamond', 'base:diamond', 'base:diamond'},
-		{'base:diamond', 'base:diamond', 'base:diamond'},
-		{'base:diamond', 'base:diamond', 'base:diamond'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:diamond 9',
-	recipe = {
-		{'base:diamondblock'},
-	}
-})
-
-minetest.register_craft({
-	output = "base:sandstone",
-	recipe = {
-		{"base:sand", "base:sand"},
-		{"base:sand", "base:sand"},
-	}
-})
-
-minetest.register_craft({
-	output = "base:sand 4",
-	recipe = {
-		{"base:sandstone"},
-	}
-})
-
-minetest.register_craft({
-	output = "base:sandstonebrick 4",
-	recipe = {
-		{"base:sandstone", "base:sandstone"},
-		{"base:sandstone", "base:sandstone"},
-	}
-})
-
-minetest.register_craft({
-	output = "base:sandstone_block 9",
-	recipe = {
-		{"base:sandstone", "base:sandstone", "base:sandstone"},
-		{"base:sandstone", "base:sandstone", "base:sandstone"},
-		{"base:sandstone", "base:sandstone", "base:sandstone"},
-	}
-})
-
-minetest.register_craft({
-	output = "base:desert_sandstone",
-	recipe = {
-		{"base:desert_sand", "base:desert_sand"},
-		{"base:desert_sand", "base:desert_sand"},
-	}
-})
-
-minetest.register_craft({
-	output = "base:desert_sand 4",
-	recipe = {
-		{"base:desert_sandstone"},
-	}
-})
-
-minetest.register_craft({
-	output = "base:desert_sandstone_brick 4",
-	recipe = {
-		{"base:desert_sandstone", "base:desert_sandstone"},
-		{"base:desert_sandstone", "base:desert_sandstone"},
-	}
-})
-
-minetest.register_craft({
-	output = "base:desert_sandstone_block 9",
-	recipe = {
-		{"base:desert_sandstone", "base:desert_sandstone", "base:desert_sandstone"},
-		{"base:desert_sandstone", "base:desert_sandstone", "base:desert_sandstone"},
-		{"base:desert_sandstone", "base:desert_sandstone", "base:desert_sandstone"},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:clay',
-	recipe = {
-		{'base:clay_lump', 'base:clay_lump'},
-		{'base:clay_lump', 'base:clay_lump'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:clay_lump 4',
-	recipe = {
-		{'base:clay'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:brick',
-	recipe = {
-		{'base:clay_brick', 'base:clay_brick'},
-		{'base:clay_brick', 'base:clay_brick'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:clay_brick 4',
-	recipe = {
-		{'base:brick'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:paper',
-	recipe = {
-		{'base:papyrus', 'base:papyrus', 'base:papyrus'},
-	}
-})
-
-minetest.register_craft({
-	output = "base:ladder_wood 5",
-	recipe = {
-		{"group:stick", "", "group:stick"},
-		{"group:stick", "group:stick", "group:stick"},
-		{"group:stick", "", "group:stick"},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:ladder_steel 15',
-	recipe = {
-		{'base:steel_ingot', '', 'base:steel_ingot'},
-		{'base:steel_ingot', 'base:steel_ingot', 'base:steel_ingot'},
-		{'base:steel_ingot', '', 'base:steel_ingot'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:mese',
-	recipe = {
-		{'base:mese_crystal', 'base:mese_crystal', 'base:mese_crystal'},
-		{'base:mese_crystal', 'base:mese_crystal', 'base:mese_crystal'},
-		{'base:mese_crystal', 'base:mese_crystal', 'base:mese_crystal'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:mese_crystal 9',
-	recipe = {
-		{'base:mese'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:mese_crystal_fragment 9',
-	recipe = {
-		{'base:mese_crystal'},
-	}
-})
-
-minetest.register_craft({
-	output = "base:mese_crystal",
-	recipe = {
-		{"base:mese_crystal_fragment", "base:mese_crystal_fragment", "base:mese_crystal_fragment"},
-		{"base:mese_crystal_fragment", "base:mese_crystal_fragment", "base:mese_crystal_fragment"},
-		{"base:mese_crystal_fragment", "base:mese_crystal_fragment", "base:mese_crystal_fragment"},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:meselamp',
-	recipe = {
-		{'base:glass'},
-		{'base:mese_crystal'},
-	}
-})
-
-minetest.register_craft({
-	output = "base:mese_post_light 3",
-	recipe = {
-		{"", "base:glass", ""},
-		{"base:mese_crystal", "base:mese_crystal", "base:mese_crystal"},
-		{"", "group:wood", ""},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:obsidian_shard 9',
-	recipe = {
-		{'base:obsidian'}
-	}
-})
-
-minetest.register_craft({
-	output = 'base:obsidian',
-	recipe = {
-		{'base:obsidian_shard', 'base:obsidian_shard', 'base:obsidian_shard'},
-		{'base:obsidian_shard', 'base:obsidian_shard', 'base:obsidian_shard'},
-		{'base:obsidian_shard', 'base:obsidian_shard', 'base:obsidian_shard'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:obsidianbrick 4',
-	recipe = {
-		{'base:obsidian', 'base:obsidian'},
-		{'base:obsidian', 'base:obsidian'}
-	}
-})
-
-minetest.register_craft({
-	output = 'base:obsidian_block 9',
-	recipe = {
-		{'base:obsidian', 'base:obsidian', 'base:obsidian'},
-		{'base:obsidian', 'base:obsidian', 'base:obsidian'},
-		{'base:obsidian', 'base:obsidian', 'base:obsidian'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:stonebrick 4',
-	recipe = {
-		{'base:stone', 'base:stone'},
-		{'base:stone', 'base:stone'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:stone_block 9',
-	recipe = {
-		{'base:stone', 'base:stone', 'base:stone'},
-		{'base:stone', 'base:stone', 'base:stone'},
-		{'base:stone', 'base:stone', 'base:stone'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:desert_stonebrick 4',
-	recipe = {
-		{'base:desert_stone', 'base:desert_stone'},
-		{'base:desert_stone', 'base:desert_stone'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:desert_stone_block 9',
-	recipe = {
-		{'base:desert_stone', 'base:desert_stone', 'base:desert_stone'},
-		{'base:desert_stone', 'base:desert_stone', 'base:desert_stone'},
-		{'base:desert_stone', 'base:desert_stone', 'base:desert_stone'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:snowblock',
-	recipe = {
-		{'base:snow', 'base:snow', 'base:snow'},
-		{'base:snow', 'base:snow', 'base:snow'},
-		{'base:snow', 'base:snow', 'base:snow'},
-	}
-})
-
-minetest.register_craft({
-	output = 'base:snow 9',
-	recipe = {
-		{'base:snowblock'},
 	}
 })
 
@@ -772,7 +327,7 @@ minetest.register_craft({
 	recipe = {
 		{"base:slate","base:slate"},
 		{"base:slate","base:slate"},
-		{"base:sand","base:clay"},
+		{"default:sand","default:clay"},
 	}
 })
 
@@ -781,7 +336,7 @@ minetest.register_craft({
 	recipe = {
 		{"base:marble","base:marble"},
 		{"base:marble","base:marble"},
-		{"base:sand","base:clay"},
+		{"default:sand","default:clay"},
 	}
 })
 
@@ -805,7 +360,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "base:cobble",
+	output = "default:cobble",
 	recipe = {
 		{"base:small_stone_rocks", "base:small_stone_rocks", "base:small_stone_rocks"},
 		{"base:small_stone_rocks", "base:small_stone_rocks", "base:small_stone_rocks"},
@@ -814,57 +369,9 @@ minetest.register_craft({
 })
 
 
---
--- Cooking recipes
---
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:glass",
-	recipe = "group:sand",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:obsidian_glass",
-	recipe = "base:obsidian_shard",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:stone",
-	recipe = "base:cobble",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:stone",
-	recipe = "base:mossycobble",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:desert_stone",
-	recipe = "base:desert_cobble",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:steel_ingot",
-	recipe = "base:iron_lump",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:copper_ingot",
-	recipe = "base:copper_lump",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:tin_ingot",
-	recipe = "base:tin_lump",
-})
+--[[
+	Cooking recipes
+--]]
 
 minetest.register_craft({
 	type = "cooking",
@@ -880,20 +387,8 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "cooking",
-	output = "base:gold_ingot",
-	recipe = "base:gold_lump",
-})
-
-minetest.register_craft({
-	type = "cooking",
 	output = "base:silver_ingot",
 	recipe = "base:silver_lump",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "base:clay_brick",
-	recipe = "base:clay_lump",
 })
 
 minetest.register_craft({

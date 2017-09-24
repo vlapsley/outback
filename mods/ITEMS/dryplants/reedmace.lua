@@ -94,7 +94,7 @@ minetest.register_node("dryplants:reedmace_spikes", {
 		not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -116,7 +116,7 @@ minetest.register_node("dryplants:reedmace_top", {
 		not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -139,7 +139,7 @@ minetest.register_node("dryplants:reedmace_height_2", {
 		--not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -162,7 +162,7 @@ minetest.register_node("dryplants:reedmace_height_3", {
 		--not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -185,7 +185,7 @@ minetest.register_node("dryplants:reedmace_height_3_spikes", {
 		--not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -207,7 +207,7 @@ minetest.register_node("dryplants:reedmace", {
 		not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -237,7 +237,7 @@ minetest.register_node("dryplants:reedmace_bottom", {
 		not_in_creative_inventory=1
 	},
 	drop = 'dryplants:reedmace_sapling',
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -267,7 +267,7 @@ minetest.register_node("dryplants:reedmace_sapling", {
 		flammable=2,
 		attached_node=1
 	},
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3}
@@ -279,14 +279,14 @@ minetest.register_abm({
 	interval = REEDMACE_GROWING_TIME,
 	chance = 100/REEDMACE_GROWING_CHANCE,
 	action = function(pos, node, _, _)
-		if string.find(minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z	 }).name, "base:water")
-		or string.find(minetest.get_node({x = pos.x, 	 y = pos.y, z = pos.z + 1}).name, "base:water")
-		or string.find(minetest.get_node({x = pos.x - 1, y = pos.y, z = pos.z	 }).name, "base:water")
-		or string.find(minetest.get_node({x = pos.x, 	 y = pos.y, z = pos.z - 1}).name, "base:water") then
+		if string.find(minetest.get_node({x = pos.x + 1, y = pos.y, z = pos.z	 }).name, "default:water")
+		or string.find(minetest.get_node({x = pos.x, 	 y = pos.y, z = pos.z + 1}).name, "default:water")
+		or string.find(minetest.get_node({x = pos.x - 1, y = pos.y, z = pos.z	 }).name, "default:water")
+		or string.find(minetest.get_node({x = pos.x, 	 y = pos.y, z = pos.z - 1}).name, "default:water") then
 			if minetest.get_node({x = pos.x, y = pos.y + 1, z = pos.z}).name == "air" then
 				abstract_dryplants.grow_reedmace_water({x = pos.x, y = pos.y - 1, z = pos.z})
 			end
-			minetest.set_node({x=pos.x, y=pos.y, z=pos.z}, {name="base:water_source"})
+			minetest.set_node({x=pos.x, y=pos.y, z=pos.z}, {name="default:water_source"})
 		else
 			abstract_dryplants.grow_reedmace({x = pos.x, y = pos.y - 1, z = pos.z})
 		end
@@ -333,14 +333,14 @@ minetest.register_entity("dryplants:reedmace_water_entity",{
 -- near water or swamp
 biome_lib:register_generate_plant({
     surface = {
-		"base:sand",
+		"default:sand",
 		"base:mangrove_mud"
 	},
     max_count = REEDMACE_NEAR_WATER_PER_MAPBLOCK,
     rarity = 101 - REEDMACE_NEAR_WATER_RARITY,
     min_elevation = 1,
     max_elevation = 15,
-	near_nodes = {"base:river_water_source", "base:muddy_water_source"},
+	near_nodes = {"default:river_water_source", "base:muddy_water_source"},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,
@@ -358,7 +358,7 @@ biome_lib:register_generate_plant({
     rarity = 101 - REEDMACE_NEAR_WATER_RARITY,
     min_elevation = 0,
     max_elevation = 2,
-	near_nodes = {"base:water_source"},
+	near_nodes = {"default:water_source"},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,
@@ -370,7 +370,7 @@ biome_lib:register_generate_plant({
 -- in water
 biome_lib:register_generate_plant({
     surface = {
-		"base:clay",
+		"default:clay",
 		"base:mangrove_mud"
 	},
     max_count = REEDMACE_IN_WATER_PER_MAPBLOCK,

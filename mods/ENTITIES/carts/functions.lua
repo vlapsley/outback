@@ -12,7 +12,7 @@ function carts:manage_attachment(player, obj)
 	end
 	local status = obj ~= nil
 	local player_name = player:get_player_name()
-	if defaplayer_apiult.player_attached[player_name] == status then
+	if player_api.player_attached[player_name] == status then
 		return
 	end
 	player_api.player_attached[player_name] = status
@@ -192,7 +192,7 @@ function carts:register_rail(name, def_overwrite, railparams)
 			type = "fixed",
 			fixed = {-1/2, -1/2, -1/2, 1/2, -1/2+1/16, 1/2},
 		},
-		sounds = base.node_sound_metal_defaults()
+		sounds = default.node_sound_metal_defaults()
 	}
 	for k, v in pairs(def_overwrite) do
 		def[k] = v

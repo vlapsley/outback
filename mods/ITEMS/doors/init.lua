@@ -150,7 +150,7 @@ function _doors.door_toggle(pos, node, clicker)
 
 	replace_old_owner_information(pos)
 
-	if clicker and not base.can_interact_with_node(clicker, pos) then
+	if clicker and not default.can_interact_with_node(clicker, pos) then
 		return false
 	end
 
@@ -203,7 +203,7 @@ end
 
 local function can_dig_door(pos, digger)
 	replace_old_owner_information(pos)
-	if base.can_interact_with_node(digger, pos) then
+	if default.can_interact_with_node(digger, pos) then
 		return true
 	else
 		minetest.record_protection_violation(pos, digger:get_player_name())
@@ -351,7 +351,7 @@ function doors.register(name, def)
 	def.recipe = nil
 
 	if not def.sounds then
-		def.sounds = base.node_sound_wood_defaults()
+		def.sounds = default.node_sound_wood_defaults()
 	end
 
 	if not def.sound_open then
@@ -461,13 +461,13 @@ doors.register("door_steel", {
 		inventory_image = "doors_item_steel.png",
 		protected = true,
 		groups = {cracky = 1, level = 2},
-		sounds = base.node_sound_metal_defaults(),
+		sounds = default.node_sound_metal_defaults(),
 		sound_open = "doors_steel_door_open",
 		sound_close = "doors_steel_door_close",
 		recipe = {
-			{"base:steel_ingot", "base:steel_ingot"},
-			{"base:steel_ingot", "base:steel_ingot"},
-			{"base:steel_ingot", "base:steel_ingot"},
+			{"default:steel_ingot", "default:steel_ingot"},
+			{"default:steel_ingot", "default:steel_ingot"},
+			{"default:steel_ingot", "default:steel_ingot"},
 		}
 })
 
@@ -476,13 +476,13 @@ doors.register("door_glass", {
 		description = "Glass Door",
 		inventory_image = "doors_item_glass.png",
 		groups = {cracky=3, oddly_breakable_by_hand=3},
-		sounds = base.node_sound_glass_defaults(),
+		sounds = default.node_sound_glass_defaults(),
 		sound_open = "doors_glass_door_open",
 		sound_close = "doors_glass_door_close",
 		recipe = {
-			{"base:glass", "base:glass"},
-			{"base:glass", "base:glass"},
-			{"base:glass", "base:glass"},
+			{"default:glass", "default:glass"},
+			{"default:glass", "default:glass"},
+			{"default:glass", "default:glass"},
 		}
 })
 
@@ -491,13 +491,13 @@ doors.register("door_obsidian_glass", {
 		description = "Obsidian Glass Door",
 		inventory_image = "doors_item_obsidian_glass.png",
 		groups = {cracky=3},
-		sounds = base.node_sound_glass_defaults(),
+		sounds = default.node_sound_glass_defaults(),
 		sound_open = "doors_glass_door_open",
 		sound_close = "doors_glass_door_close",
 		recipe = {
-			{"base:obsidian_glass", "base:obsidian_glass"},
-			{"base:obsidian_glass", "base:obsidian_glass"},
-			{"base:obsidian_glass", "base:obsidian_glass"},
+			{"default:obsidian_glass", "default:obsidian_glass"},
+			{"default:obsidian_glass", "default:obsidian_glass"},
+			{"default:obsidian_glass", "default:obsidian_glass"},
 		},
 })
 
@@ -532,7 +532,7 @@ function _doors.trapdoor_toggle(pos, node, clicker)
 
 	replace_old_owner_information(pos)
 
-	if clicker and not base.can_interact_with_node(clicker, pos) then
+	if clicker and not default.can_interact_with_node(clicker, pos) then
 		return false
 	end
 
@@ -615,7 +615,7 @@ function doors.register_trapdoor(name, def)
 	end
 
 	if not def.sounds then
-		def.sounds = base.node_sound_wood_defaults()
+		def.sounds = default.node_sound_wood_defaults()
 	end
 
 	if not def.sound_open then
@@ -682,7 +682,7 @@ doors.register_trapdoor("doors:trapdoor_steel", {
 	tile_front = "doors_trapdoor_steel.png",
 	tile_side = "doors_trapdoor_steel_side.png",
 	protected = true,
-	sounds = base.node_sound_metal_defaults(),
+	sounds = default.node_sound_metal_defaults(),
 	sound_open = "doors_steel_door_open",
 	sound_close = "doors_steel_door_close",
 	groups = {cracky = 1, level = 2, door = 1},
@@ -700,8 +700,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'doors:trapdoor_steel',
 	recipe = {
-		{'base:steel_ingot', 'base:steel_ingot'},
-		{'base:steel_ingot', 'base:steel_ingot'},
+		{'default:steel_ingot', 'default:steel_ingot'},
+		{'default:steel_ingot', 'default:steel_ingot'},
 	}
 })
 
@@ -735,7 +735,7 @@ function doors.register_fencegate(name, def)
 	}
 
 	if not fence.sounds then
-		fence.sounds = base.node_sound_wood_defaults()
+		fence.sounds = default.node_sound_wood_defaults()
 	end
 
 	fence.groups.fence = 1
@@ -766,44 +766,44 @@ function doors.register_fencegate(name, def)
 	minetest.register_craft({
 		output = name .. "_closed",
 		recipe = {
-			{"base:stick", def.material, "base:stick"},
-			{"base:stick", def.material, "base:stick"}
+			{"default:stick", def.material, "default:stick"},
+			{"default:stick", def.material, "default:stick"}
 		}
 	})
 end
 
 doors.register_fencegate("doors:gate_wood", {
 	description = "Wooden Fence Gate",
-	texture = "base_wood.png",
-	material = "base:wood",
+	texture = "default_wood.png",
+	material = "default:wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 doors.register_fencegate("doors:gate_acacia_wood", {
 	description = "Acacia Fence Gate",
-	texture = "base_acacia_wood.png",
-	material = "base:acacia_wood",
+	texture = "default_acacia_wood.png",
+	material = "default:acacia_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 doors.register_fencegate("doors:gate_junglewood", {
 	description = "Jungle Wood Fence Gate",
-	texture = "base_junglewood.png",
-	material = "base:junglewood",
+	texture = "default_junglewood.png",
+	material = "default:junglewood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 doors.register_fencegate("doors:gate_pine_wood", {
 	description = "Pine Fence Gate",
-	texture = "base_pine_wood.png",
-	material = "base:pine_wood",
+	texture = "default_pine_wood.png",
+	material = "default:pine_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 })
 
 doors.register_fencegate("doors:gate_aspen_wood", {
 	description = "Aspen Fence Gate",
-	texture = "base_aspen_wood.png",
-	material = "base:aspen_wood",
+	texture = "default_aspen_wood.png",
+	material = "default:aspen_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 })
 

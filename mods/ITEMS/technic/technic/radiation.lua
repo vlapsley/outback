@@ -31,54 +31,54 @@ Fractional resistance values are permitted.
 local S = technic.getter
 
 local rad_resistance_node = {
-	["base:brick"] = 13,
-	["base:bronzeblock"] = 45,
-	["base:clay"] = 15,
-	["base:coalblock"] = 9.6,
-	["base:cobble"] = 15,
-	["base:copperblock"] = 46,
-	["base:desert_cobble"] = 15,
-	["base:desert_sand"] = 10,
-	["base:desert_stone"] = 17,
-	["base:desert_stonebrick"] = 17,
-	["base:diamondblock"] = 24,
-	["base:dirt"] = 8.2,
-	["base:dirt_with_grass"] = 8.2,
-	["base:dirt_with_grass_footsteps"] = 8.2,
-	["base:dirt_with_snow"] = 8.2,
-	["base:glass"] = 17,
-	["base:goldblock"] = 170,
-	["base:gravel"] = 10,
-	["base:ice"] = 5.6,
-	["base:lava_flowing"] = 8.5,
-	["base:lava_source"] = 17,
-	["base:mese"] = 21,
-	["base:mossycobble"] = 15,
+	["default:brick"] = 13,
+	["default:bronzeblock"] = 45,
+	["default:clay"] = 15,
+	["default:coalblock"] = 9.6,
+	["default:cobble"] = 15,
+	["default:copperblock"] = 46,
+	["default:desert_cobble"] = 15,
+	["default:desert_sand"] = 10,
+	["default:desert_stone"] = 17,
+	["default:desert_stonebrick"] = 17,
+	["default:diamondblock"] = 24,
+	["default:dirt"] = 8.2,
+	["default:dirt_with_grass"] = 8.2,
+	["default:dirt_with_grass_footsteps"] = 8.2,
+	["default:dirt_with_snow"] = 8.2,
+	["default:glass"] = 17,
+	["default:goldblock"] = 170,
+	["default:gravel"] = 10,
+	["default:ice"] = 5.6,
+	["default:lava_flowing"] = 8.5,
+	["default:lava_source"] = 17,
+	["default:mese"] = 21,
+	["default:mossycobble"] = 15,
 	["pbj_pup:pbj_pup"] = 10000,
 	["pbj_pup:pbj_pup_candies"] = 10000,
 	["gloopblocks:rainbow_block_diagonal"] = 5000,
 	["gloopblocks:rainbow_block_horizontal"] = 10000,
-	["base:nyancat"] = 10000,
-	["base:nyancat_rainbow"] = 10000,
+	["default:nyancat"] = 10000,
+	["default:nyancat_rainbow"] = 10000,
 	["nyancat:nyancat"] = 10000,
 	["nyancat:nyancat_rainbow"] = 10000,
-	["base:obsidian"] = 18,
-	["base:obsidian_glass"] = 18,
-	["base:sand"] = 10,
-	["base:sandstone"] = 15,
-	["base:sandstonebrick"] = 15,
-	["base:snowblock"] = 1.7,
-	["base:steelblock"] = 40,
-	["base:stone"] = 17,
-	["base:stone_with_coal"] = 16,
-	["base:stone_with_copper"] = 20,
-	["base:stone_with_diamond"] = 18,
-	["base:stone_with_gold"] = 34,
-	["base:stone_with_iron"] = 20,
-	["base:stone_with_mese"] = 17,
-	["base:stonebrick"] = 17,
-	["base:water_flowing"] = 2.8,
-	["base:water_source"] = 5.6,
+	["default:obsidian"] = 18,
+	["default:obsidian_glass"] = 18,
+	["default:sand"] = 10,
+	["default:sandstone"] = 15,
+	["default:sandstonebrick"] = 15,
+	["default:snowblock"] = 1.7,
+	["default:steelblock"] = 40,
+	["default:stone"] = 17,
+	["default:stone_with_coal"] = 16,
+	["default:stone_with_copper"] = 20,
+	["default:stone_with_diamond"] = 18,
+	["default:stone_with_gold"] = 34,
+	["default:stone_with_iron"] = 20,
+	["default:stone_with_mese"] = 17,
+	["default:stonebrick"] = 17,
+	["default:water_flowing"] = 2.8,
+	["default:water_source"] = 5.6,
 	["farming:desert_sand_soil"] = 10,
 	["farming:desert_sand_soil_wet"] = 10,
 	["farming:soil"] = 8.2,
@@ -267,7 +267,7 @@ local function apply_fractional_damage(o, dmg)
 	return false
 end
 
-local function calculate_base_damage(node_pos, object_pos, strength)
+local function calculate_default_damage(node_pos, object_pos, strength)
 	local shielding = 0
 	local dist = vector.distance(node_pos, object_pos)
 
@@ -318,7 +318,7 @@ local function dmg_object(pos, object, strength)
 			return
 		end
 	end
-	local dmg = calculate_base_damage(pos, obj_pos, strength)
+	local dmg = calculate_default_damage(pos, obj_pos, strength)
 	if not dmg then
 		return
 	end
@@ -456,7 +456,7 @@ minetest.register_node("technic:chernobylite_block", {
 	tiles = {"technic_chernobylite_block.png"},
 	is_ground_content = true,
 	groups = {cracky=1, radioactive=4, level=2},
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 	light_source = 2,
 })
 

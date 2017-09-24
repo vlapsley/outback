@@ -215,7 +215,7 @@ local function register_wielder(data)
 			paramtype2 = "facedir",
 			tubelike = 1,
 			groups = groups,
-			sounds = base.node_sound_stone_defaults(),
+			sounds = default.node_sound_stone_defaults(),
 			drop = data.name_base.."_off",
 			on_construct = function(pos)
 				local meta = minetest.get_meta(pos)
@@ -380,8 +380,8 @@ if pipeworks.enable_node_breaker then
 		output = "pipeworks:nodebreaker_off",
 		recipe = {
 			{ "group:wood",    "tools:pick_mese", "group:wood"    },
-			{ "base:stone", "mesecons:piston",   "base:stone" },
-			{ "base:stone", "mesecons:mesecon",  "base:stone" },
+			{ "default:stone", "mesecons:piston",   "default:stone" },
+			{ "default:stone", "mesecons:mesecon",  "default:stone" },
 		}
 	})
 	-- aliases for when someone had technic installed, but then uninstalled it but not pipeworks
@@ -417,8 +417,8 @@ if pipeworks.enable_deployer then
 		output = "pipeworks:deployer_off",
 		recipe = {
 			{ "group:wood",    "chests:chest",    "group:wood"    },
-			{ "base:stone", "mesecons:piston",  "base:stone" },
-			{ "base:stone", "mesecons:mesecon", "base:stone" },
+			{ "default:stone", "mesecons:piston",  "default:stone" },
+			{ "default:stone", "mesecons:mesecon", "default:stone" },
 		}
 	})
 	-- aliases for when someone had technic installed, but then uninstalled it but not pipeworks
@@ -449,9 +449,9 @@ if pipeworks.enable_dispenser then
 	minetest.register_craft({
 		output = "pipeworks:dispenser_off",
 		recipe = {
-			{ "base:desert_sand", "chests:chest",    "base:desert_sand" },
-			{ "base:stone",       "mesecons:piston",  "base:stone"       },
-			{ "base:stone",       "mesecons:mesecon", "base:stone"       },
+			{ "default:desert_sand", "chests:chest",    "default:desert_sand" },
+			{ "default:stone",       "mesecons:piston",  "default:stone"       },
+			{ "default:stone",       "mesecons:mesecon", "default:stone"       },
 		}
 	})
 end

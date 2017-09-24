@@ -173,7 +173,6 @@ pipeworks.register_tube("pipeworks:teleport_tube", {
 					if mode == ":" then
 						minetest.chat_send_player(sender_name, "Sorry, channel '"..new_channel.."' is reserved for exclusive use by "..name)
 						return
-				
 					--channels starting with '[name];' can be used by other players, but cannot be received from
 					elseif mode == ";" and (fields.cr1 or (can_receive ~= 0 and not fields.cr0)) then
 						minetest.chat_send_player(sender_name, "Sorry, receiving from channel '"..new_channel.."' is reserved for "..name)
@@ -225,7 +224,7 @@ minetest.register_craft( {
 	output = "pipeworks:teleport_tube_1 2",
 	recipe = {
 	        { "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" },
-	        { "base:granite", "base:mese", "base:granite" },
+	        { "technic:granite", "default:mese", "technic:granite" },
 	        { "homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting" }
 	},
 })

@@ -1,2 +1,3 @@
 init
-base
+inventory
+default

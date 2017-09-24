@@ -59,7 +59,7 @@ minetest.register_node("crops:melon_plant_" .. stage , {
 	paramtype = "light",
 	groups = { snappy=3, flammable=3, flora=1, attached_node=1, not_in_creative_inventory=1 },
 	drop = "crops:melon_seed",
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5,  0.5, -0.5 + (((math.min(stage, 4)) + 1) / 5), 0.5}
@@ -80,7 +80,7 @@ minetest.register_node("crops:melon_plant_5_attached", {
 	paramtype = "light",
 	groups = { snappy=3, flammable=3, flora=1, attached_node=1, not_in_creative_inventory=1 },
 	drop = "crops:melon_seed",
-	sounds = base.node_sound_leaves_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 })
 
 
@@ -112,9 +112,9 @@ minetest.register_node("crops:melon", {
 	groups = { snappy=3, flammable=3, oddly_breakable_by_hand=2 },
 	paramtype2 = "facedir",
 	drop = {},
-	sounds = base.node_sound_wood_defaults({
-		dig = { name = "base_dig_oddly_breakable_by_hand" },
-		dug = { name = "base_dig_choppy" }
+	sounds = default.node_sound_wood_defaults({
+		dig = { name = "default_dig_oddly_breakable_by_hand" },
+		dug = { name = "default_dig_choppy" }
 	}),
 	on_dig = function(pos, node, digger)
 		for face = 1, 4 do
@@ -136,7 +136,7 @@ minetest.register_node("crops:melon", {
 		for i = 1,math.random(3 - (2 * (damage / 100)), 5 - (4 * (damage / 100))) do
 			table.insert(drops, ('crops:melon_slice'))
 		end
-		base.handle_node_drops(pos, drops, digger)
+		minetest.handle_node_drops(pos, drops, digger)
 		minetest.remove_node(pos)
 	end
 })

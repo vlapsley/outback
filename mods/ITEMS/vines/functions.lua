@@ -39,7 +39,7 @@ vines.register_vine = function( name, defs, biome )
     drawtype = drawtype,
     inventory_image = vine_image_end,
     groups = groups,
-    sounds = base.node_sound_leaves_defaults(),
+    sounds = default.node_sound_leaves_defaults(),
     selection_box = selection_box,
     on_construct = function( pos )
       local timer = minetest.get_node_timer( pos )
@@ -77,7 +77,7 @@ vines.register_vine = function( name, defs, biome )
     drawtype = drawtype,
     inventory_image = vine_image_middle,
     groups = groups,
-    sounds = base.node_sound_leaves_defaults(),
+    sounds = default.node_sound_leaves_defaults(),
     selection_box = selection_box,
     on_destruct = function( pos )
       local bottom = {x=pos.x, y=pos.y-1, z=pos.z}

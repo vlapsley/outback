@@ -53,9 +53,9 @@ minetest.register_craftitem(":technic:brass_ingot", {
 	inventory_image = "technic_brass_ingot.png",
 })
 
-minetest.register_alias("technic:wrought_iron_ingot", "base:steel_ingot")
+minetest.register_alias("technic:wrought_iron_ingot", "default:steel_ingot")
 
-minetest.override_item("base:steel_ingot", {
+minetest.override_item("default:steel_ingot", {
 	description = S("Wrought Iron Ingot"),
 	inventory_image = "technic_wrought_iron_ingot.png",
 })

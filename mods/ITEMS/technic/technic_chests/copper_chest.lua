@@ -1,25 +1,25 @@
 minetest.register_craft({
 	output = 'technic:copper_chest 1',
 	recipe = {
-		{'base:copper_ingot','base:copper_ingot','base:copper_ingot'},
-		{'base:copper_ingot','technic:iron_chest','base:copper_ingot'},
-		{'base:copper_ingot','base:copper_ingot','base:copper_ingot'},
+		{'default:copper_ingot','default:copper_ingot','default:copper_ingot'},
+		{'default:copper_ingot','technic:iron_chest','default:copper_ingot'},
+		{'default:copper_ingot','default:copper_ingot','default:copper_ingot'},
 	}
 })
 
 minetest.register_craft({
 	output = 'technic:copper_locked_chest 1',
 	recipe = {
-		{'base:copper_ingot','base:copper_ingot','base:copper_ingot'},
-		{'base:copper_ingot','technic:iron_locked_chest','base:copper_ingot'},
-		{'base:copper_ingot','base:copper_ingot','base:copper_ingot'},
+		{'default:copper_ingot','default:copper_ingot','default:copper_ingot'},
+		{'default:copper_ingot','technic:iron_locked_chest','default:copper_ingot'},
+		{'default:copper_ingot','default:copper_ingot','default:copper_ingot'},
 	}
 })
 
 minetest.register_craft({
 	output = 'technic:copper_locked_chest 1',
 	recipe = {
-		{'base:steel_ingot'},
+		{'default:steel_ingot'},
 		{'technic:copper_chest'},
 	}
 })

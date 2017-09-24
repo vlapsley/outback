@@ -3,16 +3,16 @@ local straight = function(pos, node, velocity, stack) return {velocity} end
 minetest.register_node("pipeworks:steel_block_embedded_tube", {
 	description = "Airtight steelblock embedded tube",
 	tiles = {
-		"base_steel_block.png", "base_steel_block.png",
-		"base_steel_block.png", "base_steel_block.png",
-		"base_steel_block.png^pipeworks_tube_connection_metallic.png",
-		"base_steel_block.png^pipeworks_tube_connection_metallic.png",
+		"default_steel_block.png", "default_steel_block.png",
+		"default_steel_block.png", "default_steel_block.png",
+		"default_steel_block.png^pipeworks_tube_connection_metallic.png",
+		"default_steel_block.png^pipeworks_tube_connection_metallic.png",
 		},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky=1, oddly_breakable_by_hand = 1, tubedevice = 1},
 	legacy_facedir_simple = true,
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 	tube = {
 		connect_sides = {front = 1, back = 1,},
 		priority = 50,
@@ -29,9 +29,9 @@ minetest.register_node("pipeworks:steel_block_embedded_tube", {
 minetest.register_craft( {
 	output = "pipeworks:steel_block_embedded_tube 1",
 	recipe = {
-		{ "base:steel_ingot", "base:steel_ingot", "base:steel_ingot" },
-		{ "base:steel_ingot", "pipeworks:tube_1", "base:steel_ingot" },
-		{ "base:steel_ingot", "base:steel_ingot", "base:steel_ingot" }
+		{ "default:steel_ingot", "default:steel_ingot", "default:steel_ingot" },
+		{ "default:steel_ingot", "pipeworks:tube_1", "default:steel_ingot" },
+		{ "default:steel_ingot", "default:steel_ingot", "default:steel_ingot" }
 	},
 })
 
@@ -59,7 +59,7 @@ minetest.register_node("pipeworks:steel_pane_embedded_tube", {
 	paramtype2 = "facedir",
 	groups = {cracky=1, oddly_breakable_by_hand = 1, tubedevice = 1},
 	legacy_facedir_simple = true,
-	sounds = base.node_sound_stone_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 	tube = {
 		connect_sides = {front = 1, back = 1,},
 		priority = 50,
@@ -76,8 +76,8 @@ minetest.register_node("pipeworks:steel_pane_embedded_tube", {
 minetest.register_craft( {
 	output = "pipeworks:steel_pane_embedded_tube 1",
 	recipe = {
-		{ "", "base:steel_ingot", "" },
+		{ "", "default:steel_ingot", "" },
 		{ "", "pipeworks:tube_1", "" },
-		{ "", "base:steel_ingot", "" }
+		{ "", "default:steel_ingot", "" }
 	},
 })

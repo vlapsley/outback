@@ -15,7 +15,7 @@ end
 
 abstract_trunks.place_twig = function(pos)
 	local twig_size 	= math.random(1,27)
-	
+
 	local right_here 	= {x=pos.x  , y=pos.y+1, z=pos.z  }
 	local north 		= {x=pos.x  , y=pos.y+1, z=pos.z+1}
 	local north_east 	= {x=pos.x+1, y=pos.y+1, z=pos.z+1}
@@ -25,7 +25,7 @@ abstract_trunks.place_twig = function(pos)
 	local south_west 	= {x=pos.x-1, y=pos.y+1, z=pos.z-1}
 	local west 			= {x=pos.x-1, y=pos.y+1, z=pos.z  }
 	local north_west 	= {x=pos.x-1, y=pos.y+1, z=pos.z+1}
-	
+
 	local node_here 	= minetest.get_node(right_here)
 	local node_north 	= minetest.get_node(north)
 	local node_n_e 		= minetest.get_node(north_east)
@@ -35,17 +35,17 @@ abstract_trunks.place_twig = function(pos)
 	local node_s_w 		= minetest.get_node(south_west)
 	local node_west 	= minetest.get_node(west)
 	local node_n_w 		= minetest.get_node(north_west)
---	small twigs	
+--	small twigs
 	if twig_size <= 16 then
 		minetest.set_node(right_here, {name="trunks:twig_"..math.random(1,4), param2=math.random(0,3)})
 	end
 -- 	big twigs
 	if Big_Twigs == true then
---	big twig 1		
+--	big twig 1
 	if twig_size == 17 then
 		if not (minetest.registered_nodes[minetest.get_node({x=pos.x+1,y=pos.y,z=pos.z+1}).name].buildable_to
 			or minetest.registered_nodes[minetest.get_node({x=pos.x+1,y=pos.y,z=pos.z}).name].buildable_to) then
-			
+
 			if minetest.registered_nodes[node_here.name].buildable_to then
 				minetest.set_node(right_here, {name="trunks:twig_5"})
 			end
@@ -59,7 +59,7 @@ abstract_trunks.place_twig = function(pos)
 	elseif twig_size == 18 then
 		if not (minetest.registered_nodes[minetest.get_node({x=pos.x+1,y=pos.y,z=pos.z-1}).name].buildable_to
 			or minetest.registered_nodes[minetest.get_node({x=pos.x,y=pos.y,z=pos.z-1}).name].buildable_to) then
-			
+
 			if minetest.registered_nodes[node_here.name].buildable_to then
 				minetest.set_node(right_here, {name="trunks:twig_5", param2=1})
 			end
@@ -73,7 +73,7 @@ abstract_trunks.place_twig = function(pos)
 	elseif twig_size == 19 then
 		if not (minetest.registered_nodes[minetest.get_node({x=pos.x+1,y=pos.y,z=pos.z-1}).name].buildable_to
 			or minetest.registered_nodes[minetest.get_node({x=pos.x-1,y=pos.y,z=pos.z}).name].buildable_to) then
-			
+
 			if minetest.registered_nodes[node_here.name].buildable_to then
 				minetest.set_node(right_here, {name="trunks:twig_5", param2=2})
 			end
@@ -87,7 +87,7 @@ abstract_trunks.place_twig = function(pos)
 	elseif twig_size == 20 then
 		if not (minetest.registered_nodes[minetest.get_node({x=pos.x-1,y=pos.y,z=pos.z+1}).name].buildable_to
 			or minetest.registered_nodes[minetest.get_node({x=pos.x,y=pos.y,z=pos.z+1}).name].buildable_to) then
-			
+
 			if minetest.registered_nodes[node_here.name].buildable_to then
 				minetest.set_node(right_here, {name="trunks:twig_5", param2=3})
 			end
@@ -98,11 +98,11 @@ abstract_trunks.place_twig = function(pos)
 				minetest.set_node(north, 	  {name="trunks:twig_8", param2=3})
 			end
 		end
---	big twig 2		
+--	big twig 2
 	elseif twig_size == 21 then
 		if not (minetest.registered_nodes[minetest.get_node({x=pos.x,y=pos.y,z=pos.z+1}).name].buildable_to
 			or minetest.registered_nodes[minetest.get_node({x=pos.x+1,y=pos.y,z=pos.z+1}).name].buildable_to) then
-			
+
 			if minetest.registered_nodes[node_here.name].buildable_to then
 				minetest.set_node(right_here, {name="trunks:twig_9"})
 			end
@@ -116,7 +116,7 @@ abstract_trunks.place_twig = function(pos)
 	elseif twig_size == 22 then
 		if not (minetest.registered_nodes[minetest.get_node({x=pos.x+1,y=pos.y,z=pos.z}).name].buildable_to
 			or minetest.registered_nodes[minetest.get_node({x=pos.x+1,y=pos.y,z=pos.z-1}).name].buildable_to) then
-			
+
 			if minetest.registered_nodes[node_here.name].buildable_to then
 				minetest.set_node(right_here, {name="trunks:twig_9", param2=1})
 			end
@@ -130,7 +130,7 @@ abstract_trunks.place_twig = function(pos)
 	elseif twig_size == 23 then
 		if not (minetest.registered_nodes[minetest.get_node({x=pos.x,y=pos.y,z=pos.z-1}).name].buildable_to
 			or minetest.registered_nodes[minetest.get_node({x=pos.x-1,y=pos.y,z=pos.z-1}).name].buildable_to) then
-			
+
 			if minetest.registered_nodes[node_here.name].buildable_to then
 				minetest.set_node(right_here, {name="trunks:twig_9", param2=2})
 			end
@@ -144,7 +144,7 @@ abstract_trunks.place_twig = function(pos)
 	elseif twig_size == 24 then
 		if not (minetest.registered_nodes[minetest.get_node({x=pos.x-1,y=pos.y,z=pos.z}).name].buildable_to
 			or minetest.registered_nodes[minetest.get_node({x=pos.x-1,y=pos.y,z=pos.z+1}).name].buildable_to) then
-			
+
 			if minetest.registered_nodes[node_here.name].buildable_to then
 				minetest.set_node(right_here, {name="trunks:twig_9", param2=3})
 			end
@@ -163,7 +163,7 @@ end
 
 if Twigs_on_ground == true then
 biome_lib:register_generate_plant({
-    surface = {"base:dirt_with_grass", "base:dirt_with_dry_grass"},
+    surface = {"default:dirt_with_grass", "default:dirt_with_dry_grass"},
     max_count = Twigs_on_ground_Max_Count,
     rarity = Twigs_on_ground_Rarity,
     min_elevation = 4,
@@ -190,7 +190,7 @@ end
 
 if Twigs_on_water == true then
 biome_lib:register_generate_plant({
-    surface = {"base:water_source"},
+    surface = {"default:water_source"},
     max_count = Twigs_on_water_Max_Count,
     rarity = Twigs_on_water_Rarity,
     min_elevation = 1,
@@ -224,7 +224,7 @@ abstract_trunks.grow_moss_on_ground = function(pos)
 end
 
 biome_lib:register_generate_plant({
-    surface = {"base:dirt_with_grass"},
+    surface = {"default:dirt_with_grass"},
     max_count = Moss_on_ground_Max_Count,
     rarity = Moss_on_ground_Rarity,
     min_elevation = 30,
@@ -315,7 +315,7 @@ biome_lib:register_generate_plant({
 		"base:southern_sassafras_tree",
 		"base:swamp_gum_tree",
 		"base:tasmanian_myrtle_tree",
-		"base:mossycobble"
+		"default:mossycobble"
 	},
     max_count = Moss_on_trunk_Max_Count,
     rarity = Moss_on_trunk_Rarity,
@@ -342,7 +342,7 @@ abstract_trunks.grow_bottlebrush_orchid = function(pos)
 end
 
 biome_lib:register_generate_plant({
-    surface = {"base:dirt_with_grass"},
+    surface = {"default:dirt_with_grass"},
     max_count = Bottlebrush_Orchid_Max_Count,
     rarity = Bottlebrush_Orchid_Rarity,
     min_elevation = 5,
@@ -379,7 +379,7 @@ abstract_trunks.grow_mushrooms = function(pos)
 end
 
 biome_lib:register_generate_plant({
-    surface = {"base:dirt_with_grass"},
+    surface = {"default:dirt_with_grass"},
     max_count = Mushrooms_Max_Count,
     rarity = Mushrooms_Rarity,
     min_elevation = 5,

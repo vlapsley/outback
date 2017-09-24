@@ -4,41 +4,41 @@
 
 
 --
--- Aliases for map generator outputs
+-- Aliases for map generators
 --
 
-minetest.register_alias("mapgen_stone", "base:stone")
-minetest.register_alias("mapgen_dirt", "base:dirt")
-minetest.register_alias("mapgen_dirt_with_grass", "base:dirt_with_grass")
-minetest.register_alias("mapgen_sand", "base:sand")
-minetest.register_alias("mapgen_water_source", "base:water_source")
-minetest.register_alias("mapgen_river_water_source", "base:river_water_source")
-minetest.register_alias("mapgen_lava_source", "base:lava_source")
-minetest.register_alias("mapgen_gravel", "base:gravel")
-minetest.register_alias("mapgen_desert_stone", "base:desert_stone")
-minetest.register_alias("mapgen_desert_sand", "base:desert_sand")
-minetest.register_alias("mapgen_dirt_with_snow", "base:dirt_with_snow")
-minetest.register_alias("mapgen_snowblock", "base:snowblock")
-minetest.register_alias("mapgen_snow", "base:snow")
-minetest.register_alias("mapgen_ice", "base:ice")
-minetest.register_alias("mapgen_sandstone", "base:sandstone")
+minetest.register_alias("mapgen_stone", "default:stone")
+minetest.register_alias("mapgen_dirt", "default:dirt")
+minetest.register_alias("mapgen_dirt_with_grass", "default:dirt_with_grass")
+minetest.register_alias("mapgen_sand", "default:sand")
+minetest.register_alias("mapgen_water_source", "default:water_source")
+minetest.register_alias("mapgen_river_water_source", "default:river_water_source")
+minetest.register_alias("mapgen_lava_source", "default:lava_source")
+minetest.register_alias("mapgen_gravel", "default:gravel")
+minetest.register_alias("mapgen_desert_stone", "default:desert_stone")
+minetest.register_alias("mapgen_desert_sand", "default:desert_sand")
+minetest.register_alias("mapgen_dirt_with_snow", "default:dirt_with_snow")
+minetest.register_alias("mapgen_snowblock", "default:snowblock")
+minetest.register_alias("mapgen_snow", "default:snow")
+minetest.register_alias("mapgen_ice", "default:ice")
+minetest.register_alias("mapgen_sandstone", "default:sandstone")
 
 -- Flora
-minetest.register_alias("mapgen_tree", "base:tree")
-minetest.register_alias("mapgen_leaves", "base:leaves")
-minetest.register_alias("mapgen_apple", "base:apple")
-minetest.register_alias("mapgen_jungletree", "base:jungletree")
-minetest.register_alias("mapgen_jungleleaves", "base:jungleleaves")
-minetest.register_alias("mapgen_junglegrass", "base:junglegrass")
-minetest.register_alias("mapgen_pine_tree", "base:pine_tree")
-minetest.register_alias("mapgen_pine_needles", "base:pine_needles")
+minetest.register_alias("mapgen_tree", "default:tree")
+minetest.register_alias("mapgen_leaves", "default:leaves")
+minetest.register_alias("mapgen_apple", "default:apple")
+minetest.register_alias("mapgen_jungletree", "default:jungletree")
+minetest.register_alias("mapgen_jungleleaves", "default:jungleleaves")
+minetest.register_alias("mapgen_junglegrass", "default:junglegrass")
+minetest.register_alias("mapgen_pine_tree", "default:pine_tree")
+minetest.register_alias("mapgen_pine_needles", "default:pine_needles")
 
 -- Dungeons
-minetest.register_alias("mapgen_cobble", "base:cobble")
+minetest.register_alias("mapgen_cobble", "default:cobble")
 minetest.register_alias("mapgen_stair_cobble", "stairs:stair_cobble")
-minetest.register_alias("mapgen_mossycobble", "base:mossycobble")
+minetest.register_alias("mapgen_mossycobble", "default:mossycobble")
 minetest.register_alias("mapgen_stair_desert_stone", "stairs:stair_desert_stone")
-minetest.register_alias("mapgen_sandstonebrick", "base:sandstonebrick")
+minetest.register_alias("mapgen_sandstonebrick", "default:sandstonebrick")
 minetest.register_alias("mapgen_stair_sandstone_block", "stairs:stair_sandstone_block")
 
 
@@ -59,8 +59,8 @@ minetest.clear_registered_ores()
 -- Clay
 minetest.register_ore({
 	ore_type         = "blob",
-	ore              = "base:clay",
-	wherein          = {"base:dirt"},
+	ore              = "default:clay",
+	wherein          = {"default:dirt"},
 	clust_scarcity   = 16 * 16 * 16,
 	clust_size       = 5,
 	y_min            = -15,
@@ -79,8 +79,8 @@ minetest.register_ore({
 -- Sand
 minetest.register_ore({
 	ore_type         = "blob",
-	ore              = "base:sand",
-	wherein          = {"base:stone", "base:sandstone"},
+	ore              = "default:sand",
+	wherein          = {"default:stone", "default:sandstone"},
 	clust_scarcity   = 16 * 16 * 16,
 	clust_size       = 5,
 	y_min            = -31,
@@ -99,8 +99,8 @@ minetest.register_ore({
 -- Dirt
 minetest.register_ore({
 	ore_type         = "blob",
-	ore              = "base:dirt",
-	wherein          = {"base:stone"},
+	ore              = "default:dirt",
+	wherein          = {"default:stone"},
 	clust_scarcity   = 16 * 16 * 16,
 	clust_size       = 5,
 	y_min            = -31,
@@ -119,8 +119,8 @@ minetest.register_ore({
 -- Gravel
 minetest.register_ore({
 	ore_type         = "blob",
-	ore              = "base:gravel",
-	wherein          = {"base:stone"},
+	ore              = "default:gravel",
+	wherein          = {"default:stone"},
 	clust_scarcity   = 16 * 16 * 16,
 	clust_size       = 5,
 	y_min            = -31000,
@@ -140,7 +140,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type       = "blob",
 	ore            = "base:diorite",
-	wherein        = {"base:stone"},
+	wherein        = {"default:stone"},
 	clust_scarcity = 15*15*15,
 	clust_num_ores = 33,
 	clust_size     = 5,
@@ -151,7 +151,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type       = "blob",
 	ore            = "base:diorite",
-	wherein        = {"base:stone"},
+	wherein        = {"default:stone"},
 	clust_scarcity = 10*10*10,
 	clust_num_ores = 58,
 	clust_size     = 7,
@@ -163,7 +163,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type       = "blob",
 	ore            = "technic:granite",
-	wherein        = {"base:stone"},
+	wherein        = {"default:stone"},
 	clust_scarcity = 15*15*15,
 	clust_num_ores = 33,
 	clust_size     = 5,
@@ -174,7 +174,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type       = "blob",
 	ore            = "technic:granite",
-	wherein        = {"base:stone"},
+	wherein        = {"default:stone"},
 	clust_scarcity = 10*10*10,
 	clust_num_ores = 58,
 	clust_size     = 7,
@@ -189,13 +189,13 @@ minetest.register_ore({
 
 --Palm trees on beaches in warmer biomes
 biome_lib:register_generate_plant({
-	surface = {"base:sand"},
+	surface = {"default:sand"},
 	max_count = 4,
 	rarity = 33,
 	seed_diff = 330,
 	min_elevation = -1,
     max_elevation = 3,
-	near_nodes = {"base:water_source"},
+	near_nodes = {"default:water_source"},
 	near_nodes_size = 15,
 	near_nodes_count = 10,
 	temp_min = -0.2,

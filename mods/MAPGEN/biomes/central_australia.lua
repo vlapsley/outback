@@ -128,7 +128,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"central_australia"},
 		y_min =         4,
 		y_max =         300,
-		decoration =    "base:dry_grass_"..length,
+		decoration =    "default:dry_grass_"..length,
 	})
 end
 
@@ -139,7 +139,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 -- Grass near rivers
 local function register_dryrivergrass(length)
 	plants_api.register_plant({
-		nodes =     {"base:dry_grass_"..length},
+		nodes =     {"default:dry_grass_"..length},
 		cover =     0.1,
 		density =   0.33,
 		priority =  25,

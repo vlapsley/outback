@@ -110,7 +110,7 @@ override_protected = {
 		pipeworks.after_place(pos)
 	end,
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-		if not base.can_interact_with_node(clicker, pos) then
+		if not default.can_interact_with_node(clicker, pos) then
 			return itemstack
 		end
 

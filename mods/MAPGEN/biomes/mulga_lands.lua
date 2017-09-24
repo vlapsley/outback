@@ -9,13 +9,13 @@ local math_random = math.random
 -- mulga lands
 minetest.register_biome({
 	name =             "mulga_lands",
-	node_top =         "base:dirt_with_dry_grass",
+	node_top =         "default:dirt_with_dry_grass",
 	depth_top =        1,
 	node_filler =      "base:red_dirt",
 	depth_filler =     2,
-	node_stone =       "base:stone",
+	node_stone =       "default:stone",
 	node_river_water = "base:muddy_water_source",
-	node_riverbed =    "base:dirt",
+	node_riverbed =    "default:dirt",
 	depth_riverbed =   1,
 	y_min =            4,
 	y_max =            31000,
@@ -33,8 +33,8 @@ minetest.register_biome({
 -- Copper (Mount Isa)
 minetest.register_ore({
 	ore_type =        "blob",
-	ore =             "base:stone_with_copper",
-	wherein =         {"base:stone"},
+	ore =             "default:stone_with_copper",
+	wherein =         {"default:stone"},
 	clust_scarcity =  85184,
 	clust_size =      8,
 	biomes =          {"mulga_lands"},
@@ -55,7 +55,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =        "blob",
 	ore =             "technic:mineral_lead",
-	wherein =         {"base:stone"},
+	wherein =         {"default:stone"},
 	clust_scarcity =  85184,
 	clust_size =      8,
 	biomes =          {"mulga_lands"},
@@ -76,7 +76,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =        "blob",
 	ore =             "base:stone_with_silver",
-	wherein =         {"base:stone"},
+	wherein =         {"default:stone"},
 	clust_scarcity =  85184,
 	clust_size =      8,
 	biomes =          {"mulga_lands"},
@@ -97,7 +97,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =        "blob",
 	ore =             "technic:mineral_zinc",
-	wherein =         {"base:stone"},
+	wherein =         {"default:stone"},
 	clust_scarcity =  85184,
 	clust_size =      8,
 	biomes =          {"mulga_lands"},
@@ -123,7 +123,7 @@ minetest.register_ore({
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:dirt_with_dry_grass"},
+		place_on =      {"default:dirt_with_dry_grass"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -136,7 +136,7 @@ local function register_dry_grass_decoration(offset, scale, length)
 		biomes =        {"mulga_lands"},
 		y_min =         4,
 		y_max =         240,
-		decoration =    "base:dry_grass_"..length,
+		decoration =    "default:dry_grass_"..length,
 	})
 end
 
@@ -149,7 +149,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 -- Grass near rivers
 local function register_rivergrass(length)
 	plants_api.register_plant({
-		nodes =     {"base:grass_"..length},
+		nodes =     {"default:grass_"..length},
 		cover =     0.33,
 		density =   0.5,
 		priority =  25,
@@ -190,7 +190,7 @@ local function register_small_stone_rocks(number)
 		deco_type =   "simple",
 		decoration =  "base:small_stone_rocks"..number,
 		sidelen =     80,
-		place_on =    {"base:dirt_with_dry_grass"},
+		place_on =    {"default:dirt_with_dry_grass"},
 		fill_ratio =  0.001,
 		y_min =       24,
 		biomes =      {"mulga_lands"},
