@@ -337,7 +337,7 @@ if Bottlebrush_Orchid == true then
 abstract_trunks.grow_bottlebrush_orchid = function(pos)
 	local on_ground = {x=pos.x, y=pos.y+1, z=pos.z}
 	
-	minetest.set_node(on_ground, {name="base:bottlebrush_orchid", param2=math.random(0,3)})
+	minetest.set_node(on_ground, {name="flowers:bottlebrush_orchid", param2=math.random(0,3)})
 	
 end
 

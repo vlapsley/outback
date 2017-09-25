@@ -249,5 +249,3 @@ minetest.register_node("flowers:waterlily", {
 	end
 })
 
--- Aliases for schematic nodes
-minetest.register_alias("default:dirt", "default:dirt")
