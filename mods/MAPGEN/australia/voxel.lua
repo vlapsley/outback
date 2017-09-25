@@ -1,14 +1,9 @@
--- mods/australia_modpack/australia/voxel.lua
+--[[
+	Voxel Manipulator
 
--- This is only used to handle cases the decoration manager can't, such as
--- trees alongside rivers.
-
--- localize math routines for performance
-local math_abs = math.abs
-local math_exp = math.exp
-local math_floor = math.floor
-local math_max = math.max
-
+	This is only used to handle cases the decoration manager can't, such as
+	trees alongside rivers, rocky beaches, etc.
+--]]
 
 -- Read the noise parameters from the actual mapgen.
 local function getCppSettingNoise(name, default)
@@ -154,7 +149,7 @@ local function getCppSettingNumeric(name, default)
 end
 
 -- Rocky beaches
-function rock_beach(x, y, z, a, data)
+local function rock_beach(x, y, z, a, data)
 	local c_granite = minetest.get_content_id("technic:granite")
 	local dx = math.random() * 15 + 1
 	local dy = math.random() * 15 + 1
@@ -203,12 +198,6 @@ minetest.register_on_generated(function(minp, maxp, seed)
 		aus.register_on_first_mapgen = nil
 	end
 
-	-- minp and maxp strings, used by logs
-	local minps, maxps = minetest.pos_to_string(minp), minetest.pos_to_string(maxp)
-	-- print("[MOD: Australia] Generating map from " .. minps .. " to " .. maxps .. " ...")
-	-- start the timer
-	local t0 = os.clock()
-
 	-- Define content IDs
 	-- A content ID is a number that represents a node in the core of Minetest.
 	-- Every nodename has its ID.
@@ -245,7 +234,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	-- The real limits of data array are emin and emax.
 	-- Tip : the ystride of a VoxelArea is the number to add to the array index to get the index of the position above.
 	-- It's faster because it avoids to completely recalculate the index.
-	local ystride = a.ystride 
+	local ystride = a.ystride
 
 	-- The biomemap is a table of biome index numbers for each horizontal
 	-- location. It's created in the mapgen, and is right most of the time.
@@ -280,17 +269,18 @@ minetest.register_on_generated(function(minp, maxp, seed)
 
 	for x = minp.x, maxp.x do  -- for each YZ plane
 		for z = minp.z, maxp.z do  -- for each vertical line in this plane
-			local air_count = 0
 			-- take the noise values for 2D noises
 			local v1, v2, v3, v4, v5, v20 =
 					n1[i2d], n2[i2d], n3[i2d], n4[i2d], n5[i2d], n20[i2d]
 
 			-- Check for a salt lakes and rocky beaches
 			biome = aus.biome_ids[biomemap[i2d]]
+
 			local saltlake, rocky_beach = nil
 			if table.contains({"simpson_desert"}, biome) and v20 > 0.8 then
 				saltlake = true
 			end
+
 			if table.contains({"mangroves"}, biome) then
 				rocky_beach = false
 			elseif table.contains({"tasman_sea", "indian_ocean", "great_australian_bight"},
@@ -301,7 +291,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 			for y = maxp.y, minp.y, -1 do  -- for each node in vertical line
 				local ivm = a:index(x, y, z)  -- index of the data array, matching the position {x, y, z}
 				local v6 = n6[i3d_sup]  -- take the noise values for 3D noises
-				local ground = math_max(heightmap[i2d], 0) - 5
+				local ground = math.max(heightmap[i2d], 0) - 5
 
 				-- Check for suitable ground node
 				if data[ivm] == node["dirt"]
@@ -327,7 +317,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 						-- the surface is above.
 						local base_ground = v1 + v3
 						-- v2 represents the distance from the river, in arbitrary units.
-						v2 = math_abs(v2) - river_size
+						v2 = math.abs(v2) - river_size
 						-- The rivers are placed where v2 is negative, so where the original v2
 						-- value is close to zero.
 						local river = v2 < 0
@@ -335,7 +325,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 						-- "a" varying 0 < a ≤ 1 changes the shape of the valleys. Try it with a
 						-- geometry software! (here x = v2 and a = v4). This variable represents
 						-- the height of the terrain, from the rivers.
-						local valleys = v3 * (1 - math_exp(- (v2 / v4) ^ 2))
+						local valleys = v3 * (1 - math.exp(- (v2 / v4) ^ 2))
 						-- Approximate height of the terrain at this point (could be slightly
 						-- modified by the 3D noise #6)
 						local mountain_ground = base_ground + valleys
@@ -374,11 +364,6 @@ minetest.register_on_generated(function(minp, maxp, seed)
 								{x=x,y=y+1,z=z}, data, a, ivm + ystride)
 					end
 				end
-
-				if data[ivm] ~= node["air"] then
-					air_count = 0
-				end
-
 			end
 			i2d = i2d + i2d_incrZ  -- Increment i2d by one Z
 		end
@@ -392,15 +377,5 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	vm:calc_lighting()
 	vm:update_liquids()
 	vm:write_to_map()
-
-	local t1 = os.clock()
-	-- print("[MOD: Australia] Mapgen finished in " .. displaytime(t1-t0))
-
-	-- Garbage collection
-	local mem = math_floor(collectgarbage("count")/1024)
-	if mem > 500 then
-		core.log("action", "MOD: Australia is manually collecting garbage as memory use has exceeded 500MB.")
-		collectgarbage("collect")
-	end
 
 end)
