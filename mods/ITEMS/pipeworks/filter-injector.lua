@@ -551,7 +551,7 @@ minetest.register_lbm({
 		if put_to_inputinv(pos, node, meta, list) then
 			return
 		end
-		pos.y = pos.y 1
+		pos.y = pos.y + 1
 		for i = 1, #list do
 			local item = list[i]
 			if not item:is_empty() then
