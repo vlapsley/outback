@@ -2,7 +2,7 @@
 	Voxel Manipulator
 
 	This is only used to handle cases the decoration manager can't, such as
-	trees alongside rivers, rocky beaches, etc.
+	trees alongside rivers, rocky beaches and salt lakes.
 --]]
 
 -- Read the noise parameters from the actual mapgen.
@@ -123,17 +123,17 @@ local function noisemap(i, minp, chulens)
 end
 
 -- List of functions to run at the end of the mapgen procedure
-aus.after_mapgen = {}
+outback.after_mapgen = {}
 
-function aus.register_after_mapgen(f, ...)
-	table.insert(aus.after_mapgen, {f = f, ...})
+function outback.register_after_mapgen(f, ...)
+	table.insert(outback.after_mapgen, {f = f, ...})
 end
 
-function aus.execute_after_mapgen()
-	for i, params in ipairs(aus.after_mapgen) do
+function outback.execute_after_mapgen()
+	for i, params in ipairs(outback.after_mapgen) do
 		params.f(unpack(params))
 	end
-	aus.after_mapgen = {}
+	outback.after_mapgen = {}
 end
 
 local function getCppSettingNumeric(name, default)
@@ -177,12 +177,12 @@ local river_size = 4 / 100
 local node = {}
 
 -- Create a table of biome ids, so I can use the biomemap.
-if not aus.biome_ids then
+if not outback.biome_ids then
 	local i
-	aus.biome_ids = {}
+	outback.biome_ids = {}
 	for name, desc in pairs(minetest.registered_biomes) do
 		i = minetest.get_biome_id(desc.name)
-		aus.biome_ids[i] = desc.name
+		outback.biome_ids[i] = desc.name
 	end
 end
 
@@ -190,12 +190,12 @@ local data = {}
 
 -- THE MAPGEN FUNCTION
 minetest.register_on_generated(function(minp, maxp, seed)
-	if aus.registered_on_first_mapgen then  -- Run callbacks
-		for _, f in ipairs(aus.registered_on_first_mapgen) do
+	if outback.registered_on_first_mapgen then  -- Run callbacks
+		for _, f in ipairs(outback.registered_on_first_mapgen) do
 			f()
 		end
-		aus.registered_on_first_mapgen = nil
-		aus.register_on_first_mapgen = nil
+		outback.registered_on_first_mapgen = nil
+		outback.register_on_first_mapgen = nil
 	end
 
 	-- Define content IDs
@@ -274,7 +274,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 					n1[i2d], n2[i2d], n3[i2d], n4[i2d], n5[i2d], n20[i2d]
 
 			-- Check for a salt lakes and rocky beaches
-			biome = aus.biome_ids[biomemap[i2d]]
+			biome = outback.biome_ids[biomemap[i2d]]
 
 			local saltlake, rocky_beach = nil
 			if table.contains({"simpson_desert"}, biome) and v20 > 0.8 then
@@ -358,7 +358,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 							valleys = valleys,
 							mountain_ground = mountain_ground,
 							slopes = slopes,
-							biome = aus.biome_ids[biomemap[i2d]]
+							biome = outback.biome_ids[biomemap[i2d]]
 							}
 						plants_api.choose_generate_plant(conditions,
 								{x=x,y=y+1,z=z}, data, a, ivm + ystride)
@@ -369,7 +369,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 		end
 		i2d = i2d - i2d_decrX  -- Decrement the Z line previously incremented and increment by one X (1)
 	end
-	aus.execute_after_mapgen()  -- Needed for some tree roots
+	outback.execute_after_mapgen()  -- Needed for some tree roots
 
 	-- Execute voxelmanip boring stuff to write to the map...
 	vm:set_data(data)

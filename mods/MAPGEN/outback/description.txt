@@ -1,0 +1,1 @@
+This is only used to handle cases the decoration manager can't, such as trees alongside rivers, rocky beaches and salt lakes.

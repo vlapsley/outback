@@ -1,10 +1,11 @@
--- mods/australia_modpack/australia/functions.lua
+--[[
+	Functions
+--]]
 
+outback.registered_on_first_mapgen = {}
 
-aus.registered_on_first_mapgen = {}
-
-function aus.register_on_first_mapgen(func) -- Callback
-	table.insert(aus.registered_on_first_mapgen, func)
+function outback.register_on_first_mapgen(func) -- Callback
+	table.insert(outback.registered_on_first_mapgen, func)
 end
 
 local function get_content_id(value) -- get content ID recursively from a table.
@@ -21,7 +22,7 @@ local function get_content_id(value) -- get content ID recursively from a table.
 	return value
 end
 
-aus.register_on_first_mapgen(function()
+outback.register_on_first_mapgen(function()
 	table.sort(plants_api.registered_plants,
 		function(a, b)
 			return a.priority > b.priority
@@ -49,7 +50,3 @@ function table.contains(table, element)
 	return false
 end
 
-
-function displaytime(time)
-	return math.floor(time * 1000000 + 0.5) / 1000 .. " ms"
-end
