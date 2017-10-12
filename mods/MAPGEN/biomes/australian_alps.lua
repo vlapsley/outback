@@ -15,7 +15,7 @@ minetest.register_biome({
 	depth_filler =     1,
 	node_stone =       "default:stone",
 	node_river_water = "default:river_water_source",
-	node_riverbed =    "base:shale",
+	node_riverbed =    "australia:shale",
 	depth_riverbed =   1,
 	y_min =            150,
 	y_max =            31000,
@@ -33,7 +33,7 @@ minetest.register_biome({
 -- Basalt
 minetest.register_ore({
 	ore_type =       "blob",
-	ore =            "base:basalt",
+	ore =            "australia:basalt",
 	wherein =        {"default:stone"},
 	clust_scarcity = 3375,
 	clust_num_ores = 33,
@@ -45,7 +45,7 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =       "blob",
-	ore =            "base:basalt",
+	ore =            "australia:basalt",
 	wherein =        {"default:stone"},
 	clust_scarcity = 1000,
 	clust_num_ores = 58,
@@ -104,8 +104,8 @@ minetest.register_decoration({
 -- Snow Gum
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:snow_gum_tree",
-		leaves =  "base:snow_gum_leaves",
+		trunk =   "australia:snow_gum_tree",
+		leaves =  "australia:snow_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -118,6 +118,6 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(2, 4)
 		local radius =  2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })

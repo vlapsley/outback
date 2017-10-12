@@ -1,11 +1,11 @@
 --[[
-	Base
+	Australia: Nodes for Outback game
 --]]
 
-base = {}
+aus = {}
 
 -- Load files
-local modpath = minetest.get_modpath("base")
+local modpath = minetest.get_modpath("australia")
 dofile(modpath.."/functions.lua")
 dofile(modpath.."/nodes_base.lua") -- Simple solid cubic nodes with simple definitions
 dofile(modpath.."/nodes_liquid.lua") -- Liquids

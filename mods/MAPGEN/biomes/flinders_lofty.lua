@@ -11,10 +11,10 @@ minetest.register_biome({
 	name =             "flinders_lofty",
 	node_top =         "default:dirt_with_dry_grass",
 	depth_top =        1,
-	node_filler =      "base:red_dirt",
+	node_filler =      "australia:red_dirt",
 	depth_filler =     2,
 	node_stone =       "default:stone",
-	node_river_water = "base:muddy_water_source",
+	node_river_water = "australia:muddy_water_source",
 	node_riverbed =    "default:dirt",
 	depth_riverbed =   1,
 	y_min =            4,
@@ -33,7 +33,7 @@ minetest.register_biome({
 -- Slate (Adelaide Hills / Mintaro / Spalding)
 minetest.register_ore({
 	ore_type =       "blob",
-	ore =            "base:slate",
+	ore =            "australia:slate",
 	wherein =        {"default:stone"},
 	biomes =         {"flinders_lofty"},
 	clust_scarcity = 8000,
@@ -66,7 +66,7 @@ minetest.register_ore({
 -- Jade (Cowell)
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_jade",
+	ore =            "australia:stone_with_jade",
 	wherein =        {"default:stone"},
 	biomes =         {"flinders_lofty"},
 	clust_scarcity = 3375,
@@ -79,7 +79,7 @@ minetest.register_ore({
 -- Marble (Penrice)
 minetest.register_ore({
 	ore_type =        "sheet",
-	ore =             "base:marble",
+	ore =             "australia:marble",
 	wherein =         "default:stone",
 	clust_scarcity =  1,
 	clust_num_ores =  1,
@@ -165,8 +165,8 @@ register_rivergrass(4)
 -- Lavender Grevillea
 plants_api.register_plant({
 	nodes = {
-		trunk =  "base:lavender_grevillea",
-		leaves =  "base:lavender_grevillea",
+		trunk =  "australia:lavender_grevillea",
+		leaves =  "australia:lavender_grevillea",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -179,7 +179,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(1, 2)
 		local radius =  math_random(1, 2)
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -209,7 +209,7 @@ plants_api.register_plant({
 local function register_small_stone_rocks(number)
 	minetest.register_decoration({
 		deco_type =   "simple",
-		decoration =  "base:small_stone_rocks"..number,
+		decoration =  "australia:small_stone_rocks"..number,
 		sidelen =     80,
 		place_on =    {"default:dirt_with_dry_grass"},
 		fill_ratio =  0.002,
@@ -235,8 +235,8 @@ register_small_stone_rocks(1)
 -- Black Wattle
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:black_wattle_tree",
-		leaves =  "base:black_wattle_leaves",
+		trunk =   "australia:black_wattle_tree",
+		leaves =  "australia:black_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -249,15 +249,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(7, 12)
 		local radius =  math_random(4, 5)
-		base.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Black Wattle
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:black_wattle_tree",
-		leaves =  "base:black_wattle_leaves",
+		trunk =   "australia:black_wattle_tree",
+		leaves =  "australia:black_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -270,16 +270,16 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(5, 7)
 		local radius =  3
-		base.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Australian Cherry
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:cherry_tree",
-		leaves =  "base:cherry_leaves",
-		fruit =   "base:cherry",
+		trunk =   "australia:cherry_tree",
+		leaves =  "australia:cherry_leaves",
+		fruit =   "australia:cherry",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -294,15 +294,15 @@ plants_api.register_plant({
 		local radius =        3
 		local limbs =         nil
 		local fruit_chance =  0.2
-		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
 	end,
 })
 
 -- Coolabah
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:coolabah_tree",
-		leaves =  "base:coolabah_leaves",
+		trunk =   "australia:coolabah_tree",
+		leaves =  "australia:coolabah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -316,15 +316,15 @@ plants_api.register_plant({
 		local height =  math_random(7, 9)
 		local radius =  math_random(4, 5)
 		local limbs =   true
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Golden Wattle
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:golden_wattle_tree",
-		leaves =  "base:golden_wattle_leaves",
+		trunk =   "australia:golden_wattle_tree",
+		leaves =  "australia:golden_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -337,15 +337,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 4)
 		local radius =  2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Golden Wattle
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:golden_wattle_tree",
-		leaves =  "base:golden_wattle_leaves",
+		trunk =   "australia:golden_wattle_tree",
+		leaves =  "australia:golden_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -358,15 +358,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 4)
 		local radius =  2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- River Red Gum
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:river_red_gum_tree",
-		leaves =  "base:river_red_gum_leaves",
+		trunk =   "australia:river_red_gum_tree",
+		leaves =  "australia:river_red_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -380,15 +380,15 @@ plants_api.register_plant({
 		local height =  math_random(10, 15)
 		local radius =  math_random(5, 7)
 		local limbs =   true
-		base.make_river_red_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_river_red_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Sugar Gum
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:sugar_gum_tree",
-		leaves =  "base:sugar_gum_leaves",
+		trunk =   "australia:sugar_gum_tree",
+		leaves =  "australia:sugar_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -402,6 +402,6 @@ plants_api.register_plant({
 		local height =  math_random(7, 11)
 		local radius =  math_random(6, 8)
 		local limbs =   true
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })

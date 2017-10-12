@@ -1,5 +1,5 @@
 --[[
-	Base base nodes
+	Base nodes
 --]]
 
 
@@ -7,151 +7,151 @@
 -- Stone
 --
 
-minetest.register_node("base:red_sandstone", {
+minetest.register_node("australia:red_sandstone", {
 	description = "Red Sandstone",
-	tiles = {"base_red_sandstone.png"},
+	tiles = {"aus_red_sandstone.png"},
 	groups = {crumbly = 1, cracky = 3},
-	drop = 'base:red_sandstone_cobble',
+	drop = 'australia:red_sandstone_cobble',
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:red_sandstonebrick", {
+minetest.register_node("australia:red_sandstonebrick", {
 	description = "Red Sandstone Brick",
 	paramtype2 = "facedir",
 	place_param2 = 0,
-	tiles = {"base_red_sandstone_brick.png"},
+	tiles = {"aus_red_sandstone_brick.png"},
 	is_ground_content = false,
 	groups = {cracky = 2},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:sandstone_cobble", {
+minetest.register_node("australia:sandstone_cobble", {
 	description = "Sandstone Cobble",
-	tiles = {"base_sandstone_cobble.png"},
+	tiles = {"aus_sandstone_cobble.png"},
 	groups = {crumbly = 1, cracky = 3, oddly_breakable_by_hand = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:basalt", {
+minetest.register_node("australia:basalt", {
 	description = "Basalt",
-	tiles = {"base_basalt.png"},
+	tiles = {"aus_basalt.png"},
 	groups = {cracky = 2, stone = 1},
-	drop = "base:basalt_cobble",
+	drop = "australia:basalt_cobble",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:basalt_cobble", {
+minetest.register_node("australia:basalt_cobble", {
 	description = "Basalt Cobble",
-	tiles = {"base_basalt_cobble.png"},
+	tiles = {"aus_basalt_cobble.png"},
 	is_ground_content = false,
 	groups = {cracky = 2, stone = 2},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:basalt_brick", {
+minetest.register_node("australia:basalt_brick", {
 	description = "Basalt Brick",
-	tiles = {"base_basalt_brick.png"},
+	tiles = {"aus_basalt_brick.png"},
 	is_ground_content = false,
 	groups = {cracky = 1, stone = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:diorite", {
+minetest.register_node("australia:diorite", {
 	description = "Diorite",
-	tiles = {"base_diorite.png"},
+	tiles = {"aus_diorite.png"},
 	groups = {cracky = 2, stone = 1},
-	drop = 'base:diorite_cobble',
+	drop = 'australia:diorite_cobble',
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:diorite_cobble", {
+minetest.register_node("australia:diorite_cobble", {
 	description = "Diorite Cobble",
-	tiles = {"base_diorite_cobble.png"},
+	tiles = {"aus_diorite_cobble.png"},
 	groups = {cracky = 2, stone = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:diorite_brick", {
+minetest.register_node("australia:diorite_brick", {
 	description = "Diorite Brick",
-	tiles = {"base_diorite_brick.png"},
+	tiles = {"aus_diorite_brick.png"},
 	groups = {cracky = 2, stone = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:limestone", {
+minetest.register_node("australia:limestone", {
 	description = "Limestone",
-	tiles = {"base_limestone.png"},
-	drop = 'base:limestone_cobble',
+	tiles = {"aus_limestone.png"},
+	drop = 'australia:limestone_cobble',
 	groups = {cracky = 3, stone = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:limestone_cobble", {
+minetest.register_node("australia:limestone_cobble", {
 	description = "Limestone Cobble",
-	tiles = {"base_limestone_cobble.png"},
+	tiles = {"aus_limestone_cobble.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:limestone_brick", {
+minetest.register_node("australia:limestone_brick", {
 	description = "Limestone Brick",
-	tiles = {"base_limestone_brick.png"},
+	tiles = {"aus_limestone_brick.png"},
 	groups = {cracky = 3, stone = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:marble", {
+minetest.register_node("australia:marble", {
 	description = "Marble",
-	tiles = {"base_marble.png"},
+	tiles = {"aus_marble.png"},
 	groups = {cracky = 3, stone = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:marble_tile", {
+minetest.register_node("australia:marble_tile", {
 	description = "Marble Tile",
-	tiles = {"base_marble_tile.png"},
+	tiles = {"aus_marble_tile.png"},
 	is_ground_content = false,
 	groups = {cracky = 2, stone = 1},
 	sounds = default.node_sound_stone_defaults()
 })
 
-minetest.register_node("base:shale", {
+minetest.register_node("australia:shale", {
 	description = "Shale",
-	tiles = {"base_shale.png","base_shale.png","base_shale_side.png"},
+	tiles = {"aus_shale.png","aus_shale.png","aus_shale_side.png"},
 	is_ground_content = true,
 	groups = {crumbly = 2, cracky = 2},
 	sounds = default.node_sound_stone_defaults()
 })
 
-minetest.register_node("base:slate", {
+minetest.register_node("australia:slate", {
 	description = "Slate",
-	tiles = {"base_slate.png","base_slate.png","base_slate_side.png"},
+	tiles = {"aus_slate.png","aus_slate.png","aus_slate_side.png"},
 	is_ground_content = true,
-	drop = 'base:slate_rubble',
+	drop = 'australia:slate_rubble',
 	groups = {cracky = 2},
 	sounds = default.node_sound_stone_defaults()
 })
 
-minetest.register_node("base:slate_rubble", {
+minetest.register_node("australia:slate_rubble", {
 	description = "Slate Rubble",
-	tiles = {"base_slate_rubble.png"},
+	tiles = {"aus_slate_rubble.png"},
 	is_ground_content = false,
 	groups = {cracky = 2},
 	sounds = default.node_sound_stone_defaults()
 })
 
-minetest.register_node("base:slate_brick", {
+minetest.register_node("australia:slate_brick", {
 	description = "Slate Brick",
-	tiles = {"base_slate_brick.png"},
+	tiles = {"aus_slate_brick.png"},
 	is_ground_content = false,
 	groups = {cracky = 2},
 	sounds = default.node_sound_stone_defaults()
 })
 
-minetest.register_node("base:slate_tile", {
+minetest.register_node("australia:slate_tile", {
 	description = "Slate Tile",
-	tiles = {"base_slate_tile.png"},
+	tiles = {"aus_slate_tile.png"},
 	is_ground_content = false,
 	groups = {cracky = 2},
 	sounds = default.node_sound_stone_defaults()
@@ -162,55 +162,55 @@ minetest.register_node("base:slate_tile", {
 -- Soft / Non-Stone
 --
 
-minetest.register_node("base:red_dirt", {
+minetest.register_node("australia:red_dirt", {
 	description = "Red Dirt",
-	tiles = {"base_red_dirt.png"},
+	tiles = {"aus_red_dirt.png"},
 	groups = {crumbly = 3, soil = 1},
 	sounds = default.node_sound_dirt_defaults(),
 })
 
-minetest.register_node("base:red_sand", {
+minetest.register_node("australia:red_sand", {
 	description = "Red Sand",
-	tiles = {"base_red_sand.png"},
+	tiles = {"aus_red_sand.png"},
 	groups = {crumbly = 3, falling_node = 1, sand = 1},
 	sounds = default.node_sound_sand_defaults(),
 })
 
-minetest.register_node("base:red_gravel", {
+minetest.register_node("australia:red_gravel", {
 	description = "Red Gravel",
-	tiles = {"base_red_gravel.png"},
+	tiles = {"aus_red_gravel.png"},
 	groups = {crumbly = 2, falling_node = 1},
 	sounds = default.node_sound_gravel_defaults(),
 })
 
-minetest.register_node("base:mangrove_mud", {
+minetest.register_node("australia:mangrove_mud", {
 	description = "Mangrove Mud",
-	tiles = {"base_mangrove_mud.png"},
+	tiles = {"aus_mangrove_mud.png"},
 	groups = {crumbly = 3, soil = 1, disable_jump = 1},
 	sounds = default.node_sound_dirt_defaults({
-		footstep = {name = "base_mangrove_mud", gain = 0.4},
-		dug = {name = "base_mangrove_mud", gain = 0.4},
+		footstep = {name = "aus_mangrove_mud", gain = 0.4},
+		dug = {name = "aus_mangrove_mud", gain = 0.4},
 	}),
 })
 
-minetest.register_node("base:mineral_salt", {
+minetest.register_node("australia:mineral_salt", {
 	description = "Salt Mineral",
-	tiles = {"base_red_sand.png^base_mineral_salt.png"},
+	tiles = {"aus_red_sand.png^aus_mineral_salt.png"},
 	paramtype = "light",
 	is_ground_content = true,
 	groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 	drop = {
 		items = {
-			{items = {"base:red_sand"} },
-			{items = {"base:salt"} }
+			{items = {"australia:red_sand"} },
+			{items = {"australia:salt"} }
 		}
 	},
 	sounds = default.node_sound_dirt_defaults,
 })
 
-minetest.register_node( "base:salt_block", {
+minetest.register_node( "australia:salt_block", {
 	description = "Salt Block",
-	tiles = {"default_clay.png^base_salt_block.png"},
+	tiles = {"default_clay.png^aus_salt_block.png"},
 	is_ground_content = false,
 	groups = {snappy = 2, cracky = 3, oddly_breakable_by_hand = 3},
 	on_use = minetest.item_eat(3),
@@ -222,15 +222,15 @@ minetest.register_node( "base:salt_block", {
 -- Ores
 --
 
-minetest.register_node("base:diorite_with_coal", {
+minetest.register_node("australia:diorite_with_coal", {
 	description = "Coal Ore",
-	tiles = {"base_diorite.png^default_mineral_coal.png"},
+	tiles = {"aus_diorite.png^default_mineral_coal.png"},
 	groups = {cracky = 3},
 	drop = 'default:coal_lump',
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:granite_with_iron", {
+minetest.register_node("australia:granite_with_iron", {
 	description = "Iron Ore",
 	tiles = {"technic_granite.png^default_mineral_iron.png"},
 	groups = {cracky = 2},
@@ -238,7 +238,7 @@ minetest.register_node("base:granite_with_iron", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:granite_with_copper", {
+minetest.register_node("australia:granite_with_copper", {
 	description = "Copper Ore",
 	tiles = {"technic_granite.png^default_mineral_copper.png"},
 	groups = {cracky = 2},
@@ -246,15 +246,15 @@ minetest.register_node("base:granite_with_copper", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:granite_with_opal", {
+minetest.register_node("australia:granite_with_opal", {
 	description = "Opal Ore",
-	tiles = {"technic_granite.png^base_mineral_opal.png"},
+	tiles = {"technic_granite.png^aus_mineral_opal.png"},
 	groups = {cracky = 2},
-	drop = "base:opal",
+	drop = "australia:opal",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:granite_with_tin", {
+minetest.register_node("australia:granite_with_tin", {
 	description = "Tin Ore",
 	tiles = {"technic_granite.png^default_mineral_tin.png"},
 	groups = {cracky = 2},
@@ -262,147 +262,147 @@ minetest.register_node("base:granite_with_tin", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:stone_with_aluminium", {
+minetest.register_node("australia:stone_with_aluminium", {
 	description = "Aluminium Ore",
-	tiles = {"default_stone.png^base_mineral_aluminium.png"},
+	tiles = {"default_stone.png^aus_mineral_aluminium.png"},
 	groups = {cracky = 2},
-	drop = "base:aluminium_lump",
+	drop = "australia:aluminium_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:aluminiumblock", {
+minetest.register_node("australia:aluminiumblock", {
 	description = "Aluminium Block",
-	tiles = {"base_aluminium_block.png"},
+	tiles = {"aus_aluminium_block.png"},
 	is_ground_content = false,
 	groups = {cracky = 1, level = 2},
 	sounds = default.node_sound_metal_defaults(),
 })
 
-minetest.register_node("base:stone_with_nickel", {
+minetest.register_node("australia:stone_with_nickel", {
 	description = "Nickel Ore",
-	tiles = {"default_stone.png^base_mineral_nickel.png"},
+	tiles = {"default_stone.png^aus_mineral_nickel.png"},
 	groups = {cracky = 2},
-	drop = "base:nickel_lump",
+	drop = "australia:nickel_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:nickelblock", {
+minetest.register_node("australia:nickelblock", {
 	description = "Nickel Block",
-	tiles = {"base_nickel_block.png"},
+	tiles = {"aus_nickel_block.png"},
 	is_ground_content = false,
 	groups = {cracky = 1, level = 2},
 	sounds = default.node_sound_metal_defaults(),
 })
 
-minetest.register_node("base:stone_with_silver", {
+minetest.register_node("australia:stone_with_silver", {
 	description = "Silver Ore",
-	tiles = {"default_stone.png^base_mineral_silver.png" },
+	tiles = {"default_stone.png^aus_mineral_silver.png" },
 	groups = {cracky = 3},
-	drop = "base:silver_lump",
+	drop = "australia:silver_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:silverblock", {
+minetest.register_node("australia:silverblock", {
 	description = "Silver Block",
-	tiles = {"base_silver_block.png"},
+	tiles = {"aus_silver_block.png"},
 	is_ground_content = false,
 	groups = {cracky = 1, level = 2},
 	sounds = default.node_sound_metal_defaults(),
 })
 
-minetest.register_node("base:basalt_with_diamond", {
+minetest.register_node("australia:basalt_with_diamond", {
 	description = "Diamond Ore",
-	tiles = {"base_basalt.png^default_mineral_diamond.png"},
+	tiles = {"aus_basalt.png^default_mineral_diamond.png"},
 	groups = {cracky = 1},
 	drop = "default:diamond",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:stone_with_agate", {
+minetest.register_node("australia:stone_with_agate", {
 	description = "Agate Ore",
-	tiles = {"default_stone.png^base_mineral_agate.png"},
+	tiles = {"default_stone.png^aus_mineral_agate.png"},
 	groups = {cracky = 1},
-	drop = "base:agate",
+	drop = "australia:agate",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:stone_with_amethyst", {
+minetest.register_node("australia:stone_with_amethyst", {
 	description = "Amethyst Ore",
-	tiles = {"default_stone.png^base_mineral_amethyst.png"},
+	tiles = {"default_stone.png^aus_mineral_amethyst.png"},
 	groups = {cracky = 1},
-	drop = "base:amethyst",
+	drop = "australia:amethyst",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:granite_with_amethyst", {
+minetest.register_node("australia:granite_with_amethyst", {
 	description = "Amethyst Ore",
-	tiles = {"technic_granite.png^base_mineral_amethyst.png"},
+	tiles = {"technic_granite.png^aus_mineral_amethyst.png"},
 	groups = {cracky = 1},
-	drop = "base:amethyst",
+	drop = "australia:amethyst",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:stone_with_citrine", {
+minetest.register_node("australia:stone_with_citrine", {
 	description = "Citrine Ore",
-	tiles = {"default_stone.png^base_mineral_citrine.png"},
+	tiles = {"default_stone.png^aus_mineral_citrine.png"},
 	groups = {cracky = 1},
-	drop = "base:citrine",
+	drop = "australia:citrine",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:stone_with_emerald", {
+minetest.register_node("australia:stone_with_emerald", {
 	description = "Emerald Ore",
-	tiles = {"default_stone.png^base_mineral_emerald.png"},
+	tiles = {"default_stone.png^aus_mineral_emerald.png"},
 	groups = {cracky = 1},
-	drop = "base:emerald",
+	drop = "australia:emerald",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:granite_with_emerald", {
+minetest.register_node("australia:granite_with_emerald", {
 	description = "Emerald Ore",
-	tiles = {"technic_granite.png^base_mineral_emerald.png"},
+	tiles = {"technic_granite.png^aus_mineral_emerald.png"},
 	groups = {cracky = 1},
-	drop = "base:emerald",
+	drop = "australia:emerald",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:stone_with_jade", {
+minetest.register_node("australia:stone_with_jade", {
 	description = "Jade Ore",
-	tiles = {"default_stone.png^base_mineral_jade.png"},
+	tiles = {"default_stone.png^aus_mineral_jade.png"},
 	groups = {cracky = 1},
-	drop = "base:jade",
+	drop = "australia:jade",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:stone_with_ruby", {
+minetest.register_node("australia:stone_with_ruby", {
 	description = "Ruby Ore",
-	tiles = {"default_stone.png^base_mineral_ruby.png"},
+	tiles = {"default_stone.png^aus_mineral_ruby.png"},
 	groups = {cracky = 1},
-	drop = "base:ruby",
+	drop = "australia:ruby",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:stone_with_sapphire", {
+minetest.register_node("australia:stone_with_sapphire", {
 	description = "Sapphire Ore",
-	tiles = {"default_stone.png^base_mineral_sapphire.png"},
+	tiles = {"default_stone.png^aus_mineral_sapphire.png"},
 	groups = {cracky = 1},
-	drop = "base:sapphire",
+	drop = "australia:sapphire",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:stone_with_smoky_quartz", {
+minetest.register_node("australia:stone_with_smoky_quartz", {
 	description = "Smoky Quartz Ore",
-	tiles = {"default_stone.png^base_mineral_smoky_quartz.png"},
+	tiles = {"default_stone.png^aus_mineral_smoky_quartz.png"},
 	groups = {cracky = 1},
-	drop = "base:smoky_quartz",
+	drop = "australia:smoky_quartz",
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("base:granite_with_smoky_quartz", {
+minetest.register_node("australia:granite_with_smoky_quartz", {
 	description = "Smoky Quartz Ore",
-	tiles = {"technic_granite.png^base_mineral_smoky_quartz.png"},
+	tiles = {"technic_granite.png^aus_mineral_smoky_quartz.png"},
 	groups = {cracky = 1},
-	drop = "base:smoky_quartz",
+	drop = "australia:smoky_quartz",
 	sounds = default.node_sound_stone_defaults(),
 })
 

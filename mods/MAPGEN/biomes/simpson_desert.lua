@@ -9,13 +9,13 @@ local math_random = math.random
 -- simpson desert
 minetest.register_biome({
 	name =             "simpson_desert",
-	node_top =         "base:red_sand",
+	node_top =         "australia:red_sand",
 	depth_top =        3,
-	node_filler =      "base:red_sandstone",
+	node_filler =      "australia:red_sandstone",
 	depth_filler =     2,
 	node_stone =       "technic:granite",
-	node_river_water = "base:muddy_water_source",
-	node_riverbed =    "base:red_gravel",
+	node_river_water = "australia:muddy_water_source",
+	node_riverbed =    "australia:red_gravel",
 	depth_riverbed =   1,
 	y_min =            4,
 	y_max =            31000,
@@ -32,9 +32,9 @@ minetest.register_biome({
 local function register_small_red_rocks(number)
 	minetest.register_decoration({
 		deco_type =   "simple",
-		decoration =  "base:small_red_rocks"..number,
+		decoration =  "australia:small_red_rocks"..number,
 		sidelen =     80,
-		place_on =    {"base:red_sand"},
+		place_on =    {"australia:red_sand"},
 		fill_ratio =  0.001,
 		y_min =       18,
 		biomes =      {"simpson_desert"},
@@ -58,8 +58,8 @@ register_small_red_rocks(1)
 -- Coolabah Tree
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:coolabah_tree",
-		leaves =  "base:coolabah_leaves",
+		trunk =   "australia:coolabah_tree",
+		leaves =  "australia:coolabah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -73,16 +73,16 @@ plants_api.register_plant({
 		local height =  math_random(7, 9)
 		local radius =  math_random(4, 5)
 		local limbs =   true
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Quandong
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:quandong_tree",
-		leaves =  "base:quandong_leaves",
-		fruit =   "base:quandong",
+		trunk =   "australia:quandong_tree",
+		leaves =  "australia:quandong_leaves",
+		fruit =   "australia:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -97,16 +97,16 @@ plants_api.register_plant({
 		local radius =        2
 		local limbs =         nil
 		local fruit_chance =  0.2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
 	end,
 })
 
 -- Quandong
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:quandong_tree",
-		leaves =  "base:quandong_leaves",
-		fruit =   "base:quandong",
+		trunk =   "australia:quandong_tree",
+		leaves =  "australia:quandong_leaves",
+		fruit =   "australia:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -121,6 +121,6 @@ plants_api.register_plant({
 		local radius =        2
 		local limbs =         nil
 		local fruit_chance =  0.1
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
 	end,
 })

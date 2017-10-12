@@ -199,8 +199,8 @@ bucket.register_liquid(
 )
 
 bucket.register_liquid(
-	"base:muddy_water_source",
-	"base:muddy_water_flowing",
+	"australia:muddy_water_source",
+	"australia:muddy_water_flowing",
 	"bucket:bucket_muddy_water",
 	"bucket_muddy_water.png",
 	"Muddy Water Bucket",

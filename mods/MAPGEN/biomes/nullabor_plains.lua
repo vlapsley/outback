@@ -54,7 +54,7 @@ minetest.register_ore({
 -- Nickel (Mount Margaret / Ravensthorpe)
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_nickel",
+	ore =            "australia:stone_with_nickel",
 	wherein =        {"default:stone"},
 	biomes =         {"nullabor_plains"},
 	clust_scarcity = 512,
@@ -105,7 +105,7 @@ minetest.register_decoration({
 	biomes =      {"nullabor_plains"},
 	y_min =       4,
 	y_max =       41,
-	decoration =  "base:spinifex",
+	decoration =  "australia:spinifex",
 })
 
 -- Sturt's Desert Pea
@@ -123,7 +123,7 @@ plants_api.register_plant({
 local function register_small_sandstone_rocks(number)
 	minetest.register_decoration({
 		deco_type =   "simple",
-		decoration =  "base:small_sandstone_rocks"..number,
+		decoration =  "australia:small_sandstone_rocks"..number,
 		sidelen =     80,
 		place_on =    {"default:desert_sand"},
 		fill_ratio =  0.002,
@@ -148,9 +148,9 @@ register_small_sandstone_rocks(1)
 -- Quandong
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:quandong_tree",
-		leaves =  "base:quandong_leaves",
-		fruit =   "base:quandong",
+		trunk =   "australia:quandong_tree",
+		leaves =  "australia:quandong_leaves",
+		fruit =   "australia:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -165,6 +165,6 @@ plants_api.register_plant({
 		local radius =        2
 		local limbs =         nil
 		local fruit_chance =  0.1
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
 	end,
 })

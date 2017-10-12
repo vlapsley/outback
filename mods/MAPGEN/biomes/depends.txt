@@ -1,6 +1,6 @@
 plants_api
 default
-base
+australia
 mapgen_core
 technic?
 flowers?

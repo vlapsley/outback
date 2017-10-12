@@ -15,7 +15,7 @@ minetest.register_biome({
 	depth_filler =     3,
 	node_stone =       "default:stone",
 	node_river_water = "default:river_water_source",
-	node_riverbed =    "base:shale",
+	node_riverbed =    "australia:shale",
 	depth_riverbed =   1,
 	y_min =            4,
 	y_max =            31000,
@@ -33,7 +33,7 @@ minetest.register_biome({
 -- Basalt
 minetest.register_ore({
 	ore_type =       "blob",
-	ore =            "base:basalt",
+	ore =            "australia:basalt",
 	wherein =        {"default:stone"},
 	biomes =         {"tasmania"},
 	clust_scarcity = 3375,
@@ -45,7 +45,7 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =       "blob",
-	ore =            "base:basalt",
+	ore =            "australia:basalt",
 	wherein =        {"default:stone"},
 	biomes =         {"tasmania"},
 	clust_scarcity = 1000,
@@ -58,7 +58,7 @@ minetest.register_ore({
 -- Shale
 minetest.register_ore({
 	ore_type =       "blob",
-	ore =            "base:shale",
+	ore =            "australia:shale",
 	wherein =        {"default:stone"},
 	biomes =         {"tasmania"},
 	clust_scarcity = 27000,
@@ -71,7 +71,7 @@ minetest.register_ore({
 -- Agate (Lune River)
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_agate",
+	ore =            "australia:stone_with_agate",
 	wherein =        {"default:stone"},
 	biomes =         {"tasmania"},
 	clust_scarcity = 3375,
@@ -96,7 +96,7 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:granite_with_tin",
+	ore =            "australia:granite_with_tin",
 	wherein =        {"technic:granite"},
 	biomes =         {"tasmania"},
 	clust_scarcity = 2197,
@@ -160,7 +160,7 @@ minetest.register_decoration({
 	place_on = {
 			"default:dirt",
 			"default:sand",
-			"base:shale",
+			"australia:shale",
 	},
 	sidelen = 80,
 	fill_ratio =  0.3,
@@ -187,7 +187,7 @@ minetest.register_decoration({
 local function register_small_stone_rocks(number)
 	minetest.register_decoration({
 		deco_type =   "simple",
-		decoration =  "base:small_stone_rocks"..number,
+		decoration =  "australia:small_stone_rocks"..number,
 		sidelen =     80,
 		place_on =    {"default:dirt_with_grass"},
 		fill_ratio =  0.001,
@@ -213,8 +213,8 @@ register_small_stone_rocks(1)
 -- Black Wattle
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:black_wattle_tree",
-		leaves =  "base:black_wattle_leaves",
+		trunk =   "australia:black_wattle_tree",
+		leaves =  "australia:black_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -227,15 +227,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(8, 12)
 		local radius =  math_random(4, 5)
-		base.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Black Wattle
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:black_wattle_tree",
-		leaves =  "base:black_wattle_leaves",
+		trunk =   "australia:black_wattle_tree",
+		leaves =  "australia:black_wattle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -248,15 +248,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(5, 7)
 		local radius =  3
-		base.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_black_wattle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Blue Gum (in valleys)
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:blue_gum_tree",
-		leaves =  "base:blue_gum_leaves",
+		trunk =   "australia:blue_gum_tree",
+		leaves =  "australia:blue_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -270,15 +270,15 @@ plants_api.register_plant({
 		local height =  math_random(10, 18)
 		local radius =  math_random(5, 6)
 		local limbs =   true
-		base.make_tall_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tall_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Blue Gum
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:blue_gum_tree",
-		leaves =  "base:blue_gum_leaves",
+		trunk =   "australia:blue_gum_tree",
+		leaves =  "australia:blue_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -292,15 +292,15 @@ plants_api.register_plant({
 		local height =  math_random(10, 18)
 		local radius =  math_random(5, 6)
 		local limbs =   true
-		base.make_tall_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tall_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Celery-top Pine (forest)
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:celery_top_pine_tree",
-		leaves =  "base:celery_top_pine_leaves",
+		trunk =   "australia:celery_top_pine_tree",
+		leaves =  "australia:celery_top_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -313,15 +313,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(7, 9)
 		local radius =  math_random(3, 4)
-		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Celery-top Pine
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:celery_top_pine_tree",
-		leaves =  "base:celery_top_pine_leaves",
+		trunk =   "australia:celery_top_pine_tree",
+		leaves =  "australia:celery_top_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -334,15 +334,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(7, 9)
 		local radius =  math_random(3, 4)
-		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Celery-top Pine
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:celery_top_pine_tree",
-		leaves =  "base:celery_top_pine_leaves",
+		trunk =   "australia:celery_top_pine_tree",
+		leaves =  "australia:celery_top_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -355,15 +355,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(7, 9)
 		local radius =  math_random(3, 4)
-		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Huon Pine (along rivers)
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:huon_pine_tree",
-		leaves =  "base:huon_pine_leaves",
+		trunk =   "australia:huon_pine_tree",
+		leaves =  "australia:huon_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -377,15 +377,15 @@ plants_api.register_plant({
 		local height =  math_random(7, 12)
 		local radius =  math_random(5, 6)
 		local limbs =   true
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Huon Pine
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:huon_pine_tree",
-		leaves =  "base:huon_pine_leaves",
+		trunk =   "australia:huon_pine_tree",
+		leaves =  "australia:huon_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -399,15 +399,15 @@ plants_api.register_plant({
 		local height =  math_random(7, 12)
 		local radius =  math_random(5, 6)
 		local limbs =   true
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Southern Sassafras (along rivers)
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:southern_sassafras_tree",
-		leaves =  "base:southern_sassafras_leaves",
+		trunk =   "australia:southern_sassafras_tree",
+		leaves =  "australia:southern_sassafras_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -420,15 +420,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(7, 12)
 		local radius =  math_random(5, 7)
-		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Southern Sassafras (in valleys)
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:southern_sassafras_tree",
-		leaves =  "base:southern_sassafras_leaves",
+		trunk =   "australia:southern_sassafras_tree",
+		leaves =  "australia:southern_sassafras_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -441,15 +441,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(7, 12)
 		local radius =  math_random(5, 7)
-		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Swamp Gum (forest)
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:swamp_gum_tree",
-		leaves =  "base:swamp_gum_leaves",
+		trunk =   "australia:swamp_gum_tree",
+		leaves =  "australia:swamp_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -463,15 +463,15 @@ plants_api.register_plant({
 		local height =  math_random(20, 30)
 		local radius =  math_random(7, 9)
 		local limbs =   true
-		base.make_swamp_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_swamp_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Tasmanian Myrtle (forest)
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:tasmanian_myrtle_tree",
-		leaves =  "base:tasmanian_myrtle_leaves",
+		trunk =   "australia:tasmanian_myrtle_tree",
+		leaves =  "australia:tasmanian_myrtle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -485,15 +485,15 @@ plants_api.register_plant({
 		local height =  math_random(12, 15)
 		local radius =  math_random(5, 7)
 		local limbs =   true
-		base.make_tasmanian_myrtle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tasmanian_myrtle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Tasmanian Myrtle (low alt - bigger tree)
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:tasmanian_myrtle_tree",
-		leaves =  "base:tasmanian_myrtle_leaves",
+		trunk =   "australia:tasmanian_myrtle_tree",
+		leaves =  "australia:tasmanian_myrtle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -507,15 +507,15 @@ plants_api.register_plant({
 		local height =  math_random(12, 15)
 		local radius =  math_random(5, 7)
 		local limbs =   true
-		base.make_tasmanian_myrtle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tasmanian_myrtle(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Tasmanian Myrtle (high alt - smaller tree)
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:tasmanian_myrtle_tree",
-		leaves =  "base:tasmanian_myrtle_leaves",
+		trunk =   "australia:tasmanian_myrtle_tree",
+		leaves =  "australia:tasmanian_myrtle_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -529,6 +529,6 @@ plants_api.register_plant({
 		local height =  math_random(9, 12)
 		local radius =  math_random(4, 5)
 		local limbs =   true
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })

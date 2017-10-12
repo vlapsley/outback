@@ -98,12 +98,12 @@ biome_lib:register_generate_plant({
 		"default:dirt_with_grass",
 		"default:dirt_with_dry_grass",
 		"default:sand",
-		"base:mangrove_mud"
+		"australia:mangrove_mud"
 	},
     max_count = JUNCUS_NEAR_WATER_PER_MAPBLOCK,
     rarity = 101 - JUNCUS_NEAR_WATER_RARITY,
     min_elevation = 1, -- above sea level
-	near_nodes = {"default:river_water_source","base:muddy_water_source"},
+	near_nodes = {"default:river_water_source","australia:muddy_water_source"},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,

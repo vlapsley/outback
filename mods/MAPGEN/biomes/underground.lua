@@ -23,7 +23,7 @@ minetest.register_biome({
 -- Basalt
 minetest.register_ore({
 	ore_type =       "blob",
-	ore =            "base:basalt",
+	ore =            "australia:basalt",
 	wherein =        {"default:stone"},
 	biomes =         {"underground"},
 	clust_scarcity = 6858,
@@ -35,7 +35,7 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =       "blob",
-	ore =            "base:basalt",
+	ore =            "australia:basalt",
 	wherein =        {"default:stone"},
 	biomes =         {"underground"},
 	clust_scarcity = 2197,
@@ -48,7 +48,7 @@ minetest.register_ore({
 -- Shale
 minetest.register_ore({
 	ore_type =       "blob",
-	ore =            "base:shale",
+	ore =            "australia:shale",
 	wherein =        {"default:stone"},
 	biomes =         {"underground"},
 	clust_scarcity = 27000,
@@ -61,7 +61,7 @@ minetest.register_ore({
 -- Slate
 minetest.register_ore({
 	ore_type =       "blob",
-	ore =            "base:slate",
+	ore =            "australia:slate",
 	wherein =        {"default:stone"},
 	biomes =         {"underground"},
 	clust_scarcity = 27000,
@@ -99,8 +99,8 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:diorite_with_coal",
-	wherein =        {"base:diorite"},
+	ore =            "australia:diorite_with_coal",
+	wherein =        {"australia:diorite"},
 	biomes =         {"underground"},
 	clust_scarcity = 512,
 	clust_num_ores = 8,
@@ -137,7 +137,7 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:granite_with_iron",
+	ore =            "australia:granite_with_iron",
 	wherein =        {"technic:granite"},
 	biomes =         {"underground"},
 	clust_scarcity = 343,
@@ -150,7 +150,7 @@ minetest.register_ore({
 -- Silver
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_silver",
+	ore =            "australia:stone_with_silver",
 	wherein =        {"default:stone"},
 	biomes =         {"underground"},
 	clust_scarcity = 3375,
@@ -175,7 +175,7 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:granite_with_tin",
+	ore =            "australia:granite_with_tin",
 	wherein =        {"technic:granite"},
 	biomes =         {"underground"},
 	clust_scarcity = 2197,

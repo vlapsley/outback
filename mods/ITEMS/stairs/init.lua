@@ -370,9 +370,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"basalt",
-	"base:basalt",
+	"australia:basalt",
 	{cracky = 2},
-	{"base_basalt.png"},
+	{"aus_basalt.png"},
 	"Basalt Stair",
 	"Basalt Slab",
 	default.node_sound_stone_defaults()
@@ -380,9 +380,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"basalt_brick",
-	"base:basalt_brick",
+	"australia:basalt_brick",
 	{cracky = 2},
-	{"base_basalt_brick.png"},
+	{"aus_basalt_brick.png"},
 	"Basalt Brick Stair",
 	"Basalt Brick Slab",
 	default.node_sound_stone_defaults()
@@ -390,9 +390,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"basalt_cobble",
-	"base:basalt_cobble",
+	"australia:basalt_cobble",
 	{cracky = 2},
-	{"base_basalt_cobble.png"},
+	{"aus_basalt_cobble.png"},
 	"Basalt Cobble Stair",
 	"Basalt Cobble Slab",
 	default.node_sound_stone_defaults()
@@ -400,9 +400,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"diorite",
-	"base:diorite",
+	"australia:diorite",
 	{cracky = 2},
-	{"base_diorite.png"},
+	{"aus_diorite.png"},
 	"Diorite Stair",
 	"Diorite Slab",
 	default.node_sound_stone_defaults()
@@ -410,9 +410,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"diorite_brick",
-	"base:diorite_brick",
+	"australia:diorite_brick",
 	{cracky = 2},
-	{"base_diorite.png"},
+	{"aus_diorite.png"},
 	"Diorite Brick Stair",
 	"Diorite Brick Slab",
 	default.node_sound_stone_defaults()
@@ -420,9 +420,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"diorite_cobble",
-	"base:diorite_cobble",
+	"australia:diorite_cobble",
 	{cracky = 2},
-	{"base_diorite_cobble.png"},
+	{"aus_diorite_cobble.png"},
 	"Diorite Cobble Stair",
 	"Diorite Cobble Slab",
 	default.node_sound_stone_defaults()
@@ -460,9 +460,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"limestone",
-	"base:limestone",
+	"australia:limestone",
 	{cracky = 2},
-	{"base_limestone.png"},
+	{"aus_limestone.png"},
 	"Limestone Stair",
 	"Limestone Slab",
 	default.node_sound_stone_defaults()
@@ -470,9 +470,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"limestone_cobble",
-	"base:limestone_cobble",
+	"australia:limestone_cobble",
 	{cracky = 2},
-	{"base_limestone_cobble.png"},
+	{"aus_limestone_cobble.png"},
 	"Limestone Cobble Stair",
 	"Limestone Cobble Slab",
 	default.node_sound_stone_defaults()
@@ -480,9 +480,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"marble",
-	"base:marble",
+	"australia:marble",
 	{cracky = 2},
-	{"base_marble.png"},
+	{"aus_marble.png"},
 	"Marble Stair",
 	"Marble Slab",
 	default.node_sound_stone_defaults()
@@ -490,9 +490,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"marble_tile",
-	"base:marble_tile",
+	"australia:marble_tile",
 	{cracky = 2},
-	{"base_marble_tile.png"},
+	{"aus_marble_tile.png"},
 	"Marble Tile Stair",
 	"Marble Tile Slab",
 	default.node_sound_stone_defaults()
@@ -530,9 +530,9 @@ stairs.register_stair_and_slab(
 
 stairs.register_stair_and_slab(
 	"slate",
-	"base:sate",
+	"australia:sate",
 	{cracky = 2},
-	{"base_slate.png"},
+	{"aus_slate.png"},
 	"Slate Stair",
 	"Slate Slab",
 	default.node_sound_stone_defaults()
@@ -685,9 +685,9 @@ stairs.register_stair_and_slab(
 -- Eucalyptus Wood
 stairs.register_stair_and_slab(
 	"eucalyptus_wood",
-	"base:eucalyptus_wood",
+	"australia:eucalyptus_wood",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"base_eucalyptus_wood.png"},
+	{"aus_eucalyptus_wood.png"},
 	"Eucalyptus Wood Stair",
 	"Eucalyptus Wood Slab",
 	default.node_sound_wood_defaults()
@@ -696,9 +696,9 @@ stairs.register_stair_and_slab(
 -- Blackwood
 stairs.register_stair_and_slab(
 	"blackwood",
-	"base:blackwood",
+	"australia:blackwood",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"base_blackwood.png"},
+	{"aus_blackwood.png"},
 	"Blackwood Stair",
 	"Blackwood Slab",
 	default.node_sound_wood_defaults()
@@ -707,9 +707,9 @@ stairs.register_stair_and_slab(
 -- Blue Gum
 stairs.register_stair_and_slab(
 	"blue_gum",
-	"base:blue_gum",
+	"australia:blue_gum",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"base_blue_gum.png"},
+	{"aus_blue_gum.png"},
 	"Blue Gum Stair",
 	"Blue Gum Slab",
 	default.node_sound_wood_defaults()
@@ -718,9 +718,9 @@ stairs.register_stair_and_slab(
 -- Celery-top Pine
 stairs.register_stair_and_slab(
 	"celery_top_pine",
-	"base:celery_top_pine",
+	"australia:celery_top_pine",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
-	{"base_celery_top_pine.png"},
+	{"aus_celery_top_pine.png"},
 	"Celery-top Pine Stair",
 	"Celery-top Pine Slab",
 	default.node_sound_wood_defaults()
@@ -729,9 +729,9 @@ stairs.register_stair_and_slab(
 -- Red Mahogany
 stairs.register_stair_and_slab(
 	"red_mahogany",
-	"base:red_mahogany",
+	"australia:red_mahogany",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"base_red_mahogany.png"},
+	{"aus_red_mahogany.png"},
 	"Red Mahogany Stair",
 	"Red Mahogany Slab",
 	default.node_sound_wood_defaults()
@@ -740,9 +740,9 @@ stairs.register_stair_and_slab(
 -- Huon Pine
 stairs.register_stair_and_slab(
 	"huon_pine",
-	"base:huon_pine",
+	"australia:huon_pine",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
-	{"base_huon_pine.png"},
+	{"aus_huon_pine.png"},
 	"Huon Pine Stair",
 	"Huon Pine Slab",
 	default.node_sound_wood_defaults()
@@ -751,9 +751,9 @@ stairs.register_stair_and_slab(
 -- Jarrah
 stairs.register_stair_and_slab(
 	"jarrah",
-	"base:jarrah",
+	"australia:jarrah",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"base_jarrah.png"},
+	{"aus_jarrah.png"},
 	"Jarrah Stair",
 	"Jarrah Slab",
 	default.node_sound_wood_defaults()
@@ -762,9 +762,9 @@ stairs.register_stair_and_slab(
 -- Karri
 stairs.register_stair_and_slab(
 	"karri",
-	"base:karri",
+	"australia:karri",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"base_karri.png"},
+	{"aus_karri.png"},
 	"Karri Stair",
 	"Karri Slab",
 	default.node_sound_wood_defaults()
@@ -773,9 +773,9 @@ stairs.register_stair_and_slab(
 -- Marri
 stairs.register_stair_and_slab(
 	"marri",
-	"base:marri",
+	"australia:marri",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"base_marri.png"},
+	{"aus_marri.png"},
 	"Marri Stair",
 	"Marri Slab",
 	default.node_sound_wood_defaults()
@@ -784,9 +784,9 @@ stairs.register_stair_and_slab(
 -- Merbau
 stairs.register_stair_and_slab(
 	"merbau",
-	"base:merbau",
+	"australia:merbau",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"base_merbau.png"},
+	{"aus_merbau.png"},
 	"Merbau Stair",
 	"Merbau Slab",
 	default.node_sound_wood_defaults()
@@ -795,9 +795,9 @@ stairs.register_stair_and_slab(
 -- Red Gum
 stairs.register_stair_and_slab(
 	"red_gum",
-	"base:red_gum",
+	"australia:red_gum",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"base_red_gum.png"},
+	{"aus_red_gum.png"},
 	"Red Gum Stair",
 	"Red Gum Slab",
 	default.node_sound_wood_defaults()
@@ -806,9 +806,9 @@ stairs.register_stair_and_slab(
 -- Southern Sassafras
 stairs.register_stair_and_slab(
 	"southern_sassafras",
-	"base:southern_sassafras",
+	"australia:southern_sassafras",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"base_southern_sassafras.png"},
+	{"aus_southern_sassafras.png"},
 	"Southern Sassafras Stair",
 	"Southern Sassafras Slab",
 	default.node_sound_wood_defaults()
@@ -817,9 +817,9 @@ stairs.register_stair_and_slab(
 -- Tasmanian Oak
 stairs.register_stair_and_slab(
 	"tasmanian_oak",
-	"base:tasmanian_oak",
+	"australia:tasmanian_oak",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
-	{"base_tasmanian_oak.png"},
+	{"aus_tasmanian_oak.png"},
 	"Tasmanian Oak Stair",
 	"Tasmanian Oak Slab",
 	default.node_sound_wood_defaults()
@@ -828,9 +828,9 @@ stairs.register_stair_and_slab(
 -- Tasmanian Myrtle
 stairs.register_stair_and_slab(
 	"tasmanian_myrtle",
-	"base:tasmanian_myrtle",
+	"australia:tasmanian_myrtle",
 	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"base_tasmanian_myrtle.png"},
+	{"aus_tasmanian_myrtle.png"},
 	"Tasmanian Myrtle Stair",
 	"Tasmanian Myrtle Slab",
 	default.node_sound_wood_defaults()

@@ -1,13 +1,13 @@
 --[[
-	Base liquid nodes
+	Liquid nodes
 --]]
 
-minetest.register_node("base:muddy_water_source", {
+minetest.register_node("australia:muddy_water_source", {
 	description = "Muddy Water Source",
 	drawtype = "liquid",
 	tiles = {
 		{
-			name="base_muddy_water_source_animated.png",
+			name="aus_muddy_water_source_animated.png",
 			animation = {
 				type = "vertical_frames",
 				aspect_w = 16,
@@ -18,7 +18,7 @@ minetest.register_node("base:muddy_water_source", {
 	},
 	special_tiles = {
 		{
-			name="base_muddy_water_source_animated.png",
+			name="aus_muddy_water_source_animated.png",
 			animation = {
 				type = "vertical_frames",
 				aspect_w = 16,
@@ -38,8 +38,8 @@ minetest.register_node("base:muddy_water_source", {
 	drop = "",
 	drowning = 1,
 	liquidtype = "source",
-	liquid_alternative_flowing = "base:muddy_water_flowing",
-	liquid_alternative_source = "base:muddy_water_source",
+	liquid_alternative_flowing = "australia:muddy_water_flowing",
+	liquid_alternative_source = "australia:muddy_water_source",
 	liquid_viscosity = 1,
 	liquid_renewable = true,
 	liquid_range = 2,
@@ -48,13 +48,13 @@ minetest.register_node("base:muddy_water_source", {
 	sounds = default.node_sound_water_defaults(),
 })
 
-minetest.register_node("base:muddy_water_flowing", {
+minetest.register_node("australia:muddy_water_flowing", {
 	description = "Flowing Muddy Water",
 	drawtype = "flowingliquid",
-	tiles = {"base_muddy_water.png"},
+	tiles = {"aus_muddy_water.png"},
 	special_tiles = {
 		{
-			image="base_muddy_water_flowing_animated.png",
+			image="aus_muddy_water_flowing_animated.png",
 			backface_culling = false,
 			animation = {
 				type = "vertical_frames",
@@ -64,7 +64,7 @@ minetest.register_node("base:muddy_water_flowing", {
 			},
 		},
 		{
-			image="base_muddy_water_flowing_animated.png",
+			image="aus_muddy_water_flowing_animated.png",
 			backface_culling = true,
 			animation = {
 				type = "vertical_frames",
@@ -84,8 +84,8 @@ minetest.register_node("base:muddy_water_flowing", {
 	is_ground_content = false,
 	drowning = 1,
 	liquidtype = "flowing",
-	liquid_alternative_flowing = "base:muddy_water_flowing",
-	liquid_alternative_source = "base:muddy_water_source",
+	liquid_alternative_flowing = "australia:muddy_water_flowing",
+	liquid_alternative_source = "australia:muddy_water_source",
 	liquid_viscosity = 1,
 	liquid_renewable = false,
 	liquid_range = 2,
@@ -96,12 +96,12 @@ minetest.register_node("base:muddy_water_flowing", {
 })
 
 
-minetest.register_node("base:crude_oil_source", {
+minetest.register_node("australia:crude_oil_source", {
 	description = "Crude Oil Source",
 	drawtype = "liquid",
 	tiles = {
 		{
-			name="base_crude_oil_source_animated.png",
+			name="aus_crude_oil_source_animated.png",
 			animation = {
 				type = "vertical_frames",
 				aspect_w = 16,
@@ -112,7 +112,7 @@ minetest.register_node("base:crude_oil_source", {
 	},
 	special_tiles = {
 		{
-			name="base_crude_oil_source_animated.png",
+			name="aus_crude_oil_source_animated.png",
 			animation = {
 				type = "vertical_frames",
 				aspect_w = 16,
@@ -132,8 +132,8 @@ minetest.register_node("base:crude_oil_source", {
 	drop = "",
 	drowning = 1,
 	liquidtype = "source",
-	liquid_alternative_flowing = "base:crude_oil_flowing",
-	liquid_alternative_source = "base:crude_oil_source",
+	liquid_alternative_flowing = "australia:crude_oil_flowing",
+	liquid_alternative_source = "australia:crude_oil_source",
 	liquid_viscosity = 1,
 	liquid_renewable = false,
 	liquid_range = 2,
@@ -142,13 +142,13 @@ minetest.register_node("base:crude_oil_source", {
 	sounds = default.node_sound_water_defaults(),
 })
 
-minetest.register_node("base:crude_oil_flowing", {
+minetest.register_node("australia:crude_oil_flowing", {
 	description = "Flowing Crude Oil",
 	drawtype = "flowingliquid",
-	tiles = {"base_crude_oil.png"},
+	tiles = {"aus_crude_oil.png"},
 	special_tiles = {
 		{
-			image="base_crude_oil_flowing_animated.png",
+			image="aus_crude_oil_flowing_animated.png",
 			backface_culling = false,
 			animation = {
 				type = "vertical_frames",
@@ -158,7 +158,7 @@ minetest.register_node("base:crude_oil_flowing", {
 			},
 		},
 		{
-			image="base_crude_oil_flowing_animated.png",
+			image="aus_crude_oil_flowing_animated.png",
 			backface_culling = true,
 			animation = {
 				type = "vertical_frames",
@@ -178,8 +178,8 @@ minetest.register_node("base:crude_oil_flowing", {
 	is_ground_content = false,
 	drowning = 1,
 	liquidtype = "flowing",
-	liquid_alternative_flowing = "base:crude_oil_flowing",
-	liquid_alternative_source = "base:crude_oil_source",
+	liquid_alternative_flowing = "australia:crude_oil_flowing",
+	liquid_alternative_source = "australia:crude_oil_source",
 	liquid_viscosity = 1,
 	liquid_renewable = false,
 	liquid_range = 2,

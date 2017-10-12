@@ -11,7 +11,7 @@ minetest.register_biome({
 	node_filler =      "default:sandstone",
 	depth_filler =     2,
 	node_stone =       "default:stone",
-	node_river_water = "base:muddy_water_source",
+	node_river_water = "australia:muddy_water_source",
 	node_water =       "default:water_source",
 	node_riverbed =    "default:sand",
 	depth_riverbed =   1,
@@ -31,7 +31,7 @@ minetest.register_biome({
 -- Oil
 minetest.register_ore({
 	ore_type =               "sheet",
-	ore =                    "base:crude_oil_source",
+	ore =                    "australia:crude_oil_source",
 	wherein =                {"default:stone"},
 	biomes =                 {"timor_sea"},
 	column_height_min =      2,

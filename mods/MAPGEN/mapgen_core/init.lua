@@ -139,7 +139,7 @@ minetest.register_ore({
 -- Diorite
 minetest.register_ore({
 	ore_type       = "blob",
-	ore            = "base:diorite",
+	ore            = "australia:diorite",
 	wherein        = {"default:stone"},
 	clust_scarcity = 15*15*15,
 	clust_num_ores = 33,
@@ -150,7 +150,7 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type       = "blob",
-	ore            = "base:diorite",
+	ore            = "australia:diorite",
 	wherein        = {"default:stone"},
 	clust_scarcity = 10*10*10,
 	clust_num_ores = 58,
@@ -200,6 +200,6 @@ biome_lib:register_generate_plant({
 	near_nodes_count = 10,
 	temp_min = -0.2,
 	},
-	base.palm_model
+	aus.palm_model
 )
 

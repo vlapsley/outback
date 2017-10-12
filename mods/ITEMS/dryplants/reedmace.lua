@@ -334,13 +334,13 @@ minetest.register_entity("dryplants:reedmace_water_entity",{
 biome_lib:register_generate_plant({
     surface = {
 		"default:sand",
-		"base:mangrove_mud"
+		"australia:mangrove_mud"
 	},
     max_count = REEDMACE_NEAR_WATER_PER_MAPBLOCK,
     rarity = 101 - REEDMACE_NEAR_WATER_RARITY,
     min_elevation = 1,
     max_elevation = 15,
-	near_nodes = {"default:river_water_source", "base:muddy_water_source"},
+	near_nodes = {"default:river_water_source", "australia:muddy_water_source"},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
 	near_nodes_count = 1,
@@ -352,7 +352,7 @@ biome_lib:register_generate_plant({
 -- mangroves
 biome_lib:register_generate_plant({
     surface = {
-		"base:mangrove_mud"
+		"australia:mangrove_mud"
 	},
     max_count = REEDMACE_NEAR_WATER_PER_MAPBLOCK,
     rarity = 101 - REEDMACE_NEAR_WATER_RARITY,
@@ -371,13 +371,13 @@ biome_lib:register_generate_plant({
 biome_lib:register_generate_plant({
     surface = {
 		"default:clay",
-		"base:mangrove_mud"
+		"australia:mangrove_mud"
 	},
     max_count = REEDMACE_IN_WATER_PER_MAPBLOCK,
 	rarity = 101 - REEDMACE_IN_WATER_RARITY,
     min_elevation = 0, -- a bit below sea level
 	max_elevation = 0,
-	near_nodes = {"base:muddy_water_source"},
+	near_nodes = {"australia:muddy_water_source"},
 	near_nodes_size = 1,
 	near_nodes_count = 1,
     plantlife_limit = -0.9,

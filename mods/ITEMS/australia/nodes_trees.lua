@@ -1,17 +1,17 @@
 --[[
-	Base tree nodes
+	Tree nodes
 --]]
 
 
-base.schematics = {}
+aus.schematics = {}
 
 -- Arnhem Cypress Pine
-minetest.register_node("base:arnhem_cypress_pine_tree", {
+minetest.register_node("australia:arnhem_cypress_pine_tree", {
 	description = "Arnhem Cypress Pine Tree",
 	tiles = {
-		"base_arnhem_cypress_pine_tree_top.png",
-		"base_arnhem_cypress_pine_tree_top.png",
-		"base_arnhem_cypress_pine_tree.png"
+		"aus_arnhem_cypress_pine_tree_top.png",
+		"aus_arnhem_cypress_pine_tree_top.png",
+		"aus_arnhem_cypress_pine_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -20,27 +20,27 @@ minetest.register_node("base:arnhem_cypress_pine_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:arnhem_cypress_pine_leaves", {
+minetest.register_node("australia:arnhem_cypress_pine_leaves", {
 	description = "Arnhem Cypress Pine Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_arnhem_cypress_pine_leaves.png"},
+	tiles = {"aus_arnhem_cypress_pine_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:arnhem_cypress_pine_sapling"}, rarity = 20,},
-			{items = {"base:arnhem_cypress_pine_leaves"},}
+			{items = {"australia:arnhem_cypress_pine_sapling"}, rarity = 20,},
+			{items = {"australia:arnhem_cypress_pine_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:arnhem_cypress_pine_sapling", {
+minetest.register_node("australia:arnhem_cypress_pine_sapling", {
 	description = "Arnhem Cypress Pine Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -62,7 +62,7 @@ minetest.register_node("base:arnhem_cypress_pine_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:arnhem_cypress_pine_sapling",
+			"australia:arnhem_cypress_pine_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -4, y = 1, z = -4},
@@ -74,12 +74,12 @@ minetest.register_node("base:arnhem_cypress_pine_sapling", {
 })
 
 -- Black Box
-minetest.register_node("base:black_box_tree", {
+minetest.register_node("australia:black_box_tree", {
 	description = "Black Box Tree",
 	tiles = {
-		"base_black_box_tree_top.png",
-		"base_black_box_tree_top.png",
-		"base_black_box_tree.png"
+		"aus_black_box_tree_top.png",
+		"aus_black_box_tree_top.png",
+		"aus_black_box_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -88,33 +88,33 @@ minetest.register_node("base:black_box_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:black_box_leaves", {
+minetest.register_node("australia:black_box_leaves", {
 	description = "Black Box Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_black_box_leaves.png"},
+	tiles = {"aus_black_box_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:black_box_sapling"}, rarity = 20,},
-			{items = {"base:black_box_leaves"},}
+			{items = {"australia:black_box_sapling"}, rarity = 20,},
+			{items = {"australia:black_box_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:black_box_sapling", {
+minetest.register_node("australia:black_box_sapling", {
 	description = "Black Box Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -130,7 +130,7 @@ minetest.register_node("base:black_box_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:black_box_sapling",
+			"australia:black_box_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -6, y = 1, z = -6},
@@ -142,12 +142,12 @@ minetest.register_node("base:black_box_sapling", {
 })
 
 -- Black Wattle
-minetest.register_node("base:black_wattle_tree", {
+minetest.register_node("australia:black_wattle_tree", {
 	description = "Black Wattle Tree",
 	tiles = {
-		"base_black_wattle_tree_top.png",
-		"base_black_wattle_tree_top.png",
-		"base_black_wattle_tree.png"
+		"aus_black_wattle_tree_top.png",
+		"aus_black_wattle_tree_top.png",
+		"aus_black_wattle_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -166,27 +166,27 @@ minetest.register_node("base:black_wattle_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:black_wattle_leaves", {
+minetest.register_node("australia:black_wattle_leaves", {
 	description = "Black Wattle Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_black_wattle_leaves.png"},
+	tiles = {"aus_black_wattle_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:black_wattle_sapling"}, rarity = 20,},
-			{items = {"base:black_wattle_leaves"},}
+			{items = {"australia:black_wattle_sapling"}, rarity = 20,},
+			{items = {"australia:black_wattle_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:black_wattle_sapling", {
+minetest.register_node("australia:black_wattle_sapling", {
 	description = "Black Wattle Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -208,7 +208,7 @@ minetest.register_node("base:black_wattle_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:black_wattle_sapling",
+			"australia:black_wattle_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -4, y = 1, z = -4},
@@ -220,12 +220,12 @@ minetest.register_node("base:black_wattle_sapling", {
 })
 
 -- Blue Gum
-minetest.register_node("base:blue_gum_tree", {
+minetest.register_node("australia:blue_gum_tree", {
 	description = "Blue Gum Tree",
 	tiles = {
-		"base_blue_gum_tree_top.png",
-		"base_blue_gum_tree_top.png",
-		"base_blue_gum_tree.png"
+		"aus_blue_gum_tree_top.png",
+		"aus_blue_gum_tree_top.png",
+		"aus_blue_gum_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -234,33 +234,33 @@ minetest.register_node("base:blue_gum_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:blue_gum_leaves", {
+minetest.register_node("australia:blue_gum_leaves", {
 	description = "Blue Gum Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_blue_gum_leaves.png"},
+	tiles = {"aus_blue_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:blue_gum_sapling"}, rarity = 20,},
-			{items = {"base:blue_gum_leaves"},}
+			{items = {"australia:blue_gum_sapling"}, rarity = 20,},
+			{items = {"australia:blue_gum_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:blue_gum_sapling", {
+minetest.register_node("australia:blue_gum_sapling", {
 	description = "Blue Gum Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -276,7 +276,7 @@ minetest.register_node("base:blue_gum_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:blue_gum_sapling",
+			"australia:blue_gum_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -7, y = 1, z = -7},
@@ -288,12 +288,12 @@ minetest.register_node("base:blue_gum_sapling", {
 })
 
 -- Boab
-minetest.register_node("base:boab_tree", {
+minetest.register_node("australia:boab_tree", {
 	description = "Boab Tree",
 	tiles = {
-		"base_boab_tree_top.png",
-		"base_boab_tree_top.png",
-		"base_boab_tree.png"
+		"aus_boab_tree_top.png",
+		"aus_boab_tree_top.png",
+		"aus_boab_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -302,33 +302,33 @@ minetest.register_node("base:boab_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:boab_leaves", {
+minetest.register_node("australia:boab_leaves", {
 	description = "Boab Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_boab_leaves.png"},
+	tiles = {"aus_boab_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:boab_sapling"}, rarity = 20,},
-			{items = {"base:boab_leaves"},}
+			{items = {"australia:boab_sapling"}, rarity = 20,},
+			{items = {"australia:boab_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:boab_sapling", {
+minetest.register_node("australia:boab_sapling", {
 	description = "Boab Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_boab_sapling.png"},
-	inventory_image = "base_boab_sapling.png",
-	wield_image = "base_boab_sapling.png",
+	tiles = {"aus_boab_sapling.png"},
+	inventory_image = "aus_boab_sapling.png",
+	wield_image = "aus_boab_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -344,7 +344,7 @@ minetest.register_node("base:boab_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:boab_sapling",
+			"australia:boab_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -5, y = 1, z = -5},
@@ -356,12 +356,12 @@ minetest.register_node("base:boab_sapling", {
 })
 
 -- Bull Banksia
-minetest.register_node("base:bull_banksia_tree", {
+minetest.register_node("australia:bull_banksia_tree", {
 	description = "Bull Banksia Tree",
 	tiles = {
-		"base_bull_banksia_tree_top.png",
-		"base_bull_banksia_tree_top.png",
-		"base_bull_banksia_tree.png"
+		"aus_bull_banksia_tree_top.png",
+		"aus_bull_banksia_tree_top.png",
+		"aus_bull_banksia_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -381,33 +381,33 @@ minetest.register_node("base:bull_banksia_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:bull_banksia_leaves", {
+minetest.register_node("australia:bull_banksia_leaves", {
 	description = "Bull Banksia Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_bull_banksia_leaves.png"},
+	tiles = {"aus_bull_banksia_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:bull_banksia_sapling"}, rarity = 20,},
-			{items = {"base:bull_banksia_leaves"},}
+			{items = {"australia:bull_banksia_sapling"}, rarity = 20,},
+			{items = {"australia:bull_banksia_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:bull_banksia_sapling", {
+minetest.register_node("australia:bull_banksia_sapling", {
 	description = "Bull Banksia Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_banksia_sapling.png"},
-	inventory_image = "base_banksia_sapling.png",
-	wield_image = "base_banksia_sapling.png",
+	tiles = {"aus_banksia_sapling.png"},
+	inventory_image = "aus_banksia_sapling.png",
+	wield_image = "aus_banksia_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -423,7 +423,7 @@ minetest.register_node("base:bull_banksia_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:bull_banksia_sapling",
+			"australia:bull_banksia_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -3, y = 1, z = -3},
@@ -435,12 +435,12 @@ minetest.register_node("base:bull_banksia_sapling", {
 })
 
 -- Celery-top Pine
-minetest.register_node("base:celery_top_pine_tree", {
+minetest.register_node("australia:celery_top_pine_tree", {
 	description = "Celery-top Pine Tree",
 	tiles = {
-		"base_celery_top_pine_tree_top.png",
-		"base_celery_top_pine_tree_top.png",
-		"base_celery_top_pine_tree.png"
+		"aus_celery_top_pine_tree_top.png",
+		"aus_celery_top_pine_tree_top.png",
+		"aus_celery_top_pine_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -459,27 +459,27 @@ minetest.register_node("base:celery_top_pine_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:celery_top_pine_leaves", {
+minetest.register_node("australia:celery_top_pine_leaves", {
 	description = "Celery-top Pine Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_celery_top_pine_leaves.png"},
+	tiles = {"aus_celery_top_pine_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:celery_top_pine_sapling"}, rarity = 20,},
-			{items = {"base:celery_top_pine_leaves"},}
+			{items = {"australia:celery_top_pine_sapling"}, rarity = 20,},
+			{items = {"australia:celery_top_pine_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:celery_top_pine_sapling", {
+minetest.register_node("australia:celery_top_pine_sapling", {
 	description = "Celery-top Pine Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -501,7 +501,7 @@ minetest.register_node("base:celery_top_pine_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:celery_top_pine_sapling",
+			"australia:celery_top_pine_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -4, y = 1, z = -4},
@@ -513,12 +513,12 @@ minetest.register_node("base:celery_top_pine_sapling", {
 })
 
 -- Australian Cherry
-minetest.register_node("base:cherry_tree", {
+minetest.register_node("australia:cherry_tree", {
 	description = "Australian Cherry Tree",
 	tiles = {
-		"base_cherry_tree_top.png",
-		"base_cherry_tree_top.png",
-		"base_cherry_tree.png"
+		"aus_cherry_tree_top.png",
+		"aus_cherry_tree_top.png",
+		"aus_cherry_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -538,33 +538,33 @@ minetest.register_node("base:cherry_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:cherry_leaves", {
+minetest.register_node("australia:cherry_leaves", {
 	description = "Australian Cherry Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_cherry_leaves.png"},
+	tiles = {"aus_cherry_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:cherry_sapling"}, rarity = 20,},
-			{items = {"base:cherry_leaves"},}
+			{items = {"australia:cherry_sapling"}, rarity = 20,},
+			{items = {"australia:cherry_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:cherry_sapling", {
+minetest.register_node("australia:cherry_sapling", {
 	description = "Australian Cherry Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_berry_sapling.png"},
-	inventory_image = "base_berry_sapling.png",
-	wield_image = "base_berry_sapling.png",
+	tiles = {"aus_berry_sapling.png"},
+	inventory_image = "aus_berry_sapling.png",
+	wield_image = "aus_berry_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -580,7 +580,7 @@ minetest.register_node("base:cherry_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:cherry_sapling",
+			"australia:cherry_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -3, y = 1, z = -3},
@@ -591,12 +591,12 @@ minetest.register_node("base:cherry_sapling", {
 	end,
 })
 
-minetest.register_node("base:cherry", {
+minetest.register_node("australia:cherry", {
 	description = "Australian Cherries",
 	drawtype = "plantlike",
 	visual_scale = 8/16,
-	tiles = {"base_cherry.png"},
-	inventory_image = "base_cherry.png",
+	tiles = {"aus_cherry.png"},
+	inventory_image = "aus_cherry.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -610,18 +610,18 @@ minetest.register_node("base:cherry", {
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
-			minetest.set_node(pos, {name = "base:cherry", param2 = 1})
+			minetest.set_node(pos, {name = "australia:cherry", param2 = 1})
 		end
 	end,
 })
 
 -- Coast Banksia
-minetest.register_node("base:coast_banksia_tree", {
+minetest.register_node("australia:coast_banksia_tree", {
 	description = "Coast Banksia Tree",
 	tiles = {
-		"base_coast_banksia_tree_top.png",
-		"base_coast_banksia_tree_top.png",
-		"base_coast_banksia_tree.png"
+		"aus_coast_banksia_tree_top.png",
+		"aus_coast_banksia_tree_top.png",
+		"aus_coast_banksia_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -640,33 +640,33 @@ minetest.register_node("base:coast_banksia_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:coast_banksia_leaves", {
+minetest.register_node("australia:coast_banksia_leaves", {
 	description = "Coast Banksia Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_coast_banksia_leaves.png"},
+	tiles = {"aus_coast_banksia_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:coast_banksia_sapling"}, rarity = 20,},
-			{items = {"base:coast_banksia_leaves"},}
+			{items = {"australia:coast_banksia_sapling"}, rarity = 20,},
+			{items = {"australia:coast_banksia_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:coast_banksia_sapling", {
+minetest.register_node("australia:coast_banksia_sapling", {
 	description = "Coast Banksia Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_banksia_sapling.png"},
-	inventory_image = "base_banksia_sapling.png",
-	wield_image = "base_banksia_sapling.png",
+	tiles = {"aus_banksia_sapling.png"},
+	inventory_image = "aus_banksia_sapling.png",
+	wield_image = "aus_banksia_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -682,7 +682,7 @@ minetest.register_node("base:coast_banksia_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:coast_banksia_sapling",
+			"australia:coast_banksia_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -5, y = 1, z = -5},
@@ -694,12 +694,12 @@ minetest.register_node("base:coast_banksia_sapling", {
 })
 
 -- Coolabah
-minetest.register_node("base:coolabah_tree", {
+minetest.register_node("australia:coolabah_tree", {
 	description = "Coolabah Tree",
 	tiles = {
-		"base_coolabah_tree_top.png",
-		"base_coolabah_tree_top.png",
-		"base_coolabah_tree.png"
+		"aus_coolabah_tree_top.png",
+		"aus_coolabah_tree_top.png",
+		"aus_coolabah_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -708,33 +708,33 @@ minetest.register_node("base:coolabah_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:coolabah_leaves", {
+minetest.register_node("australia:coolabah_leaves", {
 	description = "Coolabah Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_coolabah_leaves.png"},
+	tiles = {"aus_coolabah_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:coolabah_sapling"}, rarity = 20,},
-			{items = {"base:coolabah_leaves"},}
+			{items = {"australia:coolabah_sapling"}, rarity = 20,},
+			{items = {"australia:coolabah_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:coolabah_sapling", {
+minetest.register_node("australia:coolabah_sapling", {
 	description = "Coolabah Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -750,7 +750,7 @@ minetest.register_node("base:coolabah_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:blue_gum_sapling",
+			"australia:blue_gum_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -5, y = 1, z = -5},
@@ -762,12 +762,12 @@ minetest.register_node("base:coolabah_sapling", {
 })
 
 -- Daintree Stringybark
-minetest.register_node("base:daintree_stringybark_tree", {
+minetest.register_node("australia:daintree_stringybark_tree", {
 	description = "Daintree Stringybark Tree",
 	tiles = {
-		"base_daintree_stringybark_tree_top.png",
-		"base_daintree_stringybark_tree_top.png",
-		"base_daintree_stringybark_tree.png"
+		"aus_daintree_stringybark_tree_top.png",
+		"aus_daintree_stringybark_tree_top.png",
+		"aus_daintree_stringybark_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -776,33 +776,33 @@ minetest.register_node("base:daintree_stringybark_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:daintree_stringybark_leaves", {
+minetest.register_node("australia:daintree_stringybark_leaves", {
 	description = "Daintree Stringybark Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_daintree_stringybark_leaves.png"},
+	tiles = {"aus_daintree_stringybark_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:daintree_stringybark_sapling"}, rarity = 20,},
-			{items = {"base:daintree_stringybark_leaves"},}
+			{items = {"australia:daintree_stringybark_sapling"}, rarity = 20,},
+			{items = {"australia:daintree_stringybark_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:daintree_stringybark_sapling", {
+minetest.register_node("australia:daintree_stringybark_sapling", {
 	description = "Daintree Stringybark Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -818,7 +818,7 @@ minetest.register_node("base:daintree_stringybark_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:blue_gum_sapling",
+			"australia:blue_gum_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -9, y = 1, z = -9},
@@ -830,12 +830,12 @@ minetest.register_node("base:daintree_stringybark_sapling", {
 })
 
 -- Darwin Woollybutt
-minetest.register_node("base:darwin_woollybutt_tree", {
+minetest.register_node("australia:darwin_woollybutt_tree", {
 	description = "Darwin Woollybutt Tree",
 	tiles = {
-		"base_darwin_woollybutt_tree_top.png",
-		"base_darwin_woollybutt_tree_top.png",
-		"base_darwin_woollybutt_tree.png"
+		"aus_darwin_woollybutt_tree_top.png",
+		"aus_darwin_woollybutt_tree_top.png",
+		"aus_darwin_woollybutt_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -844,33 +844,33 @@ minetest.register_node("base:darwin_woollybutt_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:darwin_woollybutt_leaves", {
+minetest.register_node("australia:darwin_woollybutt_leaves", {
 	description = "Darwin Woollybutt Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_darwin_woollybutt_leaves.png"},
+	tiles = {"aus_darwin_woollybutt_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:darwin_woollybutt_sapling"}, rarity = 20,},
-			{items = {"base:darwin_woollybutt_leaves"},}
+			{items = {"australia:darwin_woollybutt_sapling"}, rarity = 20,},
+			{items = {"australia:darwin_woollybutt_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:darwin_woollybutt_sapling", {
+minetest.register_node("australia:darwin_woollybutt_sapling", {
 	description = "Darwin Woollybutt Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -886,7 +886,7 @@ minetest.register_node("base:darwin_woollybutt_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:blue_gum_sapling",
+			"australia:blue_gum_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -5, y = 1, z = -5},
@@ -898,12 +898,12 @@ minetest.register_node("base:darwin_woollybutt_sapling", {
 })
 
 -- Desert Oak
-minetest.register_node("base:desert_oak_tree", {
+minetest.register_node("australia:desert_oak_tree", {
 	description = "Desert Oak Tree",
 	tiles = {
-		"base_desert_oak_tree_top.png",
-		"base_desert_oak_tree_top.png",
-		"base_desert_oak_tree.png"
+		"aus_desert_oak_tree_top.png",
+		"aus_desert_oak_tree_top.png",
+		"aus_desert_oak_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -912,27 +912,27 @@ minetest.register_node("base:desert_oak_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:desert_oak_leaves", {
+minetest.register_node("australia:desert_oak_leaves", {
 	description = "Desert Oak Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_desert_oak_leaves.png"},
+	tiles = {"aus_desert_oak_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:desert_oak_sapling"}, rarity = 20,},
-			{items = {"base:desert_oak_leaves"},}
+			{items = {"australia:desert_oak_sapling"}, rarity = 20,},
+			{items = {"australia:desert_oak_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:desert_oak_sapling", {
+minetest.register_node("australia:desert_oak_sapling", {
 	description = "Desert Oak Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -954,7 +954,7 @@ minetest.register_node("base:desert_oak_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:desert_oak_sapling",
+			"australia:desert_oak_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -4, y = 1, z = -4},
@@ -966,12 +966,12 @@ minetest.register_node("base:desert_oak_sapling", {
 })
 
 -- Australian Fan Palm
-minetest.register_node("base:fan_palm_tree", {
+minetest.register_node("australia:fan_palm_tree", {
 	description = "Australian Fan Palm Tree",
 	tiles = {
-		"base_fan_palm_tree_top.png",
-		"base_fan_palm_tree_top.png",
-		"base_fan_palm_tree.png"
+		"aus_fan_palm_tree_top.png",
+		"aus_fan_palm_tree_top.png",
+		"aus_fan_palm_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -991,33 +991,33 @@ minetest.register_node("base:fan_palm_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:fan_palm_leaves", {
+minetest.register_node("australia:fan_palm_leaves", {
 	description = "Australian Fan Palm Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_fan_palm_leaves.png"},
+	tiles = {"aus_fan_palm_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 2, leafdecay = 5, flammable = 1, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:fan_palm_sapling"}, rarity = 20,},
-			{items = {"base:fan_palm_leaves"},}
+			{items = {"australia:fan_palm_sapling"}, rarity = 20,},
+			{items = {"australia:fan_palm_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:fan_palm_sapling", {
+minetest.register_node("australia:fan_palm_sapling", {
 	description = "Australian Fan Palm Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_palm_sapling.png"},
-	inventory_image = "base_palm_sapling.png",
-	wield_image = "base_palm_sapling.png",
+	tiles = {"aus_palm_sapling.png"},
+	inventory_image = "aus_palm_sapling.png",
+	wield_image = "aus_palm_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1033,7 +1033,7 @@ minetest.register_node("base:fan_palm_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:fan_palm_sapling",
+			"australia:fan_palm_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -3, y = 1, z = -3},
@@ -1045,12 +1045,12 @@ minetest.register_node("base:fan_palm_sapling", {
 })
 
 -- Golden Wattle
-minetest.register_node("base:golden_wattle_tree", {
+minetest.register_node("australia:golden_wattle_tree", {
 	description = "Golden Wattle Tree",
 	tiles = {
-		"base_golden_wattle_tree_top.png",
-		"base_golden_wattle_tree_top.png",
-		"base_golden_wattle_tree.png"
+		"aus_golden_wattle_tree_top.png",
+		"aus_golden_wattle_tree_top.png",
+		"aus_golden_wattle_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -1070,27 +1070,27 @@ minetest.register_node("base:golden_wattle_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:golden_wattle_leaves", {
+minetest.register_node("australia:golden_wattle_leaves", {
 	description = "Golden Wattle Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_golden_wattle_leaves.png"},
+	tiles = {"aus_golden_wattle_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:golden_wattle_sapling"}, rarity = 20,},
-			{items = {"base:golden_wattle_leaves"},}
+			{items = {"australia:golden_wattle_sapling"}, rarity = 20,},
+			{items = {"australia:golden_wattle_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:golden_wattle_sapling", {
+minetest.register_node("australia:golden_wattle_sapling", {
 	description = "Golden Wattle Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -1112,7 +1112,7 @@ minetest.register_node("base:golden_wattle_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:golden_wattle_sapling",
+			"australia:golden_wattle_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -2, y = 1, z = -2},
@@ -1124,12 +1124,12 @@ minetest.register_node("base:golden_wattle_sapling", {
 })
 
 -- Grey Mangrove
-minetest.register_node("base:grey_mangrove_tree", {
+minetest.register_node("australia:grey_mangrove_tree", {
 	description = "Grey Mangrove Tree",
 	tiles = {
-		"base_grey_mangrove_tree_top.png",
-		"base_grey_mangrove_tree_top.png",
-		"base_grey_mangrove_tree.png"
+		"aus_grey_mangrove_tree_top.png",
+		"aus_grey_mangrove_tree_top.png",
+		"aus_grey_mangrove_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -1149,33 +1149,33 @@ minetest.register_node("base:grey_mangrove_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:grey_mangrove_leaves", {
+minetest.register_node("australia:grey_mangrove_leaves", {
 	description = "Grey Mangrove Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_grey_mangrove_leaves.png"},
+	tiles = {"aus_grey_mangrove_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:grey_mangrove_sapling"}, rarity = 20,},
-			{items = {"base:grey_mangrove_leaves"},}
+			{items = {"australia:grey_mangrove_sapling"}, rarity = 20,},
+			{items = {"australia:grey_mangrove_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:grey_mangrove_sapling", {
+minetest.register_node("australia:grey_mangrove_sapling", {
 	description = "Grey Mangrove Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_mangrove_sapling.png"},
-	inventory_image = "base_mangrove_sapling.png",
-	wield_image = "base_mangrove_sapling.png",
+	tiles = {"aus_mangrove_sapling.png"},
+	inventory_image = "aus_mangrove_sapling.png",
+	wield_image = "aus_mangrove_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1191,7 +1191,7 @@ minetest.register_node("base:grey_mangrove_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:grey_mangrove_sapling",
+			"australia:grey_mangrove_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -2, y = 1, z = -2},
@@ -1203,12 +1203,12 @@ minetest.register_node("base:grey_mangrove_sapling", {
 })
 
 -- Huon Pine
-minetest.register_node("base:huon_pine_tree", {
+minetest.register_node("australia:huon_pine_tree", {
 	description = "Huon Pine Tree",
 	tiles = {
-		"base_huon_pine_tree_top.png",
-		"base_huon_pine_tree_top.png",
-		"base_huon_pine_tree.png"
+		"aus_huon_pine_tree_top.png",
+		"aus_huon_pine_tree_top.png",
+		"aus_huon_pine_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -1217,27 +1217,27 @@ minetest.register_node("base:huon_pine_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:huon_pine_leaves", {
+minetest.register_node("australia:huon_pine_leaves", {
 	description = "Huon Pine Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_huon_pine_leaves.png"},
+	tiles = {"aus_huon_pine_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:huon_pine_sapling"}, rarity = 20,},
-			{items = {"base:huon_pine_leaves"},}
+			{items = {"australia:huon_pine_sapling"}, rarity = 20,},
+			{items = {"australia:huon_pine_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:huon_pine_sapling", {
+minetest.register_node("australia:huon_pine_sapling", {
 	description = "Huon Pine Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -1259,7 +1259,7 @@ minetest.register_node("base:huon_pine_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:huon_pine_sapling",
+			"australia:huon_pine_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -6, y = 1, z = -6},
@@ -1271,12 +1271,12 @@ minetest.register_node("base:huon_pine_sapling", {
 })
 
 -- Illawarra Flame
-minetest.register_node("base:illawarra_flame_tree", {
+minetest.register_node("australia:illawarra_flame_tree", {
 	description = "Illawarra Flame Tree",
 	tiles = {
-		"base_illawarra_flame_tree_top.png",
-		"base_illawarra_flame_tree_top.png",
-		"base_illawarra_flame_tree.png"
+		"aus_illawarra_flame_tree_top.png",
+		"aus_illawarra_flame_tree_top.png",
+		"aus_illawarra_flame_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -1285,33 +1285,33 @@ minetest.register_node("base:illawarra_flame_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:illawarra_flame_leaves", {
+minetest.register_node("australia:illawarra_flame_leaves", {
 	description = "Illawarra Flame Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_illawarra_flame_leaves.png"},
+	tiles = {"aus_illawarra_flame_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:illawarra_flame_sapling"}, rarity = 20,},
-			{items = {"base:illawarra_flame_leaves"},}
+			{items = {"australia:illawarra_flame_sapling"}, rarity = 20,},
+			{items = {"australia:illawarra_flame_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:illawarra_flame_sapling", {
+minetest.register_node("australia:illawarra_flame_sapling", {
 	description = "Illawarra Flame Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_illawarra_flame_sapling.png"},
-	inventory_image = "base_illawarra_flame_sapling.png",
-	wield_image = "base_illawarra_flame_sapling.png",
+	tiles = {"aus_illawarra_flame_sapling.png"},
+	inventory_image = "aus_illawarra_flame_sapling.png",
+	wield_image = "aus_illawarra_flame_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1327,7 +1327,7 @@ minetest.register_node("base:illawarra_flame_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:illawarra_flame_sapling",
+			"australia:illawarra_flame_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -7, y = 1, z = -7},
@@ -1339,12 +1339,12 @@ minetest.register_node("base:illawarra_flame_sapling", {
 })
 
 -- Jarrah
-minetest.register_node("base:jarrah_tree", {
+minetest.register_node("australia:jarrah_tree", {
 	description = "Jarrah Tree",
 	tiles = {
-		"base_jarrah_tree_top.png",
-		"base_jarrah_tree_top.png",
-		"base_jarrah_tree.png"
+		"aus_jarrah_tree_top.png",
+		"aus_jarrah_tree_top.png",
+		"aus_jarrah_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -1353,33 +1353,33 @@ minetest.register_node("base:jarrah_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:jarrah_leaves", {
+minetest.register_node("australia:jarrah_leaves", {
 	description = "Jarrah Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_jarrah_leaves.png"},
+	tiles = {"aus_jarrah_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:jarrah_sapling"}, rarity = 20,},
-			{items = {"base:jarrah_leaves"},}
+			{items = {"australia:jarrah_sapling"}, rarity = 20,},
+			{items = {"australia:jarrah_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:jarrah_sapling", {
+minetest.register_node("australia:jarrah_sapling", {
 	description = "Jarrah Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1395,7 +1395,7 @@ minetest.register_node("base:jarrah_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:jarrah_sapling",
+			"australia:jarrah_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -10, y = 1, z = -10},
@@ -1407,12 +1407,12 @@ minetest.register_node("base:jarrah_sapling", {
 })
 
 -- Karri
-minetest.register_node("base:karri_tree", {
+minetest.register_node("australia:karri_tree", {
 	description = "Karri Tree",
 	tiles = {
-		"base_karri_tree_top.png",
-		"base_karri_tree_top.png",
-		"base_karri_tree.png"
+		"aus_karri_tree_top.png",
+		"aus_karri_tree_top.png",
+		"aus_karri_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -1421,33 +1421,33 @@ minetest.register_node("base:karri_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:karri_leaves", {
+minetest.register_node("australia:karri_leaves", {
 	description = "Karri Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_karri_leaves.png"},
+	tiles = {"aus_karri_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:karri_sapling"}, rarity = 20,},
-			{items = {"base:karri_leaves"},}
+			{items = {"australia:karri_sapling"}, rarity = 20,},
+			{items = {"australia:karri_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:karri_sapling", {
+minetest.register_node("australia:karri_sapling", {
 	description = "Karri Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1463,7 +1463,7 @@ minetest.register_node("base:karri_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:karri_sapling",
+			"australia:karri_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -10, y = 1, z = -10},
@@ -1475,12 +1475,12 @@ minetest.register_node("base:karri_sapling", {
 })
 
 -- Lemon Eucalyptus
-minetest.register_node("base:lemon_eucalyptus_tree", {
+minetest.register_node("australia:lemon_eucalyptus_tree", {
 	description = "Lemon Eucalyptus Tree",
 	tiles = {
-		"base_lemon_eucalyptus_tree_top.png",
-		"base_lemon_eucalyptus_tree_top.png",
-		"base_lemon_eucalyptus_tree.png"
+		"aus_lemon_eucalyptus_tree_top.png",
+		"aus_lemon_eucalyptus_tree_top.png",
+		"aus_lemon_eucalyptus_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -1489,33 +1489,33 @@ minetest.register_node("base:lemon_eucalyptus_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:lemon_eucalyptus_leaves", {
+minetest.register_node("australia:lemon_eucalyptus_leaves", {
 	description = "Lemon Eucalyptus Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_lemon_eucalyptus_leaves.png"},
+	tiles = {"aus_lemon_eucalyptus_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:lemon_eucalyptus_sapling"}, rarity = 20,},
-			{items = {"base:lemon_eucalyptus_leaves"},}
+			{items = {"australia:lemon_eucalyptus_sapling"}, rarity = 20,},
+			{items = {"australia:lemon_eucalyptus_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:lemon_eucalyptus_sapling", {
+minetest.register_node("australia:lemon_eucalyptus_sapling", {
 	description = "Lemon Eucalyptus Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1531,7 +1531,7 @@ minetest.register_node("base:lemon_eucalyptus_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:lemon_eucalyptus_sapling",
+			"australia:lemon_eucalyptus_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -6, y = 1, z = -6},
@@ -1543,12 +1543,12 @@ minetest.register_node("base:lemon_eucalyptus_sapling", {
 })
 
 -- Lemon Myrtle
-minetest.register_node("base:lemon_myrtle_tree", {
+minetest.register_node("australia:lemon_myrtle_tree", {
 	description = "Lemon Myrtle Tree",
 	tiles = {
-		"base_lemon_myrtle_tree_top.png",
-		"base_lemon_myrtle_tree_top.png",
-		"base_lemon_myrtle_tree.png"
+		"aus_lemon_myrtle_tree_top.png",
+		"aus_lemon_myrtle_tree_top.png",
+		"aus_lemon_myrtle_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -1568,33 +1568,33 @@ minetest.register_node("base:lemon_myrtle_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:lemon_myrtle_leaves", {
+minetest.register_node("australia:lemon_myrtle_leaves", {
 	description = "Lemon Myrtle Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_lemon_myrtle_leaves.png"},
+	tiles = {"aus_lemon_myrtle_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:lemon_myrtle_sapling"}, rarity = 20,},
-			{items = {"base:lemon_myrtle_leaves"},}
+			{items = {"australia:lemon_myrtle_sapling"}, rarity = 20,},
+			{items = {"australia:lemon_myrtle_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:lemon_myrtle_sapling", {
+minetest.register_node("australia:lemon_myrtle_sapling", {
 	description = "Lemon Myrtle Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_myrtle_sapling.png"},
-	inventory_image = "base_myrtle_sapling.png",
-	wield_image = "base_myrtle_sapling.png",
+	tiles = {"aus_myrtle_sapling.png"},
+	inventory_image = "aus_myrtle_sapling.png",
+	wield_image = "aus_myrtle_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1610,7 +1610,7 @@ minetest.register_node("base:lemon_myrtle_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:lemon_myrtle_sapling",
+			"australia:lemon_myrtle_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -3, y = 1, z = -3},
@@ -1622,12 +1622,12 @@ minetest.register_node("base:lemon_myrtle_sapling", {
 })
 
 -- Lilly Pilly
-minetest.register_node("base:lilly_pilly_tree", {
+minetest.register_node("australia:lilly_pilly_tree", {
 	description = "Lilly Pilly Tree",
 	tiles = {
-		"base_lilly_pilly_tree_top.png",
-		"base_lilly_pilly_tree_top.png",
-		"base_lilly_pilly_tree.png"
+		"aus_lilly_pilly_tree_top.png",
+		"aus_lilly_pilly_tree_top.png",
+		"aus_lilly_pilly_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -1647,33 +1647,33 @@ minetest.register_node("base:lilly_pilly_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:lilly_pilly_leaves", {
+minetest.register_node("australia:lilly_pilly_leaves", {
 	description = "Lilly Pilly Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_lilly_pilly_leaves.png"},
+	tiles = {"aus_lilly_pilly_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:lilly_pilly_sapling"}, rarity = 20,},
-			{items = {"base:lilly_pilly_leaves"},}
+			{items = {"australia:lilly_pilly_sapling"}, rarity = 20,},
+			{items = {"australia:lilly_pilly_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:lilly_pilly_sapling", {
+minetest.register_node("australia:lilly_pilly_sapling", {
 	description = "Lilly Pilly Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_berry_sapling.png"},
-	inventory_image = "base_berry_sapling.png",
-	wield_image = "base_berry_sapling.png",
+	tiles = {"aus_berry_sapling.png"},
+	inventory_image = "aus_berry_sapling.png",
+	wield_image = "aus_berry_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1689,7 +1689,7 @@ minetest.register_node("base:lilly_pilly_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:lilly_pilly_sapling",
+			"australia:lilly_pilly_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -6, y = 1, z = -6},
@@ -1700,12 +1700,12 @@ minetest.register_node("base:lilly_pilly_sapling", {
 	end,
 })
 
-minetest.register_node("base:lilly_pilly_berries", {
+minetest.register_node("australia:lilly_pilly_berries", {
 	description = "Lilly Pilly Berries",
 	drawtype = "plantlike",
 	visual_scale = 0.67,
-	tiles = {"base_lilly_pilly_berries.png"},
-	inventory_image = "base_lilly_pilly_berries.png",
+	tiles = {"aus_lilly_pilly_berries.png"},
+	inventory_image = "aus_lilly_pilly_berries.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1719,18 +1719,18 @@ minetest.register_node("base:lilly_pilly_berries", {
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
-			minetest.set_node(pos, {name = "base:lilly_pilly_berries", param2 = 1})
+			minetest.set_node(pos, {name = "australia:lilly_pilly_berries", param2 = 1})
 		end
 	end,
 })
 
 -- Macadamia
-minetest.register_node("base:macadamia_tree", {
+minetest.register_node("australia:macadamia_tree", {
 	description = "Macadamia Tree",
 	tiles = {
-		"base_macadamia_tree_top.png",
-		"base_macadamia_tree_top.png",
-		"base_macadamia_tree.png"
+		"aus_macadamia_tree_top.png",
+		"aus_macadamia_tree_top.png",
+		"aus_macadamia_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -1749,33 +1749,33 @@ minetest.register_node("base:macadamia_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:macadamia_leaves", {
+minetest.register_node("australia:macadamia_leaves", {
 	description = "Prickly Macadamia Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_macadamia_leaves.png"},
+	tiles = {"aus_macadamia_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:macadamia_sapling"}, rarity = 20,},
-			{items = {"base:macadamia_leaves"},}
+			{items = {"australia:macadamia_sapling"}, rarity = 20,},
+			{items = {"australia:macadamia_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:macadamia_sapling", {
+minetest.register_node("australia:macadamia_sapling", {
 	description = "Prickly Macadamia Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_macadamia_sapling.png"},
-	inventory_image = "base_macadamia_sapling.png",
-	wield_image = "base_macadamia_sapling.png",
+	tiles = {"aus_macadamia_sapling.png"},
+	inventory_image = "aus_macadamia_sapling.png",
+	wield_image = "aus_macadamia_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1791,7 +1791,7 @@ minetest.register_node("base:macadamia_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:macadamia_sapling",
+			"australia:macadamia_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -4, y = 1, z = -4},
@@ -1802,12 +1802,12 @@ minetest.register_node("base:macadamia_sapling", {
 	end,
 })
 
-minetest.register_node("base:macadamia", {
+minetest.register_node("australia:macadamia", {
 	description = "Macadamia Nuts",
 	drawtype = "plantlike",
 	visual_scale = 0.67,
-	tiles = {"base_macadamia.png"},
-	inventory_image = "base_macadamia.png",
+	tiles = {"aus_macadamia.png"},
+	inventory_image = "aus_macadamia.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1821,18 +1821,18 @@ minetest.register_node("base:macadamia", {
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
-			minetest.set_node(pos, {name = "base:macadamia", param2 = 1})
+			minetest.set_node(pos, {name = "australia:macadamia", param2 = 1})
 		end
 	end,
 })
 
 -- Mangrove Apple
-minetest.register_node("base:mangrove_apple_tree", {
+minetest.register_node("australia:mangrove_apple_tree", {
 	description = "Mangrove Apple Tree",
 	tiles = {
-		"base_mangrove_apple_tree_top.png",
-		"base_mangrove_apple_tree_top.png",
-		"base_mangrove_apple_tree.png"
+		"aus_mangrove_apple_tree_top.png",
+		"aus_mangrove_apple_tree_top.png",
+		"aus_mangrove_apple_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -1852,33 +1852,33 @@ minetest.register_node("base:mangrove_apple_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:mangrove_apple_leaves", {
+minetest.register_node("australia:mangrove_apple_leaves", {
 	description = "Mangrove Apple Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_mangrove_apple_leaves.png"},
+	tiles = {"aus_mangrove_apple_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:mangrove_apple_sapling"}, rarity = 20,},
-			{items = {"base:mangrove_apple_leaves"},}
+			{items = {"australia:mangrove_apple_sapling"}, rarity = 20,},
+			{items = {"australia:mangrove_apple_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:mangrove_apple_sapling", {
+minetest.register_node("australia:mangrove_apple_sapling", {
 	description = "Mangrove Apple Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_mangrove_apple_sapling.png"},
-	inventory_image = "base_mangrove_apple_sapling.png",
-	wield_image = "base_mangrove_apple_sapling.png",
+	tiles = {"aus_mangrove_apple_sapling.png"},
+	inventory_image = "aus_mangrove_apple_sapling.png",
+	wield_image = "aus_mangrove_apple_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1894,7 +1894,7 @@ minetest.register_node("base:mangrove_apple_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:mangrove_apple_sapling",
+			"australia:mangrove_apple_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -4, y = 1, z = -4},
@@ -1905,12 +1905,12 @@ minetest.register_node("base:mangrove_apple_sapling", {
 	end,
 })
 
-minetest.register_node("base:mangrove_apple", {
+minetest.register_node("australia:mangrove_apple", {
 	description = "Mangrove Apple",
 	drawtype = "plantlike",
 	visual_scale = 0.67,
-	tiles = {"base_mangrove_apple.png"},
-	inventory_image = "base_mangrove_apple.png",
+	tiles = {"aus_mangrove_apple.png"},
+	inventory_image = "aus_mangrove_apple.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1924,18 +1924,18 @@ minetest.register_node("base:mangrove_apple", {
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
-			minetest.set_node(pos, {name = "base:mangrove_apple", param2 = 1})
+			minetest.set_node(pos, {name = "australia:mangrove_apple", param2 = 1})
 		end
 	end,
 })
 
 -- Marri
-minetest.register_node("base:marri_tree", {
+minetest.register_node("australia:marri_tree", {
 	description = "Marri Tree",
 	tiles = {
-		"base_marri_tree_top.png",
-		"base_marri_tree_top.png",
-		"base_marri_tree.png"
+		"aus_marri_tree_top.png",
+		"aus_marri_tree_top.png",
+		"aus_marri_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -1944,33 +1944,33 @@ minetest.register_node("base:marri_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:marri_leaves", {
+minetest.register_node("australia:marri_leaves", {
 	description = "Marri Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_marri_leaves.png"},
+	tiles = {"aus_marri_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:marri_sapling"}, rarity = 20,},
-			{items = {"base:marri_leaves"},}
+			{items = {"australia:marri_sapling"}, rarity = 20,},
+			{items = {"australia:marri_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:marri_sapling", {
+minetest.register_node("australia:marri_sapling", {
 	description = "Marri Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -1986,7 +1986,7 @@ minetest.register_node("base:marri_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:marri_sapling",
+			"australia:marri_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -10, y = 1, z = -10},
@@ -1998,12 +1998,12 @@ minetest.register_node("base:marri_sapling", {
 })
 
 -- Merbau
-minetest.register_node("base:merbau_tree", {
+minetest.register_node("australia:merbau_tree", {
 	description = "Merbau Tree",
 	tiles = {
-		"base_merbau_tree_top.png",
-		"base_merbau_tree_top.png",
-		"base_merbau_tree.png"
+		"aus_merbau_tree_top.png",
+		"aus_merbau_tree_top.png",
+		"aus_merbau_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -2012,33 +2012,33 @@ minetest.register_node("base:merbau_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:merbau_leaves", {
+minetest.register_node("australia:merbau_leaves", {
 	description = "Merbau Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_merbau_leaves.png"},
+	tiles = {"aus_merbau_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:merbau_sapling"}, rarity = 20,},
-			{items = {"base:merbau_leaves"},}
+			{items = {"australia:merbau_sapling"}, rarity = 20,},
+			{items = {"australia:merbau_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:merbau_sapling", {
+minetest.register_node("australia:merbau_sapling", {
 	description = "Merbau Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_merbau_sapling.png"},
-	inventory_image = "base_merbau_sapling.png",
-	wield_image = "base_merbau_sapling.png",
+	tiles = {"aus_merbau_sapling.png"},
+	inventory_image = "aus_merbau_sapling.png",
+	wield_image = "aus_merbau_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -2054,7 +2054,7 @@ minetest.register_node("base:merbau_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:merbau_sapling",
+			"australia:merbau_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -5, y = 1, z = -5},
@@ -2066,12 +2066,12 @@ minetest.register_node("base:merbau_sapling", {
 })
 
 -- Moreton Bay Fig
-minetest.register_node("base:moreton_bay_fig_tree", {
+minetest.register_node("australia:moreton_bay_fig_tree", {
 	description = "Moreton Bay Fig Tree",
 	tiles = {
-		"base_moreton_bay_fig_tree_top.png",
-		"base_moreton_bay_fig_tree_top.png",
-		"base_moreton_bay_fig_tree.png"
+		"aus_moreton_bay_fig_tree_top.png",
+		"aus_moreton_bay_fig_tree_top.png",
+		"aus_moreton_bay_fig_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -2080,33 +2080,33 @@ minetest.register_node("base:moreton_bay_fig_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:moreton_bay_fig_leaves", {
+minetest.register_node("australia:moreton_bay_fig_leaves", {
 	description = "Moreton Bay Fig Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_moreton_bay_fig_leaves.png"},
+	tiles = {"aus_moreton_bay_fig_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:moreton_bay_fig_sapling"}, rarity = 20,},
-			{items = {"base:moreton_bay_fig_leaves"},}
+			{items = {"australia:moreton_bay_fig_sapling"}, rarity = 20,},
+			{items = {"australia:moreton_bay_fig_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:moreton_bay_fig_sapling", {
+minetest.register_node("australia:moreton_bay_fig_sapling", {
 	description = "Moreton Bay Fig Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_fig_sapling.png"},
-	inventory_image = "base_fig_sapling.png",
-	wield_image = "base_fig_sapling.png",
+	tiles = {"aus_fig_sapling.png"},
+	inventory_image = "aus_fig_sapling.png",
+	wield_image = "aus_fig_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -2122,7 +2122,7 @@ minetest.register_node("base:moreton_bay_fig_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:mangrove_apple_sapling",
+			"australia:mangrove_apple_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -15, y = 1, z = -15},
@@ -2133,12 +2133,12 @@ minetest.register_node("base:moreton_bay_fig_sapling", {
 	end,
 })
 
-minetest.register_node("base:moreton_bay_fig", {
+minetest.register_node("australia:moreton_bay_fig", {
 	description = "Moreton Bay Fig",
 	drawtype = "plantlike",
 	visual_scale = 0.67,
-	tiles = {"base_moreton_bay_fig.png"},
-	inventory_image = "base_moreton_bay_fig.png",
+	tiles = {"aus_moreton_bay_fig.png"},
+	inventory_image = "aus_moreton_bay_fig.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -2152,18 +2152,18 @@ minetest.register_node("base:moreton_bay_fig", {
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
-			minetest.set_node(pos, {name = "base:moreton_bay_fig", param2 = 1})
+			minetest.set_node(pos, {name = "australia:moreton_bay_fig", param2 = 1})
 		end
 	end,
 })
 
 -- Mulga Tree
-minetest.register_node("base:mulga_tree", {
+minetest.register_node("australia:mulga_tree", {
 	description = "Mulga Tree",
 	tiles = {
-		"base_mulga_tree_top.png",
-		"base_mulga_tree_top.png",
-		"base_mulga_tree.png"
+		"aus_mulga_tree_top.png",
+		"aus_mulga_tree_top.png",
+		"aus_mulga_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -2182,27 +2182,27 @@ minetest.register_node("base:mulga_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:mulga_leaves", {
+minetest.register_node("australia:mulga_leaves", {
 	description = "Mulga Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_mulga_leaves.png"},
+	tiles = {"aus_mulga_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:mulga_sapling"}, rarity = 20,},
-			{items = {"base:mulga_leaves"},}
+			{items = {"australia:mulga_sapling"}, rarity = 20,},
+			{items = {"australia:mulga_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:mulga_sapling", {
+minetest.register_node("australia:mulga_sapling", {
 	description = "Mulga Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -2224,7 +2224,7 @@ minetest.register_node("base:mulga_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:mulga_sapling",
+			"australia:mulga_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -3, y = 1, z = -3},
@@ -2236,12 +2236,12 @@ minetest.register_node("base:mulga_sapling", {
 })
 
 -- Palm Tree
-minetest.register_node("base:palm_tree", {
+minetest.register_node("australia:palm_tree", {
 	description = "Palm Tree",
 	tiles = {
-		"base_palm_tree_top.png",
-		"base_palm_tree_top.png",
-		"base_palm_tree.png"
+		"aus_palm_tree_top.png",
+		"aus_palm_tree_top.png",
+		"aus_palm_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -2250,33 +2250,33 @@ minetest.register_node("base:palm_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:palm_leaves", {
+minetest.register_node("australia:palm_leaves", {
 	description = "Palm Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_palm_leaves.png"},
+	tiles = {"aus_palm_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:palm_sapling"}, rarity = 20,},
-			{items = {"base:palm_leaves"},}
+			{items = {"australia:palm_sapling"}, rarity = 20,},
+			{items = {"australia:palm_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:palm_sapling", {
+minetest.register_node("australia:palm_sapling", {
 	description = "Palm Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_palm_sapling.png"},
-	inventory_image = "base_palm_sapling.png",
-	wield_image = "base_palm_sapling.png",
+	tiles = {"aus_palm_sapling.png"},
+	inventory_image = "aus_palm_sapling.png",
+	wield_image = "aus_palm_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -2292,7 +2292,7 @@ minetest.register_node("base:palm_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:palm_sapling",
+			"australia:palm_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -5, y = 1, z = -5},
@@ -2304,12 +2304,12 @@ minetest.register_node("base:palm_sapling", {
 })
 
 -- Paper Bark
-minetest.register_node("base:paperbark_tree", {
+minetest.register_node("australia:paperbark_tree", {
 	description = "Paper Bark Tree",
 	tiles = {
-		"base_paperbark_tree_top.png",
-		"base_paperbark_tree_top.png",
-		"base_paperbark_tree.png"
+		"aus_paperbark_tree_top.png",
+		"aus_paperbark_tree_top.png",
+		"aus_paperbark_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -2318,33 +2318,33 @@ minetest.register_node("base:paperbark_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:paperbark_leaves", {
+minetest.register_node("australia:paperbark_leaves", {
 	description = "Paper Bark Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_paperbark_leaves.png"},
+	tiles = {"aus_paperbark_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:paperbark_sapling"}, rarity = 20,},
-			{items = {"base:paperbark_leaves"},}
+			{items = {"australia:paperbark_sapling"}, rarity = 20,},
+			{items = {"australia:paperbark_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:paperbark_sapling", {
+minetest.register_node("australia:paperbark_sapling", {
 	description = "Paper Bark Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_melaleuca_sapling.png"},
-	inventory_image = "base_melaleuca_sapling.png",
-	wield_image = "base_melaleuca_sapling.png",
+	tiles = {"aus_melaleuca_sapling.png"},
+	inventory_image = "aus_melaleuca_sapling.png",
+	wield_image = "aus_melaleuca_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -2360,7 +2360,7 @@ minetest.register_node("base:paperbark_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:paperbark_sapling",
+			"australia:paperbark_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -5, y = 1, z = -5},
@@ -2372,12 +2372,12 @@ minetest.register_node("base:paperbark_sapling", {
 })
 
 -- Desert Quandong
-minetest.register_node("base:quandong_tree", {
+minetest.register_node("australia:quandong_tree", {
 	description = "Desert Quandong Tree",
 	tiles = {
-		"base_quandong_tree_top.png",
-		"base_quandong_tree_top.png",
-		"base_quandong_tree.png"
+		"aus_quandong_tree_top.png",
+		"aus_quandong_tree_top.png",
+		"aus_quandong_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -2397,33 +2397,33 @@ minetest.register_node("base:quandong_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:quandong_leaves", {
+minetest.register_node("australia:quandong_leaves", {
 	description = "Desert Quandong Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_quandong_leaves.png"},
+	tiles = {"aus_quandong_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:quandong_sapling"}, rarity = 20,},
-			{items = {"base:quandong_leaves"},}
+			{items = {"australia:quandong_sapling"}, rarity = 20,},
+			{items = {"australia:quandong_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:quandong_sapling", {
+minetest.register_node("australia:quandong_sapling", {
 	description = "Desert Quandong Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_quandong_sapling.png"},
-	inventory_image = "base_quandong_sapling.png",
-	wield_image = "base_quandong_sapling.png",
+	tiles = {"aus_quandong_sapling.png"},
+	inventory_image = "aus_quandong_sapling.png",
+	wield_image = "aus_quandong_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -2439,7 +2439,7 @@ minetest.register_node("base:quandong_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:quandong_sapling",
+			"australia:quandong_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -2, y = 1, z = -2},
@@ -2450,12 +2450,12 @@ minetest.register_node("base:quandong_sapling", {
 	end,
 })
 
-minetest.register_node("base:quandong", {
+minetest.register_node("australia:quandong", {
 	description = "Desert Quandong",
 	drawtype = "plantlike",
 	visual_scale = 8/16,
-	tiles = {"base_quandong.png"},
-	inventory_image = "base_quandong.png",
+	tiles = {"aus_quandong.png"},
+	inventory_image = "aus_quandong.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -2469,18 +2469,18 @@ minetest.register_node("base:quandong", {
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
-			minetest.set_node(pos, {name = "base:quandong", param2 = 1})
+			minetest.set_node(pos, {name = "australia:quandong", param2 = 1})
 		end
 	end,
 })
 
 -- River Oak
-minetest.register_node("base:river_oak_tree", {
+minetest.register_node("australia:river_oak_tree", {
 	description = "River Oak Tree",
 	tiles = {
-		"base_river_oak_tree_top.png",
-		"base_river_oak_tree_top.png",
-		"base_river_oak_tree.png"
+		"aus_river_oak_tree_top.png",
+		"aus_river_oak_tree_top.png",
+		"aus_river_oak_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -2489,27 +2489,27 @@ minetest.register_node("base:river_oak_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:river_oak_leaves", {
+minetest.register_node("australia:river_oak_leaves", {
 	description = "River Oak Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_river_oak_leaves.png"},
+	tiles = {"aus_river_oak_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:river_oak_sapling"}, rarity = 20,},
-			{items = {"base:river_oak_leaves"},}
+			{items = {"australia:river_oak_sapling"}, rarity = 20,},
+			{items = {"australia:river_oak_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:river_oak_sapling", {
+minetest.register_node("australia:river_oak_sapling", {
 	description = "River Oak Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -2531,7 +2531,7 @@ minetest.register_node("base:river_oak_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:river_oak_sapling",
+			"australia:river_oak_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -5, y = 1, z = -5},
@@ -2543,12 +2543,12 @@ minetest.register_node("base:river_oak_sapling", {
 })
 
 -- River Red Gum
-minetest.register_node("base:river_red_gum_tree", {
+minetest.register_node("australia:river_red_gum_tree", {
 	description = "River Red Gum Tree",
 	tiles = {
-		"base_river_red_gum_tree_top.png",
-		"base_river_red_gum_tree_top.png",
-		"base_river_red_gum_tree.png"
+		"aus_river_red_gum_tree_top.png",
+		"aus_river_red_gum_tree_top.png",
+		"aus_river_red_gum_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -2557,33 +2557,33 @@ minetest.register_node("base:river_red_gum_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:river_red_gum_leaves", {
+minetest.register_node("australia:river_red_gum_leaves", {
 	description = "River Red Gum Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_river_red_gum_leaves.png"},
+	tiles = {"aus_river_red_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:river_red_gum_sapling"}, rarity = 20,},
-			{items = {"base:river_red_gum_leaves"},}
+			{items = {"australia:river_red_gum_sapling"}, rarity = 20,},
+			{items = {"australia:river_red_gum_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:river_red_gum_sapling", {
+minetest.register_node("australia:river_red_gum_sapling", {
 	description = "River Red Gum Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -2599,7 +2599,7 @@ minetest.register_node("base:river_red_gum_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:river_red_gum_sapling",
+			"australia:river_red_gum_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -8, y = 1, z = -8},
@@ -2611,12 +2611,12 @@ minetest.register_node("base:river_red_gum_sapling", {
 })
 
 -- Rottnest Island Pine
-minetest.register_node("base:rottnest_island_pine_tree", {
+minetest.register_node("australia:rottnest_island_pine_tree", {
 	description = "Rottnest Island Pine Tree",
 	tiles = {
-		"base_rottnest_island_pine_tree_top.png",
-		"base_rottnest_island_pine_tree_top.png",
-		"base_rottnest_island_pine_tree.png"
+		"aus_rottnest_island_pine_tree_top.png",
+		"aus_rottnest_island_pine_tree_top.png",
+		"aus_rottnest_island_pine_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -2635,27 +2635,27 @@ minetest.register_node("base:rottnest_island_pine_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:rottnest_island_pine_leaves", {
+minetest.register_node("australia:rottnest_island_pine_leaves", {
 	description = "Rottnest Island Pine Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_rottnest_island_pine_leaves.png"},
+	tiles = {"aus_rottnest_island_pine_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:rottnest_island_pine_sapling"}, rarity = 20,},
-			{items = {"base:rottnest_island_pine_leaves"},}
+			{items = {"australia:rottnest_island_pine_sapling"}, rarity = 20,},
+			{items = {"australia:rottnest_island_pine_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:rottnest_island_pine_sapling", {
+minetest.register_node("australia:rottnest_island_pine_sapling", {
 	description = "Rottnest Island Pine Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -2677,7 +2677,7 @@ minetest.register_node("base:rottnest_island_pine_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:rottnest_island_pine_sapling",
+			"australia:rottnest_island_pine_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -3, y = 1, z = -3},
@@ -2689,12 +2689,12 @@ minetest.register_node("base:rottnest_island_pine_sapling", {
 })
 
 -- Scribbly Gum
-minetest.register_node("base:scribbly_gum_tree", {
+minetest.register_node("australia:scribbly_gum_tree", {
 	description = "Scribbly Gum Tree",
 	tiles = {
-		"base_scribbly_gum_tree_top.png",
-		"base_scribbly_gum_tree_top.png",
-		"base_scribbly_gum_tree.png"
+		"aus_scribbly_gum_tree_top.png",
+		"aus_scribbly_gum_tree_top.png",
+		"aus_scribbly_gum_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -2703,33 +2703,33 @@ minetest.register_node("base:scribbly_gum_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:scribbly_gum_leaves", {
+minetest.register_node("australia:scribbly_gum_leaves", {
 	description = "Scribbly Gum Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_scribbly_gum_leaves.png"},
+	tiles = {"aus_scribbly_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:scribbly_gum_sapling"}, rarity = 20,},
-			{items = {"base:scribbly_gum_leaves"},}
+			{items = {"australia:scribbly_gum_sapling"}, rarity = 20,},
+			{items = {"australia:scribbly_gum_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:scribbly_gum_sapling", {
+minetest.register_node("australia:scribbly_gum_sapling", {
 	description = "Scribbly Gum Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -2745,7 +2745,7 @@ minetest.register_node("base:scribbly_gum_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:scribbly_gum_sapling",
+			"australia:scribbly_gum_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -5, y = 1, z = -5},
@@ -2757,12 +2757,12 @@ minetest.register_node("base:scribbly_gum_sapling", {
 })
 
 -- Shoestring Acacia
-minetest.register_node("base:shoestring_acacia_tree", {
+minetest.register_node("australia:shoestring_acacia_tree", {
 	description = "Shoestring Acacia Tree",
 	tiles = {
-		"base_shoestring_acacia_tree_top.png",
-		"base_shoestring_acacia_tree_top.png",
-		"base_shoestring_acacia_tree.png"
+		"aus_shoestring_acacia_tree_top.png",
+		"aus_shoestring_acacia_tree_top.png",
+		"aus_shoestring_acacia_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -2771,27 +2771,27 @@ minetest.register_node("base:shoestring_acacia_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:shoestring_acacia_leaves", {
+minetest.register_node("australia:shoestring_acacia_leaves", {
 	description = "Shoestring Acacia Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_shoestring_acacia_leaves.png"},
+	tiles = {"aus_shoestring_acacia_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:shoestring_acacia_sapling"}, rarity = 20,},
-			{items = {"base:shoestring_acacia_leaves"},}
+			{items = {"australia:shoestring_acacia_sapling"}, rarity = 20,},
+			{items = {"australia:shoestring_acacia_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:shoestring_acacia_sapling", {
+minetest.register_node("australia:shoestring_acacia_sapling", {
 	description = "Shoestring Acacia Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -2813,7 +2813,7 @@ minetest.register_node("base:shoestring_acacia_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:shoestring_acacia_sapling",
+			"australia:shoestring_acacia_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -4, y = 1, z = -4},
@@ -2825,12 +2825,12 @@ minetest.register_node("base:shoestring_acacia_sapling", {
 })
 
 -- Snow Gum
-minetest.register_node("base:snow_gum_tree", {
+minetest.register_node("australia:snow_gum_tree", {
 	description = "Snow Gum Tree",
 	tiles = {
-		"base_snow_gum_tree_top.png",
-		"base_snow_gum_tree_top.png",
-		"base_snow_gum_tree.png"
+		"aus_snow_gum_tree_top.png",
+		"aus_snow_gum_tree_top.png",
+		"aus_snow_gum_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -2849,33 +2849,33 @@ minetest.register_node("base:snow_gum_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:snow_gum_leaves", {
+minetest.register_node("australia:snow_gum_leaves", {
 	description = "Snow Gum Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_snow_gum_leaves.png"},
+	tiles = {"aus_snow_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:snow_gum_sapling"}, rarity = 20,},
-			{items = {"base:snow_gum_leaves"},}
+			{items = {"australia:snow_gum_sapling"}, rarity = 20,},
+			{items = {"australia:snow_gum_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:snow_gum_sapling", {
+minetest.register_node("australia:snow_gum_sapling", {
 	description = "Snow Gum Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -2891,7 +2891,7 @@ minetest.register_node("base:snow_gum_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:snow_gum_sapling",
+			"australia:snow_gum_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -2, y = 1, z = -2},
@@ -2903,12 +2903,12 @@ minetest.register_node("base:snow_gum_sapling", {
 })
 
 -- Southern Sassafras
-minetest.register_node("base:southern_sassafras_tree", {
+minetest.register_node("australia:southern_sassafras_tree", {
 	description = "Southern Sassafras Tree",
 	tiles = {
-		"base_southern_sassafras_tree_top.png",
-		"base_southern_sassafras_tree_top.png",
-		"base_southern_sassafras_tree.png"
+		"aus_southern_sassafras_tree_top.png",
+		"aus_southern_sassafras_tree_top.png",
+		"aus_southern_sassafras_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -2927,27 +2927,27 @@ minetest.register_node("base:southern_sassafras_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:southern_sassafras_leaves", {
+minetest.register_node("australia:southern_sassafras_leaves", {
 	description = "Southern Sassafras Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_southern_sassafras_leaves.png"},
+	tiles = {"aus_southern_sassafras_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:southern_sassafras_sapling"}, rarity = 20,},
-			{items = {"base:southern_sassafras_leaves"},}
+			{items = {"australia:southern_sassafras_sapling"}, rarity = 20,},
+			{items = {"australia:southern_sassafras_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:southern_sassafras_sapling", {
+minetest.register_node("australia:southern_sassafras_sapling", {
 	description = "Southern Sassafras Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -2969,7 +2969,7 @@ minetest.register_node("base:southern_sassafras_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:southern_sassafras_sapling",
+			"australia:southern_sassafras_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -4, y = 1, z = -4},
@@ -2981,12 +2981,12 @@ minetest.register_node("base:southern_sassafras_sapling", {
 })
 
 -- Stilted Mangrove
-minetest.register_node("base:stilted_mangrove_tree", {
+minetest.register_node("australia:stilted_mangrove_tree", {
 	description = "Stilted Mangrove Tree",
 	tiles = {
-		"base_stilted_mangrove_tree_top.png",
-		"base_stilted_mangrove_tree_top.png",
-		"base_stilted_mangrove_tree.png"
+		"aus_stilted_mangrove_tree_top.png",
+		"aus_stilted_mangrove_tree_top.png",
+		"aus_stilted_mangrove_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -3006,33 +3006,33 @@ minetest.register_node("base:stilted_mangrove_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:stilted_mangrove_leaves", {
+minetest.register_node("australia:stilted_mangrove_leaves", {
 	description = "Stilted Mangrove Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_stilted_mangrove_leaves.png"},
+	tiles = {"aus_stilted_mangrove_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:stilted_mangrove_sapling"}, rarity = 20,},
-			{items = {"base:stilted_mangrove_leaves"},}
+			{items = {"australia:stilted_mangrove_sapling"}, rarity = 20,},
+			{items = {"australia:stilted_mangrove_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:stilted_mangrove_sapling", {
+minetest.register_node("australia:stilted_mangrove_sapling", {
 	description = "Stilted Mangrove Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_mangrove_sapling.png"},
-	inventory_image = "base_mangrove_sapling.png",
-	wield_image = "base_mangrove_sapling.png",
+	tiles = {"aus_mangrove_sapling.png"},
+	inventory_image = "aus_mangrove_sapling.png",
+	wield_image = "aus_mangrove_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -3048,7 +3048,7 @@ minetest.register_node("base:stilted_mangrove_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:stilted_mangrove_sapling",
+			"australia:stilted_mangrove_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -3, y = 1, z = -3},
@@ -3060,12 +3060,12 @@ minetest.register_node("base:stilted_mangrove_sapling", {
 })
 
 -- Sugar Gum
-minetest.register_node("base:sugar_gum_tree", {
+minetest.register_node("australia:sugar_gum_tree", {
 	description = "Sugar Gum Tree",
 	tiles = {
-		"base_sugar_gum_tree_top.png",
-		"base_sugar_gum_tree_top.png",
-		"base_sugar_gum_tree.png"
+		"aus_sugar_gum_tree_top.png",
+		"aus_sugar_gum_tree_top.png",
+		"aus_sugar_gum_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -3074,33 +3074,33 @@ minetest.register_node("base:sugar_gum_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:sugar_gum_leaves", {
+minetest.register_node("australia:sugar_gum_leaves", {
 	description = "Sugar Gum Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_sugar_gum_leaves.png"},
+	tiles = {"aus_sugar_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:sugar_gum_sapling"}, rarity = 20,},
-			{items = {"base:sugar_gum_leaves"},}
+			{items = {"australia:sugar_gum_sapling"}, rarity = 20,},
+			{items = {"australia:sugar_gum_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:sugar_gum_sapling", {
+minetest.register_node("australia:sugar_gum_sapling", {
 	description = "Sugar Gum Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -3116,7 +3116,7 @@ minetest.register_node("base:sugar_gum_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:sugar_gum_sapling",
+			"australia:sugar_gum_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -10, y = 1, z = -10},
@@ -3128,12 +3128,12 @@ minetest.register_node("base:sugar_gum_sapling", {
 })
 
 -- Swamp Bloodwood
-minetest.register_node("base:swamp_bloodwood_tree", {
+minetest.register_node("australia:swamp_bloodwood_tree", {
 	description = "Swamp Bloodwood Tree",
 	tiles = {
-		"base_swamp_bloodwood_tree_top.png",
-		"base_swamp_bloodwood_tree_top.png",
-		"base_swamp_bloodwood_tree.png"
+		"aus_swamp_bloodwood_tree_top.png",
+		"aus_swamp_bloodwood_tree_top.png",
+		"aus_swamp_bloodwood_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -3142,33 +3142,33 @@ minetest.register_node("base:swamp_bloodwood_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:swamp_bloodwood_leaves", {
+minetest.register_node("australia:swamp_bloodwood_leaves", {
 	description = "Swamp Bloodwood Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_swamp_bloodwood_leaves.png"},
+	tiles = {"aus_swamp_bloodwood_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:swamp_bloodwood_sapling"}, rarity = 20,},
-			{items = {"base:swamp_bloodwood_leaves"},}
+			{items = {"australia:swamp_bloodwood_sapling"}, rarity = 20,},
+			{items = {"australia:swamp_bloodwood_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:swamp_bloodwood_sapling", {
+minetest.register_node("australia:swamp_bloodwood_sapling", {
 	description = "Swamp Bloodwood Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -3184,7 +3184,7 @@ minetest.register_node("base:swamp_bloodwood_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:swamp_bloodwood_sapling",
+			"australia:swamp_bloodwood_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -4, y = 1, z = -4},
@@ -3196,12 +3196,12 @@ minetest.register_node("base:swamp_bloodwood_sapling", {
 })
 
 -- Swamp Gum
-minetest.register_node("base:swamp_gum_tree", {
+minetest.register_node("australia:swamp_gum_tree", {
 	description = "Swamp Gum Tree",
 	tiles = {
-		"base_swamp_gum_tree_top.png",
-		"base_swamp_gum_tree_top.png",
-		"base_swamp_gum_tree.png"
+		"aus_swamp_gum_tree_top.png",
+		"aus_swamp_gum_tree_top.png",
+		"aus_swamp_gum_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -3210,33 +3210,33 @@ minetest.register_node("base:swamp_gum_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:swamp_gum_leaves", {
+minetest.register_node("australia:swamp_gum_leaves", {
 	description = "Swamp Gum Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_swamp_gum_leaves.png"},
+	tiles = {"aus_swamp_gum_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:swamp_gum_sapling"}, rarity = 20,},
-			{items = {"base:swamp_gum_leaves"},}
+			{items = {"australia:swamp_gum_sapling"}, rarity = 20,},
+			{items = {"australia:swamp_gum_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:swamp_gum_sapling", {
+minetest.register_node("australia:swamp_gum_sapling", {
 	description = "Swamp Gum Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -3252,7 +3252,7 @@ minetest.register_node("base:swamp_gum_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:swamp_gum_sapling",
+			"australia:swamp_gum_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -10, y = 1, z = -10},
@@ -3264,12 +3264,12 @@ minetest.register_node("base:swamp_gum_sapling", {
 })
 
 -- Swamp Paperbark
-minetest.register_node("base:swamp_paperbark_tree", {
+minetest.register_node("australia:swamp_paperbark_tree", {
 	description = "Swamp Paperbark Tree",
 	tiles = {
-		"base_swamp_paperbark_tree_top.png",
-		"base_swamp_paperbark_tree_top.png",
-		"base_swamp_paperbark_tree.png"
+		"aus_swamp_paperbark_tree_top.png",
+		"aus_swamp_paperbark_tree_top.png",
+		"aus_swamp_paperbark_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -3289,33 +3289,33 @@ minetest.register_node("base:swamp_paperbark_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:swamp_paperbark_leaves", {
+minetest.register_node("australia:swamp_paperbark_leaves", {
 	description = "Swamp Paperbark Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_swamp_paperbark_leaves.png"},
+	tiles = {"aus_swamp_paperbark_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:swamp_paperbark_sapling"}, rarity = 20,},
-			{items = {"base:swamp_paperbark_leaves"},}
+			{items = {"australia:swamp_paperbark_sapling"}, rarity = 20,},
+			{items = {"australia:swamp_paperbark_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:swamp_paperbark_sapling", {
+minetest.register_node("australia:swamp_paperbark_sapling", {
 	description = "Swamp Paperbark Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_melaleuca_sapling.png"},
-	inventory_image = "base_melaleuca_sapling.png",
-	wield_image = "base_melaleuca_sapling.png",
+	tiles = {"aus_melaleuca_sapling.png"},
+	inventory_image = "aus_melaleuca_sapling.png",
+	wield_image = "aus_melaleuca_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -3331,7 +3331,7 @@ minetest.register_node("base:swamp_paperbark_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:swamp_paperbark_sapling",
+			"australia:swamp_paperbark_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -2, y = 1, z = -2},
@@ -3343,12 +3343,12 @@ minetest.register_node("base:swamp_paperbark_sapling", {
 })
 
 -- Tasmanian Myrtle
-minetest.register_node("base:tasmanian_myrtle_tree", {
+minetest.register_node("australia:tasmanian_myrtle_tree", {
 	description = "Tasmanian Myrtle Tree",
 	tiles = {
-		"base_tasmanian_myrtle_tree_top.png",
-		"base_tasmanian_myrtle_tree_top.png",
-		"base_tasmanian_myrtle_tree.png"
+		"aus_tasmanian_myrtle_tree_top.png",
+		"aus_tasmanian_myrtle_tree_top.png",
+		"aus_tasmanian_myrtle_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -3357,33 +3357,33 @@ minetest.register_node("base:tasmanian_myrtle_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:tasmanian_myrtle_leaves", {
+minetest.register_node("australia:tasmanian_myrtle_leaves", {
 	description = "Tasmanian Myrtle Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_tasmanian_myrtle_leaves.png"},
+	tiles = {"aus_tasmanian_myrtle_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 2, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:tasmanian_myrtle_sapling"}, rarity = 20,},
-			{items = {"base:tasmanian_myrtle_leaves"},}
+			{items = {"australia:tasmanian_myrtle_sapling"}, rarity = 20,},
+			{items = {"australia:tasmanian_myrtle_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:tasmanian_myrtle_sapling", {
+minetest.register_node("australia:tasmanian_myrtle_sapling", {
 	description = "Tasmanian Myrtle Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_myrtle_sapling.png"},
-	inventory_image = "base_myrtle_sapling.png",
-	wield_image = "base_myrtle_sapling.png",
+	tiles = {"aus_myrtle_sapling.png"},
+	inventory_image = "aus_myrtle_sapling.png",
+	wield_image = "aus_myrtle_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -3399,7 +3399,7 @@ minetest.register_node("base:tasmanian_myrtle_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:tasmanian_myrtle_sapling",
+			"australia:tasmanian_myrtle_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -9, y = 1, z = -9},
@@ -3411,12 +3411,12 @@ minetest.register_node("base:tasmanian_myrtle_sapling", {
 })
 
 -- Tea Tree
-minetest.register_node("base:tea_tree_tree", {
+minetest.register_node("australia:tea_tree_tree", {
 	description = "Tea Tree",
 	tiles = {
-		"base_tea_tree_tree_top.png",
-		"base_tea_tree_tree_top.png",
-		"base_tea_tree_tree.png"
+		"aus_tea_tree_tree_top.png",
+		"aus_tea_tree_tree_top.png",
+		"aus_tea_tree_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -3436,33 +3436,33 @@ minetest.register_node("base:tea_tree_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:tea_tree_leaves", {
+minetest.register_node("australia:tea_tree_leaves", {
 	description = "Tea Tree Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_tea_tree_leaves.png"},
+	tiles = {"aus_tea_tree_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:tea_tree_sapling"}, rarity = 20,},
-			{items = {"base:tea_tree_leaves"},}
+			{items = {"australia:tea_tree_sapling"}, rarity = 20,},
+			{items = {"australia:tea_tree_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:tea_tree_sapling", {
+minetest.register_node("australia:tea_tree_sapling", {
 	description = "Tea Tree Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_melaleuca_sapling.png"},
-	inventory_image = "base_melaleuca_sapling.png",
-	wield_image = "base_melaleuca_sapling.png",
+	tiles = {"aus_melaleuca_sapling.png"},
+	inventory_image = "aus_melaleuca_sapling.png",
+	wield_image = "aus_melaleuca_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -3478,7 +3478,7 @@ minetest.register_node("base:tea_tree_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:tea_tree_sapling",
+			"australia:tea_tree_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -3, y = 1, z = -3},
@@ -3490,12 +3490,12 @@ minetest.register_node("base:tea_tree_sapling", {
 })
 
 -- White Box
-minetest.register_node("base:white_box_tree", {
+minetest.register_node("australia:white_box_tree", {
 	description = "White Box Tree",
 	tiles = {
-		"base_white_box_tree_top.png",
-		"base_white_box_tree_top.png",
-		"base_white_box_tree.png"
+		"aus_white_box_tree_top.png",
+		"aus_white_box_tree_top.png",
+		"aus_white_box_tree.png"
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -3504,33 +3504,33 @@ minetest.register_node("base:white_box_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:white_box_leaves", {
+minetest.register_node("australia:white_box_leaves", {
 	description = "White Box Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_white_box_leaves.png"},
+	tiles = {"aus_white_box_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:white_box_sapling"}, rarity = 20,},
-			{items = {"base:white_box_leaves"},}
+			{items = {"australia:white_box_sapling"}, rarity = 20,},
+			{items = {"australia:white_box_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:white_box_sapling", {
+minetest.register_node("australia:white_box_sapling", {
 	description = "White Box Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
-	tiles = {"base_eucalyptus_sapling.png"},
-	inventory_image = "base_eucalyptus_sapling.png",
-	wield_image = "base_eucalyptus_sapling.png",
+	tiles = {"aus_eucalyptus_sapling.png"},
+	inventory_image = "aus_eucalyptus_sapling.png",
+	wield_image = "aus_eucalyptus_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -3546,7 +3546,7 @@ minetest.register_node("base:white_box_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:white_box_sapling",
+			"australia:white_box_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -8, y = 1, z = -8},
@@ -3558,12 +3558,12 @@ minetest.register_node("base:white_box_sapling", {
 })
 
 -- Wirewood
-minetest.register_node("base:wirewood_tree", {
+minetest.register_node("australia:wirewood_tree", {
 	description = "Wirewood Tree",
 	tiles = {
-		"base_wirewood_tree_top.png",
-		"base_wirewood_tree_top.png",
-		"base_wirewood_tree.png"
+		"aus_wirewood_tree_top.png",
+		"aus_wirewood_tree_top.png",
+		"aus_wirewood_tree.png"
 	},
 	paramtype2 = "facedir",
 	paramtype = "light",
@@ -3583,27 +3583,27 @@ minetest.register_node("base:wirewood_tree", {
 	on_place = minetest.rotate_node
 })
 
-minetest.register_node("base:wirewood_leaves", {
+minetest.register_node("australia:wirewood_leaves", {
 	description = "Wirewood Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	visual_scale = 1.0,
-	tiles = {"base_wirewood_leaves.png"},
+	tiles = {"aus_wirewood_leaves.png"},
 	paramtype = "light",
 	is_ground_content = false,
 	groups = {snappy = 3, leafdecay = 5, flammable = 3, leaves = 1},
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"base:wirewood_sapling"}, rarity = 20,},
-			{items = {"base:wirewood_leaves"},}
+			{items = {"australia:wirewood_sapling"}, rarity = 20,},
+			{items = {"australia:wirewood_leaves"},}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
 })
 
-minetest.register_node("base:wirewood_sapling", {
+minetest.register_node("australia:wirewood_sapling", {
 	description = "Wirewood Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -3625,7 +3625,7 @@ minetest.register_node("base:wirewood_sapling", {
 	end,
 	on_place = function(itemstack, placer, pointed_thing)
 		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"base:wirewood_sapling",
+			"australia:wirewood_sapling",
 			-- minp, maxp to be checked, relative to sapling pos
 			-- minp_relative.y = 1 because sapling pos has been checked
 			{x = -2, y = 1, z = -2},
@@ -3641,113 +3641,113 @@ minetest.register_node("base:wirewood_sapling", {
 	Wood Planks
 --]]
 
-minetest.register_node("base:eucalyptus_wood", {
+minetest.register_node("australia:eucalyptus_wood", {
 	description = "Eucalyptus Wood Planks",
-	tiles = {"base_eucalyptus_wood.png"},
+	tiles = {"aus_eucalyptus_wood.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:blackwood", {
+minetest.register_node("australia:blackwood", {
 	description = "Blackwood Planks",
-	tiles = {"base_blackwood.png"},
+	tiles = {"aus_blackwood.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:blue_gum", {
+minetest.register_node("australia:blue_gum", {
 	description = "Blue Gum Planks",
-	tiles = {"base_blue_gum.png"},
+	tiles = {"aus_blue_gum.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:celery_top_pine", {
+minetest.register_node("australia:celery_top_pine", {
 	description = "Celery-top Pine Planks",
-	tiles = {"base_celery_top_pine.png"},
+	tiles = {"aus_celery_top_pine.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:red_mahogany", {
+minetest.register_node("australia:red_mahogany", {
 	description = "Red Mahogany Planks",
-	tiles = {"base_red_mahogany.png"},
+	tiles = {"aus_red_mahogany.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:huon_pine", {
+minetest.register_node("australia:huon_pine", {
 	description = "Huon Pine Planks",
-	tiles = {"base_huon_pine.png"},
+	tiles = {"aus_huon_pine.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:jarrah", {
+minetest.register_node("australia:jarrah", {
 	description = "Jarrah Planks",
-	tiles = {"base_jarrah.png"},
+	tiles = {"aus_jarrah.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:karri", {
+minetest.register_node("australia:karri", {
 	description = "Karri Planks",
-	tiles = {"base_karri.png"},
+	tiles = {"aus_karri.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:marri", {
+minetest.register_node("australia:marri", {
 	description = "Marri Planks",
-	tiles = {"base_marri.png"},
+	tiles = {"aus_marri.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:merbau", {
+minetest.register_node("australia:merbau", {
 	description = "Merbau Planks",
-	tiles = {"base_merbau.png"},
+	tiles = {"aus_merbau.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:red_gum", {
+minetest.register_node("australia:red_gum", {
 	description = "Red Gum Planks",
-	tiles = {"base_red_gum.png"},
+	tiles = {"aus_red_gum.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:southern_sassafras", {
+minetest.register_node("australia:southern_sassafras", {
 	description = "Southern Sassafras Planks",
-	tiles = {"base_southern_sassafras.png"},
+	tiles = {"aus_southern_sassafras.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:tasmanian_oak", {
+minetest.register_node("australia:tasmanian_oak", {
 	description = "Tasmanian Oak Planks",
-	tiles = {"base_tasmanian_oak.png"},
+	tiles = {"aus_tasmanian_oak.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
-minetest.register_node("base:tasmanian_myrtle", {
+minetest.register_node("australia:tasmanian_myrtle", {
 	description = "Tasmanian Myrtle Planks",
-	tiles = {"base_tasmanian_myrtle.png"},
+	tiles = {"aus_tasmanian_myrtle.png"},
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
 	sounds = default.node_sound_wood_defaults(),
@@ -3763,7 +3763,7 @@ local math_random = math.random
 local math_sqrt = math.sqrt
 
 -- Create and initialize a table for a schematic.
-function base.schematic_array(width, height, depth)
+function aus.schematic_array(width, height, depth)
 	-- Dimensions of data array.
 	local s = {size = {x = width, y = height, z = depth}}
 	s.data = {}
@@ -3836,7 +3836,7 @@ end
 
 
 -- Make leaves on a tree in a noise blob.
-function base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore, radius, np, limbs, fruit_chance, fruit)
+function aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore, radius, np, limbs, fruit_chance, fruit)
 	limbs = limbs
 	fruit_chance = fruit_chance or 0
 	np.seed = math_random(0, 16777215) -- noise seed
@@ -3885,7 +3885,7 @@ end
 
 
 -- Generic bush function.
-function base.make_bush(pos, data, area, height, radius, stem, leaves, air,
+function aus.make_bush(pos, data, area, height, radius, stem, leaves, air,
 		ignore)
 	local ystride = area.ystride -- Useful to get the index above
 	local iv = area:indexp(pos)
@@ -3895,12 +3895,12 @@ function base.make_bush(pos, data, area, height, radius, stem, leaves, air,
 	end
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
-	base.make_leavesblob(pos, data, area, stem, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, stem, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np)
 end
 
 -- Generic tree function.
-function base.make_tree(pos, data, area, height, radius, trunk, leaves, air,
+function aus.make_tree(pos, data, area, height, radius, trunk, leaves, air,
 		ignore, limbs, fruit_chance, fruit)
 	local ystride = area.ystride -- Useful to get the index above
 	local iv = area:indexp(pos)
@@ -3910,11 +3910,11 @@ function base.make_tree(pos, data, area, height, radius, trunk, leaves, air,
 	end
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height - 1
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs, fruit_chance, fruit)
 end
 
-function base.make_black_box(pos, data, area, height, radius, trunk, leaves,
+function aus.make_black_box(pos, data, area, height, radius, trunk, leaves,
 		air, ignore, limbs, fruit)
 	local ystride = area.ystride -- Useful to get the index above
 	local iv = area:indexp(pos)
@@ -3925,11 +3925,11 @@ function base.make_black_box(pos, data, area, height, radius, trunk, leaves,
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.5)
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height - 1
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 0.8, z = radius}, np, limbs)
 end
 
-function base.make_black_wattle(pos, data, area, height, radius, trunk, leaves,
+function aus.make_black_wattle(pos, data, area, height, radius, trunk, leaves,
 		air, ignore, limbs, fruit)
 	local ystride = area.ystride -- Useful to get the index above
 	local iv = area:indexp(pos)
@@ -3939,11 +3939,11 @@ function base.make_black_wattle(pos, data, area, height, radius, trunk, leaves,
 	end
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height - 1
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 1.5, z = radius}, np, limbs)
 end
 
-function base.make_tall_gum(pos, data, area, height, radius, trunk, leaves, air,
+function aus.make_tall_gum(pos, data, area, height, radius, trunk, leaves, air,
 		ignore, limbs, fruit)
 	local ystride = area.ystride -- Useful to get the index above
 	local iv = area:indexp(pos)
@@ -3954,11 +3954,11 @@ function base.make_tall_gum(pos, data, area, height, radius, trunk, leaves, air,
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.2)
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height - 1
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 1.25, z = radius}, np, limbs)
 end
 
-function base.make_boab(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+function aus.make_boab(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	local ystride = area.ystride -- Useful to get the index above
 	local width = 0.8
 	local ybot = pos.y - 1
@@ -3983,11 +3983,11 @@ function base.make_boab(pos, data, area, height, radius, trunk, leaves, air, ign
 	end
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height - 1
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 0.5, z = radius}, np, limbs)
 end
 
-function base.make_conifer(pos, data, area, height, radius, trunk, leaves, air,
+function aus.make_conifer(pos, data, area, height, radius, trunk, leaves, air,
 		ignore, limbs, fruit_chance, fruit)
 	local x, y, z = pos.x, pos.y, pos.z
 	fruit_chance = fruit_chance or 0
@@ -4020,7 +4020,7 @@ function base.make_conifer(pos, data, area, height, radius, trunk, leaves, air,
 	end
 end
 
-function base.make_fan_palm(pos, data, area, height, radius, trunk, leaves, air, ignore)
+function aus.make_fan_palm(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	local ystride = area.ystride -- Useful to get the index above
 	local iv = area:indexp(pos)
 	for i = 1, height do -- Build the trunk
@@ -4029,11 +4029,11 @@ function base.make_fan_palm(pos, data, area, height, radius, trunk, leaves, air,
 	end
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 0.5, z = radius}, np)
 end
 
-function base.make_jarrah(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+function aus.make_jarrah(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	local x, y, z = pos.x, pos.y, pos.z
 	local ystride = area.ystride -- Useful to get the index above
 	local iv = area:indexp(pos)
@@ -4045,11 +4045,11 @@ function base.make_jarrah(pos, data, area, height, radius, trunk, leaves, air, i
 	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.4)
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs)
 end
 
-function base.make_karri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+function aus.make_karri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	local x, y, z = pos.x, pos.y, pos.z
 	local ystride = area.ystride -- Useful to get the index above
 	local iv = area:indexp(pos)
@@ -4060,11 +4060,11 @@ function base.make_karri(pos, data, area, height, radius, trunk, leaves, air, ig
 	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.8)
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs)
 end
 
-function base.make_mangrove(pos, data, area, height, radius, trunk, leaves, air, ignore)
+function aus.make_mangrove(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	local x, y, z = pos.x, pos.y, pos.z
 	local ystride = area.ystride -- Useful to get the index above
 	local iv = area:indexp(pos)
@@ -4074,7 +4074,7 @@ function base.make_mangrove(pos, data, area, height, radius, trunk, leaves, air,
 	end
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 0.5, z = radius}, np)
 	for z_dist = -1, 1 do
 		local vi_1 = area:index(x - 1, y - 1, z + z_dist)
@@ -4097,12 +4097,12 @@ function base.make_mangrove(pos, data, area, height, radius, trunk, leaves, air,
 end
 
 -- Mangrove trees use schematic placement because the vocelmanipulator cannot place nodes under sea level.
-function base.generate_mangrove_tree_schematic(trunk_height, trunk, leaf)
+function aus.generate_mangrove_tree_schematic(trunk_height, trunk, leaf)
 	local height = trunk_height * 2 + 1
 	local radius = 2
 	local width = 2 * radius + 1
 	local trunk_top = height - 3
-	local s = base.schematic_array(width, height, width)
+	local s = aus.schematic_array(width, height, width)
 
 	-- roots, trunk, and extra leaves
 	for z = -1, 1 do
@@ -4134,7 +4134,7 @@ function base.generate_mangrove_tree_schematic(trunk_height, trunk, leaf)
 				z = math_random(-1, 1) * 2
 			end
 			for j = -1, 1, 2 do
-				base.generate_canopy(s, leaf, {x = j * x, y = y, z = j * z})
+				aus.generate_canopy(s, leaf, {x = j * x, y = y, z = j * z})
 			end
 		end
 	end
@@ -4142,7 +4142,7 @@ function base.generate_mangrove_tree_schematic(trunk_height, trunk, leaf)
 end
 
 -- Create a canopy of leaves.
-function base.generate_canopy(s, leaf, pos)
+function aus.generate_canopy(s, leaf, pos)
 	local height = s.size.y
 	local width = s.size.x
 	local rx = math_floor(s.size.x / 2)
@@ -4173,7 +4173,7 @@ function base.generate_canopy(s, leaf, pos)
 	end
 end
 
-function base.make_marri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+function aus.make_marri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	local x, y, z = pos.x, pos.y, pos.z
 	local ystride = area.ystride -- Useful to get the index above
 	local iv = area:indexp(pos)
@@ -4184,11 +4184,11 @@ function base.make_marri(pos, data, area, height, radius, trunk, leaves, air, ig
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.6)
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs)
 end
 
-function base.make_merbau(pos, data, area, height, radius, trunk, leaves, air, ignore)
+function aus.make_merbau(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	local x, y, z = pos.x, pos.y, pos.z
 	local ystride = area.ystride -- Useful to get the index above
 	local iv = area:indexp(pos)
@@ -4199,11 +4199,11 @@ function base.make_merbau(pos, data, area, height, radius, trunk, leaves, air, i
 	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.2)
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius * 0.5, z = radius}, np)
 end
 
-function base.make_moreton_bay_fig(pos, data, area, height, radius, trunk,
+function aus.make_moreton_bay_fig(pos, data, area, height, radius, trunk,
 		leaves, air, ignore, limbs, fruit_chance, fruit)
 	local x, y, z = pos.x, pos.y, pos.z
 	local ystride = area.ystride -- Useful to get the index above
@@ -4216,11 +4216,11 @@ function base.make_moreton_bay_fig(pos, data, area, height, radius, trunk,
 	make_treetrunk3(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.3)
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs, fruit_chance, fruit)
 end
 
-function base.make_river_red_gum(pos, data, area, height, radius, trunk, leaves,
+function aus.make_river_red_gum(pos, data, area, height, radius, trunk, leaves,
 		air, ignore, limbs)
 	local x, y, z = pos.x, pos.y, pos.z
 	local ystride = area.ystride -- Useful to get the index above
@@ -4232,11 +4232,11 @@ function base.make_river_red_gum(pos, data, area, height, radius, trunk, leaves,
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.7)
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs)
 end
 
-function base.make_swamp_gum(pos, data, area, height, radius, trunk, leaves,
+function aus.make_swamp_gum(pos, data, area, height, radius, trunk, leaves,
 		air, ignore, limbs)
 	local x, y, z = pos.x, pos.y, pos.z
 	local ystride = area.ystride -- Useful to get the index above
@@ -4250,11 +4250,11 @@ function base.make_swamp_gum(pos, data, area, height, radius, trunk, leaves,
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8},
 			octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius * 0.8, y = radius * 1.2, z = radius * 0.8}, np, limbs)
 end
 
-function base.make_tasmanian_myrtle(pos, data, area, height, radius, trunk,
+function aus.make_tasmanian_myrtle(pos, data, area, height, radius, trunk,
 		leaves, air, ignore, limbs)
 	local x, y, z = pos.x, pos.y, pos.z
 	local ystride = area.ystride -- Useful to get the index above
@@ -4266,18 +4266,18 @@ function base.make_tasmanian_myrtle(pos, data, area, height, radius, trunk,
 	make_treetrunk2(pos.x, pos.y, pos.z, data, area, height, trunk, air, 0.6)
 	local np = {offset = 0.8, scale = 0.4, spread = {x = 8, y = 4, z = 8}, octaves = 3, persist = 0.5}
 	pos.y = pos.y + height
-	base.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
+	aus.make_leavesblob(pos, data, area, trunk, leaves, air, ignore,
 			{x = radius, y = radius, z = radius}, np, limbs)
 end
 
 
-function base.grow_arnhem_cypress_pine(pos)
+function aus.grow_arnhem_cypress_pine(pos)
 	-- individual parameters
 	local height = math_random(8, 12)
 	local radius = 4
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:arnhem_cypress_pine_tree")
-	local leaves = minetest.get_content_id("base:arnhem_cypress_pine_leaves")
+	local trunk = minetest.get_content_id("australia:arnhem_cypress_pine_tree")
+	local leaves = minetest.get_content_id("australia:arnhem_cypress_pine_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4287,20 +4287,20 @@ function base.grow_arnhem_cypress_pine(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_black_box(pos)
+function aus.grow_black_box(pos)
 	-- individual parameters
 	local height = math_random(5, 9)
 	local radius = math_random(4, 6)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:black_box_tree")
-	local leaves = minetest.get_content_id("base:black_box_leaves")
+	local trunk = minetest.get_content_id("australia:black_box_tree")
+	local leaves = minetest.get_content_id("australia:black_box_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4310,20 +4310,20 @@ function base.grow_black_box(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_black_box(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_black_box(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_black_wattle(pos)
+function aus.grow_black_wattle(pos)
 	-- individual parameters
 	local height = math_random(5, 7)
 	local radius = 3
 	local limbs = false
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:black_wattle_tree")
-	local leaves = minetest.get_content_id("base:black_wattle_leaves")
+	local trunk = minetest.get_content_id("australia:black_wattle_tree")
+	local leaves = minetest.get_content_id("australia:black_wattle_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4333,20 +4333,20 @@ function base.grow_black_wattle(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_black_wattle(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_black_wattle(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_blue_gum(pos)
+function aus.grow_blue_gum(pos)
 	-- individual parameters
 	local height = math_random(10, 18)
 	local radius = math_random(5, 6)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:blue_gum_tree")
-	local leaves = minetest.get_content_id("base:blue_gum_leaves")
+	local trunk = minetest.get_content_id("australia:blue_gum_tree")
+	local leaves = minetest.get_content_id("australia:blue_gum_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4356,20 +4356,20 @@ function base.grow_blue_gum(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tall_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tall_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_boab(pos)
+function aus.grow_boab(pos)
 	-- individual parameters
 	local height = math_random(5, 6)
 	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:boab_tree")
-	local leaves = minetest.get_content_id("base:boab_leaves")
+	local trunk = minetest.get_content_id("australia:boab_tree")
+	local leaves = minetest.get_content_id("australia:boab_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4379,19 +4379,19 @@ function base.grow_boab(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_boab(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_boab(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_bull_banksia(pos)
+function aus.grow_bull_banksia(pos)
 	-- individual parameters
 	local height = math_random(3, 5)
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:bull_banksia_tree")
-	local leaves = minetest.get_content_id("base:bull_banksia_leaves")
+	local trunk = minetest.get_content_id("australia:bull_banksia_tree")
+	local leaves = minetest.get_content_id("australia:bull_banksia_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4401,19 +4401,19 @@ function base.grow_bull_banksia(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_celery_top_pine(pos)
+function aus.grow_celery_top_pine(pos)
 	-- individual parameters
 	local height = math_random(7, 9)
 	local radius = math_random(3, 4)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:celery_top_pine_tree")
-	local leaves = minetest.get_content_id("base:celery_top_pine_leaves")
+	local trunk = minetest.get_content_id("australia:celery_top_pine_tree")
+	local leaves = minetest.get_content_id("australia:celery_top_pine_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4423,24 +4423,24 @@ function base.grow_celery_top_pine(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_cherry(pos)
+function aus.grow_cherry(pos)
 	-- individual parameters
 	local height = math_random(3, 4)
 	local radius = 3
 	local limbs = nil
 	local fruit_chance = 0.2
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:cherry_tree")
-	local leaves = minetest.get_content_id("base:cherry_leaves")
+	local trunk = minetest.get_content_id("australia:cherry_tree")
+	local leaves = minetest.get_content_id("australia:cherry_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
-	local fruit = minetest.get_content_id("base:cherry")
+	local fruit = minetest.get_content_id("australia:cherry")
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
 		{x = pos.x - 3, y = pos.y, z = pos.z - 3},
@@ -4448,19 +4448,19 @@ function base.grow_cherry(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	aus.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_coast_banksia(pos)
+function aus.grow_coast_banksia(pos)
 	-- individual parameters
 	local height = math_random(7, 12)
 	local radius = math_random(4, 5)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:coast_banksia_tree")
-	local leaves = minetest.get_content_id("base:coast_banksia_leaves")
+	local trunk = minetest.get_content_id("australia:coast_banksia_tree")
+	local leaves = minetest.get_content_id("australia:coast_banksia_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4470,20 +4470,20 @@ function base.grow_coast_banksia(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_coolabah(pos)
+function aus.grow_coolabah(pos)
 	-- individual parameters
 	local height = math_random(7, 9)
 	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:coolabah_tree")
-	local leaves = minetest.get_content_id("base:coolabah_leaves")
+	local trunk = minetest.get_content_id("australia:coolabah_tree")
+	local leaves = minetest.get_content_id("australia:coolabah_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4493,20 +4493,20 @@ function base.grow_coolabah(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_daintree_stringybark(pos)
+function aus.grow_daintree_stringybark(pos)
 	-- individual parameters
 	local height = math_random(12, 16)
 	local radius = math_random(6, 8)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:daintree_stringybark_tree")
-	local leaves = minetest.get_content_id("base:daintree_stringybark_leaves")
+	local trunk = minetest.get_content_id("australia:daintree_stringybark_tree")
+	local leaves = minetest.get_content_id("australia:daintree_stringybark_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4516,20 +4516,20 @@ function base.grow_daintree_stringybark(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tall_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tall_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_darwin_woollybutt(pos)
+function aus.grow_darwin_woollybutt(pos)
 	-- individual parameters
 	local height = math_random(7, 12)
 	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:darwin_woollybutt_tree")
-	local leaves = minetest.get_content_id("base:darwin_woollybutt_leaves")
+	local trunk = minetest.get_content_id("australia:darwin_woollybutt_tree")
+	local leaves = minetest.get_content_id("australia:darwin_woollybutt_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4539,19 +4539,19 @@ function base.grow_darwin_woollybutt(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_desert_oak(pos)
+function aus.grow_desert_oak(pos)
 	-- individual parameters
 	local height = math_random(4, 8)
 	local radius = math_random(2, 4)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:desert_oak_tree")
-	local leaves = minetest.get_content_id("base:desert_oak_leaves")
+	local trunk = minetest.get_content_id("australia:desert_oak_tree")
+	local leaves = minetest.get_content_id("australia:desert_oak_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4561,19 +4561,19 @@ function base.grow_desert_oak(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_fan_palm(pos)
+function aus.grow_fan_palm(pos)
 	-- individual parameters
 	local height = math_random(5, 7)
 	local radius = 3
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:fan_palm_tree")
-	local leaves = minetest.get_content_id("base:fan_palm_leaves")
+	local trunk = minetest.get_content_id("australia:fan_palm_tree")
+	local leaves = minetest.get_content_id("australia:fan_palm_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4583,19 +4583,19 @@ function base.grow_fan_palm(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_fan_palm(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_fan_palm(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_flame_grevillea(pos)
+function aus.grow_flame_grevillea(pos)
 	-- individual parameters
 	local height = 1
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
-	local stem = minetest.get_content_id("base:acacia_bush_stem")
-	local leaves = minetest.get_content_id("base:flame_grevillea_leaves")
+	local stem = minetest.get_content_id("australia:acacia_bush_stem")
+	local leaves = minetest.get_content_id("australia:flame_grevillea_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4605,19 +4605,19 @@ function base.grow_flame_grevillea(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_bush(pos, data, area, height, radius, stem, leaves, air, ignore)
+	aus.make_bush(pos, data, area, height, radius, stem, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_golden_wattle(pos)
+function aus.grow_golden_wattle(pos)
 	-- individual parameters
 	local height = math_random(3, 4)
 	local radius = 2
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:golden_wattle_tree")
-	local leaves = minetest.get_content_id("base:golden_wattle_leaves")
+	local trunk = minetest.get_content_id("australia:golden_wattle_tree")
+	local leaves = minetest.get_content_id("australia:golden_wattle_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4627,19 +4627,19 @@ function base.grow_golden_wattle(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_grey_mangrove(pos)
+function aus.grow_grey_mangrove(pos)
 	-- individual parameters
 	local height = math_random(3, 4)
 	local radius = 2
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:grey_mangrove_tree")
-	local leaves = minetest.get_content_id("base:grey_mangrove_leaves")
+	local trunk = minetest.get_content_id("australia:grey_mangrove_tree")
+	local leaves = minetest.get_content_id("australia:grey_mangrove_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4649,20 +4649,20 @@ function base.grow_grey_mangrove(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_mangrove(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_mangrove(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_huon_pine(pos)
+function aus.grow_huon_pine(pos)
 	-- individual parameters
 	local height = math_random(7, 12)
 	local radius = math_random(5, 6)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:huon_pine_tree")
-	local leaves = minetest.get_content_id("base:huon_pine_leaves")
+	local trunk = minetest.get_content_id("australia:huon_pine_tree")
+	local leaves = minetest.get_content_id("australia:huon_pine_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4672,19 +4672,19 @@ function base.grow_huon_pine(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_illawarra_flame(pos)
+function aus.grow_illawarra_flame(pos)
 	-- individual parameters
 	local height = math_random(8, 10)
 	local radius = math_random(5, 6)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:illawarra_flame_tree")
-	local leaves = minetest.get_content_id("base:illawarra_flame_leaves")
+	local trunk = minetest.get_content_id("australia:illawarra_flame_tree")
+	local leaves = minetest.get_content_id("australia:illawarra_flame_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4694,20 +4694,20 @@ function base.grow_illawarra_flame(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_jarrah(pos)
+function aus.grow_jarrah(pos)
 	-- individual parameters
 	local height = math_random(12, 16)
 	local radius = math_random(7, 8)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:jarrah_tree")
-	local leaves = minetest.get_content_id("base:jarrah_leaves")
+	local trunk = minetest.get_content_id("australia:jarrah_tree")
+	local leaves = minetest.get_content_id("australia:jarrah_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4717,20 +4717,20 @@ function base.grow_jarrah(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_jarrah(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_jarrah(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_karri(pos)
+function aus.grow_karri(pos)
 	-- individual parameters
 	local height = math_random(15, 20)
 	local radius = math_random(7, 8)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:karri_tree")
-	local leaves = minetest.get_content_id("base:karri_leaves")
+	local trunk = minetest.get_content_id("australia:karri_tree")
+	local leaves = minetest.get_content_id("australia:karri_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4740,20 +4740,20 @@ function base.grow_karri(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_karri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_karri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_lemon_eucalyptus(pos)
+function aus.grow_lemon_eucalyptus(pos)
 	-- individual parameters
 	local height = math_random(10, 15)
 	local radius = math_random(4, 5)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:lemon_eucalyptus_tree")
-	local leaves = minetest.get_content_id("base:lemon_eucalyptus_leaves")
+	local trunk = minetest.get_content_id("australia:lemon_eucalyptus_tree")
+	local leaves = minetest.get_content_id("australia:lemon_eucalyptus_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4763,19 +4763,19 @@ function base.grow_lemon_eucalyptus(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_lemon_myrtle(pos)
+function aus.grow_lemon_myrtle(pos)
 	-- individual parameters
 	local height = math_random(3, 5)
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:lemon_myrtle_tree")
-	local leaves = minetest.get_content_id("base:lemon_myrtle_leaves")
+	local trunk = minetest.get_content_id("australia:lemon_myrtle_tree")
+	local leaves = minetest.get_content_id("australia:lemon_myrtle_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4785,24 +4785,24 @@ function base.grow_lemon_myrtle(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_lilly_pilly(pos)
+function aus.grow_lilly_pilly(pos)
 	-- individual parameters
 	local height = math_random(3, 5)
 	local radius = math_random(3, 5)
 	local limbs = nil
 	local fruit_chance = 0.3
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:lilly_pilly_tree")
-	local leaves = minetest.get_content_id("base:lilly_pilly_leaves")
+	local trunk = minetest.get_content_id("australia:lilly_pilly_tree")
+	local leaves = minetest.get_content_id("australia:lilly_pilly_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
-	local fruit = minetest.get_content_id("base:lilly_pilly_berries")
+	local fruit = minetest.get_content_id("australia:lilly_pilly_berries")
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
 		{x = pos.x - 6, y = pos.y, z = pos.z - 6},
@@ -4810,24 +4810,24 @@ function base.grow_lilly_pilly(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_macadamia(pos)
+function aus.grow_macadamia(pos)
 	-- individual parameters
 	local height = math_random(5, 7)
 	local radius = math_random(3, 4)
 	local limbs = nil
 	local fruit_chance = 0.3
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:macadamia_tree")
-	local leaves = minetest.get_content_id("base:macadamia_leaves")
+	local trunk = minetest.get_content_id("australia:macadamia_tree")
+	local leaves = minetest.get_content_id("australia:macadamia_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
-	local fruit = minetest.get_content_id("base:macadamia")
+	local fruit = minetest.get_content_id("australia:macadamia")
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
 		{x = pos.x - 4, y = pos.y, z = pos.z - 4},
@@ -4835,24 +4835,24 @@ function base.grow_macadamia(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_mangrove_apple(pos)
+function aus.grow_mangrove_apple(pos)
 	-- individual parameters
 	local height = math_random(6, 8)
 	local radius = math_random(3, 4)
 	local limbs = nil
 	local fruit_chance = 0.2
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:mangrove_apple_tree")
-	local leaves = minetest.get_content_id("base:mangrove_apple_leaves")
+	local trunk = minetest.get_content_id("australia:mangrove_apple_tree")
+	local leaves = minetest.get_content_id("australia:mangrove_apple_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
-	local fruit = minetest.get_content_id("base:mangrove_apple")
+	local fruit = minetest.get_content_id("australia:mangrove_apple")
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
 		{x = pos.x - 4, y = pos.y, z = pos.z - 4},
@@ -4860,20 +4860,20 @@ function base.grow_mangrove_apple(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_marri(pos)
+function aus.grow_marri(pos)
 	-- individual parameters
 	local height = math_random(12, 16)
 	local radius = math_random(6, 8)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:marri_tree")
-	local leaves = minetest.get_content_id("base:marri_leaves")
+	local trunk = minetest.get_content_id("australia:marri_tree")
+	local leaves = minetest.get_content_id("australia:marri_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4883,19 +4883,19 @@ function base.grow_marri(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_marri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_marri(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_merbau(pos)
+function aus.grow_merbau(pos)
 	-- individual parameters
 	local height = math_random(12, 16)
 	local radius = math_random(4, 5)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:merbau_tree")
-	local leaves = minetest.get_content_id("base:merbau_leaves")
+	local trunk = minetest.get_content_id("australia:merbau_tree")
+	local leaves = minetest.get_content_id("australia:merbau_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4905,24 +4905,24 @@ function base.grow_merbau(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_merbau(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_merbau(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_moreton_bay_fig(pos)
+function aus.grow_moreton_bay_fig(pos)
 	-- individual parameters
 	local height = math_random(12, 16)
 	local radius = math_random(10, 12)
 	local limbs = true
 	local fruit_chance = 0.2
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:moreton_bay_fig_tree")
-	local leaves = minetest.get_content_id("base:moreton_bay_fig_leaves")
+	local trunk = minetest.get_content_id("australia:moreton_bay_fig_tree")
+	local leaves = minetest.get_content_id("australia:moreton_bay_fig_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
-	local fruit = minetest.get_content_id("base:moreton_bay_fig")
+	local fruit = minetest.get_content_id("australia:moreton_bay_fig")
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
 		{x = pos.x - 15, y = pos.y, z = pos.z - 15},
@@ -4930,19 +4930,19 @@ function base.grow_moreton_bay_fig(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_moreton_bay_fig(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	aus.make_moreton_bay_fig(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_mulga(pos)
+function aus.grow_mulga(pos)
 	-- individual parameters
 	local height = math_random(4, 6)
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:mulga_tree")
-	local leaves = minetest.get_content_id("base:mulga_leaves")
+	local trunk = minetest.get_content_id("australia:mulga_tree")
+	local leaves = minetest.get_content_id("australia:mulga_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4952,20 +4952,20 @@ function base.grow_mulga(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_paperbark(pos)
+function aus.grow_paperbark(pos)
 	-- individual parameters
 	local height = math_random(5, 8)
 	local radius = math_random(3, 4)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:paperbark_tree")
-	local leaves = minetest.get_content_id("base:paperbark_leaves")
+	local trunk = minetest.get_content_id("australia:paperbark_tree")
+	local leaves = minetest.get_content_id("australia:paperbark_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -4975,24 +4975,24 @@ function base.grow_paperbark(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_quandong(pos)
+function aus.grow_quandong(pos)
 	-- individual parameters
 	local height = math_random(2, 3)
 	local radius = 2
 	local limbs = nil
 	local fruit_chance = 0.2
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:quandong_tree")
-	local leaves = minetest.get_content_id("base:quandong_leaves")
+	local trunk = minetest.get_content_id("australia:quandong_tree")
+	local leaves = minetest.get_content_id("australia:quandong_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
-	local fruit = minetest.get_content_id("base:quandong")
+	local fruit = minetest.get_content_id("australia:quandong")
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
 		{x = pos.x - 2, y = pos.y, z = pos.z - 2},
@@ -5000,19 +5000,19 @@ function base.grow_quandong(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs, fruit_chance, fruit)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_red_bottlebrush(pos)
+function aus.grow_red_bottlebrush(pos)
 	-- individual parameters
 	local height = 1
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
-	local stem = minetest.get_content_id("base:bush_stem")
-	local leaves = minetest.get_content_id("base:red_bottlebrush_leaves")
+	local stem = minetest.get_content_id("australia:bush_stem")
+	local leaves = minetest.get_content_id("australia:red_bottlebrush_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5022,19 +5022,19 @@ function base.grow_red_bottlebrush(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_bush(pos, data, area, height, radius, stem, leaves, air, ignore)
+	aus.make_bush(pos, data, area, height, radius, stem, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_river_oak(pos)
+function aus.grow_river_oak(pos)
 	-- individual parameters
 	local height = math_random(10, 12)
 	local radius = math_random(3, 4)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:river_oak_tree")
-	local leaves = minetest.get_content_id("base:river_oak_leaves")
+	local trunk = minetest.get_content_id("australia:river_oak_tree")
+	local leaves = minetest.get_content_id("australia:river_oak_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5044,20 +5044,20 @@ function base.grow_river_oak(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_river_red_gum(pos)
+function aus.grow_river_red_gum(pos)
 	-- individual parameters
 	local height = math_random(10, 15)
 	local radius = math_random(5, 7)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:river_red_gum_tree")
-	local leaves = minetest.get_content_id("base:river_red_gum_leaves")
+	local trunk = minetest.get_content_id("australia:river_red_gum_tree")
+	local leaves = minetest.get_content_id("australia:river_red_gum_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5067,19 +5067,19 @@ function base.grow_river_red_gum(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_river_red_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_river_red_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_rottnest_island_pine(pos)
+function aus.grow_rottnest_island_pine(pos)
 	-- individual parameters
 	local height = math_random(3, 4)
 	local radius = 3
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:rottnest_island_pine_tree")
-	local leaves = minetest.get_content_id("base:rottnest_island_pine_leaves")
+	local trunk = minetest.get_content_id("australia:rottnest_island_pine_tree")
+	local leaves = minetest.get_content_id("australia:rottnest_island_pine_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5089,20 +5089,20 @@ function base.grow_rottnest_island_pine(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_scribbly_gum(pos)
+function aus.grow_scribbly_gum(pos)
 	-- individual parameters
 	local height = math_random(5, 7)
 	local radius = math_random(3, 4)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:scribbly_gum_tree")
-	local leaves = minetest.get_content_id("base:scribbly_gum_leaves")
+	local trunk = minetest.get_content_id("australia:scribbly_gum_tree")
+	local leaves = minetest.get_content_id("australia:scribbly_gum_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5112,19 +5112,19 @@ function base.grow_scribbly_gum(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_shoestring_acacia(pos)
+function aus.grow_shoestring_acacia(pos)
 	-- individual parameters
 	local height = math_random(3, 5)
 	local radius = math_random(3, 4)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:shoestring_acacia_tree")
-	local leaves = minetest.get_content_id("base:shoestring_acacia_leaves")
+	local trunk = minetest.get_content_id("australia:shoestring_acacia_tree")
+	local leaves = minetest.get_content_id("australia:shoestring_acacia_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5134,19 +5134,19 @@ function base.grow_shoestring_acacia(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_snow_gum(pos)
+function aus.grow_snow_gum(pos)
 	-- individual parameters
 	local height = math_random(2, 4)
 	local radius = 2
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:snow_gum_tree")
-	local leaves = minetest.get_content_id("base:snow_gum_leaves")
+	local trunk = minetest.get_content_id("australia:snow_gum_tree")
+	local leaves = minetest.get_content_id("australia:snow_gum_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5156,19 +5156,19 @@ function base.grow_snow_gum(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_southern_sassafras(pos)
+function aus.grow_southern_sassafras(pos)
 	-- individual parameters
 	local height = math_random(7, 12)
 	local radius = math_random(5, 7)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:southern_sassafras_tree")
-	local leaves = minetest.get_content_id("base:southern_sassafras_leaves")
+	local trunk = minetest.get_content_id("australia:southern_sassafras_tree")
+	local leaves = minetest.get_content_id("australia:southern_sassafras_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5178,19 +5178,19 @@ function base.grow_southern_sassafras(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_conifer(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_stilted_mangrove(pos)
+function aus.grow_stilted_mangrove(pos)
 	-- individual parameters
 	local height = math_random(4, 7)
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:stilted_mangrove_tree")
-	local leaves = minetest.get_content_id("base:stilted_mangrove_leaves")
+	local trunk = minetest.get_content_id("australia:stilted_mangrove_tree")
+	local leaves = minetest.get_content_id("australia:stilted_mangrove_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5200,20 +5200,20 @@ function base.grow_stilted_mangrove(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_mangrove(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_mangrove(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_sugar_gum(pos)
+function aus.grow_sugar_gum(pos)
 	-- individual parameters
 	local height = math_random(7, 11)
 	local radius = math_random(6, 8)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:sugar_gum_tree")
-	local leaves = minetest.get_content_id("base:sugar_gum_leaves")
+	local trunk = minetest.get_content_id("australia:sugar_gum_tree")
+	local leaves = minetest.get_content_id("australia:sugar_gum_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5223,20 +5223,20 @@ function base.grow_sugar_gum(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_swamp_bloodwood(pos)
+function aus.grow_swamp_bloodwood(pos)
 	-- individual parameters
 	local height = math_random(5, 7)
 	local radius = math_random(3, 4)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:swamp_bloodwood_tree")
-	local leaves = minetest.get_content_id("base:swamp_bloodwood_leaves")
+	local trunk = minetest.get_content_id("australia:swamp_bloodwood_tree")
+	local leaves = minetest.get_content_id("australia:swamp_bloodwood_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5246,20 +5246,20 @@ function base.grow_swamp_bloodwood(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_swamp_gum(pos)
+function aus.grow_swamp_gum(pos)
 	-- individual parameters
 	local height = math_random(20, 30)
 	local radius = math_random(7, 9)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:swamp_gum_tree")
-	local leaves = minetest.get_content_id("base:swamp_gum_leaves")
+	local trunk = minetest.get_content_id("australia:swamp_gum_tree")
+	local leaves = minetest.get_content_id("australia:swamp_gum_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5269,19 +5269,19 @@ function base.grow_swamp_gum(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_swamp_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_swamp_gum(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_swamp_paperbark(pos)
+function aus.grow_swamp_paperbark(pos)
 	-- individual parameters
 	local height = math_random(3, 4)
 	local radius = 2
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:swamp_paperbark_tree")
-	local leaves = minetest.get_content_id("base:swamp_paperbark_leaves")
+	local trunk = minetest.get_content_id("australia:swamp_paperbark_tree")
+	local leaves = minetest.get_content_id("australia:swamp_paperbark_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5291,20 +5291,20 @@ function base.grow_swamp_paperbark(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_tasmanian_myrtle(pos)
+function aus.grow_tasmanian_myrtle(pos)
 	-- individual parameters
 	local height = math_random(12, 15)
 	local radius = math_random(5, 7)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:tasmanian_myrtle_tree")
-	local leaves = minetest.get_content_id("base:tasmanian_myrtle_leaves")
+	local trunk = minetest.get_content_id("australia:tasmanian_myrtle_tree")
+	local leaves = minetest.get_content_id("australia:tasmanian_myrtle_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5314,19 +5314,19 @@ function base.grow_tasmanian_myrtle(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tasmanian_myrtle(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tasmanian_myrtle(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_tea_tree(pos)
+function aus.grow_tea_tree(pos)
 	-- individual parameters
 	local height = math_random(3, 4)
 	local radius = math_random(2, 3)
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:tea_tree_tree")
-	local leaves = minetest.get_content_id("base:tea_tree_leaves")
+	local trunk = minetest.get_content_id("australia:tea_tree_tree")
+	local leaves = minetest.get_content_id("australia:tea_tree_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5336,19 +5336,19 @@ function base.grow_tea_tree(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_waratah(pos)
+function aus.grow_waratah(pos)
 	-- individual parameters
 	local height = 1
 	local radius = math_random(1, 2)
 	-- voxelmanip stuff
-	local stem = minetest.get_content_id("base:bush_stem")
-	local leaves = minetest.get_content_id("base:waratah_leaves")
+	local stem = minetest.get_content_id("australia:bush_stem")
+	local leaves = minetest.get_content_id("australia:waratah_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5358,20 +5358,20 @@ function base.grow_waratah(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_bush(pos, data, area, height, radius, stem, leaves, air, ignore)
+	aus.make_bush(pos, data, area, height, radius, stem, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_white_box(pos)
+function aus.grow_white_box(pos)
 	-- individual parameters
 	local height = math_random(6, 10)
 	local radius = math_random(5, 7)
 	local limbs = true
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:white_box_tree")
-	local leaves = minetest.get_content_id("base:white_box_leaves")
+	local trunk = minetest.get_content_id("australia:white_box_tree")
+	local leaves = minetest.get_content_id("australia:white_box_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5381,19 +5381,19 @@ function base.grow_white_box(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore, limbs)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
-function base.grow_wirewood(pos)
+function aus.grow_wirewood(pos)
 	-- individual parameters
 	local height = math_random(5, 7)
 	local radius = 2
 	-- voxelmanip stuff
-	local trunk = minetest.get_content_id("base:wirewood_tree")
-	local leaves = minetest.get_content_id("base:wirewood_leaves")
+	local trunk = minetest.get_content_id("australia:wirewood_tree")
+	local leaves = minetest.get_content_id("australia:wirewood_leaves")
 	local air = minetest.get_content_id("air")
 	local ignore = minetest.get_content_id("ignore")
 	local vm = minetest.get_voxel_manip()
@@ -5403,27 +5403,27 @@ function base.grow_wirewood(pos)
 	)
 	local area = VoxelArea:new({MinEdge = minp, MaxEdge = maxp})
 	local data = vm:get_data()
-	base.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
+	aus.make_tree(pos, data, area, height, radius, trunk, leaves, air, ignore)
 	vm:set_data(data)
 	vm:write_to_map()
 	vm:update_map()
 end
 
 
-base.palm_model={
+aus.palm_model={
 	axiom="FFcccccc&FFFFFdddRA//A//A//A//A//A",
 	rules_a="[&fb&bbb[++f--&ffff&ff][--f++&ffff&ff]&ffff&bbbb&b]",
 	rules_b="f",
 	rules_c="/",
 	rules_d="F",
-	trunk="base:palm_tree",
-	leaves="base:palm_leaves",
+	trunk="australia:palm_tree",
+	leaves="australia:palm_leaves",
 	angle=30,
 	iterations=2,
 	random_level=0,
 	trunk_type="single",
 	thin_branches=true,
-	fruit="base:palm_tree",
+	fruit="australia:palm_tree",
 	fruit_chance=0
 }
 

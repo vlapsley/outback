@@ -9,13 +9,13 @@ local math_random = math.random
 -- central australia
 minetest.register_biome({
 	name =             "central_australia",
-	node_top =         "base:red_dirt",
+	node_top =         "australia:red_dirt",
 	depth_top =        1,
-	node_filler =      "base:red_sandstone",
+	node_filler =      "australia:red_sandstone",
 	depth_filler =     2,
 	node_stone =       "technic:granite",
-	node_river_water = "base:muddy_water_source",
-	node_riverbed =    "base:red_dirt",
+	node_river_water = "australia:muddy_water_source",
+	node_riverbed =    "australia:red_dirt",
 	depth_riverbed =   1,
 	y_min =            4,
 	y_max =            31000,
@@ -33,7 +33,7 @@ minetest.register_biome({
 -- Copper (Olympic Dam)
 minetest.register_ore({
 	ore_type =        "blob",
-	ore =             "base:granite_with_copper",
+	ore =             "australia:granite_with_copper",
 	wherein =         {"technic:granite"},
 	clust_scarcity =  85184,
 	clust_size =      8,
@@ -54,7 +54,7 @@ minetest.register_ore({
 -- Opal (Coober Pedy)
 minetest.register_ore({
 	ore_type =        "vein",
-	ore =             "base:granite_with_opal",
+	ore =             "australia:granite_with_opal",
 	wherein =         "technic:granite",
 	biomes =          {"central_australia"},
 	y_min =           -31,
@@ -74,7 +74,7 @@ minetest.register_ore({
 -- Smoky Quartz (Kalkarindji)
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:granite_with_smoky_quartz",
+	ore =            "australia:granite_with_smoky_quartz",
 	wherein =        {"technic:granite"},
 	biomes =         {"central_australia"},
 	clust_scarcity = 3375,
@@ -115,7 +115,7 @@ minetest.register_ore({
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:red_dirt"},
+		place_on =      {"australia:red_dirt"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -154,7 +154,7 @@ register_dryrivergrass(4)
 
 -- Bush Tomato
 plants_api.register_plant({
-	nodes =     {"base:tomato_bush"},
+	nodes =     {"australia:tomato_bush"},
 	cover =     0.0002,
 	density =   0.01,
 	priority =  30,
@@ -165,7 +165,7 @@ plants_api.register_plant({
 
 -- Mitchell Grass
 plants_api.register_plant({
-	nodes =     {"base:mitchell_grass"},
+	nodes =     {"australia:mitchell_grass"},
 	cover =     0.01,
 	density =   0.01,
 	priority =  35,
@@ -188,13 +188,13 @@ plants_api.register_plant({
 -- Spinifex
 minetest.register_decoration({
 	deco_type =   "simple",
-	place_on =    {"base:red_dirt"},
+	place_on =    {"australia:red_dirt"},
 	sidelen =     80,
 	fill_ratio =  0.02,
 	biomes =      {"central_australia"},
 	y_min =       4,
 	y_max =       41,
-	decoration =  "base:spinifex",
+	decoration =  "australia:spinifex",
 })
 
 -- Sturt's Desert Pea
@@ -212,9 +212,9 @@ plants_api.register_plant({
 local function register_small_red_rocks(number)
 	minetest.register_decoration({
 		deco_type =   "simple",
-		decoration =  "base:small_red_rocks"..number,
+		decoration =  "australia:small_red_rocks"..number,
 		sidelen =     80,
-		place_on =    {"base:red_dirt"},
+		place_on =    {"australia:red_dirt"},
 		fill_ratio =  0.002,
 		biomes =      {"central_australia"},
 		flags =       "place_center_x, place_center_z",
@@ -237,8 +237,8 @@ register_small_red_rocks(1)
 -- Coolabah Tree
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:coolabah_tree",
-		leaves =  "base:coolabah_leaves",
+		trunk =   "australia:coolabah_tree",
+		leaves =  "australia:coolabah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -252,15 +252,15 @@ plants_api.register_plant({
 		local height =  math_random(7, 9)
 		local radius =  math_random(4, 5)
 		local limbs =   true
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Desert Oak
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:desert_oak_tree",
-		leaves =  "base:desert_oak_leaves",
+		trunk =   "australia:desert_oak_tree",
+		leaves =  "australia:desert_oak_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -273,16 +273,16 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(4, 8)
 		local radius =  math_random(2, 4)
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Quandong
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:quandong_tree",
-		leaves =  "base:quandong_leaves",
-		fruit =   "base:quandong",
+		trunk =   "australia:quandong_tree",
+		leaves =  "australia:quandong_leaves",
+		fruit =   "australia:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -297,16 +297,16 @@ plants_api.register_plant({
 		local radius =        2
 		local limbs =         nil
 		local fruit_chance =  0.2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
 	end,
 })
 
 -- Quandong
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:quandong_tree",
-		leaves =  "base:quandong_leaves",
-		fruit =   "base:quandong",
+		trunk =   "australia:quandong_tree",
+		leaves =  "australia:quandong_leaves",
+		fruit =   "australia:quandong",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -321,15 +321,15 @@ plants_api.register_plant({
 		local radius =        2
 		local limbs =         nil
 		local fruit_chance =  0.1
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
 	end,
 })
 
 -- River Red Gum
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:river_red_gum_tree",
-		leaves =  "base:river_red_gum_leaves",
+		trunk =   "australia:river_red_gum_tree",
+		leaves =  "australia:river_red_gum_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -343,15 +343,15 @@ plants_api.register_plant({
 		local height =  math_random(10, 15)
 		local radius =  math_random(5, 7)
 		local limbs =   true
-		base.make_river_red_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_river_red_gum(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Wirewood
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:wirewood_tree",
-		leaves =  "base:wirewood_leaves",
+		trunk =   "australia:wirewood_tree",
+		leaves =  "australia:wirewood_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -364,15 +364,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(5, 7)
 		local radius =  2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Wirewood
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:wirewood_tree",
-		leaves =  "base:wirewood_leaves",
+		trunk =   "australia:wirewood_tree",
+		leaves =  "australia:wirewood_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -385,6 +385,6 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(5, 7)
 		local radius =  2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })

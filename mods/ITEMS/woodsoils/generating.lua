@@ -81,15 +81,15 @@ biome_lib:register_generate_plant({
 	min_elevation = 5,
 	max_elevation = 150,
 	near_nodes = {
-		"base:celery_top_pine_tree",
-		"base:huon_pine_tree",
-		"base:jarrah_tree",
-		"base:karri_tree",
-		"base:marri_tree",
-		"base:moreton_bay_fig_tree",
-		"base:river_oak_tree",
-		"base:swamp_gum_tree",
-		"base:tasmanian_myrtle_tree"
+		"australia:celery_top_pine_tree",
+		"australia:huon_pine_tree",
+		"australia:jarrah_tree",
+		"australia:karri_tree",
+		"australia:marri_tree",
+		"australia:moreton_bay_fig_tree",
+		"australia:river_oak_tree",
+		"australia:swamp_gum_tree",
+		"australia:tasmanian_myrtle_tree"
 	},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
@@ -102,15 +102,15 @@ biome_lib:register_generate_plant({
 
 biome_lib:register_generate_plant({
 	surface = {
-		"base:celery_top_pine_sapling",
-		"base:huon_pine_sapling",
-		"base:jarrah_sapling",
-		"base:karri_sapling",
-		"base:marri_sapling",
-		"base:moreton_bay_fig_sapling",
-		"base:river_oak_sapling",
-		"base:swamp_gum_sapling",
-		"base:tasmanian_myrtle_sapling"
+		"australia:celery_top_pine_sapling",
+		"australia:huon_pine_sapling",
+		"australia:jarrah_sapling",
+		"australia:karri_sapling",
+		"australia:marri_sapling",
+		"australia:moreton_bay_fig_sapling",
+		"australia:river_oak_sapling",
+		"australia:swamp_gum_sapling",
+		"australia:tasmanian_myrtle_sapling"
 	},
 	max_count = 1000,
 	rarity = 2,

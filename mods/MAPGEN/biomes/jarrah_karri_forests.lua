@@ -14,7 +14,7 @@ minetest.register_biome({
 	node_filler =      "default:dirt",
 	depth_filler =     3,
 	node_stone =       "default:stone",
-	node_river_water = "base:muddy_water_source",
+	node_river_water = "australia:muddy_water_source",
 	node_riverbed =    "default:dirt",
 	depth_riverbed =   1,
 	y_min =            4,
@@ -33,7 +33,7 @@ minetest.register_biome({
 -- Aluminium (Darling Scarp)
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:stone_with_aluminium",
+	ore =            "australia:stone_with_aluminium",
 	wherein =        {"default:stone"},
 	biomes =         {"jarrah_karri_forests"},
 	clust_scarcity = 1728,
@@ -142,7 +142,7 @@ plants_api.register_plant({
 plants_api.register_plant({
 	nodes = {
 		stem =    "default:acacia_bush_stem",
-		leaves =  "base:flame_grevillea_leaves",
+		leaves =  "australia:flame_grevillea_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -155,7 +155,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  1
 		local radius =  math_random(2, 3)
-		base.make_bush(pos, data, area, height, radius, nodes.stem, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_bush(pos, data, area, height, radius, nodes.stem, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
@@ -184,7 +184,7 @@ plants_api.register_plant({
 local function register_small_stone_rocks(number)
 	minetest.register_decoration({
 		deco_type =  "simple",
-		decoration =  "base:small_stone_rocks"..number,
+		decoration =  "australia:small_stone_rocks"..number,
 		sidelen =     80,
 		place_on =    {"default:dirt_with_grass"},
 		fill_ratio =  0.001,
@@ -210,8 +210,8 @@ register_small_stone_rocks(1)
 -- Bull Banksia
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:bull_banksia_tree",
-		leaves =  "base:bull_banksia_leaves",
+		trunk =   "australia:bull_banksia_tree",
+		leaves =  "australia:bull_banksia_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -224,15 +224,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 5)
 		local radius =  math_random(2, 3)
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Coolabah
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:coolabah_tree",
-		leaves =  "base:coolabah_leaves",
+		trunk =   "australia:coolabah_tree",
+		leaves =  "australia:coolabah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -246,15 +246,15 @@ plants_api.register_plant({
 		local height =  math_random(7, 9)
 		local radius =  math_random(4, 5)
 		local limbs =   true
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Jarrah
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:jarrah_tree",
-		leaves =  "base:jarrah_leaves",
+		trunk =   "australia:jarrah_tree",
+		leaves =  "australia:jarrah_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -268,15 +268,15 @@ plants_api.register_plant({
 		local height =  math_random(12, 16)
 		local radius =  math_random(7, 8)
 		local limbs =   true
-		base.make_jarrah(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_jarrah(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Karri
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:karri_tree",
-		leaves =  "base:karri_leaves",
+		trunk =   "australia:karri_tree",
+		leaves =  "australia:karri_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -290,15 +290,15 @@ plants_api.register_plant({
 		local height =  math_random(15, 20)
 		local radius =  math_random(7, 8)
 		local limbs =   true
-		base.make_karri(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_karri(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Marri
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:marri_tree",
-		leaves =  "base:marri_leaves",
+		trunk =   "australia:marri_tree",
+		leaves =  "australia:marri_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -312,15 +312,15 @@ plants_api.register_plant({
 		local height =  math_random(12, 16)
 		local radius =  math_random(6, 8)
 		local limbs =   true
-		base.make_marri(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
+		aus.make_marri(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs)
 	end,
 })
 
 -- Rottnest Island Pine
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:rottnest_island_pine_tree",
-		leaves =  "base:rottnest_island_pine_leaves",
+		trunk =   "australia:rottnest_island_pine_tree",
+		leaves =  "australia:rottnest_island_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -333,15 +333,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 4)
 		local radius =  3
-		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Swamp Paperbark
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:swamp_paperbark_tree",
-		leaves =  "base:swamp_paperbark_leaves",
+		trunk =   "australia:swamp_paperbark_tree",
+		leaves =  "australia:swamp_paperbark_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -354,15 +354,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 4)
 		local radius =  2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Swamp Paperbark
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:swamp_paperbark_tree",
-		leaves =  "base:swamp_paperbark_leaves",
+		trunk =   "australia:swamp_paperbark_tree",
+		leaves =  "australia:swamp_paperbark_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -375,6 +375,6 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 4)
 		local radius =  2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })

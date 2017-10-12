@@ -303,9 +303,9 @@ if abstract_ferns.config.enable_giant_treeferns_in_victas == true then
 		seed_diff = 329,
 		min_elevation = 5,
 		near_nodes = {
-			"base:blue_gum_tree",
-			"base:swamp_gum_tree",
-			"base:tasmanian_myrtle_tree"
+			"australia:blue_gum_tree",
+			"australia:swamp_gum_tree",
+			"australia:tasmanian_myrtle_tree"
 		},
 		near_nodes_size = 6,
 		near_nodes_vertical = 2,
@@ -325,7 +325,7 @@ if abstract_ferns.config.enable_giant_treeferns_in_fnq == true then
 		seed_diff = 329,
 		min_elevation = 5,
 		max_elevation = 25,
-		near_nodes = {"base:merbau_tree"},
+		near_nodes = {"australia:merbau_tree"},
 		near_nodes_size = 6,
 		near_nodes_vertical = 2,
 		near_nodes_count = 1,

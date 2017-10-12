@@ -9,13 +9,13 @@ local math_random = math.random
 -- pilbara
 minetest.register_biome({
 	name =             "pilbara",
-	node_top =         "base:red_gravel",
+	node_top =         "australia:red_gravel",
 	depth_top =        1,
-	node_filler =      "base:red_sandstone",
+	node_filler =      "australia:red_sandstone",
 	depth_filler =     2,
 	node_stone =       "technic:granite",
-	node_river_water = "base:muddy_water_source",
-	node_riverbed =    "base:red_gravel",
+	node_river_water = "australia:muddy_water_source",
+	node_riverbed =    "australia:red_gravel",
 	depth_riverbed =   1,
 	y_min =            4,
 	y_max =            31000,
@@ -33,7 +33,7 @@ minetest.register_biome({
 -- Iron (Newman / Pannawonica / Tom Price / Paraburdoo)
 minetest.register_ore({
 	ore_type =        "blob",
-	ore =             "base:granite_with_iron",
+	ore =             "australia:granite_with_iron",
 	wherein =         {"technic:granite"},
 	clust_scarcity =  4096,
 	clust_size =      6,
@@ -54,7 +54,7 @@ minetest.register_ore({
 -- Marble (Maroonah)
 minetest.register_ore({
 	ore_type =        "sheet",
-	ore =             "base:marble",
+	ore =             "australia:marble",
 	wherein =         {"technic:granite"},
 	clust_scarcity =  1,
 	clust_num_ores =  1,
@@ -82,7 +82,7 @@ minetest.register_ore({
 -- Amethyst (Ashburton River)
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:granite_with_amethyst",
+	ore =            "australia:granite_with_amethyst",
 	wherein =        {"technic:granite"},
 	biomes =         {"pilbara"},
 	clust_scarcity = 3375,
@@ -95,7 +95,7 @@ minetest.register_ore({
 -- Emerald (Poona)
 minetest.register_ore({
 	ore_type =       "scatter",
-	ore =            "base:granite_with_emerald",
+	ore =            "australia:granite_with_emerald",
 	wherein =        {"technic:granite"},
 	biomes =         {"pilbara"},
 	clust_scarcity = 3375,
@@ -114,7 +114,7 @@ minetest.register_ore({
 local function register_dry_grass_decoration(offset, scale, length)
 	minetest.register_decoration({
 		deco_type =     "simple",
-		place_on =      {"base:red_gravel"},
+		place_on =      {"australia:red_gravel"},
 		sidelen =       16,
 		noise_params =  {
 			offset =   offset,
@@ -136,7 +136,7 @@ register_dry_grass_decoration(0.09, -0.03, 1)
 
 -- Mitchell Grass
 plants_api.register_plant({
-	nodes =     {"base:mitchell_grass"},
+	nodes =     {"australia:mitchell_grass"},
 	cover =     0.001,
 	density =   0.001,
 	priority =  35,
@@ -159,13 +159,13 @@ plants_api.register_plant({
 -- Spinifex
 minetest.register_decoration({
 	deco_type =  "simple",
-	place_on =    {"base:red_gravel"},
+	place_on =    {"australia:red_gravel"},
 	sidelen =     80,
 	fill_ratio =  0.02,
 	biomes =      {"pilbara"},
 	y_min =       4,
 	y_max =       41,
-	decoration =  "base:spinifex",
+	decoration =  "australia:spinifex",
 })
 
 -- Sturt's Desert Pea
@@ -183,9 +183,9 @@ plants_api.register_plant({
 local function register_small_red_rocks(number)
 	minetest.register_decoration({
 		deco_type =   "simple",
-		decoration =  "base:small_red_rocks"..number,
+		decoration =  "australia:small_red_rocks"..number,
 		sidelen =     80,
-		place_on =    {"base:red_gravel"},
+		place_on =    {"australia:red_gravel"},
 		fill_ratio =  0.003,
 		biomes =      {"pilbara"},
 		flags =       "place_center_x, place_center_z",
@@ -208,8 +208,8 @@ register_small_red_rocks(1)
 -- Desert Oak
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:desert_oak_tree",
-		leaves =  "base:desert_oak_leaves",
+		trunk =   "australia:desert_oak_tree",
+		leaves =  "australia:desert_oak_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -222,15 +222,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(4, 8)
 		local radius =  math_random(2, 4)
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Wirewood
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:wirewood_tree",
-		leaves =  "base:wirewood_leaves",
+		trunk =   "australia:wirewood_tree",
+		leaves =  "australia:wirewood_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -243,15 +243,15 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(5, 7)
 		local radius =  2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 
 -- Wirewood
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:wirewood_tree",
-		leaves =  "base:wirewood_leaves",
+		trunk =   "australia:wirewood_tree",
+		leaves =  "australia:wirewood_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -264,6 +264,6 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(5, 7)
 		local radius =  2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })

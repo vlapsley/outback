@@ -1,19 +1,19 @@
-if minetest.get_modpath("base") then
+if minetest.get_modpath("australia") then
 	minetest.register_craft({
 		output = 'technic:silver_chest',
 		recipe = {
-			{'base:silver_ingot','base:silver_ingot','base:silver_ingot'},
-			{'base:silver_ingot','technic:copper_chest','base:silver_ingot'},
-			{'base:silver_ingot','base:silver_ingot','base:silver_ingot'},
+			{'australia:silver_ingot','australia:silver_ingot','australia:silver_ingot'},
+			{'australia:silver_ingot','technic:copper_chest','australia:silver_ingot'},
+			{'australia:silver_ingot','australia:silver_ingot','australia:silver_ingot'},
 		}
 	})
 
 	minetest.register_craft({
 		output = 'technic:silver_locked_chest',
 		recipe = {
-			{'base:silver_ingot','base:silver_ingot','base:silver_ingot'},
-			{'base:silver_ingot','technic:copper_locked_chest','base:silver_ingot'},
-			{'base:silver_ingot','base:silver_ingot','base:silver_ingot'},
+			{'australia:silver_ingot','australia:silver_ingot','australia:silver_ingot'},
+			{'australia:silver_ingot','technic:copper_locked_chest','australia:silver_ingot'},
+			{'australia:silver_ingot','australia:silver_ingot','australia:silver_ingot'},
 		}
 	})
 end

@@ -1,7 +1,7 @@
-base
 default
 pipeworks
 technic_worldgen
+australia
 bucket?
 chests?
 dye?

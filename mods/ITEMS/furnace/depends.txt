@@ -1,4 +1,4 @@
 init
 inventory
-base
 default
+australia

@@ -16,9 +16,9 @@ technic.register_power_tool("technic:blue_energy_crystal", 450000)
 minetest.register_craft({
 	output = "technic:battery",
 	recipe = {
-		{"group:wood", "base:nickel_ingot", "group:wood"},
-		{"group:wood", "base:aluminium_ingot", "group:wood"},
-		{"group:wood", "base:nickel_ingot", "group:wood"},
+		{"group:wood", "australia:nickel_ingot", "group:wood"},
+		{"group:wood", "australia:aluminium_ingot", "group:wood"},
+		{"group:wood", "australia:nickel_ingot", "group:wood"},
 	}
 })
 

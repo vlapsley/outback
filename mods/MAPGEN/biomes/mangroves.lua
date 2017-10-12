@@ -9,12 +9,12 @@ local math_random = math.random
 -- mangroves
 minetest.register_biome({
 	name =             "mangroves",
-	node_top =         "base:mangrove_mud",
+	node_top =         "australia:mangrove_mud",
 	depth_top =        3,
 	node_filler =      "default:clay",
 	depth_filler =     1,
 	node_stone =       "default:stone",
-	node_river_water = "base:muddy_water_source",
+	node_river_water = "australia:muddy_water_source",
 	node_riverbed =    "default:dirt",
 	depth_riverbed =   1,
 	y_min =            -2,
@@ -39,7 +39,7 @@ minetest.register_biome({
 minetest.register_decoration({
 	deco_type =   "simple",
 	place_on =    {
-		"base:mangrove_mud",
+		"australia:mangrove_mud",
 		"default:sand",
 		"default:dirt",
 		"default:dirt_with_grass"
@@ -49,14 +49,14 @@ minetest.register_decoration({
 	biomes =      {"mangroves"},
 	y_min =       2,
 	y_max =       3,
-	decoration =  "base:mangrove_fern",
+	decoration =  "australia:mangrove_fern",
 })
 
 -- Mangrove Lily
 minetest.register_decoration({
 	deco_type =   "simple",
 	place_on =    {
-		"base:mangrove_mud",
+		"australia:mangrove_mud",
 		"default:sand",
 		"default:dirt",
 		"default:dirt_with_grass"
@@ -73,7 +73,7 @@ minetest.register_decoration({
 minetest.register_decoration({
 	deco_type = "schematic",
 	place_on =    {
-		"base:mangrove_mud",
+		"australia:mangrove_mud",
 		"default:sand",
 		"default:dirt",
 	},
@@ -86,9 +86,9 @@ minetest.register_decoration({
 		size = {x = 1, y = 4, z = 1},
 		data = {
 			{name = "ignore", param1 = 0, param2 = 0},
-			{name = "base:mangrove_palm_trunk", param1 = 255, param2 = 0},
-			{name = "base:mangrove_palm_leaf_bot", param1 = 255, param2 = 0},
-			{name = "base:mangrove_palm_leaf_top", param1 = 255, param2 = 0},
+			{name = "australia:mangrove_palm_trunk", param1 = 255, param2 = 0},
+			{name = "australia:mangrove_palm_leaf_bot", param1 = 255, param2 = 0},
+			{name = "australia:mangrove_palm_leaf_top", param1 = 255, param2 = 0},
 		},
 	},
 	flags =       "force_placement",
@@ -99,7 +99,7 @@ minetest.register_decoration({
 	deco_type = "schematic",
 	place_on = {
 			"default:dirt",
-			"base:mangrove_mud",
+			"australia:mangrove_mud",
 			"default:sand",
 	},
 	sidelen = 80,
@@ -117,18 +117,18 @@ minetest.register_decoration({
 --]]
 
 -- Grey Mangrove
-base.schematics.grey_mangrove = {}
+aus.schematics.grey_mangrove = {}
 local max_ht =  6
-local tree =    "base:grey_mangrove_tree"
-local leaves =  "base:grey_mangrove_leaves"
+local tree =    "australia:grey_mangrove_tree"
+local leaves =  "australia:grey_mangrove_leaves"
 for h = 4, max_ht do
-	local schem = base.generate_mangrove_tree_schematic(3, tree, leaves)
-	base.push(base.schematics.grey_mangrove, schem)
+	local schem = aus.generate_mangrove_tree_schematic(3, tree, leaves)
+	aus.push(aus.schematics.grey_mangrove, schem)
 	minetest.register_decoration({
 		deco_type =   "schematic",
 		sidelen =     80,
 		place_on =    {
-			"base:mangrove_mud",
+			"australia:mangrove_mud",
 			"default:sand",
 			"default:dirt",
 			"default:dirt_with_grass",
@@ -146,9 +146,9 @@ end
 -- Mangrove Apple
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:mangrove_apple_tree",
-		leaves =  "base:mangrove_apple_leaves",
-		fruit =   "base:mangrove_apple",
+		trunk =   "australia:mangrove_apple_tree",
+		leaves =  "australia:mangrove_apple_leaves",
+		fruit =   "australia:mangrove_apple",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -163,23 +163,23 @@ plants_api.register_plant({
 		local radius =        math_random(3,4)
 		local limbs =         nil
 		local fruit_chance =  0.2
-		base.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
+		aus.make_tree(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore, limbs, fruit_chance, nodes.fruit)
 	end,
 })
 
 -- Stilted Mangrove
-base.schematics.stilted_mangrove = {}
+aus.schematics.stilted_mangrove = {}
 local max_ht =  6
-local tree =    "base:stilted_mangrove_tree"
-local leaves =  "base:stilted_mangrove_leaves"
+local tree =    "australia:stilted_mangrove_tree"
+local leaves =  "australia:stilted_mangrove_leaves"
 for h = 4, max_ht do
-	local schem = base.generate_mangrove_tree_schematic(3, tree, leaves)
-	base.push(base.schematics.stilted_mangrove, schem)
+	local schem = aus.generate_mangrove_tree_schematic(3, tree, leaves)
+	aus.push(aus.schematics.stilted_mangrove, schem)
 	minetest.register_decoration({
 		deco_type =   "schematic",
 		sidelen =     80,
 		place_on =    {
-			"base:mangrove_mud",
+			"australia:mangrove_mud",
 			"default:sand",
 			"default:dirt",
 			"default:dirt_with_grass",

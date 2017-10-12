@@ -6,13 +6,13 @@
 -- great australian bight
 minetest.register_biome({
 	name =             "great_australian_bight",
-	node_top =         "base:limestone",
+	node_top =         "australia:limestone",
 	depth_top =        3,
-	node_filler =      "base:basalt",
+	node_filler =      "australia:basalt",
 	depth_filler =     3,
 	node_stone =       "default:stone",
-	node_river_water = "base:muddy_water_source",
-	node_riverbed =    "base:limestone",
+	node_river_water = "australia:muddy_water_source",
+	node_riverbed =    "australia:limestone",
 	depth_riverbed =   1,
 	y_min =            -31,
 	y_max =            3,
@@ -30,7 +30,7 @@ minetest.register_biome({
 -- Oil
 minetest.register_ore({
 	ore_type =               "sheet",
-	ore =                    "base:crude_oil_source",
+	ore =                    "australia:crude_oil_source",
 	wherein =                {"default:stone"},
 	biomes =                 {"great_australian_bight"},
 	column_height_min =      2,
@@ -52,7 +52,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "sea:submarine",
-	wherein =        "base:limestone",
+	wherein =        "australia:limestone",
 	clust_scarcity = 512000,
 	clust_num_ores = 1,
 	clust_size =     12,
@@ -64,7 +64,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type =       "scatter",
 	ore =            "sea:woodship",
-	wherein =        "base:limestone",
+	wherein =        "australia:limestone",
 	clust_scarcity = 27000,
 	clust_num_ores = 1,
 	clust_size =     12,

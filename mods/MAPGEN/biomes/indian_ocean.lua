@@ -11,10 +11,10 @@ minetest.register_biome({
 	name =             "indian_ocean",
 	node_top =         "default:sand",
 	depth_top =        2,
-	node_filler =      "base:basalt",
+	node_filler =      "australia:basalt",
 	depth_filler =     3,
 	node_stone =       "default:stone",
-	node_river_water = "base:muddy_water_source",
+	node_river_water = "australia:muddy_water_source",
 	node_riverbed =    "default:sand",
 	depth_riverbed =   1,
 	y_min =            -31,
@@ -103,8 +103,8 @@ register_dry_grass_decoration(0.05, 0.01,  3)
 -- Rottnest Island Pine
 plants_api.register_plant({
 	nodes = {
-		trunk =   "base:rottnest_island_pine_tree",
-		leaves =  "base:rottnest_island_pine_leaves",
+		trunk =   "australia:rottnest_island_pine_tree",
+		leaves =  "australia:rottnest_island_pine_leaves",
 		air =     "air",
 		ignore =  "ignore",
 	},
@@ -117,7 +117,7 @@ plants_api.register_plant({
 	grow = function(nodes, pos, data, area)
 		local height =  math_random(3, 4)
 		local radius =  3
-		base.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
+		aus.make_conifer(pos, data, area, height, radius, nodes.trunk, nodes.leaves, nodes.air, nodes.ignore)
 	end,
 })
 

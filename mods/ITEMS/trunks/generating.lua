@@ -169,15 +169,15 @@ biome_lib:register_generate_plant({
     min_elevation = 4,
 	max_elevation = 40,
 	near_nodes = {
-		"base:black_box_tree",
-		"base:blue_gum_tree",
-		"base:daintree_stringybark_tree",
-		"base:jarrah_tree",
-		"base:karri_tree",
-		"base:karri_tree",
-		"base:river_red_gum_tree",
-		"base:swamp_gum_tree",
-		"base:white_box_tree"
+		"australia:black_box_tree",
+		"australia:blue_gum_tree",
+		"australia:daintree_stringybark_tree",
+		"australia:jarrah_tree",
+		"australia:karri_tree",
+		"australia:karri_tree",
+		"australia:river_red_gum_tree",
+		"australia:swamp_gum_tree",
+		"australia:white_box_tree"
 	},
 	near_nodes_size = 3,
 	near_nodes_vertical = 1,
@@ -230,11 +230,11 @@ biome_lib:register_generate_plant({
     min_elevation = 30,
 	max_elevation = 110,
 	near_nodes = {
-		"base:celery_top_pine_tree",
-		"base:huon_pine_tree",
-		"base:southern_sassafras_tree",
-		"base:swamp_gum_tree",
-		"base:tasmanian_myrtle_tree"
+		"australia:celery_top_pine_tree",
+		"australia:huon_pine_tree",
+		"australia:southern_sassafras_tree",
+		"australia:swamp_gum_tree",
+		"australia:tasmanian_myrtle_tree"
 	},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
@@ -310,11 +310,11 @@ end
 
 biome_lib:register_generate_plant({
     surface = {
-		"base:celery_top_pine_tree",
-		"base:huon_pine_tree",
-		"base:southern_sassafras_tree",
-		"base:swamp_gum_tree",
-		"base:tasmanian_myrtle_tree",
+		"australia:celery_top_pine_tree",
+		"australia:huon_pine_tree",
+		"australia:southern_sassafras_tree",
+		"australia:swamp_gum_tree",
+		"australia:tasmanian_myrtle_tree",
 		"default:mossycobble"
 	},
     max_count = Moss_on_trunk_Max_Count,
@@ -348,8 +348,8 @@ biome_lib:register_generate_plant({
     min_elevation = 5,
 	max_elevation = 70,
 	near_nodes = {
-		"base:fan_palm_tree",
-		"base:merbau_tree"
+		"australia:fan_palm_tree",
+		"australia:merbau_tree"
 	},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
@@ -385,10 +385,10 @@ biome_lib:register_generate_plant({
     min_elevation = 5,
 	max_elevation = 120,
 	near_nodes = {
-		"base:celery_top_pine_tree",
-		"base:huon_pine_tree",
-		"base:swamp_gum_tree",
-		"base:tasmanian_myrtle_tree"
+		"australia:celery_top_pine_tree",
+		"australia:huon_pine_tree",
+		"australia:swamp_gum_tree",
+		"australia:tasmanian_myrtle_tree"
 	},
 	near_nodes_size = 2,
 	near_nodes_vertical = 1,
