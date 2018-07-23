@@ -1079,12 +1079,6 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:aspen_bush_stem",
-	burntime = 8,
-})
-
-minetest.register_craft({
-	type = "fuel",
 	recipe = "default:junglegrass",
 	burntime = 3,
 })
