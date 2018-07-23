@@ -1,6 +1,6 @@
 # Outback
 
-A game for Minetest 0.4.16. The game is under heavy development and is still missing many features.
+A game for Minetest 0.5-dev. The game is under heavy development and is still missing many features.
 
 ![Screenshot](https://raw.githubusercontent.com/vlapsley/outback/master/screenshot.png)
 
